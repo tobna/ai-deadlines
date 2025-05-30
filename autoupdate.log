@@ -20,6 +20,12 @@ Traceback (most recent call last):
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2090, in pack_characters
     self.branches = [b.pack_characters(info) for b in self.branches]
                      ~~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3450, in pack_characters
+    items.append(s.pack_characters(info))
+                 ~~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2090, in pack_characters
+    self.branches = [b.pack_characters(info) for b in self.branches]
+                     ~~~~~~~~~~~~~~~~~^^^^^^
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3452, in pack_characters
     Sequence._flush_characters(info, characters, case_flags, items)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
