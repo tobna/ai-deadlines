@@ -13,6 +13,7 @@ else:
 
 update_script = os.path.join(this_dir, "src", "update_data.py")
 # autoupdate_log = os.path.join(this_dir, "autoupdate.log")
+print(f"run update script at {update_script}")
 os.system(f"python3 {update_script} --online")
 
 to_json_script = os.path.join(this_dir, "src", "data_to_json.py")
