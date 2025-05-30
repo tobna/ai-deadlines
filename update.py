@@ -16,7 +16,10 @@ update_script = os.path.join(this_dir, "src", "update_data.py")
 print(f"run update script at {update_script}")
 os.system(f"python3 {update_script} --online")
 
+
 to_json_script = os.path.join(this_dir, "src", "data_to_json.py")
+print("convert data to json")
+os.system(f"python3 {to_json_script}")
 
 if git_tkn is not None:
     os.system("git add .")
