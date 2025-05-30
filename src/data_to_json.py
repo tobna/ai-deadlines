@@ -1,24 +1,14 @@
-from ast import parse
 import json
-from pytz import UnknownTimeZoneError, timezone
 import pytz
-import re
 import dateparser
-import argparse
 from datetime import datetime
 import os
 import sys
 
 import yaml
 
-from parser.see_future import estimate_future_conferences
-from update_data import parse_all_times
-
 this_folder = os.path.dirname(__file__)
 sys.path.append(this_folder)
-
-from parser.hf_list import get_hf_list
-from parser.common_website import PARSER
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 
