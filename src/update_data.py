@@ -183,6 +183,7 @@ if args.online:
                     if id not in conferences:
                         conferences[id] = yearly_data
                         conferences[id]["dataSrc"] = "off-website"
+                        print(f"NEW CONFERENCE: {conferences[id]}")
                     elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("off-website"):
                         conferences[id] = {**conferences[id], **yearly_data}
                         conferences[id]["dataSrc"] = "off-website"
@@ -194,9 +195,16 @@ if args.online:
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
         id = hf_data["id"]
+        if id.startswith("wacv"):
+            deadline = dateparser.parse(hf_data["deadline"])
+            round = 1 if deadline.month <= 8 else 2
+            id = id.replace("wacv", f"wacvR{round}")
+            hf_data["id"] = id
+            hf_data["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = hf_data
             conferences[id]["dataSrc"] = "hf-repo"
+            print(f"NEW CONFERENCE: {conferences[id]}")
         elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("hf-repo"):
             conferences[id] = {**conferences[id], **hf_data}
             conferences[id]["dataSrc"] = "hf-repo"
@@ -210,6 +218,7 @@ if args.online:
         if id not in conferences:
             conferences[id] = nino_conf
             conferences[id]["dataSrc"] = "ninoduarte-git"
+            print(f"NEW CONFERENCE: {conferences[id]}")
         elif _SOURCES.index(conferences[id]["dataSrc"]) < _SOURCES.index("ninoduarte-git"):
             conferences[id] = {**conferences[id], **nino_conf}
             conferences[id]["dataSrc"] = "ninoduarte-git"
