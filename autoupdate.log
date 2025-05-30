@@ -16,22 +16,7 @@ Traceback (most recent call last):
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 73, in build_tz_offsets
     yield get_offset(tz_obj, regex)
           ~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 62, in get_offset
-    "regex": re.compile(
-             ~~~~~~~~~~^
-        re.sub(repl, replw, regex % tz_obj[0]), re.IGNORECASE
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ),
-    ^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
-    return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 553, in _compile
-    if (info.flags & _ALL_ENCODINGS) not in (0, ASCII, LOCALE, UNICODE):
-        ~~~~~~~~~~~^~~~~~~~~~~~~~~~
-  File "/usr/lib64/python3.13/enum.py", line 1611, in __and__
-    if self._get_value(flag) is None:
-       ~~~~~~~~~~~~~~~^^^^^^
-  File "/usr/lib64/python3.13/enum.py", line 1587, in _get_value
-    def _get_value(self, flag):
-    
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 65, in get_offset
+    "offset": timedelta(seconds=tz_obj[1]),
+              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
 KeyboardInterrupt
