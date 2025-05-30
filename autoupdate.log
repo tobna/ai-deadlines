@@ -25,29 +25,23 @@ Traceback (most recent call last):
     ^
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
     return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 587, in _compile
-    parsed = parsed.optimise(info, reverse)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3410, in optimise
-    s = s.optimise(info, reverse)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2970, in optimise
-    subpattern = self.subpattern.optimise(info, reverse)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2055, in optimise
-    branches = Branch._reduce_to_set(info, reverse, branches)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2324, in _reduce_to_set
-    Branch._flush_set_members(info, reverse, items, case_flags,
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      new_branches)
-      ^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2378, in _flush_set_members
-    new_branches.append(item.with_flags(case_flags=case_flags))
-                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 1858, in with_flags
-    case_flags = CASE_FLAGS_COMBINATIONS[case_flags & CASE_FLAGS]
-                                         ~~~~~~~~~~~^~~~~~~~~~~~
-  File "/usr/lib64/python3.13/enum.py", line 1614, in __and__
-    return self.__class__(value & other_value)
-           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib64/python3.13/enum.py", line 695, in __call__
-    def __call__(cls, value, names=_not_given, *values, module=None, qualname=None, type=None, start=1, boundary=None):
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 635, in _compile
+    fs_code = _compile_firstset(info, parsed.get_firstset(reverse))
+                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3475, in get_firstset
+    fs |= s.get_firstset(reverse)
+          ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2991, in get_firstset
+    return self.subpattern.get_firstset(reverse)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2109, in get_firstset
+    fs |= b.get_firstset(reverse)
+          ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3627, in get_firstset
+    return set([self])
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 1904, in __hash__
+    return hash(self._key)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 1903, in __hash__
+    def __hash__(self):
     
 KeyboardInterrupt
