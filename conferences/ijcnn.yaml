@@ -1,0 +1,14 @@
+ijcnn2025:
+  conferenceEndDate: '2025-07-05'
+  conferenceStartDate: '2025-06-30'
+  dataSrc: hf-repo
+  deadline: '2025-02-06T11:59:59Z'
+  id: ijcnn2025
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNN 2025
+  tags:
+  - ML
+  timezone: UTC-12
+  title: International Joint Conference on Neural Networks
+  website: https://2025.ijcnn.org/

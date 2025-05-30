@@ -1,0 +1,15 @@
+icassp2025:
+  conferenceEndDate: '2025-04-11'
+  conferenceStartDate: '2025-04-06'
+  dataSrc: hf-repo
+  deadline: '2024-09-10T11:59:59Z'
+  id: icassp2025
+  isApproximateDeadline: false
+  location: Hyderabad International Convention Center, Hyderabad, India
+  rating: B
+  shortname: ICASSP 2025
+  tags:
+  - SP
+  timezone: UTC-12
+  title: International Conference on Acoustics, Speech and Signal Processing
+  website: https://2025.ieeeicassp.org/

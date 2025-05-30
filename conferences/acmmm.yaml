@@ -1,0 +1,62 @@
+acmmm2024:
+  abstractDeadline: '2024-04-09T11:59:00Z'
+  conferenceEndDate: '2024-11-01'
+  conferenceStartDate: '2024-10-28'
+  dataSrc: off-website
+  deadline: '2024-04-13T11:59:00Z'
+  id: acmmm2024
+  isApproximateDeadline: false
+  location: Melbourne, Australia
+  rating: A*
+  shortname: ACMMM 2024
+  tags:
+  - CV
+  - ML
+  - HCI
+  title: ACM Multimedia
+  website: https://2024.acmmm.org/
+acmmm2025:
+  abstractDeadline: '2025-04-05T11:59:59Z'
+  conferenceEndDate: '2025-10-31'
+  conferenceStartDate: '2025-10-27'
+  dataSrc: hf-repo
+  deadline: '2025-04-12T11:59:59Z'
+  id: acmmm2025
+  isApproximateDeadline: false
+  location: Dublin Royal Convention Center, Dublin, Ireland
+  rating: A*
+  shortname: ACMMM 2025
+  tags:
+  - CV
+  - ML
+  - HCI
+  timezone: UTC-12
+  title: ACM Multimedia
+  website: https://acmmm2025.org/
+acmmm2026:
+  abstractDeadline: '2026-04-05T11:59:59Z'
+  conferenceEndDate: '2026-11-01'
+  conferenceStartDate: '2026-10-27'
+  dataSrc: estimate
+  deadline: '2026-04-12T11:59:59Z'
+  id: acmmm2026
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ACMMM 2026
+  tags: &id001
+  - CV
+  - ML
+  - HCI
+  title: ACM Multimedia
+acmmm2027:
+  abstractDeadline: '2027-04-05T11:59:59Z'
+  conferenceEndDate: '2027-11-01'
+  conferenceStartDate: '2027-10-27'
+  dataSrc: estimate
+  deadline: '2027-04-12T11:59:59Z'
+  id: acmmm2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ACMMM 2027
+  tags: *id001
+  title: ACM Multimedia

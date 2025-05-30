@@ -1,0 +1,16 @@
+ecmlpkdd2025:
+  abstractDeadline: '2025-03-08T11:59:59Z'
+  conferenceEndDate: '2025-09-19'
+  conferenceStartDate: '2025-09-15'
+  dataSrc: hf-repo
+  deadline: '2025-03-15T11:59:59Z'
+  id: ecmlpkdd2025
+  isApproximateDeadline: false
+  shortname: ECMLPKDD 2025
+  tags:
+  - ML
+  - DM
+  timezone: AoE
+  title: European Conference on Machine Learning and Principles and Practice of Knowledge
+    Discovery in Databases
+  website: https://ecmlpkdd.org/2025/

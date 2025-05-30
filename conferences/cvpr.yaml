@@ -1,0 +1,55 @@
+cvpr2024:
+  abstractDeadline: '2023-11-04T06:59:00Z'
+  conferenceEndDate: '2024-06-21'
+  conferenceStartDate: '2024-06-19'
+  dataSrc: off-website
+  deadline: '2023-11-18T07:59:00Z'
+  id: cvpr2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CVPR 2024
+  tags:
+  - CV
+  title: Computer Vision and Pattern Recognition Conference
+  website: https://cvpr.thecvf.com/Conferences/2024/
+cvpr2025:
+  abstractDeadline: '2024-11-08T07:59:00Z'
+  conferenceEndDate: '2025-06-14'
+  conferenceStartDate: '2025-06-13'
+  dataSrc: off-website
+  deadline: '2024-11-15T07:59:00Z'
+  id: cvpr2025
+  isApproximateDeadline: false
+  location: Music City Center, Nashville, USA
+  rating: A*
+  shortname: CVPR 2025
+  tags:
+  - CV
+  timezone: UTC-8
+  title: Computer Vision and Pattern Recognition Conference
+  website: https://cvpr.thecvf.com/Conferences/2025/
+cvpr2026:
+  abstractDeadline: '2025-11-08T07:59:00Z'
+  conferenceEndDate: '2026-06-18'
+  conferenceStartDate: '2026-06-13'
+  dataSrc: estimate
+  deadline: '2025-11-15T07:59:00Z'
+  id: cvpr2026
+  isApproximateDeadline: true
+  rating: A*
+  shortname: CVPR 2026
+  tags: &id001
+  - CV
+  title: Computer Vision and Pattern Recognition Conference
+cvpr2027:
+  abstractDeadline: '2026-11-08T07:59:00Z'
+  conferenceEndDate: '2027-06-18'
+  conferenceStartDate: '2027-06-13'
+  dataSrc: estimate
+  deadline: '2026-11-15T07:59:00Z'
+  id: cvpr2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: CVPR 2027
+  tags: *id001
+  title: Computer Vision and Pattern Recognition Conference

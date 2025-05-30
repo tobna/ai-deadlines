@@ -1,0 +1,13 @@
+cpal2025:
+  conferenceEndDate: '2025-05-27'
+  conferenceStartDate: '2025-03-24'
+  dataSrc: hf-repo
+  deadline: '2024-11-26T11:59:59Z'
+  id: cpal2025
+  isApproximateDeadline: false
+  shortname: CPAL 2025
+  tags:
+  - ML
+  timezone: AoE
+  title: The Conference on Parsimony and Learning
+  website: https://cpal.cc/

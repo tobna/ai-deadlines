@@ -1,0 +1,15 @@
+conll2025:
+  conferenceEndDate: '2025-08-01'
+  conferenceStartDate: '2025-07-31'
+  dataSrc: hf-repo
+  deadline: '2025-03-16T00:00:00Z'
+  id: conll2025
+  isApproximateDeadline: false
+  location: Vienna, Austria
+  rating: B
+  shortname: CoNLL 2025
+  tags:
+  - NLP
+  timezone: UTC-12
+  title: The SIGNLL Conference on Computational Natural Language Learning
+  website: https://conll.org/

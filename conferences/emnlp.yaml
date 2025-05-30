@@ -1,0 +1,15 @@
+emnlp2025:
+  conferenceEndDate: '2025-11-09'
+  conferenceStartDate: '2025-11-05'
+  dataSrc: hf-repo
+  deadline: '2025-05-20T11:59:59Z'
+  id: emnlp2025
+  isApproximateDeadline: false
+  location: Suzhou, China
+  rating: A*
+  shortname: EMNLP 2025
+  tags:
+  - NLP
+  timezone: UTC-12
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+  website: https://2025.emnlp.org/

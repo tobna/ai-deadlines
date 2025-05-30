@@ -1,0 +1,56 @@
+aistats2024:
+  abstractDeadline: '2023-10-07T00:00:00Z'
+  conferenceEndDate: '2024-05-04'
+  conferenceStartDate: '2024-05-02'
+  dataSrc: off-website
+  deadline: '2023-10-17T00:00:00Z'
+  id: aistats2024
+  isApproximateDeadline: false
+  location: Valencia, Spain
+  rating: A
+  shortname: AISTATS 2024
+  tags:
+  - ML
+  title: International Conference on Artificial Intelligence and Statistics
+  website: https://aistats.org/aistats2024/
+aistats2025:
+  abstractDeadline: '2024-10-04T11:59:59Z'
+  conferenceEndDate: '2025-05-05'
+  conferenceStartDate: '2025-05-03'
+  dataSrc: hf-repo
+  deadline: '2024-10-11T11:59:59Z'
+  id: aistats2025
+  isApproximateDeadline: false
+  location: TBA
+  rating: A
+  shortname: AISTATS 2025
+  tags:
+  - ML
+  timezone: UTC-12
+  title: International Conference on Artificial Intelligence and Statistics
+  website: https://aistats.org/aistats2025
+aistats2026:
+  abstractDeadline: '2025-10-04T11:59:59Z'
+  conferenceEndDate: '2026-05-08'
+  conferenceStartDate: '2026-05-03'
+  dataSrc: estimate
+  deadline: '2025-10-11T11:59:59Z'
+  id: aistats2026
+  isApproximateDeadline: true
+  rating: A
+  shortname: AISTATS 2026
+  tags: &id001
+  - ML
+  title: International Conference on Artificial Intelligence and Statistics
+aistats2027:
+  abstractDeadline: '2026-10-04T11:59:59Z'
+  conferenceEndDate: '2027-05-08'
+  conferenceStartDate: '2027-05-03'
+  dataSrc: estimate
+  deadline: '2026-10-11T11:59:59Z'
+  id: aistats2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: AISTATS 2027
+  tags: *id001
+  title: International Conference on Artificial Intelligence and Statistics

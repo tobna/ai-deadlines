@@ -1,0 +1,15 @@
+alt2025:
+  conferenceEndDate: '2025-05-27'
+  conferenceStartDate: '2025-02-24'
+  dataSrc: hf-repo
+  deadline: '2024-10-01T09:59:59Z'
+  id: alt2025
+  isApproximateDeadline: false
+  location: Politecnico di Milano, Milan, Italy
+  rating: B
+  shortname: ALT 2025
+  tags:
+  - ML
+  timezone: UTC+0
+  title: International Conference on Algorithmic Learning Theory
+  website: https://algorithmiclearningtheory.org/alt2025/

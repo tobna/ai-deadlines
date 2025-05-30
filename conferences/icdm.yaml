@@ -1,0 +1,14 @@
+icdm2025:
+  conferenceEndDate: '2025-11-15'
+  conferenceStartDate: '2025-11-12'
+  dataSrc: hf-repo
+  deadline: '2025-06-07T11:59:59Z'
+  id: icdm2025
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICDM 2025
+  tags:
+  - DM
+  timezone: AoE
+  title: International Conference on Data Mining
+  website: https://www3.cs.stonybrook.edu/~icdm2025/index.html

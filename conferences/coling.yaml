@@ -1,0 +1,15 @@
+coling2025:
+  conferenceEndDate: '2025-01-24'
+  conferenceStartDate: '2025-01-19'
+  dataSrc: hf-repo
+  deadline: '2024-09-17T11:59:59Z'
+  id: coling2025
+  isApproximateDeadline: false
+  location: Abu Dhabi National Exhibition Centre (ADNEC), Abu Dhabi, UAE
+  rating: B
+  shortname: COLING 2025
+  tags:
+  - NLP
+  timezone: UTC-12
+  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  website: https://coling2025.org/

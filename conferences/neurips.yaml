@@ -1,0 +1,55 @@
+neurips2024:
+  abstractDeadline: '2024-05-15T20:00:00Z'
+  conferenceEndDate: '2025-12-13'
+  conferenceStartDate: '2025-12-11'
+  dataSrc: off-website
+  deadline: '2024-05-22T20:00:00Z'
+  id: neurips2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2024
+  tags:
+  - AI
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2024/
+neurips2025:
+  abstractDeadline: '2025-05-11T12:00:00Z'
+  conferenceEndDate: '2025-12-05'
+  conferenceStartDate: '2025-12-03'
+  dataSrc: off-website
+  deadline: '2025-05-22T12:00:00Z'
+  id: neurips2025
+  isApproximateDeadline: false
+  location: San Diego Convention Center, San Diego, USA
+  rating: A*
+  shortname: NeurIPS 2025
+  tags:
+  - AI
+  timezone: UTC-8
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2025/
+neurips2026:
+  abstractDeadline: '2026-05-11T12:00:00Z'
+  conferenceEndDate: '2026-12-08'
+  conferenceStartDate: '2026-12-03'
+  dataSrc: estimate
+  deadline: '2026-05-22T12:00:00Z'
+  id: neurips2026
+  isApproximateDeadline: true
+  rating: A*
+  shortname: NeurIPS 2026
+  tags: &id001
+  - AI
+  title: Neural Information Processing Systems
+neurips2027:
+  abstractDeadline: '2027-05-11T12:00:00Z'
+  conferenceEndDate: '2027-12-08'
+  conferenceStartDate: '2027-12-03'
+  dataSrc: estimate
+  deadline: '2027-05-22T12:00:00Z'
+  id: neurips2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: NeurIPS 2027
+  tags: *id001
+  title: Neural Information Processing Systems

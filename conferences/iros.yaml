@@ -1,0 +1,15 @@
+iros2025:
+  conferenceEndDate: '2025-05-25'
+  conferenceStartDate: '2025-10-19'
+  dataSrc: hf-repo
+  deadline: '2025-03-02T07:59:59Z'
+  id: iros2025
+  isApproximateDeadline: false
+  location: Hangzhou, China
+  rating: A
+  shortname: IROS 2025
+  tags:
+  - RO
+  timezone: UTC-8
+  title: IEEE\RSJ International Conference on Intelligent Robots and Systems
+  website: http://www.iros25.org/

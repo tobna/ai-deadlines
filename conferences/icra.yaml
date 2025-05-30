@@ -1,0 +1,41 @@
+icra2025:
+  conferenceEndDate: '2026-06-05'
+  conferenceStartDate: '2026-06-01'
+  dataSrc: hf-repo
+  deadline: '2024-07-15T16:00:00Z'
+  id: icra2025
+  isApproximateDeadline: false
+  location: Georgia World Congress Center, Atlanta, USA
+  rating: A*
+  shortname: ICRA 2025
+  tags:
+  - ML
+  - RO
+  timezone: UTC-4
+  title: IEEE International Conference on Robotics and Automation
+  website: https://2025.ieee-icra.org
+icra2026:
+  conferenceEndDate: '2026-05-23'
+  conferenceStartDate: '2026-05-19'
+  dataSrc: ninoduarte-git
+  deadline: '2025-09-15T21:59:59Z'
+  id: icra2026
+  isApproximateDeadline: false
+  location: Vienna, Austria
+  rating: A*
+  shortname: ICRA 2026
+  tags: null
+  timezone: America/Los_Angeles
+  title: IEEE International Conference on Robotics and Automation
+  website: https://2026.ieee-icra.org/
+icra2027:
+  conferenceEndDate: '2027-05-24'
+  conferenceStartDate: '2027-05-19'
+  dataSrc: estimate
+  deadline: '2026-09-15T21:59:59Z'
+  id: icra2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ICRA 2027
+  tags: null
+  title: IEEE International Conference on Robotics and Automation

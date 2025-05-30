@@ -1,0 +1,16 @@
+aamas2025:
+  abstractDeadline: '2024-10-10T11:59:59Z'
+  conferenceEndDate: '2025-05-23'
+  conferenceStartDate: '2025-05-19'
+  dataSrc: hf-repo
+  deadline: '2024-10-17T11:59:59Z'
+  id: aamas2025
+  isApproximateDeadline: false
+  rating: A*
+  shortname: AAMAS 2025
+  tags:
+  - ML
+  - RO
+  timezone: UTC-12
+  title: International Conference on Autonomous Agents and Multiagent Systems
+  website: https://aamas2025.org/

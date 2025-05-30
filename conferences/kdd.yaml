@@ -1,0 +1,15 @@
+kdd2025:
+  abstractDeadline: '2025-02-04T11:59:59Z'
+  conferenceEndDate: '2025-08-07'
+  conferenceStartDate: '2025-08-03'
+  dataSrc: hf-repo
+  deadline: '2025-02-11T11:59:59Z'
+  id: kdd2025
+  isApproximateDeadline: false
+  rating: A*
+  shortname: KDD 2025
+  tags:
+  - DM
+  - ML
+  timezone: AoE
+  title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining

@@ -1,0 +1,14 @@
+acl2025:
+  conferenceEndDate: '2025-08-01'
+  conferenceStartDate: '2025-07-27'
+  dataSrc: hf-repo
+  deadline: '2025-02-16T11:59:59Z'
+  id: acl2025
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ACL 2025
+  tags:
+  - NLP
+  timezone: UTC-12
+  title: Annual Meeting of the Association for Computational Linguistics
+  website: https://2025.aclweb.org/

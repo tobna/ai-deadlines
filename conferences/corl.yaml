@@ -1,0 +1,16 @@
+corl2025:
+  conferenceEndDate: '2025-09-30'
+  conferenceStartDate: '2025-09-27'
+  dataSrc: hf-repo
+  deadline: '2025-05-01T11:59:59Z'
+  id: corl2025
+  isApproximateDeadline: false
+  location: COEX Convention & Exhibition Center, Seoul, South Korea
+  rating: Unranked
+  shortname: CoRL 2025
+  tags:
+  - ML
+  - RO
+  timezone: AoE
+  title: The Conference on Robot Learning
+  website: https://www.corl.org/

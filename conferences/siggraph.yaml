@@ -1,0 +1,14 @@
+siggraph2025:
+  conferenceEndDate: '2025-08-14'
+  conferenceStartDate: '2025-08-10'
+  dataSrc: hf-repo
+  deadline: '2025-01-17T07:59:59Z'
+  id: siggraph2025
+  isApproximateDeadline: false
+  location: Convention Centre, Vancouver, Canada
+  rating: A*
+  shortname: SIGGRAPH 2025
+  tags: []
+  timezone: UTC-8
+  title: Conference on Computer Graphics and Interactive Techniques
+  website: https://s2025.siggraph.org/

@@ -1,0 +1,53 @@
+aaai2025:
+  abstractDeadline: '2024-08-08T11:59:59Z'
+  conferenceEndDate: '2025-03-04'
+  conferenceStartDate: '2025-02-25'
+  dataSrc: hf-repo
+  deadline: '2024-08-16T11:59:59Z'
+  id: aaai2025
+  isApproximateDeadline: false
+  location: Pennsylvania Convention Center, Philadelphia, USA
+  rating: A*
+  shortname: AAAI 2025
+  tags:
+  - DM
+  - ML
+  - NLP
+  - CV
+  timezone: UTC-12
+  title: AAAI Conference on Artificial Intelligence
+  website: https://aaai.org/conference/aaai/aaai-25/
+aaai2026:
+  abstractDeadline: '2025-07-26T11:59:59Z'
+  conferenceEndDate: '2026-01-27'
+  conferenceStartDate: '2026-01-20'
+  dataSrc: hf-repo
+  deadline: '2025-08-02T11:59:59Z'
+  id: aaai2026
+  isApproximateDeadline: false
+  location: Singapore EXPO, Singapore
+  rating: A*
+  shortname: AAAI 2026
+  tags:
+  - DM
+  - ML
+  - NLP
+  - CV
+  timezone: UTC-12
+  title: AAAI Conference on Artificial Intelligence
+  website: https://aaai.org/conference/aaai/aaai-26/
+aaai2027:
+  abstractDeadline: '2026-07-26T11:59:59Z'
+  conferenceEndDate: '2027-01-25'
+  conferenceStartDate: '2027-01-20'
+  dataSrc: estimate
+  deadline: '2026-08-02T11:59:59Z'
+  id: aaai2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: AAAI 2027
+  tags:
+  - ML
+  - NLP
+  - CV
+  title: AAAI Conference on Artificial Intelligence

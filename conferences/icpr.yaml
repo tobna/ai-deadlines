@@ -1,0 +1,15 @@
+icpr2026:
+  conferenceEndDate: '2026-08-21'
+  conferenceStartDate: '2026-08-17'
+  dataSrc: ninoduarte-git
+  deadline: '2025-12-01T22:59:59Z'
+  id: icpr2026
+  isApproximateDeadline: false
+  location: Lyon, France
+  rating: B
+  shortname: ICPR 2026
+  tags:
+  - ML
+  timezone: America/Los_Angeles
+  title: ICPR 2026
+  website: https://icpr2026orgteam.github.io/ICPR2026website/index.html

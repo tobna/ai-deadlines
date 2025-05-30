@@ -1,0 +1,50 @@
+icip2024:
+  conferenceEndDate: '2024-10-30'
+  conferenceStartDate: '2024-10-27'
+  dataSrc: off-website
+  deadline: '2024-02-06T23:00:00Z'
+  id: icip2024
+  isApproximateDeadline: false
+  location: Abu Dhabi, UAE
+  rating: B
+  shortname: ICIP 2024
+  tags:
+  - CV
+  title: International Conference on Image Processing
+  website: https://2024.ieeeicip.org
+icip2025:
+  conferenceEndDate: '2025-09-14'
+  conferenceStartDate: '2025-09-17'
+  dataSrc: off-website
+  deadline: '2025-02-04T23:00:00Z'
+  id: icip2025
+  isApproximateDeadline: false
+  location: Anchorage, Alaska
+  rating: B
+  shortname: ICIP 2025
+  tags: &id001
+  - CV
+  title: International Conference on Image Processing
+  website: https://2025.ieeeicip.org
+icip2026:
+  conferenceEndDate: '2026-09-22'
+  conferenceStartDate: '2026-09-17'
+  dataSrc: estimate
+  deadline: '2026-02-04T23:00:00Z'
+  id: icip2026
+  isApproximateDeadline: true
+  rating: B
+  shortname: ICIP 2026
+  tags: *id001
+  title: International Conference on Image Processing
+icip2027:
+  conferenceEndDate: '2027-09-22'
+  conferenceStartDate: '2027-09-17'
+  dataSrc: estimate
+  deadline: '2027-02-04T23:00:00Z'
+  id: icip2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: ICIP 2027
+  tags: *id001
+  title: International Conference on Image Processing

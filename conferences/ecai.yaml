@@ -1,0 +1,56 @@
+ecai2024:
+  abstractDeadline: '2024-04-19T12:00:00Z'
+  conferenceEndDate: '2024-10-19'
+  conferenceStartDate: '2025-10-24'
+  dataSrc: hf-repo
+  deadline: '2024-04-25T12:00:00Z'
+  id: ecai2024
+  isApproximateDeadline: false
+  location: Santiago de Compostela
+  rating: A
+  shortname: ECAI 2024
+  tags:
+  - ML
+  title: European Conference on Artificial Intelligence
+  website: https://www.ecai2024.eu/
+ecai2025:
+  abstractDeadline: '2025-04-30T11:59:59Z'
+  conferenceEndDate: '2025-05-30'
+  conferenceStartDate: '2025-10-25'
+  dataSrc: hf-repo
+  deadline: '2025-05-07T11:59:59Z'
+  id: ecai2025
+  isApproximateDeadline: false
+  location: Bologna Congress Center and The Engineering School (University of Bologna)
+  rating: A
+  shortname: ECAI 2025
+  tags:
+  - ML
+  timezone: UTC-12
+  title: European Conference on Artificial Intelligence
+  website: https://ecai2025.org/deadlines/
+ecai2026:
+  abstractDeadline: '2026-04-30T11:59:59Z'
+  conferenceEndDate: '2026-10-30'
+  conferenceStartDate: '2026-10-25'
+  dataSrc: estimate
+  deadline: '2026-05-07T11:59:59Z'
+  id: ecai2026
+  isApproximateDeadline: true
+  rating: A
+  shortname: ECAI 2026
+  tags: &id001
+  - ML
+  title: European Conference on Artificial Intelligence
+ecai2027:
+  abstractDeadline: '2027-04-30T11:59:59Z'
+  conferenceEndDate: '2027-10-30'
+  conferenceStartDate: '2027-10-25'
+  dataSrc: estimate
+  deadline: '2027-05-07T11:59:59Z'
+  id: ecai2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: ECAI 2027
+  tags: *id001
+  title: European Conference on Artificial Intelligence

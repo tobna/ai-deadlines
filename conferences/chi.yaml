@@ -1,0 +1,16 @@
+chi2025:
+  abstractDeadline: '2024-09-06T11:59:59Z'
+  conferenceEndDate: '2025-05-01'
+  conferenceStartDate: '2025-04-26'
+  dataSrc: hf-repo
+  deadline: '2024-09-13T11:59:59Z'
+  id: chi2025
+  isApproximateDeadline: false
+  location: Pacifico Yokohama Conference Center, Yokohama, Japan
+  rating: A*
+  shortname: CHI 2025
+  tags:
+  - HCI
+  timezone: UTC-12
+  title: The ACM Conference on Human Factors in Computing Systems
+  website: https://chi2025.acm.org/

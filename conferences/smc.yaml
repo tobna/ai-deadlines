@@ -1,0 +1,15 @@
+smc2025:
+  conferenceEndDate: '2025-10-10'
+  conferenceStartDate: '2025-10-07'
+  dataSrc: ninoduarte-git
+  deadline: '2025-04-20T21:59:59Z'
+  id: smc2025
+  isApproximateDeadline: false
+  location: Vienna, Austria
+  rating: B
+  shortname: IEEE SMC 2025
+  tags:
+  - RO
+  timezone: America/Los_Angeles
+  title: IEEE SMC 2025
+  website: https://ieeesmc2025.org/

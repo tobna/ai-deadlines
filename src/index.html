@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Conference Deadlines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex flex-col items-center p-4 sm:p-6 lg:p-8">
+
+  <header class="mb-8 text-center">
+    <h1
+      class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      AI Conference Deadlines</h1>
+    <p class="mt-2 text-lg text-gray-400">Stay updated on upcoming ai & ml events!</p>
+  </header>
+
+  <div class="filter-controls-main-container">
+    <div class="toggle-and-input-controls-container">
+      <div class="toggle-switch-container">
+        <span class="toggle-switch-label">Show Past:</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="showPastToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-switch-container">
+        <span class="toggle-switch-label">Show Approx. Future:</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="showApproxFutureToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="filter-input-container">
+        <label for="minH5Index" class="filter-label">Min. h5-index:</label>
+        <input type="number" id="minH5Index" name="minH5Index" class="filter-input" placeholder="e.g. 50">
+      </div>
+      <div class="filter-input-container">
+        <label for="minRating" class="filter-label">Min. Rating:</label>
+        <select id="minRating" name="minRating" class="filter-select">
+          <option value="">All Ratings</option>
+          <option value="A*">A* and above</option>
+          <option value="A">A and above</option>
+          <option value="B">B and above</option>
+          <option value="C">C and above</option>
+          <option value="D">D and above</option>
+        </select>
+      </div>
+    </div>
+    <div id="tagFilterContainer" class="w-full text-center">
+    </div>
+  </div>
+
+
+  <main id="conferenceGrid" class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  </main>
+
+  <footer class="mt-12 text-center text-gray-500 text-sm">
+    <p>&copy; <span id="currentYear"></span> Your AI Conference Tracker. All rights reserved.</p>
+    <!-- <p class="mt-1">Powered by good vibes and JavaScript.</p> -->
+  </footer>
+
+  <div id="messageModal"
+    class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+    <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm mx-auto text-gray-800">
+      <h3 id="modalTitle" class="text-xl font-semibold mb-4">Notification</h3>
+      <p id="modalMessage" class="mb-6">This is a sample message.</p>
+      <button id="closeModalButton"
+        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+        OK
+      </button>
+    </div>
+  </div>
+
+  <script src="scripts.js" defer></script>
+</body>
+
+</html>

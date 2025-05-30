@@ -1,0 +1,18 @@
+wacvR12026:
+  abstractDeadline: '2025-07-11T06:59:59Z'
+  conferenceEndDate: '2026-03-10'
+  conferenceStartDate: '2026-03-06'
+  dataSrc: off-website
+  deadline: '2025-07-18T06:59:59Z'
+  id: wacvR12026
+  isApproximateDeadline: false
+  location: JW Marriott Starpass in Tucson, Arizona, USA
+  note: Round 1
+  rating: A
+  shortname: WACV 2026
+  tags:
+  - ML
+  - CV
+  timezone: UTC-7
+  title: IEEE/CVF Winter Conference on Applications of Computer Vision
+  website: https://wacv.thecvf.com/Conferences/2026
