@@ -1,33 +1,92 @@
-Traceback (most recent call last):
-  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 7, in <module>
-    import dateparser
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/__init__.py", line 3, in <module>
-    from .conf import apply_settings
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/conf.py", line 7, in <module>
-    from .parser import date_order_chart
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/parser.py", line 9, in <module>
-    from dateparser.utils import (
-    ...<7 lines>...
-    )
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/utils/__init__.py", line 12, in <module>
-    from dateparser.timezone_parser import StaticTzInfo, _tz_offsets
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 89, in <module>
-    _search_regex = re.compile("|".join(_search_regex_parts))
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
-    return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 533, in _compile
-    parsed = _parse_pattern(source, info)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 421, in _parse_pattern
-    branches.append(parse_sequence(source, info))
-                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 486, in parse_sequence
-    apply_quantifier(source, info, counts, case_flags, ch,
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      saved_pos, sequence)
-      ^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 524, in apply_quantifier
-    ch = source.get()
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 4004, in get
-    def get(self, override_ignore=False):
-    
-KeyboardInterrupt
+<function parse_eccv at 0x7f4149e3f2e0> 2027
+<function parse_eccv at 0x7f4149e3f2e0> 2026
+<function parse_eccv at 0x7f4149e3f2e0> 2025
+<function parse_eccv at 0x7f4149e3f2e0> 2024
+<function parse_cvpr at 0x7f4149e3f240> 2027
+<function parse_cvpr at 0x7f4149e3f240> 2026
+<function parse_cvpr at 0x7f4149e3f240> 2025
+<function parse_cvpr at 0x7f4149e3f240> 2024
+<function parse_iccv at 0x7f4149e3f1a0> 2027
+<function parse_iccv at 0x7f4149e3f1a0> 2026
+<function parse_iccv at 0x7f4149e3f1a0> 2025
+<function parse_iccv at 0x7f4149e3f1a0> 2024
+<function parse_neurips_data at 0x7f4149e3f100> 2027
+<function parse_neurips_data at 0x7f4149e3f100> 2026
+<function parse_neurips_data at 0x7f4149e3f100> 2025
+<function parse_neurips_data at 0x7f4149e3f100> 2024
+<function parse_icml at 0x7f4149e3f380> 2027
+<function parse_icml at 0x7f4149e3f380> 2026
+<function parse_icml at 0x7f4149e3f380> 2025
+<function parse_icml at 0x7f4149e3f380> 2024
+NEW CONFERENCE: {'id': 'wacvR12025', 'title': 'IEEE/CVF Winter Conference on Applications of Computer Vision', 'shortname': 'WACV 2025', 'deadline': '2024-07-16T06:59:59Z', 'isApproximateDeadline': False, 'location': 'JW Marriott Starpass in Tucson, Arizona, USA', 'timezone': 'UTC-7', 'website': 'https://wacv2025.thecvf.com/', 'conferenceStartDate': '2025-02-28', 'conferenceEndDate': '2025-03-04', 'tags': ['ML', 'CV'], 'note': 'Round 1', 'dataSrc': 'hf-repo'}
+NONE after tz: 2025-07-12 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-07-12 23:59:59 Etc/GMT+12 Etc/GMT+12
+NONE after tz: 2025-07-15 00:00:00 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-09-15 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-10-01 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-12-01 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2026-03-07 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2026-07-01 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2024-01-15 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2024-07-05 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2024-10-31 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2024-09-27 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2024-11-15 00:00:00 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-01-17 11:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-01-31 03:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-03-01 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-03-20 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-03-07 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-04-20 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-05-15 23:59:59 America/Los_Angeles America/Los_Angeles
+NONE after tz: 2025-05-16 23:59:59 Europe/London Europe/London
+NONE after tz: 2025-05-15 23:59:59 Etc/GMT+12 Etc/GMT+12
+dict_keys(['colt2025', 'icdar2025', 'siggraph2025', 'acl2025', 'colm2025', 'ijcnn2025', 'ecai2024', 'ecai2025', 'ecai2026', 'ecai2027', 'coling2025', 'rss2025', 'eccv2024', 'eccv2026', 'bmvc2024', 'bmvc2025', 'bmvc2026', 'bmvc2027', 'aaai2025', 'aaai2026', 'aaai2027', 'iccv2025', 'neurips_ws2024', 'icip2024', 'icip2025', 'icip2026', 'icip2027', 'aamas2025', 'ecir2025', 'icpr2026', 'cikm2025', 'corl2025', 'acmmm2024', 'acmmm2025', 'acmmm2026', 'acmmm2027', 'rlc2025', 'ksem2025', 'naacl2025', 'cpal2025', 'emnlp2025', 'soft2024', 'uai2025', 'wacvR12026', 'humanoids2025', 'wacvR22026', 'smc2025', 'roman2025', 'cvpr2024', 'cvpr2025', 'cvpr2026', 'cvpr2027', 'kdd2025', 'wsdm2025', 'ecmlpkdd2025', 'icassp2025', 'ijcai2025', 'chi2025', 'icomp2025', 'icra2025', 'icra2026', 'icra2027', 'icann2024', 'icann2025', 'icann2026', 'icann2027', 'cec2025', 'alt2025', 'eurographics2025', 'mathai2025', 'iros2025', 'threedv2026', 'neurips2024', 'neurips2025', 'neurips2026', 'neurips2027', 'collas2025', 'icml2024', 'icml2025', 'icml2026', 'icml2027', 'accv2024', 'accv2026', 'icdl2024', 'esann2025', 'icdm2025', 'aistats2024', 'aistats2025', 'aistats2026', 'aistats2027', 'conll2025', 'sgp2025', 'icsr2024', 'iclr2025', 'iclr2026', 'iclr2027', 'wacvR12025'])
+got 0 conference h5 values
+dict_keys(['colt', 'icdar', 'siggraph', 'acl', 'colm', 'ijcnn', 'ecai', 'coling', 'rss', 'eccv', 'bmvc', 'aaai', 'iccv', 'neurips_ws', 'icip', 'aamas', 'ecir', 'icpr', 'cikm', 'corl', 'acmmm', 'rlc', 'ksem', 'naacl', 'cpal', 'emnlp', 'soft', 'uai', 'wacvR1', 'humanoids', 'wacvR2', 'smc', 'roman', 'cvpr', 'kdd', 'wsdm', 'ecmlpkdd', 'icassp', 'ijcai', 'chi', 'icomp', 'icra', 'icann', 'cec', 'alt', 'eurographics', 'mathai', 'iros', 'threedv', 'neurips', 'collas', 'icml', 'accv', 'icdl', 'esann', 'icdm', 'aistats', 'conll', 'sgp', 'icsr', 'iclr'])
+colt A*
+icdar A
+siggraph A*
+acl A*
+ijcnn B
+ecai A
+coling B
+rss TBR
+eccv A*
+bmvc A
+aaai A*
+iccv A*
+icip B
+aamas A*
+ecir A
+icpr B
+cikm A
+corl Unranked
+acmmm A*
+ksem C
+naacl A
+emnlp A*
+uai A
+estimate wacvR12027
+smc B
+cvpr A*
+kdd A*
+wsdm A
+icassp B
+ijcai A*
+chi A*
+icra A*
+icann C
+cec B
+alt B
+iros A
+neurips A*
+icml A*
+accv B
+esann B
+icdm A*
+aistats A
+conll B
+sgp B
+icsr B
+iclr A*
