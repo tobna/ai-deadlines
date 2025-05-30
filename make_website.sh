@@ -21,4 +21,4 @@ echo "4. remove changes to git repo"
 git stash
 
 echo "goto ${OLD_BASEDIR}"
-cd $(OLD_BASEDIR)
+cd OLD_BASEDIR
