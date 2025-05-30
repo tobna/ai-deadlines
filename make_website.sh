@@ -5,6 +5,7 @@ echo "updating and creating website"
 
 echo "goto ${BASEDIR}"
 cd BASEDIR
+ls
 
 echo "1. update conference data"
 python3 ${BASEDIR}/update.py
