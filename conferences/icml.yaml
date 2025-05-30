@@ -22,7 +22,7 @@ icml2025:
   location: Vancouver Convention Center
   rating: A*
   shortname: ICML 2025
-  tags: &id001
+  tags:
   - ML
   timezone: UTC-12
   title: European Conference on Computer Vision
@@ -37,7 +37,8 @@ icml2026:
   isApproximateDeadline: true
   rating: A*
   shortname: ICML 2026
-  tags: *id001
+  tags: &id001
+  - ML
   title: European Conference on Computer Vision
 icml2027:
   abstractDeadline: '2027-01-23T12:00:00Z'
