@@ -12,8 +12,8 @@ else:
     git_tkn = None
 
 update_script = os.path.join(this_dir, "src", "update_data.py")
-autoupdate_log = os.path.join(this_dir, "autoupdate.log")
-os.system(f"python3 {update_script} --online > {autoupdate_log} 2>&1")
+# autoupdate_log = os.path.join(this_dir, "autoupdate.log")
+os.system(f"python3 {update_script} --online")
 
 to_json_script = os.path.join(this_dir, "src", "data_to_json.py")
 
