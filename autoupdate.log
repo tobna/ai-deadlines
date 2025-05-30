@@ -1,23 +1,38 @@
 Traceback (most recent call last):
-  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 9, in <module>
-    import requests
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/__init__.py", line 43, in <module>
-    import urllib3
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/__init__.py", line 15, in <module>
-    from ._base_connection import _TYPE_BODY
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/_base_connection.py", line 5, in <module>
-    from .util.connection import _TYPE_SOCKET_OPTIONS
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/util/__init__.py", line 8, in <module>
-    from .ssl_ import (
-    ...<8 lines>...
+  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 7, in <module>
+    import dateparser
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/__init__.py", line 3, in <module>
+    from .conf import apply_settings
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/conf.py", line 7, in <module>
+    from .parser import date_order_chart
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/parser.py", line 9, in <module>
+    from dateparser.utils import (
+    ...<7 lines>...
     )
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/util/ssl_.py", line 137, in <module>
-    from .ssltransport import SSLTransport  # type: ignore[assignment]
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 1155, in get_code
-  File "<frozen importlib._bootstrap_external>", line 784, in _compile_bytecode
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/utils/__init__.py", line 12, in <module>
+    from dateparser.timezone_parser import StaticTzInfo, _tz_offsets
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 89, in <module>
+    _search_regex = re.compile("|".join(_search_regex_parts))
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
+    return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 588, in _compile
+    parsed = parsed.pack_characters(info)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2090, in pack_characters
+    self.branches = [b.pack_characters(info) for b in self.branches]
+                     ~~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3452, in pack_characters
+    Sequence._flush_characters(info, characters, case_flags, items)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3524, in _flush_characters
+    items.append(String(characters, case_flags=case_flags))
+                 ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3898, in __init__
+    if (self.case_flags & FULLIGNORECASE) == FULLIGNORECASE:
+        ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+  File "/usr/lib64/python3.13/enum.py", line 1611, in __and__
+    if self._get_value(flag) is None:
+       ~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib64/python3.13/enum.py", line 1587, in _get_value
+    def _get_value(self, flag):
+    
 KeyboardInterrupt
