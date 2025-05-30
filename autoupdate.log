@@ -1,49 +1,40 @@
-<function parse_eccv at 0x7f2cf009b2e0> 2027
-<function parse_eccv at 0x7f2cf009b2e0> 2026
 Traceback (most recent call last):
-  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 173, in <module>
-    yearly_datas = conf_parser(year)
-  File "/data/cloud/Programming/aideadlines/src/parser/common_website.py", line 155, in parse_eccv
-    data = parse_common_website_format(data, url + "Dates")
-  File "/data/cloud/Programming/aideadlines/src/parser/common_website.py", line 7, in parse_common_website_format
-    website = requests.get(url)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/api.py", line 73, in get
-    return request("get", url, params=params, **kwargs)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/api.py", line 59, in request
-    return session.request(method=method, url=url, **kwargs)
-           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/adapters.py", line 667, in send
-    resp = conn.urlopen(
-        method=request.method,
-    ...<9 lines>...
-        chunked=chunked,
-    )
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/connectionpool.py", line 787, in urlopen
-    response = self._make_request(
-        conn,
-    ...<10 lines>...
-        **response_kw,
-    )
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/connectionpool.py", line 464, in _make_request
-    self._validate_conn(conn)
-    ~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
-    conn.connect()
-    ~~~~~~~~~~~~^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/connection.py", line 704, in connect
-    self.sock = sock = self._new_conn()
-                       ~~~~~~~~~~~~~~^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/connection.py", line 198, in _new_conn
-    sock = connection.create_connection(
-        (self._dns_host, self.port),
-    ...<2 lines>...
-        socket_options=self.socket_options,
-    )
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/util/connection.py", line 73, in create_connection
-    sock.connect(sa)
-    ~~~~~~~~~~~~^^^^
+  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 159, in <module>
+    file_confs = yaml.safe_load(f)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/composer.py", line 64, in compose_node
+    if self.check_event(AliasEvent):
+       ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ~~~~~~~~~~^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/parser.py", line 451, in parse_block_mapping_value
+    return self.parse_block_node_or_indentless_sequence()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/parser.py", line 271, in parse_block_node_or_indentless_sequence
+    return self.parse_node(block=True, indentless_sequence=True)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/parser.py", line 326, in parse_node
+    token = self.get_token()
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/yaml/scanner.py", line 135, in get_token
+    def get_token(self):
+    
 KeyboardInterrupt
