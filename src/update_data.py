@@ -215,6 +215,12 @@ if args.online:
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
         id = nino_conf["id"].replace("nips", "neurips")
+        if id.startswith("wacv"):
+            deadline = dateparser.parse(nino_conf["deadline"])
+            round = 1 if deadline.month <= 8 else 2
+            id = id.replace("wacv", f"wacvR{round}")
+            nino_conf["id"] = id
+            nino_conf["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = nino_conf
             conferences[id]["dataSrc"] = "ninoduarte-git"
