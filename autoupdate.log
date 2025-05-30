@@ -1,35 +1,23 @@
 Traceback (most recent call last):
-  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 161, in <module>
-    file_confs = {key: parse_all_times(conf) for key, conf in file_confs.items()}
-                       ~~~~~~~~~~~~~~~^^^^^^
-  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 54, in parse_all_times
-    parsed_time = dateparser.parse(timestr)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/conf.py", line 100, in wrapper
-    return f(*args, **kwargs)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/__init__.py", line 79, in parse
-    data = parser.get_date_data(date_string, date_formats)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/date.py", line 518, in get_date_data
-    parsed_date = _DateLocaleParser.parse(
-        locale, date_string, date_formats, settings=self._settings
+  File "/data/cloud/Programming/aideadlines/./src/update_data.py", line 9, in <module>
+    import requests
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/requests/__init__.py", line 43, in <module>
+    import urllib3
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/__init__.py", line 15, in <module>
+    from ._base_connection import _TYPE_BODY
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/_base_connection.py", line 5, in <module>
+    from .util.connection import _TYPE_SOCKET_OPTIONS
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/util/__init__.py", line 8, in <module>
+    from .ssl_ import (
+    ...<8 lines>...
     )
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/date.py", line 238, in parse
-    return instance._parse()
-           ~~~~~~~~~~~~~~~^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/date.py", line 242, in _parse
-    date_data = self._parsers[parser_name]()
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/date.py", line 264, in _try_freshness_parser
-    return freshness_date_parser.get_date_data(
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        self._get_translated_date(), self._settings
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/freshness_date_parser.py", line 152, in get_date_data
-    date, period = self.parse(date_string, settings)
-                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/freshness_date_parser.py", line 42, in parse
-    date_string, ptz = pop_tz_offset_from_string(date_string)
-                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 38, in pop_tz_offset_from_string
-    timezone_match = timezone_re.search(date_string)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/urllib3/util/ssl_.py", line 137, in <module>
+    from .ssltransport import SSLTransport  # type: ignore[assignment]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1155, in get_code
+  File "<frozen importlib._bootstrap_external>", line 784, in _compile_bytecode
 KeyboardInterrupt
