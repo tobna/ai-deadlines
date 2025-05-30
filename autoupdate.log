@@ -11,12 +11,23 @@ Traceback (most recent call last):
     )
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/utils/__init__.py", line 12, in <module>
     from dateparser.timezone_parser import StaticTzInfo, _tz_offsets
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 88, in <module>
-    _tz_offsets = list(build_tz_offsets(_search_regex_parts))
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 73, in build_tz_offsets
-    yield get_offset(tz_obj, regex)
-          ~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 65, in get_offset
-    "offset": timedelta(seconds=tz_obj[1]),
-              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 89, in <module>
+    _search_regex = re.compile("|".join(_search_regex_parts))
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
+    return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 533, in _compile
+    parsed = _parse_pattern(source, info)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 421, in _parse_pattern
+    branches.append(parse_sequence(source, info))
+                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 486, in parse_sequence
+    apply_quantifier(source, info, counts, case_flags, ch,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      saved_pos, sequence)
+      ^^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 524, in apply_quantifier
+    ch = source.get()
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 4004, in get
+    def get(self, override_ignore=False):
+    
 KeyboardInterrupt
