@@ -1,6 +1,5 @@
 #!/bin/bash
 
-OLD_BASEDIR=$(PWD)
 BASEDIR=$(dirname $0)
 echo "updating and creating website"
 
@@ -19,6 +18,3 @@ cp -r src /usr/share/nginx/html/
 
 echo "4. remove changes to git repo"
 git stash
-
-echo "goto ${OLD_BASEDIR}"
-cd OLD_BASEDIR
