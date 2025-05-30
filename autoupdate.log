@@ -11,14 +11,43 @@ Traceback (most recent call last):
     )
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/utils/__init__.py", line 12, in <module>
     from dateparser.timezone_parser import StaticTzInfo, _tz_offsets
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 89, in <module>
-    _search_regex = re.compile("|".join(_search_regex_parts))
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 88, in <module>
+    _tz_offsets = list(build_tz_offsets(_search_regex_parts))
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 73, in build_tz_offsets
+    yield get_offset(tz_obj, regex)
+          ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/dateparser/timezone_parser.py", line 62, in get_offset
+    "regex": re.compile(
+             ~~~~~~~~~~^
+        re.sub(repl, replw, regex % tz_obj[0]), re.IGNORECASE
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
     return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 591, in _compile
-    req_offset, req_chars, req_flags = _get_required_string(parsed, info.flags)
-                                       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 4316, in _get_required_string
-    def _get_required_string(parsed, flags):
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 587, in _compile
+    parsed = parsed.optimise(info, reverse)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3410, in optimise
+    s = s.optimise(info, reverse)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2970, in optimise
+    subpattern = self.subpattern.optimise(info, reverse)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2055, in optimise
+    branches = Branch._reduce_to_set(info, reverse, branches)
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2324, in _reduce_to_set
+    Branch._flush_set_members(info, reverse, items, case_flags,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      new_branches)
+      ^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2378, in _flush_set_members
+    new_branches.append(item.with_flags(case_flags=case_flags))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 1858, in with_flags
+    case_flags = CASE_FLAGS_COMBINATIONS[case_flags & CASE_FLAGS]
+                                         ~~~~~~~~~~~^~~~~~~~~~~~
+  File "/usr/lib64/python3.13/enum.py", line 1614, in __and__
+    return self.__class__(value & other_value)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.13/enum.py", line 695, in __call__
+    def __call__(cls, value, names=_not_given, *values, module=None, qualname=None, type=None, start=1, boundary=None):
     
 KeyboardInterrupt
