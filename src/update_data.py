@@ -229,7 +229,7 @@ for key, val in conferences.items():
         conf_groups[group] = {}
     conf_groups[group][key] = val
 
-ends_wit_rd_re = re.compile(".*R\d$")
+ends_wit_rd_re = re.compile(r".*R\d$")
 print(conf_groups.keys())
 for group, conferences in conf_groups.items():
     if group == "wacv":
