@@ -25,23 +25,13 @@ Traceback (most recent call last):
     ^
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
     return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 635, in _compile
-    fs_code = _compile_firstset(info, parsed.get_firstset(reverse))
-                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3475, in get_firstset
-    fs |= s.get_firstset(reverse)
-          ~~~~~~~~~~~~~~^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2991, in get_firstset
-    return self.subpattern.get_firstset(reverse)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2109, in get_firstset
-    fs |= b.get_firstset(reverse)
-          ~~~~~~~~~~~~~~^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3627, in get_firstset
-    return set([self])
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 1904, in __hash__
-    return hash(self._key)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 1903, in __hash__
-    def __hash__(self):
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 553, in _compile
+    if (info.flags & _ALL_ENCODINGS) not in (0, ASCII, LOCALE, UNICODE):
+        ~~~~~~~~~~~^~~~~~~~~~~~~~~~
+  File "/usr/lib64/python3.13/enum.py", line 1611, in __and__
+    if self._get_value(flag) is None:
+       ~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib64/python3.13/enum.py", line 1587, in _get_value
+    def _get_value(self, flag):
     
 KeyboardInterrupt
