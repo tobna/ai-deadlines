@@ -15,30 +15,10 @@ Traceback (most recent call last):
     _search_regex = re.compile("|".join(_search_regex_parts))
   File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 353, in compile
     return _compile(pattern, flags, ignore_unused, kwargs, cache_pattern)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 588, in _compile
-    parsed = parsed.pack_characters(info)
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2090, in pack_characters
-    self.branches = [b.pack_characters(info) for b in self.branches]
-                     ~~~~~~~~~~~~~~~~~^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3450, in pack_characters
-    items.append(s.pack_characters(info))
-                 ~~~~~~~~~~~~~~~~~^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 2090, in pack_characters
-    self.branches = [b.pack_characters(info) for b in self.branches]
-                     ~~~~~~~~~~~~~~~~~^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3452, in pack_characters
-    Sequence._flush_characters(info, characters, case_flags, items)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3524, in _flush_characters
-    items.append(String(characters, case_flags=case_flags))
-                 ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 3898, in __init__
-    if (self.case_flags & FULLIGNORECASE) == FULLIGNORECASE:
-        ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-  File "/usr/lib64/python3.13/enum.py", line 1611, in __and__
-    if self._get_value(flag) is None:
-       ~~~~~~~~~~~~~~~^^^^^^
-  File "/usr/lib64/python3.13/enum.py", line 1587, in _get_value
-    def _get_value(self, flag):
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/regex.py", line 591, in _compile
+    req_offset, req_chars, req_flags = _get_required_string(parsed, info.flags)
+                                       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/data/cloud/Programming/aideadlines/venv/lib64/python3.13/site-packages/regex/_regex_core.py", line 4316, in _get_required_string
+    def _get_required_string(parsed, flags):
     
 KeyboardInterrupt
