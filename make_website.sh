@@ -3,8 +3,8 @@
 BASEDIR=$(dirname $0)
 echo "updating and creating website"
 
-echo "goto ${BASEDIR}"
-cd BASEDIR
+echo "goto /website"
+cd /website
 ls
 
 echo "1. update conference data"
