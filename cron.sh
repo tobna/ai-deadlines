@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "starting cron job for script ./website/update.py in 60s"
-sleep 60
+sleep 300
 while true; do
   ./website/make_website.sh
   wait
