@@ -9,7 +9,7 @@ icml2024:
   shortname: ICML 2024
   tags:
   - ML
-  title: European Conference on Computer Vision
+  title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2024/
 icml2025:
   abstractDeadline: '2025-01-23T12:00:00Z'
@@ -25,7 +25,7 @@ icml2025:
   tags:
   - ML
   timezone: UTC-12
-  title: European Conference on Computer Vision
+  title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2025/
 icml2026:
   abstractDeadline: '2026-01-23T12:00:00Z'
@@ -39,7 +39,7 @@ icml2026:
   shortname: ICML 2026
   tags: &id001
   - ML
-  title: European Conference on Computer Vision
+  title: International Conference on Machine Learning
 icml2027:
   abstractDeadline: '2027-01-23T12:00:00Z'
   conferenceEndDate: '2027-07-20'
@@ -51,4 +51,4 @@ icml2027:
   rating: A*
   shortname: ICML 2027
   tags: *id001
-  title: European Conference on Computer Vision
+  title: International Conference on Machine Learning
