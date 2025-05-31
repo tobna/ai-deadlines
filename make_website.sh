@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "updating and creating website"
 
