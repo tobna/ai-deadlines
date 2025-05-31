@@ -3,3 +3,4 @@ src/__pycache__
 src/parser/__pycache__
 src/data/*.json
 .gittkn
+html
