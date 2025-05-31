@@ -13,12 +13,12 @@ else:
 
 update_script = os.path.join(this_dir, "src", "update_data.py")
 # autoupdate_log = os.path.join(this_dir, "autoupdate.log")
-print(f"run update script at {update_script}")
+print(f"run update script at {update_script}", flush=True)
 os.system(f"python3 {update_script} --online")
 
 
 to_json_script = os.path.join(this_dir, "src", "data_to_json.py")
-print("convert data to json")
+print("convert data to json", flush=True)
 os.system(f"python3 {to_json_script}")
 
 if git_tkn is not None:
