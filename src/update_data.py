@@ -164,7 +164,7 @@ for conf_file in os.listdir(conference_folder):
 
 if args.online:
     all_parsers = PARSER + [parse_wacv]
-    for conf_parser in PARSER:
+    for conf_parser in all_parsers:
         current_year = datetime.datetime.now().year
         year = current_year + 2
         no_data_years = 0
