@@ -165,7 +165,7 @@ def parse_icml(year):
 
     data = {
         "id": f"icml{year}",
-        "title": "European Conference on Computer Vision",
+        "title": "International Conference on Machine Learning",
         "shortname": f"ICML {year}",
         "isApproximateDeadline": False,
         "website": url,
