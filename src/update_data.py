@@ -63,7 +63,6 @@ def parse_all_times(conference):
                 old_parsed_time = parsed_time
                 parsed_time = dateparser.parse(timestr)
                 if parsed_time is None:
-                    print("NONE after tz:", timestr, conf_tz)
                     parsed_time = old_parsed_time
             final_str = (
                 parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
@@ -127,7 +126,7 @@ def make_conf_rank_function(online=False):
                 h5idx = int(tds[2].get_text().strip())
                 _short_to_h5[short] = h5idx
 
-    print(f"got {len(_short_to_h5)} conference h5 values")
+    print(f"got {len(_short_to_h5)} conference h5 values", flush=True)
 
     def add_h5(conf):
         short = conf["id"][:-4]
@@ -170,10 +169,11 @@ if args.online:
         year = current_year + 2
         no_data_years = 0
         while no_data_years < 5 and (year >= current_year - 1 or args.historic):
-            print(f"{conf_parser} {year}")
+            print(f"{conf_parser} {year}", end="\t")
             yearly_datas = conf_parser(year)
             if not isinstance(yearly_datas, list):
                 yearly_datas = [yearly_datas]
+            print("no data" if len(yearly_datas[0]) == 0 else "loaded data", flush=True)
             for yearly_data in yearly_datas:
                 yearly_data = parse_all_times(yearly_data)
                 if len(yearly_data) == 0:
@@ -186,12 +186,15 @@ if args.online:
                         conferences[id]["dataSrc"] = "off-website"
                         print(f"NEW CONFERENCE: {conferences[id]}")
                     elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("off-website"):
+                        if conferences[id]["dataSrc"] == "estimate":
+                            print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                         conferences[id] = {**conferences[id], **yearly_data}
                         conferences[id]["dataSrc"] = "off-website"
                     else:
                         conferences[id] = {**yearly_data, **conferences[id]}
             year -= 1
 
+    print("load hf data", flush=True)
     hf_conferences = get_hf_list()
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
@@ -207,11 +210,14 @@ if args.online:
             conferences[id]["dataSrc"] = "hf-repo"
             print(f"NEW CONFERENCE: {conferences[id]}")
         elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("hf-repo"):
+            if conferences[id]["dataSrc"] == "estimate":
+                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
             conferences[id] = {**conferences[id], **hf_data}
             conferences[id]["dataSrc"] = "hf-repo"
         else:
             conferences[id] = {**hf_data, **conferences[id]}
 
+    print("load nino duarte data", flush=True)
     nino_confs = get_nino_list()
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
@@ -227,6 +233,8 @@ if args.online:
             conferences[id]["dataSrc"] = "ninoduarte-git"
             print(f"NEW CONFERENCE: {conferences[id]}")
         elif _SOURCES.index(conferences[id]["dataSrc"]) < _SOURCES.index("ninoduarte-git"):
+            if conferences[id]["dataSrc"] == "estimate":
+                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
             conferences[id] = {**conferences[id], **nino_conf}
             conferences[id]["dataSrc"] = "ninoduarte-git"
         else:
@@ -248,6 +256,7 @@ for key, val in conferences.items():
 ends_wit_rd_re = re.compile(r".*R\d$")
 print(conf_groups.keys())
 for group, conferences in conf_groups.items():
+    print(f"write out group {group}", flush=True)
     if group == "wacv":
         continue
     future_conferences = estimate_future_conferences(conferences)
