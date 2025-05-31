@@ -12,12 +12,13 @@ from bs4 import BeautifulSoup
 
 this_folder = os.path.dirname(__file__)
 sys.path.append(this_folder)
+sys.path.append(os.path.join(this_folder, "parser"))
 
-from parser.common_website import PARSER
-from parser.hf_list import get_hf_list
-from parser.ninoduarte_list import get_nino_list
-from parser.see_future import estimate_future_conferences
-from parser.wacv import parse_wacv
+from common_website import PARSER
+from hf_list import get_hf_list
+from ninoduarte_list import get_nino_list
+from see_future import estimate_future_conferences
+from wacv import parse_wacv
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ninoduarte-git", "hf-repo", "off-website", "manual"]
