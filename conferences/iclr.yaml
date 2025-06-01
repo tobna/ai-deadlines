@@ -30,7 +30,7 @@ iclr2026:
   tags: &id001
   - CV
   timezone: America/Los_Angeles
-  title: ICLR 2026
+  title: International Conference on Learning Representations
   website: https://iclr.cc/
 iclr2027:
   conferenceEndDate: '2027-05-09'
@@ -42,4 +42,4 @@ iclr2027:
   rating: A*
   shortname: ICLR 2027
   tags: *id001
-  title: ICLR 2026
+  title: International Conference on Learning Representations
