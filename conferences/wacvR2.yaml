@@ -21,7 +21,7 @@ wacvR22026:
   note: Round 2
   rating: A
   shortname: WACV 2026
-  tags: &id001
+  tags:
   - CV
   timezone: UTC-7
   title: Winter Conference on Applications of Computer Vision
@@ -37,5 +37,6 @@ wacvR22027:
   note: 'From WACV 2026: Round 2'
   rating: A
   shortname: WACV 2027
-  tags: *id001
+  tags:
+  - CV
   title: Winter Conference on Applications of Computer Vision

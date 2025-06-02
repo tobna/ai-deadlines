@@ -1,14 +1,14 @@
 threedv2026:
-  conferenceEndDate: "2026-03-28"
-  conferenceStartDate: "2026-03-24"
+  conferenceEndDate: '2026-03-28'
+  conferenceStartDate: '2026-03-24'
   dataSrc: ninoduarte-git
-  deadline: "2025-07-12T21:59:59Z"
+  deadline: '2025-07-12T21:59:59Z'
   id: threedv2026
   isApproximateDeadline: false
   location: Vancouver, Canada
   shortname: 3DV 2026
   tags:
-    - CV
+  - CV
   timezone: America/Los_Angeles
   title: International Conference on 3D Vision
   website: https://3dvconf.github.io/2026/
