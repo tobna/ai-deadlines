@@ -29,13 +29,14 @@ def estimate_future_conferences(conferences, end_in_years=2):
             "isApproximateDeadline": True,
             "shortname": last_conf["shortname"][:-4] + str(next_year),
             "tags": last_conf["tags"],
-            "title": last_conf["title"],
             "deadline": last_deadline + timedelta(days=365 * (next_year - last_start.year)),
             "conferenceStartDate": last_start + timedelta(days=365 * (next_year - last_start.year)),
             "conferenceEndDate": (
                 last_start + timedelta(days=365 * (next_year - last_start.year) + 5)
             ),  # just assume 1 week
         }
+        if "title" in last_conf:
+            data["title"] = last_conf["title"]
         if "rating" in last_conf:
             data["rating"] = last_conf["rating"]
         if "h5Index" in last_conf:
