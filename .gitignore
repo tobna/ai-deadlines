@@ -4,3 +4,4 @@ src/parser/__pycache__
 src/data/*.json
 .gittkn
 html
+src/plausible.js
