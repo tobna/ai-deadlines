@@ -5,6 +5,7 @@ const showPastToggle = document.getElementById('showPastToggle');
 const showApproxFutureToggle = document.getElementById('showApproxFutureToggle');
 const minH5IndexInput = document.getElementById('minH5Index');
 const minRatingSelect = document.getElementById('minRating');
+const conferenceNameFilterInput = document.getElementById('conferenceNameFilter');
 const currentYearSpan = document.getElementById('currentYear');
 
 const messageModal = document.getElementById('messageModal');
@@ -23,7 +24,8 @@ let currentFilterSettings = {
     showPast: false,
     showApproxFuture: true,
     minH5: null,
-    minRating: ""
+    minRating: "",
+    nameFilter: ""
 };
 
 const ratingOrder = { "A*": 5, "A": 4, "B": 3, "C": 2, "D": 1 };
@@ -165,7 +167,6 @@ function createConferenceCard(conference) {
 
     let metaInfoHTML = '<div class="conference-meta-info">';
     let hasMeta = false;
-    console.log(conference)
     if (conference.rating) {
         metaInfoHTML += `<span><span class="label">Rating:</span> ${conference.rating}</span>`;
         hasMeta = true;
@@ -369,7 +370,8 @@ function applyAllFilters() {
         currentFilterSettings.showPast, 
         currentFilterSettings.showApproxFuture,
         currentFilterSettings.minH5,
-        currentFilterSettings.minRating
+        currentFilterSettings.minRating,
+        currentFilterSettings.nameFilter
     );
 }
 
@@ -379,7 +381,8 @@ function renderConferences(
     shouldShowPast, 
     shouldShowApproxFuture,
     minH5,
-    minRatingVal
+    minRatingVal,
+    nameFilterVal
 ) {
     if (!conferenceGrid) return;
     
@@ -393,6 +396,16 @@ function renderConferences(
 
     let filteredConferences = [...sourceConferenceData]; 
     const now = new Date();
+
+    if (nameFilterVal) {
+        const lowerCaseFilter = nameFilterVal.toLowerCase().trim();
+        if (lowerCaseFilter) {
+            filteredConferences = filteredConferences.filter(conf =>
+                (conf.title && conf.title.toLowerCase().includes(lowerCaseFilter)) ||
+                (conf.shortname && conf.shortname.toLowerCase().includes(lowerCaseFilter))
+            );
+        }
+    }
 
     if (!shouldShowApproxFuture) {
          filteredConferences = filteredConferences.filter(conf => {
@@ -505,6 +518,12 @@ function setupEventListeners() {
             applyAllFilters();
         });
     }
+    if (conferenceNameFilterInput) {
+        conferenceNameFilterInput.addEventListener('input', function() {
+            currentFilterSettings.nameFilter = this.value;
+            applyAllFilters();
+        });
+    }
 }
 
 // --- Initialization ---
@@ -516,6 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
          if (isNaN(currentFilterSettings.minH5)) currentFilterSettings.minH5 = null;
     }
     if (minRatingSelect) currentFilterSettings.minRating = minRatingSelect.value;
+    if (conferenceNameFilterInput) currentFilterSettings.nameFilter = conferenceNameFilterInput.value;
     
     setupEventListeners();
     loadInitialData(); 

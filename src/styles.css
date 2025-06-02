@@ -187,6 +187,16 @@ body {
   width: 80px;
 }
 
+.filter-input:focus, .filter-select:focus {
+  outline: none;
+  border-color: #ec4899; /* pink-500 */
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.5);
+}
+
+.filter-input::placeholder {
+  color: #6b7280; /* gray-500 */
+}
+
 .toggle-switch-label {
   margin-right: 0.75rem;
   font-size: 0.875rem;
