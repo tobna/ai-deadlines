@@ -1,6 +1,6 @@
 wacvR22024:
   dataSrc: off-website
-  deadline: Aug. 30th, 2023 11:59 AM PT (Aug. 30th, 2023 06:59 PM GMT)
+  deadline: '2023-08-30T19:59:00Z'
   id: wacvR22024
   isApproximateDeadline: false
   note: Round 2
@@ -21,8 +21,21 @@ wacvR22026:
   note: Round 2
   rating: A
   shortname: WACV 2026
-  tags:
+  tags: &id001
   - CV
   timezone: UTC-7
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2026/
+wacvR22027:
+  abstractDeadline: '2026-09-12T12:00:00Z'
+  conferenceEndDate: '2027-03-11'
+  conferenceStartDate: '2027-03-06'
+  dataSrc: estimate
+  deadline: '2026-09-19T12:00:00Z'
+  id: wacvR22027
+  isApproximateDeadline: true
+  note: 'From WACV 2026: Round 2'
+  rating: A
+  shortname: WACV 2027
+  tags: *id001
+  title: Winter Conference on Applications of Computer Vision
