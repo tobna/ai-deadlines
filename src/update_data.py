@@ -170,12 +170,20 @@ if args.online:
         no_data_years = 0
         while no_data_years < 5 and (year >= current_year - 1 or args.historic):
             print(f"{conf_parser} {year}", end="\t")
-            yearly_datas = conf_parser(year)
+            try:
+                yearly_datas = conf_parser(year)
+            except Exception as e:
+                print(f"ERROR while parsing conference: {e}")
+                continue
             if not isinstance(yearly_datas, list):
                 yearly_datas = [yearly_datas]
             print("no data" if len(yearly_datas[0]) == 0 else "loaded data", flush=True)
             for yearly_data in yearly_datas:
-                yearly_data = parse_all_times(yearly_data)
+                try:
+                    yearly_data = parse_all_times(yearly_data)
+                except Exception as e:
+                    print(f"ERROR while parsing dates for conference {yearly_data['id']}: {e}")
+                    continue
                 if len(yearly_data) == 0:
                     no_data_years += 1
                 else:
@@ -195,7 +203,11 @@ if args.online:
             year -= 1
 
     print("load hf data", flush=True)
-    hf_conferences = get_hf_list()
+    try:
+        hf_conferences = get_hf_list()
+    except Exception as e:
+        print(f"ERROR while parsing hf list: {e}")
+        hf_conferences = []
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
         id = hf_data["id"]
@@ -218,7 +230,11 @@ if args.online:
             conferences[id] = {**hf_data, **conferences[id]}
 
     print("load nino duarte data", flush=True)
-    nino_confs = get_nino_list()
+    try:
+        nino_confs = get_nino_list()
+    except Exception as e:
+        print(f"ERROR while parsing ninoduarte-git: {e}")
+        nino_confs = []
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
         id = nino_conf["id"].replace("nips", "neurips")
@@ -259,8 +275,12 @@ for group, conferences in conf_groups.items():
     print(f"write out group {group}", flush=True)
     if group == "wacv":
         continue
-    future_conferences = estimate_future_conferences(conferences)
-    future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}
+    try:
+        future_conferences = estimate_future_conferences(conferences)
+        future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}
+    except Exception as e:
+        print(f"ERROR estimating future conferences of group {group}: {e}")
+        future_conferences = {}
 
     group_name = group[:-2] if ends_wit_rd_re.match(group) else group.replace("threedv", "3DV")
     group_rank = get_core_rank(group) if args.online else None
