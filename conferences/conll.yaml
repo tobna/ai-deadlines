@@ -3,6 +3,7 @@ conll2025:
   conferenceStartDate: '2025-07-31'
   dataSrc: hf-repo
   deadline: '2025-03-16T00:00:00Z'
+  h5Index: 39
   id: conll2025
   isApproximateDeadline: false
   location: Vienna, Austria

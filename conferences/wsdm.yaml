@@ -4,6 +4,7 @@ wsdm2025:
   conferenceStartDate: '2025-03-10'
   dataSrc: hf-repo
   deadline: '2024-08-15T11:59:00Z'
+  h5Index: 77
   id: wsdm2025
   isApproximateDeadline: false
   location: Hannover Congress Center, Hannover, Germany

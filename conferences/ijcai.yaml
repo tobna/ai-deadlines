@@ -4,6 +4,7 @@ ijcai2025:
   conferenceStartDate: '2025-08-16'
   dataSrc: hf-repo
   deadline: '2025-01-24T11:59:59Z'
+  h5Index: 136
   id: ijcai2025
   isApproximateDeadline: false
   location: Montreal, Canada

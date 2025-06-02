@@ -3,6 +3,7 @@ icip2024:
   conferenceStartDate: '2024-10-27'
   dataSrc: off-website
   deadline: '2024-02-06T23:00:00Z'
+  h5Index: 66
   id: icip2024
   isApproximateDeadline: false
   location: Abu Dhabi, UAE
@@ -17,6 +18,7 @@ icip2025:
   conferenceStartDate: '2025-09-17'
   dataSrc: off-website
   deadline: '2025-02-04T23:00:00Z'
+  h5Index: 66
   id: icip2025
   isApproximateDeadline: false
   location: Anchorage, Alaska
@@ -31,6 +33,7 @@ icip2026:
   conferenceStartDate: '2026-09-17'
   dataSrc: estimate
   deadline: '2026-02-04T23:00:00Z'
+  h5Index: 66
   id: icip2026
   isApproximateDeadline: true
   rating: B
@@ -42,6 +45,7 @@ icip2027:
   conferenceStartDate: '2027-09-17'
   dataSrc: estimate
   deadline: '2027-02-04T23:00:00Z'
+  h5Index: 66
   id: icip2027
   isApproximateDeadline: true
   rating: B

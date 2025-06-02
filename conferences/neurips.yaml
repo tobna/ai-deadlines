@@ -4,6 +4,7 @@ neurips2024:
   conferenceStartDate: '2025-12-11'
   dataSrc: off-website
   deadline: '2024-05-22T20:00:00Z'
+  h5Index: 337
   id: neurips2024
   isApproximateDeadline: false
   rating: A*
@@ -18,6 +19,7 @@ neurips2025:
   conferenceStartDate: '2025-12-03'
   dataSrc: off-website
   deadline: '2025-05-22T12:00:00Z'
+  h5Index: 337
   id: neurips2025
   isApproximateDeadline: false
   location: San Diego Convention Center, San Diego, USA
@@ -34,6 +36,7 @@ neurips2026:
   conferenceStartDate: '2026-12-03'
   dataSrc: estimate
   deadline: '2026-05-22T12:00:00Z'
+  h5Index: 337
   id: neurips2026
   isApproximateDeadline: true
   rating: A*
@@ -47,6 +50,7 @@ neurips2027:
   conferenceStartDate: '2027-12-03'
   dataSrc: estimate
   deadline: '2027-05-22T12:00:00Z'
+  h5Index: 337
   id: neurips2027
   isApproximateDeadline: true
   rating: A*

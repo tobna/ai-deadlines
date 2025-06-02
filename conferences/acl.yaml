@@ -3,6 +3,7 @@ acl2025:
   conferenceStartDate: '2025-07-27'
   dataSrc: hf-repo
   deadline: '2025-02-16T11:59:59Z'
+  h5Index: 215
   id: acl2025
   isApproximateDeadline: false
   rating: A*

@@ -4,6 +4,7 @@ kdd2025:
   conferenceStartDate: '2025-08-03'
   dataSrc: hf-repo
   deadline: '2025-02-11T11:59:59Z'
+  h5Index: 124
   id: kdd2025
   isApproximateDeadline: false
   rating: A*

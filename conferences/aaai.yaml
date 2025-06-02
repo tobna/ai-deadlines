@@ -4,6 +4,7 @@ aaai2025:
   conferenceStartDate: '2025-02-25'
   dataSrc: hf-repo
   deadline: '2024-08-16T11:59:59Z'
+  h5Index: 220
   id: aaai2025
   isApproximateDeadline: false
   location: Pennsylvania Convention Center, Philadelphia, USA
@@ -23,6 +24,7 @@ aaai2026:
   conferenceStartDate: '2026-01-20'
   dataSrc: hf-repo
   deadline: '2025-08-02T11:59:59Z'
+  h5Index: 220
   id: aaai2026
   isApproximateDeadline: false
   location: Singapore EXPO, Singapore
@@ -42,6 +44,7 @@ aaai2027:
   conferenceStartDate: '2027-01-20'
   dataSrc: estimate
   deadline: '2026-08-02T11:59:59Z'
+  h5Index: 220
   id: aaai2027
   isApproximateDeadline: true
   rating: A*

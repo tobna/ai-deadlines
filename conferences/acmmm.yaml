@@ -4,6 +4,7 @@ acmmm2024:
   conferenceStartDate: '2024-10-28'
   dataSrc: off-website
   deadline: '2024-04-13T11:59:00Z'
+  h5Index: 101
   id: acmmm2024
   isApproximateDeadline: false
   location: Melbourne, Australia
@@ -21,6 +22,7 @@ acmmm2025:
   conferenceStartDate: '2025-10-27'
   dataSrc: hf-repo
   deadline: '2025-04-12T11:59:59Z'
+  h5Index: 101
   id: acmmm2025
   isApproximateDeadline: false
   location: Dublin Royal Convention Center, Dublin, Ireland
@@ -39,6 +41,7 @@ acmmm2026:
   conferenceStartDate: '2026-10-27'
   dataSrc: estimate
   deadline: '2026-04-12T11:59:59Z'
+  h5Index: 101
   id: acmmm2026
   isApproximateDeadline: true
   rating: A*
@@ -54,6 +57,7 @@ acmmm2027:
   conferenceStartDate: '2027-10-27'
   dataSrc: estimate
   deadline: '2027-04-12T11:59:59Z'
+  h5Index: 101
   id: acmmm2027
   isApproximateDeadline: true
   rating: A*

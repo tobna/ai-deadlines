@@ -3,6 +3,7 @@ icra2025:
   conferenceStartDate: '2026-06-01'
   dataSrc: hf-repo
   deadline: '2024-07-15T16:00:00Z'
+  h5Index: 122
   id: icra2025
   isApproximateDeadline: false
   location: Georgia World Congress Center, Atlanta, USA
@@ -19,6 +20,7 @@ icra2026:
   conferenceStartDate: '2026-05-19'
   dataSrc: ninoduarte-git
   deadline: '2025-09-15T21:59:59Z'
+  h5Index: 122
   id: icra2026
   isApproximateDeadline: false
   location: Vienna, Austria
@@ -33,6 +35,7 @@ icra2027:
   conferenceStartDate: '2027-05-19'
   dataSrc: estimate
   deadline: '2026-09-15T21:59:59Z'
+  h5Index: 122
   id: icra2027
   isApproximateDeadline: true
   rating: A*

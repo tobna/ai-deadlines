@@ -3,6 +3,7 @@ iros2025:
   conferenceStartDate: '2025-10-19'
   dataSrc: hf-repo
   deadline: '2025-03-02T07:59:59Z'
+  h5Index: 86
   id: iros2025
   isApproximateDeadline: false
   location: Hangzhou, China

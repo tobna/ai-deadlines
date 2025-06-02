@@ -4,6 +4,7 @@ aistats2024:
   conferenceStartDate: '2024-05-02'
   dataSrc: off-website
   deadline: '2023-10-17T00:00:00Z'
+  h5Index: 100
   id: aistats2024
   isApproximateDeadline: false
   location: Valencia, Spain
@@ -19,6 +20,7 @@ aistats2025:
   conferenceStartDate: '2025-05-03'
   dataSrc: hf-repo
   deadline: '2024-10-11T11:59:59Z'
+  h5Index: 100
   id: aistats2025
   isApproximateDeadline: false
   location: TBA
@@ -35,6 +37,7 @@ aistats2026:
   conferenceStartDate: '2026-05-03'
   dataSrc: estimate
   deadline: '2025-10-11T11:59:59Z'
+  h5Index: 100
   id: aistats2026
   isApproximateDeadline: true
   rating: A
@@ -48,6 +51,7 @@ aistats2027:
   conferenceStartDate: '2027-05-03'
   dataSrc: estimate
   deadline: '2026-10-11T11:59:59Z'
+  h5Index: 100
   id: aistats2027
   isApproximateDeadline: true
   rating: A

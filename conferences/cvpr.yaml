@@ -4,6 +4,7 @@ cvpr2024:
   conferenceStartDate: '2024-06-19'
   dataSrc: off-website
   deadline: '2023-11-18T07:59:00Z'
+  h5Index: 440
   id: cvpr2024
   isApproximateDeadline: false
   rating: A*
@@ -18,6 +19,7 @@ cvpr2025:
   conferenceStartDate: '2025-06-13'
   dataSrc: off-website
   deadline: '2024-11-15T07:59:00Z'
+  h5Index: 440
   id: cvpr2025
   isApproximateDeadline: false
   location: Music City Center, Nashville, USA
@@ -34,6 +36,7 @@ cvpr2026:
   conferenceStartDate: '2026-06-13'
   dataSrc: estimate
   deadline: '2025-11-15T07:59:00Z'
+  h5Index: 440
   id: cvpr2026
   isApproximateDeadline: true
   rating: A*
@@ -47,6 +50,7 @@ cvpr2027:
   conferenceStartDate: '2027-06-13'
   dataSrc: estimate
   deadline: '2026-11-15T07:59:00Z'
+  h5Index: 440
   id: cvpr2027
   isApproximateDeadline: true
   rating: A*

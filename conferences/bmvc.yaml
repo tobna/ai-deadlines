@@ -4,6 +4,7 @@ bmvc2024:
   conferenceStartDate: '2024-11-25'
   dataSrc: off-website
   deadline: '2024-05-10T23:59:00Z'
+  h5Index: 65
   id: bmvc2024
   isApproximateDeadline: false
   location: Glasgow, UK
@@ -19,6 +20,7 @@ bmvc2025:
   conferenceStartDate: '2025-11-25'
   dataSrc: ninoduarte-git
   deadline: '2025-05-16T21:59:59Z'
+  h5Index: 65
   id: bmvc2025
   isApproximateDeadline: false
   location: Sheffield, UK
@@ -34,6 +36,7 @@ bmvc2026:
   conferenceStartDate: '2026-11-25'
   dataSrc: estimate
   deadline: '2026-05-16T21:59:59Z'
+  h5Index: 65
   id: bmvc2026
   isApproximateDeadline: true
   rating: A
@@ -45,6 +48,7 @@ bmvc2027:
   conferenceStartDate: '2027-11-25'
   dataSrc: estimate
   deadline: '2027-05-16T21:59:59Z'
+  h5Index: 65
   id: bmvc2027
   isApproximateDeadline: true
   rating: A

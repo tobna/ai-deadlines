@@ -3,6 +3,7 @@ coling2025:
   conferenceStartDate: '2025-01-19'
   dataSrc: hf-repo
   deadline: '2024-09-17T11:59:59Z'
+  h5Index: 65
   id: coling2025
   isApproximateDeadline: false
   location: Abu Dhabi National Exhibition Centre (ADNEC), Abu Dhabi, UAE

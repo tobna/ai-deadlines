@@ -1,9 +1,11 @@
 wacvR22024:
   dataSrc: off-website
   deadline: '2023-08-30T19:59:00Z'
+  h5Index: 109
   id: wacvR22024
   isApproximateDeadline: false
   note: Round 2
+  rating: A
   shortname: WACV 2024
   tags:
   - CV
@@ -15,6 +17,7 @@ wacvR22026:
   conferenceStartDate: '2026-03-06'
   dataSrc: off-website
   deadline: '2025-09-19T12:00:00Z'
+  h5Index: 109
   id: wacvR22026
   isApproximateDeadline: false
   location: JW Marriott Starpass in Tucson, Arizona, USA
@@ -32,6 +35,7 @@ wacvR22027:
   conferenceStartDate: '2027-03-06'
   dataSrc: estimate
   deadline: '2026-09-19T12:00:00Z'
+  h5Index: 109
   id: wacvR22027
   isApproximateDeadline: true
   note: 'From WACV 2026: Round 2'
