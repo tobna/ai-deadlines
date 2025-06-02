@@ -493,6 +493,19 @@ function setupEventListeners() {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
+    document.addEventListener('keydown', function(event) {
+        // Check if the 'f' key is pressed along with Ctrl (for Windows/Linux) or Command (for macOS)
+        if (event.key === 'f' && (event.ctrlKey || event.metaKey)) {
+            // Prevent the browser's default "Find" action
+            event.preventDefault();
+
+            // Focus the conference name filter input field
+            if (conferenceNameFilterInput) {
+                conferenceNameFilterInput.focus();
+            }
+        }
+    });
+
     if (showPastToggle) {
         showPastToggle.addEventListener('change', function() {
             currentFilterSettings.showPast = this.checked;
