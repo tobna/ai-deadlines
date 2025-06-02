@@ -15,7 +15,7 @@ ecai2024:
   website: https://www.ecai2024.eu/
 ecai2025:
   abstractDeadline: '2025-04-30T11:59:59Z'
-  conferenceEndDate: '2025-05-30'
+  conferenceEndDate: '2025-06-30'
   conferenceStartDate: '2025-10-25'
   dataSrc: hf-repo
   deadline: '2025-05-07T11:59:59Z'

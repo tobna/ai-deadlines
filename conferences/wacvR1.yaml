@@ -1,3 +1,14 @@
+wacvR12024:
+  dataSrc: off-website
+  deadline: June 28th, 2023 11:59 AM PT (June 28th, 2023 06:59 PM GMT)
+  id: wacvR12024
+  isApproximateDeadline: false
+  note: Round 1
+  shortname: WACV 2024
+  tags:
+  - CV
+  title: Winter Conference on Applications of Computer Vision
+  website: https://wacv2024.thecvf.com
 wacvR12025:
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-28'
@@ -15,23 +26,22 @@ wacvR12025:
   title: IEEE/CVF Winter Conference on Applications of Computer Vision
   website: https://wacv2025.thecvf.com/
 wacvR12026:
-  abstractDeadline: '2025-07-11T06:59:59Z'
+  abstractDeadline: '2025-07-11T12:00:00Z'
   conferenceEndDate: '2026-03-10'
   conferenceStartDate: '2026-03-06'
   dataSrc: off-website
-  deadline: '2025-07-18T06:59:59Z'
+  deadline: '2025-07-18T12:00:00Z'
   id: wacvR12026
   isApproximateDeadline: false
   location: JW Marriott Starpass in Tucson, Arizona, USA
   note: Round 1
   rating: A
   shortname: WACV 2026
-  tags: &id001
-  - ML
+  tags:
   - CV
   timezone: UTC-7
-  title: IEEE/CVF Winter Conference on Applications of Computer Vision
-  website: https://wacv.thecvf.com/Conferences/2026
+  title: Winter Conference on Applications of Computer Vision
+  website: https://wacv.thecvf.com/Conferences/2026/
 wacvR12027:
   abstractDeadline: '2026-07-11T06:59:59Z'
   conferenceEndDate: '2027-03-11'
@@ -43,5 +53,7 @@ wacvR12027:
   note: 'From WACV 2026: Round 1'
   rating: A
   shortname: WACV 2027
-  tags: *id001
+  tags:
+  - ML
+  - CV
   title: IEEE/CVF Winter Conference on Applications of Computer Vision
