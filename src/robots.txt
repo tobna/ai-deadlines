@@ -1,0 +1,6 @@
+# Allow all web crawlers full access to the site
+User-agent: *
+Disallow:
+
+# Point crawlers to the sitemap
+Sitemap: https://aideadlines.nauen-it.de/sitemap.xml
