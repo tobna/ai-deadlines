@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 body {
   font-family: sans-serif;
   background-color: #111827;
@@ -8,20 +10,16 @@ body {
 
 .countdown-item {
   min-width: auto;
-  /* Ensure consistent width for day/hour/min/sec blocks \*/
 }
 
 /* Custom styles for a bit more polish if needed */
 .card-gradient {
   background: linear-gradient(145deg, \#1f2937, \#374151);
-  /* gray-800 to gray-700 \*/
 }
 
 .ended-banner {
   background-color: #4b5563;
-  /* Tailwind gray-600 */
   color: #d1d5db;
-  /* Tailwind gray-300 \*/
 }
 
 /* Additional styles for clarity if needed */
@@ -33,14 +31,12 @@ body {
   padding-top: 0.75rem;
   /* 12px */
   border-top: 1px solid #4b5563;
-  /* Tailwind gray-600 */
 }
 
 .date-text {
   font-size: 0.875rem;
   /* 14px */
   color: #d1d5db;
-  /* Tailwind gray-300 */
 }
 
 .countdown-label {
@@ -67,20 +63,17 @@ body {
 .countdown-item-sm .text-2xl {
   /* Target the number size specifically */
   font-size: 1.25rem;
-  /* 20px */
 }
 
 .countdown-item-sm .text-xs {
   /* Target the unit label size */
   font-size: 0.65rem;
-  /* 10.4px */
 }
 
 .countdown-item-sm {
   min-width: 50px;
   /* Smaller min-width for abstract items */
   padding: 0.25rem;
-  /* Smaller padding */
 }
 
 
@@ -187,14 +180,17 @@ body {
   width: 80px;
 }
 
-.filter-input:focus, .filter-select:focus {
+.filter-input:focus,
+.filter-select:focus {
   outline: none;
-  border-color: #ec4899; /* pink-500 */
+  border-color: #ec4899;
+  /* pink-500 */
   box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.5);
 }
 
 .filter-input::placeholder {
-  color: #6b7280; /* gray-500 */
+  color: #6b7280;
+  /* gray-500 */
 }
 
 .toggle-switch-label {
