@@ -77,7 +77,7 @@ def parse_wacv(year):
             tds = row.find_all("td")
             for i, td in enumerate(tds):
                 txt = td.get_text().strip()
-                print(txt)
+                # print(txt)
 
                 match = abstract_re.match(txt)
                 if match:
