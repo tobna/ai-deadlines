@@ -86,7 +86,7 @@ def parse_neurips_data(year: int):
         "shortname": f"NeurIPS {year}",
         "isApproximateDeadline": False,
         "website": url,
-        "tags": ["AI"],
+        "tags": ["ML"],
     }
 
     data = parse_common_website_format(data, url + "Dates")
