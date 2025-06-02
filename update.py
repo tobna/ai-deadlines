@@ -22,6 +22,11 @@ print("convert data to json", flush=True)
 os.system(f"python3 {to_json_script}")
 
 if git_tkn is not None:
+    conferences_tracked = [f for f in os.listdir(os.path.join(this_dir, "conferences")) if f.endswith(".yaml")]
+    alt_text = "Status: Conferences Tracked"
+    badge_url = f"https://img.shields.io/badge/Conferences%20Tracked-{len(conferences_tracked)}-blue"
+    os.system(f"sed -i 's|!\\[{alt_text}\\](.*)|!\\[{alt_text}\\]({badge_url})|' README.md")
+
     os.system("git add .")
     os.system(f"git commit -m 'Update conference data at {datetime.now().isoformat()}'")
     os.system(f"git push https://tobna:{git_tkn}@github.com/tobna/ai-deadlines")
