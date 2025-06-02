@@ -4,7 +4,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](#how-to-contribute)
 ![Status: Conferences Tracked](https://img.shields.io/badge/Conferences%20Tracked-61-blue)
 
-Welcome to the official repository for the [AI Conference Deadlines website](aideadlines.nauen-it.de)! This is a community-driven project dedicated to providing a clean, simple, and up-to-date list of deadlines for major AI, Machine Learning, and related conferences.
+Welcome to the official repository for the [AI Conference Deadlines website](https://aideadlines.nauen-it.de)! This is a community-driven project dedicated to providing a clean, simple, and up-to-date list of deadlines for major AI, Machine Learning, and related conferences.
 
 ---
 
