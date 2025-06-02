@@ -1,14 +1,13 @@
 roman2025:
-  conferenceEndDate: '2025-08-29'
-  conferenceStartDate: '2025-08-25'
+  conferenceEndDate: "2025-08-29"
+  conferenceStartDate: "2025-08-25"
   dataSrc: ninoduarte-git
-  deadline: '2025-03-20T22:59:59Z'
+  deadline: "2025-03-20T22:59:59Z"
   id: roman2025
   isApproximateDeadline: false
   location: Eindhoven, The Netherlands
   shortname: Ro-Man 2025
   tags:
-  - RO
+    - RO
   timezone: America/Los_Angeles
-  title: Ro-Man 2025
   website: http://www.ro-man2025.org

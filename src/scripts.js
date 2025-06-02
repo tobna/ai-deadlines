@@ -268,9 +268,20 @@ function createConferenceCard(conference) {
         </a>`;
     }
 
+    if (conference.title && conference.shortname) {
+      titleHTML = `
+      <h2 class="text-2xl font-semibold text-white mb-1">${conference.title} (${conference.shortname})</h2>`
+    } else if (conference.title) {
+      titleHTML = `
+      <h2 class="text-2xl font-semibold text-white mb-1">${conference.title}</h2>`
+    } else {
+      titleHTML = `
+      <h2 class="text-2xl font-semibold text-white mb-1">${conference.shortname}</h2>`
+    }
+
     card.innerHTML = `
         <div>
-            <h2 class="text-2xl font-semibold text-white mb-1">${conference.title} (${conference.shortname || ''})</h2>
+            ${titleHTML}
             ${metaInfoHTML}
             ${placeInfo}
             ${conferenceDatesHTML}

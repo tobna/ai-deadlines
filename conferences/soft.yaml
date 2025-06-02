@@ -1,14 +1,13 @@
 soft2024:
-  conferenceEndDate: '2024-04-26'
-  conferenceStartDate: '2024-04-23'
+  conferenceEndDate: "2024-04-26"
+  conferenceStartDate: "2024-04-23"
   dataSrc: ninoduarte-git
-  deadline: '2024-10-31T22:59:59Z'
+  deadline: "2024-10-31T22:59:59Z"
   id: soft2024
   isApproximateDeadline: false
   location: Lausanne, Switzerland
   shortname: SoftRob 2025
   tags:
-  - RO
+    - RO
   timezone: America/Los_Angeles
-  title: SoftRob 2025
   website: https://robosoft2025.org/

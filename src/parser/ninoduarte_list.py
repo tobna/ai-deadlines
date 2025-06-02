@@ -35,7 +35,6 @@ def get_nino_list():
             "tags": [conf["type"]],
             "timezone": conf["timezone"],
             "website": conf["link"],
-            "title": conf["name"],
             "conferenceStartDate": conf["date_start"],
             "conferenceEndDate": conf["date_end"],
         }
