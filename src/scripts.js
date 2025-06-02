@@ -179,12 +179,12 @@ function createConferenceCard(conference) {
     if (!hasMeta) metaInfoHTML = '';
 
     let placeInfo = '';
-    if (conference.place) {
+    if (conference.location) {
         placeInfo = `<p class="text-sm text-gray-400 mt-1 mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
                             <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.002-.001L10 18.43l-5.192-5.192a6.875 6.875 0 010-9.719l.001-.001c2.7-2.7 7.075-2.7 9.774 0l.001.001a6.875 6.875 0 010 9.719L10 18.43zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                         </svg>
-                        ${conference.place}
+                        ${conference.location}
                     </p>`;
     }
 
