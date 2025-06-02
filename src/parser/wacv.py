@@ -57,7 +57,7 @@ def parse_wacv(year):
             ):
                 key = "deadline2" if "deadline1" in data else "deadline1"
 
-                data[key] = ":".join(txt.split(":")[1:]).strip()
+                data[key] = ":".join(txt.split(":")[1:]).split("(")[0].strip()
 
         if "deadline1" not in data:
             return {}
