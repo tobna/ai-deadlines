@@ -1,6 +1,6 @@
 # AI Conference Deadlines
 
-[![Deadline Website](https://img.shields.io/badge/Deadline-Website-red)](aideadlines.nauen-it.de)
+[![Deadline Website](https://img.shields.io/badge/Deadline-Website-red)](https://aideadlines.nauen-it.de)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](#how-to-contribute)
 ![Status: Conferences Tracked](https://img.shields.io/badge/Conferences%20Tracked-61-blue)
 
