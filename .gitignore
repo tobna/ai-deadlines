@@ -5,3 +5,4 @@ src/data/*.json
 .gittkn
 html
 src/plausible.js
+src/data/.last_core_update

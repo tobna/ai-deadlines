@@ -19,6 +19,7 @@ from hf_list import get_hf_list
 from ninoduarte_list import get_nino_list
 from see_future import estimate_future_conferences
 from wacv import parse_wacv
+from ranking import make_core_rank_function, make_conf_rank_function
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ninoduarte-git", "hf-repo", "off-website", "manual"]
@@ -74,90 +75,10 @@ def parse_all_times(conference):
     return conference
 
 
-def make_conf_rank_function(online=False):
-    if not online:
-        return lambda conf: conf
-
-    short_to_scholar_name = {
-        "neurips": "Neural Information Processing Systems",
-        "iclr": "International Conference on Learning Representations",
-        "icml": "International Conference on Machine Learning",
-        "aaai": "AAAI Conference on Artificial Intelligence",
-        "ijcai": "International Joint Conference on Artificial Intelligence (IJCAI)",
-        "aistats": "International Conference on Artificial Intelligence and Statistics",
-        "cvpr": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
-        "iccv": "IEEE/CVF International Conference on Computer Vision",
-        "eccv": "European Conference on Computer Vision",
-        "wacv": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
-        "icip": "IEEE International Conference on Image Processing (ICIP)",
-        "bmvc": "British Machine Vision Conference (BMVC)",
-        "icpr": "International Conference on Pattern Recognition",
-        "icdar": "International Conference on Document Analysis and Recognition",
-        "acl": "Meeting of the Association for Computational Linguistics (ACL)",
-        "emnlp": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-        "naacl": (
-            "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language"
-            " Technologies (HLT-NAACL)"
-        ),
-        "coling": "International Conference on Computational Linguistics (COLING)",
-        "conll": "Conference on Computational Natural Language Learning (CoNLL)",
-    }
-    scholar_name_to_short = {val: key for key, val in short_to_scholar_name.items()}
-
-    google_scholar_keywords = [
-        "eng_artificialintelligence",
-        "eng_computationallinguistics",
-        "eng_computervisionpatternrecognition",
-    ]
-    google_scholar_base_url = "https://scholar.google.com/citations?view_op=top_venues&hl=en&vq="
-    _short_to_h5 = {}
-
-    for kw in google_scholar_keywords:
-        rank_list = requests.get(google_scholar_base_url + kw)
-        rank_list = BeautifulSoup(rank_list.text, "html.parser")
-
-        for row in rank_list.find_all("tr"):
-            tds = row.find_all("td")
-            if len(tds) != 4:
-                continue
-
-            if tds[1].get_text().strip() in scholar_name_to_short:
-                short = scholar_name_to_short[tds[1].get_text().strip()]
-                h5idx = int(tds[2].get_text().strip())
-                _short_to_h5[short] = h5idx
-
-    print(f"got {len(_short_to_h5)} conference h5 values", flush=True)
-
-    def add_h5(conf):
-        short = conf["id"][:-4]
-        if short in _short_to_h5:
-            conf["h5Index"] = _short_to_h5[short]
-        return conf
-
-    return add_h5
-
-
-def get_core_rank(shortname):
-    shortname = shortname.lower()
-    core_url = f"https://portal.core.edu.au/conf-ranks/?search={shortname}&by=all"
-    core_res = requests.get(core_url)
-    core_res = BeautifulSoup(core_res.text, "html.parser")
-
-    for row in core_res.find_all("tr"):
-        tds = row.find_all("td")
-        if len(tds) < 4:
-            continue
-        if tds[1].get_text().strip().lower() == shortname:
-            return tds[3].get_text().strip()
-
-    return None
-
-
 conferences = {}
 for conf_file in os.listdir(conference_folder):
     with open(os.path.join(conference_folder, conf_file), "r") as f:
         file_confs = yaml.safe_load(f)
-    # print(conf_file)
     file_confs = {key: parse_all_times(conf) for key, conf in file_confs.items()}
     conferences = {**file_confs, **conferences}
 
@@ -257,9 +178,7 @@ if args.online:
             conferences[id] = {**nino_conf, **conferences[id]}
 
 
-print(conferences.keys())
-
-add_conf_rank = make_conf_rank_function(True)
+add_conf_rank = make_conf_rank_function(online=False)  # google doesn't allow scraping of h5 data right now
 
 # save the data
 conf_groups = {}
@@ -268,6 +187,8 @@ for key, val in conferences.items():
     if group not in conf_groups:
         conf_groups[group] = {}
     conf_groups[group][key] = val
+
+add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 
 ends_wit_rd_re = re.compile(r".*R\d$")
 print(conf_groups.keys())
@@ -282,14 +203,9 @@ for group, conferences in conf_groups.items():
         print(f"ERROR estimating future conferences of group {group}: {e}")
         future_conferences = {}
 
-    group_name = group[:-2] if ends_wit_rd_re.match(group) else group.replace("threedv", "3DV")
-    group_rank = get_core_rank(group) if args.online else None
     conferences = {**future_conferences, **conferences}
     conferences = {key: add_conf_rank(conf) for key, conf in conferences.items()}
-    if group_rank:
-        print(group, group_rank)
-        for conf in conferences.values():
-            conf["rating"] = group_rank
+    conferences = {key: add_core_rank(conf) for key, conf in conferences.items()}
     if args.write:
         with open(os.path.join(conference_folder, f"{group}.yaml"), "w") as f:
             yaml.safe_dump(conferences, f)
