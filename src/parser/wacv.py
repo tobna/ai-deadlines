@@ -45,7 +45,7 @@ def parse_wacv(year):
         print("try link", submission_link)
         submissions = requests.get(submission_link)
         submissions = BeautifulSoup(submissions.text, "html.parser")
-        print(submissions)
+        # print(submissions)
 
         for li in submissions.find_all("li"):
             txt = li.get_text().strip()
@@ -57,7 +57,7 @@ def parse_wacv(year):
             ):
                 key = "deadline2" if "deadline1" in data else "deadline1"
 
-                data[key] = txt.split(":")[1].strip()
+                data[key] = ":".join(txt.split(":")[1:]).strip()
 
         if "deadline1" not in data:
             return {}
