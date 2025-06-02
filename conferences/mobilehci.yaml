@@ -1,0 +1,14 @@
+mobilehci2025:
+  id: mobilehci2025
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  shortname: MobileHCI 2025
+  deadline: 'June 12, 2025 AoE'
+  conferenceStartDate: 'September 22, 2025'
+  conferenceEndDate: 'September 26, 2025'
+  isApproximateDeadline: false
+  location: Sharm El-Sheikh, Egypt
+  website: https://mobilehci.acm.org/2025/index.php
+  tags:
+  - HCI
+  dataSrc: off-website
+  note: Late-Breaking Work
