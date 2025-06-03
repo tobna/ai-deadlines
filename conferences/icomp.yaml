@@ -1,7 +1,7 @@
 icomp2025:
   abstractDeadline: '2025-08-02T11:59:00Z'
-  conferenceEndDate: '2025-10-02'
-  conferenceStartDate: '2025-10-02'
+  conferenceEndDate: '2025-10-03'
+  conferenceStartDate: '2025-10-03'
   dataSrc: hf-repo
   deadline: '2025-08-16T11:59:00Z'
   id: icomp2025
