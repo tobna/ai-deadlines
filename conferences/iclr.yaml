@@ -1,42 +1,47 @@
 iclr2025:
-  abstractDeadline: "2024-09-28T11:59:59Z"
-  conferenceEndDate: "2025-06-28"
-  conferenceStartDate: "2025-04-24"
+  abstractDeadline: '2024-09-28T11:59:59Z'
+  conferenceEndDate: '2025-04-28'
+  conferenceStartDate: '2025-04-24'
   dataSrc: hf-repo
-  deadline: "2024-10-02T11:59:59Z"
+  deadline: '2024-10-02T11:59:59Z'
   h5Index: 304
   id: iclr2025
   isApproximateDeadline: false
   location: Singapore EXPO - 1 Expo Drive, Singapore
   rating: A*
   shortname: ICLR 2025
-  tags: &id001
-    - ML
-    - CV
-    - NLP
-    - SP
+  tags:
+  - ML
+  - CV
+  - NLP
+  - SP
   timezone: UTC-12
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2025
 iclr2026:
-  conferenceEndDate: "2026-05-08"
-  conferenceStartDate: "2026-05-04"
+  conferenceEndDate: '2026-05-08'
+  conferenceStartDate: '2026-05-04'
   dataSrc: ninoduarte-git
-  deadline: "2025-10-01T21:59:59Z"
+  deadline: '2025-10-01T21:59:59Z'
   h5Index: 304
   id: iclr2026
   isApproximateDeadline: false
+  location: NA, NA
   rating: A*
   shortname: ICLR 2026
-  tags: *id001
+  tags: &id001
+  - ML
+  - CV
+  - NLP
+  - SP
   timezone: America/Los_Angeles
   title: International Conference on Learning Representations
   website: https://iclr.cc/
 iclr2027:
-  conferenceEndDate: "2027-05-09"
-  conferenceStartDate: "2027-05-04"
+  conferenceEndDate: '2027-05-09'
+  conferenceStartDate: '2027-05-04'
   dataSrc: estimate
-  deadline: "2026-10-01T21:59:59Z"
+  deadline: '2026-10-01T21:59:59Z'
   h5Index: 304
   id: iclr2027
   isApproximateDeadline: true
