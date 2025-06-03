@@ -23,6 +23,8 @@ def get_hf_list():
     except yaml.YAMLError:
         return {}
 
+    hf_date_re = re.compile(r"([A-Z][a-z]+)[ ,]*(\d+) *[-|–] *([A-Z,a-z]*) *(\d+), *(\d+)$")
+
     out_data = []
     for conference in data:
         shortname = conference["title"].replace(" ", "")
@@ -52,8 +54,16 @@ def get_hf_list():
             out_conf["conferenceStartDate"] = conference["start"]
             out_conf["conferenceEndDate"] = conference["end"]
         else:  # -
-            out_conf["conferenceStartDate"] = re.split("-|–", conference["date"])[0]
-            out_conf["conferenceEndDate"] = re.split("-|–", conference["date"])[-1]
+            date_str = conference["date"].strip()
+            match = hf_date_re.match(date_str)
+            if not match:
+                print(f"INFO skipping hf entry {conf_id} with date '{date_str}'")
+                continue
+            month1, day1, month2, day2, year = match.groups()
+            if month2 is None or len(month2) == 0:
+                month2 = month1
+            out_conf["conferenceStartDate"] = f"{month1} {day1}, {year}"
+            out_conf["conferenceEndDate"] = f"{month2} {day2}, {year}"
 
         if "abstract_deadline" in conference:
             out_conf["abstractDeadline"] = conference["abstract_deadline"]
