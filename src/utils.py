@@ -1,4 +1,5 @@
 import dateparser
+from copy import deepcopy
 import pytz
 import re
 import datetime
@@ -78,3 +79,13 @@ def _update_to_multiple_deadlines(conf):
         timeline[0]["note"] = conf.pop("note")
     conf["timeline"] = timeline
     return conf
+
+
+def join_conferences(master, slave):
+    out = deepcopy(slave)
+    for key, val in master.items():
+        if key == "tags":
+            all_tags = set(master[key]).union(set(slave[key]))
+            val = list(all_tags)
+        out[key] = val
+    return out

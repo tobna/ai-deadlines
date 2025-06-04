@@ -18,7 +18,8 @@ from ninoduarte_list import get_nino_list
 from see_future import estimate_future_conferences
 from wacv import parse_wacv
 from ranking import make_core_rank_function, make_conf_rank_function
-from utils import parse_all_times
+from ccf_deadlines import get_ccf_list
+from utils import parse_all_times, join_conferences
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ccf-deadlines", "ninoduarte-git", "hf-repo", "off-website", "manual"]
@@ -88,10 +89,10 @@ if args.online:
                     if conferences[id]["dataSrc"] == "estimate":
                         print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                         reestimate_future_for_groups.append(id[:-4])
-                    conferences[id] = {**conferences[id], **yearly_data}
+                    conferences[id] = join_conferences(slave=conferences[id], master=yearly_data)
                     conferences[id]["dataSrc"] = "off-website"
                 else:
-                    conferences[id] = {**yearly_data, **conferences[id]}
+                    conferences[id] = join_conferences(slave=yearly_data, master=conferences[id])
             year -= 1
 
     print("load hf data", flush=True)
@@ -116,10 +117,10 @@ if args.online:
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
-            conferences[id] = {**conferences[id], **hf_data}
+            conferences[id] = join_conferences(slave=conferences[id], master=hf_data)
             conferences[id]["dataSrc"] = "hf-repo"
         else:
-            conferences[id] = {**hf_data, **conferences[id]}
+            conferences[id] = join_conferences(slave=hf_data, master=conferences[id])
 
     print("load nino duarte data", flush=True)
     try:
@@ -143,10 +144,39 @@ if args.online:
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
-            conferences[id] = {**conferences[id], **nino_conf}
+            conferences[id] = join_conferences(slave=conferences[id], master=nino_conf)
             conferences[id]["dataSrc"] = "ninoduarte-git"
         else:
-            conferences[id] = {**nino_conf, **conferences[id]}
+            conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
+
+    print(f"load ccf-deadlines")
+    try:
+        ccf_conferences = get_ccf_list()
+        print(f"got {len(ccf_conferences)} ccf conferences")
+    except Exception as e:
+        print(f"ERROR while parsing ccf-deadlines: {e}")
+        ccf_conferences = []
+    for ccf_data in ccf_conferences:
+        ccf_data = parse_all_times(ccf_data)
+        id = ccf_data["id"]
+        if id.startswith("wacv") and len(ccf_data["timeline"]) == 1:  # hf data only hase one deadline for WACV
+            deadline = dateparser.parse(ccf_data["timeline"][0]["deadline"])
+            round = 1 if deadline.month <= 8 else 2
+            ccf_data["timeline"][0]["note"] = f"Round {round}"
+        if id not in conferences:
+            conferences[id] = ccf_data
+            conferences[id]["dataSrc"] = "ccf-deadlines"
+            print(f"NEW CONFERENCE: {conferences[id]}")
+            reestimate_future_for_groups.append(id[:-4])
+        elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("ccf-deadlines"):
+            if conferences[id]["dataSrc"] == "estimate":
+                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                reestimate_future_for_groups.append(id[:-4])
+            conferences[id] = join_conferences(slave=conferences[id], master=ccf_data)
+            conferences[id]["dataSrc"] = "ccf-deadlines"
+        else:
+            conferences[id] = join_conferences(slave=ccf_data, master=conferences[id])
+
 
 reestimate_future_for_groups = set(reestimate_future_for_groups)
 
