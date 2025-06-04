@@ -27,7 +27,7 @@ acmmm2025:
   location: Dublin Royal Convention Center, Dublin, Ireland
   rating: A*
   shortname: ACMMM 2025
-  tags:
+  tags: &id001
   - CV
   - ML
   - HCI
@@ -46,10 +46,7 @@ acmmm2026:
   isApproximateDeadline: true
   rating: A*
   shortname: ACMMM 2026
-  tags: &id001
-  - CV
-  - ML
-  - HCI
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-04-05T11:59:59Z'
     deadline: '2026-04-12T11:59:59Z'

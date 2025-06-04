@@ -23,7 +23,7 @@ ecai2025:
   location: Bologna Congress Center and The Engineering School (University of Bologna)
   rating: A
   shortname: ECAI 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2025-04-30T11:59:59Z'
@@ -39,8 +39,7 @@ ecai2026:
   isApproximateDeadline: true
   rating: A
   shortname: ECAI 2026
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-04-30T11:59:59Z'
     deadline: '2026-05-07T11:59:59Z'

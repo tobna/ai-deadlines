@@ -75,7 +75,7 @@ wacv2026:
   location: JW Marriott Starpass in Tucson, Arizona, USA
   rating: A
   shortname: WACV 2026
-  tags:
+  tags: &id001
   - CV
   timeline:
   - abstractDeadline: '2025-07-11T12:00:00Z'
@@ -96,14 +96,12 @@ wacv2027:
   isApproximateDeadline: true
   rating: A
   shortname: WACV 2027
-  tags:
-  - ML
-  - CV
+  tags: *id001
   timeline:
-  - abstractDeadline: '2026-07-11T06:59:59Z'
-    deadline: '2026-07-18T06:59:59Z'
+  - abstractDeadline: '2026-07-11T12:00:00Z'
+    deadline: '2026-07-18T12:00:00Z'
     note: 'From WACV 2026: Round 1'
   - abstractDeadline: '2026-09-12T12:00:00Z'
     deadline: '2026-09-19T12:00:00Z'
     note: 'From WACV 2026: Round 2'
-  title: IEEE/CVF Winter Conference on Applications of Computer Vision
+  title: Winter Conference on Applications of Computer Vision

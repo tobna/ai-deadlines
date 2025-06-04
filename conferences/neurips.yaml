@@ -1,6 +1,6 @@
 neurips2009:
-  conferenceEndDate: '2025-12-10'
-  conferenceStartDate: '2025-12-08'
+  conferenceEndDate: '2009-12-10'
+  conferenceStartDate: '2009-12-08'
   dataSrc: off-website
   h5Index: 337
   id: neurips2009
@@ -14,8 +14,8 @@ neurips2009:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2009/
 neurips2010:
-  conferenceEndDate: '2025-12-09'
-  conferenceStartDate: '2025-12-07'
+  conferenceEndDate: '2010-12-09'
+  conferenceStartDate: '2010-12-07'
   dataSrc: off-website
   h5Index: 337
   id: neurips2010
@@ -29,8 +29,8 @@ neurips2010:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2010/
 neurips2011:
-  conferenceEndDate: '2025-12-15'
-  conferenceStartDate: '2025-12-13'
+  conferenceEndDate: '2011-12-15'
+  conferenceStartDate: '2011-12-13'
   dataSrc: off-website
   h5Index: 337
   id: neurips2011
@@ -44,8 +44,8 @@ neurips2011:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2011/
 neurips2012:
-  conferenceEndDate: '2025-12-06'
-  conferenceStartDate: '2025-12-04'
+  conferenceEndDate: '2012-12-06'
+  conferenceStartDate: '2012-12-04'
   dataSrc: off-website
   h5Index: 337
   id: neurips2012
@@ -59,8 +59,8 @@ neurips2012:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2012/
 neurips2013:
-  conferenceEndDate: '2025-12-08'
-  conferenceStartDate: '2025-12-06'
+  conferenceEndDate: '2013-12-08'
+  conferenceStartDate: '2013-12-06'
   dataSrc: off-website
   h5Index: 337
   id: neurips2013
@@ -75,8 +75,8 @@ neurips2013:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2013/
 neurips2014:
-  conferenceEndDate: '2025-12-11'
-  conferenceStartDate: '2025-12-09'
+  conferenceEndDate: '2014-12-11'
+  conferenceStartDate: '2014-12-09'
   dataSrc: off-website
   h5Index: 337
   id: neurips2014
@@ -90,8 +90,8 @@ neurips2014:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2014/
 neurips2015:
-  conferenceEndDate: '2025-12-10'
-  conferenceStartDate: '2025-12-08'
+  conferenceEndDate: '2015-12-10'
+  conferenceStartDate: '2015-12-08'
   dataSrc: off-website
   h5Index: 337
   id: neurips2015
@@ -105,8 +105,8 @@ neurips2015:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2015/
 neurips2016:
-  conferenceEndDate: '2025-12-08'
-  conferenceStartDate: '2025-12-06'
+  conferenceEndDate: '2016-12-08'
+  conferenceStartDate: '2016-12-06'
   dataSrc: off-website
   h5Index: 337
   id: neurips2016
@@ -120,8 +120,8 @@ neurips2016:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2016/
 neurips2017:
-  conferenceEndDate: '2025-12-07'
-  conferenceStartDate: '2025-12-05'
+  conferenceEndDate: '2017-12-07'
+  conferenceStartDate: '2017-12-05'
   dataSrc: off-website
   h5Index: 337
   id: neurips2017
@@ -135,8 +135,8 @@ neurips2017:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2017/
 neurips2018:
-  conferenceEndDate: '2025-12-06'
-  conferenceStartDate: '2025-12-04'
+  conferenceEndDate: '2018-12-06'
+  conferenceStartDate: '2018-12-04'
   dataSrc: off-website
   h5Index: 337
   id: neurips2018
@@ -150,8 +150,8 @@ neurips2018:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2018/
 neurips2019:
-  conferenceEndDate: '2025-12-12'
-  conferenceStartDate: '2025-12-10'
+  conferenceEndDate: '2019-12-12'
+  conferenceStartDate: '2019-12-10'
   dataSrc: off-website
   h5Index: 337
   id: neurips2019
@@ -166,8 +166,8 @@ neurips2019:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2019/
 neurips2020:
-  conferenceEndDate: '2025-12-10'
-  conferenceStartDate: '2025-12-08'
+  conferenceEndDate: '2020-12-10'
+  conferenceStartDate: '2020-12-08'
   dataSrc: off-website
   h5Index: 337
   id: neurips2020
@@ -182,8 +182,8 @@ neurips2020:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2020/
 neurips2021:
-  conferenceEndDate: '2025-12-10'
-  conferenceStartDate: '2025-12-07'
+  conferenceEndDate: '2021-12-10'
+  conferenceStartDate: '2021-12-07'
   dataSrc: off-website
   h5Index: 337
   id: neurips2021
@@ -198,8 +198,8 @@ neurips2021:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2021/
 neurips2022:
-  conferenceEndDate: '2025-12-01'
-  conferenceStartDate: '2025-11-29'
+  conferenceEndDate: '2022-12-01'
+  conferenceStartDate: '2022-11-29'
   dataSrc: off-website
   h5Index: 337
   id: neurips2022
@@ -214,8 +214,8 @@ neurips2022:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2022/
 neurips2023:
-  conferenceEndDate: '2025-12-14'
-  conferenceStartDate: '2025-12-12'
+  conferenceEndDate: '2023-12-14'
+  conferenceStartDate: '2023-12-12'
   dataSrc: off-website
   h5Index: 337
   id: neurips2023
@@ -230,8 +230,8 @@ neurips2023:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2023/
 neurips2024:
-  conferenceEndDate: '2025-12-13'
-  conferenceStartDate: '2025-12-11'
+  conferenceEndDate: '2024-12-13'
+  conferenceStartDate: '2024-12-11'
   dataSrc: off-website
   h5Index: 337
   id: neurips2024
@@ -255,7 +255,7 @@ neurips2025:
   location: San Diego Convention Center, San Diego, USA
   rating: A*
   shortname: NeurIPS 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2025-05-11T12:00:00Z'
@@ -272,8 +272,7 @@ neurips2026:
   isApproximateDeadline: true
   rating: A*
   shortname: NeurIPS 2026
-  tags: &id001
-  - AI
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-05-11T12:00:00Z'
     deadline: '2026-05-22T12:00:00Z'

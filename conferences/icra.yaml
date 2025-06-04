@@ -1,6 +1,6 @@
 icra2025:
-  conferenceEndDate: '2026-06-05'
-  conferenceStartDate: '2026-06-01'
+  conferenceEndDate: '2025-06-05'
+  conferenceStartDate: '2025-06-01'
   dataSrc: hf-repo
   h5Index: 122
   id: icra2025
@@ -26,7 +26,7 @@ icra2026:
   location: Vienna, Austria
   rating: A*
   shortname: ICRA 2026
-  tags:
+  tags: &id001
   - ML
   - RO
   timeline:
@@ -43,9 +43,7 @@ icra2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICRA 2027
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2026-09-15T21:59:59Z'
   title: IEEE International Conference on Robotics and Automation

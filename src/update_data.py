@@ -30,16 +30,25 @@ parser.add_argument(
     "--online", default=False, action=argparse.BooleanOptionalAction, help="Download data from the internet"
 )
 parser.add_argument("--write", default=True, action=argparse.BooleanOptionalAction, help="Write out results")
+parser.add_argument(
+    "--reestimate", default=False, action=argparse.BooleanOptionalAction, help="Force reestimate all conferences"
+)
 args = parser.parse_args()
 
 
 def _parse_timestr(timestr, with_time, conf_tz=None):
-    timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-    timestr = timestr.replace("AoE", "UTC-12")
-    parsed_time = dateparser.parse(timestr)
-    if parsed_time is None:
-        print("NONE:", timestr)
-        return None
+    if isinstance(timestr, str):
+        timestr = timestr.replace("(Anywhere on Earth)", "AoE")
+        timestr = timestr.replace("AoE", "UTC-12")
+        timestr = timestr.replace("Pacific Time", "PT")
+        parsed_time = dateparser.parse(timestr)
+        if parsed_time is None:
+            print("NONE:", timestr)
+            return None
+    else:
+        assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
+        parsed_time = timestr
+        timestr = timestr.isoformat()
     if not with_time:
         return parsed_time.strftime("%Y-%m-%d")
     if parsed_time.tzinfo is None and conf_tz is not None:
@@ -109,7 +118,7 @@ for conf_file in os.listdir(conference_folder):
 #     conferences[k2.replace("R2", "")]["timeline"].append(conferences.pop(k2)["timeline"][0])
 #     print(conferences[k2.replace("R2", "")])
 
-
+reestimate_future_for_groups = []
 if args.online:
     all_parsers = PARSER + [parse_wacv]
     for conf_parser in all_parsers:
@@ -138,9 +147,11 @@ if args.online:
                     conferences[id] = yearly_data
                     conferences[id]["dataSrc"] = "off-website"
                     print(f"NEW CONFERENCE: {conferences[id]}")
+                    reestimate_future_for_groups.append(id[:-4])
                 elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("off-website"):
                     if conferences[id]["dataSrc"] == "estimate":
                         print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                        reestimate_future_for_groups.append(id[:-4])
                     conferences[id] = {**conferences[id], **yearly_data}
                     conferences[id]["dataSrc"] = "off-website"
                 else:
@@ -164,9 +175,11 @@ if args.online:
             conferences[id] = hf_data
             conferences[id]["dataSrc"] = "hf-repo"
             print(f"NEW CONFERENCE: {conferences[id]}")
+            reestimate_future_for_groups.append(id[:-4])
         elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("hf-repo"):
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                reestimate_future_for_groups.append(id[:-4])
             conferences[id] = {**conferences[id], **hf_data}
             conferences[id]["dataSrc"] = "hf-repo"
         else:
@@ -189,14 +202,17 @@ if args.online:
             conferences[id] = nino_conf
             conferences[id]["dataSrc"] = "ninoduarte-git"
             print(f"NEW CONFERENCE: {conferences[id]}")
+            reestimate_future_for_groups.append(id[:-4])
         elif _SOURCES.index(conferences[id]["dataSrc"]) < _SOURCES.index("ninoduarte-git"):
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                reestimate_future_for_groups.append(id[:-4])
             conferences[id] = {**conferences[id], **nino_conf}
             conferences[id]["dataSrc"] = "ninoduarte-git"
         else:
             conferences[id] = {**nino_conf, **conferences[id]}
 
+reestimate_future_for_groups = set(reestimate_future_for_groups)
 
 add_conf_rank = make_conf_rank_function(online=False)  # google doesn't allow scraping of h5 data right now
 
@@ -213,11 +229,15 @@ add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 
 for group, conferences in conf_groups.items():
     print(f"write out group {group}", flush=True)
+    if group in reestimate_future_for_groups or args.reestimate:
+        conferences = {key: conf for key, conf in conferences.items() if not conf["isApproximateDeadline"]}
     try:
         future_conferences = estimate_future_conferences(conferences)
         future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}
     except Exception as e:
         print(f"ERROR estimating future conferences of group {group}: {e}")
+        if args.reestimate:
+            raise e
         future_conferences = {}
 
     conferences = {**future_conferences, **conferences}
