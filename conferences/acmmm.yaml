@@ -29,8 +29,8 @@ acmmm2025:
   shortname: ACMMM 2025
   tags:
   - HCI
-  - CV
   - ML
+  - CV
   timeline:
   - abstractDeadline: '2025-04-05T11:59:59Z'
     deadline: '2025-04-12T11:59:59Z'
