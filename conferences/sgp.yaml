@@ -8,8 +8,8 @@ sgp2025:
   rating: B
   shortname: SGP 2025
   tags:
-  - ML
   - CV
+  - ML
   timeline:
   - abstractDeadline: '2025-02-05T11:59:59Z'
     deadline: '2025-02-08T11:59:59Z'

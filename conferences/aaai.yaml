@@ -49,9 +49,9 @@ aaai2025:
   shortname: AAAI 2025
   tags:
   - DM
-  - ML
   - NLP
   - CV
+  - ML
   timeline:
   - abstractDeadline: '2024-08-08T11:59:59Z'
     deadline: '2024-08-16T11:59:59Z'
@@ -70,9 +70,9 @@ aaai2026:
   shortname: AAAI 2026
   tags:
   - DM
-  - ML
   - NLP
   - CV
+  - ML
   timeline:
   - abstractDeadline: '2025-07-26T11:59:59Z'
     deadline: '2025-08-02T11:59:59Z'

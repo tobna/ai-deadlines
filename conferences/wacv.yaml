@@ -57,8 +57,8 @@ wacv2025:
   rating: A
   shortname: WACV 2025
   tags:
-  - ML
   - CV
+  - ML
   timeline:
   - deadline: '2024-07-16T06:59:59Z'
     note: Round 1
