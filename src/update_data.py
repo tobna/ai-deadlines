@@ -33,6 +33,26 @@ parser.add_argument("--write", default=True, action=argparse.BooleanOptionalActi
 args = parser.parse_args()
 
 
+def _parse_timestr(timestr, with_time, conf_tz=None):
+    timestr = timestr.replace("(Anywhere on Earth)", "AoE")
+    timestr = timestr.replace("AoE", "UTC-12")
+    parsed_time = dateparser.parse(timestr)
+    if parsed_time is None:
+        print("NONE:", timestr)
+        return None
+    if not with_time:
+        return parsed_time.strftime("%Y-%m-%d")
+    if parsed_time.tzinfo is None and conf_tz is not None:
+        timestr = timestr + f" {conf_tz}"
+        timestr = timestr.replace("(Anywhere on Earth)", "AoE")
+        timestr = timestr.replace("AoE", "UTC-12")
+        old_parsed_time = parsed_time
+        parsed_time = dateparser.parse(timestr)
+        if parsed_time is None:
+            parsed_time = old_parsed_time
+    return parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
+
+
 def parse_all_times(conference):
     if "id" not in conference:
         assert len(conference) == 0, f"Strange conference: {conference}"
@@ -43,32 +63,21 @@ def parse_all_times(conference):
     if "timezone" in conference:
         conf_tz = conference["timezone"]
         conf_tz = conf_tz.replace("Russia/Moscow", "GMT+3")
-    for timekey in ["deadline", "conferenceStartDate", "conferenceEndDate", "abstractDeadline"]:
+    for timekey in ["conferenceStartDate", "conferenceEndDate"]:
         if timekey in conference:
             timestr = str(conference[timekey])
             if month_day_re.match(timestr.strip()):
                 timestr += f", {year}"
 
-            timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-            timestr = timestr.replace("AoE", "UTC-12")
-            parsed_time = dateparser.parse(timestr)
-            if parsed_time is None:
-                print("NONE:", timestr)
-                continue
-            if parsed_time.tzinfo is None and conf_tz is not None and timekey in ["deadline", "abstractDeadline"]:
-                timestr = timestr + f" {conf_tz}"
-                timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-                timestr = timestr.replace("AoE", "UTC-12")
-                old_parsed_time = parsed_time
-                parsed_time = dateparser.parse(timestr)
-                if parsed_time is None:
-                    parsed_time = old_parsed_time
-            final_str = (
-                parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
-                if "deadline" in timekey.lower()
-                else parsed_time.strftime("%Y-%m-%d")
-            )
-            conference[timekey] = final_str
+            timestr = _parse_timestr(timestr, with_time=False, conf_tz=conf_tz)
+            if timestr:
+                conference[timekey] = timestr
+    for dates in conference["timeline"]:
+        for key in dates.keys():
+            if "deadline" in key.lower():
+                timestr = _parse_timestr(dates[key], with_time=True, conf_tz=conf_tz)
+                if timestr:
+                    dates[key] = timestr
 
     return conference
 
@@ -147,12 +156,10 @@ if args.online:
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
         id = hf_data["id"]
-        if id.startswith("wacv"):
-            deadline = dateparser.parse(hf_data["deadline"])
+        if id.startswith("wacv") and len(hf_data["timeline"]) == 1:  # hf data only hase one deadline for WACV
+            deadline = dateparser.parse(hf_data["timeline"][0]["deadline"])
             round = 1 if deadline.month <= 8 else 2
-            id = id.replace("wacv", f"wacvR{round}")
-            hf_data["id"] = id
-            hf_data["note"] = f"Round {round}"
+            hf_data["timeline"][0]["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = hf_data
             conferences[id]["dataSrc"] = "hf-repo"
@@ -174,12 +181,10 @@ if args.online:
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
         id = nino_conf["id"].replace("nips", "neurips")
-        if id.startswith("wacv"):
-            deadline = dateparser.parse(nino_conf["deadline"])
+        if id.startswith("wacv") and len(nino_conf["timeline"]) == 1:  # nino data only hase one deadline for WACV
+            deadline = dateparser.parse(nino_conf["timeline"][0]["deadline"])
             round = 1 if deadline.month <= 8 else 2
-            id = id.replace("wacv", f"wacvR{round}")
-            nino_conf["id"] = id
-            nino_conf["note"] = f"Round {round}"
+            nino_conf["timeline"][0]["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = nino_conf
             conferences[id]["dataSrc"] = "ninoduarte-git"
@@ -205,7 +210,7 @@ for key, val in conferences.items():
 
 add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 
-print(conf_groups.keys())
+
 for group, conferences in conf_groups.items():
     print(f"write out group {group}", flush=True)
     try:
