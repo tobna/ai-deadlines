@@ -29,7 +29,7 @@ aaai2026:
   location: Singapore EXPO, Singapore
   rating: A*
   shortname: AAAI 2026
-  tags: &id001
+  tags:
   - DM
   - ML
   - NLP
@@ -49,7 +49,11 @@ aaai2027:
   isApproximateDeadline: true
   rating: A*
   shortname: AAAI 2027
-  tags: *id001
+  tags:
+  - DM
+  - ML
+  - NLP
+  - CV
   timeline:
   - abstractDeadline: '2026-07-26T11:59:59Z'
     deadline: '2026-08-02T11:59:59Z'

@@ -75,7 +75,7 @@ wacv2026:
   location: JW Marriott Starpass in Tucson, Arizona, USA
   rating: A
   shortname: WACV 2026
-  tags: &id001
+  tags:
   - CV
   timeline:
   - abstractDeadline: '2025-07-11T12:00:00Z'
@@ -96,7 +96,8 @@ wacv2027:
   isApproximateDeadline: true
   rating: A
   shortname: WACV 2027
-  tags: *id001
+  tags:
+  - CV
   timeline:
   - abstractDeadline: '2026-07-11T12:00:00Z'
     deadline: '2026-07-18T12:00:00Z'

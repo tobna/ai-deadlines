@@ -230,8 +230,8 @@ neurips2023:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2023/
 neurips2024:
-  conferenceEndDate: '2024-12-13'
-  conferenceStartDate: '2024-12-11'
+  conferenceEndDate: '2025-12-13'
+  conferenceStartDate: '2025-12-11'
   dataSrc: off-website
   h5Index: 337
   id: neurips2024
@@ -255,7 +255,7 @@ neurips2025:
   location: San Diego Convention Center, San Diego, USA
   rating: A*
   shortname: NeurIPS 2025
-  tags: &id001
+  tags:
   - ML
   timeline:
   - abstractDeadline: '2025-05-11T12:00:00Z'
@@ -272,7 +272,8 @@ neurips2026:
   isApproximateDeadline: true
   rating: A*
   shortname: NeurIPS 2026
-  tags: *id001
+  tags: &id001
+  - ML
   timeline:
   - abstractDeadline: '2026-05-11T12:00:00Z'
     deadline: '2026-05-22T12:00:00Z'
