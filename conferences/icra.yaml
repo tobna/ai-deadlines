@@ -45,8 +45,8 @@ icra2025:
   rating: A*
   shortname: ICRA 2025
   tags:
-  - RO
   - ML
+  - RO
   timeline:
   - deadline: '2024-07-15T16:00:00Z'
   timezone: UTC-4
@@ -63,8 +63,8 @@ icra2026:
   rating: A*
   shortname: ICRA 2026
   tags:
-  - RO
   - ML
+  - RO
   timeline:
   - deadline: '2025-09-15T21:59:59Z'
   timezone: America/Los_Angeles
