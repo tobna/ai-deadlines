@@ -90,9 +90,14 @@ def parse_wacv(year):
     if "deadline" not in data["timeline"][0]:
         return {}
 
+    rm_idx = []
     for idx in range(2):
         if "deadline" in data["timeline"][idx]:
             data["timeline"][idx]["note"] = f"Round {idx+1}"
+        else:
+            rm_idx.append(idx)
+    for idx in sorted(rm_idx, reverse=True):
+        data["timeline"].pop(idx)
     return data
 
 
