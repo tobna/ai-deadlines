@@ -32,6 +32,7 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
 
 # month_day_re = re.compile(r"[A-Z][a-z]* \d?\d$")
 month_day_re = re.compile(r"[A-Z,a-z, ]*\d?\d[a-z]*$")
+month_strs = [datetime.datetime.strptime(f"2024-{mnth:02d}-10", "%Y-%m-%d").strftime("%b") for mnth in range(1, 13)]
 
 
 def parse_all_times(conference):
@@ -46,12 +47,17 @@ def parse_all_times(conference):
     for timekey in ["conferenceStartDate", "conferenceEndDate"]:
         if timekey in conference:
             timestr = str(conference[timekey])
-            print(f"{timestr} -> ", end="\t")
             if month_day_re.match(timestr.strip()):
                 timestr += f", {year}"
+            if " the " in timestr and not any(mnth in timestr for mnth in month_strs):
+                print(f"WATCH OUT: {timestr} ->", end="\t")
+                if "End" in timekey:
+                    timestr = timestr.replace(
+                        " the ", " " + month_strs[int(conference["conferenceStartDate"].split("-")[1]) - 1] + " "
+                    )
+                print(timestr)
 
             timestr = _parse_timestr(timestr, with_time=False, conf_tz=conf_tz)
-            print(timestr)
             if timestr:
                 conference[timekey] = timestr
     for dates in conference["timeline"]:

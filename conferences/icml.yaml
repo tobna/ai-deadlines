@@ -108,8 +108,8 @@ icml2023:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2023/
 icml2024:
-  conferenceEndDate: '2025-06-25'
-  conferenceStartDate: '2025-07-23'
+  conferenceEndDate: '2024-07-25'
+  conferenceStartDate: '2024-07-23'
   dataSrc: off-website
   h5Index: 268
   id: icml2024
@@ -123,7 +123,7 @@ icml2024:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2024/
 icml2025:
-  conferenceEndDate: '2025-06-17'
+  conferenceEndDate: '2025-07-17'
   conferenceStartDate: '2025-07-15'
   dataSrc: off-website
   h5Index: 268

@@ -230,8 +230,8 @@ neurips2023:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2023/
 neurips2024:
-  conferenceEndDate: '2025-12-13'
-  conferenceStartDate: '2025-12-11'
+  conferenceEndDate: '2024-12-13'
+  conferenceStartDate: '2024-12-11'
   dataSrc: off-website
   h5Index: 337
   id: neurips2024
