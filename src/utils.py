@@ -32,7 +32,8 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
 
 
 # month_day_re = re.compile(r"[A-Z][a-z]* \d?\d$")
-month_day_re = re.compile(r"[A-Z,a-z, ]*\d?\d[a-z]*$")
+month_day_re = re.compile(r"^[A-Z,a-z, ]*\d?\d[a-z]*$")
+month_day_time_re = re.compile(r"^([A-Z,a-z, ,\,]*\d?\d[a-z]*)(,? *\d\d:\d\d[A-Z,a-z, ]*)$")
 month_strs = [datetime.datetime.strptime(f"2024-{mnth:02d}-10", "%Y-%m-%d").strftime("%b") for mnth in range(1, 13)]
 
 
@@ -64,7 +65,13 @@ def parse_all_times(conference):
     for dates in conference["timeline"]:
         for key in dates.keys():
             if "deadline" in key.lower():
-                timestr = _parse_timestr(dates[key], with_time=True, conf_tz=conf_tz)
+                timestr = dates[key]
+                if month_day_time_re.match(timestr):
+                    print(f"adding year to '{timestr}' -> ", end="\t")
+                    start, end = month_day_time_re.match(timestr).groups()
+                    timestr = f"{start} {year}{end}"
+                    print(timestr)
+                timestr = _parse_timestr(timestr, with_time=True, conf_tz=conf_tz)
                 if timestr:
                     dates[key] = timestr
 
