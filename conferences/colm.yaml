@@ -1,15 +1,16 @@
 colm2025:
-  abstractDeadline: '2025-03-21T11:59:59Z'
   conferenceEndDate: '2025-10-09'
   conferenceStartDate: '2025-10-07'
   dataSrc: hf-repo
-  deadline: '2025-03-28T11:59:59Z'
   id: colm2025
   isApproximateDeadline: false
   location: "Palais des Congr\xE8s Montreal, Canada"
   shortname: COLM 2025
   tags:
   - NLP
+  timeline:
+  - abstractDeadline: '2025-03-21T11:59:59Z'
+    deadline: '2025-03-28T11:59:59Z'
   timezone: AoE
   title: Conference on Language Modeling
   website: https://colmweb.org/cfp.html

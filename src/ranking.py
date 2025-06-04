@@ -70,10 +70,7 @@ def make_conf_rank_function(online=False):
     print(f"got {len(_short_to_h5)} conference h5 values", flush=True)
 
     def add_h5(conf):
-        rdig_re = re.compile(r".*R\d$")
         conf_id = conf["id"][:-4]
-        if rdig_re.match(conf_id):
-            conf_id = conf_id[:-2]
 
         if conf_id in _short_to_h5:
             conf["h5Index"] = _short_to_h5[conf_id]
@@ -126,8 +123,6 @@ def make_core_rank_function(conference_groups, online=True, force_update=False):
         else:
             force_update = force_update or last_update + timedelta(days=1) < datetime.now()
 
-    rdig_re = re.compile(r".*R\d$")
-    conference_groups = {cfg[:-2] if rdig_re.match(cfg) else cfg for cfg in conference_groups}
     if force_update and online:
         print(f"Updating core ranks for {len(conference_groups)} conferences")
 
@@ -143,10 +138,7 @@ def make_core_rank_function(conference_groups, online=True, force_update=False):
             f.write(datetime.now().isoformat())
 
     def add_core_rank(conf):
-        rdig_re = re.compile(r".*R\d$")
         conf_id = conf["id"][:-4]
-        if rdig_re.match(conf_id):
-            conf_id = conf_id[:-2]
 
         if conf_id in core_ranks:
             conf["rating"] = core_ranks[conf_id]

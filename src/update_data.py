@@ -73,12 +73,32 @@ def parse_all_times(conference):
     return conference
 
 
+def _update_to_multiple_deadlines(conf):
+    timeline = [{"deadline": conf.pop("deadline")}]
+    if "abstractDeadline" in conf:
+        timeline[0]["abstractDeadline"] = conf.pop("abstractDeadline")
+    if "note" in conf:
+        timeline[0]["note"] = conf.pop("note")
+    conf["timeline"] = timeline
+    return conf
+
+
 conferences = {}
 for conf_file in os.listdir(conference_folder):
     with open(os.path.join(conference_folder, conf_file), "r") as f:
         file_confs = yaml.safe_load(f)
     file_confs = {key: parse_all_times(conf) for key, conf in file_confs.items()}
+    # file_confs = {key: _update_to_multiple_deadlines(conf) for key, conf in file_confs.items()}
     conferences = {**file_confs, **conferences}
+
+# join wacvR1 and wacvR2:
+# r1s = [k for k in conferences.keys() if k.startswith("wacvR1")]
+# r2s = [k for k in conferences.keys() if k.startswith("wacvR2")]
+# for k1 in r1s:
+#     conferences[k1.replace("R1", "")] = conferences.pop(k1)
+# for k2 in r2s:
+#     conferences[k2.replace("R2", "")]["timeline"].append(conferences.pop(k2)["timeline"][0])
+#     print(conferences[k2.replace("R2", "")])
 
 
 if args.online:
@@ -90,35 +110,32 @@ if args.online:
         while no_data_years < 5 and (year >= current_year - 1 or args.historic):
             print(f"{conf_parser} {year}", end="\t")
             try:
-                yearly_datas = conf_parser(year)
+                yearly_data = conf_parser(year)
             except Exception as e:
                 print(f"ERROR while parsing conference: {e}")
                 continue
-            if not isinstance(yearly_datas, list):
-                yearly_datas = [yearly_datas]
-            print("no data" if len(yearly_datas[0]) == 0 else "loaded data", flush=True)
-            for yearly_data in yearly_datas:
-                try:
-                    yearly_data = parse_all_times(yearly_data)
-                except Exception as e:
-                    print(f"ERROR while parsing dates for conference {yearly_data['id']}: {e}")
-                    continue
-                if len(yearly_data) == 0:
-                    no_data_years += 1
+            print("no data" if len(yearly_data) == 0 else "loaded data", flush=True)
+            try:
+                yearly_data = parse_all_times(yearly_data)
+            except Exception as e:
+                print(f"ERROR while parsing dates for conference {yearly_data['id']}: {e}")
+                continue
+            if len(yearly_data) == 0:
+                no_data_years += 1
+            else:
+                no_data_years = 0
+                id = yearly_data["id"]
+                if id not in conferences:
+                    conferences[id] = yearly_data
+                    conferences[id]["dataSrc"] = "off-website"
+                    print(f"NEW CONFERENCE: {conferences[id]}")
+                elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("off-website"):
+                    if conferences[id]["dataSrc"] == "estimate":
+                        print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                    conferences[id] = {**conferences[id], **yearly_data}
+                    conferences[id]["dataSrc"] = "off-website"
                 else:
-                    no_data_years = 0
-                    id = yearly_data["id"]
-                    if id not in conferences:
-                        conferences[id] = yearly_data
-                        conferences[id]["dataSrc"] = "off-website"
-                        print(f"NEW CONFERENCE: {conferences[id]}")
-                    elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("off-website"):
-                        if conferences[id]["dataSrc"] == "estimate":
-                            print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
-                        conferences[id] = {**conferences[id], **yearly_data}
-                        conferences[id]["dataSrc"] = "off-website"
-                    else:
-                        conferences[id] = {**yearly_data, **conferences[id]}
+                    conferences[id] = {**yearly_data, **conferences[id]}
             year -= 1
 
     print("load hf data", flush=True)
@@ -188,12 +205,9 @@ for key, val in conferences.items():
 
 add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 
-ends_wit_rd_re = re.compile(r".*R\d$")
 print(conf_groups.keys())
 for group, conferences in conf_groups.items():
     print(f"write out group {group}", flush=True)
-    if group == "wacv":
-        continue
     try:
         future_conferences = estimate_future_conferences(conferences)
         future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}

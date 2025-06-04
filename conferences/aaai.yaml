@@ -1,9 +1,7 @@
 aaai2025:
-  abstractDeadline: '2024-08-08T11:59:59Z'
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-25'
   dataSrc: hf-repo
-  deadline: '2024-08-16T11:59:59Z'
   h5Index: 220
   id: aaai2025
   isApproximateDeadline: false
@@ -15,15 +13,16 @@ aaai2025:
   - ML
   - NLP
   - CV
+  timeline:
+  - abstractDeadline: '2024-08-08T11:59:59Z'
+    deadline: '2024-08-16T11:59:59Z'
   timezone: UTC-12
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-25/
 aaai2026:
-  abstractDeadline: '2025-07-26T11:59:59Z'
   conferenceEndDate: '2026-01-27'
   conferenceStartDate: '2026-01-20'
   dataSrc: hf-repo
-  deadline: '2025-08-02T11:59:59Z'
   h5Index: 220
   id: aaai2026
   isApproximateDeadline: false
@@ -35,15 +34,16 @@ aaai2026:
   - ML
   - NLP
   - CV
+  timeline:
+  - abstractDeadline: '2025-07-26T11:59:59Z'
+    deadline: '2025-08-02T11:59:59Z'
   timezone: UTC-12
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-26/
 aaai2027:
-  abstractDeadline: '2026-07-26T11:59:59Z'
   conferenceEndDate: '2027-01-25'
   conferenceStartDate: '2027-01-20'
   dataSrc: estimate
-  deadline: '2026-08-02T11:59:59Z'
   h5Index: 220
   id: aaai2027
   isApproximateDeadline: true
@@ -53,4 +53,7 @@ aaai2027:
   - ML
   - NLP
   - CV
+  timeline:
+  - abstractDeadline: '2026-07-26T11:59:59Z'
+    deadline: '2026-08-02T11:59:59Z'
   title: AAAI Conference on Artificial Intelligence

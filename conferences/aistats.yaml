@@ -1,9 +1,7 @@
 aistats2024:
-  abstractDeadline: '2023-10-07T00:00:00Z'
   conferenceEndDate: '2024-05-04'
   conferenceStartDate: '2024-05-02'
   dataSrc: off-website
-  deadline: '2023-10-17T00:00:00Z'
   h5Index: 100
   id: aistats2024
   isApproximateDeadline: false
@@ -12,14 +10,15 @@ aistats2024:
   shortname: AISTATS 2024
   tags:
   - ML
+  timeline:
+  - abstractDeadline: '2023-10-07T00:00:00Z'
+    deadline: '2023-10-17T00:00:00Z'
   title: International Conference on Artificial Intelligence and Statistics
   website: https://aistats.org/aistats2024/
 aistats2025:
-  abstractDeadline: '2024-10-04T11:59:59Z'
   conferenceEndDate: '2025-05-05'
   conferenceStartDate: '2025-05-03'
   dataSrc: hf-repo
-  deadline: '2024-10-11T11:59:59Z'
   h5Index: 100
   id: aistats2025
   isApproximateDeadline: false
@@ -28,15 +27,16 @@ aistats2025:
   shortname: AISTATS 2025
   tags:
   - ML
+  timeline:
+  - abstractDeadline: '2024-10-04T11:59:59Z'
+    deadline: '2024-10-11T11:59:59Z'
   timezone: UTC-12
   title: International Conference on Artificial Intelligence and Statistics
   website: https://aistats.org/aistats2025
 aistats2026:
-  abstractDeadline: '2025-10-04T11:59:59Z'
   conferenceEndDate: '2026-05-08'
   conferenceStartDate: '2026-05-03'
   dataSrc: estimate
-  deadline: '2025-10-11T11:59:59Z'
   h5Index: 100
   id: aistats2026
   isApproximateDeadline: true
@@ -44,17 +44,21 @@ aistats2026:
   shortname: AISTATS 2026
   tags: &id001
   - ML
+  timeline:
+  - abstractDeadline: '2025-10-04T11:59:59Z'
+    deadline: '2025-10-11T11:59:59Z'
   title: International Conference on Artificial Intelligence and Statistics
 aistats2027:
-  abstractDeadline: '2026-10-04T11:59:59Z'
   conferenceEndDate: '2027-05-08'
   conferenceStartDate: '2027-05-03'
   dataSrc: estimate
-  deadline: '2026-10-11T11:59:59Z'
   h5Index: 100
   id: aistats2027
   isApproximateDeadline: true
   rating: A
   shortname: AISTATS 2027
   tags: *id001
+  timeline:
+  - abstractDeadline: '2026-10-04T11:59:59Z'
+    deadline: '2026-10-11T11:59:59Z'
   title: International Conference on Artificial Intelligence and Statistics

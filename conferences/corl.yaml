@@ -2,7 +2,6 @@ corl2025:
   conferenceEndDate: '2025-09-30'
   conferenceStartDate: '2025-09-27'
   dataSrc: hf-repo
-  deadline: '2025-05-01T11:59:59Z'
   h5Index: 76
   id: corl2025
   isApproximateDeadline: false
@@ -12,6 +11,8 @@ corl2025:
   tags:
   - ML
   - RO
+  timeline:
+  - deadline: '2025-05-01T11:59:59Z'
   timezone: AoE
   title: The Conference on Robot Learning
   website: https://www.corl.org/

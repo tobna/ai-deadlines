@@ -1,3 +1,4 @@
+from copy import deepcopy
 import json
 import pytz
 import dateparser
@@ -32,10 +33,17 @@ for id, conf in conferences.items():
             .replace("UTC+", "Etc/GMT+")
             .replace("Russia/Moscow", "Etc/GMT+3")
         )
-    if dateparser.parse(conf["deadline"]) > datetime.now().astimezone(pytz.UTC):
-        future_conf[id] = conf
-    else:
-        past_conf[id] = conf
+    for i, dates in enumerate(conf["timeline"]):
+        conf_cpy = deepcopy(conf)
+        conf_cpy.pop("timeline")
+        conf_cpy = {**conf_cpy, **dates}
+        if dateparser.parse(conf_cpy["deadline"]) > datetime.now().astimezone(pytz.UTC):
+            future_conf[f"{id}-{i}"] = conf_cpy
+        else:
+            past_conf[f"{id}-{i}"] = conf_cpy
+
+print("past:", sorted(list(past_conf.keys())))
+print("future:", sorted(list(future_conf.keys())))
 
 with open(os.path.join(this_folder, "data", "conferences.json"), "w") as f:
     json.dump(list(future_conf.values()), f)

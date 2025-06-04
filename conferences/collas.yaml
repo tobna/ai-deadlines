@@ -1,14 +1,15 @@
 collas2025:
-  abstractDeadline: '2025-02-27T11:59:59Z'
   conferenceEndDate: '2025-08-14'
   conferenceStartDate: '2025-08-11'
   dataSrc: hf-repo
-  deadline: '2025-03-04T11:59:59Z'
   id: collas2025
   isApproximateDeadline: false
   shortname: CoLLAs 2025
   tags:
   - ML
+  timeline:
+  - abstractDeadline: '2025-02-27T11:59:59Z'
+    deadline: '2025-03-04T11:59:59Z'
   timezone: UTC-12
   title: Conference on Lifelong Learning Agents
   website: https://lifelong-ml.cc

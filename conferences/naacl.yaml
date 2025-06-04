@@ -2,13 +2,14 @@ naacl2025:
   conferenceEndDate: '2025-05-04'
   conferenceStartDate: '2025-04-29'
   dataSrc: hf-repo
-  deadline: '2024-10-16T11:59:59Z'
   id: naacl2025
   isApproximateDeadline: false
   rating: A
   shortname: NAACL 2025
   tags:
   - NLP
+  timeline:
+  - deadline: '2024-10-16T11:59:59Z'
   timezone: UTC-12
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics

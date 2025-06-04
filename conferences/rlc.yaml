@@ -1,14 +1,15 @@
 rlc2025:
-  abstractDeadline: '2025-02-22T11:59:59Z'
   conferenceEndDate: '2025-08-08'
   conferenceStartDate: '2025-08-05'
   dataSrc: hf-repo
-  deadline: '2025-03-01T11:59:59Z'
   id: rlc2025
   isApproximateDeadline: false
   shortname: RLC 2025
   tags:
   - ML
+  timeline:
+  - abstractDeadline: '2025-02-22T11:59:59Z'
+    deadline: '2025-03-01T11:59:59Z'
   timezone: UTC-12
   title: Reinforcement Learning Conference
   website: https://rl-conference.cc/

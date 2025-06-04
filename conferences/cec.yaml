@@ -2,13 +2,14 @@ cec2025:
   conferenceEndDate: '2025-06-12'
   conferenceStartDate: '2025-06-08'
   dataSrc: hf-repo
-  deadline: '2025-01-16T11:59:59Z'
   id: cec2025
   isApproximateDeadline: false
   rating: B
   shortname: CEC 2025
   tags:
   - ML
+  timeline:
+  - deadline: '2025-01-16T11:59:59Z'
   timezone: UTC-12
   title: IEEE Congress on Evolutionary Computation
   website: https://www.cec2025.org/

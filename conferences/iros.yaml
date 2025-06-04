@@ -2,7 +2,6 @@ iros2025:
   conferenceEndDate: '2025-10-25'
   conferenceStartDate: '2025-10-19'
   dataSrc: hf-repo
-  deadline: '2025-03-02T07:59:59Z'
   h5Index: 86
   id: iros2025
   isApproximateDeadline: false
@@ -11,6 +10,8 @@ iros2025:
   shortname: IROS 2025
   tags:
   - RO
+  timeline:
+  - deadline: '2025-03-02T07:59:59Z'
   timezone: UTC-8
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
   website: http://www.iros25.org/

@@ -37,7 +37,7 @@ def get_hf_list():
             "id": conf_id,
             "title": conference["full_name"],
             "shortname": shortname,
-            "deadline": conference["deadline"],
+            "timeline": [{"deadline": conference["deadline"]}],
             "isApproximateDeadline": False,
         }
 
@@ -66,7 +66,7 @@ def get_hf_list():
             out_conf["conferenceEndDate"] = f"{month2} {day2}, {year}"
 
         if "abstract_deadline" in conference:
-            out_conf["abstractDeadline"] = conference["abstract_deadline"]
+            out_conf["timeline"][0]["abstractDeadline"] = conference["abstract_deadline"]
 
         out_conf["tags"] = [_tag_dict[tag] for tag in conference["tags"] if tag in _tag_dict.keys()]
         out_data.append(out_conf)

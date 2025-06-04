@@ -2,12 +2,13 @@ humanoids2025:
   conferenceEndDate: '2025-10-02'
   conferenceStartDate: '2025-09-30'
   dataSrc: ninoduarte-git
-  deadline: '2025-05-15T21:59:59Z'
   id: humanoids2025
   isApproximateDeadline: false
   location: Seoul, Korea
   shortname: Humanoids 2025
   tags:
   - RO
+  timeline:
+  - deadline: '2025-05-15T21:59:59Z'
   timezone: America/Los_Angeles
   website: https://2025humanoids.org

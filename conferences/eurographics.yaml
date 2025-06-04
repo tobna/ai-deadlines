@@ -2,12 +2,13 @@ eurographics2025:
   conferenceEndDate: '2025-05-16'
   conferenceStartDate: '2025-05-12'
   dataSrc: hf-repo
-  deadline: '2024-10-03T22:59:59Z'
   id: eurographics2025
   isApproximateDeadline: false
   location: London
   shortname: Eurographics 2025
   tags: []
+  timeline:
+  - deadline: '2024-10-03T22:59:59Z'
   timezone: UTC+1
   title: The 46th Annual Conference of the European Association for Computer Graphics
   website: https://www.eg.org/wp/event/eurographics-2025/

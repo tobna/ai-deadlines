@@ -1,9 +1,7 @@
 cikm2025:
-  abstractDeadline: '2025-05-17T11:59:00Z'
   conferenceEndDate: '2025-11-14'
   conferenceStartDate: '2025-11-11'
   dataSrc: hf-repo
-  deadline: '2025-05-24T11:59:00Z'
   id: cikm2025
   isApproximateDeadline: false
   location: COEX, Seoul, South Korea
@@ -12,6 +10,9 @@ cikm2025:
   tags:
   - DM
   - ML
+  timeline:
+  - abstractDeadline: '2025-05-17T11:59:00Z'
+    deadline: '2025-05-24T11:59:00Z'
   timezone: UTC-12
   title: Conference on Information and Knowledge Management
   website: https://cikm2025.org/

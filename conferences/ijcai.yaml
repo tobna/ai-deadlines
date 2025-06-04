@@ -1,9 +1,7 @@
 ijcai2025:
-  abstractDeadline: '2025-01-17T11:59:59Z'
   conferenceEndDate: '2025-08-22'
   conferenceStartDate: '2025-08-16'
   dataSrc: hf-repo
-  deadline: '2025-01-24T11:59:59Z'
   h5Index: 136
   id: ijcai2025
   isApproximateDeadline: false
@@ -12,6 +10,9 @@ ijcai2025:
   shortname: IJCAI 2025
   tags:
   - ML
+  timeline:
+  - abstractDeadline: '2025-01-17T11:59:59Z'
+    deadline: '2025-01-24T11:59:59Z'
   timezone: UTC-12
   title: International Joint Conference on Artificial Intelligence
   website: https://2025.ijcai.org/

@@ -39,6 +39,7 @@ def parse_wacv(year):
         "isApproximateDeadline": False,
         "website": url,
         "tags": ["CV"],
+        "timeline": [{}, {}],
     }
 
     if submissions is not None:
@@ -55,14 +56,14 @@ def parse_wacv(year):
                 or txt.lower().startswith("submission:")
                 or txt.lower().startswith("paper submission deadline:")
             ):
-                key = "deadline2" if "deadline1" in data else "deadline1"
+                round = 2 if "deadline" in data["timeline"][0] else 1
 
-                data[key] = ":".join(txt.split(":")[1:]).split("(")[0].strip()
+                data["timeline"][round - 1]["deadline"] = ":".join(txt.split(":")[1:]).split("(")[0].strip()
 
-        if "deadline1" not in data:
+        if "deadline" not in data["timeline"][0]:
             return {}
 
-    if "deadline1" not in data:
+    if "deadline" not in data["timeline"][0]:
         url = f"https://wacv.thecvf.com/Conferences/{year}/"
         data["website"] = url
         print("try", url + "Dates")
@@ -81,33 +82,18 @@ def parse_wacv(year):
 
                 match = abstract_re.match(txt)
                 if match:
-                    data[f"abstractDeadline{match.group(1)}"] = tds[i + 1].get_text().strip()
+                    data["timeline"][int(match.group(1)) - 1]["abstractDeadline"] = tds[i + 1].get_text().strip()
                 match = deadline_re.match(txt)
                 if match:
-                    data[f"deadline{match.group(1)}"] = tds[i + 1].get_text().strip()
+                    data["timeline"][int(match.group(1)) - 1]["deadline"] = tds[i + 1].get_text().strip()
 
-    if "deadline1" in data:
-        data2 = deepcopy(data)
-        data["deadline"] = data["deadline1"]
-        data2["deadline"] = data2["deadline2"]
-        data["note"] = "Round 1"
-        data2["note"] = "Round 2"
-        data["id"] = f"wacvR1{year}"
-        data2["id"] = f"wacvR2{year}"
-        if "abstractDeadline1" in data:
-            data["abstractDeadline"] = data["abstractDeadline1"]
-        if "abstractDeadline2" in data:
-            data2["abstractDeadline"] = data["abstractDeadline2"]
+    if "deadline" not in data["timeline"][0]:
+        return {}
 
-        end_dig_re = re.compile(r".*\d$")
-        for di in [data, data2]:
-            for key in list(di.keys()):
-                if end_dig_re.match(key):
-                    di.pop(key)
-
-        return [data, data2]
-
-    return {}
+    for idx in range(2):
+        if "deadline" in data["timeline"][idx]:
+            data["timeline"][idx]["note"] = f"Round {idx+1}"
+    return data
 
 
 if __name__ == "__main__":

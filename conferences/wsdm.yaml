@@ -1,9 +1,7 @@
 wsdm2025:
-  abstractDeadline: '2024-08-08T11:59:00Z'
   conferenceEndDate: '2025-03-14'
   conferenceStartDate: '2025-03-10'
   dataSrc: hf-repo
-  deadline: '2024-08-15T11:59:00Z'
   h5Index: 77
   id: wsdm2025
   isApproximateDeadline: false
@@ -12,6 +10,9 @@ wsdm2025:
   shortname: WSDM 2025
   tags:
   - DM
+  timeline:
+  - abstractDeadline: '2024-08-08T11:59:00Z'
+    deadline: '2024-08-15T11:59:00Z'
   timezone: UTC-12
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2025/

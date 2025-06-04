@@ -1,9 +1,7 @@
 iccv2025:
-  abstractDeadline: '2025-03-04T09:59:00Z'
   conferenceEndDate: '2025-10-23'
   conferenceStartDate: '2025-10-21'
   dataSrc: off-website
-  deadline: '2025-03-08T09:59:00Z'
   h5Index: 291
   id: iccv2025
   isApproximateDeadline: false
@@ -12,6 +10,9 @@ iccv2025:
   shortname: ICCV 2025
   tags:
   - CV
+  timeline:
+  - abstractDeadline: '2025-03-04T09:59:00Z'
+    deadline: '2025-03-08T09:59:00Z'
   timezone: UTC+0
   title: International Conference on Computer Vision
   website: https://iccv.thecvf.com/Conferences/2025/

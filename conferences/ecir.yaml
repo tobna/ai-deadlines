@@ -1,9 +1,7 @@
 ecir2025:
-  abstractDeadline: '2024-10-03T11:59:59Z'
   conferenceEndDate: '2025-04-10'
   conferenceStartDate: '2025-04-06'
   dataSrc: hf-repo
-  deadline: '2024-10-10T11:59:59Z'
   id: ecir2025
   isApproximateDeadline: false
   location: IMT School for Advanced Studies Lucca, Lucca, Italy
@@ -11,6 +9,9 @@ ecir2025:
   shortname: ECIR 2025
   tags:
   - DM
+  timeline:
+  - abstractDeadline: '2024-10-03T11:59:59Z'
+    deadline: '2024-10-10T11:59:59Z'
   timezone: UTC-12
   title: European Conference on Information Retrieval
   website: https://ecir2025.eu/

@@ -2,7 +2,6 @@ coling2025:
   conferenceEndDate: '2025-01-24'
   conferenceStartDate: '2025-01-19'
   dataSrc: hf-repo
-  deadline: '2024-09-17T11:59:59Z'
   h5Index: 65
   id: coling2025
   isApproximateDeadline: false
@@ -11,6 +10,8 @@ coling2025:
   shortname: COLING 2025
   tags:
   - NLP
+  timeline:
+  - deadline: '2024-09-17T11:59:59Z'
   timezone: UTC-12
   title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
   website: https://coling2025.org/

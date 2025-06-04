@@ -2,7 +2,6 @@ emnlp2025:
   conferenceEndDate: '2025-11-09'
   conferenceStartDate: '2025-11-05'
   dataSrc: hf-repo
-  deadline: '2025-05-20T11:59:59Z'
   h5Index: 193
   id: emnlp2025
   isApproximateDeadline: false
@@ -11,6 +10,8 @@ emnlp2025:
   shortname: EMNLP 2025
   tags:
   - NLP
+  timeline:
+  - deadline: '2025-05-20T11:59:59Z'
   timezone: UTC-12
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2025.emnlp.org/

@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 
 
 def parse_common_website_format(data, url):
+    if "timeline" not in data:
+        data["timeline"] = [{}]
     website = requests.get(url)
     # print(website)
     website = BeautifulSoup(website.text, "html.parser")
@@ -25,10 +27,10 @@ def parse_common_website_format(data, url):
                     or all(word in txt.lower() for word in ["paper", "registration", "deadline"])
                 ) and main_conference_data:
                     # print("abstract ->", txt)
-                    data["abstractDeadline"] = tds[i + 1].get_text()
+                    data["timeline"][0]["abstractDeadline"] = tds[i + 1].get_text()
                 elif all(word in txt.lower() for word in ["submission", "deadline"]) and main_conference_data:
                     # print("deadline ->", txt)
-                    data["deadline"] = tds[i + 1].get_text()
+                    data["timeline"][0]["deadline"] = tds[i + 1].get_text()
 
                 elif "main conference day" in txt.lower():
                     # print("conference ->", tds[i + 1].get_text())
@@ -91,7 +93,7 @@ def parse_neurips_data(year: int):
 
     data = parse_common_website_format(data, url + "Dates")
 
-    if "deadline" not in data or "conferenceStartDate" not in data:
+    if "deadline" not in data["timeline"][0] or "conferenceStartDate" not in data:
         return {}
     return data
 
@@ -112,7 +114,7 @@ def parse_iccv(year):
 
     data = parse_common_website_format(data, url + "Dates")
 
-    if "deadline" not in data:
+    if "deadline" not in data["timeline"][0] or "conferenceStartDate" not in data:
         return {}
 
     return data
@@ -132,7 +134,7 @@ def parse_cvpr(year):
 
     data = parse_common_website_format(data, url + "Dates")
 
-    if "deadline" not in data:
+    if "deadline" not in data["timeline"][0] or "conferenceStartDate" not in data:
         return {}
 
     return data
@@ -154,7 +156,7 @@ def parse_eccv(year):
 
     data = parse_common_website_format(data, url + "Dates")
 
-    if "deadline" not in data:
+    if "deadline" not in data["timeline"][0] or "conferenceStartDate" not in data:
         return {}
 
     return data
@@ -174,7 +176,7 @@ def parse_icml(year):
 
     data = parse_common_website_format(data, url + "Dates")
 
-    if "deadline" not in data:
+    if "deadline" not in data["timeline"][0] or "conferenceStartDate" not in data:
         return {}
 
     return data

@@ -28,7 +28,7 @@ def get_nino_list():
         year = dateparser.parse(conf["date_start"]).year
         data = {
             "id": conf["id"] + str(year),
-            "deadline": conf["deadline"],
+            "timeline": [{"deadline": conf["deadline"]}],
             "isApproximateDeadline": False,
             "location": conf["location"],
             "shortname": conf["name"],

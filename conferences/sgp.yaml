@@ -1,9 +1,7 @@
 sgp2025:
-  abstractDeadline: '2025-02-05T11:59:59Z'
   conferenceEndDate: '2025-07-04'
   conferenceStartDate: '2025-06-30'
   dataSrc: hf-repo
-  deadline: '2025-02-08T11:59:59Z'
   id: sgp2025
   isApproximateDeadline: false
   location: Bizkaia Aretoa, Bilbao, Spain
@@ -12,6 +10,9 @@ sgp2025:
   tags:
   - CV
   - ML
+  timeline:
+  - abstractDeadline: '2025-02-05T11:59:59Z'
+    deadline: '2025-02-08T11:59:59Z'
   timezone: UTC-12
   title: Synopsium on Geometric Processing
   website: https://sgp2025.my.canva.site/

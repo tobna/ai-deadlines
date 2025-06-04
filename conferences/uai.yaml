@@ -2,13 +2,14 @@ uai2025:
   conferenceEndDate: '2025-07-25'
   conferenceStartDate: '2025-07-21'
   dataSrc: hf-repo
-  deadline: '2025-02-11T11:59:59Z'
   id: uai2025
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2025
   tags:
   - ML
+  timeline:
+  - deadline: '2025-02-11T11:59:59Z'
   timezone: AoE
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2025/
