@@ -18,6 +18,7 @@ from ninoduarte_list import get_nino_list
 from see_future import estimate_future_conferences
 from wacv import parse_wacv
 from ranking import make_core_rank_function, make_conf_rank_function
+from utils import parse_all_times
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ccf-deadlines", "ninoduarte-git", "hf-repo", "off-website", "manual"]
@@ -34,71 +35,6 @@ parser.add_argument(
     "--reestimate", default=False, action=argparse.BooleanOptionalAction, help="Force reestimate all conferences"
 )
 args = parser.parse_args()
-
-
-def _parse_timestr(timestr, with_time, conf_tz=None):
-    if isinstance(timestr, str):
-        timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-        timestr = timestr.replace("AoE", "UTC-12")
-        timestr = timestr.replace("Pacific Time", "PT")
-        parsed_time = dateparser.parse(timestr)
-        if parsed_time is None:
-            print("NONE:", timestr)
-            return None
-    else:
-        assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
-        parsed_time = timestr
-        timestr = timestr.isoformat()
-    if not with_time:
-        return parsed_time.strftime("%Y-%m-%d")
-    if parsed_time.tzinfo is None and conf_tz is not None:
-        timestr = timestr + f" {conf_tz}"
-        timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-        timestr = timestr.replace("AoE", "UTC-12")
-        old_parsed_time = parsed_time
-        parsed_time = dateparser.parse(timestr)
-        if parsed_time is None:
-            parsed_time = old_parsed_time
-    return parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
-
-
-def parse_all_times(conference):
-    if "id" not in conference:
-        assert len(conference) == 0, f"Strange conference: {conference}"
-        return conference
-    month_day_re = re.compile(r"[A-Z][a-z]* \d?\d$")
-    year = int(conference["id"][-4:])
-    conf_tz = None
-    if "timezone" in conference:
-        conf_tz = conference["timezone"]
-        conf_tz = conf_tz.replace("Russia/Moscow", "GMT+3")
-    for timekey in ["conferenceStartDate", "conferenceEndDate"]:
-        if timekey in conference:
-            timestr = str(conference[timekey])
-            if month_day_re.match(timestr.strip()):
-                timestr += f", {year}"
-
-            timestr = _parse_timestr(timestr, with_time=False, conf_tz=conf_tz)
-            if timestr:
-                conference[timekey] = timestr
-    for dates in conference["timeline"]:
-        for key in dates.keys():
-            if "deadline" in key.lower():
-                timestr = _parse_timestr(dates[key], with_time=True, conf_tz=conf_tz)
-                if timestr:
-                    dates[key] = timestr
-
-    return conference
-
-
-def _update_to_multiple_deadlines(conf):
-    timeline = [{"deadline": conf.pop("deadline")}]
-    if "abstractDeadline" in conf:
-        timeline[0]["abstractDeadline"] = conf.pop("abstractDeadline")
-    if "note" in conf:
-        timeline[0]["note"] = conf.pop("note")
-    conf["timeline"] = timeline
-    return conf
 
 
 conferences = {}
