@@ -1,3 +1,234 @@
+neurips2009:
+  conferenceEndDate: '2025-12-10'
+  conferenceStartDate: '2025-12-08'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2009
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2009
+  tags:
+  - ML
+  timeline:
+  - deadline: '2009-06-05T23:59:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2009/
+neurips2010:
+  conferenceEndDate: '2025-12-09'
+  conferenceStartDate: '2025-12-07'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2010
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2010
+  tags:
+  - ML
+  timeline:
+  - deadline: '2010-06-03T23:59:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2010/
+neurips2011:
+  conferenceEndDate: '2025-12-15'
+  conferenceStartDate: '2025-12-13'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2011
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2011
+  tags:
+  - ML
+  timeline:
+  - deadline: '2011-06-02T23:59:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2011/
+neurips2012:
+  conferenceEndDate: '2025-12-06'
+  conferenceStartDate: '2025-12-04'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2012
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2012
+  tags:
+  - ML
+  timeline:
+  - deadline: '2012-06-01T23:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2012/
+neurips2013:
+  conferenceEndDate: '2025-12-08'
+  conferenceStartDate: '2025-12-06'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2013
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2013
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2013-09-17T06:59:00Z'
+    deadline: '2013-05-31T23:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2013/
+neurips2014:
+  conferenceEndDate: '2025-12-11'
+  conferenceStartDate: '2025-12-09'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2014
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2014
+  tags:
+  - ML
+  timeline:
+  - deadline: '2014-06-06T23:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2014/
+neurips2015:
+  conferenceEndDate: '2025-12-10'
+  conferenceStartDate: '2025-12-08'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2015
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2015
+  tags:
+  - ML
+  timeline:
+  - deadline: '2015-06-05T23:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2015/
+neurips2016:
+  conferenceEndDate: '2025-12-08'
+  conferenceStartDate: '2025-12-06'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2016
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2016
+  tags:
+  - ML
+  timeline:
+  - deadline: '2016-05-20T16:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2016/
+neurips2017:
+  conferenceEndDate: '2025-12-07'
+  conferenceStartDate: '2025-12-05'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2017
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2017
+  tags:
+  - ML
+  timeline:
+  - deadline: '2017-05-19T20:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2017/
+neurips2018:
+  conferenceEndDate: '2025-12-06'
+  conferenceStartDate: '2025-12-04'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2018
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2018
+  tags:
+  - ML
+  timeline:
+  - deadline: '2018-05-18T20:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2018/
+neurips2019:
+  conferenceEndDate: '2025-12-12'
+  conferenceStartDate: '2025-12-10'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2019
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2019
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2019-05-16T20:00:00Z'
+    deadline: '2019-09-14T10:59:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2019/
+neurips2020:
+  conferenceEndDate: '2025-12-10'
+  conferenceStartDate: '2025-12-08'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2020
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2020
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2020-05-27T20:00:00Z'
+    deadline: '2020-06-11T20:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2020/
+neurips2021:
+  conferenceEndDate: '2025-12-10'
+  conferenceStartDate: '2025-12-07'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2021
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2021-05-28T20:00:00Z'
+    deadline: '2021-10-26T20:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2021/
+neurips2022:
+  conferenceEndDate: '2025-12-01'
+  conferenceStartDate: '2025-11-29'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2022
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2022-05-16T20:00:00Z'
+    deadline: '2022-05-26T20:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2022/
+neurips2023:
+  conferenceEndDate: '2025-12-14'
+  conferenceStartDate: '2025-12-12'
+  dataSrc: off-website
+  h5Index: 337
+  id: neurips2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: NeurIPS 2023
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2023-05-11T20:00:00Z'
+    deadline: '2023-05-24T20:00:00Z'
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2023/
 neurips2024:
   conferenceEndDate: '2025-12-13'
   conferenceStartDate: '2025-12-11'

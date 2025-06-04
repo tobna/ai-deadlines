@@ -1,3 +1,35 @@
+wacv2021:
+  dataSrc: off-website
+  h5Index: 109
+  id: wacv2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: WACV 2021
+  tags:
+  - CV
+  timeline:
+  - deadline: Wednesday, June 24th, 11:59 PM Pacific Time
+    note: Round 1
+  - deadline: "Tuesday, September 29th,\_\_11:59 PM Pacific Time"
+    note: Round 2
+  title: Winter Conference on Applications of Computer Vision
+  website: https://wacv2021.thecvf.com
+wacv2023:
+  dataSrc: off-website
+  h5Index: 109
+  id: wacv2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: WACV 2023
+  tags:
+  - CV
+  timeline:
+  - deadline: '2025-07-13T19:59:00Z'
+    note: Round 1
+  - deadline: '2025-08-29T19:59:00Z'
+    note: Round 2
+  title: Winter Conference on Applications of Computer Vision
+  website: https://wacv2023.thecvf.com
 wacv2024:
   dataSrc: off-website
   h5Index: 109

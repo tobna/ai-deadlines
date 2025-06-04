@@ -1,3 +1,112 @@
+icml2017:
+  conferenceEndDate: '2025-09-04'
+  conferenceStartDate: '2025-08-07'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2017
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2017
+  tags:
+  - ML
+  timeline:
+  - deadline: '2017-02-01T23:00:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2017/
+icml2018:
+  conferenceEndDate: '2025-06-13'
+  conferenceStartDate: '2025-07-11'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2018
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2018
+  tags:
+  - ML
+  timeline:
+  - deadline: '2018-03-03T07:59:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2018/
+icml2019:
+  conferenceEndDate: '2025-06-13'
+  conferenceStartDate: '2025-06-11'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2019
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2019
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2019-01-18T23:59:00Z'
+    deadline: '2019-02-23T02:00:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2019/
+icml2020:
+  conferenceEndDate: '2025-06-18'
+  conferenceStartDate: '2025-07-13'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2020
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2020
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2020-01-30T12:00:00Z'
+    deadline: '2020-06-29T12:00:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2020/
+icml2021:
+  conferenceEndDate: '2025-06-24'
+  conferenceStartDate: '2025-07-18'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2021
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2021-01-28T12:00:00Z'
+    deadline: '2021-02-04T12:00:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2021/
+icml2022:
+  conferenceEndDate: '2025-06-21'
+  conferenceStartDate: '2025-07-19'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2022
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2022-01-20T12:00:00Z'
+    deadline: '2022-01-27T12:00:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2022/
+icml2023:
+  conferenceEndDate: '2025-06-27'
+  conferenceStartDate: '2025-07-25'
+  dataSrc: off-website
+  h5Index: 268
+  id: icml2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICML 2023
+  tags:
+  - ML
+  timeline:
+  - deadline: '2023-01-26T19:59:00Z'
+  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2023/
 icml2024:
   conferenceEndDate: '2025-06-25'
   conferenceStartDate: '2025-07-23'

@@ -1,3 +1,19 @@
+cvpr2023:
+  conferenceEndDate: '2023-06-22'
+  conferenceStartDate: '2023-06-20'
+  dataSrc: off-website
+  h5Index: 440
+  id: cvpr2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CVPR 2023
+  tags:
+  - CV
+  timeline:
+  - abstractDeadline: '2022-11-05T06:59:00Z'
+    deadline: '2022-11-12T07:59:00Z'
+  title: Computer Vision and Pattern Recognition Conference
+  website: https://cvpr.thecvf.com/Conferences/2023/
 cvpr2024:
   conferenceEndDate: '2024-06-21'
   conferenceStartDate: '2024-06-19'
