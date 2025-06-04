@@ -6,9 +6,7 @@ import sys
 
 import dateparser
 import pytz
-import requests
 import yaml
-from bs4 import BeautifulSoup
 
 this_folder = os.path.dirname(__file__)
 sys.path.append(this_folder)
@@ -22,7 +20,7 @@ from wacv import parse_wacv
 from ranking import make_core_rank_function, make_conf_rank_function
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
-_SOURCES = ["estimate", "ninoduarte-git", "hf-repo", "off-website", "manual"]
+_SOURCES = ["estimate", "ccf-deadlines", "ninoduarte-git", "hf-repo", "off-website", "manual"]
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
