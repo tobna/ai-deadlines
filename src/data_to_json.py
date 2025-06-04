@@ -37,10 +37,11 @@ for id, conf in conferences.items():
         conf_cpy = deepcopy(conf)
         conf_cpy.pop("timeline")
         conf_cpy = {**conf_cpy, **dates}
+        conf_cpy["id"] = f"{id}-{i+1}"
         if dateparser.parse(conf_cpy["deadline"]) > datetime.now().astimezone(pytz.UTC):
-            future_conf[f"{id}-{i}"] = conf_cpy
+            future_conf[f"{id}-{i+1}"] = conf_cpy
         else:
-            past_conf[f"{id}-{i}"] = conf_cpy
+            past_conf[f"{id}-{i+1}"] = conf_cpy
 
 print("past:", sorted(list(past_conf.keys())))
 print("future:", sorted(list(future_conf.keys())))
