@@ -185,9 +185,17 @@ def parse_icml(year):
 PARSER = [parse_eccv, parse_cvpr, parse_iccv, parse_neurips_data, parse_icml]
 
 if __name__ == "__main__":
+    import sys
+    import os
+
+    src_folder = os.path.join(os.path.dirname(__file__), os.pardir)
+    sys.path.append(src_folder)
+    from utils import parse_all_times
+
     year = 2025
     data = {"test": 1}
     while len(data) > 0:
-        data = parse_icml(year)
+        data = parse_neurips_data(year)
+        data = parse_all_times(data)
         print(year, data)
         year -= 1
