@@ -50,8 +50,8 @@ aaai2025:
   tags:
   - DM
   - NLP
-  - CV
   - ML
+  - CV
   timeline:
   - abstractDeadline: '2024-08-08T11:59:59Z'
     deadline: '2024-08-16T11:59:59Z'
@@ -71,8 +71,8 @@ aaai2026:
   tags:
   - DM
   - NLP
-  - CV
   - ML
+  - CV
   timeline:
   - abstractDeadline: '2025-07-26T11:59:59Z'
     deadline: '2025-08-02T11:59:59Z'
