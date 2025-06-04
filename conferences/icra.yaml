@@ -44,7 +44,7 @@ icra2025:
   location: Georgia World Congress Center, Atlanta, USA
   rating: A*
   shortname: ICRA 2025
-  tags: &id001
+  tags:
   - ML
   - RO
   timeline:
@@ -79,7 +79,9 @@ icra2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICRA 2027
-  tags: *id001
+  tags:
+  - ML
+  - RO
   timeline:
   - deadline: '2025-07-15T16:00:00Z'
   title: IEEE International Conference on Robotics and Automation

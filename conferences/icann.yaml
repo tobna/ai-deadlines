@@ -34,7 +34,7 @@ icann2025:
   isApproximateDeadline: false
   rating: C
   shortname: ICANN 2025
-  tags: &id001
+  tags:
   - ML
   timeline:
   - abstractDeadline: '2025-03-30T11:59:00Z'
@@ -50,7 +50,8 @@ icann2026:
   isApproximateDeadline: true
   rating: C
   shortname: ICANN 2026
-  tags: *id001
+  tags: &id001
+  - ML
   timeline:
   - abstractDeadline: '2026-03-30T11:59:00Z'
     deadline: '2026-03-30T11:59:00Z'

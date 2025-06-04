@@ -36,7 +36,7 @@ icip2025:
   location: Anchorage, Alaska
   rating: B
   shortname: ICIP 2025
-  tags: &id001
+  tags:
   - CV
   timeline:
   - deadline: '2025-02-04T23:00:00Z'
@@ -51,7 +51,8 @@ icip2026:
   isApproximateDeadline: true
   rating: B
   shortname: ICIP 2026
-  tags: *id001
+  tags: &id001
+  - CV
   timeline:
   - deadline: '2026-02-04T23:00:00Z'
   title: International Conference on Image Processing

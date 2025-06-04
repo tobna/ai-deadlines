@@ -50,7 +50,7 @@ bmvc2025:
   location: Sheffield, UK
   rating: A
   shortname: BMVC 2025
-  tags: &id001
+  tags:
   - CV
   timeline:
   - deadline: '2025-05-16T21:59:59Z'
@@ -66,7 +66,8 @@ bmvc2026:
   isApproximateDeadline: true
   rating: A
   shortname: BMVC 2026
-  tags: *id001
+  tags: &id001
+  - CV
   timeline:
   - deadline: '2026-05-16T21:59:59Z'
   title: British Machine Vision Conference

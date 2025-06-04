@@ -33,8 +33,8 @@ iccv2025:
   rating: A*
   shortname: ICCV 2025
   tags:
-  - ML
   - CV
+  - ML
   timeline:
   - abstractDeadline: '2025-03-04T09:59:00Z'
     deadline: '2025-03-08T09:59:00Z'

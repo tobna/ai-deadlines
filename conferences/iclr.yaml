@@ -51,10 +51,10 @@ iclr2025:
   rating: A*
   shortname: ICLR 2025
   tags:
-  - NLP
   - SP
   - CV
   - ML
+  - NLP
   timeline:
   - abstractDeadline: '2024-09-28T11:59:59Z'
     deadline: '2024-10-02T11:59:59Z'
@@ -71,11 +71,11 @@ iclr2026:
   location: NA, NA
   rating: A*
   shortname: ICLR 2026
-  tags: &id001
-  - NLP
+  tags:
   - SP
-  - ML
   - CV
+  - ML
+  - NLP
   timeline:
   - deadline: '2025-10-01T21:59:59Z'
   timezone: America/Los_Angeles
@@ -90,7 +90,11 @@ iclr2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICLR 2027
-  tags: *id001
+  tags:
+  - NLP
+  - SP
+  - ML
+  - CV
   timeline:
   - deadline: '2026-10-01T21:59:59Z'
   title: International Conference on Learning Representations
