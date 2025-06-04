@@ -1,3 +1,15 @@
+aistats2022:
+  dataSrc: ccf-deadlines
+  h5Index: 100
+  id: aistats2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: AISTATS 2022
+  tags: []
+  timeline:
+  - deadline: '2021-10-15T11:59:00Z'
+  title: International Conference on Artificial Intelligence and Statistics
+  website: https://aistats.org/aistats2022/
 aistats2024:
   conferenceEndDate: '2024-05-04'
   conferenceStartDate: '2024-05-02'
@@ -25,7 +37,7 @@ aistats2025:
   location: TBA
   rating: A
   shortname: AISTATS 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2024-10-04T11:59:59Z'
@@ -42,8 +54,7 @@ aistats2026:
   isApproximateDeadline: true
   rating: A
   shortname: AISTATS 2026
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-10-04T11:59:59Z'
     deadline: '2025-10-11T11:59:59Z'

@@ -1,3 +1,36 @@
+icassp2022:
+  dataSrc: ccf-deadlines
+  id: icassp2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICASSP 2022
+  tags: []
+  timeline:
+  - deadline: '2021-10-06T23:59:59Z'
+  title: IEEE International Conference on Acoustics, Speech, and Signal Processing
+  website: https://2022.ieeeicassp.org
+icassp2023:
+  dataSrc: ccf-deadlines
+  id: icassp2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICASSP 2023
+  tags: []
+  timeline:
+  - deadline: '2022-10-26T23:59:59Z'
+  title: IEEE International Conference on Acoustics, Speech, and Signal Processing
+  website: https://2023.ieeeicassp.org
+icassp2024:
+  dataSrc: ccf-deadlines
+  id: icassp2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICASSP 2024
+  tags: []
+  timeline:
+  - deadline: '2023-09-06T23:59:59Z'
+  title: IEEE International Conference on Acoustics, Speech, and Signal Processing
+  website: https://2024.ieeeicassp.org/
 icassp2025:
   conferenceEndDate: '2025-04-11'
   conferenceStartDate: '2025-04-06'
@@ -14,3 +47,14 @@ icassp2025:
   timezone: UTC-12
   title: International Conference on Acoustics, Speech and Signal Processing
   website: https://2025.ieeeicassp.org/
+icassp2026:
+  dataSrc: ccf-deadlines
+  id: icassp2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICASSP 2026
+  tags: []
+  timeline:
+  - deadline: '2025-09-17T22:59:59Z'
+  title: IEEE International Conference on Acoustics, Speech, and Signal Processing
+  website: https://2026.ieeeicassp.org/

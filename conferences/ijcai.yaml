@@ -1,3 +1,41 @@
+ijcai2022:
+  dataSrc: ccf-deadlines
+  h5Index: 136
+  id: ijcai2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: IJCAI 2022
+  tags: []
+  timeline:
+  - deadline: '2022-01-14T23:59:59Z'
+  title: International Joint Conference on Artificial Intelligence
+  website: https://ijcai-22.org
+ijcai2023:
+  dataSrc: ccf-deadlines
+  h5Index: 136
+  id: ijcai2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: IJCAI 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-01-11T23:59:59Z'
+    deadline: '2023-01-18T23:59:59Z'
+  title: International Joint Conference on Artificial Intelligence
+  website: https://ijcai-23.org
+ijcai2024:
+  dataSrc: ccf-deadlines
+  h5Index: 136
+  id: ijcai2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: IJCAI 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2024-01-10T23:59:59Z'
+    deadline: '2024-01-17T23:59:59Z'
+  title: International Joint Conference on Artificial Intelligence
+  website: https://ijcai24.org/
 ijcai2025:
   conferenceEndDate: '2025-08-22'
   conferenceStartDate: '2025-08-16'

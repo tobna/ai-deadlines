@@ -1,3 +1,43 @@
+acl2022:
+  dataSrc: ccf-deadlines
+  h5Index: 215
+  id: acl2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ACL 2022
+  tags: []
+  timeline:
+  - deadline: '2021-09-15T23:59:59Z'
+  - deadline: '2021-10-15T23:59:59Z'
+  - deadline: '2021-11-15T23:59:59Z'
+    note: final submission deadline
+  title: Annual Meeting of the Association for Computational Linguistics
+  website: https://www.2022.aclweb.org/
+acl2023:
+  dataSrc: ccf-deadlines
+  h5Index: 215
+  id: acl2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ACL 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-01-13T23:59:59Z'
+    deadline: '2023-01-20T23:59:59Z'
+  title: Annual Meeting of the Association for Computational Linguistics
+  website: https://2023.aclweb.org/
+acl2024:
+  dataSrc: ccf-deadlines
+  h5Index: 215
+  id: acl2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ACL 2024
+  tags: []
+  timeline:
+  - deadline: '2024-02-15T23:59:59Z'
+  title: Annual Meeting of the Association for Computational Linguistics
+  website: https://2024.aclweb.org/
 acl2025:
   conferenceEndDate: '2025-08-01'
   conferenceStartDate: '2025-07-27'

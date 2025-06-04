@@ -1,3 +1,14 @@
+ijcnn2024:
+  dataSrc: ccf-deadlines
+  id: ijcnn2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNN 2024
+  tags: []
+  timeline:
+  - deadline: '2024-01-29T23:59:59Z'
+  title: International Joint Conference on Neural Networks
+  website: https://2024.ieeewcci.org/
 ijcnn2025:
   conferenceEndDate: '2025-07-05'
   conferenceStartDate: '2025-06-30'
@@ -13,3 +24,14 @@ ijcnn2025:
   timezone: UTC-12
   title: International Joint Conference on Neural Networks
   website: https://2025.ijcnn.org/
+ijcnn2026:
+  dataSrc: ccf-deadlines
+  id: ijcnn2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNN 2026
+  tags: []
+  timeline:
+  - deadline: '2026-01-31T23:59:59Z'
+  title: International Joint Conference on Neural Networks
+  website: https://attend.ieee.org/wcci-2026/

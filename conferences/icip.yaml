@@ -1,3 +1,15 @@
+icip2023:
+  dataSrc: ccf-deadlines
+  h5Index: 66
+  id: icip2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICIP 2023
+  tags: []
+  timeline:
+  - deadline: '2023-02-15T23:59:59Z'
+  title: The IEEE International Conference on Image Processing
+  website: https://2023.ieeeicip.org/
 icip2024:
   conferenceEndDate: '2024-10-30'
   conferenceStartDate: '2024-10-27'

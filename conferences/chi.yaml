@@ -1,3 +1,15 @@
+chi2024:
+  dataSrc: ccf-deadlines
+  id: chi2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CHI 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-09-07T23:59:59Z'
+    deadline: '2023-09-14T23:59:59Z'
+  title: ACM Conference on Human Factors in Computing Systems
+  website: http://chi2024.acm.org/
 chi2025:
   conferenceEndDate: '2025-05-01'
   conferenceStartDate: '2025-04-26'
@@ -15,3 +27,15 @@ chi2025:
   timezone: UTC-12
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2025.acm.org/
+chi2026:
+  dataSrc: ccf-deadlines
+  id: chi2026
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CHI 2026
+  tags: []
+  timeline:
+  - abstractDeadline: '2025-09-04T23:59:59Z'
+    deadline: '2025-09-11T23:59:59Z'
+  title: ACM Conference on Human Factors in Computing Systems
+  website: https://chi2026.acm.org/

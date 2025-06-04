@@ -1,3 +1,41 @@
+emnlp2022:
+  dataSrc: ccf-deadlines
+  h5Index: 193
+  id: emnlp2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: EMNLP 2022
+  tags: []
+  timeline:
+  - abstractDeadline: '2022-06-17T23:59:59Z'
+    deadline: '2022-06-24T23:59:59Z'
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+  website: https://2022.emnlp.org
+emnlp2023:
+  dataSrc: ccf-deadlines
+  h5Index: 193
+  id: emnlp2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: EMNLP 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-06-16T23:59:59Z'
+    deadline: '2023-06-23T23:59:59Z'
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+  website: https://2023.emnlp.org
+emnlp2024:
+  dataSrc: ccf-deadlines
+  h5Index: 193
+  id: emnlp2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: EMNLP 2024
+  tags: []
+  timeline:
+  - deadline: '2024-06-15T23:59:59Z'
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+  website: https://2024.emnlp.org
 emnlp2025:
   conferenceEndDate: '2025-11-09'
   conferenceStartDate: '2025-11-05'

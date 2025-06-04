@@ -1,0 +1,10 @@
+ppsn2024:
+  dataSrc: ccf-deadlines
+  id: ppsn2024
+  isApproximateDeadline: false
+  shortname: PPSN 2024
+  tags: []
+  timeline:
+  - deadline: '2024-04-18T23:59:59Z'
+  title: International Conference on Parallel Problem Solving From Nature
+  website: https://ppsn2024.fh-ooe.at/

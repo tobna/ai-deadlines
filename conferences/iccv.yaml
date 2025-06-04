@@ -1,3 +1,27 @@
+iccv2021:
+  dataSrc: ccf-deadlines
+  h5Index: 291
+  id: iccv2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICCV 2021
+  tags: []
+  timeline:
+  - deadline: '2021-03-17T23:59:59Z'
+  title: IEEE International Conference on Computer Vision
+  website: http://iccv2021.thecvf.com/home/
+iccv2023:
+  dataSrc: ccf-deadlines
+  h5Index: 291
+  id: iccv2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICCV 2023
+  tags: []
+  timeline:
+  - deadline: '2023-03-08T23:59:59Z'
+  title: IEEE International Conference on Computer Vision
+  website: http://iccv2023.thecvf.com/home/
 iccv2025:
   conferenceEndDate: '2025-10-23'
   conferenceStartDate: '2025-10-21'
@@ -9,6 +33,7 @@ iccv2025:
   rating: A*
   shortname: ICCV 2025
   tags:
+  - ML
   - CV
   timeline:
   - abstractDeadline: '2025-03-04T09:59:00Z'

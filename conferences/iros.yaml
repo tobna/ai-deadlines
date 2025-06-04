@@ -1,3 +1,27 @@
+iros2023:
+  dataSrc: ccf-deadlines
+  h5Index: 86
+  id: iros2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: IROS 2023
+  tags: []
+  timeline:
+  - deadline: '2023-03-01T23:59:59Z'
+  title: IEEE\RSJ International Conference on Intelligent Robots and Systems
+  website: https://ieee-iros.org/
+iros2024:
+  dataSrc: ccf-deadlines
+  h5Index: 86
+  id: iros2024
+  isApproximateDeadline: false
+  rating: A
+  shortname: IROS 2024
+  tags: []
+  timeline:
+  - deadline: '2024-03-15T23:59:59Z'
+  title: IEEE\RSJ International Conference on Intelligent Robots and Systems
+  website: http://iros2024-abudhabi.org/
 iros2025:
   conferenceEndDate: '2025-10-25'
   conferenceStartDate: '2025-10-19'

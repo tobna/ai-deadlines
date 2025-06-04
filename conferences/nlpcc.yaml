@@ -1,0 +1,10 @@
+nlpcc2025:
+  dataSrc: ccf-deadlines
+  id: nlpcc2025
+  isApproximateDeadline: false
+  shortname: NLPCC 2025
+  tags: []
+  timeline:
+  - deadline: '2025-04-20T23:59:59Z'
+  title: CCF International Conference on Natural Language Processing and Chinese Computing
+  website: http://tcci.ccf.org.cn/conference/2025/index.php

@@ -1,3 +1,14 @@
+corl2024:
+  dataSrc: ccf-deadlines
+  h5Index: 76
+  id: corl2024
+  isApproximateDeadline: false
+  shortname: CoRL 2024
+  tags: []
+  timeline:
+  - deadline: '2024-06-06T23:59:59Z'
+  title: The Conference on Robot Learning
+  website: https://2024.corl.org/
 corl2025:
   conferenceEndDate: '2025-09-30'
   conferenceStartDate: '2025-09-27'

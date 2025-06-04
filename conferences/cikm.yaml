@@ -1,3 +1,61 @@
+cikm2020:
+  dataSrc: ccf-deadlines
+  id: cikm2020
+  isApproximateDeadline: false
+  rating: A
+  shortname: CIKM 2020
+  tags: []
+  timeline:
+  - deadline: '2020-05-01T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+  website: https://www.cikm2020.org/
+cikm2021:
+  dataSrc: ccf-deadlines
+  id: cikm2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: CIKM 2021
+  tags: []
+  timeline:
+  - deadline: '2021-05-26T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+  website: https://www.cikm2021.org/
+cikm2022:
+  dataSrc: ccf-deadlines
+  id: cikm2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: CIKM 2022
+  tags: []
+  timeline:
+  - abstractDeadline: '2022-05-12T23:59:59Z'
+    deadline: '2022-05-19T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+  website: https://www.cikm2022.org/
+cikm2023:
+  dataSrc: ccf-deadlines
+  id: cikm2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: CIKM 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-05-26T23:59:59Z'
+    deadline: '2023-06-02T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+  website: https://uobevents.eventsair.com/cikm2023/
+cikm2024:
+  dataSrc: ccf-deadlines
+  id: cikm2024
+  isApproximateDeadline: false
+  rating: A
+  shortname: CIKM 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2024-05-13T23:59:59Z'
+    deadline: '2024-05-20T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+  website: https://cikm2024.org/
 cikm2025:
   conferenceEndDate: '2025-11-14'
   conferenceStartDate: '2025-11-11'
@@ -8,8 +66,8 @@ cikm2025:
   rating: A
   shortname: CIKM 2025
   tags:
-  - DM
   - ML
+  - DM
   timeline:
   - abstractDeadline: '2025-05-17T11:59:00Z'
     deadline: '2025-05-24T11:59:00Z'

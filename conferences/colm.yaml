@@ -1,3 +1,14 @@
+colm2024:
+  dataSrc: ccf-deadlines
+  id: colm2024
+  isApproximateDeadline: false
+  shortname: COLM 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2024-03-22T23:59:59Z'
+    deadline: '2024-03-29T23:59:59Z'
+  title: Conference on Language Modeling
+  website: https://colmweb.org/cfp.html
 colm2025:
   conferenceEndDate: '2025-10-09'
   conferenceStartDate: '2025-10-07'

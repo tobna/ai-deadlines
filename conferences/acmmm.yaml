@@ -28,8 +28,8 @@ acmmm2025:
   rating: A*
   shortname: ACMMM 2025
   tags:
-  - CV
   - ML
+  - CV
   - HCI
   timeline:
   - abstractDeadline: '2025-04-05T11:59:59Z'

@@ -1,3 +1,45 @@
+iclr2022:
+  dataSrc: ccf-deadlines
+  h5Index: 304
+  id: iclr2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICLR 2022
+  tags: []
+  timeline:
+  - abstractDeadline: '2021-09-29T12:00:00Z'
+    deadline: '2021-10-21T12:00:00Z'
+    note: Mandatory abstract deadline on Sep 29, 2021.
+  title: International Conference on Learning Representations
+  website: https://iclr.cc/Conferences/2022
+iclr2023:
+  dataSrc: ccf-deadlines
+  h5Index: 304
+  id: iclr2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICLR 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2022-09-21T23:59:59Z'
+    deadline: '2022-09-28T23:59:59Z'
+    note: Mandatory abstract deadline on Sep. 11, 2022.
+  title: International Conference on Learning Representations
+  website: https://iclr.cc/Conferences/2023
+iclr2024:
+  dataSrc: ccf-deadlines
+  h5Index: 304
+  id: iclr2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICLR 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-09-21T23:59:59Z'
+    deadline: '2023-09-28T23:59:59Z'
+    note: Mandatory abstract deadline on Sep. 21, 2023.
+  title: International Conference on Learning Representations
+  website: https://iclr.cc/Conferences/2024
 iclr2025:
   conferenceEndDate: '2025-04-28'
   conferenceStartDate: '2025-04-24'
@@ -9,10 +51,10 @@ iclr2025:
   rating: A*
   shortname: ICLR 2025
   tags:
-  - ML
-  - CV
   - NLP
   - SP
+  - CV
+  - ML
   timeline:
   - abstractDeadline: '2024-09-28T11:59:59Z'
     deadline: '2024-10-02T11:59:59Z'
@@ -30,10 +72,10 @@ iclr2026:
   rating: A*
   shortname: ICLR 2026
   tags: &id001
-  - ML
-  - CV
   - NLP
   - SP
+  - ML
+  - CV
   timeline:
   - deadline: '2025-10-01T21:59:59Z'
   timezone: America/Los_Angeles

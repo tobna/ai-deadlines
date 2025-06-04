@@ -1,3 +1,27 @@
+aamas2023:
+  dataSrc: ccf-deadlines
+  id: aamas2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: AAMAS 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2022-10-21T00:00:00Z'
+    deadline: '2022-10-28T00:00:00Z'
+  title: International Conference on Autonomous Agents and Multiagent Systems
+  website: https://aamas2023.soton.ac.uk/
+aamas2024:
+  dataSrc: ccf-deadlines
+  id: aamas2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: AAMAS 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-10-02T23:59:59Z'
+    deadline: '2023-10-09T23:59:59Z'
+  title: International Conference on Autonomous Agents and Multiagent Systems
+  website: https://www.aamas2024-conference.auckland.ac.nz/
 aamas2025:
   conferenceEndDate: '2025-05-23'
   conferenceStartDate: '2025-05-19'

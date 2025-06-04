@@ -1,3 +1,16 @@
+cvpr2022:
+  dataSrc: ccf-deadlines
+  h5Index: 440
+  id: cvpr2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CVPR 2022
+  tags: []
+  timeline:
+  - abstractDeadline: '2021-11-09T23:59:00Z'
+    deadline: '2021-11-16T23:59:00Z'
+  title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  website: http://cvpr2022.thecvf.com/
 cvpr2023:
   conferenceEndDate: '2023-06-22'
   conferenceStartDate: '2023-06-20'
@@ -40,7 +53,7 @@ cvpr2025:
   location: Music City Center, Nashville, USA
   rating: A*
   shortname: CVPR 2025
-  tags:
+  tags: &id001
   - CV
   timeline:
   - abstractDeadline: '2024-11-08T07:59:00Z'
@@ -57,8 +70,7 @@ cvpr2026:
   isApproximateDeadline: true
   rating: A*
   shortname: CVPR 2026
-  tags: &id001
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-11-08T07:59:00Z'
     deadline: '2025-11-15T07:59:00Z'

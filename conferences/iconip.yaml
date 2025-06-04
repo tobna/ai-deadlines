@@ -1,0 +1,30 @@
+iconip2023:
+  dataSrc: ccf-deadlines
+  id: iconip2023
+  isApproximateDeadline: false
+  shortname: ICONIP 2023
+  tags: []
+  timeline:
+  - deadline: '2023-06-30T11:59:00Z'
+  title: International Conference on Neural Information Processing
+  website: http://iconip2023.org/
+iconip2024:
+  dataSrc: ccf-deadlines
+  id: iconip2024
+  isApproximateDeadline: false
+  shortname: ICONIP 2024
+  tags: []
+  timeline:
+  - deadline: '2024-07-22T23:59:59Z'
+  title: International Conference on Neural Information Processing
+  website: http://iconip2024.org/
+iconip2025:
+  dataSrc: ccf-deadlines
+  id: iconip2025
+  isApproximateDeadline: false
+  shortname: ICONIP 2025
+  tags: []
+  timeline:
+  - deadline: '2025-05-22T23:59:59Z'
+  title: International Conference on Neural Information Processing
+  website: https://iconip2025.apnns.org/

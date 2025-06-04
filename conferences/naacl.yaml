@@ -1,3 +1,27 @@
+naacl2022:
+  dataSrc: ccf-deadlines
+  id: naacl2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: NAACL 2022
+  tags: []
+  timeline:
+  - deadline: '2022-01-15T23:59:59Z'
+  title: The Annual Conference of the North American Chapter of the Association for
+    Computational Linguistics
+  website: https://2022.naacl.org/
+naacl2024:
+  dataSrc: ccf-deadlines
+  id: naacl2024
+  isApproximateDeadline: false
+  rating: A
+  shortname: NAACL 2024
+  tags: []
+  timeline:
+  - deadline: '2023-12-15T23:59:59Z'
+  title: The Annual Conference of the North American Chapter of the Association for
+    Computational Linguistics
+  website: https://2024.naacl.org/
 naacl2025:
   conferenceEndDate: '2025-05-04'
   conferenceStartDate: '2025-04-29'

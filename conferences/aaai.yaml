@@ -1,3 +1,42 @@
+aaai2022:
+  dataSrc: ccf-deadlines
+  h5Index: 220
+  id: aaai2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: AAAI 2022
+  tags: []
+  timeline:
+  - abstractDeadline: '2021-08-30T23:59:59Z'
+    deadline: '2021-09-08T23:59:59Z'
+  title: AAAI Conference on Artificial Intelligence
+  website: https://aaai.org/Conferences/AAAI-22/
+aaai2023:
+  dataSrc: ccf-deadlines
+  h5Index: 220
+  id: aaai2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: AAAI 2023
+  tags: []
+  timeline:
+  - abstractDeadline: '2022-08-08T23:59:59Z'
+    deadline: '2022-08-15T23:59:59Z'
+  title: AAAI Conference on Artificial Intelligence
+  website: https://www.aaai.org/Conferences/AAAI-23/
+aaai2024:
+  dataSrc: ccf-deadlines
+  h5Index: 220
+  id: aaai2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: AAAI 2024
+  tags: []
+  timeline:
+  - abstractDeadline: '2023-08-08T23:59:59Z'
+    deadline: '2023-08-15T23:59:59Z'
+  title: AAAI Conference on Artificial Intelligence
+  website: https://www.aaai.org/aaai-conference/
 aaai2025:
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-25'
@@ -9,10 +48,10 @@ aaai2025:
   rating: A*
   shortname: AAAI 2025
   tags:
-  - DM
-  - ML
   - NLP
+  - ML
   - CV
+  - DM
   timeline:
   - abstractDeadline: '2024-08-08T11:59:59Z'
     deadline: '2024-08-16T11:59:59Z'
@@ -29,11 +68,11 @@ aaai2026:
   location: Singapore EXPO, Singapore
   rating: A*
   shortname: AAAI 2026
-  tags:
-  - DM
-  - ML
+  tags: &id001
   - NLP
+  - ML
   - CV
+  - DM
   timeline:
   - abstractDeadline: '2025-07-26T11:59:59Z'
     deadline: '2025-08-02T11:59:59Z'
@@ -49,11 +88,7 @@ aaai2027:
   isApproximateDeadline: true
   rating: A*
   shortname: AAAI 2027
-  tags:
-  - DM
-  - ML
-  - NLP
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-07-26T11:59:59Z'
     deadline: '2026-08-02T11:59:59Z'

@@ -1,3 +1,25 @@
+ksem2023:
+  dataSrc: ccf-deadlines
+  id: ksem2023
+  isApproximateDeadline: false
+  rating: C
+  shortname: KSEM 2023
+  tags: []
+  timeline:
+  - deadline: '2023-04-28T23:59:00Z'
+  title: International Conference on Knowledge Science, Engineering and Management
+  website: https://www.ksem2023.conferences.academy/
+ksem2024:
+  dataSrc: ccf-deadlines
+  id: ksem2024
+  isApproximateDeadline: false
+  rating: C
+  shortname: KSEM 2024
+  tags: []
+  timeline:
+  - deadline: '2024-02-15T23:59:00Z'
+  title: International Conference on Knowledge Science, Engineering and Management
+  website: https://ai-edge.net/
 ksem2025:
   conferenceEndDate: '2025-08-06'
   conferenceStartDate: '2025-08-04'

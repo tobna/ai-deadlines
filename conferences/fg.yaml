@@ -1,0 +1,13 @@
+fg2025:
+  dataSrc: ccf-deadlines
+  id: fg2025
+  isApproximateDeadline: false
+  shortname: FG 2025
+  tags: []
+  timeline:
+  - deadline: '2024-09-30T23:59:59Z'
+    note: Round 1
+  - deadline: '2025-01-31T23:59:59Z'
+    note: Round 2
+  title: International Conference on Automatic Face and Gesture Recognition
+  website: https://fg2025.ieee-biometrics.org/

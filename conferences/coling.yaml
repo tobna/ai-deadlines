@@ -1,3 +1,29 @@
+coling2022:
+  dataSrc: ccf-deadlines
+  h5Index: 65
+  id: coling2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: COLING 2022
+  tags: []
+  timeline:
+  - deadline: '2022-05-17T23:59:00Z'
+    note: Papers Due
+  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  website: https://coling2022.org/
+coling2024:
+  dataSrc: ccf-deadlines
+  h5Index: 65
+  id: coling2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: COLING 2024
+  tags: []
+  timeline:
+  - deadline: '2023-10-21T23:59:59Z'
+    note: Long, short and position papers due
+  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  website: https://lrec-coling-2024.lrec-conf.org/
 coling2025:
   conferenceEndDate: '2025-01-24'
   conferenceStartDate: '2025-01-19'

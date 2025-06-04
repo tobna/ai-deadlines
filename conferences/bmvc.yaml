@@ -1,3 +1,27 @@
+bmvc2021:
+  dataSrc: ccf-deadlines
+  h5Index: 65
+  id: bmvc2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: BMVC 2021
+  tags: []
+  timeline:
+  - deadline: '2021-06-25T23:59:59Z'
+  title: British Machine Vision Conference
+  website: https://britishmachinevisionassociation.github.io/bmvc
+bmvc2023:
+  dataSrc: ccf-deadlines
+  h5Index: 65
+  id: bmvc2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: BMVC 2023
+  tags: []
+  timeline:
+  - deadline: '2023-05-12T23:59:59Z'
+  title: British Machine Vision Conference
+  website: https://www.bmvc2023.org/
 bmvc2024:
   conferenceEndDate: '2024-11-28'
   conferenceStartDate: '2024-11-25'
