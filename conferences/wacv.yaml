@@ -6,12 +6,12 @@ wacv2021:
   rating: A
   shortname: WACV 2021
   tags:
-    - CV
+  - CV
   timeline:
-    - deadline: "2020-06-25T07:59:00Z"
-      note: Round 1
-    - deadline: "2020-09-30T07:59:00Z"
-      note: Round 2
+  - deadline: '2020-06-25T07:59:00Z'
+    note: Round 1
+  - deadline: '2020-09-30T07:59:00Z'
+    note: Round 2
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2021.thecvf.com
 wacv2023:
@@ -22,12 +22,12 @@ wacv2023:
   rating: A
   shortname: WACV 2023
   tags:
-    - CV
+  - CV
   timeline:
-    - deadline: "2022-07-13T19:59:00Z"
-      note: Round 1
-    - deadline: "2022-08-29T19:59:00Z"
-      note: Round 2
+  - deadline: '2022-07-13T19:59:00Z'
+    note: Round 1
+  - deadline: '2022-08-29T19:59:00Z'
+    note: Round 2
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2023.thecvf.com
 wacv2024:
@@ -38,17 +38,17 @@ wacv2024:
   rating: A
   shortname: WACV 2024
   tags:
-    - CV
+  - CV
   timeline:
-    - deadline: "2023-06-28T19:59:00Z"
-      note: Round 1
-    - deadline: "2023-08-30T19:59:00Z"
-      note: Round 2
+  - deadline: '2023-06-28T19:59:00Z'
+    note: Round 1
+  - deadline: '2023-08-30T19:59:00Z'
+    note: Round 2
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2024.thecvf.com
 wacv2025:
-  conferenceEndDate: "2025-03-04"
-  conferenceStartDate: "2025-02-28"
+  conferenceEndDate: '2025-03-04'
+  conferenceStartDate: '2025-02-28'
   dataSrc: hf-repo
   h5Index: 109
   id: wacv2025
@@ -57,17 +57,17 @@ wacv2025:
   rating: A
   shortname: WACV 2025
   tags:
-    - ML
-    - CV
+  - CV
+  - ML
   timeline:
-    - deadline: "2024-07-16T06:59:59Z"
-      note: Round 1
+  - deadline: '2024-07-16T06:59:59Z'
+    note: Round 1
   timezone: UTC-7
   title: IEEE/CVF Winter Conference on Applications of Computer Vision
   website: https://wacv2025.thecvf.com/
 wacv2026:
-  conferenceEndDate: "2026-03-10"
-  conferenceStartDate: "2026-03-06"
+  conferenceEndDate: '2026-03-10'
+  conferenceStartDate: '2026-03-06'
   dataSrc: off-website
   h5Index: 109
   id: wacv2026
@@ -76,20 +76,20 @@ wacv2026:
   rating: A
   shortname: WACV 2026
   tags:
-    - CV
+  - CV
   timeline:
-    - abstractDeadline: "2025-07-11T12:00:00Z"
-      deadline: "2025-07-18T12:00:00Z"
-      note: Round 1
-    - abstractDeadline: "2025-09-12T12:00:00Z"
-      deadline: "2025-09-19T12:00:00Z"
-      note: Round 2
+  - abstractDeadline: '2025-07-11T12:00:00Z'
+    deadline: '2025-07-18T12:00:00Z'
+    note: Round 1
+  - abstractDeadline: '2025-09-12T12:00:00Z'
+    deadline: '2025-09-19T12:00:00Z'
+    note: Round 2
   timezone: UTC-7
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2026/
 wacv2027:
-  conferenceEndDate: "2027-03-11"
-  conferenceStartDate: "2027-03-06"
+  conferenceEndDate: '2027-03-11'
+  conferenceStartDate: '2027-03-06'
   dataSrc: estimate
   h5Index: 109
   id: wacv2027
@@ -97,12 +97,12 @@ wacv2027:
   rating: A
   shortname: WACV 2027
   tags:
-    - CV
+  - CV
   timeline:
-    - abstractDeadline: "2026-07-11T12:00:00Z"
-      deadline: "2026-07-18T12:00:00Z"
-      note: "From WACV 2026: Round 1"
-    - abstractDeadline: "2026-09-12T12:00:00Z"
-      deadline: "2026-09-19T12:00:00Z"
-      note: "From WACV 2026: Round 2"
+  - abstractDeadline: '2026-07-11T12:00:00Z'
+    deadline: '2026-07-18T12:00:00Z'
+    note: 'From WACV 2026: Round 1'
+  - abstractDeadline: '2026-09-12T12:00:00Z'
+    deadline: '2026-09-19T12:00:00Z'
+    note: 'From WACV 2026: Round 2'
   title: Winter Conference on Applications of Computer Vision

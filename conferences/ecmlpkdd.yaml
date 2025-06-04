@@ -6,8 +6,8 @@ ecmlpkdd2025:
   isApproximateDeadline: false
   shortname: ECMLPKDD 2025
   tags:
-  - ML
   - DM
+  - ML
   timeline:
   - abstractDeadline: '2025-03-08T11:59:59Z'
     deadline: '2025-03-15T11:59:59Z'
