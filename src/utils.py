@@ -96,3 +96,14 @@ def join_conferences(master, slave):
             val = sorted(list(all_tags))
         out[key] = val
     return out
+
+
+def unite_tags(conf_group):
+    tags = set()
+    for conf in conf_group.values():
+        if "tags" in conf:
+            tags = tags.union(conf["tags"])
+    tags = sorted(list(tags))
+    for conf in conf_group.values():
+        conf["tags"] = tags
+    return conf_group

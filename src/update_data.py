@@ -1,25 +1,24 @@
 import argparse
 import datetime
 import os
-import re
 import sys
 
 import dateparser
-import pytz
 import yaml
 
 this_folder = os.path.dirname(__file__)
 sys.path.append(this_folder)
 sys.path.append(os.path.join(this_folder, "parser"))
 
+from ccf_deadlines import get_ccf_list
 from common_website import PARSER
 from hf_list import get_hf_list
 from ninoduarte_list import get_nino_list
 from see_future import estimate_future_conferences
 from wacv import parse_wacv
-from ranking import make_core_rank_function, make_conf_rank_function
-from ccf_deadlines import get_ccf_list
-from utils import parse_all_times, join_conferences
+
+from ranking import make_conf_rank_function, make_core_rank_function
+from utils import join_conferences, parse_all_times, unite_tags
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ccf-deadlines", "ninoduarte-git", "hf-repo", "off-website", "manual"]
@@ -209,6 +208,7 @@ for group, conferences in conf_groups.items():
     conferences = {**future_conferences, **conferences}
     conferences = {key: add_conf_rank(conf) for key, conf in conferences.items()}
     conferences = {key: add_core_rank(conf) for key, conf in conferences.items()}
+    conferences = unite_tags(conferences)
     if args.write:
         with open(os.path.join(conference_folder, f"{group}.yaml"), "w") as f:
             yaml.safe_dump(conferences, f)
