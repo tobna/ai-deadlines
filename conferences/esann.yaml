@@ -1,16 +1,18 @@
 esann2025:
-  conferenceEndDate: '2025-04-25'
-  conferenceStartDate: '2025-04-23'
+  conferenceEndDate: "2025-04-25"
+  conferenceStartDate: "2025-04-23"
   dataSrc: hf-repo
   id: esann2025
   isApproximateDeadline: false
   rating: B
   shortname: ESANN 2025
-  tags: []
+  tags:
+    - ML
   timeline:
-  - abstractDeadline: '2024-11-20T08:00:00Z'
-    deadline: '2024-11-20T08:00:00Z'
+    - abstractDeadline: "2024-11-20T08:00:00Z"
+      deadline: "2024-11-20T08:00:00Z"
   timezone: UTC-8
-  title: European Symposium on Artificial Neural Networks, Computational Intelligence
+  title:
+    European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/
