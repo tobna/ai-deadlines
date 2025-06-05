@@ -51,9 +51,9 @@ iclr2025:
   rating: A*
   shortname: ICLR 2025
   tags:
+  - NLP
   - SP
   - CV
-  - NLP
   - ML
   timeline:
   - abstractDeadline: '2024-09-28T11:59:59Z'
@@ -72,10 +72,10 @@ iclr2026:
   rating: A*
   shortname: ICLR 2026
   tags:
-  - NLP
-  - ML
-  - CV
   - SP
+  - NLP
+  - CV
+  - ML
   timeline:
   - deadline: '2025-10-01T21:59:59Z'
   timezone: America/Los_Angeles
