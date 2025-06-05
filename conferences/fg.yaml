@@ -2,6 +2,7 @@ fg2025:
   dataSrc: ccf-deadlines
   id: fg2025
   isApproximateDeadline: false
+  rating: B
   shortname: FG 2025
   tags:
   - CV

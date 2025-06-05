@@ -2,6 +2,7 @@ iconip2023:
   dataSrc: ccf-deadlines
   id: iconip2023
   isApproximateDeadline: false
+  rating: B
   shortname: ICONIP 2023
   tags: &id001 []
   timeline:
@@ -12,6 +13,7 @@ iconip2024:
   dataSrc: ccf-deadlines
   id: iconip2024
   isApproximateDeadline: false
+  rating: B
   shortname: ICONIP 2024
   tags: *id001
   timeline:
@@ -22,6 +24,7 @@ iconip2025:
   dataSrc: ccf-deadlines
   id: iconip2025
   isApproximateDeadline: false
+  rating: B
   shortname: ICONIP 2025
   tags: *id001
   timeline:

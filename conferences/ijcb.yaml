@@ -2,6 +2,7 @@ ijcb2025:
   dataSrc: ccf-deadlines
   id: ijcb2025
   isApproximateDeadline: false
+  rating: B
   shortname: IJCB 2025
   tags:
   - HCI

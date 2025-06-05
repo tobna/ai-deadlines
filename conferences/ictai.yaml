@@ -2,6 +2,7 @@ ictai2021:
   dataSrc: ccf-deadlines
   id: ictai2021
   isApproximateDeadline: false
+  rating: B
   shortname: ICTAI 2021
   tags:
   - ML

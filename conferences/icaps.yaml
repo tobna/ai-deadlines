@@ -2,6 +2,7 @@ icaps2025:
   dataSrc: ccf-deadlines
   id: icaps2025
   isApproximateDeadline: false
+  rating: A*
   shortname: ICAPS 2025
   tags:
   - RO

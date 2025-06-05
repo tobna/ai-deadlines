@@ -2,6 +2,7 @@ pricai2024:
   dataSrc: ccf-deadlines
   id: pricai2024
   isApproximateDeadline: false
+  rating: B
   shortname: PRICAI 2024
   tags: &id001 []
   timeline:
@@ -12,6 +13,7 @@ pricai2025:
   dataSrc: ccf-deadlines
   id: pricai2025
   isApproximateDeadline: false
+  rating: B
   shortname: PRICAI 2025
   tags: *id001
   timeline:

@@ -2,6 +2,7 @@ gecco2025:
   dataSrc: ccf-deadlines
   id: gecco2025
   isApproximateDeadline: false
+  rating: A
   shortname: GECCO 2025
   tags: []
   timeline:

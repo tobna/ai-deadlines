@@ -2,6 +2,7 @@ kr2023:
   dataSrc: ccf-deadlines
   id: kr2023
   isApproximateDeadline: false
+  rating: A*
   shortname: KR 2023
   tags: &id001 []
   timeline:
@@ -13,6 +14,7 @@ kr2024:
   dataSrc: ccf-deadlines
   id: kr2024
   isApproximateDeadline: false
+  rating: A*
   shortname: KR 2024
   tags: *id001
   timeline:
@@ -24,6 +26,7 @@ kr2025:
   dataSrc: ccf-deadlines
   id: kr2025
   isApproximateDeadline: false
+  rating: A*
   shortname: KR 2025
   tags: *id001
   timeline:
