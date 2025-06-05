@@ -5,7 +5,9 @@ icra2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ICRA 2022
-  tags: []
+  tags: &id001
+  - ML
+  - RO
   timeline:
   - deadline: '2021-09-15T02:59:00Z'
   title: IEEE International Conference on Robotics and Automation
@@ -17,7 +19,7 @@ icra2023:
   isApproximateDeadline: false
   rating: A*
   shortname: ICRA 2023
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2022-09-15T23:59:59Z'
   title: IEEE International Conference on Robotics and Automation
@@ -29,7 +31,7 @@ icra2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ICRA 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2023-09-15T23:59:00Z'
   title: IEEE International Conference on Robotics and Automation
@@ -44,9 +46,7 @@ icra2025:
   location: Georgia World Congress Center, Atlanta, USA
   rating: A*
   shortname: ICRA 2025
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2024-07-15T16:00:00Z'
   timezone: UTC-4
@@ -62,9 +62,7 @@ icra2026:
   location: Vienna, Austria
   rating: A*
   shortname: ICRA 2026
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2025-09-15T21:59:59Z'
   timezone: America/Los_Angeles
@@ -79,9 +77,7 @@ icra2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICRA 2027
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2025-07-15T16:00:00Z'
   title: IEEE International Conference on Robotics and Automation

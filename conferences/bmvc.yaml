@@ -5,7 +5,8 @@ bmvc2021:
   isApproximateDeadline: false
   rating: A
   shortname: BMVC 2021
-  tags: []
+  tags: &id001
+  - CV
   timeline:
   - deadline: '2021-06-25T23:59:59Z'
   title: British Machine Vision Conference
@@ -17,7 +18,7 @@ bmvc2023:
   isApproximateDeadline: false
   rating: A
   shortname: BMVC 2023
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2023-05-12T23:59:59Z'
   title: British Machine Vision Conference
@@ -32,8 +33,7 @@ bmvc2024:
   location: Glasgow, UK
   rating: A
   shortname: BMVC 2024
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-04-26T23:59:00Z'
     deadline: '2024-05-10T23:59:00Z'
@@ -50,8 +50,7 @@ bmvc2025:
   location: Sheffield, UK
   rating: A
   shortname: BMVC 2025
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2025-05-16T21:59:59Z'
   timezone: Europe/London
@@ -66,8 +65,7 @@ bmvc2026:
   isApproximateDeadline: true
   rating: A
   shortname: BMVC 2026
-  tags: &id001
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2026-05-16T21:59:59Z'
   title: British Machine Vision Conference

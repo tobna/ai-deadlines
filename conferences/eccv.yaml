@@ -5,7 +5,8 @@ eccv2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ECCV 2022
-  tags: []
+  tags: &id001
+  - CV
   timeline:
   - deadline: '2022-03-07T11:59:00Z'
   title: European Conference on Computer Vision
@@ -19,8 +20,7 @@ eccv2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ECCV 2024
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-02-29T21:00:00Z'
     deadline: '2024-03-07T21:00:00Z'
@@ -36,8 +36,7 @@ eccv2026:
   location: Milano, Italy
   rating: A*
   shortname: ECCV 2026
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2026-03-06T11:00:00Z'
   timezone: UTC+0

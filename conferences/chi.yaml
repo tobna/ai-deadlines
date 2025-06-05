@@ -4,7 +4,8 @@ chi2024:
   isApproximateDeadline: false
   rating: A*
   shortname: CHI 2024
-  tags: []
+  tags: &id001
+  - HCI
   timeline:
   - abstractDeadline: '2023-09-07T23:59:59Z'
     deadline: '2023-09-14T23:59:59Z'
@@ -19,8 +20,7 @@ chi2025:
   location: Pacifico Yokohama Conference Center, Yokohama, Japan
   rating: A*
   shortname: CHI 2025
-  tags:
-  - HCI
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-09-06T11:59:59Z'
     deadline: '2024-09-13T11:59:59Z'
@@ -33,7 +33,7 @@ chi2026:
   isApproximateDeadline: false
   rating: A*
   shortname: CHI 2026
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-09-04T23:59:59Z'
     deadline: '2025-09-11T23:59:59Z'

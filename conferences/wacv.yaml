@@ -5,8 +5,9 @@ wacv2021:
   isApproximateDeadline: false
   rating: A
   shortname: WACV 2021
-  tags:
+  tags: &id001
   - CV
+  - ML
   timeline:
   - deadline: '2020-06-25T07:59:00Z'
     note: Round 1
@@ -21,8 +22,7 @@ wacv2023:
   isApproximateDeadline: false
   rating: A
   shortname: WACV 2023
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2022-07-13T19:59:00Z'
     note: Round 1
@@ -37,8 +37,7 @@ wacv2024:
   isApproximateDeadline: false
   rating: A
   shortname: WACV 2024
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2023-06-28T19:59:00Z'
     note: Round 1
@@ -56,9 +55,7 @@ wacv2025:
   location: JW Marriott Starpass in Tucson, Arizona, USA
   rating: A
   shortname: WACV 2025
-  tags:
-  - ML
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2024-07-16T06:59:59Z'
     note: Round 1
@@ -75,8 +72,7 @@ wacv2026:
   location: JW Marriott Starpass in Tucson, Arizona, USA
   rating: A
   shortname: WACV 2026
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-07-11T12:00:00Z'
     deadline: '2025-07-18T12:00:00Z'
@@ -96,8 +92,7 @@ wacv2027:
   isApproximateDeadline: true
   rating: A
   shortname: WACV 2027
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-07-11T12:00:00Z'
     deadline: '2026-07-18T12:00:00Z'

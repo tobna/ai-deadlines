@@ -5,7 +5,8 @@ icip2023:
   isApproximateDeadline: false
   rating: B
   shortname: ICIP 2023
-  tags: []
+  tags: &id001
+  - CV
   timeline:
   - deadline: '2023-02-15T23:59:59Z'
   title: The IEEE International Conference on Image Processing
@@ -20,8 +21,7 @@ icip2024:
   location: Abu Dhabi, UAE
   rating: B
   shortname: ICIP 2024
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2024-02-06T23:00:00Z'
   title: International Conference on Image Processing
@@ -36,8 +36,7 @@ icip2025:
   location: Anchorage, Alaska
   rating: B
   shortname: ICIP 2025
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2025-02-04T23:00:00Z'
   title: International Conference on Image Processing
@@ -51,8 +50,7 @@ icip2026:
   isApproximateDeadline: true
   rating: B
   shortname: ICIP 2026
-  tags: &id001
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2026-02-04T23:00:00Z'
   title: International Conference on Image Processing

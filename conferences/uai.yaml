@@ -4,7 +4,8 @@ uai2021:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2021
-  tags: []
+  tags: &id001
+  - ML
   timeline:
   - deadline: '2021-02-19T23:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
@@ -15,7 +16,7 @@ uai2023:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2023
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2023-02-17T23:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
@@ -26,7 +27,7 @@ uai2024:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-02-09T23:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
@@ -39,8 +40,7 @@ uai2025:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2025
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2025-02-11T11:59:59Z'
   timezone: AoE

@@ -5,9 +5,9 @@ ijcnlp2025:
   isApproximateDeadline: false
   shortname: IJCNLP 2025
   tags:
-    - NLP
+  - NLP
   timeline:
-    - deadline: "2025-07-28T23:59:59Z"
-      note: ACL Rolling Review
+  - deadline: '2025-07-28T23:59:59Z'
+    note: ACL Rolling Review
   title: International Joint Conference on Natural Language Processing
   website: https://www.afnlp.org/conferences/ijcnlp2025/

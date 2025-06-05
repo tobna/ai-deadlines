@@ -4,7 +4,8 @@ threedv2024:
   id: threedv2024
   isApproximateDeadline: false
   shortname: 3DV 2024
-  tags: []
+  tags: &id001
+  - CV
   timeline:
   - deadline: '2023-08-07T23:59:59Z'
   title: International Conference on 3D Vision
@@ -15,7 +16,7 @@ threedv2025:
   id: threedv2025
   isApproximateDeadline: false
   shortname: 3DV 2025
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-08-12T23:59:59Z'
   title: International Conference on 3D Vision
@@ -29,8 +30,7 @@ threedv2026:
   isApproximateDeadline: false
   location: Vancouver, Canada
   shortname: 3DV 2026
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2025-07-12T21:59:59Z'
   timezone: America/Los_Angeles

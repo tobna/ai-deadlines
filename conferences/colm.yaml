@@ -3,7 +3,8 @@ colm2024:
   id: colm2024
   isApproximateDeadline: false
   shortname: COLM 2024
-  tags: []
+  tags: &id001
+  - NLP
   timeline:
   - abstractDeadline: '2024-03-22T23:59:59Z'
     deadline: '2024-03-29T23:59:59Z'
@@ -17,8 +18,7 @@ colm2025:
   isApproximateDeadline: false
   location: "Palais des Congr\xE8s Montreal, Canada"
   shortname: COLM 2025
-  tags:
-  - NLP
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-03-21T11:59:59Z'
     deadline: '2025-03-28T11:59:59Z'

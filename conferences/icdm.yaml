@@ -5,7 +5,8 @@ icdm2021:
   isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2021
-  tags: []
+  tags: &id001
+  - DM
   timeline:
   - deadline: '2021-06-12T14:59:00Z'
   title: IEEE International Conference on Data Mining
@@ -17,7 +18,7 @@ icdm2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2022
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2022-06-10T23:59:00Z'
   title: IEEE International Conference on Data Mining
@@ -29,7 +30,7 @@ icdm2023:
   isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2023
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2023-07-01T23:59:59Z'
   title: IEEE International Conference on Data Mining
@@ -41,7 +42,7 @@ icdm2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-06-14T23:59:59Z'
   title: IEEE International Conference on Data Mining
@@ -55,8 +56,7 @@ icdm2025:
   isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2025
-  tags:
-  - DM
+  tags: *id001
   timeline:
   - deadline: '2025-06-07T11:59:59Z'
   timezone: AoE

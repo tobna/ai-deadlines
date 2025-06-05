@@ -3,7 +3,9 @@ rss2023:
   id: rss2023
   isApproximateDeadline: false
   shortname: RSS 2023
-  tags: []
+  tags: &id001
+  - ML
+  - RO
   timeline:
   - deadline: '2023-02-03T23:59:59Z'
   title: Robotics Science and Systems
@@ -13,7 +15,7 @@ rss2024:
   id: rss2024
   isApproximateDeadline: false
   shortname: RSS 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-02-02T23:59:00Z'
   title: Robotics Science and Systems
@@ -27,9 +29,7 @@ rss2025:
   location: Los Angeles, California
   rating: TBR
   shortname: RSS 2025
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-01-18T11:59:00Z'
     deadline: '2025-01-25T11:59:00Z'

@@ -5,7 +5,8 @@ iros2023:
   isApproximateDeadline: false
   rating: A
   shortname: IROS 2023
-  tags: []
+  tags: &id001
+  - RO
   timeline:
   - deadline: '2023-03-01T23:59:59Z'
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
@@ -17,7 +18,7 @@ iros2024:
   isApproximateDeadline: false
   rating: A
   shortname: IROS 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-03-15T23:59:59Z'
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
@@ -32,8 +33,7 @@ iros2025:
   location: Hangzhou, China
   rating: A
   shortname: IROS 2025
-  tags:
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2025-03-02T07:59:59Z'
   timezone: UTC-8

@@ -4,7 +4,8 @@ ijcnn2024:
   isApproximateDeadline: false
   rating: B
   shortname: IJCNN 2024
-  tags: []
+  tags: &id001
+  - ML
   timeline:
   - deadline: '2024-01-29T23:59:59Z'
   title: International Joint Conference on Neural Networks
@@ -17,8 +18,7 @@ ijcnn2025:
   isApproximateDeadline: false
   rating: B
   shortname: IJCNN 2025
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2025-02-06T11:59:59Z'
   timezone: UTC-12
@@ -30,7 +30,7 @@ ijcnn2026:
   isApproximateDeadline: false
   rating: B
   shortname: IJCNN 2026
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-01-31T23:59:59Z'
   title: International Joint Conference on Neural Networks

@@ -4,7 +4,8 @@ alt2024:
   isApproximateDeadline: false
   rating: B
   shortname: ALT 2024
-  tags: []
+  tags: &id001
+  - ML
   timeline:
   - abstractDeadline: '2023-09-26T23:59:59Z'
     deadline: '2023-09-26T23:59:59Z'
@@ -19,8 +20,7 @@ alt2025:
   location: Politecnico di Milano, Milan, Italy
   rating: B
   shortname: ALT 2025
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2024-10-01T09:59:59Z'
   timezone: UTC+0

@@ -7,7 +7,7 @@ neurips2009:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2009
-  tags:
+  tags: &id001
   - ML
   timeline:
   - deadline: '2009-06-05T23:59:00Z'
@@ -22,8 +22,7 @@ neurips2010:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2010
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2010-06-03T23:59:00Z'
   title: Neural Information Processing Systems
@@ -37,8 +36,7 @@ neurips2011:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2011
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2011-06-02T23:59:00Z'
   title: Neural Information Processing Systems
@@ -52,8 +50,7 @@ neurips2012:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2012
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2012-06-01T23:00:00Z'
   title: Neural Information Processing Systems
@@ -67,8 +64,7 @@ neurips2013:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2013
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2013-09-17T06:59:00Z'
     deadline: '2013-05-31T23:00:00Z'
@@ -83,8 +79,7 @@ neurips2014:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2014
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2014-06-06T23:00:00Z'
   title: Neural Information Processing Systems
@@ -98,8 +93,7 @@ neurips2015:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2015
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2015-06-05T23:00:00Z'
   title: Neural Information Processing Systems
@@ -113,8 +107,7 @@ neurips2016:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2016
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2016-05-20T16:00:00Z'
   title: Neural Information Processing Systems
@@ -128,8 +121,7 @@ neurips2017:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2017
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2017-05-19T20:00:00Z'
   title: Neural Information Processing Systems
@@ -143,8 +135,7 @@ neurips2018:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2018
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2018-05-18T20:00:00Z'
   title: Neural Information Processing Systems
@@ -158,8 +149,7 @@ neurips2019:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2019
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2019-05-16T20:00:00Z'
     deadline: '2019-09-14T10:59:00Z'
@@ -174,8 +164,7 @@ neurips2020:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2020
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2020-05-27T20:00:00Z'
     deadline: '2020-06-11T20:00:00Z'
@@ -190,8 +179,7 @@ neurips2021:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2021
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2021-05-28T20:00:00Z'
     deadline: '2021-10-26T20:00:00Z'
@@ -206,8 +194,7 @@ neurips2022:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2022
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2022-05-16T20:00:00Z'
     deadline: '2022-05-26T20:00:00Z'
@@ -222,8 +209,7 @@ neurips2023:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2023
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-05-11T20:00:00Z'
     deadline: '2023-05-24T20:00:00Z'
@@ -238,8 +224,7 @@ neurips2024:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2024
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-05-15T20:00:00Z'
     deadline: '2024-05-22T20:00:00Z'
@@ -255,8 +240,7 @@ neurips2025:
   location: San Diego Convention Center, San Diego, USA
   rating: A*
   shortname: NeurIPS 2025
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-05-11T12:00:00Z'
     deadline: '2025-05-22T12:00:00Z'
@@ -272,8 +256,7 @@ neurips2026:
   isApproximateDeadline: true
   rating: A*
   shortname: NeurIPS 2026
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-05-11T12:00:00Z'
     deadline: '2026-05-22T12:00:00Z'

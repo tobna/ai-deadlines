@@ -8,10 +8,10 @@ acmmm2024:
   location: Melbourne, Australia
   rating: A*
   shortname: ACMMM 2024
-  tags:
+  tags: &id001
   - CV
-  - ML
   - HCI
+  - ML
   timeline:
   - abstractDeadline: '2024-04-09T11:59:00Z'
     deadline: '2024-04-13T11:59:00Z'
@@ -27,10 +27,7 @@ acmmm2025:
   location: Dublin Royal Convention Center, Dublin, Ireland
   rating: A*
   shortname: ACMMM 2025
-  tags:
-  - ML
-  - HCI
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-04-05T11:59:59Z'
     deadline: '2025-04-12T11:59:59Z'
@@ -46,10 +43,7 @@ acmmm2026:
   isApproximateDeadline: true
   rating: A*
   shortname: ACMMM 2026
-  tags: &id001
-  - CV
-  - ML
-  - HCI
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-04-05T11:59:59Z'
     deadline: '2026-04-12T11:59:59Z'

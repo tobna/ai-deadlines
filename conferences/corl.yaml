@@ -4,7 +4,9 @@ corl2024:
   id: corl2024
   isApproximateDeadline: false
   shortname: CoRL 2024
-  tags: []
+  tags: &id001
+  - ML
+  - RO
   timeline:
   - deadline: '2024-06-06T23:59:59Z'
   title: The Conference on Robot Learning
@@ -19,9 +21,7 @@ corl2025:
   location: COEX Convention & Exhibition Center, Seoul, South Korea
   rating: Unranked
   shortname: CoRL 2025
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2025-05-01T11:59:59Z'
   timezone: AoE

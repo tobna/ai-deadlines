@@ -5,7 +5,11 @@ iclr2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ICLR 2022
-  tags: []
+  tags: &id001
+  - CV
+  - ML
+  - NLP
+  - SP
   timeline:
   - abstractDeadline: '2021-09-29T12:00:00Z'
     deadline: '2021-10-21T12:00:00Z'
@@ -19,7 +23,7 @@ iclr2023:
   isApproximateDeadline: false
   rating: A*
   shortname: ICLR 2023
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2022-09-21T23:59:59Z'
     deadline: '2022-09-28T23:59:59Z'
@@ -33,7 +37,7 @@ iclr2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ICLR 2024
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-09-21T23:59:59Z'
     deadline: '2023-09-28T23:59:59Z'
@@ -50,11 +54,7 @@ iclr2025:
   location: Singapore EXPO - 1 Expo Drive, Singapore
   rating: A*
   shortname: ICLR 2025
-  tags:
-  - ML
-  - CV
-  - NLP
-  - SP
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-09-28T11:59:59Z'
     deadline: '2024-10-02T11:59:59Z'
@@ -71,11 +71,7 @@ iclr2026:
   location: NA, NA
   rating: A*
   shortname: ICLR 2026
-  tags:
-  - ML
-  - CV
-  - NLP
-  - SP
+  tags: *id001
   timeline:
   - deadline: '2025-10-01T21:59:59Z'
   timezone: America/Los_Angeles
@@ -90,11 +86,7 @@ iclr2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICLR 2027
-  tags:
-  - NLP
-  - SP
-  - ML
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2026-10-01T21:59:59Z'
   title: International Conference on Learning Representations

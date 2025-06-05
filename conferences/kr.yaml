@@ -3,7 +3,7 @@ kr2023:
   id: kr2023
   isApproximateDeadline: false
   shortname: KR 2023
-  tags: []
+  tags: &id001 []
   timeline:
   - abstractDeadline: '2023-03-03T00:00:00Z'
     deadline: '2023-03-14T00:00:00Z'
@@ -14,7 +14,7 @@ kr2024:
   id: kr2024
   isApproximateDeadline: false
   shortname: KR 2024
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-04-24T23:59:59Z'
     deadline: '2024-05-01T23:59:59Z'
@@ -25,7 +25,7 @@ kr2025:
   id: kr2025
   isApproximateDeadline: false
   shortname: KR 2025
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-05-07T23:59:59Z'
     deadline: '2025-05-12T23:59:59Z'

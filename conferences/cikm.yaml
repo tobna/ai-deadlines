@@ -4,7 +4,9 @@ cikm2020:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2020
-  tags: []
+  tags: &id001
+  - DM
+  - ML
   timeline:
   - deadline: '2020-05-01T23:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
@@ -15,7 +17,7 @@ cikm2021:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2021
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2021-05-26T23:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
@@ -26,7 +28,7 @@ cikm2022:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2022
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2022-05-12T23:59:59Z'
     deadline: '2022-05-19T23:59:59Z'
@@ -38,7 +40,7 @@ cikm2023:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2023
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-05-26T23:59:59Z'
     deadline: '2023-06-02T23:59:59Z'
@@ -50,7 +52,7 @@ cikm2024:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2024
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-05-13T23:59:59Z'
     deadline: '2024-05-20T23:59:59Z'
@@ -65,9 +67,7 @@ cikm2025:
   location: COEX, Seoul, South Korea
   rating: A
   shortname: CIKM 2025
-  tags:
-  - ML
-  - DM
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-05-17T11:59:00Z'
     deadline: '2025-05-24T11:59:00Z'

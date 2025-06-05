@@ -3,7 +3,7 @@ acml2021:
   id: acml2021
   isApproximateDeadline: false
   shortname: ACML 2021
-  tags: []
+  tags: &id001 []
   timeline:
   - deadline: '2021-06-25T23:59:59Z'
   title: Asian Conference on Machine Learning
@@ -13,7 +13,7 @@ acml2023:
   id: acml2023
   isApproximateDeadline: false
   shortname: ACML 2023
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2023-06-23T23:59:59Z'
   title: Asian Conference on Machine Learning
@@ -23,7 +23,7 @@ acml2024:
   id: acml2024
   isApproximateDeadline: false
   shortname: ACML 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-07-03T23:59:59Z'
   title: Asian Conference on Machine Learning
@@ -33,7 +33,7 @@ acml2025:
   id: acml2025
   isApproximateDeadline: false
   shortname: ACML 2025
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2025-05-30T23:59:59Z'
     note: Journal Track

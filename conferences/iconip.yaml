@@ -3,7 +3,7 @@ iconip2023:
   id: iconip2023
   isApproximateDeadline: false
   shortname: ICONIP 2023
-  tags: []
+  tags: &id001 []
   timeline:
   - deadline: '2023-06-30T11:59:00Z'
   title: International Conference on Neural Information Processing
@@ -13,7 +13,7 @@ iconip2024:
   id: iconip2024
   isApproximateDeadline: false
   shortname: ICONIP 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-07-22T23:59:59Z'
   title: International Conference on Neural Information Processing
@@ -23,7 +23,7 @@ iconip2025:
   id: iconip2025
   isApproximateDeadline: false
   shortname: ICONIP 2025
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2025-05-22T23:59:59Z'
   title: International Conference on Neural Information Processing

@@ -4,7 +4,8 @@ ksem2023:
   isApproximateDeadline: false
   rating: C
   shortname: KSEM 2023
-  tags: []
+  tags: &id001
+  - ML
   timeline:
   - deadline: '2023-04-28T23:59:00Z'
   title: International Conference on Knowledge Science, Engineering and Management
@@ -15,7 +16,7 @@ ksem2024:
   isApproximateDeadline: false
   rating: C
   shortname: KSEM 2024
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2024-02-15T23:59:00Z'
   title: International Conference on Knowledge Science, Engineering and Management
@@ -28,8 +29,7 @@ ksem2025:
   isApproximateDeadline: false
   rating: C
   shortname: KSEM 2025
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2025-03-20T23:59:59Z'
   timezone: UTC+0

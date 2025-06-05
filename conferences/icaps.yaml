@@ -4,9 +4,9 @@ icaps2025:
   isApproximateDeadline: false
   shortname: ICAPS 2025
   tags:
-    - RO
+  - RO
   timeline:
-    - abstractDeadline: "2024-10-25T23:59:59Z"
-      deadline: "2024-11-01T23:59:59Z"
+  - abstractDeadline: '2024-10-25T23:59:59Z'
+    deadline: '2024-11-01T23:59:59Z'
   title: International Conference on Automated Planning and Scheduling
   website: https://icaps25.icaps-conference.org/

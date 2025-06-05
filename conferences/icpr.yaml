@@ -5,7 +5,8 @@ icpr2024:
   isApproximateDeadline: false
   rating: B
   shortname: ICPR 2024
-  tags: []
+  tags: &id001
+  - ML
   timeline:
   - deadline: '2024-04-10T23:59:59Z'
   title: International Conference on Pattern Recognition
@@ -20,8 +21,7 @@ icpr2026:
   location: Lyon, France
   rating: B
   shortname: ICPR 2026
-  tags:
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2025-12-01T22:59:59Z'
   timezone: America/Los_Angeles

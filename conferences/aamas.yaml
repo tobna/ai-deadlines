@@ -4,7 +4,9 @@ aamas2023:
   isApproximateDeadline: false
   rating: A*
   shortname: AAMAS 2023
-  tags: []
+  tags: &id001
+  - ML
+  - RO
   timeline:
   - abstractDeadline: '2022-10-21T00:00:00Z'
     deadline: '2022-10-28T00:00:00Z'
@@ -16,7 +18,7 @@ aamas2024:
   isApproximateDeadline: false
   rating: A*
   shortname: AAMAS 2024
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-10-02T23:59:59Z'
     deadline: '2023-10-09T23:59:59Z'
@@ -30,9 +32,7 @@ aamas2025:
   isApproximateDeadline: false
   rating: A*
   shortname: AAMAS 2025
-  tags:
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-10-10T11:59:59Z'
     deadline: '2024-10-17T11:59:59Z'
