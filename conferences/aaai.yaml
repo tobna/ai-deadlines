@@ -48,8 +48,8 @@ aaai2025:
   rating: A*
   shortname: AAAI 2025
   tags:
-  - DM
   - CV
+  - DM
   - NLP
   - ML
   timeline:
@@ -69,9 +69,9 @@ aaai2026:
   rating: A*
   shortname: AAAI 2026
   tags:
-  - NLP
-  - DM
   - CV
+  - DM
+  - NLP
   - ML
   timeline:
   - abstractDeadline: '2025-07-26T11:59:59Z'
