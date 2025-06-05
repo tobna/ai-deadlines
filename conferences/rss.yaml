@@ -28,8 +28,8 @@ rss2025:
   rating: TBR
   shortname: RSS 2025
   tags:
-  - RO
   - ML
+  - RO
   timeline:
   - abstractDeadline: '2025-01-18T11:59:00Z'
     deadline: '2025-01-25T11:59:00Z'

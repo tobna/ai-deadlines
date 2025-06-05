@@ -66,8 +66,8 @@ cikm2025:
   rating: A
   shortname: CIKM 2025
   tags:
-  - ML
   - DM
+  - ML
   timeline:
   - abstractDeadline: '2025-05-17T11:59:00Z'
     deadline: '2025-05-24T11:59:00Z'
