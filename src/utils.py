@@ -93,6 +93,6 @@ def join_conferences(master, slave):
     for key, val in master.items():
         if key == "tags":
             all_tags = set(master[key]).union(set(slave[key]))
-            val = list(all_tags)
+            val = sorted(list(all_tags))
         out[key] = val
     return out
