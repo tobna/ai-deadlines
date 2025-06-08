@@ -28,14 +28,18 @@ chi2025:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2025.acm.org/
 chi2026:
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-04-17'
+  conferenceStartDate: '2026-04-13'
+  dataSrc: hf-repo
   id: chi2026
   isApproximateDeadline: false
+  location: Centre de Convencions Internacional de Barcelona, Barcelona, Spain
   rating: A*
   shortname: CHI 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-09-04T23:59:59Z'
-    deadline: '2025-09-11T23:59:59Z'
-  title: ACM Conference on Human Factors in Computing Systems
+  - abstractDeadline: '2025-09-05T11:59:59Z'
+    deadline: '2025-09-12T11:59:59Z'
+  timezone: UTC-12
+  title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2026.acm.org/
