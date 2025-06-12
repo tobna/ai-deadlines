@@ -37,7 +37,7 @@ acml2025:
   timeline:
   - deadline: '2025-05-30T23:59:59Z'
     note: Journal Track
-  - deadline: '2025-06-16T23:59:59Z'
+  - deadline: '2025-06-26T23:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2025/
