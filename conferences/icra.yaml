@@ -6,10 +6,10 @@ icra2022:
   rating: A*
   shortname: ICRA 2022
   tags: &id001
-    - ML
-    - RO
+  - ML
+  - RO
   timeline:
-    - deadline: "2021-09-15T02:59:00Z"
+  - deadline: '2021-09-15T02:59:00Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2022.org/
 icra2023:
@@ -21,7 +21,7 @@ icra2023:
   shortname: ICRA 2023
   tags: *id001
   timeline:
-    - deadline: "2022-09-15T23:59:59Z"
+  - deadline: '2022-09-15T23:59:59Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2023.org/
 icra2024:
@@ -33,12 +33,12 @@ icra2024:
   shortname: ICRA 2024
   tags: *id001
   timeline:
-    - deadline: "2023-09-15T23:59:00Z"
+  - deadline: '2023-09-15T23:59:00Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://2024.ieee-icra.org
 icra2025:
-  conferenceEndDate: "2026-06-05"
-  conferenceStartDate: "2026-06-01"
+  conferenceEndDate: '2026-06-05'
+  conferenceStartDate: '2026-06-01'
   dataSrc: hf-repo
   h5Index: 122
   id: icra2025
@@ -48,13 +48,13 @@ icra2025:
   shortname: ICRA 2025
   tags: *id001
   timeline:
-    - deadline: "2024-07-15T16:00:00Z"
+  - deadline: '2024-07-15T16:00:00Z'
   timezone: UTC-4
   title: IEEE International Conference on Robotics and Automation
   website: https://2025.ieee-icra.org
 icra2026:
-  conferenceEndDate: "2026-05-23"
-  conferenceStartDate: "2026-05-19"
+  conferenceEndDate: '2026-05-23'
+  conferenceStartDate: '2026-05-19'
   dataSrc: ninoduarte-git
   h5Index: 122
   id: icra2026
@@ -64,13 +64,13 @@ icra2026:
   shortname: ICRA 2026
   tags: *id001
   timeline:
-    - deadline: "2025-09-15T21:59:59Z"
+  - deadline: '2025-09-15T21:59:59Z'
   timezone: America/Los_Angeles
   title: IEEE International Conference on Robotics and Automation
   website: https://2026.ieee-icra.org/
 icra2027:
-  conferenceEndDate: "2027-06-06"
-  conferenceStartDate: "2027-06-01"
+  conferenceEndDate: '2027-06-06'
+  conferenceStartDate: '2027-06-01'
   dataSrc: estimate
   h5Index: 122
   id: icra2027
@@ -79,5 +79,5 @@ icra2027:
   shortname: ICRA 2027
   tags: *id001
   timeline:
-    - deadline: "2026-07-15T16:00:00Z"
+  - deadline: '2026-07-15T16:00:00Z'
   title: IEEE International Conference on Robotics and Automation
