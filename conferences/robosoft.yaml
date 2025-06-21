@@ -1,0 +1,14 @@
+robosoft2026:
+  conferenceEndDate: '2026-04-11'
+  conferenceStartDate: '2026-04-08'
+  dataSrc: ninoduarte-git
+  id: robosoft2026
+  isApproximateDeadline: false
+  location: Kanazawa, Japan
+  shortname: RoboSoft 2026
+  tags:
+  - RO
+  timeline:
+  - deadline: '2025-11-15T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: https://robosoft2026.sakura.ne.jp/robosoft-wp/wp-content/uploads/2025/05/robosoft2026-v1.pdf
