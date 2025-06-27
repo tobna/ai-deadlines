@@ -64,9 +64,9 @@ cvpr2026:
   conferenceStartDate: '2026-06-13'
   dataSrc: estimate
   h5Index: 440
-  location: Denver, CO
   id: cvpr2026
   isApproximateDeadline: true
+  location: Denver, CO
   rating: A*
   shortname: CVPR 2026
   tags: *id001
@@ -79,9 +79,9 @@ cvpr2027:
   conferenceStartDate: '2027-06-13'
   dataSrc: estimate
   h5Index: 440
-  location: Seattle, WA
   id: cvpr2027
   isApproximateDeadline: true
+  location: Seattle, WA
   rating: A*
   shortname: CVPR 2027
   tags: *id001
