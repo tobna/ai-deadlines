@@ -52,3 +52,16 @@ wsdm2025:
   timezone: UTC-12
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2025/
+wsdm2026:
+  dataSrc: ccf-deadlines
+  h5Index: 77
+  id: wsdm2026
+  isApproximateDeadline: false
+  rating: A
+  shortname: WSDM 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2025-08-07T23:59:59Z'
+    deadline: '2025-08-14T23:59:59Z'
+  title: International Conference on Web Search and Data Mining
+  website: https://wsdm-conference.org/2026/
