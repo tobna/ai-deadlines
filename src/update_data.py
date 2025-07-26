@@ -18,7 +18,7 @@ from see_future import estimate_future_conferences
 from wacv import parse_wacv
 
 from ranking import make_conf_rank_function, make_core_rank_function
-from utils import join_conferences, parse_all_times, unite_tags
+from utils import join_conferences, parse_all_times, unite_tags, _parse_timestr
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ccf-deadlines", "ninoduarte-git", "hf-repo", "off-website", "manual"]
@@ -175,6 +175,23 @@ if args.online:
             conferences[id]["dataSrc"] = "ccf-deadlines"
         else:
             conferences[id] = join_conferences(slave=ccf_data, master=conferences[id])
+
+
+remove_ids = set()
+for id, conf in conferences.items():
+    none_deadlines = set()
+    for i, deadline in enumerate(conf["timeline"]):
+        if _parse_timestr(deadline["deadline"], with_time=True) is None:
+            none_deadlines.add(i)
+    if len(none_deadlines) == len(conf["timeline"]):
+        remove_ids.add(id)
+    else:
+        for idx in sorted(list(none_deadlines), reverse=True):
+            removed = conf["timeline"].pop(idx)
+            print(f"WARNING: removed deadline {removed} from {conf['id']}")
+for conf_id in remove_ids:
+    removed = conferences.pop(conf_id)
+    print(f"WARNING: removed conference {removed} due to no timeline")
 
 
 reestimate_future_for_groups = set(reestimate_future_for_groups)
