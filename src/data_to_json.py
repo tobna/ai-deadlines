@@ -38,10 +38,13 @@ for id, conf in conferences.items():
         conf_cpy.pop("timeline")
         conf_cpy = {**conf_cpy, **dates}
         conf_cpy["id"] = f"{id}-{i+1}"
-        if dateparser.parse(conf_cpy["deadline"]) > datetime.now().astimezone(pytz.UTC):
-            future_conf[f"{id}-{i+1}"] = conf_cpy
-        else:
-            past_conf[f"{id}-{i+1}"] = conf_cpy
+        try:
+            if dateparser.parse(conf_cpy["deadline"]) > datetime.now().astimezone(pytz.UTC):
+                future_conf[f"{id}-{i+1}"] = conf_cpy
+            else:
+                past_conf[f"{id}-{i+1}"] = conf_cpy
+        except TypeError as e:
+            print(f"Type Error for conference {conf_cpy}: {e}")
 
 print("past:", sorted(list(past_conf.keys())))
 print("future:", sorted(list(future_conf.keys())))
