@@ -25,7 +25,7 @@ if git_tkn is not None:
     conferences_tracked = [f for f in os.listdir(os.path.join(this_dir, "conferences")) if f.endswith(".yaml")]
     alt_text = "Status: Conferences Tracked"
     badge_url = f"https://img.shields.io/badge/Conferences%20Tracked-{len(conferences_tracked)}-blue?logo=kdenlive&logoColor=white"
-    os.system(f"sed -i 's|!\\[{alt_text}\\](.*)|!\\[{alt_text}\\]({badge_url})|' README.md")
+    # os.system(f"sed -i 's|!\\[{alt_text}\\](.*)|!\\[{alt_text}\\]({badge_url})|' README.md")
 
     os.system("git add .")
     os.system(f"git commit -m 'Update conference data at {datetime.now().isoformat()}'")
