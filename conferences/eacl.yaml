@@ -1,0 +1,24 @@
+eacl2024:
+  dataSrc: ccf-deadlines
+  h5Index: 56
+  id: eacl2024
+  isApproximateDeadline: false
+  shortname: EACL 2024
+  tags: &id001 []
+  timeline:
+  - deadline: '2025-10-15T23:59:59Z'
+  title: The Annual Conference of the European Chapter of the Association for Computational
+    Linguistics
+  website: https://2024.eacl.org/
+eacl2026:
+  dataSrc: ccf-deadlines
+  h5Index: 56
+  id: eacl2026
+  isApproximateDeadline: false
+  shortname: EACL 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-10-06T23:59:59Z'
+  title: The Annual Conference of the European Chapter of the Association for Computational
+    Linguistics
+  website: https://2026.eacl.org/
