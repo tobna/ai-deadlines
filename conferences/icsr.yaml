@@ -1,6 +1,6 @@
 icsr2024:
-  conferenceEndDate: "2024-10-26"
-  conferenceStartDate: "2024-10-23"
+  conferenceEndDate: '2024-10-26'
+  conferenceStartDate: '2024-10-23'
   dataSrc: ninoduarte-git
   id: icsr2024
   isApproximateDeadline: false
@@ -8,9 +8,9 @@ icsr2024:
   rating: B
   shortname: ICSR 2024
   tags:
-    - RO
+  - RO
   timeline:
-    - deadline: "2024-07-05T21:59:59Z"
+  - deadline: '2024-07-05T21:59:59Z'
   timezone: America/Los_Angeles
   title: International Conference on Social Robotics
   website: https://icsr2024.dk/

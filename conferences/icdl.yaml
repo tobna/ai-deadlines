@@ -1,15 +1,15 @@
 icdl2024:
-  conferenceEndDate: "2024-05-23"
-  conferenceStartDate: "2024-05-20"
+  conferenceEndDate: '2024-05-23'
+  conferenceStartDate: '2024-05-20'
   dataSrc: ninoduarte-git
   id: icdl2024
   isApproximateDeadline: false
   location: Austin, Texas
   shortname: ICDL 2024
   tags:
-    - RO
+  - RO
   timeline:
-    - deadline: "2024-01-15T22:59:59Z"
+  - deadline: '2024-01-15T22:59:59Z'
   timezone: America/Los_Angeles
   title: IEEE International Conference on Development and Learning
   website: https://la.utexas.edu/users/dil/ICDL_Austin_2024/

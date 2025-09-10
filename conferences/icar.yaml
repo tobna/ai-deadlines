@@ -1,15 +1,15 @@
 icar2025:
-  conferenceEndDate: "2025-12-05"
-  conferenceStartDate: "2025-12-02"
+  conferenceEndDate: '2025-12-05'
+  conferenceStartDate: '2025-12-02'
   dataSrc: ninoduarte-git
   id: icar2025
   isApproximateDeadline: false
   location: San Juan, Argentina
   shortname: ICAR 2025
-  title: International Conference on Advanced Robotics
   tags:
-    - RO
+  - RO
   timeline:
-    - deadline: "2025-07-25T23:59:59Z"
+  - deadline: '2025-07-25T23:59:59Z'
   timezone: America/Los_Angeles
+  title: International Conference on Advanced Robotics
   website: http://icar2025.inaut.unsj.edu.ar/index.php

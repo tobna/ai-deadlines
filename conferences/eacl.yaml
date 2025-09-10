@@ -3,6 +3,7 @@ eacl2024:
   h5Index: 56
   id: eacl2024
   isApproximateDeadline: false
+  rating: A
   shortname: EACL 2024
   tags: &id001
   - NLP
@@ -16,6 +17,7 @@ eacl2026:
   h5Index: 56
   id: eacl2026
   isApproximateDeadline: false
+  rating: A
   shortname: EACL 2026
   tags: *id001
   timeline:
