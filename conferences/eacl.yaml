@@ -4,7 +4,7 @@ eacl2024:
   id: eacl2024
   isApproximateDeadline: false
   shortname: EACL 2024
-  tags:
+  tags: &id001
   - NLP
   timeline:
   - deadline: '2025-10-15T23:59:59Z'
@@ -17,8 +17,7 @@ eacl2026:
   id: eacl2026
   isApproximateDeadline: false
   shortname: EACL 2026
-  tags:
-  - NLP
+  tags: *id001
   timeline:
   - deadline: '2025-10-06T23:59:59Z'
   title: The Annual Conference of the European Chapter of the Association for Computational
