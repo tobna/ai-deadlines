@@ -1,6 +1,6 @@
 hri2026:
-  conferenceEndDate: '2026-03-19'
-  conferenceStartDate: '2026-03-16'
+  conferenceEndDate: "2026-03-19"
+  conferenceStartDate: "2026-03-16"
   dataSrc: ninoduarte-git
   id: hri2026
   isApproximateDeadline: false
@@ -8,8 +8,9 @@ hri2026:
   rating: A
   shortname: HRI 2026
   tags:
-  - RO
+    - RO
+    - HCI
   timeline:
-  - deadline: '2025-09-30T23:59:59Z'
+    - deadline: "2025-09-30T23:59:59Z"
   timezone: America/Los_Angeles
   website: https://humanrobotinteraction.org/2026/

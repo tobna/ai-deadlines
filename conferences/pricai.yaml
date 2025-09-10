@@ -4,9 +4,10 @@ pricai2024:
   isApproximateDeadline: false
   rating: B
   shortname: PRICAI 2024
-  tags: &id001 []
+  tags: &id001
+    - ML
   timeline:
-  - deadline: '2024-06-26T23:59:59Z'
+    - deadline: "2024-06-26T23:59:59Z"
   title: Pacific Rim International Conference on Artificial Intelligence
   website: https://www.pricai.org/2024/
 pricai2025:
@@ -17,6 +18,6 @@ pricai2025:
   shortname: PRICAI 2025
   tags: *id001
   timeline:
-  - deadline: '2025-06-27T23:59:59Z'
+    - deadline: "2025-06-27T23:59:59Z"
   title: Pacific Rim International Conference on Artificial Intelligence
   website: https://www.pricai.org/2025/

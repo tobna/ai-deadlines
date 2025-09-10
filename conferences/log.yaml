@@ -3,9 +3,10 @@ log2025:
   id: log2025
   isApproximateDeadline: false
   shortname: LOG 2025
-  tags: []
+  tags:
+    - ML
   timeline:
-  - abstractDeadline: '2025-08-22T23:59:59Z'
-    deadline: '2025-08-29T23:59:59Z'
+    - abstractDeadline: "2025-08-22T23:59:59Z"
+      deadline: "2025-08-29T23:59:59Z"
   title: Learning on Graphs Conference
   website: https://logconference.org/
