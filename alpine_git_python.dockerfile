@@ -22,7 +22,7 @@ RUN apk add --no-cache --virtual .build-deps \
     && pip install --upgrade pip
 
 # Install Python dependencies
-RUN pip install --no-cache-dir requests bs4 pytz pyyaml dateparser
+RUN pip install --no-cache-dir requests bs4 pytz pyyaml dateparser loguru
 
 # Remove build dependencies to keep the image small
 RUN apk del .build-deps
