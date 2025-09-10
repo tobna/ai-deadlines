@@ -70,6 +70,7 @@ cvpr2026:
   rating: A*
   shortname: CVPR 2026
   tags: *id001
+  website: https://cvpr.thecvf.com/Conferences/2026/
   timeline:
   - abstractDeadline: '2025-11-08T07:59:00Z'
     deadline: '2025-11-15T07:59:00Z'
