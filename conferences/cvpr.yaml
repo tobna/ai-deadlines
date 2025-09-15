@@ -62,31 +62,16 @@ cvpr2025:
 cvpr2026:
   conferenceEndDate: '2026-06-18'
   conferenceStartDate: '2026-06-13'
-  dataSrc: estimate
+  dataSrc: ccf-deadlines
   h5Index: 440
   id: cvpr2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   location: Denver, CO
   rating: A*
   shortname: CVPR 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-11-08T07:59:00Z'
-    deadline: '2025-11-15T07:59:00Z'
-  title: Computer Vision and Pattern Recognition Conference
-  website: https://cvpr.thecvf.com/Conferences/2026/
-cvpr2027:
-  conferenceEndDate: '2027-06-18'
-  conferenceStartDate: '2027-06-13'
-  dataSrc: estimate
-  h5Index: 440
-  id: cvpr2027
-  isApproximateDeadline: true
-  location: Seattle, WA
-  rating: A*
-  shortname: CVPR 2027
-  tags: *id001
-  timeline:
-  - abstractDeadline: '2026-11-08T07:59:00Z'
-    deadline: '2026-11-15T07:59:00Z'
-  title: Computer Vision and Pattern Recognition Conference
+  - abstractDeadline: '2025-11-07T23:59:00Z'
+    deadline: '2025-11-14T23:59:00Z'
+  title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  website: https://cvpr.thecvf.com/Conferences/2026
