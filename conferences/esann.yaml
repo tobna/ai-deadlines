@@ -6,12 +6,24 @@ esann2025:
   isApproximateDeadline: false
   rating: B
   shortname: ESANN 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2024-11-20T08:00:00Z'
     deadline: '2024-11-20T08:00:00Z'
   timezone: UTC-8
+  title: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  website: https://www.esann.org/
+esann2026:
+  dataSrc: ccf-deadlines
+  id: esann2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: ESANN 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-11-19T23:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/
