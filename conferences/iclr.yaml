@@ -64,7 +64,7 @@ iclr2025:
 iclr2026:
   conferenceEndDate: '2026-05-08'
   conferenceStartDate: '2026-05-04'
-  dataSrc: ninoduarte-git
+  dataSrc: off-website
   h5Index: 304
   id: iclr2026
   isApproximateDeadline: false
@@ -73,20 +73,8 @@ iclr2026:
   shortname: ICLR 2026
   tags: *id001
   timeline:
-  - deadline: '2025-10-01T21:59:59Z'
+  - deadline: '2025-09-24 AoE'
+    abstractDeadline: '2025-09-10 AoE'
   timezone: America/Los_Angeles
   title: International Conference on Learning Representations
-  website: https://iclr.cc/
-iclr2027:
-  conferenceEndDate: '2027-05-09'
-  conferenceStartDate: '2027-05-04'
-  dataSrc: estimate
-  h5Index: 304
-  id: iclr2027
-  isApproximateDeadline: true
-  rating: A*
-  shortname: ICLR 2027
-  tags: *id001
-  timeline:
-  - deadline: '2026-10-01T21:59:59Z'
-  title: International Conference on Learning Representations
+  website: https://iclr.cc
