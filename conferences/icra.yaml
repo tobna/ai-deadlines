@@ -55,7 +55,7 @@ icra2025:
 icra2026:
   conferenceEndDate: '2026-05-23'
   conferenceStartDate: '2026-05-19'
-  dataSrc: ninoduarte-git
+  dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2026
   isApproximateDeadline: false
@@ -64,7 +64,7 @@ icra2026:
   shortname: ICRA 2026
   tags: *id001
   timeline:
-  - deadline: '2025-09-15T21:59:59Z'
+  - deadline: '2025-09-15T23:59:00Z'
   timezone: America/Los_Angeles
   title: IEEE International Conference on Robotics and Automation
   website: https://2026.ieee-icra.org/

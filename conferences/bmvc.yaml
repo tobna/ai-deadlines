@@ -43,7 +43,7 @@ bmvc2024:
 bmvc2025:
   conferenceEndDate: '2025-11-28'
   conferenceStartDate: '2025-11-25'
-  dataSrc: ninoduarte-git
+  dataSrc: ccf-deadlines
   h5Index: 65
   id: bmvc2025
   isApproximateDeadline: false
@@ -52,10 +52,11 @@ bmvc2025:
   shortname: BMVC 2025
   tags: *id001
   timeline:
-  - deadline: '2025-05-16T21:59:59Z'
+  - abstractDeadline: '2025-05-13T23:59:59Z'
+    deadline: '2025-05-16T23:59:59Z'
   timezone: Europe/London
   title: British Machine Vision Conference
-  website: https://bmvc2025.bmva.org
+  website: https://bmvc2025.bmva.org/
 bmvc2026:
   conferenceEndDate: '2026-11-30'
   conferenceStartDate: '2026-11-25'

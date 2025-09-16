@@ -24,15 +24,15 @@ smc2024:
 smc2025:
   conferenceEndDate: '2025-10-10'
   conferenceStartDate: '2025-10-07'
-  dataSrc: ninoduarte-git
+  dataSrc: ccf-deadlines
   id: smc2025
   isApproximateDeadline: false
   location: Vienna, Austria
   rating: B
-  shortname: IEEE SMC 2025
+  shortname: SMC 2025
   tags: *id001
   timeline:
-  - deadline: '2025-04-20T21:59:59Z'
+  - deadline: '2025-05-04T23:59:59Z'
   timezone: America/Los_Angeles
   title: IEEE International Conference on Systems, Man, and Cybernetics
-  website: https://ieeesmc2025.org/
+  website: https://www.ieeesmc2025.org/
