@@ -23,7 +23,7 @@ icpr2026:
   shortname: ICPR 2026
   tags: *id001
   timeline:
-  - deadline: '2025-12-01T22:59:59Z'
+  - deadline: '2025-12-20 AoE'
   timezone: America/Los_Angeles
   title: International Conference on Pattern Recognition
   website: https://icpr2026orgteam.github.io/ICPR2026website/index.html
