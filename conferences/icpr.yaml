@@ -14,7 +14,7 @@ icpr2024:
 icpr2026:
   conferenceEndDate: '2026-08-21'
   conferenceStartDate: '2026-08-17'
-  dataSrc: ninoduarte-git
+  dataSrc: off-website
   h5Index: 58
   id: icpr2026
   isApproximateDeadline: false
