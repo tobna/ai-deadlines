@@ -21,7 +21,7 @@ from ranking import make_conf_rank_function, make_core_rank_function
 from utils import join_conferences, parse_all_times, unite_tags, _parse_timestr
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
-_SOURCES = ["estimate", "ccf-deadlines", "ninoduarte-git", "hf-repo", "off-website", "manual"]
+_SOURCES = ["estimate", "ninoduarte-git", "ccf-deadlines", "hf-repo", "off-website", "manual"]
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
