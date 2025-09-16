@@ -64,7 +64,7 @@ iclr2025:
 iclr2026:
   conferenceEndDate: '2026-05-08'
   conferenceStartDate: '2026-05-04'
-  dataSrc: off-website
+  dataSrc: ccf-deadlines
   h5Index: 304
   id: iclr2026
   isApproximateDeadline: false
