@@ -38,7 +38,7 @@ def get_hf_list():
             continue
 
         for conference in conferences:
-            shortname = conference["title"].replace(" ", "")
+            shortname = re.sub(r"[^a-zA-Z]", "", conference["title"])
             if no_dig_re.match(shortname):
                 conf_id = shortname.lower() + str(conference["year"])
                 shortname = shortname + " " + str(conference["year"])
