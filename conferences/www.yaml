@@ -73,6 +73,6 @@ www2026:
     deadline: '2025-10-07T21:59:59Z'
   - deadline: '2025-10-07T21:59:59Z'
     note: Paper Submission
-  timezone: Etc/GMT-02
+  timezone: Etc/GMT+02
   title: The Web Conference
   website: https://www2026.thewebconf.org/
