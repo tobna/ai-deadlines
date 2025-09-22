@@ -18,10 +18,28 @@ from see_future import estimate_future_conferences
 from wacv import parse_wacv
 
 from ranking import make_conf_rank_function, make_core_rank_function
-from utils import join_conferences, parse_all_times, unite_tags, _parse_timestr
+from utils import _parse_timestr, join_conferences, parse_all_times, unite_tags
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ninoduarte-git", "ccf-deadlines", "hf-repo", "off-website", "manual"]
+_ERROR_FILE = "error.log"
+_RESET_ERROR_FILE = False
+
+
+def _reset_error_file():
+    global _RESET_ERROR_FILE
+    with open(_ERROR_FILE, "w") as f:
+        f.write(f"Errors from run at {datetime.datetime.now()}:\n")
+    _RESET_ERROR_FILE = True
+
+
+def write_error(msg):
+    global _RESET_ERROR_FILE
+    if not _RESET_ERROR_FILE:
+        _reset_error_file()
+    with open(_ERROR_FILE, "a") as f:
+        f.write(f"{datetime.datetime.now()}: {msg}\n")
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -67,12 +85,14 @@ if args.online:
                 yearly_data = conf_parser(year)
             except Exception as e:
                 print(f"ERROR while parsing conference: {e}")
+                write_error(f"Failed parsing conference {conf_parser} {year}: {e}")
                 continue
             print("no data" if len(yearly_data) == 0 else "loaded data", flush=True)
             try:
                 yearly_data = parse_all_times(yearly_data)
             except Exception as e:
                 print(f"ERROR while parsing dates for conference {yearly_data['id']}: {e}")
+                write_error(f"Failed parsing dates for conference {conf_parser} {yearly_data['id']}: {e}")
                 continue
             if len(yearly_data) == 0:
                 no_data_years += 1
@@ -99,9 +119,11 @@ if args.online:
         hf_conferences = get_hf_list()
     except Exception as e:
         print(f"ERROR while parsing hf list: {e}")
+        write_error(f"Failed parsing hf conferences: {e}")
         hf_conferences = []
     if len(hf_conferences) == 0:
         print("ERROR no hf conferences found")
+        write_error("No hf conferences found")
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
         id = hf_data["id"]
@@ -128,9 +150,11 @@ if args.online:
         nino_confs = get_nino_list()
     except Exception as e:
         print(f"ERROR while parsing ninoduarte-git: {e}")
+        write_error(f"Failed parsing ninoduarte-git: {e}")
         nino_confs = []
     if len(nino_confs) == 0:
         print("ERROR no ninoduarte-git conferences found")
+        write_error("No ninoduarte-git conferences found")
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
         id = nino_conf["id"].replace("nips", "neurips")
@@ -158,9 +182,11 @@ if args.online:
         print(f"got {len(ccf_conferences)} ccf conferences")
     except Exception as e:
         print(f"ERROR while parsing ccf-deadlines: {e}")
+        write_error(f"Failed loading ccf-deadlines conferences: {e}")
         ccf_conferences = []
     if len(ccf_conferences) == 0:
         print("ERROR no ccf-conferences gotten")
+        write_error("No ccf-conferences found")
     for ccf_data in ccf_conferences:
         ccf_data = parse_all_times(ccf_data)
         id = ccf_data["id"]
@@ -224,6 +250,7 @@ for group, conferences in conf_groups.items():
         future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}
     except Exception as e:
         print(f"ERROR estimating future conferences of group {group}: {e}")
+        write_error(f"Failed estimating future_conferences of group {group}: {e}")
         if args.reestimate:
             raise e
         future_conferences = {}
