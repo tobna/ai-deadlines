@@ -2,6 +2,7 @@ iui2024:
   dataSrc: ccf-deadlines
   id: iui2024
   isApproximateDeadline: false
+  rating: A
   shortname: IUI 2024
   tags: &id001
   - HCI
@@ -14,6 +15,7 @@ iui2025:
   dataSrc: ccf-deadlines
   id: iui2025
   isApproximateDeadline: false
+  rating: A
   shortname: IUI 2025
   tags: *id001
   timeline:
@@ -28,6 +30,7 @@ iui2026:
   id: iui2026
   isApproximateDeadline: false
   location: Paphos, Cyprus
+  rating: A
   shortname: IUI 2026
   tags: *id001
   timeline:

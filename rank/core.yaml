@@ -41,10 +41,13 @@ ijcai: A*
 ijcb: B
 ijcnlp: B
 ijcnn: B
+interspeech: A
 iros: A
+iui: A
 kdd: A*
 kr: A*
 ksem: C
+lrec: B
 mobilehci: B
 naacl: A
 neurips: A*
@@ -56,3 +59,4 @@ smc: B
 uai: A
 wacv: A
 wsdm: A
+www: A*

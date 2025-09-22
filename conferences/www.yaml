@@ -2,6 +2,7 @@ www2021:
   dataSrc: ccf-deadlines
   id: www2021
   isApproximateDeadline: false
+  rating: A*
   shortname: WWW 2021
   tags: &id001 []
   timeline:
@@ -13,6 +14,7 @@ www2022:
   dataSrc: ccf-deadlines
   id: www2022
   isApproximateDeadline: false
+  rating: A*
   shortname: WWW 2022
   tags: *id001
   timeline:
@@ -24,6 +26,7 @@ www2023:
   dataSrc: ccf-deadlines
   id: www2023
   isApproximateDeadline: false
+  rating: A*
   shortname: WWW 2023
   tags: *id001
   timeline:
@@ -35,6 +38,7 @@ www2024:
   dataSrc: ccf-deadlines
   id: www2024
   isApproximateDeadline: false
+  rating: A*
   shortname: WWW 2024
   tags: *id001
   timeline:
@@ -46,6 +50,7 @@ www2025:
   dataSrc: ccf-deadlines
   id: www2025
   isApproximateDeadline: false
+  rating: A*
   shortname: WWW 2025
   tags: *id001
   timeline:
@@ -60,6 +65,7 @@ www2026:
   id: www2026
   isApproximateDeadline: false
   location: Dubai, UAE
+  rating: A*
   shortname: WWW 2026
   tags: *id001
   timeline:

@@ -6,6 +6,7 @@ lrec2026:
   id: lrec2026
   isApproximateDeadline: false
   location: Palma, Mallorca, Spain
+  rating: B
   shortname: LREC 2026
   tags:
   - NLP
