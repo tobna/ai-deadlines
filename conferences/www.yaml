@@ -1,3 +1,58 @@
+www2021:
+  dataSrc: ccf-deadlines
+  id: www2021
+  isApproximateDeadline: false
+  shortname: WWW 2021
+  tags: &id001 []
+  timeline:
+  - abstractDeadline: '2020-10-12T23:59:59Z'
+    deadline: '2020-10-19T23:59:59Z'
+  title: International World Wide Web Conferences
+  website: https://www2021.thewebconf.org/
+www2022:
+  dataSrc: ccf-deadlines
+  id: www2022
+  isApproximateDeadline: false
+  shortname: WWW 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2021-10-14T23:59:59Z'
+    deadline: '2021-10-21T23:59:59Z'
+  title: International World Wide Web Conferences
+  website: https://www2022.thewebconf.org/
+www2023:
+  dataSrc: ccf-deadlines
+  id: www2023
+  isApproximateDeadline: false
+  shortname: WWW 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-10-06T23:59:59Z'
+    deadline: '2022-10-13T23:59:59Z'
+  title: International World Wide Web Conferences
+  website: https://www2023.thewebconf.org/
+www2024:
+  dataSrc: ccf-deadlines
+  id: www2024
+  isApproximateDeadline: false
+  shortname: WWW 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-10-05T23:59:59Z'
+    deadline: '2023-10-12T23:59:59Z'
+  title: International World Wide Web Conferences
+  website: https://www2024.thewebconf.org/
+www2025:
+  dataSrc: ccf-deadlines
+  id: www2025
+  isApproximateDeadline: false
+  shortname: WWW 2025
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2024-10-07T23:59:59Z'
+    deadline: '2024-10-14T23:59:59Z'
+  title: International World Wide Web Conferences
+  website: https://www2025.thewebconf.org/
 www2026:
   conferenceEndDate: '2026-04-17'
   conferenceStartDate: '2026-04-13'
@@ -6,7 +61,7 @@ www2026:
   isApproximateDeadline: false
   location: Dubai, UAE
   shortname: WWW 2026
-  tags: []
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-09-30T21:59:59Z'
     deadline: '2025-10-07T21:59:59Z'

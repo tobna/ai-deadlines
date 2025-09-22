@@ -1,3 +1,45 @@
+interspeech2022:
+  dataSrc: ccf-deadlines
+  id: interspeech2022
+  isApproximateDeadline: false
+  shortname: InterSpeech 2022
+  tags: &id001
+  - SP
+  timeline:
+  - deadline: '2022-03-21T23:59:59Z'
+  title: Conference of the International Speech Communication Association
+  website: https://www.interspeech2022.org/
+interspeech2023:
+  dataSrc: ccf-deadlines
+  id: interspeech2023
+  isApproximateDeadline: false
+  shortname: InterSpeech 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-03-08T23:59:59Z'
+  title: Conference of the International Speech Communication Association
+  website: https://www.interspeech2023.org/
+interspeech2024:
+  dataSrc: ccf-deadlines
+  id: interspeech2024
+  isApproximateDeadline: false
+  shortname: InterSpeech 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2024-03-01T23:59:59Z'
+    deadline: '2024-03-09T23:59:59Z'
+  title: Conference of the International Speech Communication Association
+  website: https://www.interspeech2024.org/
+interspeech2025:
+  dataSrc: ccf-deadlines
+  id: interspeech2025
+  isApproximateDeadline: false
+  shortname: InterSpeech 2025
+  tags: *id001
+  timeline:
+  - deadline: '2025-02-19T23:59:59Z'
+  title: Conference of the International Speech Communication Association
+  website: https://www.interspeech2025.org/home
 interspeech2026:
   conferenceEndDate: '2026-10-01'
   conferenceStartDate: '2026-09-27'
@@ -6,8 +48,7 @@ interspeech2026:
   isApproximateDeadline: false
   location: International Convention Centre (ICC) Sydney
   shortname: Interspeech 2026
-  tags:
-  - SP
+  tags: *id001
   timeline:
   - deadline: '2026-03-03T11:59:59Z'
   timezone: UTC-12
