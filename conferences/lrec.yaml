@@ -13,6 +13,6 @@ lrec2026:
   timeline:
   - deadline: '2025-10-18T11:59:59Z'
     note: Paper Submission
-  timezone: GMT+02
+  timezone: Etc/GMT+02
   title: Language Resources and Evaluation Conference
   website: https://www.elra.info/lrec2026/

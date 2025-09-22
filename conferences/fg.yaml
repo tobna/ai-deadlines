@@ -28,6 +28,6 @@ fg2026:
     note: Paper Submission (Round 1)
   - deadline: '2026-01-15T21:59:59Z'
     note: Paper Submission (Round 2)
-  timezone: GMT+02
+  timezone: Etc/GMT+02
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2026.ieee-biometrics.org/
