@@ -40,7 +40,6 @@ month_strs = [datetime.datetime.strptime(f"2024-{mnth:02d}-10", "%Y-%m-%d").strf
 def parse_all_times(conference):
     if "id" not in conference:
         assert len(conference) == 0, f"Strange conference: {conference}"
-        return conference
     year = int(conference["id"][-4:])
     conf_tz = None
     if "timezone" in conference:
@@ -66,7 +65,7 @@ def parse_all_times(conference):
         for key in dates.keys():
             if "deadline" in key.lower():
                 timestr = dates[key]
-                if month_day_time_re.match(timestr):
+                if isinstance(timestr, str) and month_day_time_re.match(timestr):
                     print(f"adding year to '{timestr}' -> ", end="\t")
                     start, end = month_day_time_re.match(timestr).groups()
                     timestr = f"{start} {year}{end}"
