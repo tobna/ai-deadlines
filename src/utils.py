@@ -115,7 +115,8 @@ def unite_tags(conf_group):
 def parse_stuff(conferneces):
     for conf in conferneces.values():
         if "timezone" in conf:
-            if conf["timezone"].startswith("GMT+"):
-                conf["timezone"] = conf["timezone"].replace("GMT+", "Etc/GMT-")
+            if conf["timezone"].startswith("GMT"):
+                offset = int(conf["timezone"][3:])
+                conf["timezone"] = f"Etc/GMT{-offset:+}"
 
     return conferneces
