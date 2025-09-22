@@ -26,7 +26,7 @@ rss2025:
   dataSrc: hf-repo
   id: rss2025
   isApproximateDeadline: false
-  location: Los Angeles, California
+  location: Los Angeles, USA
   rating: TBR
   shortname: RSS 2025
   tags: *id001

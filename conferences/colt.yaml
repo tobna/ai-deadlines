@@ -27,6 +27,7 @@ colt2025:
   dataSrc: hf-repo
   id: colt2025
   isApproximateDeadline: false
+  location: Lyon, France
   rating: A*
   shortname: COLT 2025
   tags: *id001

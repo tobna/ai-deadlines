@@ -32,6 +32,7 @@ icann2025:
   dataSrc: hf-repo
   id: icann2025
   isApproximateDeadline: false
+  location: Kaunas, Lithuania
   rating: C
   shortname: ICANN 2025
   tags: *id001

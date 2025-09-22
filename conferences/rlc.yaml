@@ -4,6 +4,7 @@ rlc2025:
   dataSrc: hf-repo
   id: rlc2025
   isApproximateDeadline: false
+  location: Edmonton, Canada
   shortname: RLC 2025
   tags:
   - ML

@@ -7,8 +7,10 @@ iclr2022:
   shortname: ICLR 2022
   tags: &id001
   - CV
+  - DM
   - ML
   - NLP
+  - RO
   - SP
   timeline:
   - abstractDeadline: '2021-09-29T12:00:00Z'
@@ -62,19 +64,37 @@ iclr2025:
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2025
 iclr2026:
-  conferenceEndDate: '2026-05-08'
-  conferenceStartDate: '2026-05-04'
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-04-27'
+  conferenceStartDate: '2026-04-23'
+  dataSrc: hf-repo
   h5Index: 304
   id: iclr2026
   isApproximateDeadline: false
-  location: NA, NA
+  location: To be announced
   rating: A*
   shortname: ICLR 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-09-19T23:59:59Z'
-    deadline: '2025-09-24T23:59:59Z'
-  timezone: America/Los_Angeles
-  title: International Conference on Learning Representations
+  - abstractDeadline: '2025-09-20T11:59:59Z'
+    deadline: '2025-09-25T11:59:59Z'
+  - deadline: '2025-09-25T11:59:59Z'
+    note: Paper Submission
+  timezone: UTC-12
+  title: The Fourteenth International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2026
+iclr2027:
+  conferenceEndDate: '2027-04-28'
+  conferenceStartDate: '2027-04-23'
+  dataSrc: estimate
+  h5Index: 304
+  id: iclr2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ICLR 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-09-20T11:59:59Z'
+    deadline: '2026-09-25T11:59:59Z'
+  - deadline: '2026-09-25T11:59:59Z'
+    note: 'From ICLR 2026: Paper Submission'
+  title: The Fourteenth International Conference on Learning Representations

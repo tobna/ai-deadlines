@@ -45,17 +45,33 @@ aistats2025:
   title: International Conference on Artificial Intelligence and Statistics
   website: https://aistats.org/aistats2025
 aistats2026:
-  conferenceEndDate: '2026-05-08'
-  conferenceStartDate: '2026-05-03'
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-05-05'
+  conferenceStartDate: '2026-05-02'
+  dataSrc: hf-repo
   h5Index: 100
   id: aistats2026
   isApproximateDeadline: false
+  location: TBA
   rating: A
   shortname: AISTATS 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-09-25T23:59:59Z'
-    deadline: '2025-10-02T23:59:59Z'
+  - deadline: '2025-10-03T11:59:59Z'
+    note: Abstract deadline on 2025-09-25 23:59:59 UTC-12!
+  timezone: GMT+02
   title: International Conference on Artificial Intelligence and Statistics
   website: https://virtual.aistats.org/Conferences/2026
+aistats2027:
+  conferenceEndDate: '2027-05-07'
+  conferenceStartDate: '2027-05-02'
+  dataSrc: estimate
+  h5Index: 100
+  id: aistats2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: AISTATS 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-10-03T11:59:59Z'
+    note: 'From AISTATS 2026: Abstract deadline on 2025-09-25 23:59:59 UTC-12!'
+  title: International Conference on Artificial Intelligence and Statistics

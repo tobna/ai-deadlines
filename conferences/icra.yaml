@@ -6,6 +6,7 @@ icra2022:
   rating: A*
   shortname: ICRA 2022
   tags: &id001
+  - CV
   - ML
   - RO
   timeline:
@@ -53,20 +54,21 @@ icra2025:
   title: IEEE International Conference on Robotics and Automation
   website: https://2025.ieee-icra.org
 icra2026:
-  conferenceEndDate: '2026-05-23'
-  conferenceStartDate: '2026-05-19'
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-06-05'
+  conferenceStartDate: '2026-06-01'
+  dataSrc: hf-repo
   h5Index: 122
   id: icra2026
   isApproximateDeadline: false
-  location: Vienna, Austria
+  location: To be anounced
   rating: A*
   shortname: ICRA 2026
   tags: *id001
   timeline:
-  - deadline: '2025-09-15T23:59:00Z'
-  timezone: America/Los_Angeles
-  title: IEEE International Conference on Robotics and Automation
+  - deadline: '2025-09-16T07:59:59Z'
+    note: Paper Submission
+  timezone: PST
+  title: International Conference on Robotics and Automation
   website: https://2026.ieee-icra.org/
 icra2027:
   conferenceEndDate: '2027-06-06'

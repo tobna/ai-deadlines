@@ -4,6 +4,7 @@ esann2025:
   dataSrc: hf-repo
   id: esann2025
   isApproximateDeadline: false
+  location: Bruges, Belgium
   rating: B
   shortname: ESANN 2025
   tags: &id001

@@ -14,18 +14,20 @@ fg2025:
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2025.ieee-biometrics.org/
 fg2026:
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-05-29'
+  conferenceStartDate: '2026-05-25'
+  dataSrc: hf-repo
   id: fg2026
   isApproximateDeadline: false
+  location: Kyoto, Japan
   rating: B
   shortname: FG 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-09-25T23:59:59Z'
-    deadline: '2025-10-02T23:59:59Z'
-    note: Round 1
-  - abstractDeadline: '2026-01-09T23:59:59Z'
-    deadline: '2026-01-15T23:59:59Z'
-    note: Round 2
+  - deadline: '2025-10-02T21:59:59Z'
+    note: Paper Submission (Round 1)
+  - deadline: '2026-01-15T21:59:59Z'
+    note: Paper Submission (Round 2)
+  timezone: GMT+02
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2026.ieee-biometrics.org/

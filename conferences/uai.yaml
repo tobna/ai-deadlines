@@ -38,6 +38,7 @@ uai2025:
   dataSrc: hf-repo
   id: uai2025
   isApproximateDeadline: false
+  location: Rio de Janeiro, Brazil
   rating: A
   shortname: UAI 2025
   tags: *id001

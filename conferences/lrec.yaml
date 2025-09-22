@@ -1,0 +1,17 @@
+lrec2026:
+  conferenceEndDate: '2026-05-16'
+  conferenceStartDate: '2026-05-11'
+  dataSrc: hf-repo
+  h5Index: 59
+  id: lrec2026
+  isApproximateDeadline: false
+  location: Palma, Mallorca, Spain
+  shortname: LREC 2026
+  tags:
+  - NLP
+  timeline:
+  - deadline: '2025-10-18T11:59:59Z'
+    note: Paper Submission
+  timezone: GMT+02
+  title: Language Resources and Evaluation Conference
+  website: https://www.elra.info/lrec2026/

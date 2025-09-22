@@ -43,3 +43,16 @@ chi2026:
   timezone: UTC-12
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2026.acm.org/
+chi2027:
+  conferenceEndDate: '2027-04-18'
+  conferenceStartDate: '2027-04-13'
+  dataSrc: estimate
+  id: chi2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: CHI 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-09-05T11:59:59Z'
+    deadline: '2026-09-12T11:59:59Z'
+  title: The ACM Conference on Human Factors in Computing Systems

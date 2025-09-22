@@ -16,6 +16,7 @@ ijcnn2025:
   dataSrc: hf-repo
   id: ijcnn2025
   isApproximateDeadline: false
+  location: Rome, Italy
   rating: B
   shortname: IJCNN 2025
   tags: *id001
@@ -25,13 +26,33 @@ ijcnn2025:
   title: International Joint Conference on Neural Networks
   website: https://2025.ijcnn.org/
 ijcnn2026:
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-06-26'
+  conferenceStartDate: '2026-06-21'
+  dataSrc: hf-repo
   id: ijcnn2026
   isApproximateDeadline: false
+  location: MECC Maastricht
   rating: B
   shortname: IJCNN 2026
   tags: *id001
   timeline:
-  - deadline: '2026-01-31T23:59:59Z'
+  - deadline: '2025-09-25T11:59:59Z'
+  - deadline: '2026-02-01T11:59:59Z'
+    note: Paper Submission
+  timezone: UTC-12
   title: International Joint Conference on Neural Networks
   website: https://attend.ieee.org/wcci-2026/
+ijcnn2027:
+  conferenceEndDate: '2027-06-26'
+  conferenceStartDate: '2027-06-21'
+  dataSrc: estimate
+  id: ijcnn2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: IJCNN 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-09-25T11:59:59Z'
+  - deadline: '2027-02-01T11:59:59Z'
+    note: 'From IJCNN 2026: Paper Submission'
+  title: International Joint Conference on Neural Networks

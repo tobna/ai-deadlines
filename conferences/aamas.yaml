@@ -30,6 +30,7 @@ aamas2025:
   dataSrc: hf-repo
   id: aamas2025
   isApproximateDeadline: false
+  location: Detroit, Michigan
   rating: A*
   shortname: AAMAS 2025
   tags: *id001
@@ -40,14 +41,31 @@ aamas2025:
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://aamas2025.org/
 aamas2026:
-  dataSrc: ccf-deadlines
+  conferenceEndDate: '2026-05-29'
+  conferenceStartDate: '2026-05-27'
+  dataSrc: hf-repo
   id: aamas2026
   isApproximateDeadline: false
+  location: Paphos, Cyprus
   rating: A*
   shortname: AAMAS 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-10-01T23:59:59Z'
-    deadline: '2025-10-08T23:59:59Z'
+  - deadline: '2025-10-09T11:59:59Z'
+    note: Abstract deadline on 2025-10-01 23:59:59 UTC-12!
+  timezone: GMT+02
   title: International Conference on Autonomous Agents and Multiagent Systems
-  website: https://cyprusconferences.org/aamas2026
+  website: https://aamas2026.org/
+aamas2027:
+  conferenceEndDate: '2027-06-01'
+  conferenceStartDate: '2027-05-27'
+  dataSrc: estimate
+  id: aamas2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: AAMAS 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-10-09T11:59:59Z'
+    note: 'From AAMAS 2026: Abstract deadline on 2025-10-01 23:59:59 UTC-12!'
+  title: International Conference on Autonomous Agents and Multiagent Systems

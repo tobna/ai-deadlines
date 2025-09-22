@@ -1,0 +1,16 @@
+iui2026:
+  conferenceEndDate: '2026-03-26'
+  conferenceStartDate: '2026-03-23'
+  dataSrc: hf-repo
+  id: iui2026
+  isApproximateDeadline: false
+  location: Paphos, Cyprus
+  shortname: IUI 2026
+  tags:
+  - HCI
+  timeline:
+  - deadline: '2025-10-11T11:59:59Z'
+    note: Abstract deadline on 2025-10-03 23:59:59 UTC-12!
+  timezone: GMT+02
+  title: ACM Conference on Intelligent User Interfaces
+  website: https://iui.acm.org/2026/

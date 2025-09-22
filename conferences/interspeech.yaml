@@ -1,0 +1,15 @@
+interspeech2026:
+  conferenceEndDate: '2026-10-01'
+  conferenceStartDate: '2026-09-27'
+  dataSrc: hf-repo
+  id: interspeech2026
+  isApproximateDeadline: false
+  location: International Convention Centre (ICC) Sydney
+  shortname: Interspeech 2026
+  tags:
+  - SP
+  timeline:
+  - deadline: '2026-03-03T11:59:59Z'
+  timezone: UTC-12
+  title: Interspeech
+  website: https://interspeech2026.org

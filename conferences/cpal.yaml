@@ -4,6 +4,7 @@ cpal2025:
   dataSrc: hf-repo
   id: cpal2025
   isApproximateDeadline: false
+  location: California, USA
   shortname: CPAL 2025
   tags:
   - ML

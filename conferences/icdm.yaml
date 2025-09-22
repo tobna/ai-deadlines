@@ -54,6 +54,7 @@ icdm2025:
   h5Index: 50
   id: icdm2025
   isApproximateDeadline: false
+  location: Washington DC, USA
   rating: A*
   shortname: ICDM 2025
   tags: *id001

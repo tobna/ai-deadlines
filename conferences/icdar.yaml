@@ -4,6 +4,7 @@ icdar2025:
   dataSrc: hf-repo
   id: icdar2025
   isApproximateDeadline: false
+  location: Wuhan, China
   rating: A
   shortname: ICDAR 2025
   tags:

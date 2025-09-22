@@ -75,3 +75,17 @@ cvpr2026:
     deadline: '2025-11-14T23:59:00Z'
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   website: https://cvpr.thecvf.com/Conferences/2026
+cvpr2027:
+  conferenceEndDate: '2027-06-18'
+  conferenceStartDate: '2027-06-13'
+  dataSrc: estimate
+  h5Index: 440
+  id: cvpr2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: CVPR 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-11-07T23:59:00Z'
+    deadline: '2026-11-14T23:59:00Z'
+  title: IEEE/CVF Conference on Computer Vision and Pattern Recognition

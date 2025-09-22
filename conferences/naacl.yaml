@@ -29,6 +29,7 @@ naacl2025:
   dataSrc: hf-repo
   id: naacl2025
   isApproximateDeadline: false
+  location: Albuquerque, New Mexico
   rating: A
   shortname: NAACL 2025
   tags: *id001

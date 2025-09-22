@@ -1,0 +1,17 @@
+www2026:
+  conferenceEndDate: '2026-04-17'
+  conferenceStartDate: '2026-04-13'
+  dataSrc: hf-repo
+  id: www2026
+  isApproximateDeadline: false
+  location: Dubai, UAE
+  shortname: WWW 2026
+  tags: []
+  timeline:
+  - abstractDeadline: '2025-09-30T21:59:59Z'
+    deadline: '2025-10-07T21:59:59Z'
+  - deadline: '2025-10-07T21:59:59Z'
+    note: Paper Submission
+  timezone: GMT+02
+  title: The Web Conference
+  website: https://www2026.thewebconf.org/

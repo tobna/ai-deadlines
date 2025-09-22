@@ -1,0 +1,16 @@
+ijcnlpaacl2025:
+  conferenceEndDate: '2025-12-24'
+  conferenceStartDate: '2025-12-20'
+  dataSrc: hf-repo
+  id: ijcnlpaacl2025
+  isApproximateDeadline: false
+  location: null
+  shortname: IJCNLPAACL 2025
+  tags: []
+  timeline:
+  - abstractDeadline: '2025-07-29T11:59:59Z'
+    deadline: '2025-07-29T11:59:59Z'
+  timezone: UTC-12
+  title: International Joint Conference on Natural Language Processing & Asia-Pacific
+    Chapter of the Association for Computational Linguistics
+  website: https://2025.aaclnet.org/
