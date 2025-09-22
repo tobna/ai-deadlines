@@ -20,9 +20,9 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
         years = round(delta.days / 365)
         deltas.append(years)
     yearly_rythm = round(sum(deltas) / len(deltas))
-    next_year = deadlines[-1].year + yearly_rythm
     last_conf = max(list(real_conferences.values()), key=lambda x: x["conferenceStartDate"])
     last_start = dateparser.parse(last_conf["conferenceStartDate"])
+    next_year = last_start.year + yearly_rythm
 
     future_conferences = {}
     while (
