@@ -40,7 +40,11 @@ month_strs = [datetime.datetime.strptime(f"2024-{mnth:02d}-10", "%Y-%m-%d").strf
 def parse_all_times(conference):
     if "id" not in conference:
         assert len(conference) == 0, f"Strange conference: {conference}"
-    year = int(conference["id"][-4:])
+    try:
+        year = int(conference["id"][-4:])
+    except ValueError as e:
+        print(conference)
+        raise e
     conf_tz = None
     if "timezone" in conference:
         conf_tz = conference["timezone"]
