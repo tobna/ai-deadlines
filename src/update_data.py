@@ -92,8 +92,8 @@ if args.online:
                 yearly_data = parse_all_times(yearly_data)
             except Exception as e:
                 print(f"ERROR while parsing dates for conference {conf_parser} {year}: {e}")
-                write_error(f"Failed parsing dates for conference {conf_parser} {year}: {e}")
-                write_error(f"conference: {yearly_data}")
+                # write_error(f"Failed parsing dates for conference {conf_parser} {year}: {e}")
+                print(f"conference: {yearly_data}")
                 year -= 1
                 continue
             if len(yearly_data) == 0:
