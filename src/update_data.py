@@ -18,7 +18,7 @@ from see_future import estimate_future_conferences
 from wacv import parse_wacv
 
 from ranking import make_conf_rank_function, make_core_rank_function
-from utils import _parse_timestr, join_conferences, parse_all_times, unite_tags
+from utils import _parse_timestr, join_conferences, parse_all_times, unite_tags, parse_stuff
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ninoduarte-git", "ccf-deadlines", "hf-repo", "off-website", "manual"]
@@ -261,6 +261,7 @@ for group, conferences in conf_groups.items():
     conferences = {key: add_conf_rank(conf) for key, conf in conferences.items()}
     conferences = {key: add_core_rank(conf) for key, conf in conferences.items()}
     conferences = unite_tags(conferences)
+    conferences = parse_stuff(conferences)
     if args.write:
         with open(os.path.join(conference_folder, f"{group}.yaml"), "w") as f:
             yaml.safe_dump(conferences, f)

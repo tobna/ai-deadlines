@@ -110,3 +110,12 @@ def unite_tags(conf_group):
     for conf in conf_group.values():
         conf["tags"] = tags
     return conf_group
+
+
+def parse_stuff(conferneces):
+    for conf in conferneces:
+        if "timezone" in conf:
+            if conf["timezone"].startswith("GMT"):
+                conf["timezone"] = conf["timezone"].replace("GMT", "Etc/GMT")
+
+    return conferneces
