@@ -100,6 +100,8 @@ if args.online:
     except Exception as e:
         print(f"ERROR while parsing hf list: {e}")
         hf_conferences = []
+    if len(hf_conferences) == 0:
+        print("ERROR no hf conferences found")
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
         id = hf_data["id"]
@@ -127,6 +129,8 @@ if args.online:
     except Exception as e:
         print(f"ERROR while parsing ninoduarte-git: {e}")
         nino_confs = []
+    if len(nino_confs) == 0:
+        print("ERROR no ninoduarte-git conferences found")
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
         id = nino_conf["id"].replace("nips", "neurips")
@@ -148,13 +152,15 @@ if args.online:
         else:
             conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
 
-    print(f"load ccf-deadlines")
+    print("load ccf-deadlines")
     try:
         ccf_conferences = get_ccf_list()
         print(f"got {len(ccf_conferences)} ccf conferences")
     except Exception as e:
         print(f"ERROR while parsing ccf-deadlines: {e}")
         ccf_conferences = []
+    if len(ccf_conferences) == 0:
+        print("ERROR no ccf-conferences gotten")
     for ccf_data in ccf_conferences:
         ccf_data = parse_all_times(ccf_data)
         id = ccf_data["id"]
