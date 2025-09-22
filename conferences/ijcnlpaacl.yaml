@@ -6,7 +6,8 @@ ijcnlpaacl2025:
   isApproximateDeadline: false
   location: null
   shortname: IJCNLPAACL 2025
-  tags: []
+  tags:
+  - NLP
   timeline:
   - abstractDeadline: '2025-07-29T11:59:59Z'
     deadline: '2025-07-29T11:59:59Z'
