@@ -77,7 +77,6 @@ iclr2026:
   timeline:
   - abstractDeadline: '2025-09-20T11:59:59Z'
     deadline: '2025-09-25T11:59:59Z'
-  - deadline: '2025-09-25T11:59:59Z'
     note: Paper Submission
   timezone: UTC-12
   title: The Fourteenth International Conference on Learning Representations
@@ -95,6 +94,5 @@ iclr2027:
   timeline:
   - abstractDeadline: '2026-09-20T11:59:59Z'
     deadline: '2026-09-25T11:59:59Z'
-  - deadline: '2026-09-25T11:59:59Z'
     note: 'From ICLR 2026: Paper Submission'
   title: The Fourteenth International Conference on Learning Representations

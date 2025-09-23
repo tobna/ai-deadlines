@@ -71,7 +71,6 @@ www2026:
   timeline:
   - abstractDeadline: '2025-09-30T21:59:59Z'
     deadline: '2025-10-07T21:59:59Z'
-  - deadline: '2025-10-07T21:59:59Z'
     note: Paper Submission
   timezone: Etc/GMT-2
   title: The Web Conference

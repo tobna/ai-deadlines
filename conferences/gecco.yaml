@@ -8,8 +8,6 @@ gecco2025:
   timeline:
   - abstractDeadline: '2025-01-22T23:59:00Z'
     deadline: '2025-01-29T23:59:00Z'
-    note: 'Full papers (traditional category) '
-  - deadline: '2025-01-29T23:59:00Z'
-    note: 'Poster-only papers '
+    note: Full papers (traditional category)
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2025.sigevo.org/HomePage
