@@ -113,10 +113,23 @@ def unite_tags(conf_group):
 
 
 def parse_stuff(conferneces):
+    # parse GMT timezone strings for use with js
     for conf in conferneces.values():
         if "timezone" in conf:
             if conf["timezone"].startswith("GMT"):
                 offset = int(conf["timezone"][3:])
                 conf["timezone"] = f"Etc/GMT{-offset:+}"
+
+    # join deadlines that are the exact same
+    for conf in conferneces.values():
+        deadline_dates = {dl["deadline"] for dl in conf["timeline"]}
+        timeline = [dict(deadline=dl) for dl in sorted(deadline_dates)]
+        for tldl in timeline:
+            for cnfdl in conf["timeline"]:
+                if tldl["deadline"] == cnfdl["deadline"]:
+                    for key in ["abstractDeadline", "note"]:
+                        if key in cnfdl and key not in tldl:
+                            tldl[key] = cnfdl[key].strip()
+        conf["timeline"] = timeline
 
     return conferneces
