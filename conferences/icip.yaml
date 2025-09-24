@@ -1,6 +1,6 @@
 icip2023:
   dataSrc: ccf-deadlines
-  h5Index: 66
+  h5Index: 55
   id: icip2023
   isApproximateDeadline: false
   rating: B
@@ -15,7 +15,7 @@ icip2024:
   conferenceEndDate: '2024-10-30'
   conferenceStartDate: '2024-10-27'
   dataSrc: off-website
-  h5Index: 66
+  h5Index: 55
   id: icip2024
   isApproximateDeadline: false
   location: Abu Dhabi, UAE
@@ -30,7 +30,7 @@ icip2025:
   conferenceEndDate: '2025-09-14'
   conferenceStartDate: '2025-09-17'
   dataSrc: off-website
-  h5Index: 66
+  h5Index: 55
   id: icip2025
   isApproximateDeadline: false
   location: Anchorage, Alaska
@@ -45,7 +45,7 @@ icip2026:
   conferenceEndDate: '2026-09-22'
   conferenceStartDate: '2026-09-17'
   dataSrc: estimate
-  h5Index: 66
+  h5Index: 55
   id: icip2026
   isApproximateDeadline: true
   rating: B
@@ -58,7 +58,7 @@ icip2027:
   conferenceEndDate: '2027-09-22'
   conferenceStartDate: '2027-09-17'
   dataSrc: estimate
-  h5Index: 66
+  h5Index: 55
   id: icip2027
   isApproximateDeadline: true
   rating: B

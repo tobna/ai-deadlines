@@ -1,6 +1,6 @@
 aistats2022:
   dataSrc: ccf-deadlines
-  h5Index: 100
+  h5Index: 101
   id: aistats2022
   isApproximateDeadline: false
   rating: A
@@ -15,7 +15,7 @@ aistats2024:
   conferenceEndDate: '2024-05-04'
   conferenceStartDate: '2024-05-02'
   dataSrc: off-website
-  h5Index: 100
+  h5Index: 101
   id: aistats2024
   isApproximateDeadline: false
   location: Valencia, Spain
@@ -31,7 +31,7 @@ aistats2025:
   conferenceEndDate: '2025-05-05'
   conferenceStartDate: '2025-05-03'
   dataSrc: hf-repo
-  h5Index: 100
+  h5Index: 101
   id: aistats2025
   isApproximateDeadline: false
   location: TBA
@@ -48,7 +48,7 @@ aistats2026:
   conferenceEndDate: '2026-05-05'
   conferenceStartDate: '2026-05-02'
   dataSrc: hf-repo
-  h5Index: 100
+  h5Index: 101
   id: aistats2026
   isApproximateDeadline: false
   location: TBA
@@ -65,7 +65,7 @@ aistats2027:
   conferenceEndDate: '2027-05-07'
   conferenceStartDate: '2027-05-02'
   dataSrc: estimate
-  h5Index: 100
+  h5Index: 101
   id: aistats2027
   isApproximateDeadline: true
   rating: A

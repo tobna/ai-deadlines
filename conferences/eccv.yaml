@@ -1,6 +1,6 @@
 eccv2022:
   dataSrc: ccf-deadlines
-  h5Index: 206
+  h5Index: 262
   id: eccv2022
   isApproximateDeadline: false
   rating: A*
@@ -15,7 +15,7 @@ eccv2024:
   conferenceEndDate: '2024-10-04'
   conferenceStartDate: '2024-10-01'
   dataSrc: off-website
-  h5Index: 206
+  h5Index: 262
   id: eccv2024
   isApproximateDeadline: false
   rating: A*
@@ -30,7 +30,7 @@ eccv2026:
   conferenceEndDate: '2026-09-13'
   conferenceStartDate: '2026-09-08'
   dataSrc: hf-repo
-  h5Index: 206
+  h5Index: 262
   id: eccv2026
   isApproximateDeadline: false
   location: "Malm\xF6, Sweden"

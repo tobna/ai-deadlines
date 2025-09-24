@@ -1,6 +1,6 @@
 cvpr2022:
   dataSrc: ccf-deadlines
-  h5Index: 440
+  h5Index: 450
   id: cvpr2022
   isApproximateDeadline: false
   rating: A*
@@ -18,7 +18,7 @@ cvpr2023:
   conferenceEndDate: '2023-06-22'
   conferenceStartDate: '2023-06-20'
   dataSrc: off-website
-  h5Index: 440
+  h5Index: 450
   id: cvpr2023
   isApproximateDeadline: false
   rating: A*
@@ -33,7 +33,7 @@ cvpr2024:
   conferenceEndDate: '2024-06-21'
   conferenceStartDate: '2024-06-19'
   dataSrc: off-website
-  h5Index: 440
+  h5Index: 450
   id: cvpr2024
   isApproximateDeadline: false
   rating: A*
@@ -48,7 +48,7 @@ cvpr2025:
   conferenceEndDate: '2025-06-14'
   conferenceStartDate: '2025-06-13'
   dataSrc: off-website
-  h5Index: 440
+  h5Index: 450
   id: cvpr2025
   isApproximateDeadline: false
   location: Music City Center, Nashville, USA
@@ -65,7 +65,7 @@ cvpr2026:
   conferenceEndDate: '2026-06-07'
   conferenceStartDate: '2026-06-05'
   dataSrc: hf-repo
-  h5Index: 440
+  h5Index: 450
   id: cvpr2026
   isApproximateDeadline: false
   location: Denver Convention Center, Colorado, USA
@@ -82,7 +82,7 @@ cvpr2027:
   conferenceEndDate: '2027-06-18'
   conferenceStartDate: '2027-06-13'
   dataSrc: estimate
-  h5Index: 440
+  h5Index: 450
   id: cvpr2027
   isApproximateDeadline: true
   rating: A*

@@ -1,6 +1,6 @@
 coling2022:
   dataSrc: ccf-deadlines
-  h5Index: 65
+  h5Index: 81
   id: coling2022
   isApproximateDeadline: false
   rating: B
@@ -14,7 +14,7 @@ coling2022:
   website: https://coling2022.org/
 coling2024:
   dataSrc: ccf-deadlines
-  h5Index: 65
+  h5Index: 81
   id: coling2024
   isApproximateDeadline: false
   rating: B
@@ -29,7 +29,7 @@ coling2025:
   conferenceEndDate: '2025-01-24'
   conferenceStartDate: '2025-01-19'
   dataSrc: hf-repo
-  h5Index: 65
+  h5Index: 81
   id: coling2025
   isApproximateDeadline: false
   location: Abu Dhabi National Exhibition Centre (ADNEC), Abu Dhabi, UAE

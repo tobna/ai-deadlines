@@ -1,6 +1,6 @@
 aaai2022:
   dataSrc: ccf-deadlines
-  h5Index: 220
+  h5Index: 232
   id: aaai2022
   isApproximateDeadline: false
   rating: A*
@@ -17,7 +17,7 @@ aaai2022:
   website: https://aaai.org/Conferences/AAAI-22/
 aaai2023:
   dataSrc: ccf-deadlines
-  h5Index: 220
+  h5Index: 232
   id: aaai2023
   isApproximateDeadline: false
   rating: A*
@@ -30,7 +30,7 @@ aaai2023:
   website: https://www.aaai.org/Conferences/AAAI-23/
 aaai2024:
   dataSrc: ccf-deadlines
-  h5Index: 220
+  h5Index: 232
   id: aaai2024
   isApproximateDeadline: false
   rating: A*
@@ -45,7 +45,7 @@ aaai2025:
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-25'
   dataSrc: hf-repo
-  h5Index: 220
+  h5Index: 232
   id: aaai2025
   isApproximateDeadline: false
   location: Pennsylvania Convention Center, Philadelphia, USA
@@ -62,7 +62,7 @@ aaai2026:
   conferenceEndDate: '2026-01-27'
   conferenceStartDate: '2026-01-20'
   dataSrc: hf-repo
-  h5Index: 220
+  h5Index: 232
   id: aaai2026
   isApproximateDeadline: false
   location: Singapore EXPO, Singapore
@@ -79,7 +79,7 @@ aaai2027:
   conferenceEndDate: '2027-01-25'
   conferenceStartDate: '2027-01-20'
   dataSrc: estimate
-  h5Index: 220
+  h5Index: 232
   id: aaai2027
   isApproximateDeadline: true
   rating: A*

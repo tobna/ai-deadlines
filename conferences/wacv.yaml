@@ -1,6 +1,6 @@
 wacv2021:
   dataSrc: off-website
-  h5Index: 109
+  h5Index: 131
   id: wacv2021
   isApproximateDeadline: false
   rating: A
@@ -17,7 +17,7 @@ wacv2021:
   website: https://wacv2021.thecvf.com
 wacv2023:
   dataSrc: off-website
-  h5Index: 109
+  h5Index: 131
   id: wacv2023
   isApproximateDeadline: false
   rating: A
@@ -32,7 +32,7 @@ wacv2023:
   website: https://wacv2023.thecvf.com
 wacv2024:
   dataSrc: off-website
-  h5Index: 109
+  h5Index: 131
   id: wacv2024
   isApproximateDeadline: false
   rating: A
@@ -49,7 +49,7 @@ wacv2025:
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-28'
   dataSrc: hf-repo
-  h5Index: 109
+  h5Index: 131
   id: wacv2025
   isApproximateDeadline: false
   location: JW Marriott Starpass in Tucson, Arizona, USA
@@ -66,7 +66,7 @@ wacv2026:
   conferenceEndDate: '2026-03-10'
   conferenceStartDate: '2026-03-06'
   dataSrc: off-website
-  h5Index: 109
+  h5Index: 131
   id: wacv2026
   isApproximateDeadline: false
   location: JW Marriott Starpass in Tucson, Arizona, USA
@@ -87,7 +87,7 @@ wacv2027:
   conferenceEndDate: '2027-03-11'
   conferenceStartDate: '2027-03-06'
   dataSrc: estimate
-  h5Index: 109
+  h5Index: 131
   id: wacv2027
   isApproximateDeadline: true
   rating: A

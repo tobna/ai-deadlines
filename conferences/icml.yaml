@@ -2,7 +2,7 @@ icml2017:
   conferenceEndDate: '2017-09-04'
   conferenceStartDate: '2017-08-07'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2017
   isApproximateDeadline: false
   rating: A*
@@ -17,7 +17,7 @@ icml2018:
   conferenceEndDate: '2018-07-13'
   conferenceStartDate: '2018-07-11'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2018
   isApproximateDeadline: false
   rating: A*
@@ -31,7 +31,7 @@ icml2019:
   conferenceEndDate: '2019-07-13'
   conferenceStartDate: '2019-07-11'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2019
   isApproximateDeadline: false
   rating: A*
@@ -46,7 +46,7 @@ icml2020:
   conferenceEndDate: '2020-07-18'
   conferenceStartDate: '2020-07-13'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2020
   isApproximateDeadline: false
   rating: A*
@@ -61,7 +61,7 @@ icml2021:
   conferenceEndDate: '2021-07-24'
   conferenceStartDate: '2021-07-18'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2021
   isApproximateDeadline: false
   rating: A*
@@ -76,7 +76,7 @@ icml2022:
   conferenceEndDate: '2022-07-21'
   conferenceStartDate: '2022-07-19'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2022
   isApproximateDeadline: false
   rating: A*
@@ -91,7 +91,7 @@ icml2023:
   conferenceEndDate: '2023-07-27'
   conferenceStartDate: '2023-07-25'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2023
   isApproximateDeadline: false
   rating: A*
@@ -105,7 +105,7 @@ icml2024:
   conferenceEndDate: '2024-07-25'
   conferenceStartDate: '2024-07-23'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2024
   isApproximateDeadline: false
   rating: A*
@@ -119,7 +119,7 @@ icml2025:
   conferenceEndDate: '2025-07-17'
   conferenceStartDate: '2025-07-15'
   dataSrc: off-website
-  h5Index: 268
+  h5Index: 272
   id: icml2025
   isApproximateDeadline: false
   location: Vancouver Convention Center
@@ -136,7 +136,7 @@ icml2026:
   conferenceEndDate: '2026-07-20'
   conferenceStartDate: '2026-07-15'
   dataSrc: estimate
-  h5Index: 268
+  h5Index: 272
   id: icml2026
   isApproximateDeadline: true
   rating: A*
@@ -150,7 +150,7 @@ icml2027:
   conferenceEndDate: '2027-07-20'
   conferenceStartDate: '2027-07-15'
   dataSrc: estimate
-  h5Index: 268
+  h5Index: 272
   id: icml2027
   isApproximateDeadline: true
   rating: A*

@@ -1,6 +1,6 @@
 iccv2021:
   dataSrc: ccf-deadlines
-  h5Index: 291
+  h5Index: 256
   id: iccv2021
   isApproximateDeadline: false
   rating: A*
@@ -14,7 +14,7 @@ iccv2021:
   website: http://iccv2021.thecvf.com/home/
 iccv2023:
   dataSrc: ccf-deadlines
-  h5Index: 291
+  h5Index: 256
   id: iccv2023
   isApproximateDeadline: false
   rating: A*
@@ -28,7 +28,7 @@ iccv2025:
   conferenceEndDate: '2025-10-23'
   conferenceStartDate: '2025-10-21'
   dataSrc: off-website
-  h5Index: 291
+  h5Index: 256
   id: iccv2025
   isApproximateDeadline: false
   location: Honolulu, USA

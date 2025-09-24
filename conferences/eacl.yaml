@@ -1,6 +1,6 @@
 eacl2024:
   dataSrc: ccf-deadlines
-  h5Index: 56
+  h5Index: 77
   id: eacl2024
   isApproximateDeadline: false
   rating: A
@@ -14,7 +14,7 @@ eacl2024:
   website: https://2024.eacl.org/
 eacl2026:
   dataSrc: ccf-deadlines
-  h5Index: 56
+  h5Index: 77
   id: eacl2026
   isApproximateDeadline: false
   rating: A

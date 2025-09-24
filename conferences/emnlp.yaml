@@ -1,6 +1,6 @@
 emnlp2022:
   dataSrc: ccf-deadlines
-  h5Index: 193
+  h5Index: 218
   id: emnlp2022
   isApproximateDeadline: false
   rating: A*
@@ -14,7 +14,7 @@ emnlp2022:
   website: https://2022.emnlp.org
 emnlp2023:
   dataSrc: ccf-deadlines
-  h5Index: 193
+  h5Index: 218
   id: emnlp2023
   isApproximateDeadline: false
   rating: A*
@@ -27,7 +27,7 @@ emnlp2023:
   website: https://2023.emnlp.org
 emnlp2024:
   dataSrc: ccf-deadlines
-  h5Index: 193
+  h5Index: 218
   id: emnlp2024
   isApproximateDeadline: false
   rating: A*
@@ -41,7 +41,7 @@ emnlp2025:
   conferenceEndDate: '2025-11-09'
   conferenceStartDate: '2025-11-05'
   dataSrc: hf-repo
-  h5Index: 193
+  h5Index: 218
   id: emnlp2025
   isApproximateDeadline: false
   location: Suzhou, China
