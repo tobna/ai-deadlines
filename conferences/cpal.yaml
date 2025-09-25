@@ -6,10 +6,20 @@ cpal2025:
   isApproximateDeadline: false
   location: California, USA
   shortname: CPAL 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - deadline: '2024-11-26T11:59:59Z'
   timezone: AoE
+  title: The Conference on Parsimony and Learning
+  website: https://cpal.cc/
+cpal2026:
+  dataSrc: ccf-deadlines
+  id: cpal2026
+  isApproximateDeadline: false
+  shortname: CPAL 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-12-05T23:59:59Z'
   title: The Conference on Parsimony and Learning
   website: https://cpal.cc/

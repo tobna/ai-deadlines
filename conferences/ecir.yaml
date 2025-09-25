@@ -7,7 +7,7 @@ ecir2025:
   location: IMT School for Advanced Studies Lucca, Lucca, Italy
   rating: A
   shortname: ECIR 2025
-  tags:
+  tags: &id001
   - DM
   timeline:
   - abstractDeadline: '2024-10-03T11:59:59Z'
@@ -15,3 +15,15 @@ ecir2025:
   timezone: UTC-12
   title: European Conference on Information Retrieval
   website: https://ecir2025.eu/
+ecir2026:
+  dataSrc: ccf-deadlines
+  id: ecir2026
+  isApproximateDeadline: false
+  rating: A
+  shortname: ECIR 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2025-09-25T23:59:59Z'
+    deadline: '2025-10-02T23:59:59Z'
+  title: European Conference on Information Retrieval
+  website: https://ecir2026.eu/
