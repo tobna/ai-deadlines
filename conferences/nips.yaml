@@ -1,0 +1,14 @@
+nips2027:
+  conferenceEndDate: '2027-12-07'
+  conferenceStartDate: '2027-12-02'
+  dataSrc: estimate
+  h5Index: 371
+  id: nips2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: NIPS 2027
+  tags:
+  - ML
+  timeline:
+  - deadline: '2027-05-15T23:59:59Z'
+  title: Neural Information Processing Systems
