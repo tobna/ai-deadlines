@@ -6,9 +6,32 @@ roman2025:
   isApproximateDeadline: false
   location: Eindhoven, The Netherlands
   shortname: Ro-Man 2025
-  tags:
+  tags: &id001
   - RO
   timeline:
   - deadline: '2025-03-20T22:59:59Z'
   timezone: America/Los_Angeles
   website: http://www.ro-man2025.org
+roman2026:
+  conferenceEndDate: '2026-08-28'
+  conferenceStartDate: '2026-08-24'
+  dataSrc: ninoduarte-git
+  id: roman2026
+  isApproximateDeadline: false
+  location: Fukuoka, Japan
+  shortname: Ro-Man 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-03-15T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: https://www.brain.kyutech.ac.jp/~s-yasukawa/ro-man2026/
+roman2027:
+  conferenceEndDate: '2027-08-29'
+  conferenceStartDate: '2027-08-24'
+  dataSrc: estimate
+  id: roman2027
+  isApproximateDeadline: true
+  shortname: Ro-Man 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-03-15T23:59:59Z'

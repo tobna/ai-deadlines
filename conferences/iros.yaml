@@ -39,3 +39,30 @@ iros2025:
   timezone: UTC-8
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
   website: http://www.iros25.org/
+iros2026:
+  conferenceEndDate: '2026-10-25'
+  conferenceStartDate: '2026-10-19'
+  dataSrc: ninoduarte-git
+  h5Index: 86
+  id: iros2026
+  isApproximateDeadline: false
+  location: Pittsburgh, USA
+  rating: A
+  shortname: iROS 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-03-01T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: http://www.iros26.org/
+iros2027:
+  conferenceEndDate: '2027-10-24'
+  conferenceStartDate: '2027-10-19'
+  dataSrc: estimate
+  h5Index: 86
+  id: iros2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: iROS 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-03-01T23:59:59Z'

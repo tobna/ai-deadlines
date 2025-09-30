@@ -27,3 +27,28 @@ corl2025:
   timezone: AoE
   title: The Conference on Robot Learning
   website: https://www.corl.org/
+corl2026:
+  conferenceEndDate: '2026-09-30'
+  conferenceStartDate: '2026-09-27'
+  dataSrc: ninoduarte-git
+  h5Index: 76
+  id: corl2026
+  isApproximateDeadline: false
+  location: NA, NA
+  shortname: CoRL 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-04-23T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: http://www.corl.org/
+corl2027:
+  conferenceEndDate: '2027-10-02'
+  conferenceStartDate: '2027-09-27'
+  dataSrc: estimate
+  h5Index: 76
+  id: corl2027
+  isApproximateDeadline: true
+  shortname: CoRL 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-04-23T23:59:59Z'
