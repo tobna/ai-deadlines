@@ -36,3 +36,26 @@ rss2025:
   timezone: AoE
   title: Robotics Science and Systems
   website: https://roboticsconference.org
+rss2026:
+  conferenceEndDate: '2026-07-25'
+  conferenceStartDate: '2026-07-21'
+  dataSrc: ninoduarte-git
+  id: rss2026
+  isApproximateDeadline: false
+  location: Sydney, Australia
+  shortname: RSS 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-01-31T22:59:59Z'
+  timezone: CET
+  website: https://roboticsconference.org/
+rss2027:
+  conferenceEndDate: '2027-07-26'
+  conferenceStartDate: '2027-07-21'
+  dataSrc: estimate
+  id: rss2027
+  isApproximateDeadline: true
+  shortname: RSS 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-01-31T22:59:59Z'
