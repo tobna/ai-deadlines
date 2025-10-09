@@ -55,3 +55,15 @@ acl2025:
   timezone: UTC-12
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2025.aclweb.org/
+acl2026:
+  dataSrc: ccf-deadlines
+  h5Index: 236
+  id: acl2026
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ACL 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-01-05T23:59:59Z'
+  title: Annual Meeting of the Association for Computational Linguistics
+  website: https://2026.aclweb.org/
