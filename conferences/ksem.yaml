@@ -36,3 +36,14 @@ ksem2025:
   timezone: UTC+0
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2025.scimeeting.cn/
+ksem2026:
+  dataSrc: ccf-deadlines
+  id: ksem2026
+  isApproximateDeadline: false
+  rating: C
+  shortname: KSEM 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-01-15T23:59:59Z'
+  title: International Conference on Knowledge Science, Engineering and Management
+  website: https://ksem2026.rosc.org.cn/

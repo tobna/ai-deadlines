@@ -4,9 +4,20 @@ ijcb2025:
   isApproximateDeadline: false
   rating: B
   shortname: IJCB 2025
-  tags:
+  tags: &id001
   - HCI
   timeline:
   - deadline: '2025-04-11T23:59:59Z'
   title: International Joint Conference on Biometrics
   website: https://ijcb2025.ieee-biometrics.org/
+ijcb2026:
+  dataSrc: ccf-deadlines
+  id: ijcb2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCB 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-04-10T23:59:59Z'
+  title: International Joint Conference on Biometrics
+  website: https://ijcb2026.ieee-biometrics.org/
