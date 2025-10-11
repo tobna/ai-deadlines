@@ -26,3 +26,14 @@ alt2025:
   timezone: UTC+0
   title: International Conference on Algorithmic Learning Theory
   website: https://algorithmiclearningtheory.org/alt2025/
+alt2026:
+  dataSrc: ccf-deadlines
+  id: alt2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: ALT 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-10-02T09:59:59Z'
+  title: International Conference on Algorithmic Learning Theory
+  website: https://algorithmiclearningtheory.org/alt2026/
