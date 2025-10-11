@@ -4,7 +4,7 @@ iccbr2024:
   isApproximateDeadline: false
   rating: C
   shortname: ICCBR 2024
-  tags: []
+  tags: &id001 []
   timeline:
   - deadline: '2024-02-26T00:00:00Z'
     note: Early Submission
@@ -12,3 +12,14 @@ iccbr2024:
     note: Late Submission
   title: International Conference on Case-Based Reasoning
   website: https://www.iccbr2024.org/
+iccbr2026:
+  dataSrc: ccf-deadlines
+  id: iccbr2026
+  isApproximateDeadline: false
+  rating: C
+  shortname: ICCBR 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-03-20T23:59:59Z'
+  title: International Conference on Case-Based Reasoning
+  website: https://2026.iccbr.org/
