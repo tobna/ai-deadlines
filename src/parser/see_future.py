@@ -10,6 +10,7 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
     real_conferences = {key: conf for key, conf in conferences.items() if not conf["isApproximateDeadline"]}
     deadlines = [conf["timeline"][0]["deadline"] for conf in real_conferences.values()]
     if len(deadlines) < 2:
+        print(f"too few past deadlines for future estimation of {list(conferences.keys())}")
         return {}
 
     deadlines = [dateparser.parse(dl) if isinstance(dl, str) else dl for dl in deadlines]
@@ -63,7 +64,9 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
             data["h5Index"] = last_conf["h5Index"]
         if data["id"] not in conferences:
             future_conferences[data["id"]] = data
-            print("estimate", data["id"])
+            print("estimated", data["id"])
+        else:
+            print(f"{data['id']} already in conferences")
         next_year += yearly_rythm
 
     return future_conferences
