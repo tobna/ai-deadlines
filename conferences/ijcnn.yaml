@@ -1,4 +1,6 @@
 ijcnn2024:
+  conferenceEndDate: '2024-07-05'
+  conferenceStartDate: '2024-06-30'
   dataSrc: ccf-deadlines
   id: ijcnn2024
   isApproximateDeadline: false

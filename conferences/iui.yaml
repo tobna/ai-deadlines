@@ -1,4 +1,6 @@
 iui2024:
+  conferenceEndDate: '2024-03-21'
+  conferenceStartDate: '2024-03-18'
   dataSrc: ccf-deadlines
   id: iui2024
   isApproximateDeadline: false
@@ -12,6 +14,8 @@ iui2024:
   title: ACM Conference on Intelligent User Interfaces
   website: https://iui.acm.org/2024/
 iui2025:
+  conferenceEndDate: '2025-03-27'
+  conferenceStartDate: '2025-03-24'
   dataSrc: ccf-deadlines
   id: iui2025
   isApproximateDeadline: false
@@ -39,3 +43,16 @@ iui2026:
   timezone: Etc/GMT-2
   title: ACM Conference on Intelligent User Interfaces
   website: https://iui.acm.org/2026/
+iui2027:
+  conferenceEndDate: '2027-03-28'
+  conferenceStartDate: '2027-03-23'
+  dataSrc: estimate
+  id: iui2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: IUI 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-10-11T11:59:59Z'
+    note: 'From IUI 2026: Abstract deadline on 2025-10-03 23:59:59 UTC-12!'
+  title: ACM Conference on Intelligent User Interfaces

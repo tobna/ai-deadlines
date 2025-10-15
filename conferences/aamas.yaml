@@ -1,4 +1,6 @@
 aamas2023:
+  conferenceEndDate: '2023-06-02'
+  conferenceStartDate: '2023-05-29'
   dataSrc: ccf-deadlines
   id: aamas2023
   isApproximateDeadline: false
@@ -13,6 +15,8 @@ aamas2023:
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://aamas2023.soton.ac.uk/
 aamas2024:
+  conferenceEndDate: '2024-05-10'
+  conferenceStartDate: '2024-05-06'
   dataSrc: ccf-deadlines
   id: aamas2024
   isApproximateDeadline: false

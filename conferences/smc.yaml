@@ -1,4 +1,6 @@
 smc2023:
+  conferenceEndDate: '2023-10-04'
+  conferenceStartDate: '2023-10-01'
   dataSrc: ccf-deadlines
   id: smc2023
   isApproximateDeadline: false
@@ -11,6 +13,8 @@ smc2023:
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://ieeesmc2023.org/
 smc2024:
+  conferenceEndDate: '2024-10-10'
+  conferenceStartDate: '2024-10-07'
   dataSrc: ccf-deadlines
   id: smc2024
   isApproximateDeadline: false
@@ -22,8 +26,8 @@ smc2024:
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2024.org/
 smc2025:
-  conferenceEndDate: '2025-10-10'
-  conferenceStartDate: '2025-10-07'
+  conferenceEndDate: '2025-10-08'
+  conferenceStartDate: '2025-10-05'
   dataSrc: ccf-deadlines
   id: smc2025
   isApproximateDeadline: false
@@ -36,3 +40,27 @@ smc2025:
   timezone: America/Los_Angeles
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2025.org/
+smc2026:
+  conferenceEndDate: '2026-10-10'
+  conferenceStartDate: '2026-10-05'
+  dataSrc: estimate
+  id: smc2026
+  isApproximateDeadline: true
+  rating: B
+  shortname: SMC 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-05-04T23:59:59Z'
+  title: IEEE International Conference on Systems, Man, and Cybernetics
+smc2027:
+  conferenceEndDate: '2027-10-10'
+  conferenceStartDate: '2027-10-05'
+  dataSrc: estimate
+  id: smc2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: SMC 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-05-04T23:59:59Z'
+  title: IEEE International Conference on Systems, Man, and Cybernetics

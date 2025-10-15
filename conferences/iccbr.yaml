@@ -1,4 +1,6 @@
 iccbr2024:
+  conferenceEndDate: '2024-06-04'
+  conferenceStartDate: '2024-06-01'
   dataSrc: ccf-deadlines
   id: iccbr2024
   isApproximateDeadline: false
@@ -13,6 +15,8 @@ iccbr2024:
   title: International Conference on Case-Based Reasoning
   website: https://www.iccbr2024.org/
 iccbr2026:
+  conferenceEndDate: '2026-08-16'
+  conferenceStartDate: '2026-08-13'
   dataSrc: ccf-deadlines
   id: iccbr2026
   isApproximateDeadline: false

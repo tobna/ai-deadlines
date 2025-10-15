@@ -1,4 +1,6 @@
 coling2022:
+  conferenceEndDate: '2022-06-17'
+  conferenceStartDate: '2022-06-12'
   dataSrc: ccf-deadlines
   h5Index: 81
   id: coling2022
@@ -13,6 +15,8 @@ coling2022:
   title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
   website: https://coling2022.org/
 coling2024:
+  conferenceEndDate: '2024-05-25'
+  conferenceStartDate: '2024-05-20'
   dataSrc: ccf-deadlines
   h5Index: 81
   id: coling2024
@@ -41,3 +45,29 @@ coling2025:
   timezone: UTC-12
   title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
   website: https://coling2025.org/
+coling2026:
+  conferenceEndDate: '2026-01-24'
+  conferenceStartDate: '2026-01-19'
+  dataSrc: estimate
+  h5Index: 81
+  id: coling2026
+  isApproximateDeadline: true
+  rating: B
+  shortname: COLING 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-09-17T11:59:59Z'
+  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+coling2027:
+  conferenceEndDate: '2027-01-24'
+  conferenceStartDate: '2027-01-19'
+  dataSrc: estimate
+  h5Index: 81
+  id: coling2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: COLING 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-09-17T11:59:59Z'
+  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS

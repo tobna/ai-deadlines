@@ -1,4 +1,6 @@
 colt2022:
+  conferenceEndDate: '2022-07-05'
+  conferenceStartDate: '2022-07-02'
   dataSrc: ccf-deadlines
   id: colt2022
   isApproximateDeadline: false
@@ -11,6 +13,8 @@ colt2022:
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2022/index.html
 colt2024:
+  conferenceEndDate: '2024-07-03'
+  conferenceStartDate: '2024-06-30'
   dataSrc: ccf-deadlines
   id: colt2024
   isApproximateDeadline: false
@@ -36,3 +40,15 @@ colt2025:
   timezone: UTC-5
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2025/
+colt2027:
+  conferenceEndDate: '2027-07-05'
+  conferenceStartDate: '2027-06-30'
+  dataSrc: estimate
+  id: colt2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: COLT 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-02-06T21:59:59Z'
+  title: Annual Conference on Learning Theory

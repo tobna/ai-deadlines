@@ -1,4 +1,6 @@
 interspeech2022:
+  conferenceEndDate: '2022-09-22'
+  conferenceStartDate: '2022-09-18'
   dataSrc: ccf-deadlines
   id: interspeech2022
   isApproximateDeadline: false
@@ -11,6 +13,8 @@ interspeech2022:
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2022.org/
 interspeech2023:
+  conferenceEndDate: '2023-08-24'
+  conferenceStartDate: '2023-08-20'
   dataSrc: ccf-deadlines
   id: interspeech2023
   isApproximateDeadline: false
@@ -22,6 +26,8 @@ interspeech2023:
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2023.org/
 interspeech2024:
+  conferenceEndDate: '2024-09-05'
+  conferenceStartDate: '2024-09-01'
   dataSrc: ccf-deadlines
   id: interspeech2024
   isApproximateDeadline: false
@@ -34,6 +40,8 @@ interspeech2024:
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2024.org/
 interspeech2025:
+  conferenceEndDate: '2025-08-22'
+  conferenceStartDate: '2025-08-17'
   dataSrc: ccf-deadlines
   id: interspeech2025
   isApproximateDeadline: false
@@ -59,3 +67,15 @@ interspeech2026:
   timezone: UTC-12
   title: Interspeech
   website: https://interspeech2026.org
+interspeech2027:
+  conferenceEndDate: '2027-10-02'
+  conferenceStartDate: '2027-09-27'
+  dataSrc: estimate
+  id: interspeech2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: Interspeech 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-03-03T11:59:59Z'
+  title: Interspeech

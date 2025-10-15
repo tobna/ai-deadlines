@@ -1,4 +1,6 @@
 gecco2025:
+  conferenceEndDate: '2025-07-18'
+  conferenceStartDate: '2025-07-14'
   dataSrc: ccf-deadlines
   id: gecco2025
   isApproximateDeadline: false

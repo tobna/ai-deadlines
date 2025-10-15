@@ -1,4 +1,6 @@
 log2025:
+  conferenceEndDate: '2025-12-12'
+  conferenceStartDate: '2025-12-10'
   dataSrc: ccf-deadlines
   id: log2025
   isApproximateDeadline: false

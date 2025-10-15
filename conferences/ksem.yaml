@@ -1,4 +1,6 @@
 ksem2023:
+  conferenceEndDate: '2023-08-18'
+  conferenceStartDate: '2023-08-16'
   dataSrc: ccf-deadlines
   id: ksem2023
   isApproximateDeadline: false
@@ -11,6 +13,8 @@ ksem2023:
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://www.ksem2023.conferences.academy/
 ksem2024:
+  conferenceEndDate: '2024-08-18'
+  conferenceStartDate: '2024-08-16'
   dataSrc: ccf-deadlines
   id: ksem2024
   isApproximateDeadline: false
@@ -37,6 +41,8 @@ ksem2025:
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2025.scimeeting.cn/
 ksem2026:
+  conferenceEndDate: '2026-07-19'
+  conferenceStartDate: '2026-07-17'
   dataSrc: ccf-deadlines
   id: ksem2026
   isApproximateDeadline: false
@@ -47,3 +53,15 @@ ksem2026:
   - deadline: '2026-01-15T23:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2026.rosc.org.cn/
+ksem2027:
+  conferenceEndDate: '2027-07-22'
+  conferenceStartDate: '2027-07-17'
+  dataSrc: estimate
+  id: ksem2027
+  isApproximateDeadline: true
+  rating: C
+  shortname: KSEM 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-01-15T23:59:59Z'
+  title: International Conference on Knowledge Science, Engineering and Management

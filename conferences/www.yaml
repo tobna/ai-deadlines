@@ -1,4 +1,6 @@
 www2021:
+  conferenceEndDate: '2021-04-23'
+  conferenceStartDate: '2021-04-19'
   dataSrc: ccf-deadlines
   id: www2021
   isApproximateDeadline: false
@@ -11,6 +13,8 @@ www2021:
   title: International World Wide Web Conferences
   website: https://www2021.thewebconf.org/
 www2022:
+  conferenceEndDate: '2022-04-29'
+  conferenceStartDate: '2022-04-25'
   dataSrc: ccf-deadlines
   id: www2022
   isApproximateDeadline: false
@@ -23,6 +27,8 @@ www2022:
   title: International World Wide Web Conferences
   website: https://www2022.thewebconf.org/
 www2023:
+  conferenceEndDate: '2023-05-05'
+  conferenceStartDate: '2023-05-01'
   dataSrc: ccf-deadlines
   id: www2023
   isApproximateDeadline: false
@@ -35,6 +41,8 @@ www2023:
   title: International World Wide Web Conferences
   website: https://www2023.thewebconf.org/
 www2024:
+  conferenceEndDate: '2024-05-17'
+  conferenceStartDate: '2024-05-13'
   dataSrc: ccf-deadlines
   id: www2024
   isApproximateDeadline: false
@@ -47,6 +55,8 @@ www2024:
   title: International World Wide Web Conferences
   website: https://www2024.thewebconf.org/
 www2025:
+  conferenceEndDate: '2025-05-02'
+  conferenceStartDate: '2025-04-28'
   dataSrc: ccf-deadlines
   id: www2025
   isApproximateDeadline: false
@@ -75,3 +85,17 @@ www2026:
   timezone: Etc/GMT-2
   title: The Web Conference
   website: https://www2026.thewebconf.org/
+www2027:
+  conferenceEndDate: '2027-04-18'
+  conferenceStartDate: '2027-04-13'
+  dataSrc: estimate
+  id: www2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: WWW 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-09-30T21:59:59Z'
+    deadline: '2026-10-07T21:59:59Z'
+    note: 'From WWW 2026: Paper Submission'
+  title: The Web Conference

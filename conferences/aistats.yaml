@@ -1,4 +1,6 @@
 aistats2022:
+  conferenceEndDate: '2022-04-01'
+  conferenceStartDate: '2022-03-30'
   dataSrc: ccf-deadlines
   h5Index: 101
   id: aistats2022

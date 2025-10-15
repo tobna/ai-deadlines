@@ -13,6 +13,8 @@ eacl2024:
     Linguistics
   website: https://2024.eacl.org/
 eacl2026:
+  conferenceEndDate: '2026-03-29'
+  conferenceStartDate: '2026-03-24'
   dataSrc: ccf-deadlines
   h5Index: 77
   id: eacl2026

@@ -1,4 +1,6 @@
 icann2023:
+  conferenceEndDate: '2023-09-29'
+  conferenceStartDate: '2023-09-26'
   dataSrc: ccf-deadlines
   id: icann2023
   isApproximateDeadline: false

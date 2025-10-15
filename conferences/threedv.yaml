@@ -1,4 +1,6 @@
 threedv2024:
+  conferenceEndDate: '2024-03-21'
+  conferenceStartDate: '2024-03-18'
   dataSrc: ccf-deadlines
   h5Index: 56
   id: threedv2024
@@ -11,6 +13,8 @@ threedv2024:
   title: International Conference on 3D Vision
   website: https://3dvconf.github.io/2024/
 threedv2025:
+  conferenceEndDate: '2025-03-28'
+  conferenceStartDate: '2025-03-25'
   dataSrc: ccf-deadlines
   h5Index: 56
   id: threedv2025
@@ -22,7 +26,7 @@ threedv2025:
   title: International Conference on 3D Vision
   website: https://3dvconf.github.io/2025/
 threedv2026:
-  conferenceEndDate: '2026-03-28'
+  conferenceEndDate: '2026-03-27'
   conferenceStartDate: '2026-03-24'
   dataSrc: ccf-deadlines
   h5Index: 56
@@ -36,3 +40,15 @@ threedv2026:
   timezone: America/Los_Angeles
   title: International Conference on 3D Vision
   website: https://3dvconf.github.io/2026/
+threedv2027:
+  conferenceEndDate: '2027-03-29'
+  conferenceStartDate: '2027-03-24'
+  dataSrc: estimate
+  h5Index: 56
+  id: threedv2027
+  isApproximateDeadline: true
+  shortname: 3DV 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-08-18T23:59:59Z'
+  title: International Conference on 3D Vision

@@ -1,4 +1,6 @@
 aaai2022:
+  conferenceEndDate: '2022-03-01'
+  conferenceStartDate: '2022-02-22'
   dataSrc: ccf-deadlines
   h5Index: 232
   id: aaai2022
@@ -16,6 +18,8 @@ aaai2022:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/Conferences/AAAI-22/
 aaai2023:
+  conferenceEndDate: '2023-02-14'
+  conferenceStartDate: '2023-02-07'
   dataSrc: ccf-deadlines
   h5Index: 232
   id: aaai2023
@@ -29,6 +33,8 @@ aaai2023:
   title: AAAI Conference on Artificial Intelligence
   website: https://www.aaai.org/Conferences/AAAI-23/
 aaai2024:
+  conferenceEndDate: '2024-02-27'
+  conferenceStartDate: '2024-02-20'
   dataSrc: ccf-deadlines
   h5Index: 232
   id: aaai2024

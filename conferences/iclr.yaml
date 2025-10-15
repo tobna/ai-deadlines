@@ -1,4 +1,6 @@
 iclr2022:
+  conferenceEndDate: '2022-04-29'
+  conferenceStartDate: '2022-04-25'
   dataSrc: ccf-deadlines
   h5Index: 362
   id: iclr2022
@@ -19,6 +21,8 @@ iclr2022:
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2022
 iclr2023:
+  conferenceEndDate: '2023-05-05'
+  conferenceStartDate: '2023-05-01'
   dataSrc: ccf-deadlines
   h5Index: 362
   id: iclr2023
@@ -33,6 +37,8 @@ iclr2023:
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2023
 iclr2024:
+  conferenceEndDate: '2024-05-11'
+  conferenceStartDate: '2024-05-07'
   dataSrc: ccf-deadlines
   h5Index: 362
   id: iclr2024

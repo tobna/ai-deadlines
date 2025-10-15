@@ -1,4 +1,6 @@
 cicai2023:
+  conferenceEndDate: '2023-07-23'
+  conferenceStartDate: '2023-07-22'
   dataSrc: ccf-deadlines
   id: cicai2023
   isApproximateDeadline: false

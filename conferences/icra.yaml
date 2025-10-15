@@ -1,4 +1,6 @@
 icra2022:
+  conferenceEndDate: '2022-05-27'
+  conferenceStartDate: '2022-05-23'
   dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2022
@@ -14,6 +16,8 @@ icra2022:
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2022.org/
 icra2023:
+  conferenceEndDate: '2023-06-02'
+  conferenceStartDate: '2023-05-29'
   dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2023
@@ -26,6 +30,8 @@ icra2023:
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2023.org/
 icra2024:
+  conferenceEndDate: '2024-05-17'
+  conferenceStartDate: '2024-05-13'
   dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2024

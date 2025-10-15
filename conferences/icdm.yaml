@@ -1,4 +1,6 @@
 icdm2021:
+  conferenceEndDate: '2021-12-10'
+  conferenceStartDate: '2021-12-07'
   dataSrc: ccf-deadlines
   h5Index: 50
   id: icdm2021
@@ -12,6 +14,8 @@ icdm2021:
   title: IEEE International Conference on Data Mining
   website: https://icdm2021.auckland.ac.nz/
 icdm2022:
+  conferenceEndDate: '2022-12-03'
+  conferenceStartDate: '2022-11-30'
   dataSrc: ccf-deadlines
   h5Index: 50
   id: icdm2022
@@ -24,6 +28,8 @@ icdm2022:
   title: IEEE International Conference on Data Mining
   website: https://icdm22.cse.usf.edu/key-dates.html
 icdm2023:
+  conferenceEndDate: '2023-12-04'
+  conferenceStartDate: '2023-12-01'
   dataSrc: ccf-deadlines
   h5Index: 50
   id: icdm2023
@@ -36,6 +42,8 @@ icdm2023:
   title: IEEE International Conference on Data Mining
   website: http://cloud-conf.net/icdm2023/index.html
 icdm2024:
+  conferenceEndDate: '2024-12-12'
+  conferenceStartDate: '2024-12-09'
   dataSrc: ccf-deadlines
   h5Index: 50
   id: icdm2024
@@ -63,3 +71,29 @@ icdm2025:
   timezone: AoE
   title: International Conference on Data Mining
   website: https://www3.cs.stonybrook.edu/~icdm2025/index.html
+icdm2026:
+  conferenceEndDate: '2026-11-17'
+  conferenceStartDate: '2026-11-12'
+  dataSrc: estimate
+  h5Index: 50
+  id: icdm2026
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ICDM 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-06-07T11:59:59Z'
+  title: International Conference on Data Mining
+icdm2027:
+  conferenceEndDate: '2027-11-17'
+  conferenceStartDate: '2027-11-12'
+  dataSrc: estimate
+  h5Index: 50
+  id: icdm2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ICDM 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-06-07T11:59:59Z'
+  title: International Conference on Data Mining

@@ -1,4 +1,6 @@
 icaps2025:
+  conferenceEndDate: '2025-11-14'
+  conferenceStartDate: '2025-11-09'
   dataSrc: ccf-deadlines
   id: icaps2025
   isApproximateDeadline: false
@@ -12,6 +14,8 @@ icaps2025:
   title: International Conference on Automated Planning and Scheduling
   website: https://icaps25.icaps-conference.org/
 icaps2026:
+  conferenceEndDate: '2026-07-02'
+  conferenceStartDate: '2026-06-27'
   dataSrc: ccf-deadlines
   id: icaps2026
   isApproximateDeadline: false
@@ -23,3 +27,16 @@ icaps2026:
     deadline: '2025-12-08T23:59:59Z'
   title: International Conference on Automated Planning and Scheduling
   website: https://icaps26.icaps-conference.org/
+icaps2027:
+  conferenceEndDate: '2027-07-02'
+  conferenceStartDate: '2027-06-27'
+  dataSrc: estimate
+  id: icaps2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ICAPS 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-12-02T23:59:59Z'
+    deadline: '2026-12-08T23:59:59Z'
+  title: International Conference on Automated Planning and Scheduling

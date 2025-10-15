@@ -1,4 +1,6 @@
 cvpr2022:
+  conferenceEndDate: '2022-06-24'
+  conferenceStartDate: '2022-06-19'
   dataSrc: ccf-deadlines
   h5Index: 450
   id: cvpr2022

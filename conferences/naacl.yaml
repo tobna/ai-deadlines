@@ -1,4 +1,6 @@
 naacl2022:
+  conferenceEndDate: '2022-07-15'
+  conferenceStartDate: '2022-07-10'
   dataSrc: ccf-deadlines
   h5Index: 126
   id: naacl2022
@@ -13,6 +15,8 @@ naacl2022:
     Computational Linguistics
   website: https://2022.naacl.org/
 naacl2024:
+  conferenceEndDate: '2024-06-21'
+  conferenceStartDate: '2024-06-16'
   dataSrc: ccf-deadlines
   h5Index: 126
   id: naacl2024
@@ -42,3 +46,17 @@ naacl2025:
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics
   website: https://2025.naacl.org/
+naacl2027:
+  conferenceEndDate: '2027-05-04'
+  conferenceStartDate: '2027-04-29'
+  dataSrc: estimate
+  h5Index: 126
+  id: naacl2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: NAACL 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-10-16T11:59:59Z'
+  title: The Annual Conference of the North American Chapter of the Association for
+    Computational Linguistics

@@ -1,4 +1,6 @@
 acl2022:
+  conferenceEndDate: '2022-05-27'
+  conferenceStartDate: '2022-05-22'
   dataSrc: ccf-deadlines
   h5Index: 236
   id: acl2022
@@ -15,6 +17,8 @@ acl2022:
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://www.2022.aclweb.org/
 acl2023:
+  conferenceEndDate: '2023-07-14'
+  conferenceStartDate: '2023-07-09'
   dataSrc: ccf-deadlines
   h5Index: 236
   id: acl2023
@@ -28,6 +32,8 @@ acl2023:
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2023.aclweb.org/
 acl2024:
+  conferenceEndDate: '2024-08-16'
+  conferenceStartDate: '2024-08-11'
   dataSrc: ccf-deadlines
   h5Index: 236
   id: acl2024
@@ -56,6 +62,8 @@ acl2025:
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2025.aclweb.org/
 acl2026:
+  conferenceEndDate: '2026-07-07'
+  conferenceStartDate: '2026-07-02'
   dataSrc: ccf-deadlines
   h5Index: 236
   id: acl2026
@@ -67,3 +75,16 @@ acl2026:
   - deadline: '2026-01-05T23:59:59Z'
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2026.aclweb.org/
+acl2027:
+  conferenceEndDate: '2027-07-07'
+  conferenceStartDate: '2027-07-02'
+  dataSrc: estimate
+  h5Index: 236
+  id: acl2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ACL 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-01-05T23:59:59Z'
+  title: Annual Meeting of the Association for Computational Linguistics

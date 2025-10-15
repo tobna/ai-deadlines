@@ -1,4 +1,6 @@
 iros2023:
+  conferenceEndDate: '2023-10-05'
+  conferenceStartDate: '2023-10-01'
   dataSrc: ccf-deadlines
   h5Index: 86
   id: iros2023
@@ -12,6 +14,8 @@ iros2023:
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
   website: https://ieee-iros.org/
 iros2024:
+  conferenceEndDate: '2024-10-17'
+  conferenceStartDate: '2024-10-13'
   dataSrc: ccf-deadlines
   h5Index: 86
   id: iros2024

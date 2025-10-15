@@ -1,4 +1,6 @@
 chi2024:
+  conferenceEndDate: '2024-05-16'
+  conferenceStartDate: '2024-05-11'
   dataSrc: ccf-deadlines
   id: chi2024
   isApproximateDeadline: false

@@ -1,4 +1,6 @@
 uai2021:
+  conferenceEndDate: '2021-07-29'
+  conferenceStartDate: '2021-07-27'
   dataSrc: ccf-deadlines
   id: uai2021
   isApproximateDeadline: false
@@ -11,6 +13,8 @@ uai2021:
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2021/
 uai2023:
+  conferenceEndDate: '2023-08-03'
+  conferenceStartDate: '2023-08-01'
   dataSrc: ccf-deadlines
   id: uai2023
   isApproximateDeadline: false
@@ -22,6 +26,8 @@ uai2023:
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2023/
 uai2024:
+  conferenceEndDate: '2024-07-19'
+  conferenceStartDate: '2024-07-15'
   dataSrc: ccf-deadlines
   id: uai2024
   isApproximateDeadline: false
@@ -47,3 +53,27 @@ uai2025:
   timezone: AoE
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2025/
+uai2026:
+  conferenceEndDate: '2026-07-26'
+  conferenceStartDate: '2026-07-21'
+  dataSrc: estimate
+  id: uai2026
+  isApproximateDeadline: true
+  rating: A
+  shortname: UAI 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-02-11T11:59:59Z'
+  title: Conference on Uncertainty in Artificial Intelligence
+uai2027:
+  conferenceEndDate: '2027-07-26'
+  conferenceStartDate: '2027-07-21'
+  dataSrc: estimate
+  id: uai2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: UAI 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-02-11T11:59:59Z'
+  title: Conference on Uncertainty in Artificial Intelligence

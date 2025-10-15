@@ -1,4 +1,6 @@
 colm2024:
+  conferenceEndDate: '2024-10-09'
+  conferenceStartDate: '2024-10-07'
   dataSrc: ccf-deadlines
   id: colm2024
   isApproximateDeadline: false
@@ -25,3 +27,27 @@ colm2025:
   timezone: AoE
   title: Conference on Language Modeling
   website: https://colmweb.org/cfp.html
+colm2026:
+  conferenceEndDate: '2026-10-12'
+  conferenceStartDate: '2026-10-07'
+  dataSrc: estimate
+  id: colm2026
+  isApproximateDeadline: true
+  shortname: COLM 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-03-21T11:59:59Z'
+    deadline: '2026-03-28T11:59:59Z'
+  title: Conference on Language Modeling
+colm2027:
+  conferenceEndDate: '2027-10-12'
+  conferenceStartDate: '2027-10-07'
+  dataSrc: estimate
+  id: colm2027
+  isApproximateDeadline: true
+  shortname: COLM 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-03-21T11:59:59Z'
+    deadline: '2027-03-28T11:59:59Z'
+  title: Conference on Language Modeling

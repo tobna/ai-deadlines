@@ -1,4 +1,6 @@
 kr2023:
+  conferenceEndDate: '2023-09-08'
+  conferenceStartDate: '2023-09-02'
   dataSrc: ccf-deadlines
   id: kr2023
   isApproximateDeadline: false
@@ -13,6 +15,8 @@ kr2023:
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2023/
 kr2024:
+  conferenceEndDate: '2024-11-08'
+  conferenceStartDate: '2024-11-02'
   dataSrc: ccf-deadlines
   id: kr2024
   isApproximateDeadline: false
@@ -25,6 +29,8 @@ kr2024:
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2024/
 kr2025:
+  conferenceEndDate: '2025-11-17'
+  conferenceStartDate: '2025-11-11'
   dataSrc: ccf-deadlines
   id: kr2025
   isApproximateDeadline: false
@@ -36,3 +42,29 @@ kr2025:
     deadline: '2025-05-12T23:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2025/
+kr2026:
+  conferenceEndDate: '2026-11-16'
+  conferenceStartDate: '2026-11-11'
+  dataSrc: estimate
+  id: kr2026
+  isApproximateDeadline: true
+  rating: A*
+  shortname: KR 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-05-07T23:59:59Z'
+    deadline: '2026-05-12T23:59:59Z'
+  title: International Conference on Principles of Knowledge Representation and Reasoning
+kr2027:
+  conferenceEndDate: '2027-11-16'
+  conferenceStartDate: '2027-11-11'
+  dataSrc: estimate
+  id: kr2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: KR 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-05-07T23:59:59Z'
+    deadline: '2027-05-12T23:59:59Z'
+  title: International Conference on Principles of Knowledge Representation and Reasoning

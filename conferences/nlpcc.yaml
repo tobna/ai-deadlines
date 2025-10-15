@@ -1,4 +1,6 @@
 nlpcc2025:
+  conferenceEndDate: '2025-08-10'
+  conferenceStartDate: '2025-08-08'
   dataSrc: ccf-deadlines
   id: nlpcc2025
   isApproximateDeadline: false
