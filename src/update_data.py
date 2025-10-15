@@ -243,8 +243,10 @@ for key, val in conferences.items():
 add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 
 
+if not args.reestimate:
+    print(f"Will reestimate futures for: {reestimate_future_for_groups}")
 for group, conferences in conf_groups.items():
-    print(f"write out group {group}", flush=True)
+    print(f"write out group {group}: {list(conferences.keys())}", flush=True)
     if group in reestimate_future_for_groups or args.reestimate:
         conferences = {key: conf for key, conf in conferences.items() if not conf["isApproximateDeadline"]}
     try:
