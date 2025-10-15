@@ -33,7 +33,6 @@ def get_ccf_list():
             continue
 
         for ccf_info in ccf_infos:
-
             for conf in ccf_info["confs"]:
                 data = {
                     "shortname": ccf_info["title"] + " " + str(conf["year"]),
@@ -46,9 +45,39 @@ def get_ccf_list():
                     data["website"] = conf["link"]
                 if "description" in ccf_info:
                     data["title"] = ccf_info["description"]
+                if "date" in conf:
+                    date_str = conf["date"]
+                    try:
+                        conf_date_data = date_str.replace("-", " - ").replace("  ", " ").split(" ")
+                        if len(conf_date_data) == 3:
+                            month, days, year = conf_date_data
+                            start_month = end_month = month
+                            start_day, end_day = days.split("-")
+                        elif len(conf_date_data) == 5:
+                            if int(conf_date_data[-1]) >= 1900:
+                                month, start_day, dash, end_day, year = conf_date_data
+                                assert dash == "-", f"No '-', but '{dash}'"
+                                start_month = end_month = month
+                            else:
+                                start_month, start_day, dash, end_month, end_day = conf_date_data
+                                assert len(end_month) >= 3, f"Thought {end_month} was a month"
+                                year = str(conf["year"])
+
+                        elif len(conf_date_data) == 6:
+                            start_month, start_day, dash, end_month, end_day, year = conf_date_data
+                            assert dash == "-", f"No '-', but '{dash}'"
+                        else:
+                            raise ValueError(f"Can't parse dates str '{date_str}' yet")
+                        data["conferenceStartDate"] = f"{start_day} {start_month} {year}"
+                        data["conferenceEndDate"] = f"{end_day} {end_month} {year}"
+                        print(f"added conf dates for {data['id']}")
+                    except Exception as e:
+                        print(f"Error when trying to parse date '{date_str}': {e}")
+                else:
+                    print(f"no conf dates for {data['id']}: {list(conf.keys())}")
 
                 for dates in conf["timeline"]:
-                    if not "deadline" in dates:
+                    if "deadline" not in dates:
                         continue
                     timeline = {"deadline": dates["deadline"]}
                     if "comment" in dates:
