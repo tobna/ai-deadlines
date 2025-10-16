@@ -1,21 +1,21 @@
 corl2024:
-  conferenceEndDate: "2024-11-09"
-  conferenceStartDate: "2024-11-06"
+  conferenceEndDate: '2024-11-09'
+  conferenceStartDate: '2024-11-06'
   dataSrc: ccf-deadlines
   h5Index: 76
   id: corl2024
   isApproximateDeadline: false
   shortname: CoRL 2024
   tags: &id001
-    - ML
-    - RO
+  - ML
+  - RO
   timeline:
-    - deadline: "2024-06-06T23:59:59Z"
+  - deadline: '2024-06-06T23:59:59Z'
   title: The Conference on Robot Learning
   website: https://2024.corl.org/
 corl2025:
-  conferenceEndDate: "2025-09-30"
-  conferenceStartDate: "2025-09-27"
+  conferenceEndDate: '2025-09-30'
+  conferenceStartDate: '2025-09-27'
   dataSrc: hf-repo
   h5Index: 76
   id: corl2025
@@ -25,13 +25,13 @@ corl2025:
   shortname: CoRL 2025
   tags: *id001
   timeline:
-    - deadline: "2025-05-01T11:59:59Z"
+  - deadline: '2025-05-01T11:59:59Z'
   timezone: AoE
   title: The Conference on Robot Learning
   website: https://www.corl.org/
 corl2026:
-  conferenceEndDate: "2026-09-30"
-  conferenceStartDate: "2026-09-27"
+  conferenceEndDate: '2026-09-30'
+  conferenceStartDate: '2026-09-27'
   dataSrc: ninoduarte-git
   h5Index: 76
   id: corl2026
@@ -40,13 +40,13 @@ corl2026:
   shortname: CoRL 2026
   tags: *id001
   timeline:
-    - deadline: "2026-04-23T23:59:59Z"
+  - deadline: '2026-04-23T23:59:59Z'
   timezone: America/Los_Angeles
   title: The Conference on Robot Learning
   website: http://www.corl.org/
 corl2027:
-  conferenceEndDate: "2027-10-02"
-  conferenceStartDate: "2027-09-27"
+  conferenceEndDate: '2027-10-02'
+  conferenceStartDate: '2027-09-27'
   dataSrc: estimate
   h5Index: 76
   id: corl2027
@@ -54,5 +54,5 @@ corl2027:
   shortname: CoRL 2027
   tags: *id001
   timeline:
-    - deadline: "2027-04-23T23:59:59Z"
+  - deadline: '2027-04-23T23:59:59Z'
   title: The Conference on Robot Learning
