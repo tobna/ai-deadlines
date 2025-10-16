@@ -110,7 +110,9 @@ if args.online:
                     if conferences[id]["dataSrc"] == "estimate":
                         print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                         reestimate_future_for_groups.append(id[:-4])
-                    conferences[id] = join_conferences(slave=conferences[id], master=yearly_data)
+                        conferences[id] = yearly_data
+                    else:
+                        conferences[id] = join_conferences(slave=conferences[id], master=yearly_data)
                     conferences[id]["dataSrc"] = "off-website"
                 else:
                     conferences[id] = join_conferences(slave=yearly_data, master=conferences[id])
@@ -142,7 +144,9 @@ if args.online:
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
-            conferences[id] = join_conferences(slave=conferences[id], master=hf_data)
+                conferences[id] = hf_data
+            else:
+                conferences[id] = join_conferences(slave=conferences[id], master=hf_data)
             conferences[id]["dataSrc"] = "hf-repo"
         else:
             conferences[id] = join_conferences(slave=hf_data, master=conferences[id])
@@ -173,7 +177,9 @@ if args.online:
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
-            conferences[id] = join_conferences(slave=conferences[id], master=nino_conf)
+                conferences[id] = nino_conf
+            else:
+                conferences[id] = join_conferences(slave=conferences[id], master=nino_conf)
             conferences[id]["dataSrc"] = "ninoduarte-git"
         else:
             conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
@@ -205,7 +211,9 @@ if args.online:
             if conferences[id]["dataSrc"] == "estimate":
                 print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
-            conferences[id] = join_conferences(slave=conferences[id], master=ccf_data)
+                conferences[id] = ccf_data
+            else:
+                conferences[id] = join_conferences(slave=conferences[id], master=ccf_data)
             conferences[id]["dataSrc"] = "ccf-deadlines"
         else:
             conferences[id] = join_conferences(slave=ccf_data, master=conferences[id])
