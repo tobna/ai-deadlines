@@ -1,0 +1,15 @@
+nlbse2026:
+  conferenceEndDate: '2026-04-13'
+  conferenceStartDate: '2026-04-12'
+  dataSrc: hf-repo
+  id: nlbse2026
+  isApproximateDeadline: false
+  location: Windsor Convention Center and Hotels
+  shortname: NLBSE 2026
+  tags: []
+  timeline:
+  - deadline: '2025-11-04T23:59:59Z'
+    note: Paper submission deadline
+  timezone: UTC-12
+  title: The 5th International Workshop on Natural Language-based Software Engineering
+  website: https://nlbse2026.github.io/
