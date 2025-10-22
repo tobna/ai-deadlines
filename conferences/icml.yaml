@@ -133,22 +133,24 @@ icml2025:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2025/
 icml2026:
-  conferenceEndDate: '2026-07-20'
-  conferenceStartDate: '2026-07-15'
-  dataSrc: estimate
+  conferenceEndDate: '2026-07-12'
+  conferenceStartDate: '2026-07-06'
+  dataSrc: ccf-deadlines
   h5Index: 272
   id: icml2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: ICML 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-01-23T12:00:00Z'
-    deadline: '2026-01-30T12:00:00Z'
+  - abstractDeadline: '2025-01-24T11:59:59Z'
+    deadline: '2026-01-29T11:59:59Z'
+    note: Paper Submissions Open on OpenReview Jan 08 2026 12:00AM UTC-0
   title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2026
 icml2027:
-  conferenceEndDate: '2027-07-20'
-  conferenceStartDate: '2027-07-15'
+  conferenceEndDate: '2027-07-11'
+  conferenceStartDate: '2027-07-06'
   dataSrc: estimate
   h5Index: 272
   id: icml2027
@@ -157,6 +159,8 @@ icml2027:
   shortname: ICML 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-01-23T12:00:00Z'
-    deadline: '2027-01-30T12:00:00Z'
+  - abstractDeadline: '2026-01-24T11:59:59Z'
+    deadline: '2027-01-29T11:59:59Z'
+    note: 'From ICML 2026: Paper Submissions Open on OpenReview Jan 08 2026 12:00AM
+      UTC-0'
   title: International Conference on Machine Learning
