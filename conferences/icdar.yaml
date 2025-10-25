@@ -7,7 +7,7 @@ icdar2025:
   location: Wuhan, China
   rating: A
   shortname: ICDAR 2025
-  tags:
+  tags: &id001
   - CV
   timeline:
   - abstractDeadline: '2025-02-28T23:59:59Z'
@@ -15,3 +15,30 @@ icdar2025:
   timezone: UTC+0
   title: International Conference on Document Analysis and Recognition
   website: https://www.icdar2025.com/home
+icdar2026:
+  conferenceEndDate: '2026-09-04'
+  conferenceStartDate: '2026-08-30'
+  dataSrc: ccf-deadlines
+  id: icdar2026
+  isApproximateDeadline: false
+  rating: A
+  shortname: ICDAR 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-02-13T23:59:59Z'
+    deadline: '2026-02-27T23:59:59Z'
+  title: International Conference on Document Analysis and Recognition
+  website: https://icdar2026.org/
+icdar2027:
+  conferenceEndDate: '2027-09-04'
+  conferenceStartDate: '2027-08-30'
+  dataSrc: estimate
+  id: icdar2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: ICDAR 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-02-13T23:59:59Z'
+    deadline: '2027-02-27T23:59:59Z'
+  title: International Conference on Document Analysis and Recognition
