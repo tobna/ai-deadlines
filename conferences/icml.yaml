@@ -143,7 +143,7 @@ icml2026:
   shortname: ICML 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-01-24T11:59:59Z'
+  - abstractDeadline: '2026-01-24T11:59:59Z'
     deadline: '2026-01-29T11:59:59Z'
     note: Paper Submissions Open on OpenReview Jan 08 2026 12:00AM UTC-0
   title: International Conference on Machine Learning
