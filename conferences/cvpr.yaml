@@ -75,7 +75,7 @@ cvpr2026:
   shortname: CVPR 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-11-06T12:00:00Z'
+  - abstractDeadline: '2025-11-07T12:00:00Z'
     deadline: '2025-11-13T12:00:00Z'
   timezone: UTC-12
   title: Computer Vision and Pattern Recognition Conference
