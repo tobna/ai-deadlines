@@ -1,2 +1,6 @@
-Errors from run at 2025-09-22 10:26:02.431052:
-2025-09-22 10:26:02.431144: Failed estimating future_conferences of group ecai: expected string or bytes-like object, got 'datetime.datetime'
+Errors from run at 2025-11-18 21:05:54.824095:
+2025-11-18 21:05:54.824175: Failed parsing hf conferences: 'int' object is not subscriptable
+2025-11-18 21:05:54.824207: No hf conferences found
+2025-11-18 21:05:56.810052: No ninoduarte-git conferences found
+2025-11-18 21:05:57.939069: Failed loading ccf-deadlines conferences: 'int' object is not subscriptable
+2025-11-18 21:05:57.939122: No ccf-conferences found
