@@ -45,21 +45,21 @@ icann2025:
   title: International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2025/
 icann2026:
-  conferenceEndDate: '2026-09-14'
-  conferenceStartDate: '2026-09-09'
-  dataSrc: estimate
+  conferenceEndDate: '2026-09-17'
+  conferenceStartDate: '2026-09-14'
+  dataSrc: ccf-deadlines
   id: icann2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: C
   shortname: ICANN 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-03-30T11:59:00Z'
-    deadline: '2026-03-30T11:59:00Z'
+  - deadline: '2026-03-16T23:59:59Z'
   title: International Conference on Artificial Neural Networks
+  website: https://e-nns.org/icann2026/
 icann2027:
-  conferenceEndDate: '2027-09-14'
-  conferenceStartDate: '2027-09-09'
+  conferenceEndDate: '2027-09-19'
+  conferenceStartDate: '2027-09-14'
   dataSrc: estimate
   id: icann2027
   isApproximateDeadline: true
@@ -67,6 +67,5 @@ icann2027:
   shortname: ICANN 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-03-30T11:59:00Z'
-    deadline: '2027-03-30T11:59:00Z'
+  - deadline: '2027-03-16T23:59:59Z'
   title: International Conference on Artificial Neural Networks

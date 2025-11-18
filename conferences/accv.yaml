@@ -17,9 +17,9 @@ accv2024:
   title: Asian Conference on Computer Vision
   website: https://accv202.org/
 accv2026:
-  conferenceEndDate: '2026-12-12'
-  conferenceStartDate: '2026-12-08'
-  dataSrc: ninoduarte-git
+  conferenceEndDate: '2026-12-18'
+  conferenceStartDate: '2026-12-14'
+  dataSrc: ccf-deadlines
   h5Index: 52
   id: accv2026
   isApproximateDeadline: false
@@ -28,7 +28,7 @@ accv2026:
   shortname: ACCV 2026
   tags: *id001
   timeline:
-  - deadline: '2026-07-01T21:59:59Z'
+  - deadline: '2026-07-05T23:59:59Z'
   timezone: America/Los_Angeles
   title: Asian Conference on Computer Vision
-  website: https://accv2026.org
+  website: https://accv2026.org/

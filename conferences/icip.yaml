@@ -44,21 +44,22 @@ icip2025:
   title: International Conference on Image Processing
   website: https://2025.ieeeicip.org
 icip2026:
-  conferenceEndDate: '2026-09-22'
-  conferenceStartDate: '2026-09-17'
-  dataSrc: estimate
+  conferenceEndDate: '2026-09-17'
+  conferenceStartDate: '2026-09-13'
+  dataSrc: ccf-deadlines
   h5Index: 55
   id: icip2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: ICIP 2026
   tags: *id001
   timeline:
-  - deadline: '2026-02-04T23:00:00Z'
-  title: International Conference on Image Processing
+  - deadline: '2026-01-21T23:59:59Z'
+  title: The IEEE International Conference on Image Processing
+  website: https://2026.ieeeicip.org/
 icip2027:
-  conferenceEndDate: '2027-09-22'
-  conferenceStartDate: '2027-09-17'
+  conferenceEndDate: '2027-09-18'
+  conferenceStartDate: '2027-09-13'
   dataSrc: estimate
   h5Index: 55
   id: icip2027
@@ -67,5 +68,5 @@ icip2027:
   shortname: ICIP 2027
   tags: *id001
   timeline:
-  - deadline: '2027-02-04T23:00:00Z'
-  title: International Conference on Image Processing
+  - deadline: '2027-01-21T23:59:59Z'
+  title: The IEEE International Conference on Image Processing
