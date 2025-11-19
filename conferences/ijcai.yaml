@@ -67,9 +67,9 @@ ijcai2026:
   h5Index: 136
   id: ijcai2026
   isApproximateDeadline: false
+  location: Bremen, Germany
   rating: A*
   shortname: IJCAI 2026
-  location: Bremen, Germany
   tags: *id001
   timeline:
   - abstractDeadline: '2026-01-12T23:59:59Z'
