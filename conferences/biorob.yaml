@@ -1,0 +1,14 @@
+biorob2026:
+  conferenceEndDate: '2026-08-04'
+  conferenceStartDate: '2026-08-01'
+  dataSrc: ninoduarte-git
+  id: biorob2026
+  isApproximateDeadline: false
+  location: Edmonton, Alberta, Canada
+  shortname: BioRob 2026
+  tags:
+  - RO
+  timeline:
+  - deadline: '2026-01-10T22:59:59Z'
+  timezone: CET
+  website: https://2026.ieeebiorob.org
