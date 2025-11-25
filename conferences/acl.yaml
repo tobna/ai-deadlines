@@ -64,15 +64,17 @@ acl2025:
 acl2026:
   conferenceEndDate: '2026-07-07'
   conferenceStartDate: '2026-07-02'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 236
   id: acl2026
   isApproximateDeadline: false
+  location: San Diego, USA
   rating: A*
   shortname: ACL 2026
   tags: *id001
   timeline:
-  - deadline: '2026-01-05T23:59:59Z'
+  - deadline: '2026-01-06T11:59:59Z'
+  timezone: UTC-12
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2026.aclweb.org/
 acl2027:
