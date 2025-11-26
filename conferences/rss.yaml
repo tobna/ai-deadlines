@@ -54,12 +54,15 @@ rss2026:
     deadline: '2026-01-25T11:59:00Z'
   title: Robotics Science and Systems
 rss2027:
-  conferenceEndDate: '2027-07-26'
-  conferenceStartDate: '2027-07-21'
+  conferenceEndDate: '2027-06-26'
+  conferenceStartDate: '2027-06-21'
   dataSrc: estimate
   id: rss2027
   isApproximateDeadline: true
+  rating: TBR
   shortname: RSS 2027
   tags: *id001
   timeline:
-  - deadline: '2027-01-31T22:59:59Z'
+  - abstractDeadline: '2027-01-18T11:59:00Z'
+    deadline: '2027-01-25T11:59:00Z'
+  title: Robotics Science and Systems
