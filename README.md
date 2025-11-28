@@ -2,7 +2,7 @@
 
 [![Deadline Website](https://img.shields.io/badge/Deadline-Website-red?logo=indeed&logoColor=white)](https://aideadlines.nauen-it.de)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green?style=flat-square&logo=git&logoColor=green)](#how-to-contribute)
-[![Status: Conferences Tracked](https://img.shields.io/badge/Conferences%20Tracked-90-blue?logo=kdenlive&logoColor=white)
+[![Status: Conferences Tracked](https://img.shields.io/badge/Conferences%20Tracked-90-blue?logo=kdenlive&logoColor=white)](./conferences/)
 
 ---
 
