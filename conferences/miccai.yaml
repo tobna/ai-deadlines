@@ -1,3 +1,49 @@
+miccai2023:
+  conferenceEndDate: '2023-10-12'
+  conferenceStartDate: '2023-10-08'
+  dataSrc: ccf-deadlines
+  id: miccai2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: MICCAI 2023
+  tags: &id001
+  - CV
+  timeline:
+  - deadline: '2023-03-09T23:59:59Z'
+    note: Paper submission deadline
+  title: International Conference on Medical Image Computing and Computer Assisted
+    Intervention
+  website: https://conferences.miccai.org/2023/en/
+miccai2024:
+  conferenceEndDate: '2024-10-10'
+  conferenceStartDate: '2024-10-06'
+  dataSrc: ccf-deadlines
+  id: miccai2024
+  isApproximateDeadline: false
+  rating: A
+  shortname: MICCAI 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-03-07T23:59:59Z'
+    note: Main conference papers
+  title: International Conference on Medical Image Computing and Computer Assisted
+    Intervention
+  website: https://conferences.miccai.org/2024/en/
+miccai2025:
+  conferenceEndDate: '2025-09-27'
+  conferenceStartDate: '2025-09-23'
+  dataSrc: ccf-deadlines
+  id: miccai2025
+  isApproximateDeadline: false
+  rating: A
+  shortname: MICCAI 2025
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2025-02-13T23:59:00Z'
+    deadline: '2025-02-27T23:59:00Z'
+  title: International Conference on Medical Image Computing and Computer Assisted
+    Intervention
+  website: https://conferences.miccai.org/2025/en/default.asp
 miccai2026:
   conferenceEndDate: '2026-10-08'
   conferenceStartDate: '2026-10-04'
@@ -7,8 +53,7 @@ miccai2026:
   location: ADNEC Centre Abu Dhabi
   rating: A
   shortname: MICCAI 2026
-  tags:
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-02-13T07:59:59Z'
     deadline: '2026-02-27T07:59:59Z'
@@ -16,3 +61,17 @@ miccai2026:
   title: International Conference on Medical Image Computing and Computer-Assisted
     Intervention
   website: https://conferences.miccai.org/2026/
+miccai2027:
+  conferenceEndDate: '2027-10-09'
+  conferenceStartDate: '2027-10-04'
+  dataSrc: estimate
+  id: miccai2027
+  isApproximateDeadline: true
+  rating: A
+  shortname: MICCAI 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-02-13T07:59:59Z'
+    deadline: '2027-02-27T07:59:59Z'
+  title: International Conference on Medical Image Computing and Computer-Assisted
+    Intervention
