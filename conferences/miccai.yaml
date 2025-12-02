@@ -1,0 +1,18 @@
+miccai2026:
+  conferenceEndDate: '2026-10-08'
+  conferenceStartDate: '2026-10-04'
+  dataSrc: hf-repo
+  id: miccai2026
+  isApproximateDeadline: false
+  location: ADNEC Centre Abu Dhabi
+  rating: A
+  shortname: MICCAI 2026
+  tags:
+  - CV
+  timeline:
+  - abstractDeadline: '2026-02-13T07:59:59Z'
+    deadline: '2026-02-27T07:59:59Z'
+  timezone: UTC-08
+  title: International Conference on Medical Image Computing and Computer-Assisted
+    Intervention
+  website: https://conferences.miccai.org/2026/
