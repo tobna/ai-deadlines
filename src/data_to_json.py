@@ -26,13 +26,21 @@ past_conf = {}
 
 for id, conf in conferences.items():
     if "timezone" in conf:
-        conf["timezone"] = (
-            conf["timezone"]
-            .replace("AoE", "Etc/GMT+12")
-            .replace("UTC-", "Etc/GMT-")
-            .replace("UTC+", "Etc/GMT+")
-            .replace("Russia/Moscow", "Etc/GMT+3")
-        )
+        js_tz = conf["timezone"]
+        if "UTC" in js_tz:
+            if "+" in js_tz:
+                char = "+"
+            elif "-" in js_tz:
+                char = "-"
+            else:
+                char = None
+
+            if char is not None:
+                offset = int(js_tz.split(char)[-1])
+                js_tz = f"Etc/GMT{'+' if char == '-' else '-'}{offset}"
+        js_tz = js_tz.replace("AoE", "Etc/GMT+12").replace("Russia/Moscow", "Etc/GMT+3")
+
+        conf["timezone"] = js_tz
     for i, dates in enumerate(conf["timeline"]):
         conf_cpy = deepcopy(conf)
         conf_cpy.pop("timeline")
