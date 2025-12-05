@@ -27,6 +27,7 @@ past_conf = {}
 for id, conf in conferences.items():
     if "timezone" in conf:
         js_tz = conf["timezone"]
+        old_tz = js_tz
         if "UTC" in js_tz:
             if "+" in js_tz:
                 char = "+"
@@ -36,9 +37,12 @@ for id, conf in conferences.items():
                 char = None
 
             if char is not None:
+                old_tz = js_tz
                 offset = int(js_tz.split(char)[-1])
                 js_tz = f"Etc/GMT{'+' if char == '-' else '-'}{offset}"
         js_tz = js_tz.replace("AoE", "Etc/GMT+12").replace("Russia/Moscow", "Etc/GMT+3")
+        if old_tz != js_tz:
+            print(f"Parsing timezone for json: {old_tz} -> {js_tz}")
 
         conf["timezone"] = js_tz
     for i, dates in enumerate(conf["timeline"]):
