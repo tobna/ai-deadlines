@@ -209,7 +209,7 @@ if args.online:
             reestimate_future_for_groups.append(id[:-4])
         elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("ccf-deadlines"):
             if conferences[id]["dataSrc"] == "estimate":
-                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]} => {ccf_data}")
                 reestimate_future_for_groups.append(id[:-4])
                 conferences[id] = ccf_data
             else:
