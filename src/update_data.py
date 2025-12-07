@@ -219,6 +219,21 @@ if args.online:
             conferences[id] = join_conferences(slave=ccf_data, master=conferences[id])
 
 
+# nips => neurips
+nips_confs = {key: conf for key, conf in conferences.items() if "nips" in key or "nips" in conf["id"]}
+for key, conf in nips_confs.items():
+    old_key = key
+    key = key.replace("nips", "neurips")
+    if old_key != key:
+        conferences.pop(old_key)
+    conf["id"] = conf["id"].replace("nips", "neurips")
+    conf["shortname"] = conf["shortname"].replace("NIPS", "NeurIPS")
+    if key in conferences:
+        conferences[key] = join_conferences(slave=conf, master=conferences[key])
+    else:
+        conferences[key] = conf
+    print(f"nips => neurips for {key}: {conf}")
+
 remove_ids = set()
 for id, conf in conferences.items():
     none_deadlines = set()
