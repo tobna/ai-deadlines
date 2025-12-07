@@ -2,7 +2,7 @@ neurips_ws2024:
   conferenceEndDate: '2024-12-15'
   conferenceStartDate: '2024-12-09'
   dataSrc: ninoduarte-git
-  id: nips_ws2024
+  id: neurips_ws2024
   isApproximateDeadline: false
   location: Vancouver, Canada
   shortname: Gaze Meets ML 2024

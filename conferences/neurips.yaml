@@ -252,26 +252,26 @@ neurips2026:
   conferenceStartDate: '2026-12-02'
   dataSrc: ninoduarte-git
   h5Index: 371
-  id: nips2026
+  id: neurips2026
   isApproximateDeadline: false
   location: NA, NA
   rating: A*
-  shortname: NIPS 2026
+  shortname: NeurIPS 2026
   tags: *id001
   timeline:
   - deadline: '2026-05-15T23:59:59Z'
   timezone: Etc/GMT+12
   title: Neural Information Processing Systems
   website: https://nips.cc/Conferences/2026
-nips2027:
+neurips2027:
   conferenceEndDate: '2027-12-07'
   conferenceStartDate: '2027-12-02'
   dataSrc: estimate
   h5Index: 371
-  id: nips2027
+  id: neurips2027
   isApproximateDeadline: true
   rating: A*
-  shortname: NIPS 2027
+  shortname: NeurIPS 2027
   tags: *id001
   timeline:
   - deadline: '2027-05-15T23:59:59Z'
