@@ -97,6 +97,10 @@ def join_conferences(master, slave):
         if key == "tags":
             all_tags = set(master[key]).union(set(slave[key]))
             val = sorted(list(all_tags))
+        if key == "timeline":
+            if (len(val) == 0 or val[0]["deadline"].lower() == "tbd") and len(out[key]) > 0:
+                print(f"taking slave timeline: {out[key]} instead of master timeline {val}")
+                continue
         out[key] = val
     return out
 
