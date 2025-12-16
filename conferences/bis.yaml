@@ -1,0 +1,17 @@
+bis2026:
+  conferenceEndDate: '2026-06-12'
+  conferenceStartDate: '2026-06-10'
+  dataSrc: hf-repo
+  id: bis2026
+  isApproximateDeadline: false
+  location: Prague, Czech Republic
+  shortname: BIS 2026
+  tags:
+  - DM
+  - ML
+  - NLP
+  timeline:
+  - deadline: '2026-01-16T11:59:00Z'
+  timezone: UTC-12
+  title: International Conference on Business Information Systems
+  website: https://bisconf.org/2026

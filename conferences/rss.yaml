@@ -50,7 +50,8 @@ rss2026:
   shortname: RSS 2026
   tags: *id001
   timeline:
-  - deadline: '2026-01-31T22:59:59Z'
+  - abstractDeadline: '2026-01-23T23:59:00Z'
+    deadline: '2026-01-30T23:59:00Z'
   timezone: CET
   title: Robotics Science and Systems
   website: https://roboticsconference.org

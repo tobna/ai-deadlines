@@ -1,0 +1,16 @@
+rulemlrr2026:
+  conferenceEndDate: '2026-08-26'
+  conferenceStartDate: '2026-08-24'
+  dataSrc: hf-repo
+  id: rulemlrr2026
+  isApproximateDeadline: false
+  location: null
+  shortname: RuleMLRR 2026
+  tags:
+  - DB
+  timeline:
+  - deadline: '2026-05-16T11:59:59Z'
+    note: Paper Submission (AoE)
+  timezone: AoE
+  title: International Joint Conference on Rules and Reasoning
+  website: https://2026.declarativeai.net/events/ruleml-rr
