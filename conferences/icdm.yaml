@@ -72,18 +72,20 @@ icdm2025:
   title: International Conference on Data Mining
   website: https://www3.cs.stonybrook.edu/~icdm2025/index.html
 icdm2026:
-  conferenceEndDate: '2026-11-17'
+  conferenceEndDate: '2026-11-15'
   conferenceStartDate: '2026-11-12'
-  dataSrc: estimate
+  dataSrc: ccf-deadlines
   h5Index: 50
   id: icdm2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2026
   tags: *id001
   timeline:
-  - deadline: '2026-06-07T11:59:59Z'
-  title: International Conference on Data Mining
+  - abstractDeadline: '2026-05-30T23:59:59Z'
+    deadline: '2026-06-06T23:59:59Z'
+  title: IEEE International Conference on Data Mining
+  website: http://icdm2026.neu.edu.cn/
 icdm2027:
   conferenceEndDate: '2027-11-17'
   conferenceStartDate: '2027-11-12'
@@ -95,5 +97,6 @@ icdm2027:
   shortname: ICDM 2027
   tags: *id001
   timeline:
-  - deadline: '2027-06-07T11:59:59Z'
-  title: International Conference on Data Mining
+  - abstractDeadline: '2027-05-30T23:59:59Z'
+    deadline: '2027-06-06T23:59:59Z'
+  title: IEEE International Conference on Data Mining
