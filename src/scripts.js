@@ -17,10 +17,8 @@ const closeModalButton = document.getElementById('closeModalButton');
 let upcomingConferencesData = [];
 let archiveConferencesData = null; 
 
-let currentActiveTagButton = null; 
-
 let currentFilterSettings = {
-    selectedTag: null,
+    selectedTags: new Set(["ALL"]),
     showPast: false,
     showApproxFuture: true,
     minH5: null,
@@ -321,12 +319,13 @@ function populateTagFilter(sourceConferences) {
     allButton.textContent = 'All Conferences';
     allButton.className = 'tag-button'; 
     allButton.addEventListener('click', () => {
-        currentFilterSettings.selectedTag = null;
-        setActiveTagButton(allButton);
+        currentFilterSettings.selectedTags.clear();
+        currentFilterSettings.selectedTags.add("ALL");
+        setActiveTagButtons();
         applyAllFilters();
     });
     tagFilterContainer.appendChild(allButton);
-    if (!currentFilterSettings.selectedTag) {
+    if (!currentFilterSettings.selectedTags) {
         initialActiveButton = allButton;
     }
 
@@ -334,36 +333,45 @@ function populateTagFilter(sourceConferences) {
         const button = document.createElement('button');
         button.textContent = tag;
         button.className = 'tag-button';
-        if (tag === currentFilterSettings.selectedTag) {
+        if (tag === currentFilterSettings.selectedTags) {
             initialActiveButton = button;
         }
         button.addEventListener('click', () => {
-            currentFilterSettings.selectedTag = tag;
-            setActiveTagButton(button);
+            // Clicking a normal tag while "All" is active → deselect "All"
+            currentFilterSettings.selectedTags.delete("ALL");
+
+            if (currentFilterSettings.selectedTags.has(tag)) {
+                currentFilterSettings.selectedTags.delete(tag);
+            } else {
+                currentFilterSettings.selectedTags.add(tag);
+            }
+
+            // If no tag is selected → activate "ALL"
+            if (currentFilterSettings.selectedTags.size === 0) {
+                currentFilterSettings.selectedTags.add("ALL");
+            }
+
+            setActiveTagButtons();
             applyAllFilters();
         });
         tagFilterContainer.appendChild(button);
     });
     
-    setActiveTagButton(initialActiveButton || allButton); 
+    setActiveTagButtons();
 }
 
-function setActiveTagButton(buttonToActivate) {
-    if (currentActiveTagButton) { 
-        currentActiveTagButton.classList.remove('active');
-    }
-    if (buttonToActivate){
-        buttonToActivate.classList.add('active');
-        currentActiveTagButton = buttonToActivate;
-    } else {
-        const allConfButton = Array.from(tagFilterContainer.children).find(btn => btn.textContent === 'All Conferences');
-        if (allConfButton) {
-            allConfButton.classList.add('active');
-            currentActiveTagButton = allConfButton;
+function setActiveTagButtons() {
+    const buttons = Array.from(tagFilterContainer.children);
+
+    buttons.forEach(btn => {
+        const tag = btn.textContent;
+
+        if (tag === "All Conferences") {
+            btn.classList.toggle('active', currentFilterSettings.selectedTags.has("ALL"));
         } else {
-            currentActiveTagButton = null; 
+            btn.classList.toggle('active', currentFilterSettings.selectedTags.has(tag));
         }
-    }
+    });
 }
 
 // --- Main Filtering and Rendering Logic ---
@@ -377,7 +385,7 @@ function applyAllFilters() {
 
     renderConferences(
         baseData, 
-        currentFilterSettings.selectedTag,
+        currentFilterSettings.selectedTags,
         currentFilterSettings.showPast, 
         currentFilterSettings.showApproxFuture,
         currentFilterSettings.minH5,
@@ -388,7 +396,7 @@ function applyAllFilters() {
 
 function renderConferences(
     sourceConferenceData, 
-    selectedTag, 
+    selectedTags, 
     shouldShowPast, 
     shouldShowApproxFuture,
     minH5,
@@ -446,8 +454,11 @@ function renderConferences(
         );
     }
 
-    if (selectedTag) {
-        filteredConferences = filteredConferences.filter(conf => conf.tags && conf.tags.includes(selectedTag));
+    if (!currentFilterSettings.selectedTags.has("ALL")) {
+        filteredConferences = filteredConferences.filter(conf =>
+            conf.tags &&
+            conf.tags.some(t => currentFilterSettings.selectedTags.has(t))
+        );
     }
 
     const nowTimestamp = now.getTime();
