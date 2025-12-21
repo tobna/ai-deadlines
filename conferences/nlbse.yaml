@@ -6,7 +6,8 @@ nlbse2026:
   isApproximateDeadline: false
   location: Windsor Convention Center and Hotels
   shortname: NLBSE 2026
-  tags: []
+  tags:
+  - NLP
   timeline:
   - deadline: '2025-11-04T23:59:59Z'
     note: Paper submission deadline

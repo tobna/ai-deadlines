@@ -1,0 +1,16 @@
+chil2026:
+  conferenceEndDate: '2026-06-30'
+  conferenceStartDate: '2026-06-28'
+  dataSrc: hf-repo
+  id: chil2026
+  isApproximateDeadline: false
+  location: Seattle Children's Research Institute
+  shortname: CHIL 2026
+  tags:
+  - ML
+  timeline:
+  - abstractDeadline: '2026-02-05T11:59:59Z'
+    deadline: '2026-02-05T11:59:59Z'
+  timezone: UTC-12
+  title: AHLI Conference on Health, Inference, and Learning
+  website: https://chil.ahli.cc/submit/call-for-papers/

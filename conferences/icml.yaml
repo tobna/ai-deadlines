@@ -133,7 +133,7 @@ icml2025:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2025/
 icml2026:
-  conferenceEndDate: '2026-07-12'
+  conferenceEndDate: '2026-07-11'
   conferenceStartDate: '2026-07-06'
   dataSrc: hf-repo
   h5Index: 272

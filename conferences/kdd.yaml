@@ -8,11 +8,42 @@ kdd2025:
   location: Toronto, Canada
   rating: A*
   shortname: KDD 2025
-  tags:
+  tags: &id001
   - DM
   - ML
   timeline:
   - abstractDeadline: '2025-02-04T11:59:59Z'
     deadline: '2025-02-11T11:59:59Z'
   timezone: AoE
+  title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+kdd2026:
+  conferenceEndDate: '2026-08-13'
+  conferenceStartDate: '2026-08-09'
+  dataSrc: hf-repo
+  h5Index: 124
+  id: kdd2026
+  isApproximateDeadline: false
+  location: Jeju, Korea
+  rating: A*
+  shortname: KDD 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-02-01T23:59:59Z'
+    deadline: '2026-02-08T23:59:59Z'
+  timezone: UTC-0
+  title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  website: https://kdd2026.kdd.org/
+kdd2027:
+  conferenceEndDate: '2027-08-14'
+  conferenceStartDate: '2027-08-09'
+  dataSrc: estimate
+  h5Index: 124
+  id: kdd2027
+  isApproximateDeadline: true
+  rating: A*
+  shortname: KDD 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-02-01T23:59:59Z'
+    deadline: '2027-02-08T23:59:59Z'
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining

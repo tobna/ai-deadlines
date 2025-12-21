@@ -8,6 +8,7 @@ rulemlrr2026:
   shortname: RuleMLRR 2026
   tags:
   - DB
+  - ML
   timeline:
   - deadline: '2026-05-16T11:59:59Z'
     note: Paper Submission (AoE)

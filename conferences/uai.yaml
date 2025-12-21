@@ -54,20 +54,23 @@ uai2025:
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2025/
 uai2026:
-  conferenceEndDate: '2026-07-26'
-  conferenceStartDate: '2026-07-21'
-  dataSrc: estimate
+  conferenceEndDate: '2025-08-21'
+  conferenceStartDate: '2025-08-17'
+  dataSrc: hf-repo
   id: uai2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: Amsterdam, Netherlands
   rating: A
   shortname: UAI 2026
   tags: *id001
   timeline:
-  - deadline: '2026-02-11T11:59:59Z'
+  - deadline: '2026-02-26T11:59:59Z'
+  timezone: AoE
   title: Conference on Uncertainty in Artificial Intelligence
+  website: https://www.auai.org/uai2026/
 uai2027:
-  conferenceEndDate: '2027-07-26'
-  conferenceStartDate: '2027-07-21'
+  conferenceEndDate: '2027-08-22'
+  conferenceStartDate: '2027-08-17'
   dataSrc: estimate
   id: uai2027
   isApproximateDeadline: true
@@ -75,5 +78,5 @@ uai2027:
   shortname: UAI 2027
   tags: *id001
   timeline:
-  - deadline: '2027-02-11T11:59:59Z'
+  - deadline: '2028-02-26T11:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
