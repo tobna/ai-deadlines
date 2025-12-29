@@ -1,3 +1,5 @@
-Errors from run at 2025-12-23 17:00:48.545632:
-2025-12-23 17:00:48.545866: Failed parsing hf conferences: Expecting value: line 1 column 1 (char 0)
-2025-12-23 17:00:48.545997: No hf conferences found
+Errors from run at 2025-12-29 08:38:27.129323:
+2025-12-29 08:38:27.129582: Failed parsing hf conferences: Expecting value: line 1 column 1 (char 0)
+2025-12-29 08:38:27.129737: No hf conferences found
+2025-12-29 08:38:41.017832: Failed loading ccf-deadlines conferences: Expecting value: line 1 column 1 (char 0)
+2025-12-29 08:38:41.018197: No ccf-conferences found
