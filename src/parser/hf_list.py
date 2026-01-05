@@ -38,6 +38,7 @@ def get_hf_list():
             continue
 
         for conference in conferences:
+            # print(f"HF conf: {conference}")
             shortname = re.sub(r"[^a-zA-Z]", "", conference["title"])
             if no_dig_re.match(shortname):
                 conf_id = shortname.lower() + str(conference["year"])
@@ -52,15 +53,33 @@ def get_hf_list():
             }
 
             timeline = []
-            if "deadline" in conference:
+            if "deadline" in conference and conference["deadline"] is not None:
                 timeline = [{"deadline": conference["deadline"]}]
             if "deadlines" in conference:
+                tl_obj = {}
                 for dl in conference["deadlines"]:
-                    if dl["type"] != "submission":
+                    if dl["date"] is None:
                         continue
-                    tl_obj = {"deadline": dl["date"]}
-                    if "label" in dl:
-                        tl_obj["note"] = dl["label"]
+                    if dl["type"] == "paper" or dl["type"] == "submission":
+                        if "deadline" in tl_obj:
+                            timeline.append(tl_obj)
+                            tl_obj = {}
+                        tl_obj["deadline"] = dl["date"]
+                        if "timezone" in dl:
+                            tl_obj["deadline"] += f" {dl['timezone']}"
+                    elif dl["type"] == "abstract" or dl["type"] == "registration":
+                        if "deadline" in tl_obj and "abstractDeadline" in tl_obj:
+                            timeline.append(tl_obj)
+                            tl_obj = {}
+                        tl_obj["abstractDeadline"] = dl["date"]
+                        if "timezone" in dl:
+                            tl_obj["abstractDeadline"] += f" {dl['timezone']}"
+                    # if dl["type"] != "submission":
+                    #     continue
+                    # tl_obj = {"deadline": dl["date"]}
+                    # if "label" in dl:
+                    #     tl_obj["note"] = dl["label"]
+                if "deadline" in tl_obj:
                     timeline.append(tl_obj)
             if len(timeline) == 0:
                 print(f"WARNING: no timeline for hf-conf: {out_conf}")
@@ -83,7 +102,7 @@ def get_hf_list():
             if "link" in conference:
                 out_conf["website"] = conference["link"]
 
-            if "start" in conference:
+            if "start" in conference and conference["start"] is not None:
                 out_conf["conferenceStartDate"] = conference["start"]
                 out_conf["conferenceEndDate"] = conference["end"]
             else:  # -
@@ -98,7 +117,7 @@ def get_hf_list():
                 out_conf["conferenceStartDate"] = f"{month1} {day1}, {year}"
                 out_conf["conferenceEndDate"] = f"{month2} {day2}, {year}"
 
-            if "abstract_deadline" in conference:
+            if "abstract_deadline" in conference and conference["abstract_deadline"] is not None:
                 out_conf["timeline"][0]["abstractDeadline"] = conference["abstract_deadline"]
 
             out_conf["tags"] = [_tag_dict[tag] for tag in conference["tags"] if tag in _tag_dict.keys()]
@@ -108,4 +127,9 @@ def get_hf_list():
 
 if __name__ == "__main__":
     data = get_hf_list()
-    print(data)
+    for conf in data:
+        print(f"{conf['shortname']}: {conf}")
+        for dl in conf["timeline"]:
+            assert dl["deadline"] is not None
+            if "abstractDeadline" in dl:
+                assert dl["abstractDeadline"]
