@@ -77,12 +77,12 @@ def get_ccf_list():
                     print(f"no conf dates for {data['id']}: {list(conf.keys())}")
 
                 for dates in conf["timeline"]:
-                    if "deadline" not in dates:
+                    if "deadline" not in dates or dates["deadline"] == "TBD":
                         continue
                     timeline = {"deadline": dates["deadline"]}
                     if "comment" in dates:
                         timeline["note"] = dates["comment"]
-                    if "abstract_deadline" in dates:
+                    if "abstract_deadline" in dates and dates["abstract_deadline"] != "TBD":
                         timeline["abstractDeadline"] = dates["abstract_deadline"]
                     data["timeline"].append(timeline)
                 if len(data["timeline"]) == 0:
@@ -93,4 +93,9 @@ def get_ccf_list():
 
 if __name__ == "__main__":
     data = get_ccf_list()
-    print(data)
+    for conf in data:
+        print(f"{conf['shortname']}: {conf}")
+        for dl in conf["timeline"]:
+            assert dl["deadline"] is not None
+            if "abstractDeadline" in dl:
+                assert dl["abstractDeadline"]
