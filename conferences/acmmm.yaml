@@ -31,7 +31,7 @@ acmmm2025:
   timeline:
   - abstractDeadline: '2025-04-05T11:59:59Z'
     deadline: '2025-04-12T11:59:59Z'
-  timezone: UTC-12
+  timezone: AoE
   title: ACM Multimedia
   website: https://acmmm2025.org/
 acmmm2026:

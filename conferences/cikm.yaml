@@ -70,7 +70,7 @@ cikm2024:
   website: https://cikm2024.org/
 cikm2025:
   conferenceEndDate: '2025-11-14'
-  conferenceStartDate: '2025-11-11'
+  conferenceStartDate: '2025-11-10'
   dataSrc: hf-repo
   id: cikm2025
   isApproximateDeadline: false
@@ -81,7 +81,7 @@ cikm2025:
   timeline:
   - abstractDeadline: '2025-05-17T11:59:00Z'
     deadline: '2025-05-24T11:59:00Z'
-  timezone: UTC-12
+  timezone: AoE
   title: Conference on Information and Knowledge Management
   website: https://cikm2025.org/
 cikm2026:

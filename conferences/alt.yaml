@@ -31,14 +31,16 @@ alt2025:
 alt2026:
   conferenceEndDate: '2026-02-26'
   conferenceStartDate: '2026-02-23'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: alt2026
   isApproximateDeadline: false
+  location: Fields Institute, Toronto, Canada
   rating: B
   shortname: ALT 2026
   tags: *id001
   timeline:
-  - deadline: '2025-10-02T09:59:59Z'
+  - deadline: '2025-10-03T11:59:59Z'
+  timezone: America/Toronto
   title: International Conference on Algorithmic Learning Theory
   website: https://algorithmiclearningtheory.org/alt2026/
 alt2027:
@@ -52,4 +54,16 @@ alt2027:
   tags: *id001
   timeline:
   - deadline: '2026-10-02T09:59:59Z'
+  title: International Conference on Algorithmic Learning Theory
+alt2028:
+  conferenceEndDate: '2028-02-28'
+  conferenceStartDate: '2028-02-23'
+  dataSrc: estimate
+  id: alt2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: ALT 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-10-03T11:59:59Z'
   title: International Conference on Algorithmic Learning Theory

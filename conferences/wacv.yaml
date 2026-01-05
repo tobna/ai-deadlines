@@ -101,3 +101,21 @@ wacv2027:
     deadline: '2026-09-19T12:00:00Z'
     note: 'From WACV 2026: Round 2'
   title: Winter Conference on Applications of Computer Vision
+wacv2028:
+  conferenceEndDate: '2028-03-10'
+  conferenceStartDate: '2028-03-05'
+  dataSrc: estimate
+  h5Index: 131
+  id: wacv2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: WACV 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-07-11T12:00:00Z'
+    deadline: '2027-07-18T12:00:00Z'
+    note: 'From WACV 2026: Round 1'
+  - abstractDeadline: '2027-09-12T12:00:00Z'
+    deadline: '2027-09-19T12:00:00Z'
+    note: 'From WACV 2026: Round 2'
+  title: Winter Conference on Applications of Computer Vision

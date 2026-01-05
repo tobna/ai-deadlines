@@ -27,3 +27,15 @@ iccbr2026:
   - deadline: '2026-03-20T23:59:59Z'
   title: International Conference on Case-Based Reasoning
   website: https://2026.iccbr.org/
+iccbr2028:
+  conferenceEndDate: '2028-08-17'
+  conferenceStartDate: '2028-08-12'
+  dataSrc: estimate
+  id: iccbr2028
+  isApproximateDeadline: true
+  rating: C
+  shortname: ICCBR 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-03-19T23:59:59Z'
+  title: International Conference on Case-Based Reasoning

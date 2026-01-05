@@ -95,3 +95,17 @@ aaai2027:
   - abstractDeadline: '2026-07-26T11:59:59Z'
     deadline: '2026-08-02T11:59:59Z'
   title: AAAI Conference on Artificial Intelligence
+aaai2028:
+  conferenceEndDate: '2028-01-25'
+  conferenceStartDate: '2028-01-20'
+  dataSrc: estimate
+  h5Index: 232
+  id: aaai2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: AAAI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-07-26T11:59:59Z'
+    deadline: '2027-08-02T11:59:59Z'
+  title: AAAI Conference on Artificial Intelligence

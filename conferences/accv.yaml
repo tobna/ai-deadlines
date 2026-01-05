@@ -32,3 +32,16 @@ accv2026:
   timezone: America/Los_Angeles
   title: Asian Conference on Computer Vision
   website: https://accv2026.org/
+accv2028:
+  conferenceEndDate: '2028-12-18'
+  conferenceStartDate: '2028-12-13'
+  dataSrc: estimate
+  h5Index: 52
+  id: accv2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: ACCV 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-07-04T23:59:59Z'
+  title: Asian Conference on Computer Vision

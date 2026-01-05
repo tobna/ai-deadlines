@@ -42,3 +42,16 @@ ecir2027:
   - abstractDeadline: '2026-09-25T23:59:59Z'
     deadline: '2026-10-02T23:59:59Z'
   title: European Conference on Information Retrieval
+ecir2028:
+  conferenceEndDate: '2028-04-03'
+  conferenceStartDate: '2028-03-29'
+  dataSrc: estimate
+  id: ecir2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: ECIR 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-09-25T23:59:59Z'
+    deadline: '2027-10-02T23:59:59Z'
+  title: European Conference on Information Retrieval

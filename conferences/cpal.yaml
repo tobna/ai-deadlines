@@ -4,7 +4,7 @@ cpal2025:
   dataSrc: hf-repo
   id: cpal2025
   isApproximateDeadline: false
-  location: California, USA
+  location: Simonyi Conference Center, Stanford University
   shortname: CPAL 2025
   tags: &id001
   - ML
@@ -14,15 +14,19 @@ cpal2025:
   title: The Conference on Parsimony and Learning
   website: https://cpal.cc/
 cpal2026:
-  conferenceEndDate: '2026-03-27'
+  conferenceEndDate: '2026-03-26'
   conferenceStartDate: '2026-03-23'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: cpal2026
   isApproximateDeadline: false
+  location: Max Planck Institute for Intelligent Systems
   shortname: CPAL 2026
   tags: *id001
   timeline:
-  - deadline: '2025-12-05T23:59:59Z'
+  - abstractDeadline: '2025-12-11T11:59:59Z'
+    deadline: '2025-12-13T11:59:59Z'
+  - deadline: '2025-12-16T11:59:59Z'
+  timezone: AoE
   title: The Conference on Parsimony and Learning
   website: https://cpal.cc/
 cpal2027:
@@ -35,4 +39,17 @@ cpal2027:
   tags: *id001
   timeline:
   - deadline: '2026-12-05T23:59:59Z'
+  title: The Conference on Parsimony and Learning
+cpal2028:
+  conferenceEndDate: '2028-03-27'
+  conferenceStartDate: '2028-03-22'
+  dataSrc: estimate
+  id: cpal2028
+  isApproximateDeadline: true
+  shortname: CPAL 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-12-11T11:59:59Z'
+    deadline: '2027-12-13T11:59:59Z'
+  - deadline: '2027-12-16T11:59:59Z'
   title: The Conference on Parsimony and Learning

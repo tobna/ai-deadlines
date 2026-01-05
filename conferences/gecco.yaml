@@ -46,3 +46,19 @@ gecco2027:
     deadline: '2027-01-26T23:59:00Z'
     note: 'From GECCO 2026: Full papers (traditional category)'
   title: Genetic and Evolutionary Computation Conference
+gecco2028:
+  conferenceEndDate: '2028-07-17'
+  conferenceStartDate: '2028-07-12'
+  dataSrc: estimate
+  id: gecco2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: GECCO 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-01-26T23:59:00Z'
+    note: 'From GECCO 2026: Poster-only papers'
+  - abstractDeadline: '2028-01-19T23:59:00Z'
+    deadline: '2028-01-26T23:59:00Z'
+    note: 'From GECCO 2026: Full papers (traditional category)'
+  title: Genetic and Evolutionary Computation Conference

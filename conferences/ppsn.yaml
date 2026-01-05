@@ -24,3 +24,15 @@ ppsn2026:
   - deadline: '2026-03-28T23:59:59Z'
   title: International Conference on Parallel Problem Solving From Nature
   website: https://ppsn2026.disi.unitn.it/
+ppsn2028:
+  conferenceEndDate: '2028-09-02'
+  conferenceStartDate: '2028-08-28'
+  dataSrc: estimate
+  id: ppsn2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: PPSN 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-03-27T23:59:59Z'
+  title: International Conference on Parallel Problem Solving From Nature

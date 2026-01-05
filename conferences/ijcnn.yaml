@@ -23,7 +23,7 @@ ijcnn2025:
   shortname: IJCNN 2025
   tags: *id001
   timeline:
-  - deadline: '2025-02-06T11:59:59Z'
+  - deadline: '2025-01-31T11:59:59Z'
   timezone: UTC-12
   title: International Joint Conference on Neural Networks
   website: https://2025.ijcnn.org/
@@ -38,9 +38,7 @@ ijcnn2026:
   shortname: IJCNN 2026
   tags: *id001
   timeline:
-  - deadline: '2025-09-25T11:59:59Z'
   - deadline: '2026-02-01T11:59:59Z'
-    note: Paper Submission
   timezone: UTC-12
   title: International Joint Conference on Neural Networks
   website: https://attend.ieee.org/wcci-2026/
@@ -57,4 +55,16 @@ ijcnn2027:
   - deadline: '2026-09-25T11:59:59Z'
   - deadline: '2027-02-01T11:59:59Z'
     note: 'From IJCNN 2026: Paper Submission'
+  title: International Joint Conference on Neural Networks
+ijcnn2028:
+  conferenceEndDate: '2028-06-25'
+  conferenceStartDate: '2028-06-20'
+  dataSrc: estimate
+  id: ijcnn2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: IJCNN 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-02-01T11:59:59Z'
   title: International Joint Conference on Neural Networks

@@ -7,10 +7,49 @@ cec2025:
   location: Hangzhou, China
   rating: B
   shortname: CEC 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - deadline: '2025-01-16T11:59:59Z'
   timezone: UTC-12
   title: IEEE Congress on Evolutionary Computation
   website: https://www.cec2025.org/
+cec2026:
+  conferenceEndDate: '2026-06-26'
+  conferenceStartDate: '2026-06-21'
+  dataSrc: hf-repo
+  id: cec2026
+  isApproximateDeadline: false
+  location: Maastricht, Netherlands
+  rating: B
+  shortname: CEC 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-02-01T11:59:59Z'
+  timezone: UTC-12
+  title: IEEE Congress on Evolutionary Computation
+  website: https://attend.ieee.org/wcci-2026/
+cec2027:
+  conferenceEndDate: '2027-06-26'
+  conferenceStartDate: '2027-06-21'
+  dataSrc: estimate
+  id: cec2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: CEC 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-02-01T11:59:59Z'
+  title: IEEE Congress on Evolutionary Computation
+cec2028:
+  conferenceEndDate: '2028-06-25'
+  conferenceStartDate: '2028-06-20'
+  dataSrc: estimate
+  id: cec2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: CEC 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-02-01T11:59:59Z'
+  title: IEEE Congress on Evolutionary Computation

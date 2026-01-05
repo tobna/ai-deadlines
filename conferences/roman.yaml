@@ -35,3 +35,13 @@ roman2027:
   tags: *id001
   timeline:
   - deadline: '2027-03-15T23:59:59Z'
+roman2028:
+  conferenceEndDate: '2028-08-28'
+  conferenceStartDate: '2028-08-23'
+  dataSrc: estimate
+  id: roman2028
+  isApproximateDeadline: true
+  shortname: Ro-Man 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-03-14T23:59:59Z'

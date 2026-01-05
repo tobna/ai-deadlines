@@ -60,21 +60,23 @@ emnlp2025:
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2025.emnlp.org/
 emnlp2026:
-  conferenceEndDate: '2026-11-10'
-  conferenceStartDate: '2026-11-05'
-  dataSrc: estimate
+  conferenceEndDate: '2026-10-29'
+  conferenceStartDate: '2026-10-24'
+  dataSrc: hf-repo
   h5Index: 218
   id: emnlp2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: TBA
   rating: A*
   shortname: EMNLP 2026
   tags: *id001
   timeline:
   - deadline: '2026-05-20T11:59:59Z'
   title: The annual Conference on Empirical Methods in Natural Language Processing
+  website: https://2026.emnlp.org/
 emnlp2027:
-  conferenceEndDate: '2027-11-10'
-  conferenceStartDate: '2027-11-05'
+  conferenceEndDate: '2027-10-29'
+  conferenceStartDate: '2027-10-24'
   dataSrc: estimate
   h5Index: 218
   id: emnlp2027
@@ -84,4 +86,17 @@ emnlp2027:
   tags: *id001
   timeline:
   - deadline: '2027-05-20T11:59:59Z'
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+emnlp2028:
+  conferenceEndDate: '2028-10-28'
+  conferenceStartDate: '2028-10-23'
+  dataSrc: estimate
+  h5Index: 218
+  id: emnlp2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: EMNLP 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-05-19T11:59:59Z'
   title: The annual Conference on Empirical Methods in Natural Language Processing

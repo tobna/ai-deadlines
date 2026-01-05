@@ -52,3 +52,15 @@ threedv2027:
   timeline:
   - deadline: '2026-08-18T23:59:59Z'
   title: International Conference on 3D Vision
+threedv2028:
+  conferenceEndDate: '2028-03-28'
+  conferenceStartDate: '2028-03-23'
+  dataSrc: estimate
+  h5Index: 56
+  id: threedv2028
+  isApproximateDeadline: true
+  shortname: 3DV 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-08-18T23:59:59Z'
+  title: International Conference on 3D Vision

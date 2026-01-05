@@ -70,3 +70,16 @@ icip2027:
   timeline:
   - deadline: '2027-01-21T23:59:59Z'
   title: The IEEE International Conference on Image Processing
+icip2028:
+  conferenceEndDate: '2028-09-17'
+  conferenceStartDate: '2028-09-12'
+  dataSrc: estimate
+  h5Index: 55
+  id: icip2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: ICIP 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-01-21T23:59:59Z'
+  title: The IEEE International Conference on Image Processing

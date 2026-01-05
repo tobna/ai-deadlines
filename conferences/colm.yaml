@@ -13,7 +13,7 @@ colm2024:
   title: Conference on Language Modeling
   website: https://colmweb.org/cfp.html
 colm2025:
-  conferenceEndDate: '2025-10-09'
+  conferenceEndDate: '2025-10-10'
   conferenceStartDate: '2025-10-07'
   dataSrc: hf-repo
   id: colm2025
@@ -22,32 +22,47 @@ colm2025:
   shortname: COLM 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-03-21T11:59:59Z'
-    deadline: '2025-03-28T11:59:59Z'
+  - abstractDeadline: '2025-03-23T11:59:59Z'
+    deadline: '2025-03-29T11:59:59Z'
   timezone: AoE
   title: Conference on Language Modeling
   website: https://colmweb.org/cfp.html
 colm2026:
-  conferenceEndDate: '2026-10-12'
-  conferenceStartDate: '2026-10-07'
-  dataSrc: estimate
+  conferenceEndDate: '2026-10-09'
+  conferenceStartDate: '2026-10-06'
+  dataSrc: hf-repo
   id: colm2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: San Francisco, USA
   shortname: COLM 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-03-21T11:59:59Z'
-    deadline: '2026-03-28T11:59:59Z'
+  - abstractDeadline: '2026-03-27T11:59:59Z'
+    deadline: '2026-04-01T11:59:59Z'
+  timezone: AoE
   title: Conference on Language Modeling
+  website: https://colmweb.org/
 colm2027:
-  conferenceEndDate: '2027-10-12'
-  conferenceStartDate: '2027-10-07'
+  conferenceEndDate: '2027-10-11'
+  conferenceStartDate: '2027-10-06'
   dataSrc: estimate
   id: colm2027
   isApproximateDeadline: true
   shortname: COLM 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-03-21T11:59:59Z'
-    deadline: '2027-03-28T11:59:59Z'
+  - abstractDeadline: '2027-03-27T11:59:59Z'
+    deadline: '2027-04-01T11:59:59Z'
+  title: Conference on Language Modeling
+colm2028:
+  conferenceEndDate: '2028-10-10'
+  conferenceStartDate: '2028-10-05'
+  dataSrc: estimate
+  id: colm2028
+  isApproximateDeadline: true
+  shortname: COLM 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-03-26T11:59:59Z'
+    deadline: '2028-03-31T11:59:59Z'
   title: Conference on Language Modeling

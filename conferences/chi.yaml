@@ -26,7 +26,7 @@ chi2025:
   timeline:
   - abstractDeadline: '2024-09-06T11:59:59Z'
     deadline: '2024-09-13T11:59:59Z'
-  timezone: UTC-12
+  timezone: AoE
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2025.acm.org/
 chi2026:
@@ -42,7 +42,7 @@ chi2026:
   timeline:
   - abstractDeadline: '2025-09-05T11:59:59Z'
     deadline: '2025-09-12T11:59:59Z'
-  timezone: UTC-12
+  timezone: AoE
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2026.acm.org/
 chi2027:
@@ -57,4 +57,17 @@ chi2027:
   timeline:
   - abstractDeadline: '2026-09-05T11:59:59Z'
     deadline: '2026-09-12T11:59:59Z'
+  title: The ACM Conference on Human Factors in Computing Systems
+chi2028:
+  conferenceEndDate: '2028-04-17'
+  conferenceStartDate: '2028-04-12'
+  dataSrc: estimate
+  id: chi2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: CHI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-09-05T11:59:59Z'
+    deadline: '2027-09-12T11:59:59Z'
   title: The ACM Conference on Human Factors in Computing Systems

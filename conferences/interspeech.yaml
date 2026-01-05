@@ -63,7 +63,7 @@ interspeech2026:
   shortname: Interspeech 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-03T11:59:59Z'
+  - deadline: '2026-02-26T11:59:59Z'
   timezone: UTC-12
   title: Interspeech
   website: https://interspeech2026.org
@@ -78,4 +78,16 @@ interspeech2027:
   tags: *id001
   timeline:
   - deadline: '2027-03-03T11:59:59Z'
+  title: Interspeech
+interspeech2028:
+  conferenceEndDate: '2028-10-01'
+  conferenceStartDate: '2028-09-26'
+  dataSrc: estimate
+  id: interspeech2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: Interspeech 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-02-26T11:59:59Z'
   title: Interspeech

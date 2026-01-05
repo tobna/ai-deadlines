@@ -49,8 +49,7 @@ icassp2025:
   shortname: ICASSP 2025
   tags: *id001
   timeline:
-  - deadline: '2025-09-18T20:59:59Z'
-    note: Paper Submission
+  - deadline: '2025-09-18T06:59:59Z'
   timezone: UTC-12
   title: International Conference on Acoustics, Speech and Signal Processing
   website: https://2025.ieeeicassp.org/
@@ -66,7 +65,6 @@ icassp2026:
   tags: *id001
   timeline:
   - deadline: '2025-09-18T06:59:59Z'
-    note: Paper Submission
   timezone: Etc/GMT-2
   title: International Conference on Acoustics, Speech and Signal Processing
   website: https://2026.ieeeicassp.org

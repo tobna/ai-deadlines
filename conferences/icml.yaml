@@ -165,3 +165,17 @@ icml2027:
     note: 'From ICML 2026: Paper Submissions Open on OpenReview Jan 08 2026 12:00AM
       UTC-0'
   title: International Conference on Machine Learning
+icml2028:
+  conferenceEndDate: '2028-07-10'
+  conferenceStartDate: '2028-07-05'
+  dataSrc: estimate
+  h5Index: 272
+  id: icml2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ICML 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-01-24T11:59:59Z'
+    deadline: '2028-01-29T11:59:59Z'
+  title: International Conference on Machine Learning

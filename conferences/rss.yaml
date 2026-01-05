@@ -43,16 +43,16 @@ rss2025:
 rss2026:
   conferenceEndDate: '2026-07-17'
   conferenceStartDate: '2026-07-13'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: rss2026
   isApproximateDeadline: false
   location: Sydney, Australia
   shortname: RSS 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-01-23T23:59:00Z'
-    deadline: '2026-01-30T23:59:00Z'
-  timezone: CET
+  - abstractDeadline: '2026-01-24T11:59:59Z'
+    deadline: '2026-01-31T11:59:59Z'
+  timezone: UTC-12
   title: Robotics Science and Systems
   website: https://roboticsconference.org
 rss2027:
@@ -65,4 +65,16 @@ rss2027:
   tags: *id001
   timeline:
   - deadline: '2027-01-31T22:59:59Z'
+  title: Robotics Science and Systems
+rss2028:
+  conferenceEndDate: '2028-07-17'
+  conferenceStartDate: '2028-07-12'
+  dataSrc: estimate
+  id: rss2028
+  isApproximateDeadline: true
+  shortname: RSS 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-01-24T11:59:59Z'
+    deadline: '2028-01-31T11:59:59Z'
   title: Robotics Science and Systems

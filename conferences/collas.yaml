@@ -11,6 +11,6 @@ collas2025:
   timeline:
   - abstractDeadline: '2025-02-27T11:59:59Z'
     deadline: '2025-03-04T11:59:59Z'
-  timezone: UTC-12
+  timezone: AoE
   title: Conference on Lifelong Learning Agents
   website: https://lifelong-ml.cc

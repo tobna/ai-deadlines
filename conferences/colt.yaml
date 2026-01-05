@@ -40,9 +40,24 @@ colt2025:
   timezone: UTC-5
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2025/
+colt2026:
+  conferenceEndDate: '2026-07-03'
+  conferenceStartDate: '2026-06-29'
+  dataSrc: hf-repo
+  id: colt2026
+  isApproximateDeadline: false
+  location: San Diego, United States
+  rating: A*
+  shortname: COLT 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-02-05T11:59:59Z'
+  timezone: UTC-12
+  title: Annual Conference on Learning Theory
+  website: https://learningtheory.org/colt2026/
 colt2027:
-  conferenceEndDate: '2027-07-05'
-  conferenceStartDate: '2027-06-30'
+  conferenceEndDate: '2027-07-04'
+  conferenceStartDate: '2027-06-29'
   dataSrc: estimate
   id: colt2027
   isApproximateDeadline: true
@@ -50,5 +65,17 @@ colt2027:
   shortname: COLT 2027
   tags: *id001
   timeline:
-  - deadline: '2027-02-06T21:59:59Z'
+  - deadline: '2027-02-05T11:59:59Z'
+  title: Annual Conference on Learning Theory
+colt2028:
+  conferenceEndDate: '2028-07-03'
+  conferenceStartDate: '2028-06-28'
+  dataSrc: estimate
+  id: colt2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: COLT 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-02-05T11:59:59Z'
   title: Annual Conference on Learning Theory

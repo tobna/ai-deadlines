@@ -6,7 +6,7 @@ facct2025:
   isApproximateDeadline: false
   location: Hotel Bonaventure, Montreal, QC, Canada
   shortname: FAccT 2025
-  tags:
+  tags: &id001
   - CV
   - ML
   - NLP
@@ -17,3 +17,44 @@ facct2025:
   timezone: UTC-12
   title: ACM Conference on Fairness, Accountability, and Transparency
   website: https://facctconference.org/2026/index.html
+facct2026:
+  conferenceEndDate: '2026-06-30'
+  conferenceStartDate: '2026-06-27'
+  dataSrc: hf-repo
+  id: facct2026
+  isApproximateDeadline: false
+  location: Hotel Bonaventure, Montreal, QC, Canada
+  shortname: FAccT 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-01-09T11:59:59Z'
+    deadline: '2026-01-14T11:59:59Z'
+  timezone: AoE
+  title: ACM Conference on Fairness, Accountability, and Transparency
+  website: https://facctconference.org/2026/index.html
+facct2027:
+  conferenceEndDate: '2027-07-02'
+  conferenceStartDate: '2027-06-27'
+  dataSrc: estimate
+  id: facct2027
+  isApproximateDeadline: true
+  shortname: FAccT 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-01-09T11:59:59Z'
+    deadline: '2027-01-14T11:59:59Z'
+    note: 'From FAccT 2025: Paper Submission'
+  title: ACM Conference on Fairness, Accountability, and Transparency
+facct2028:
+  conferenceEndDate: '2028-07-01'
+  conferenceStartDate: '2028-06-26'
+  dataSrc: estimate
+  id: facct2028
+  isApproximateDeadline: true
+  shortname: FAccT 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-01-09T11:59:59Z'
+    deadline: '2028-01-14T11:59:59Z'
+    note: 'From FAccT 2025: Paper Submission'
+  title: ACM Conference on Fairness, Accountability, and Transparency

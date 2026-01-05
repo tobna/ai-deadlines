@@ -10,8 +10,8 @@ rulemlrr2026:
   - DB
   - ML
   timeline:
-  - deadline: '2026-05-16T11:59:59Z'
-    note: Paper Submission (AoE)
+  - abstractDeadline: '2026-05-09T11:59:59Z'
+    deadline: '2026-05-16T11:59:59Z'
   timezone: AoE
   title: International Joint Conference on Rules and Reasoning
   website: https://2026.declarativeai.net/events/ruleml-rr

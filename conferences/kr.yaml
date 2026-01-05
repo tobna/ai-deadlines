@@ -69,3 +69,16 @@ kr2027:
   - abstractDeadline: '2027-02-08T23:59:59Z'
     deadline: '2027-02-13T23:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
+kr2028:
+  conferenceEndDate: '2028-07-24'
+  conferenceStartDate: '2028-07-19'
+  dataSrc: estimate
+  id: kr2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: KR 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-02-08T23:59:59Z'
+    deadline: '2028-02-13T23:59:59Z'
+  title: International Conference on Principles of Knowledge Representation and Reasoning

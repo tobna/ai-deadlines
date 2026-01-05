@@ -37,3 +37,15 @@ ijcb2027:
   timeline:
   - deadline: '2027-04-10T23:59:59Z'
   title: International Joint Conference on Biometrics
+ijcb2028:
+  conferenceEndDate: '2028-09-05'
+  conferenceStartDate: '2028-08-31'
+  dataSrc: estimate
+  id: ijcb2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: IJCB 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-04-09T23:59:59Z'
+  title: International Joint Conference on Biometrics

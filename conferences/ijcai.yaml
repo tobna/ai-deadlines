@@ -50,30 +50,31 @@ ijcai2025:
   h5Index: 136
   id: ijcai2025
   isApproximateDeadline: false
-  location: Montreal, Canada
+  location: "Palais des congr\xE8s, Montreal"
   rating: A*
   shortname: IJCAI 2025
   tags: *id001
   timeline:
   - abstractDeadline: '2025-01-17T11:59:59Z'
     deadline: '2025-01-24T11:59:59Z'
-  timezone: UTC-12
+  timezone: America/Montreal
   title: International Joint Conference on Artificial Intelligence
   website: https://2025.ijcai.org/
 ijcai2026:
   conferenceEndDate: '2026-08-21'
   conferenceStartDate: '2026-08-15'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 136
   id: ijcai2026
   isApproximateDeadline: false
-  location: Bremen, Germany
+  location: Bremen Conference Centre, Bremen
   rating: A*
   shortname: IJCAI 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-01-12T23:59:59Z'
-    deadline: '2026-01-19T23:59:59Z'
+  - abstractDeadline: '2026-01-13T11:59:59Z'
+    deadline: '2026-01-20T11:59:59Z'
+  timezone: Europe/Berlin
   title: International Joint Conference on Artificial Intelligence
   website: https://2026.ijcai.org/
 ijcai2027:
@@ -89,4 +90,18 @@ ijcai2027:
   timeline:
   - abstractDeadline: '2027-01-12T23:59:59Z'
     deadline: '2027-01-19T23:59:59Z'
+  title: International Joint Conference on Artificial Intelligence
+ijcai2028:
+  conferenceEndDate: '2028-08-19'
+  conferenceStartDate: '2028-08-14'
+  dataSrc: estimate
+  h5Index: 136
+  id: ijcai2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: IJCAI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-01-13T11:59:59Z'
+    deadline: '2028-01-20T11:59:59Z'
   title: International Joint Conference on Artificial Intelligence

@@ -58,9 +58,9 @@ aistats2026:
   shortname: AISTATS 2026
   tags: *id001
   timeline:
-  - deadline: '2025-10-03T11:59:59Z'
-    note: Abstract deadline on 2025-09-25 23:59:59 UTC-12!
-  timezone: Etc/GMT-2
+  - abstractDeadline: '2025-09-26T11:59:59Z'
+    deadline: '2025-10-03T11:59:59Z'
+  timezone: AoE
   title: International Conference on Artificial Intelligence and Statistics
   website: https://virtual.aistats.org/Conferences/2026
 aistats2027:
@@ -76,4 +76,18 @@ aistats2027:
   timeline:
   - deadline: '2026-10-03T11:59:59Z'
     note: 'From AISTATS 2026: Abstract deadline on 2025-09-25 23:59:59 UTC-12!'
+  title: International Conference on Artificial Intelligence and Statistics
+aistats2028:
+  conferenceEndDate: '2028-05-06'
+  conferenceStartDate: '2028-05-01'
+  dataSrc: estimate
+  h5Index: 101
+  id: aistats2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: AISTATS 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-09-26T11:59:59Z'
+    deadline: '2027-10-03T11:59:59Z'
   title: International Conference on Artificial Intelligence and Statistics

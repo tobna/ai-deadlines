@@ -1,16 +1,15 @@
-mathai2025:
-  conferenceEndDate: '2025-03-28'
-  conferenceStartDate: '2025-03-24'
+mathai2026:
+  conferenceEndDate: '2026-04-03'
+  conferenceStartDate: '2026-03-30'
   dataSrc: hf-repo
-  id: mathai2025
+  id: mathai2026
   isApproximateDeadline: false
-  location: Sochi, Russia
-  shortname: MathAI 2025
+  location: Sirius International Mathematics Center, Sirius
+  shortname: MathAI 2026
   tags:
   - ML
   timeline:
-  - abstractDeadline: '2025-02-01T20:59:00Z'
-    deadline: '2025-02-20T20:59:00Z'
-  timezone: Russia/Moscow
+  - abstractDeadline: '2026-02-01T00:00:00Z'
+    deadline: '2026-02-19T00:00:00Z'
   title: The International Conference dedicated to mathematics in artificial intelligence
   website: https://mathai.club

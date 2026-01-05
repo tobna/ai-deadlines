@@ -46,20 +46,20 @@ aamas2025:
   website: https://aamas2025.org/
 aamas2026:
   conferenceEndDate: '2026-05-29'
-  conferenceStartDate: '2026-05-27'
+  conferenceStartDate: '2026-05-25'
   dataSrc: hf-repo
   id: aamas2026
   isApproximateDeadline: false
-  location: Paphos, Cyprus
+  location: Coral Beach Hotel & Resort, Paphos, Cyprus
   rating: A*
   shortname: AAMAS 2026
   tags: *id001
   timeline:
-  - deadline: '2025-10-09T11:59:59Z'
-    note: Abstract deadline on 2025-10-01 23:59:59 UTC-12!
-  timezone: Etc/GMT-2
+  - abstractDeadline: '2025-10-02T11:59:59Z'
+    deadline: '2025-10-09T11:59:59Z'
+  timezone: UTC-12
   title: International Conference on Autonomous Agents and Multiagent Systems
-  website: https://aamas2026.org/
+  website: https://cyprusconferences.org/aamas2026/
 aamas2027:
   conferenceEndDate: '2027-06-01'
   conferenceStartDate: '2027-05-27'
@@ -72,4 +72,17 @@ aamas2027:
   timeline:
   - deadline: '2026-10-09T11:59:59Z'
     note: 'From AAMAS 2026: Abstract deadline on 2025-10-01 23:59:59 UTC-12!'
+  title: International Conference on Autonomous Agents and Multiagent Systems
+aamas2028:
+  conferenceEndDate: '2028-05-29'
+  conferenceStartDate: '2028-05-24'
+  dataSrc: estimate
+  id: aamas2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: AAMAS 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-10-02T11:59:59Z'
+    deadline: '2027-10-09T11:59:59Z'
   title: International Conference on Autonomous Agents and Multiagent Systems
