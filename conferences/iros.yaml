@@ -40,6 +40,7 @@ iros2025:
   tags: *id001
   timeline:
   - deadline: '2025-03-03T07:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-8
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
   website: http://www.iros25.org/

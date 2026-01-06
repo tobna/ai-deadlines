@@ -57,6 +57,7 @@ ijcai2025:
   timeline:
   - abstractDeadline: '2025-01-17T11:59:59Z'
     deadline: '2025-01-24T11:59:59Z'
+    note: Full paper submission deadline
   timezone: America/Montreal
   title: International Joint Conference on Artificial Intelligence
   website: https://2025.ijcai.org/
@@ -74,6 +75,7 @@ ijcai2026:
   timeline:
   - abstractDeadline: '2026-01-13T11:59:59Z'
     deadline: '2026-01-20T11:59:59Z'
+    note: Full paper submission deadline
   timezone: Europe/Berlin
   title: International Joint Conference on Artificial Intelligence
   website: https://2026.ijcai.org/

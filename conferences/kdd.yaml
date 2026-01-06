@@ -14,6 +14,7 @@ kdd2025:
   timeline:
   - abstractDeadline: '2025-02-04T11:59:59Z'
     deadline: '2025-02-11T11:59:59Z'
+    note: Paper submission
   timezone: AoE
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
   website: https://kdd2025.kdd.org/
@@ -31,6 +32,7 @@ kdd2026:
   timeline:
   - abstractDeadline: '2026-02-02T11:59:59Z'
     deadline: '2026-02-09T11:59:59Z'
+    note: Paper submission (Second Cycle)
   timezone: AoE
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
   website: https://kdd2026.kdd.org/

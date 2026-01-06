@@ -40,6 +40,7 @@ alt2026:
   tags: *id001
   timeline:
   - deadline: '2025-10-03T11:59:59Z'
+    note: Paper submission deadline
   timezone: America/Toronto
   title: International Conference on Algorithmic Learning Theory
   website: https://algorithmiclearningtheory.org/alt2026/

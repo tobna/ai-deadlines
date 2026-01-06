@@ -42,6 +42,7 @@ coling2025:
   tags: *id001
   timeline:
   - deadline: '2024-09-17T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: International Conference on Computational Linguistics
   website: https://coling2025.org/

@@ -41,6 +41,7 @@ ecai2025:
   timeline:
   - abstractDeadline: '2025-04-30T11:59:59Z'
     deadline: '2025-05-07T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: European Conference on Artificial Intelligence
   website: https://ecai2025.org/deadlines/

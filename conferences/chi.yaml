@@ -26,6 +26,7 @@ chi2025:
   timeline:
   - abstractDeadline: '2024-09-06T11:59:59Z'
     deadline: '2024-09-13T11:59:59Z'
+    note: Full Paper Due
   timezone: AoE
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2025.acm.org/
@@ -42,6 +43,7 @@ chi2026:
   timeline:
   - abstractDeadline: '2025-09-05T11:59:59Z'
     deadline: '2025-09-12T11:59:59Z'
+    note: Full Paper Due
   timezone: AoE
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2026.acm.org/

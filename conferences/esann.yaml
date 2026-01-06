@@ -11,6 +11,7 @@ esann2025:
   - ML
   timeline:
   - deadline: '2024-11-20T08:00:00Z'
+    note: Paper submission deadline
   timezone: UTC-8
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
@@ -27,6 +28,7 @@ esann2026:
   tags: *id001
   timeline:
   - deadline: '2025-11-20T11:59:59Z'
+    note: Paper submission deadline
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/

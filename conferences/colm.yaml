@@ -24,6 +24,7 @@ colm2025:
   timeline:
   - abstractDeadline: '2025-03-23T11:59:59Z'
     deadline: '2025-03-29T11:59:59Z'
+    note: Paper Submission
   timezone: AoE
   title: Conference on Language Modeling
   website: https://colmweb.org/cfp.html
@@ -39,6 +40,7 @@ colm2026:
   timeline:
   - abstractDeadline: '2026-03-27T11:59:59Z'
     deadline: '2026-04-01T11:59:59Z'
+    note: Paper Submission
   timezone: AoE
   title: Conference on Language Modeling
   website: https://colmweb.org/

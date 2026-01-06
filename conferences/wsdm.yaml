@@ -55,6 +55,7 @@ wsdm2025:
   timeline:
   - abstractDeadline: '2024-08-08T11:59:00Z'
     deadline: '2024-08-15T11:59:00Z'
+    note: Paper submission
   timezone: UTC-12
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2025/
@@ -72,6 +73,7 @@ wsdm2026:
   timeline:
   - abstractDeadline: '2025-08-08T11:59:00Z'
     deadline: '2025-08-15T11:59:00Z'
+    note: Paper submission
   title: ACM International Conference on Web Search and Data Mining
   website: https://wsdm-conference.org/2026/
 wsdm2027:

@@ -12,6 +12,7 @@ rlc2025:
   timeline:
   - abstractDeadline: '2025-02-22T11:59:59Z'
     deadline: '2025-03-01T11:59:59Z'
+    note: Paper submission
   timezone: America/Edmonton
   title: Reinforcement Learning Conference
   website: https://rl-conference.cc/

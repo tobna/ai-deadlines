@@ -52,6 +52,7 @@ rss2026:
   timeline:
   - abstractDeadline: '2026-01-24T11:59:59Z'
     deadline: '2026-01-31T11:59:59Z'
+    note: Paper Submission
   timezone: UTC-12
   title: Robotics Science and Systems
   website: https://roboticsconference.org

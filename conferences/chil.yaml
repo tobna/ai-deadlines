@@ -11,6 +11,7 @@ chil2026:
   timeline:
   - abstractDeadline: '2026-02-05T11:59:59Z'
     deadline: '2026-02-05T11:59:59Z'
+    note: Paper Submission
   timezone: UTC-12
   title: AHLI Conference on Health, Inference, and Learning
   website: https://chil.ahli.cc/submit/call-for-papers/

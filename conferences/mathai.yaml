@@ -11,5 +11,6 @@ mathai2026:
   timeline:
   - abstractDeadline: '2026-02-01T00:00:00Z'
     deadline: '2026-02-19T00:00:00Z'
+    note: Full paper submission deadline
   title: The International Conference dedicated to mathematics in artificial intelligence
   website: https://mathai.club

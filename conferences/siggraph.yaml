@@ -10,6 +10,7 @@ siggraph2025:
   tags: &id001 []
   timeline:
   - deadline: '2025-01-23T22:00:00Z'
+    note: Paper deadline
   timezone: UTC-8
   title: Conference on Computer Graphics and Interactive Techniques
   website: https://s2025.siggraph.org/
@@ -25,6 +26,7 @@ siggraph2026:
   tags: *id001
   timeline:
   - deadline: '2026-01-22T22:00:00Z'
+    note: Technical Papers deadline
   title: Conference on Computer Graphics and Interactive Techniques
   website: https://s2026.siggraph.org/
 siggraph2027:

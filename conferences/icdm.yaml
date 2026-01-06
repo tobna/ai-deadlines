@@ -68,6 +68,7 @@ icdm2025:
   tags: *id001
   timeline:
   - deadline: '2025-06-07T11:59:59Z'
+    note: Full Paper Submission
   timezone: AoE
   title: International Conference on Data Mining
   website: https://www3.cs.stonybrook.edu/~icdm2025/index.html
@@ -85,6 +86,7 @@ icdm2026:
   timeline:
   - abstractDeadline: '2026-05-31T11:59:59Z'
     deadline: '2026-06-07T11:59:59Z'
+    note: Full Paper Submission
   title: International Conference on Data Mining
   website: http://icdm2026.neu.edu.cn/
 icdm2027:

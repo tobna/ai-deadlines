@@ -12,6 +12,7 @@ ecmlpkdd2025:
   timeline:
   - abstractDeadline: '2025-03-08T11:59:59Z'
     deadline: '2025-03-15T11:59:59Z'
+    note: Paper submission
   timezone: AoE
   title: European Conference on Machine Learning and Principles and Practice of Knowledge
     Discovery in Databases

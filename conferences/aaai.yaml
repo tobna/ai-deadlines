@@ -61,6 +61,7 @@ aaai2025:
   timeline:
   - abstractDeadline: '2024-08-08T11:59:59Z'
     deadline: '2024-08-16T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-25/
@@ -78,6 +79,7 @@ aaai2026:
   timeline:
   - abstractDeadline: '2025-07-26T11:59:59Z'
     deadline: '2025-08-02T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-26/

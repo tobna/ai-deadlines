@@ -26,6 +26,7 @@ cec2026:
   tags: *id001
   timeline:
   - deadline: '2026-02-01T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: IEEE Congress on Evolutionary Computation
   website: https://attend.ieee.org/wcci-2026/

@@ -72,6 +72,7 @@ icra2026:
   tags: *id001
   timeline:
   - deadline: '2025-09-16T07:59:59Z'
+    note: Paper Submission
   timezone: PST
   title: International Conference on Robotics and Automation
   website: https://2026.ieee-icra.org/

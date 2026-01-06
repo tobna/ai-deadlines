@@ -10,6 +10,7 @@ cpal2025:
   - ML
   timeline:
   - deadline: '2024-11-26T11:59:59Z'
+    note: Paper submission deadline
   timezone: AoE
   title: The Conference on Parsimony and Learning
   website: https://cpal.cc/
@@ -25,6 +26,7 @@ cpal2026:
   timeline:
   - abstractDeadline: '2025-12-11T11:59:59Z'
     deadline: '2025-12-13T11:59:59Z'
+    note: Paper submission deadline
   timezone: AoE
   title: The Conference on Parsimony and Learning
   website: https://cpal.cc/

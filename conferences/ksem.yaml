@@ -37,6 +37,7 @@ ksem2025:
   tags: *id001
   timeline:
   - deadline: '2025-03-21T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC+0
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2025.scimeeting.cn/

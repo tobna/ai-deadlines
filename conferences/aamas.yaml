@@ -57,6 +57,7 @@ aamas2026:
   timeline:
   - abstractDeadline: '2025-10-02T11:59:59Z'
     deadline: '2025-10-09T11:59:59Z'
+    note: Paper submission
   timezone: UTC-12
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://cyprusconferences.org/aamas2026/

@@ -57,6 +57,7 @@ miccai2026:
   timeline:
   - abstractDeadline: '2026-02-13T07:59:59Z'
     deadline: '2026-02-27T07:59:59Z'
+    note: Paper Submission
   timezone: UTC-08
   title: International Conference on Medical Image Computing and Computer-Assisted
     Intervention

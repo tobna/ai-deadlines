@@ -28,6 +28,7 @@ conll2026:
   tags: *id001
   timeline:
   - deadline: '2026-02-20T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: The SIGNLL Conference on Computational Natural Language Learning
   website: https://conll.org/

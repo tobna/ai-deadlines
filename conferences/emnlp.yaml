@@ -72,6 +72,7 @@ emnlp2026:
   tags: *id001
   timeline:
   - deadline: '2026-05-20T11:59:59Z'
+    note: Paper submission deadline
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2026.emnlp.org/
 emnlp2027:
