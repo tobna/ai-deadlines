@@ -40,8 +40,6 @@ eccv2026:
   shortname: ECCV 2026
   tags: *id001
   timeline:
-  - deadline: '2026-02-15T11:59:59Z'
-  - deadline: '2026-02-16T11:59:59Z'
   - deadline: '2026-03-06T11:00:00Z'
   timezone: UTC+0
   title: European Conference on Computer Vision
