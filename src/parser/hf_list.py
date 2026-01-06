@@ -60,7 +60,9 @@ def get_hf_list():
                 for dl in conference["deadlines"]:
                     if dl["date"] is None:
                         continue
-                    if dl["type"] == "paper" or dl["type"] == "submission":
+                    if dl["type"] == "submission" and ("label" not in dl or "paper" in dl["label"].lower()):
+                        dl["type"] = "paper"
+                    if dl["type"] == "paper":
                         if "deadline" in tl_obj:
                             timeline.append(tl_obj)
                             tl_obj = {}

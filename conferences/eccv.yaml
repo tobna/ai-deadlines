@@ -57,7 +57,5 @@ eccv2028:
   shortname: ECCV 2028
   tags: *id001
   timeline:
-  - deadline: '2028-02-15T11:59:59Z'
-  - deadline: '2028-02-16T11:59:59Z'
   - deadline: '2028-03-05T11:00:00Z'
   title: European Conference on Computer Vision
