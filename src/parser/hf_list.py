@@ -57,10 +57,15 @@ def get_hf_list():
                 timeline = [{"deadline": conference["deadline"]}]
             if "deadlines" in conference:
                 tl_obj = {}
+                has_paper_type = any(dl["type"] == "paper" for dl in conference["deadlines"])
                 for dl in conference["deadlines"]:
                     if dl["date"] is None:
                         continue
-                    if dl["type"] == "submission" and ("label" not in dl or "paper" in dl["label"].lower()):
+                    if (
+                        not has_paper_type
+                        and dl["type"] == "submission"
+                        and ("label" not in dl or "paper" in dl["label"].lower())
+                    ):
                         dl["type"] = "paper"
                     if dl["type"] == "paper":
                         if "deadline" in tl_obj:
