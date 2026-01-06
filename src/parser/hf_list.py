@@ -74,6 +74,8 @@ def get_hf_list():
                         tl_obj["deadline"] = dl["date"]
                         if "timezone" in dl:
                             tl_obj["deadline"] += f" {dl['timezone']}"
+                        if "label" in dl:
+                            tl_obj["note"] = dl["label"]
                     elif dl["type"] == "abstract" or dl["type"] == "registration":
                         if "deadline" in tl_obj and "abstractDeadline" in tl_obj:
                             timeline.append(tl_obj)
