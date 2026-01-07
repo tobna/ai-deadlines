@@ -34,13 +34,14 @@ aamas2025:
   dataSrc: hf-repo
   id: aamas2025
   isApproximateDeadline: false
-  location: Detroit, Michigan
+  location: Detroit Marriott at the Renaissance Center, Detroit, Michigan
   rating: A*
   shortname: AAMAS 2025
   tags: *id001
   timeline:
   - abstractDeadline: '2024-10-10T11:59:59Z'
     deadline: '2024-10-17T11:59:59Z'
+    note: Paper submission
   timezone: UTC-12
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://aamas2025.org/
