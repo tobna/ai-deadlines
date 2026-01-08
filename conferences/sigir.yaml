@@ -1,3 +1,70 @@
+sigir2021:
+  conferenceEndDate: '2021-07-15'
+  conferenceStartDate: '2021-07-11'
+  dataSrc: ccf-deadlines
+  id: sigir2021
+  isApproximateDeadline: false
+  shortname: SIGIR 2021
+  tags: &id001
+  - DM
+  - NLP
+  timeline:
+  - abstractDeadline: '2021-02-02T23:59:59Z'
+    deadline: '2021-02-09T23:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval
+  website: http://sigir.org/sigir2021/
+sigir2022:
+  conferenceEndDate: '2022-07-15'
+  conferenceStartDate: '2022-07-11'
+  dataSrc: ccf-deadlines
+  id: sigir2022
+  isApproximateDeadline: false
+  shortname: SIGIR 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-01-21T23:59:59Z'
+    deadline: '2022-01-28T23:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval
+  website: https://sigir.org/sigir2022/
+sigir2023:
+  conferenceEndDate: '2023-07-27'
+  conferenceStartDate: '2023-07-23'
+  dataSrc: ccf-deadlines
+  id: sigir2023
+  isApproximateDeadline: false
+  shortname: SIGIR 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-01-24T23:59:59Z'
+    deadline: '2023-01-31T23:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval
+  website: https://sigir.org/sigir2023/
+sigir2024:
+  conferenceEndDate: '2024-07-18'
+  conferenceStartDate: '2024-07-14'
+  dataSrc: ccf-deadlines
+  id: sigir2024
+  isApproximateDeadline: false
+  shortname: SIGIR 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2024-01-19T23:59:59Z'
+    deadline: '2024-01-25T23:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval
+  website: https://sigir-2024.github.io/index.html
+sigir2025:
+  conferenceEndDate: '2025-07-18'
+  conferenceStartDate: '2025-07-13'
+  dataSrc: ccf-deadlines
+  id: sigir2025
+  isApproximateDeadline: false
+  shortname: SIGIR 2025
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2025-01-16T23:59:59Z'
+    deadline: '2025-01-23T23:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval
+  website: https://sigir2025.dei.unipd.it/
 sigir2026:
   conferenceEndDate: '2026-07-24'
   conferenceStartDate: '2026-07-20'
@@ -6,9 +73,7 @@ sigir2026:
   isApproximateDeadline: false
   location: Melbourne, Australia
   shortname: SIGIR 2026
-  tags:
-  - DM
-  - NLP
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-01-16T11:59:59Z'
     deadline: '2026-01-23T11:59:59Z'
@@ -17,3 +82,31 @@ sigir2026:
   title: International ACM SIGIR Conference on Research and Development in Information
     Retrieval
   website: https://sigir2026.org/en-AU
+sigir2027:
+  conferenceEndDate: '2027-07-25'
+  conferenceStartDate: '2027-07-20'
+  dataSrc: estimate
+  id: sigir2027
+  isApproximateDeadline: true
+  shortname: SIGIR 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-01-16T11:59:59Z'
+    deadline: '2027-01-23T11:59:59Z'
+    note: 'From SIGIR 2026: Full research paper submission deadline'
+  title: International ACM SIGIR Conference on Research and Development in Information
+    Retrieval
+sigir2028:
+  conferenceEndDate: '2028-07-24'
+  conferenceStartDate: '2028-07-19'
+  dataSrc: estimate
+  id: sigir2028
+  isApproximateDeadline: true
+  shortname: SIGIR 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-01-16T11:59:59Z'
+    deadline: '2028-01-23T11:59:59Z'
+    note: 'From SIGIR 2026: Full research paper submission deadline'
+  title: International ACM SIGIR Conference on Research and Development in Information
+    Retrieval
