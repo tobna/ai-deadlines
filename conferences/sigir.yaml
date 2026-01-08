@@ -1,0 +1,19 @@
+sigir2026:
+  conferenceEndDate: '2026-07-24'
+  conferenceStartDate: '2026-07-20'
+  dataSrc: hf-repo
+  id: sigir2026
+  isApproximateDeadline: false
+  location: Melbourne, Australia
+  shortname: SIGIR 2026
+  tags:
+  - DM
+  - NLP
+  timeline:
+  - abstractDeadline: '2026-01-16T11:59:59Z'
+    deadline: '2026-01-23T11:59:59Z'
+    note: Full research paper submission deadline
+  timezone: AoE
+  title: International ACM SIGIR Conference on Research and Development in Information
+    Retrieval
+  website: https://sigir2026.org/en-AU
