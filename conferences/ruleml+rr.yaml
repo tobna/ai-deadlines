@@ -4,6 +4,7 @@ ruleml+rr2026:
   dataSrc: ccf-deadlines
   id: ruleml+rr2026
   isApproximateDeadline: false
+  rating: B
   shortname: RuleML+RR 2026
   tags: []
   timeline:
