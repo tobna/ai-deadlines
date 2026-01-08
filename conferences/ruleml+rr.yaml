@@ -1,0 +1,13 @@
+ruleml+rr2026:
+  conferenceEndDate: '2026-08-26'
+  conferenceStartDate: '2026-08-24'
+  dataSrc: ccf-deadlines
+  id: ruleml+rr2026
+  isApproximateDeadline: false
+  shortname: RuleML+RR 2026
+  tags: []
+  timeline:
+  - abstractDeadline: '2026-05-08T23:59:59Z'
+    deadline: '2026-05-15T23:59:59Z'
+  title: International Joint Conference on Rules and Reasoning
+  website: https://2026.declarativeai.net/events/ruleml-rr
