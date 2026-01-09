@@ -4,6 +4,7 @@ sigir2021:
   dataSrc: ccf-deadlines
   id: sigir2021
   isApproximateDeadline: false
+  rating: A*
   shortname: SIGIR 2021
   tags: &id001
   - DM
@@ -19,6 +20,7 @@ sigir2022:
   dataSrc: ccf-deadlines
   id: sigir2022
   isApproximateDeadline: false
+  rating: A*
   shortname: SIGIR 2022
   tags: *id001
   timeline:
@@ -32,6 +34,7 @@ sigir2023:
   dataSrc: ccf-deadlines
   id: sigir2023
   isApproximateDeadline: false
+  rating: A*
   shortname: SIGIR 2023
   tags: *id001
   timeline:
@@ -45,6 +48,7 @@ sigir2024:
   dataSrc: ccf-deadlines
   id: sigir2024
   isApproximateDeadline: false
+  rating: A*
   shortname: SIGIR 2024
   tags: *id001
   timeline:
@@ -58,6 +62,7 @@ sigir2025:
   dataSrc: ccf-deadlines
   id: sigir2025
   isApproximateDeadline: false
+  rating: A*
   shortname: SIGIR 2025
   tags: *id001
   timeline:
@@ -72,6 +77,7 @@ sigir2026:
   id: sigir2026
   isApproximateDeadline: false
   location: Melbourne, Australia
+  rating: A*
   shortname: SIGIR 2026
   tags: *id001
   timeline:
@@ -88,6 +94,7 @@ sigir2027:
   dataSrc: estimate
   id: sigir2027
   isApproximateDeadline: true
+  rating: A*
   shortname: SIGIR 2027
   tags: *id001
   timeline:
@@ -102,6 +109,7 @@ sigir2028:
   dataSrc: estimate
   id: sigir2028
   isApproximateDeadline: true
+  rating: A*
   shortname: SIGIR 2028
   tags: *id001
   timeline:
