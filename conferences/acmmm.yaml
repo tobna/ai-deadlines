@@ -43,6 +43,7 @@ acmmm2026:
   id: acmmm2026
   isApproximateDeadline: true
   rating: A*
+  location: Rio de Janeiro, Brazil
   shortname: ACMMM 2026
   tags: *id001
   timeline:
