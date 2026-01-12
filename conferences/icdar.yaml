@@ -21,10 +21,10 @@ icdar2026:
   dataSrc: ccf-deadlines
   id: icdar2026
   isApproximateDeadline: false
+  location: Vienna, Austria
   rating: A
   shortname: ICDAR 2026
   tags: *id001
-  location: Vienna, Austria
   timeline:
   - abstractDeadline: '2026-02-13T23:59:59Z'
     deadline: '2026-02-27T23:59:59Z'
