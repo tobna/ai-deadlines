@@ -30,13 +30,14 @@ rss2025:
   dataSrc: hf-repo
   id: rss2025
   isApproximateDeadline: false
-  location: Los Angeles, USA
+  location: University of Southern California
   rating: TBR
   shortname: RSS 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-01-18T11:59:00Z'
-    deadline: '2025-01-25T11:59:00Z'
+  - abstractDeadline: '2025-01-18T11:59:59Z'
+    deadline: '2025-01-25T11:59:59Z'
+    note: Paper Submission
   timezone: AoE
   title: Robotics Science and Systems
   website: https://roboticsconference.org

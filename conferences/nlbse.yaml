@@ -9,8 +9,8 @@ nlbse2026:
   tags:
   - NLP
   timeline:
-  - deadline: '2025-11-04T23:59:59Z'
+  - deadline: '2025-11-04T11:59:59Z'
     note: Paper submission deadline
-  timezone: UTC-12
+  timezone: AoE
   title: The 5th International Workshop on Natural Language-based Software Engineering
   website: https://nlbse2026.github.io/

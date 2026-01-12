@@ -45,20 +45,24 @@ iros2025:
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
   website: http://www.iros25.org/
 iros2026:
-  conferenceEndDate: '2026-10-25'
-  conferenceStartDate: '2026-10-19'
-  dataSrc: ninoduarte-git
+  conferenceEndDate: '2026-10-01'
+  conferenceStartDate: '2026-09-27'
+  dataSrc: hf-repo
   h5Index: 86
   id: iros2026
   isApproximateDeadline: false
-  location: Pittsburgh, USA
+  location: David L. Lawrence Convention Center
   rating: A
-  shortname: iROS 2026
+  shortname: IROS 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-01T23:59:59Z'
+  - deadline: '2026-03-03T11:59:59Z'
+    note: Paper submission deadline
+  - deadline: '2026-03-06T11:59:59Z'
+    note: Paper video submission deadline
   timezone: America/Los_Angeles
-  website: http://www.iros26.org/
+  title: IEEE\RSJ International Conference on Intelligent Robots and Systems
+  website: https://2026.ieee-iros.org/
 iros2027:
   conferenceEndDate: '2027-10-24'
   conferenceStartDate: '2027-10-19'

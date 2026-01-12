@@ -11,10 +11,13 @@ sgp2025:
   - CV
   - ML
   timeline:
-  - abstractDeadline: '2025-02-05T11:59:59Z'
-    deadline: '2025-02-08T11:59:59Z'
-    note: Paper submission
-  timezone: UTC-12
+  - abstractDeadline: '2025-02-04T23:59:00Z'
+    deadline: '2025-02-07T23:59:00Z'
+    note: Paper submission (Round 1)
+  - abstractDeadline: '2025-04-08T23:59:00Z'
+    deadline: '2025-04-11T23:59:00Z'
+    note: Paper submission (Round 2)
+  timezone: UTC
   title: Symposium on Geometry Processing
   website: https://sgp2025.my.canva.site/
 sgp2026:

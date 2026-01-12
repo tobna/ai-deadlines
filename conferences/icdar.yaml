@@ -10,24 +10,27 @@ icdar2025:
   tags: &id001
   - CV
   timeline:
-  - abstractDeadline: '2025-02-28T23:59:59Z'
-    deadline: '2025-03-07T23:59:59Z'
+  - abstractDeadline: '2025-03-01T07:59:59Z'
+    deadline: '2025-03-15T07:59:59Z'
+    note: Paper submission
   timezone: UTC+0
   title: International Conference on Document Analysis and Recognition
   website: https://www.icdar2025.com/home
 icdar2026:
   conferenceEndDate: '2026-09-04'
   conferenceStartDate: '2026-08-30'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: icdar2026
   isApproximateDeadline: false
-  location: Vienna, Austria
+  location: "TU Wien, Campus Gu\xDFhaus"
   rating: A
   shortname: ICDAR 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-02-13T23:59:59Z'
-    deadline: '2026-02-27T23:59:59Z'
+  - abstractDeadline: '2026-02-14T11:59:59Z'
+    deadline: '2026-02-28T11:59:59Z'
+    note: Paper submission
+  timezone: UTC+0
   title: International Conference on Document Analysis and Recognition
   website: https://icdar2026.org/
 icdar2027:

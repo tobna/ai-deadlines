@@ -7,7 +7,7 @@ rlc2025:
   location: Centennial Centre for Interdisciplinary Science (CCIS), University of
     Alberta
   shortname: RLC 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2025-02-22T11:59:59Z'
@@ -16,3 +16,45 @@ rlc2025:
   timezone: America/Edmonton
   title: Reinforcement Learning Conference
   website: https://rl-conference.cc/
+rlc2026:
+  conferenceEndDate: '2026-08-19'
+  conferenceStartDate: '2026-08-16'
+  dataSrc: hf-repo
+  id: rlc2026
+  isApproximateDeadline: false
+  location: Montreal, Canada
+  shortname: RLC 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-03-02T12:00:00Z'
+    deadline: '2026-03-06T12:00:00Z'
+    note: Paper submission
+  timezone: America/Montreal
+  title: Reinforcement Learning Conference
+  website: https://rl-conference.cc/
+rlc2027:
+  conferenceEndDate: '2027-08-21'
+  conferenceStartDate: '2027-08-16'
+  dataSrc: estimate
+  id: rlc2027
+  isApproximateDeadline: true
+  shortname: RLC 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-03-02T12:00:00Z'
+    deadline: '2027-03-06T12:00:00Z'
+    note: 'From RLC 2026: Paper submission'
+  title: Reinforcement Learning Conference
+rlc2028:
+  conferenceEndDate: '2028-08-20'
+  conferenceStartDate: '2028-08-15'
+  dataSrc: estimate
+  id: rlc2028
+  isApproximateDeadline: true
+  shortname: RLC 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-03-01T12:00:00Z'
+    deadline: '2028-03-05T12:00:00Z'
+    note: 'From RLC 2026: Paper submission'
+  title: Reinforcement Learning Conference
