@@ -46,21 +46,25 @@ ecai2025:
   title: European Conference on Artificial Intelligence
   website: https://ecai2025.org/deadlines/
 ecai2026:
-  conferenceEndDate: '2026-10-30'
-  conferenceStartDate: '2026-10-25'
-  dataSrc: estimate
+  conferenceEndDate: '2026-08-21'
+  conferenceStartDate: '2026-08-15'
+  dataSrc: hf-repo
   id: ecai2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: University of Bremen and Bremen Exhibition Center
   rating: A
   shortname: ECAI 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-04-30T11:59:59Z'
-    deadline: '2026-05-07T11:59:59Z'
+  - abstractDeadline: '2026-01-13T11:59:59Z'
+    deadline: '2026-01-20T11:59:59Z'
+    note: Full paper submission deadline
+  timezone: UTC-12
   title: European Conference on Artificial Intelligence
+  website: https://2026.ijcai.org/
 ecai2027:
-  conferenceEndDate: '2027-10-30'
-  conferenceStartDate: '2027-10-25'
+  conferenceEndDate: '2027-08-20'
+  conferenceStartDate: '2027-08-15'
   dataSrc: estimate
   id: ecai2027
   isApproximateDeadline: true
@@ -68,6 +72,21 @@ ecai2027:
   shortname: ECAI 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-04-30T11:59:59Z'
-    deadline: '2027-05-07T11:59:59Z'
+  - abstractDeadline: '2027-01-13T11:59:59Z'
+    deadline: '2027-01-20T11:59:59Z'
+    note: 'From ECAI 2026: Full paper submission deadline'
+  title: European Conference on Artificial Intelligence
+ecai2028:
+  conferenceEndDate: '2028-08-19'
+  conferenceStartDate: '2028-08-14'
+  dataSrc: estimate
+  id: ecai2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: ECAI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-01-13T11:59:59Z'
+    deadline: '2028-01-20T11:59:59Z'
+    note: 'From ECAI 2026: Full paper submission deadline'
   title: European Conference on Artificial Intelligence

@@ -80,12 +80,10 @@ www2026:
   shortname: WWW 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-09-30T21:59:59Z'
-    deadline: '2025-10-07T21:59:59Z'
-  - abstractDeadline: '2025-10-08T11:59:59Z'
+  - abstractDeadline: '2025-10-01T11:59:59Z'
     deadline: '2025-10-08T11:59:59Z'
     note: Paper Submission
-  timezone: Etc/GMT-2
+  timezone: AoE
   title: The Web Conference
   website: https://www2026.thewebconf.org/
 www2027:

@@ -18,12 +18,12 @@ facct2025:
   title: ACM Conference on Fairness, Accountability, and Transparency
   website: https://facctconference.org/2026/index.html
 facct2026:
-  conferenceEndDate: '2026-06-30'
-  conferenceStartDate: '2026-06-27'
+  conferenceEndDate: '2026-06-28'
+  conferenceStartDate: '2026-06-25'
   dataSrc: hf-repo
   id: facct2026
   isApproximateDeadline: false
-  location: Hotel Bonaventure, Montreal, QC, Canada
+  location: "Le Centre Sheraton Montr\xE9al, Montreal, QC, Canada"
   shortname: FAccT 2026
   tags: *id001
   timeline:

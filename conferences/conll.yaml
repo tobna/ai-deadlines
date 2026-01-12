@@ -11,7 +11,8 @@ conll2025:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2025-03-16T00:00:00Z'
+  - deadline: '2025-03-15T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: The SIGNLL Conference on Computational Natural Language Learning
   website: https://conll.org/

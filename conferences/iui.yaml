@@ -33,13 +33,15 @@ iui2026:
   dataSrc: hf-repo
   id: iui2026
   isApproximateDeadline: false
-  location: Paphos, Cyprus
+  location: Coral Beach Hotel & Resort
   rating: A
   shortname: IUI 2026
   tags: *id001
   timeline:
-  - deadline: '2025-10-11T11:59:59Z'
-  timezone: Etc/GMT-2
+  - abstractDeadline: '2025-10-04T11:59:59Z'
+    deadline: '2025-10-11T11:59:59Z'
+    note: Full paper submission
+  timezone: AoE
   title: ACM Conference on Intelligent User Interfaces
   website: https://iui.acm.org/2026/
 iui2027:

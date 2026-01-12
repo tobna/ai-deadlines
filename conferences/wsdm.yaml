@@ -73,7 +73,10 @@ wsdm2026:
   timeline:
   - abstractDeadline: '2025-08-08T11:59:00Z'
     deadline: '2025-08-15T11:59:00Z'
-    note: Paper submission
+    note: Paper submission (full papers)
+  - abstractDeadline: '2025-09-19T11:59:00Z'
+    deadline: '2025-09-26T11:59:00Z'
+    note: Paper submission (short papers)
   title: ACM International Conference on Web Search and Data Mining
   website: https://wsdm-conference.org/2026/
 wsdm2027:

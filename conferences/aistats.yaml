@@ -36,14 +36,15 @@ aistats2025:
   h5Index: 101
   id: aistats2025
   isApproximateDeadline: false
-  location: TBA
+  location: Splash Beach Resort
   rating: A
   shortname: AISTATS 2025
   tags: *id001
   timeline:
   - abstractDeadline: '2024-10-04T11:59:59Z'
     deadline: '2024-10-11T11:59:59Z'
-  timezone: UTC-12
+    note: Full paper submission deadline
+  timezone: AoE
   title: International Conference on Artificial Intelligence and Statistics
   website: https://aistats.org/aistats2025
 aistats2026:
@@ -53,7 +54,7 @@ aistats2026:
   h5Index: 101
   id: aistats2026
   isApproximateDeadline: false
-  location: TBA
+  location: Hilton Tangier Al Houara Resort & Spa
   rating: A
   shortname: AISTATS 2026
   tags: *id001
