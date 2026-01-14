@@ -1,3 +1,3 @@
-Errors from run at 2026-01-14 13:40:41.197499:
-2026-01-14 13:40:41.197570: Failed parsing ninoduarte-git: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /NunoDuarte/NunoDuarte.github.io/raw/refs/heads/master/deadlines/static/data/past_conferences.txt (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f5a74dfbc40>: Failed to resolve 'github.com' ([Errno -3] Try again)"))
-2026-01-14 13:40:41.197593: No ninoduarte-git conferences found
+Errors from run at 2026-01-14 19:50:21.198279:
+2026-01-14 19:50:21.198500: Failed parsing hf conferences: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/huggingface/ai-deadlines/git/trees/main?recursive=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f4526015820>: Failed to resolve 'api.github.com' ([Errno -3] Try again)"))
+2026-01-14 19:50:21.198593: No hf conferences found
