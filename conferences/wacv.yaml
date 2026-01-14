@@ -84,26 +84,24 @@ wacv2026:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2026/
 wacv2027:
-  conferenceEndDate: '2027-03-11'
-  conferenceStartDate: '2027-03-06'
-  dataSrc: estimate
+  conferenceEndDate: '2027-03-10'
+  conferenceStartDate: '2027-03-05'
+  dataSrc: ninoduarte-git
   h5Index: 131
   id: wacv2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: Orlando, Florida
   rating: A
   shortname: WACV 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-07-11T12:00:00Z'
-    deadline: '2026-07-18T12:00:00Z'
-    note: 'From WACV 2026: Round 1'
-  - abstractDeadline: '2026-09-12T12:00:00Z'
-    deadline: '2026-09-19T12:00:00Z'
-    note: 'From WACV 2026: Round 2'
-  title: Winter Conference on Applications of Computer Vision
+  - deadline: '2026-07-18T23:59:59Z'
+    note: Round 1
+  timezone: America/Los_Angeles
+  website: https://wacv.thecvf.com/Conferences/2027
 wacv2028:
-  conferenceEndDate: '2028-03-10'
-  conferenceStartDate: '2028-03-05'
+  conferenceEndDate: '2028-03-09'
+  conferenceStartDate: '2028-03-04'
   dataSrc: estimate
   h5Index: 131
   id: wacv2028
@@ -112,10 +110,5 @@ wacv2028:
   shortname: WACV 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-07-11T12:00:00Z'
-    deadline: '2027-07-18T12:00:00Z'
-    note: 'From WACV 2026: Round 1'
-  - abstractDeadline: '2027-09-12T12:00:00Z'
-    deadline: '2027-09-19T12:00:00Z'
-    note: 'From WACV 2026: Round 2'
-  title: Winter Conference on Applications of Computer Vision
+  - deadline: '2027-07-18T23:59:59Z'
+    note: 'From WACV 2027: Round 1'
