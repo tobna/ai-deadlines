@@ -2,6 +2,7 @@ import argparse
 import datetime
 import os
 import sys
+import traceback
 
 import dateparser
 import yaml
@@ -18,7 +19,13 @@ from see_future import estimate_future_conferences
 from wacv import parse_wacv
 
 from ranking import make_conf_rank_function, make_core_rank_function
-from utils import _parse_timestr, join_conferences, parse_all_times, unite_tags, parse_stuff
+from utils import (
+    _parse_timestr,
+    join_conferences,
+    parse_all_times,
+    parse_stuff,
+    unite_tags,
+)
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ninoduarte-git", "ccf-deadlines", "hf-repo", "off-website", "manual"]
@@ -38,7 +45,7 @@ def write_error(msg):
     if not _RESET_ERROR_FILE:
         _reset_error_file()
     with open(_ERROR_FILE, "a") as f:
-        f.write(f"{datetime.datetime.now()}: {msg}\n")
+        f.write(f"{datetime.datetime.now()}: {msg.strip().replace('\n', '\n'+str(datetime.datetime.now()))}\n")
 
 
 parser = argparse.ArgumentParser()
@@ -122,8 +129,9 @@ if args.online:
     try:
         hf_conferences = get_hf_list()
     except Exception as e:
-        print(f"ERROR while parsing hf list: {e}")
-        write_error(f"Failed parsing hf conferences: {e}")
+        trace = traceback.format_exc()
+        print(f"ERROR while parsing hf list: {e}\n{trace}")
+        write_error(f"Failed parsing hf conferences: {e}\n{trace}")
         hf_conferences = []
     if len(hf_conferences) == 0:
         print("ERROR no hf conferences found")
