@@ -44,8 +44,9 @@ def write_error(msg):
     global _RESET_ERROR_FILE
     if not _RESET_ERROR_FILE:
         _reset_error_file()
+    msg = str(datetime.datetime.now()) + ": " + msg.strip().replace("\n", "\n" + str(datetime.datetime.now()) + ": ")
     with open(_ERROR_FILE, "a") as f:
-        f.write(f"{datetime.datetime.now()}: {msg.strip().replace('\n', '\n'+str(datetime.datetime.now()))}\n")
+        f.write(msg)
 
 
 parser = argparse.ArgumentParser()
