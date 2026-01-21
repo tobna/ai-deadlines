@@ -1,7 +1,8 @@
 aaai: A*
-aamas: A*
+aamas: A
 accv: B
 acl: A*
+acml: C
 acmmm: A*
 aistats: A
 alt: B
@@ -21,7 +22,7 @@ emnlp: A*
 esann: B
 fg: B
 gecco: A
-hri: A
+hri: A*
 icann: C
 icaps: A*
 icassp: B

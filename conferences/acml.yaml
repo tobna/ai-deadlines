@@ -4,6 +4,7 @@ acml2021:
   dataSrc: ccf-deadlines
   id: acml2021
   isApproximateDeadline: false
+  rating: C
   shortname: ACML 2021
   tags: &id001
   - CV
@@ -19,6 +20,7 @@ acml2023:
   dataSrc: ccf-deadlines
   id: acml2023
   isApproximateDeadline: false
+  rating: C
   shortname: ACML 2023
   tags: *id001
   timeline:
@@ -31,6 +33,7 @@ acml2024:
   dataSrc: ccf-deadlines
   id: acml2024
   isApproximateDeadline: false
+  rating: C
   shortname: ACML 2024
   tags: *id001
   timeline:
@@ -43,6 +46,7 @@ acml2025:
   dataSrc: ccf-deadlines
   id: acml2025
   isApproximateDeadline: false
+  rating: C
   shortname: ACML 2025
   tags: *id001
   timeline:
@@ -58,6 +62,7 @@ acml2026:
   dataSrc: estimate
   id: acml2026
   isApproximateDeadline: true
+  rating: C
   shortname: ACML 2026
   tags: *id001
   timeline:
@@ -72,6 +77,7 @@ acml2027:
   dataSrc: estimate
   id: acml2027
   isApproximateDeadline: true
+  rating: C
   shortname: ACML 2027
   tags: *id001
   timeline:
