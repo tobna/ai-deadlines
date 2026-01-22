@@ -30,8 +30,8 @@ eccv2024:
   website: https://eccv.ecva.net/Conferences/2024/
 eccv2026:
   conferenceEndDate: '2026-09-13'
-  conferenceStartDate: '2026-09-08'
-  dataSrc: hf-repo
+  conferenceStartDate: '2026-09-10'
+  dataSrc: off-website
   h5Index: 262
   id: eccv2026
   isApproximateDeadline: false
@@ -40,12 +40,11 @@ eccv2026:
   shortname: ECCV 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-02-26T22:59:59Z'
-    deadline: '2026-03-05T22:59:59Z'
-    note: Paper Submission
+  - abstractDeadline: '2026-02-26T22:00:00Z'
+    deadline: '2026-03-05T22:00:00Z'
   timezone: UTC+0
   title: European Conference on Computer Vision
-  website: https://eccv.ecva.net/Conferences/2026
+  website: https://eccv.ecva.net/Conferences/2026/
 eccv2028:
   conferenceEndDate: '2028-09-12'
   conferenceStartDate: '2028-09-07'
