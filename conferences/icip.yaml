@@ -54,7 +54,7 @@ icip2026:
   shortname: ICIP 2026
   tags: *id001
   timeline:
-  - deadline: '2026-01-21T23:59:59Z'
+  - deadline: '2026-02-04T23:59:59Z'
   title: The IEEE International Conference on Image Processing
   website: https://2026.ieeeicip.org/
 icip2027:
