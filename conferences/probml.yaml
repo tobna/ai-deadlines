@@ -1,0 +1,10 @@
+probml2026:
+  dataSrc: ccf-deadlines
+  id: probml2026
+  isApproximateDeadline: false
+  shortname: ProbML 2026
+  tags: []
+  timeline:
+  - deadline: '2026-03-20T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learnin
+  website: https://probml.cc
