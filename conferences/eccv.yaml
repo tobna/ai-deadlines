@@ -10,7 +10,7 @@ eccv2022:
   tags: &id001
   - CV
   timeline:
-  - deadline: '2022-03-07T11:59:00Z'
+  - deadline: '2022-03-07T10:59:00Z'
   title: European Conference on Computer Vision
   website: https://eccv2022.ecva.net/
 eccv2024:

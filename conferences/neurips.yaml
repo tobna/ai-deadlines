@@ -259,7 +259,7 @@ neurips2026:
   shortname: NeurIPS 2026
   tags: *id001
   timeline:
-  - deadline: '2026-05-07T11:59:00Z'
+  - deadline: '2026-05-07T09:59:00Z'
   timezone: Etc/GMT+12
   title: Conference on Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2026

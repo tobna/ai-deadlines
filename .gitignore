@@ -8,3 +8,8 @@ src/plausible.js
 src/data/.last_core_update
 tailwindcss*
 src/styles.tailwind.css
+aideadlines/__pycache__
+aideadlines/parser/__pycache__
+aideadlines/data/*.json
+aideadlines/plausible.js
+aideadlines/data/.last_core_update

@@ -4,6 +4,8 @@ import re
 import requests
 import yaml
 
+from ..log_config import logger
+
 _tag_dict = {
     "machine-learning": "ML",
     "computer-vision": "CV",
@@ -91,7 +93,7 @@ def get_hf_list():
                 if "deadline" in tl_obj:
                     timeline.append(tl_obj)
             if len(timeline) == 0:
-                print(f"WARNING: no timeline for hf-conf: {out_conf}")
+                logger.warning(f"no timeline for hf-conf: {out_conf}")
                 continue
             out_conf["timeline"] = timeline
 
@@ -118,7 +120,7 @@ def get_hf_list():
                 date_str = conference["date"].strip()
                 match = hf_date_re.match(date_str)
                 if not match:
-                    print(f"INFO skipping hf entry {conf_id} with date '{date_str}'")
+                    logger.info(f"INFO skipping hf entry {conf_id} with date '{date_str}'")
                     continue
                 month1, day1, month2, day2, year = match.groups()
                 if month2 is None or len(month2) == 0:

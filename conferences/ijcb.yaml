@@ -9,7 +9,7 @@ ijcb2025:
   tags: &id001
   - HCI
   timeline:
-  - deadline: '2025-04-11T23:59:59Z'
+  - deadline: '2025-04-11T21:59:59Z'
   title: International Joint Conference on Biometrics
   website: https://ijcb2025.ieee-biometrics.org/
 ijcb2026:
@@ -22,7 +22,7 @@ ijcb2026:
   shortname: IJCB 2026
   tags: *id001
   timeline:
-  - deadline: '2026-04-10T23:59:59Z'
+  - deadline: '2026-04-10T21:59:59Z'
   title: International Joint Conference on Biometrics
   website: https://ijcb2026.ieee-biometrics.org/
 ijcb2027:

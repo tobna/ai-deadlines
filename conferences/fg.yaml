@@ -9,9 +9,9 @@ fg2025:
   tags: &id001
   - CV
   timeline:
-  - deadline: '2024-09-30T23:59:59Z'
+  - deadline: '2024-09-30T21:59:59Z'
     note: Round 1
-  - deadline: '2025-01-31T23:59:59Z'
+  - deadline: '2025-01-31T22:59:59Z'
     note: Round 2
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2025.ieee-biometrics.org/

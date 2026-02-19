@@ -1,4 +1,5 @@
 import dateparser
+from .log_config import logger
 from copy import deepcopy
 import pytz
 import re
@@ -12,7 +13,7 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
         timestr = timestr.replace("Pacific Time", "PT")
         parsed_time = dateparser.parse(timestr)
         if parsed_time is None:
-            print("NONE:", timestr)
+            logger.warning("NONE:", timestr)
             return None
     else:
         assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
@@ -43,7 +44,7 @@ def parse_all_times(conference):
     try:
         year = int(conference["id"][-4:])
     except ValueError as e:
-        print(conference)
+        logger.info(conference)
         raise e
     conf_tz = None
     if "timezone" in conference:
@@ -55,12 +56,12 @@ def parse_all_times(conference):
             if month_day_re.match(timestr.strip()):
                 timestr += f", {year}"
             if " the " in timestr and not any(mnth in timestr for mnth in month_strs):
-                print(f"WATCH OUT: {timestr} ->", end="\t")
+                logger.info(f"WATCH OUT: {timestr} ->", end="\t")
                 if "End" in timekey:
                     timestr = timestr.replace(
                         " the ", " " + month_strs[int(conference["conferenceStartDate"].split("-")[1]) - 1] + " "
                     )
-                print(timestr)
+                logger.info(timestr)
 
             timestr = _parse_timestr(timestr, with_time=False, conf_tz=conf_tz)
             if timestr:
@@ -70,10 +71,10 @@ def parse_all_times(conference):
             if "deadline" in key.lower():
                 timestr = dates[key]
                 if isinstance(timestr, str) and month_day_time_re.match(timestr):
-                    print(f"adding year to '{timestr}' -> ", end="\t")
+                    logger.info(f"adding year to '{timestr}' -> ", end="\t")
                     start, end = month_day_time_re.match(timestr).groups()
                     timestr = f"{start} {year}{end}"
-                    print(timestr)
+                    logger.info(timestr)
                 timestr = _parse_timestr(timestr, with_time=True, conf_tz=conf_tz)
                 if timestr:
                     dates[key] = timestr
@@ -99,7 +100,7 @@ def join_conferences(master, slave):
             val = sorted(list(all_tags))
         if key == "timeline":
             if (len(val) == 0 or val[0]["deadline"].lower() == "tbd") and len(out[key]) > 0:
-                print(f"taking slave timeline: {out[key]} instead of master timeline {val}")
+                logger.info(f"taking slave timeline: {out[key]} instead of master timeline {val}")
                 continue
         out[key] = val
     return out

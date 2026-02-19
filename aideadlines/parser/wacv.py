@@ -1,7 +1,10 @@
 import re
 from copy import deepcopy
+
 import requests
 from bs4 import BeautifulSoup
+
+from ..log_config import logger
 
 
 def parse_wacv(year):
@@ -43,7 +46,7 @@ def parse_wacv(year):
     }
 
     if submissions is not None:
-        print("try link", submission_link)
+        logger.info("try link", submission_link)
         submissions = requests.get(submission_link)
         submissions = BeautifulSoup(submissions.text, "html.parser")
         # print(submissions)
@@ -66,7 +69,7 @@ def parse_wacv(year):
     if "deadline" not in data["timeline"][0]:
         url = f"https://wacv.thecvf.com/Conferences/{year}/"
         data["website"] = url
-        print("try", url + "Dates")
+        logger.info("try", url + "Dates")
 
         dates_site = requests.get(url + "Dates")
         dates_site = BeautifulSoup(dates_site.text, "html.parser")

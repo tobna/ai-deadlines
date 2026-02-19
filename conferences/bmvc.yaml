@@ -10,7 +10,7 @@ bmvc2021:
   tags: &id001
   - CV
   timeline:
-  - deadline: '2021-06-25T23:59:59Z'
+  - deadline: '2021-06-25T21:59:59Z'
   title: British Machine Vision Conference
   website: https://britishmachinevisionassociation.github.io/bmvc
 bmvc2023:
@@ -24,7 +24,7 @@ bmvc2023:
   shortname: BMVC 2023
   tags: *id001
   timeline:
-  - deadline: '2023-05-12T23:59:59Z'
+  - deadline: '2023-05-12T21:59:59Z'
   title: British Machine Vision Conference
   website: https://www.bmvc2023.org/
 bmvc2024:
@@ -56,8 +56,8 @@ bmvc2025:
   shortname: BMVC 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-05-13T23:59:59Z'
-    deadline: '2025-05-16T23:59:59Z'
+  - abstractDeadline: '2025-05-13T21:59:59Z'
+    deadline: '2025-05-16T21:59:59Z'
   timezone: Europe/London
   title: British Machine Vision Conference
   website: https://bmvc2025.bmva.org/

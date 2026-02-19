@@ -1,12 +1,14 @@
-from copy import deepcopy
 import json
-import pytz
-import dateparser
-from datetime import datetime
 import os
 import sys
+from copy import deepcopy
+from datetime import datetime
 
+import dateparser
+import pytz
 import yaml
+
+from .log_config import logger
 
 this_folder = os.path.dirname(__file__)
 sys.path.append(this_folder)
@@ -18,8 +20,8 @@ for conf_file in os.listdir(conference_folder):
     with open(os.path.join(conference_folder, conf_file), "r") as f:
         file_confs = yaml.safe_load(f)
     conferences = {**file_confs, **conferences}
-print(f"managing {len(conferences)} conference instances")
-print(sorted(list(conferences.keys())))
+logger.info(f"managing {len(conferences)} conference instances")
+logger.info(sorted(list(conferences.keys())))
 
 future_conf = {}
 past_conf = {}
@@ -42,7 +44,7 @@ for id, conf in conferences.items():
                 js_tz = f"Etc/GMT{'+' if char == '-' else '-'}{offset}"
         js_tz = js_tz.replace("AoE", "Etc/GMT+12").replace("Russia/Moscow", "Etc/GMT+3")
         if old_tz != js_tz:
-            print(f"Parsing timezone for json: {old_tz} -> {js_tz}")
+            logger.info(f"Parsing timezone for json: {old_tz} -> {js_tz}")
 
         conf["timezone"] = js_tz
     for i, dates in enumerate(conf["timeline"]):
@@ -56,10 +58,10 @@ for id, conf in conferences.items():
             else:
                 past_conf[f"{id}-{i+1}"] = conf_cpy
         except TypeError as e:
-            print(f"Type Error for conference {conf_cpy}: {e}")
+            logger.error(f"Type Error for conference {conf_cpy}: {e}")
 
-print("past:", sorted(list(past_conf.keys())))
-print("future:", sorted(list(future_conf.keys())))
+logger.info("past:", sorted(list(past_conf.keys())))
+logger.info("future:", sorted(list(future_conf.keys())))
 
 with open(os.path.join(this_folder, "data", "conferences.json"), "w") as f:
     json.dump(list(future_conf.values()), f)

@@ -8,8 +8,8 @@ gecco2025:
   shortname: GECCO 2025
   tags: &id001 []
   timeline:
-  - abstractDeadline: '2025-01-22T23:59:00Z'
-    deadline: '2025-01-29T23:59:00Z'
+  - abstractDeadline: '2025-01-22T22:59:00Z'
+    deadline: '2025-01-29T22:59:00Z'
     note: Full papers (traditional category)
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2025.sigevo.org/HomePage
@@ -23,8 +23,8 @@ gecco2026:
   shortname: GECCO 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-01-19T23:59:00Z'
-    deadline: '2026-01-26T23:59:00Z'
+  - abstractDeadline: '2026-01-19T22:59:00Z'
+    deadline: '2026-01-26T22:59:00Z'
     note: Full papers (traditional category)
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2026.sigevo.org/HomePage

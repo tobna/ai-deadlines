@@ -9,8 +9,8 @@ ecai2023:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2023-05-02T23:59:59Z'
-    deadline: '2023-05-08T23:59:59Z'
+  - abstractDeadline: '2023-05-02T21:59:59Z'
+    deadline: '2023-05-08T21:59:59Z'
   title: European Conference on Artificial Intelligence
   website: https://ecai2023.eu/
 ecai2024:

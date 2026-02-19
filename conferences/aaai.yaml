@@ -13,8 +13,8 @@ aaai2022:
   - ML
   - NLP
   timeline:
-  - abstractDeadline: '2021-08-30T23:59:59Z'
-    deadline: '2021-09-08T23:59:59Z'
+  - abstractDeadline: '2021-08-30T21:59:59Z'
+    deadline: '2021-09-08T21:59:59Z'
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/Conferences/AAAI-22/
 aaai2023:
@@ -28,8 +28,8 @@ aaai2023:
   shortname: AAAI 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-08-08T23:59:59Z'
-    deadline: '2022-08-15T23:59:59Z'
+  - abstractDeadline: '2022-08-08T21:59:59Z'
+    deadline: '2022-08-15T21:59:59Z'
   title: AAAI Conference on Artificial Intelligence
   website: https://www.aaai.org/Conferences/AAAI-23/
 aaai2024:
@@ -43,8 +43,8 @@ aaai2024:
   shortname: AAAI 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-08-08T23:59:59Z'
-    deadline: '2023-08-15T23:59:59Z'
+  - abstractDeadline: '2023-08-08T21:59:59Z'
+    deadline: '2023-08-15T21:59:59Z'
   title: AAAI Conference on Artificial Intelligence
   website: https://www.aaai.org/aaai-conference/
 aaai2025:

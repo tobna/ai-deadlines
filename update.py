@@ -11,13 +11,13 @@ if os.path.isfile(git_tkn_file):
 else:
     git_tkn = None
 
-update_script = os.path.join(this_dir, "src", "update_data.py")
+update_script = os.path.join(this_dir, "aideadlines", "update_data.py")
 # autoupdate_log = os.path.join(this_dir, "autoupdate.log")
 print(f"run update script at {update_script}", flush=True)
 os.system(f"python3 {update_script} --online")
 
 
-to_json_script = os.path.join(this_dir, "src", "data_to_json.py")
+to_json_script = os.path.join(this_dir, "aideadlines", "data_to_json.py")
 print("convert data to json", flush=True)
 os.system(f"python3 {to_json_script}")
 

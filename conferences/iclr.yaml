@@ -15,8 +15,8 @@ iclr2022:
   - RO
   - SP
   timeline:
-  - abstractDeadline: '2021-09-29T12:00:00Z'
-    deadline: '2021-10-21T12:00:00Z'
+  - abstractDeadline: '2021-09-29T10:00:00Z'
+    deadline: '2021-10-21T10:00:00Z'
     note: Mandatory abstract deadline on Sep 29, 2021.
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2022
@@ -31,8 +31,8 @@ iclr2023:
   shortname: ICLR 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-09-21T23:59:59Z'
-    deadline: '2022-09-28T23:59:59Z'
+  - abstractDeadline: '2022-09-21T21:59:59Z'
+    deadline: '2022-09-28T21:59:59Z'
     note: Mandatory abstract deadline on Sep. 11, 2022.
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2023
@@ -47,8 +47,8 @@ iclr2024:
   shortname: ICLR 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-09-21T23:59:59Z'
-    deadline: '2023-09-28T23:59:59Z'
+  - abstractDeadline: '2023-09-21T21:59:59Z'
+    deadline: '2023-09-28T21:59:59Z'
     note: Mandatory abstract deadline on Sep. 21, 2023.
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2024

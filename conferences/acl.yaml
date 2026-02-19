@@ -10,9 +10,9 @@ acl2022:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2021-09-15T23:59:59Z'
-  - deadline: '2021-10-15T23:59:59Z'
-  - deadline: '2021-11-15T23:59:59Z'
+  - deadline: '2021-09-15T21:59:59Z'
+  - deadline: '2021-10-15T21:59:59Z'
+  - deadline: '2021-11-15T22:59:59Z'
     note: final submission deadline
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://www.2022.aclweb.org/
@@ -27,8 +27,8 @@ acl2023:
   shortname: ACL 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-01-13T23:59:59Z'
-    deadline: '2023-01-20T23:59:59Z'
+  - abstractDeadline: '2023-01-13T22:59:59Z'
+    deadline: '2023-01-20T22:59:59Z'
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2023.aclweb.org/
 acl2024:
@@ -42,7 +42,7 @@ acl2024:
   shortname: ACL 2024
   tags: *id001
   timeline:
-  - deadline: '2024-02-15T23:59:59Z'
+  - deadline: '2024-02-15T22:59:59Z'
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2024.aclweb.org/
 acl2025:

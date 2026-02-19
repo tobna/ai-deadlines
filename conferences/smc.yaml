@@ -9,7 +9,7 @@ smc2023:
   tags: &id001
   - RO
   timeline:
-  - deadline: '2023-03-30T23:59:59Z'
+  - deadline: '2023-03-30T21:59:59Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://ieeesmc2023.org/
 smc2024:
@@ -22,7 +22,7 @@ smc2024:
   shortname: SMC 2024
   tags: *id001
   timeline:
-  - deadline: '2024-04-08T23:59:59Z'
+  - deadline: '2024-04-08T21:59:59Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2024.org/
 smc2025:
@@ -36,7 +36,7 @@ smc2025:
   shortname: SMC 2025
   tags: *id001
   timeline:
-  - deadline: '2025-05-04T23:59:59Z'
+  - deadline: '2025-05-04T21:59:59Z'
   timezone: America/Los_Angeles
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2025.org/
@@ -50,7 +50,7 @@ smc2026:
   shortname: SMC 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-22T23:59:59Z'
+  - deadline: '2026-03-22T22:59:59Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2026.org/
 smc2027:

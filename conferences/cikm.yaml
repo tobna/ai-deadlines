@@ -10,7 +10,7 @@ cikm2020:
   - DM
   - ML
   timeline:
-  - deadline: '2020-05-01T23:59:59Z'
+  - deadline: '2020-05-01T21:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2020.org/
 cikm2021:
@@ -23,7 +23,7 @@ cikm2021:
   shortname: CIKM 2021
   tags: *id001
   timeline:
-  - deadline: '2021-05-26T23:59:59Z'
+  - deadline: '2021-05-26T21:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2021.org/
 cikm2022:
@@ -36,8 +36,8 @@ cikm2022:
   shortname: CIKM 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-05-12T23:59:59Z'
-    deadline: '2022-05-19T23:59:59Z'
+  - abstractDeadline: '2022-05-12T21:59:59Z'
+    deadline: '2022-05-19T21:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2022.org/
 cikm2023:
@@ -50,8 +50,8 @@ cikm2023:
   shortname: CIKM 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-05-26T23:59:59Z'
-    deadline: '2023-06-02T23:59:59Z'
+  - abstractDeadline: '2023-05-26T21:59:59Z'
+    deadline: '2023-06-02T21:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://uobevents.eventsair.com/cikm2023/
 cikm2024:
@@ -64,8 +64,8 @@ cikm2024:
   shortname: CIKM 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-05-13T23:59:59Z'
-    deadline: '2024-05-20T23:59:59Z'
+  - abstractDeadline: '2024-05-13T21:59:59Z'
+    deadline: '2024-05-20T21:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://cikm2024.org/
 cikm2025:

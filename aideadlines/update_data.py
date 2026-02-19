@@ -3,23 +3,23 @@ import datetime
 import os
 import sys
 import traceback
-
+from .log_config import logger
 import dateparser
 import yaml
 
 this_folder = os.path.dirname(__file__)
-sys.path.append(this_folder)
+
 sys.path.append(os.path.join(this_folder, "parser"))
 
-from ccf_deadlines import get_ccf_list
-from common_website import PARSER
-from hf_list import get_hf_list
-from ninoduarte_list import get_nino_list
-from see_future import estimate_future_conferences
-from wacv import parse_wacv
+from .parser.ccf_deadlines import get_ccf_list
+from .parser.common_website import PARSER
+from .parser.hf_list import get_hf_list
+from .parser.ninoduarte_list import get_nino_list
+from .parser.see_future import estimate_future_conferences
+from .parser.wacv import parse_wacv
 
-from ranking import make_conf_rank_function, make_core_rank_function
-from utils import (
+from .ranking import make_conf_rank_function, make_core_rank_function
+from .utils import (
     _parse_timestr,
     join_conferences,
     parse_all_times,
@@ -29,24 +29,6 @@ from utils import (
 
 conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 _SOURCES = ["estimate", "ninoduarte-git", "ccf-deadlines", "hf-repo", "off-website", "manual"]
-_ERROR_FILE = "error.log"
-_RESET_ERROR_FILE = False
-
-
-def _reset_error_file():
-    global _RESET_ERROR_FILE
-    with open(_ERROR_FILE, "w") as f:
-        f.write(f"Errors from run at {datetime.datetime.now()}:\n")
-    _RESET_ERROR_FILE = True
-
-
-def write_error(msg):
-    global _RESET_ERROR_FILE
-    if not _RESET_ERROR_FILE:
-        _reset_error_file()
-    msg = str(datetime.datetime.now()) + ": " + msg.strip().replace("\n", "\n" + str(datetime.datetime.now()) + ": ")
-    with open(_ERROR_FILE, "a") as f:
-        f.write(msg)
 
 
 parser = argparse.ArgumentParser()
@@ -78,7 +60,7 @@ for conf_file in os.listdir(conference_folder):
 #     conferences[k1.replace("R1", "")] = conferences.pop(k1)
 # for k2 in r2s:
 #     conferences[k2.replace("R2", "")]["timeline"].append(conferences.pop(k2)["timeline"][0])
-#     print(conferences[k2.replace("R2", "")])
+#     logger.info(conferences[k2.replace("R2", "")])
 
 reestimate_future_for_groups = []
 if args.online:
@@ -88,20 +70,19 @@ if args.online:
         year = current_year + 2
         no_data_years = 0
         while no_data_years < 5 and (year >= current_year - 1 or args.historic):
-            print(f"{conf_parser} {year}", end="\t")
+            logger.info(f"{conf_parser} {year}", end="\t")
             try:
                 yearly_data = conf_parser(year)
             except Exception as e:
-                print(f"ERROR while parsing conference: {e}")
+                logger.warning(f"Error while parsing conference: {e}")
                 year -= 1
                 continue
-            print("no data" if len(yearly_data) == 0 else "loaded data", flush=True)
+            logger.info("no data" if len(yearly_data) == 0 else "loaded data", flush=True)
             try:
                 yearly_data = parse_all_times(yearly_data)
             except Exception as e:
-                print(f"ERROR while parsing dates for conference {conf_parser} {year}: {e}")
-                # write_error(f"Failed parsing dates for conference {conf_parser} {year}: {e}")
-                print(f"conference: {yearly_data}")
+                logger.warning(f"Error while parsing dates for conference {conf_parser} {year}: {e}")
+                logger.info(f"conference: {yearly_data}")
                 year -= 1
                 continue
             if len(yearly_data) == 0:
@@ -112,11 +93,11 @@ if args.online:
                 if id not in conferences:
                     conferences[id] = yearly_data
                     conferences[id]["dataSrc"] = "off-website"
-                    print(f"NEW CONFERENCE: {conferences[id]}")
+                    logger.success(f"NEW CONFERENCE: {conferences[id]}")
                     reestimate_future_for_groups.append(id[:-4])
                 elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("off-website"):
                     if conferences[id]["dataSrc"] == "estimate":
-                        print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                        logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                         reestimate_future_for_groups.append(id[:-4])
                         conferences[id] = yearly_data
                     else:
@@ -126,32 +107,36 @@ if args.online:
                     conferences[id] = join_conferences(slave=yearly_data, master=conferences[id])
             year -= 1
 
-    print("load hf data", flush=True)
+    logger.info("load hf data", flush=True)
     try:
         hf_conferences = get_hf_list()
     except Exception as e:
         trace = traceback.format_exc()
-        print(f"ERROR while parsing hf list: {e}\n{trace}")
-        write_error(f"Failed parsing hf conferences: {e}\n{trace}")
+        logger.error(f"while parsing hf list: {e}\n{trace}")
+        # write_error(f"Failed parsing hf conferences: {e}\n{trace}")
         hf_conferences = []
     if len(hf_conferences) == 0:
-        print("ERROR no hf conferences found")
-        write_error("No hf conferences found")
+        logger.error("no hf conferences found")
+        # write_error("No hf conferences found")
     for hf_data in hf_conferences:
         hf_data = parse_all_times(hf_data)
         id = hf_data["id"]
         if id.startswith("wacv") and len(hf_data["timeline"]) == 1:  # hf data only hase one deadline for WACV
             deadline = dateparser.parse(hf_data["timeline"][0]["deadline"])
-            round = 1 if deadline.month <= 8 else 2
+            if deadline is None:
+                logger.warning("Failed to parse deadline for HF conference {}".format(id))
+                round = 2
+            else:
+                round = 1 if deadline.month <= 8 else 2
             hf_data["timeline"][0]["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = hf_data
             conferences[id]["dataSrc"] = "hf-repo"
-            print(f"NEW CONFERENCE: {conferences[id]}")
+            logger.success(f"NEW CONFERENCE: {conferences[id]}")
             reestimate_future_for_groups.append(id[:-4])
         elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("hf-repo"):
             if conferences[id]["dataSrc"] == "estimate":
-                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
                 conferences[id] = hf_data
             else:
@@ -160,31 +145,35 @@ if args.online:
         else:
             conferences[id] = join_conferences(slave=hf_data, master=conferences[id])
 
-    print("load nino duarte data", flush=True)
+    logger.info("load nino duarte data", flush=True)
     try:
         nino_confs = get_nino_list()
     except Exception as e:
-        print(f"ERROR while parsing ninoduarte-git: {e}")
-        write_error(f"Failed parsing ninoduarte-git: {e}")
+        logger.error(f"ERROR while parsing ninoduarte-git: {e}")
+        # write_error(f"Failed parsing ninoduarte-git: {e}")
         nino_confs = []
     if len(nino_confs) == 0:
-        print("ERROR no ninoduarte-git conferences found")
-        write_error("No ninoduarte-git conferences found")
+        logger.error("ERROR no ninoduarte-git conferences found")
+        # write_error("No ninoduarte-git conferences found")
     for nino_conf in nino_confs:
         nino_conf = parse_all_times(nino_conf)
         id = nino_conf["id"].replace("nips", "neurips")
         if id.startswith("wacv") and len(nino_conf["timeline"]) == 1:  # nino data only hase one deadline for WACV
             deadline = dateparser.parse(nino_conf["timeline"][0]["deadline"])
-            round = 1 if deadline.month <= 8 else 2
+            if deadline is None:
+                logger.warning("Failed to parse deadline for NINO conference {}".format(id))
+                round = 2
+            else:
+                round = 1 if deadline.month <= 8 else 2
             nino_conf["timeline"][0]["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = nino_conf
             conferences[id]["dataSrc"] = "ninoduarte-git"
-            print(f"NEW CONFERENCE: {conferences[id]}")
+            logger.success(f"NEW CONFERENCE: {conferences[id]}")
             reestimate_future_for_groups.append(id[:-4])
         elif _SOURCES.index(conferences[id]["dataSrc"]) < _SOURCES.index("ninoduarte-git"):
             if conferences[id]["dataSrc"] == "estimate":
-                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
                 reestimate_future_for_groups.append(id[:-4])
                 conferences[id] = nino_conf
             else:
@@ -193,32 +182,36 @@ if args.online:
         else:
             conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
 
-    print("load ccf-deadlines")
+    logger.info("load ccf-deadlines")
     try:
         ccf_conferences = get_ccf_list()
-        print(f"got {len(ccf_conferences)} ccf conferences")
+        logger.info(f"got {len(ccf_conferences)} ccf conferences")
     except Exception as e:
-        print(f"ERROR while parsing ccf-deadlines: {e}")
-        write_error(f"Failed loading ccf-deadlines conferences: {e}")
+        logger.error(f"ERROR while parsing ccf-deadlines: {e}")
+        # write_error(f"Failed loading ccf-deadlines conferences: {e}")
         ccf_conferences = []
     if len(ccf_conferences) == 0:
-        print("ERROR no ccf-conferences gotten")
-        write_error("No ccf-conferences found")
+        logger.error("ERROR no ccf-conferences gotten")
+        # write_error("No ccf-conferences found")
     for ccf_data in ccf_conferences:
         ccf_data = parse_all_times(ccf_data)
         id = ccf_data["id"]
         if id.startswith("wacv") and len(ccf_data["timeline"]) == 1:  # hf data only hase one deadline for WACV
             deadline = dateparser.parse(ccf_data["timeline"][0]["deadline"])
-            round = 1 if deadline.month <= 8 else 2
+            if deadline is None:
+                logger.warning(f"Failed to parse deadline for CCF conference {id}")
+                round = 2
+            else:
+                round = 1 if deadline.month <= 8 else 2
             ccf_data["timeline"][0]["note"] = f"Round {round}"
         if id not in conferences:
             conferences[id] = ccf_data
             conferences[id]["dataSrc"] = "ccf-deadlines"
-            print(f"NEW CONFERENCE: {conferences[id]}")
+            logger.success(f"NEW CONFERENCE: {conferences[id]}")
             reestimate_future_for_groups.append(id[:-4])
         elif _SOURCES.index(conferences[id]["dataSrc"]) <= _SOURCES.index("ccf-deadlines"):
             if conferences[id]["dataSrc"] == "estimate":
-                print(f"FIRST DATA FOR CONFERENCE: {conferences[id]} => {ccf_data}")
+                logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[id]} => {ccf_data}")
                 reestimate_future_for_groups.append(id[:-4])
                 conferences[id] = ccf_data
             else:
@@ -241,7 +234,7 @@ for key, conf in nips_confs.items():
         conferences[key] = join_conferences(slave=conf, master=conferences[key])
     else:
         conferences[key] = conf
-    print(f"nips => neurips for {key}: {conf}")
+    logger.info(f"nips => neurips for {key}: {conf}")
 
 remove_ids = set()
 for id, conf in conferences.items():
@@ -254,10 +247,10 @@ for id, conf in conferences.items():
     else:
         for idx in sorted(list(none_deadlines), reverse=True):
             removed = conf["timeline"].pop(idx)
-            print(f"WARNING: removed deadline {removed} from {conf['id']}")
+            logger.warning(f"WARNING: removed deadline {removed} from {conf['id']}")
 for conf_id in remove_ids:
     removed = conferences.pop(conf_id)
-    print(f"WARNING: removed conference {removed} due to no timeline")
+    logger.warning(f"WARNING: removed conference {removed} due to no timeline")
 
 
 reestimate_future_for_groups = set(reestimate_future_for_groups)
@@ -276,17 +269,17 @@ add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 
 
 if not args.reestimate:
-    print(f"Will reestimate futures for: {reestimate_future_for_groups}")
+    logger.info(f"Will reestimate futures for: {reestimate_future_for_groups}")
 for group, conferences in conf_groups.items():
-    print(f"write out group {group}: {list(conferences.keys())}", flush=True)
+    logger.info(f"write out group {group}: {list(conferences.keys())}", flush=True)
     if group in reestimate_future_for_groups or args.reestimate:
         conferences = {key: conf for key, conf in conferences.items() if not conf["isApproximateDeadline"]}
     try:
         future_conferences = estimate_future_conferences(conferences)
         future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}
     except Exception as e:
-        print(f"ERROR estimating future conferences of group {group}: {e}")
-        write_error(f"Failed estimating future_conferences of group {group}: {e}")
+        logger.error(f"ERROR estimating future conferences of group {group}: {e}")
+        # write_error(f"Failed estimating future_conferences of group {group}: {e}")
         if args.reestimate:
             raise e
         future_conferences = {}
@@ -301,4 +294,4 @@ for group, conferences in conf_groups.items():
             yaml.safe_dump(conferences, f)
 
     else:
-        print(conferences)
+        logger.info(conferences)

@@ -8,7 +8,7 @@ log2025:
   tags:
   - ML
   timeline:
-  - abstractDeadline: '2025-08-22T23:59:59Z'
-    deadline: '2025-08-29T23:59:59Z'
+  - abstractDeadline: '2025-08-22T21:59:59Z'
+    deadline: '2025-08-29T21:59:59Z'
   title: Learning on Graphs Conference
   website: https://logconference.org/

@@ -11,7 +11,7 @@ acml2021:
   - ML
   - NLP
   timeline:
-  - deadline: '2021-06-25T23:59:59Z'
+  - deadline: '2021-06-25T21:59:59Z'
   title: Asian Conference on Machine Learning
   website: http://www.acml-conf.org/2021/
 acml2023:
@@ -24,7 +24,7 @@ acml2023:
   shortname: ACML 2023
   tags: *id001
   timeline:
-  - deadline: '2023-06-23T23:59:59Z'
+  - deadline: '2023-06-23T21:59:59Z'
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2023/index.html
 acml2024:
@@ -37,7 +37,7 @@ acml2024:
   shortname: ACML 2024
   tags: *id001
   timeline:
-  - deadline: '2024-07-03T23:59:59Z'
+  - deadline: '2024-07-03T21:59:59Z'
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2024/index.html
 acml2025:
@@ -50,9 +50,9 @@ acml2025:
   shortname: ACML 2025
   tags: *id001
   timeline:
-  - deadline: '2025-05-30T23:59:59Z'
+  - deadline: '2025-05-30T21:59:59Z'
     note: Journal Track
-  - deadline: '2025-06-26T23:59:59Z'
+  - deadline: '2025-06-26T21:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2025/

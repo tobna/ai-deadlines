@@ -1,10 +1,13 @@
-from datetime import datetime, timedelta
 import os
 import re
+from datetime import datetime, timedelta
+
 import dateparser
-import yaml
 import requests
+import yaml
 from bs4 import BeautifulSoup
+
+from .log_config import logger
 
 this_folder = os.path.dirname(__file__)
 
@@ -124,13 +127,13 @@ def make_core_rank_function(conference_groups, online=True, force_update=False):
             force_update = force_update or last_update + timedelta(days=1) < datetime.now()
 
     if force_update and online:
-        print(f"Updating core ranks for {len(conference_groups)} conferences")
+        logger.info(f"Updating core ranks for {len(conference_groups)} conferences")
 
         for i, group in enumerate(conference_groups):
             rank = _get_core_rank(group)
             if rank is not None:
                 core_ranks[group] = rank
-                print(f"{i+1}/{len(conference_groups)}: {group} -> {rank}")
+                logger.info(f"{i+1}/{len(conference_groups)}: {group} -> {rank}")
 
         with open(core_save_file, "w") as f:
             yaml.safe_dump(core_ranks, f)

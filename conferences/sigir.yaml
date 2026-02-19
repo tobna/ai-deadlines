@@ -10,8 +10,8 @@ sigir2021:
   - DM
   - NLP
   timeline:
-  - abstractDeadline: '2021-02-02T23:59:59Z'
-    deadline: '2021-02-09T23:59:59Z'
+  - abstractDeadline: '2021-02-02T22:59:59Z'
+    deadline: '2021-02-09T22:59:59Z'
   title: International Conference on Research on Development in Information Retrieval
   website: http://sigir.org/sigir2021/
 sigir2022:
@@ -24,8 +24,8 @@ sigir2022:
   shortname: SIGIR 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-01-21T23:59:59Z'
-    deadline: '2022-01-28T23:59:59Z'
+  - abstractDeadline: '2022-01-21T22:59:59Z'
+    deadline: '2022-01-28T22:59:59Z'
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir.org/sigir2022/
 sigir2023:
@@ -38,8 +38,8 @@ sigir2023:
   shortname: SIGIR 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-01-24T23:59:59Z'
-    deadline: '2023-01-31T23:59:59Z'
+  - abstractDeadline: '2023-01-24T22:59:59Z'
+    deadline: '2023-01-31T22:59:59Z'
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir.org/sigir2023/
 sigir2024:
@@ -52,8 +52,8 @@ sigir2024:
   shortname: SIGIR 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-01-19T23:59:59Z'
-    deadline: '2024-01-25T23:59:59Z'
+  - abstractDeadline: '2024-01-19T22:59:59Z'
+    deadline: '2024-01-25T22:59:59Z'
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir-2024.github.io/index.html
 sigir2025:
@@ -66,8 +66,8 @@ sigir2025:
   shortname: SIGIR 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-01-16T23:59:59Z'
-    deadline: '2025-01-23T23:59:59Z'
+  - abstractDeadline: '2025-01-16T22:59:59Z'
+    deadline: '2025-01-23T22:59:59Z'
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir2025.dei.unipd.it/
 sigir2026:

@@ -10,8 +10,8 @@ aamas2023:
   - ML
   - RO
   timeline:
-  - abstractDeadline: '2022-10-21T00:00:00Z'
-    deadline: '2022-10-28T00:00:00Z'
+  - abstractDeadline: '2022-10-20T22:00:00Z'
+    deadline: '2022-10-27T22:00:00Z'
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://aamas2023.soton.ac.uk/
 aamas2024:
@@ -24,8 +24,8 @@ aamas2024:
   shortname: AAMAS 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-10-02T23:59:59Z'
-    deadline: '2023-10-09T23:59:59Z'
+  - abstractDeadline: '2023-10-02T21:59:59Z'
+    deadline: '2023-10-09T21:59:59Z'
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://www.aamas2024-conference.auckland.ac.nz/
 aamas2025:

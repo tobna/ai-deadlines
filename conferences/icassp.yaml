@@ -9,7 +9,7 @@ icassp2022:
   tags: &id001
   - SP
   timeline:
-  - deadline: '2021-10-06T23:59:59Z'
+  - deadline: '2021-10-06T21:59:59Z'
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2022.ieeeicassp.org
 icassp2023:
@@ -22,7 +22,7 @@ icassp2023:
   shortname: ICASSP 2023
   tags: *id001
   timeline:
-  - deadline: '2022-10-26T23:59:59Z'
+  - deadline: '2022-10-26T21:59:59Z'
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2023.ieeeicassp.org
 icassp2024:
@@ -35,7 +35,7 @@ icassp2024:
   shortname: ICASSP 2024
   tags: *id001
   timeline:
-  - deadline: '2023-09-06T23:59:59Z'
+  - deadline: '2023-09-06T21:59:59Z'
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2024.ieeeicassp.org/
 icassp2025:

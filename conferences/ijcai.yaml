@@ -10,7 +10,7 @@ ijcai2022:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2022-01-14T23:59:59Z'
+  - deadline: '2022-01-14T22:59:59Z'
   title: International Joint Conference on Artificial Intelligence
   website: https://ijcai-22.org
 ijcai2023:
@@ -24,8 +24,8 @@ ijcai2023:
   shortname: IJCAI 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-01-11T23:59:59Z'
-    deadline: '2023-01-18T23:59:59Z'
+  - abstractDeadline: '2023-01-11T22:59:59Z'
+    deadline: '2023-01-18T22:59:59Z'
   title: International Joint Conference on Artificial Intelligence
   website: https://ijcai-23.org
 ijcai2024:
@@ -39,8 +39,8 @@ ijcai2024:
   shortname: IJCAI 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-01-10T23:59:59Z'
-    deadline: '2024-01-17T23:59:59Z'
+  - abstractDeadline: '2024-01-10T22:59:59Z'
+    deadline: '2024-01-17T22:59:59Z'
   title: International Joint Conference on Artificial Intelligence
   website: https://ijcai24.org/
 ijcai2025:

@@ -9,7 +9,7 @@ rss2023:
   - ML
   - RO
   timeline:
-  - deadline: '2023-02-03T23:59:59Z'
+  - deadline: '2023-02-03T22:59:59Z'
   title: Robotics Science and Systems
   website: https://roboticsconference.org/
 rss2024:
@@ -21,7 +21,7 @@ rss2024:
   shortname: RSS 2024
   tags: *id001
   timeline:
-  - deadline: '2024-02-02T23:59:00Z'
+  - deadline: '2024-02-02T22:59:00Z'
   title: Robotics Science and Systems
   website: https://roboticsconference.org/
 rss2025:

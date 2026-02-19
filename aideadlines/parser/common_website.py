@@ -190,7 +190,7 @@ if __name__ == "__main__":
 
     src_folder = os.path.join(os.path.dirname(__file__), os.pardir)
     sys.path.append(src_folder)
-    from utils import parse_all_times
+    from ..utils import parse_all_times
 
     year = 2025
     data = {"test": 1}

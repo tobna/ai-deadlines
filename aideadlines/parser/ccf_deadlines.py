@@ -1,7 +1,10 @@
 import json
 import os
+
 import requests
 import yaml
+
+from ..log_config import logger
 
 load_conferences = ["AI", "CG/3dv"]
 
@@ -25,11 +28,11 @@ def get_ccf_list():
 
     conf_list = []
     for i, file in enumerate(ccf_files):
-        print(f"{i}/{len(ccf_files)}\tget", file, "from ccf-deadlines", flush=True)
+        logger.info(f"{i}/{len(ccf_files)}\tget {file} from ccf-deadlines")
         ccf_infos = requests.get("https://raw.githubusercontent.com/ccfddl/ccf-deadlines/refs/heads/main/" + file)
         ccf_infos = yaml.safe_load(ccf_infos.text)
         if ccf_infos is None:
-            print(f"WARNING: no answer for file {file} from ccf-deadlines")
+            logger.warning(f"no answer for file {file} from ccf-deadlines")
             continue
 
         for ccf_info in ccf_infos:
@@ -52,7 +55,11 @@ def get_ccf_list():
                         if len(conf_date_data) == 3:
                             month, days, year = conf_date_data
                             start_month = end_month = month
-                            start_day, end_day = days.split("-")
+                            days = days.split("-")
+                            if len(days) == 2:
+                                start_day, end_day = days
+                            else:
+                                start_day = end_day = days[0]
                         elif len(conf_date_data) == 5:
                             if int(conf_date_data[-1]) >= 1900:
                                 month, start_day, dash, end_day, year = conf_date_data
@@ -66,15 +73,17 @@ def get_ccf_list():
                         elif len(conf_date_data) == 6:
                             start_month, start_day, dash, end_month, end_day, year = conf_date_data
                             assert dash == "-", f"No '-', but '{dash}'"
+                        elif date_str == "TBD":
+                            continue
                         else:
                             raise ValueError(f"Can't parse dates str '{date_str}' yet")
                         data["conferenceStartDate"] = f"{start_day} {start_month} {year}"
                         data["conferenceEndDate"] = f"{end_day} {end_month} {year}"
-                        print(f"added conf dates for {data['id']}")
+                        logger.info(f"added conf dates for {data['id']}")
                     except Exception as e:
-                        print(f"Error when trying to parse date '{date_str}': {e}")
+                        logger.error(f"Error when trying to parse date '{date_str}': {e}")
                 else:
-                    print(f"no conf dates for {data['id']}: {list(conf.keys())}")
+                    logger.warning(f"no conf dates for {data['id']}: {list(conf.keys())}")
 
                 for dates in conf["timeline"]:
                     if "deadline" not in dates or dates["deadline"] == "TBD":
@@ -94,7 +103,7 @@ def get_ccf_list():
 if __name__ == "__main__":
     data = get_ccf_list()
     for conf in data:
-        print(f"{conf['shortname']}: {conf}")
+        logger.info(f"{conf['shortname']}: {conf}")
         for dl in conf["timeline"]:
             assert dl["deadline"] is not None
             if "abstractDeadline" in dl:
