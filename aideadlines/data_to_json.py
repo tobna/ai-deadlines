@@ -60,8 +60,8 @@ for id, conf in conferences.items():
         except TypeError as e:
             logger.error(f"Type Error for conference {conf_cpy}: {e}")
 
-logger.info("past:", sorted(list(past_conf.keys())))
-logger.info("future:", sorted(list(future_conf.keys())))
+logger.info(f"past: {sorted(list(past_conf.keys()))}")
+logger.info(f"future: {sorted(list(future_conf.keys()))}")
 
 with open(os.path.join(this_folder, "data", "conferences.json"), "w") as f:
     json.dump(list(future_conf.values()), f)
