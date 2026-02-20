@@ -9,8 +9,8 @@ icaps2025:
   tags: &id001
   - RO
   timeline:
-  - abstractDeadline: '2024-10-25T21:59:59Z'
-    deadline: '2024-11-01T22:59:59Z'
+  - abstractDeadline: '2024-10-25T23:59:59Z'
+    deadline: '2024-11-01T23:59:59Z'
   title: International Conference on Automated Planning and Scheduling
   website: https://icaps25.icaps-conference.org/
 icaps2026:
@@ -23,8 +23,8 @@ icaps2026:
   shortname: ICAPS 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-12-02T22:59:59Z'
-    deadline: '2025-12-08T22:59:59Z'
+  - abstractDeadline: '2025-12-02T23:59:59Z'
+    deadline: '2025-12-08T23:59:59Z'
   title: International Conference on Automated Planning and Scheduling
   website: https://icaps26.icaps-conference.org/
 icaps2027:

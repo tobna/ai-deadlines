@@ -8,8 +8,8 @@ colm2024:
   tags: &id001
   - NLP
   timeline:
-  - abstractDeadline: '2024-03-22T22:59:59Z'
-    deadline: '2024-03-29T22:59:59Z'
+  - abstractDeadline: '2024-03-22T23:59:59Z'
+    deadline: '2024-03-29T23:59:59Z'
   title: Conference on Language Modeling
   website: https://colmweb.org/cfp.html
 colm2025:

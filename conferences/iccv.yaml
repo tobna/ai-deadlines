@@ -11,7 +11,7 @@ iccv2021:
   - CV
   - ML
   timeline:
-  - deadline: '2021-03-17T22:59:59Z'
+  - deadline: '2021-03-17T23:59:59Z'
   title: IEEE International Conference on Computer Vision
   website: http://iccv2021.thecvf.com/home/
 iccv2023:
@@ -25,7 +25,7 @@ iccv2023:
   shortname: ICCV 2023
   tags: *id001
   timeline:
-  - deadline: '2023-03-08T22:59:59Z'
+  - deadline: '2023-03-08T23:59:59Z'
   title: IEEE International Conference on Computer Vision
   website: http://iccv2023.thecvf.com/home/
 iccv2025:

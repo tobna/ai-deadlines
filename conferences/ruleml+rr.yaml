@@ -8,7 +8,7 @@ ruleml+rr2026:
   shortname: RuleML+RR 2026
   tags: []
   timeline:
-  - abstractDeadline: '2026-05-08T21:59:59Z'
-    deadline: '2026-05-15T21:59:59Z'
+  - abstractDeadline: '2026-05-08T23:59:59Z'
+    deadline: '2026-05-15T23:59:59Z'
   title: International Joint Conference on Rules and Reasoning
   website: https://2026.declarativeai.net/events/ruleml-rr

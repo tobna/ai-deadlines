@@ -8,7 +8,7 @@ ppsn2024:
   shortname: PPSN 2024
   tags: &id001 []
   timeline:
-  - deadline: '2024-04-18T21:59:59Z'
+  - deadline: '2024-04-18T23:59:59Z'
   title: International Conference on Parallel Problem Solving From Nature
   website: https://ppsn2024.fh-ooe.at/
 ppsn2026:
@@ -21,7 +21,7 @@ ppsn2026:
   shortname: PPSN 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-28T22:59:59Z'
+  - deadline: '2026-03-28T23:59:59Z'
   title: International Conference on Parallel Problem Solving From Nature
   website: https://ppsn2026.disi.unitn.it/
 ppsn2028:

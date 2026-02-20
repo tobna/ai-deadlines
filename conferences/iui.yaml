@@ -9,8 +9,8 @@ iui2024:
   tags: &id001
   - HCI
   timeline:
-  - abstractDeadline: '2023-10-02T21:59:59Z'
-    deadline: '2023-10-09T21:59:59Z'
+  - abstractDeadline: '2023-10-02T23:59:59Z'
+    deadline: '2023-10-09T23:59:59Z'
   title: ACM Conference on Intelligent User Interfaces
   website: https://iui.acm.org/2024/
 iui2025:
@@ -23,8 +23,8 @@ iui2025:
   shortname: IUI 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-10-02T21:59:59Z'
-    deadline: '2024-10-09T21:59:59Z'
+  - abstractDeadline: '2024-10-02T23:59:59Z'
+    deadline: '2024-10-09T23:59:59Z'
   title: ACM Conference on Intelligent User Interfaces
   website: https://iui.acm.org/2025/
 iui2026:

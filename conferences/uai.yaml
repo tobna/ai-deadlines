@@ -9,7 +9,7 @@ uai2021:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2021-02-19T22:59:59Z'
+  - deadline: '2021-02-19T23:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2021/
 uai2023:
@@ -22,7 +22,7 @@ uai2023:
   shortname: UAI 2023
   tags: *id001
   timeline:
-  - deadline: '2023-02-17T22:59:59Z'
+  - deadline: '2023-02-17T23:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2023/
 uai2024:
@@ -35,7 +35,7 @@ uai2024:
   shortname: UAI 2024
   tags: *id001
   timeline:
-  - deadline: '2024-02-09T22:59:59Z'
+  - deadline: '2024-02-09T23:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2024/
 uai2025:

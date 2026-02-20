@@ -10,7 +10,7 @@ iros2023:
   tags: &id001
   - RO
   timeline:
-  - deadline: '2023-03-01T22:59:59Z'
+  - deadline: '2023-03-01T23:59:59Z'
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   website: https://ieee-iros.org/
 iros2024:
@@ -24,7 +24,7 @@ iros2024:
   shortname: IROS 2024
   tags: *id001
   timeline:
-  - deadline: '2024-03-15T22:59:59Z'
+  - deadline: '2024-03-15T23:59:59Z'
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   website: http://iros2024-abudhabi.org/
 iros2025:

@@ -9,8 +9,8 @@ icann2023:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2023-04-09T21:59:59Z'
-    deadline: '2023-04-09T21:59:59Z'
+  - abstractDeadline: '2023-04-09T23:59:59Z'
+    deadline: '2023-04-09T23:59:59Z'
   title: International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2023/
 icann2024:

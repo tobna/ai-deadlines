@@ -10,7 +10,7 @@ naacl2022:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2022-01-15T22:59:59Z'
+  - deadline: '2022-01-15T23:59:59Z'
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics
   website: https://2022.naacl.org/
@@ -25,7 +25,7 @@ naacl2024:
   shortname: NAACL 2024
   tags: *id001
   timeline:
-  - deadline: '2023-12-15T22:59:59Z'
+  - deadline: '2023-12-15T23:59:59Z'
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics
   website: https://2024.naacl.org/

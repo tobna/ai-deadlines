@@ -9,8 +9,8 @@ www2021:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2020-10-12T21:59:59Z'
-    deadline: '2020-10-19T21:59:59Z'
+  - abstractDeadline: '2020-10-12T23:59:59Z'
+    deadline: '2020-10-19T23:59:59Z'
   title: International World Wide Web Conferences
   website: https://www2021.thewebconf.org/
 www2022:
@@ -23,8 +23,8 @@ www2022:
   shortname: WWW 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2021-10-14T21:59:59Z'
-    deadline: '2021-10-21T21:59:59Z'
+  - abstractDeadline: '2021-10-14T23:59:59Z'
+    deadline: '2021-10-21T23:59:59Z'
   title: International World Wide Web Conferences
   website: https://www2022.thewebconf.org/
 www2023:
@@ -37,8 +37,8 @@ www2023:
   shortname: WWW 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-10-06T21:59:59Z'
-    deadline: '2022-10-13T21:59:59Z'
+  - abstractDeadline: '2022-10-06T23:59:59Z'
+    deadline: '2022-10-13T23:59:59Z'
   title: International World Wide Web Conferences
   website: https://www2023.thewebconf.org/
 www2024:
@@ -51,8 +51,8 @@ www2024:
   shortname: WWW 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-10-05T21:59:59Z'
-    deadline: '2023-10-12T21:59:59Z'
+  - abstractDeadline: '2023-10-05T23:59:59Z'
+    deadline: '2023-10-12T23:59:59Z'
   title: International World Wide Web Conferences
   website: https://www2024.thewebconf.org/
 www2025:
@@ -65,8 +65,8 @@ www2025:
   shortname: WWW 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-10-07T21:59:59Z'
-    deadline: '2024-10-14T21:59:59Z'
+  - abstractDeadline: '2024-10-07T23:59:59Z'
+    deadline: '2024-10-14T23:59:59Z'
   title: International World Wide Web Conferences
   website: https://www2025.thewebconf.org/
 www2026:

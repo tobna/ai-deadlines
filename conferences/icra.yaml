@@ -12,7 +12,7 @@ icra2022:
   - ML
   - RO
   timeline:
-  - deadline: '2021-09-15T00:59:00Z'
+  - deadline: '2021-09-15T02:59:00Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2022.org/
 icra2023:
@@ -26,7 +26,7 @@ icra2023:
   shortname: ICRA 2023
   tags: *id001
   timeline:
-  - deadline: '2022-09-15T21:59:59Z'
+  - deadline: '2022-09-15T23:59:59Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2023.org/
 icra2024:
@@ -40,7 +40,7 @@ icra2024:
   shortname: ICRA 2024
   tags: *id001
   timeline:
-  - deadline: '2023-09-15T21:59:00Z'
+  - deadline: '2023-09-15T23:59:00Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://2024.ieee-icra.org
 icra2025:

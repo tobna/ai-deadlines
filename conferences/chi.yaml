@@ -9,8 +9,8 @@ chi2024:
   tags: &id001
   - HCI
   timeline:
-  - abstractDeadline: '2023-09-07T21:59:59Z'
-    deadline: '2023-09-14T21:59:59Z'
+  - abstractDeadline: '2023-09-07T23:59:59Z'
+    deadline: '2023-09-14T23:59:59Z'
   title: ACM Conference on Human Factors in Computing Systems
   website: http://chi2024.acm.org/
 chi2025:

@@ -10,7 +10,7 @@ coling2022:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2022-05-17T21:59:00Z'
+  - deadline: '2022-05-17T23:59:00Z'
     note: Papers Due
   title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
   website: https://coling2022.org/
@@ -25,7 +25,7 @@ coling2024:
   shortname: COLING 2024
   tags: *id001
   timeline:
-  - deadline: '2023-10-21T21:59:59Z'
+  - deadline: '2023-10-21T23:59:59Z'
     note: Long, short and position papers due
   title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
   website: https://lrec-coling-2024.lrec-conf.org/

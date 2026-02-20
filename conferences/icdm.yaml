@@ -10,7 +10,7 @@ icdm2021:
   tags: &id001
   - DM
   timeline:
-  - deadline: '2021-06-12T12:59:00Z'
+  - deadline: '2021-06-12T14:59:00Z'
   title: IEEE International Conference on Data Mining
   website: https://icdm2021.auckland.ac.nz/
 icdm2022:
@@ -24,7 +24,7 @@ icdm2022:
   shortname: ICDM 2022
   tags: *id001
   timeline:
-  - deadline: '2022-06-10T21:59:00Z'
+  - deadline: '2022-06-10T23:59:00Z'
   title: IEEE International Conference on Data Mining
   website: https://icdm22.cse.usf.edu/key-dates.html
 icdm2023:
@@ -38,7 +38,7 @@ icdm2023:
   shortname: ICDM 2023
   tags: *id001
   timeline:
-  - deadline: '2023-07-01T21:59:59Z'
+  - deadline: '2023-07-01T23:59:59Z'
   title: IEEE International Conference on Data Mining
   website: http://cloud-conf.net/icdm2023/index.html
 icdm2024:
@@ -52,7 +52,7 @@ icdm2024:
   shortname: ICDM 2024
   tags: *id001
   timeline:
-  - deadline: '2024-06-14T21:59:59Z'
+  - deadline: '2024-06-14T23:59:59Z'
   title: IEEE International Conference on Data Mining
   website: https://icdm2024.org/dates/
 icdm2025:
