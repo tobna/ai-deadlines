@@ -31,13 +31,19 @@
 
   <header class="mb-8 text-center">
     <h1
-      class="text-6xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
       AI Conference Deadlines</h1>
     <p class="mt-2 text-xl text-gray-400">Stay updated on upcoming ai & ml events!</p>
   </header>
 
   <div class="filter-controls-main-container">
-    <div class="toggle-and-input-controls-container">
+    <button id="filterToggle" class="filter-drawer-toggle" aria-expanded="false" aria-controls="filterControls">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+      </svg>
+      <span>Filters</span>
+    </button>
+    <div id="filterControls" class="toggle-and-input-controls-container">
       <div class="filter-input-container">
         <label for="conferenceNameFilter" class="filter-label">Filter by Name:</label>
         <input type="text" id="conferenceNameFilter" name="conferenceNameFilter" class="filter-input"
@@ -46,14 +52,14 @@
       <div class="toggle-switch-container">
         <label class="toggle-switch-label" for="showPastToggle">Show Past:</label>
         <label class="toggle-switch">
-          <input type="checkbox" id="showPastToggle">
+          <input type="checkbox" id="showPastToggle" role="switch" aria-checked="false">
           <span class="slider"></span>
         </label>
       </div>
       <div class="toggle-switch-container">
         <label class="toggle-switch-label" for="showApproxFutureToggle">Show Approx. Future:</label>
         <label class="toggle-switch">
-          <input type="checkbox" id="showApproxFutureToggle" checked>
+          <input type="checkbox" id="showApproxFutureToggle" checked role="switch" aria-checked="true">
           <span class="slider"></span>
         </label>
       </div>
@@ -75,6 +81,11 @@
     </div>
     <div id="tagFilterContainer" class="w-full text-center">
     </div>
+  </div>
+
+  <div id="loadingState" class="loading-container" aria-live="polite">
+    <div class="spinner"></div>
+    <p class="loading-text">Loading conferences...</p>
   </div>
 
 

@@ -12,6 +12,9 @@ const messageModal = document.getElementById('messageModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalMessage = document.getElementById('modalMessage');
 const closeModalButton = document.getElementById('closeModalButton');
+const loadingState = document.getElementById('loadingState');
+const filterToggle = document.getElementById('filterToggle');
+const filterControls = document.getElementById('filterControls');
 
 // --- Application State ---
 let upcomingConferencesData = [];
@@ -51,13 +54,32 @@ if (closeModalButton) {
 }
 
 // --- Countdown Logic ---
-function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApproximate = false) {
+function getUrgencyClass(timeLeft) {
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    if (days < 1) return 'countdown-urgent-critical';
+    if (days < 7) return 'countdown-urgent-soon';
+    return '';
+}
+
+function getUrgencyBadge(conference) {
+    const eventDate = new Date(conference.deadline).getTime();
+    const now = new Date().getTime();
+    const timeLeft = eventDate - now;
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+    if (timeLeft <= 0) return '';
+    if (days < 1) return '<span class="urgency-badge critical mt-auto">Less than 24h</span>';
+    if (days < 7) return '<span class="urgency-badge soon mt-auto">Due Soon</span>';
+    if (days < 30) return '<span class="urgency-badge upcoming mt-auto">This Month</span>';
+    return '';
+}
+
+function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApproximate = false, urgencyClass = '') {
     const countdownElement = document.getElementById(countdownElementId);
     if (!countdownElement) return;
 
-    // Assumes targetDateStr from JSON is a UTC string (e.g., "2025-07-15T23:59:59Z")
     const eventDate = new Date(targetDateStr).getTime();
-    const now = new Date().getTime(); // User's local time
+    const now = new Date().getTime();
     const timeLeft = eventDate - now;
 
     if (timeLeft <= 0) {
@@ -68,6 +90,10 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
             </div>`;
         return;
     }
+
+    const numberColorClass = urgencyClass 
+        ? (urgencyClass === 'countdown-urgent-critical' ? 'text-red-400' : 'text-amber-400')
+        : 'text-pink-400';
 
     if (isApproximate) {
         const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
@@ -81,7 +107,7 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
         }
         countdownElement.innerHTML = `
             <div class="countdown-label">${label}:</div>
-            <div class="text-lg sm:text-xl lg:text-2xl font-bold text-pink-400 text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
+            <div class="text-lg sm:text-xl lg:text-2xl font-bold ${numberColorClass} text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
                 ${approxDaysText}
             </div>
         `;
@@ -93,21 +119,21 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
 
         countdownElement.innerHTML = `
             <div class="countdown-label">${label} In:</div>
-            <div class="flex justify-around space-x-1 sm:space-x-2">
+            <div class="flex justify-around space-x-1 sm:space-x-2 ${urgencyClass}">
                 <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-400">${String(days).padStart(2, '0')}</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(days).padStart(2, '0')}</div>
                     <div class="text-xs text-gray-300">Days</div>
                 </div>
                 <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-400">${String(hours).padStart(2, '0')}</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(hours).padStart(2, '0')}</div>
                     <div class="text-xs text-gray-300">Hours</div>
                 </div>
                 <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-400">${String(minutes).padStart(2, '0')}</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(minutes).padStart(2, '0')}</div>
                     <div class="text-xs text-gray-300">Minutes</div>
                 </div>
                 <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-pink-400">${String(seconds).padStart(2, '0')}</div>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(seconds).padStart(2, '0')}</div>
                     <div class="text-xs text-gray-300">Seconds</div>
                 </div>
             </div>
@@ -156,7 +182,8 @@ function formatDate(dateString, formattingOptions = {}) {
 function createConferenceCard(conference) {
     const card = document.createElement('div');
     card.id = `card-${conference.id}`;
-    card.className = 'card-gradient p-6 rounded-xl shadow-2xl flex flex-col justify-between transform hover:scale-105 transition-transform duration-300';
+    card.className = 'card-gradient p-6 rounded-xl shadow-2xl flex flex-col justify-between transform hover:scale-[1.02] transition-transform duration-300';
+    card.tabIndex = 0;
     
     const isApprox = conference.isApproximateDeadline || false;
     const approxDateFormatting = { monthYearOnly: true, displayTimezoneIana: conference.timezone || 'UTC' };
@@ -212,13 +239,20 @@ function createConferenceCard(conference) {
         noteInfo = `<p class="text-gray-300 text-sm mt-2 mb-1 leading-relaxed">${conference.note}</p>`;
     }
 
+    const urgencyBadge = getUrgencyBadge(conference);
+
     let tagsHTML = '';
     if (conference.tags && conference.tags.length > 0) {
         tagsHTML = '<div class="mt-3 mb-2 flex flex-wrap">';
         conference.tags.forEach(tag => {
             tagsHTML += `<span class="conference-tag">${tag}</span>`;
         });
+        if (urgencyBadge) {
+            tagsHTML += urgencyBadge;
+        }
         tagsHTML += '</div>';
+    } else if (urgencyBadge) {
+        tagsHTML = `<div class="mt-3 mb-2 flex flex-wrap">${urgencyBadge}</div>`;
     }
 
     const mainDeadlineCountdownHTML = `<div id="countdown-deadline-${conference.id}" class="deadline-section"></div>`;
@@ -295,9 +329,17 @@ function createConferenceCard(conference) {
     `;
     conferenceGrid.appendChild(card);
 
-    updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, isApprox);
+    const eventDate = new Date(conference.deadline).getTime();
+    const now = new Date().getTime();
+    const urgencyClass = !isApprox ? getUrgencyClass(eventDate - now) : '';
+
+    updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, isApprox, urgencyClass);
     if (!isApprox) {
-        const intervalId = setInterval(() => updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, false), 1000);
+        const intervalId = setInterval(() => {
+            const timeLeft = new Date(conference.deadline).getTime() - new Date().getTime();
+            const newUrgencyClass = getUrgencyClass(timeLeft);
+            updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, false, newUrgencyClass);
+        }, 1000);
         card.dataset.intervalId = intervalId; 
     }
 }
@@ -411,7 +453,11 @@ function renderConferences(
             clearInterval(Number(intervalId));
         }
     });
-    conferenceGrid.innerHTML = ''; 
+    conferenceGrid.innerHTML = '';
+
+    if (loadingState) {
+        loadingState.style.display = 'none';
+    } 
 
     let filteredConferences = [...sourceConferenceData]; 
     const now = new Date();
@@ -474,7 +520,14 @@ function renderConferences(
     });
 
     if (filteredConferences.length === 0) {
-        conferenceGrid.innerHTML = `<p class="text-gray-400 col-span-full text-center">No conferences match the current filters.</p>`;
+        conferenceGrid.innerHTML = `
+            <div class="empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <h3>No conferences found</h3>
+                <p>Try adjusting your filters to see more results.</p>
+            </div>`;
         return;
     }
     filteredConferences.forEach(createConferenceCard);
@@ -515,6 +568,14 @@ function setupEventListeners() {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
+    if (filterToggle && filterControls) {
+        filterToggle.addEventListener('click', () => {
+            const isExpanded = filterToggle.getAttribute('aria-expanded') === 'true';
+            filterToggle.setAttribute('aria-expanded', !isExpanded);
+            filterControls.classList.toggle('open');
+        });
+    }
+
     document.addEventListener('keydown', function(event) {
         // Check if the 'f' key is pressed along with Ctrl (for Windows/Linux) or Command (for macOS)
         if (event.key === 'f' && (event.ctrlKey || event.metaKey)) {
@@ -531,12 +592,14 @@ function setupEventListeners() {
     if (showPastToggle) {
         showPastToggle.addEventListener('change', function() {
             currentFilterSettings.showPast = this.checked;
+            this.setAttribute('aria-checked', this.checked);
             loadArchiveDataIfNeededAndRender(); 
         });
     }
     if (showApproxFutureToggle) {
         showApproxFutureToggle.addEventListener('change', function() {
             currentFilterSettings.showApproxFuture = this.checked;
+            this.setAttribute('aria-checked', this.checked);
             applyAllFilters();
         });
     }
@@ -563,8 +626,14 @@ function setupEventListeners() {
 
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
-    if (showPastToggle) currentFilterSettings.showPast = showPastToggle.checked;
-    if (showApproxFutureToggle) currentFilterSettings.showApproxFuture = showApproxFutureToggle.checked;
+    if (showPastToggle) {
+        currentFilterSettings.showPast = showPastToggle.checked;
+        showPastToggle.setAttribute('aria-checked', showPastToggle.checked);
+    }
+    if (showApproxFutureToggle) {
+        currentFilterSettings.showApproxFuture = showApproxFutureToggle.checked;
+        showApproxFutureToggle.setAttribute('aria-checked', showApproxFutureToggle.checked);
+    }
     if (minH5IndexInput) {
          currentFilterSettings.minH5 = minH5IndexInput.value === '' ? null : parseInt(minH5IndexInput.value, 10);
          if (isNaN(currentFilterSettings.minH5)) currentFilterSettings.minH5 = null;

@@ -222,6 +222,10 @@ body {
   height: 0;
 }
 
+.toggle-switch input:focus-visible + .slider {
+  box-shadow: 0 0 0 2px #111827, 0 0 0 4px #ec4899;
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -267,4 +271,198 @@ input:checked+.slider:before {
 
 .conference-meta-info .label {
   color: #9ca3af;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  grid-column: 1 / -1;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #374151;
+  border-top-color: #ec4899;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.empty-state svg {
+  width: 64px;
+  height: 64px;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  color: #d1d5db;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Deadline Urgency Badges */
+.urgency-badge {
+  background-color: #4b5563;
+  color: #d1d5db;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.urgency-badge.critical {
+  color: #f87171;
+}
+
+.urgency-badge.soon {
+  color: #fbbf24;
+}
+
+.urgency-badge.upcoming {
+  color: #60a5fa;
+}
+
+/* Countdown Urgency Colors */
+.countdown-urgent-critical .text-xl {
+  color: #f87171 !important;
+}
+
+.countdown-urgent-soon .text-xl {
+  color: #fbbf24 !important;
+}
+
+/* Card hover glow */
+.card-gradient {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-gradient:hover {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.card-gradient:focus-within {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+
+/* Focus visible for inputs */
+.filter-input:focus-visible,
+.filter-select:focus-visible {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.5);
+}
+
+/* Mobile filter drawer */
+.filter-drawer-toggle {
+  display: none;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #374151;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.filter-drawer-toggle:hover {
+  background-color: #4b5563;
+}
+
+.filter-controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 64rem;
+}
+
+@media (max-width: 768px) {
+  .filter-drawer-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .toggle-and-input-controls-container {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+  }
+
+  .toggle-and-input-controls-container.open {
+    display: flex;
+  }
+
+  .toggle-switch-container,
+  .filter-input-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .filter-label {
+    margin-right: 0;
+  }
+
+  .filter-input {
+    width: 100%;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+}
+
+/* Tag button focus */
+.tag-button:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
+}
+
+/* Conference link focus */
+a:focus-visible {
+  outline: 2px solid #ec4899;
+  outline-offset: 2px;
 }
