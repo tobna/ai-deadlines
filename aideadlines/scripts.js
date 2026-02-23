@@ -141,6 +141,48 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
     }
 }
 
+function updateSmallCountdown(targetDateStr, countdownElementId, label) {
+    const countdownElement = document.getElementById(countdownElementId);
+    if (!countdownElement) return;
+
+    const eventDate = new Date(targetDateStr).getTime();
+    const now = new Date().getTime();
+    const timeLeft = eventDate - now;
+
+    if (timeLeft <= 0) {
+        countdownElement.innerHTML = `
+            <div class="ended-banner w-full text-center py-1 px-2 rounded-md text-sm font-semibold bg-gray-600">
+                ${label} Passed
+            </div>`;
+        return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `
+        <div class="flex items-center justify-between w-full">
+            <span class="countdown-label text-xs text-gray-400 leading-none mt-1">${label}:</span>
+            <div class="flex space-x-1 sm:space-x-2">
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(days).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">d</span></span>
+                </div>
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(hours).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">h</span></span>
+                </div>
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(minutes).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">m</span></span>
+                </div>
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(seconds).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">s</span></span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // --- Format Date Helper ---
 function formatDate(dateString, formattingOptions = {}) {
     if (!dateString) return 'N/A';
@@ -255,7 +297,7 @@ function createConferenceCard(conference) {
         tagsHTML = `<div class="mt-3 mb-2 flex flex-wrap">${urgencyBadge}</div>`;
     }
 
-    const mainDeadlineCountdownHTML = `<div id="countdown-deadline-${conference.id}" class="deadline-section"></div>`;
+    const mainDeadlineCountdownHTML = `<div id="countdown-deadline-${conference.id}" class="deadline-section${conference.abstractDeadline ? '' : ' mb-auto'}"></div>`;
     const deadlineLabelText = isApprox ? "Approx. Full Paper Submission" : "Full Paper Submission";
     const deadlineDateTextSuffix = isApprox ? " (Approx.)" : "";
     
@@ -265,18 +307,32 @@ function createConferenceCard(conference) {
     const mainDeadlineText = isApprox 
         ? `~${formatDate(conference.deadline, mainDeadlineFormatOptions)}`
         : formatDate(conference.deadline, mainDeadlineFormatOptions);
-    const mainDeadlineTextHTML = `<p class="deadline-date-text">Deadline: ${mainDeadlineText}${deadlineDateTextSuffix}</p>`;
+    const mainDeadlineTextHTML = `<p class="deadline-date-text${conference.abstractDeadline ? '' : ' mb-auto'}">Deadline: ${mainDeadlineText}${deadlineDateTextSuffix}</p>`;
     
-    let abstractDeadlineTextHTML = '';
+    let abstractDeadlineSectionHTML = '';
     if (conference.abstractDeadline) {
         const abstractFormatOptions = isApprox ? approxDateFormatting : preciseDeadlineFormat;
         const abstractDateText = isApprox 
             ? `~${formatDate(conference.abstractDeadline, abstractFormatOptions)}`
             : formatDate(conference.abstractDeadline, abstractFormatOptions);
         const abstractSuffix = isApprox ? " (Approx.)" : "";
-        abstractDeadlineTextHTML = `<div class="mt-2 pt-2 border-t border-gray-700"> 
-                                        <p class="deadline-date-text text-sm">Abstract Deadline: ${abstractDateText}${abstractSuffix}</p>
-                                   </div>`;
+        
+        const mainPassed = !isApprox && new Date(conference.deadline).getTime() < new Date().getTime();
+        const abstractStillOpen = mainPassed && new Date(conference.abstractDeadline).getTime() > new Date().getTime();
+        
+        if (abstractStillOpen) {
+            abstractDeadlineSectionHTML = `<div class="mt-2"> 
+                                            <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
+                                            <p class="deadline-date-text text-sm text-pink-300">Abstract: ${abstractDateText}${abstractSuffix}</p>
+                                       </div>`;
+        } else {
+            abstractDeadlineSectionHTML = `<div class="mt-2"> 
+                                            <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
+                                            <p class="deadline-date-text text-sm">Abstract Deadline: ${abstractDateText}${abstractSuffix}</p>
+                                       </div>`;
+        }
+    } else {
+        abstractDeadlineSectionHTML = '';
     }
     
     let websiteLinkHTML;
@@ -320,10 +376,12 @@ function createConferenceCard(conference) {
             ${noteInfo}
             ${tagsHTML}
         </div>
-        <div>
-            ${mainDeadlineCountdownHTML}
-            ${mainDeadlineTextHTML}
-            ${abstractDeadlineTextHTML} 
+        <div class="flex flex-col h-full justify-between">
+            <div>
+                ${mainDeadlineCountdownHTML}
+                ${mainDeadlineTextHTML}
+                ${abstractDeadlineSectionHTML}
+            </div>
             ${websiteLinkHTML}
         </div>
     `;
@@ -334,11 +392,20 @@ function createConferenceCard(conference) {
     const urgencyClass = !isApprox ? getUrgencyClass(eventDate - now) : '';
 
     updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, isApprox, urgencyClass);
+    
+    if (conference.abstractDeadline && !isApprox) {
+        updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, "Abstract");
+    }
+    
     if (!isApprox) {
         const intervalId = setInterval(() => {
             const timeLeft = new Date(conference.deadline).getTime() - new Date().getTime();
             const newUrgencyClass = getUrgencyClass(timeLeft);
             updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, false, newUrgencyClass);
+            
+            if (conference.abstractDeadline) {
+                updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, "Abstract");
+            }
         }, 1000);
         card.dataset.intervalId = intervalId; 
     }

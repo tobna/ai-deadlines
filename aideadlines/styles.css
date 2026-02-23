@@ -32,12 +32,9 @@ body {
 
 /* Additional styles for clarity if needed */
 .deadline-section {
-  margin-top: 0.75rem;
-  /* 12px */
-  margin-bottom: 0.75rem;
-  /* 12px */
-  padding-top: 0.75rem;
-  /* 12px */
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0;
   border-top: 1px solid #4b5563;
 }
 
@@ -101,7 +98,7 @@ body {
 .deadline-date-text {
   font-size: 0.75rem;
   color: #9ca3af;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .countdown-label {
