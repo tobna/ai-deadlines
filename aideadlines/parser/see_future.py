@@ -16,6 +16,7 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
         return {}
 
     deadlines = [dateparser.parse(dl) if isinstance(dl, str) else dl for dl in deadlines]
+    deadlines = [dl for dl in deadlines if dl is not None]
     deadlines = sorted(deadlines, key=lambda x: x.year)
     deltas = []
     for d1, d2 in zip(deadlines[:-1], deadlines[1:]):
