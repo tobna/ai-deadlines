@@ -7,6 +7,7 @@ const minH5IndexInput = document.getElementById('minH5Index');
 const minRatingSelect = document.getElementById('minRating');
 const conferenceNameFilterInput = document.getElementById('conferenceNameFilter');
 const currentYearSpan = document.getElementById('currentYear');
+const themeToggle = document.getElementById('themeToggle');
 
 const messageModal = document.getElementById('messageModal');
 const modalTitle = document.getElementById('modalTitle');
@@ -15,6 +16,42 @@ const closeModalButton = document.getElementById('closeModalButton');
 const loadingState = document.getElementById('loadingState');
 const filterToggle = document.getElementById('filterToggle');
 const filterControls = document.getElementById('filterControls');
+
+// --- Theme Management ---
+function getThemePreference() {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+        return storedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+}
+
+function initTheme() {
+    const preferredTheme = getThemePreference();
+    setTheme(preferredTheme);
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        setTheme(isDark ? 'light' : 'dark');
+    });
+}
 
 // --- Application State ---
 let upcomingConferencesData = [];
@@ -92,8 +129,8 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
     }
 
     const numberColorClass = urgencyClass 
-        ? (urgencyClass === 'countdown-urgent-critical' ? 'text-red-400' : 'text-amber-400')
-        : 'text-pink-400';
+        ? (urgencyClass === 'countdown-urgent-critical' ? 'text-red-600 dark:text-red-400' : 'text-amber-600 dark:text-amber-400')
+        : 'text-pink-600 dark:text-pink-400';
 
     if (isApproximate) {
         const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
@@ -107,7 +144,7 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
         }
         countdownElement.innerHTML = `
             <div class="countdown-label">${label}:</div>
-            <div class="text-lg sm:text-xl lg:text-2xl font-bold ${numberColorClass} text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
+            <div class="text-lg sm:text-xl lg:text-2xl font-bold ${numberColorClass} text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-200 dark:bg-gray-700 rounded-md shadow">
                 ${approxDaysText}
             </div>
         `;
@@ -120,21 +157,21 @@ function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApp
         countdownElement.innerHTML = `
             <div class="countdown-label">${label} In:</div>
             <div class="flex justify-around space-x-1 sm:space-x-2 ${urgencyClass}">
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
+                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
                     <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(days).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-300">Days</div>
+                    <div class="text-xs text-gray-600 dark:text-gray-300">Days</div>
                 </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
+                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
                     <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(hours).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-300">Hours</div>
+                    <div class="text-xs text-gray-600 dark:text-gray-300">Hours</div>
                 </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
+                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
                     <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(minutes).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-300">Minutes</div>
+                    <div class="text-xs text-gray-600 dark:text-gray-300">Minutes</div>
                 </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-700 rounded-md shadow">
+                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
                     <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(seconds).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-300">Seconds</div>
+                    <div class="text-xs text-gray-600 dark:text-gray-300">Seconds</div>
                 </div>
             </div>
         `;
@@ -164,19 +201,19 @@ function updateSmallCountdown(targetDateStr, countdownElementId, label) {
 
     countdownElement.innerHTML = `
         <div class="flex items-center justify-between w-full">
-            <span class="countdown-label text-xs text-gray-400 leading-none mt-1">${label}:</span>
-            <div class="flex space-x-1 sm:space-x-2">
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(days).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">d</span></span>
+            <span class="countdown-label text-xs text-gray-500 dark:text-gray-400 leading-none mt-1">${label}:</span>
+            <div class="flex space-x-2 sm:space-x-3">
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(days).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">d</span></span>
                 </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(hours).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">h</span></span>
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(hours).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">h</span></span>
                 </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(minutes).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">m</span></span>
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(minutes).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">m</span></span>
                 </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-300">${String(seconds).padStart(2, '0')}<span class="text-gray-400 text-xs ml-0.5">s</span></span>
+                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
+                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(seconds).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">s</span></span>
                 </div>
             </div>
         </div>
@@ -247,7 +284,7 @@ function createConferenceCard(conference) {
 
     let placeInfo = '';
     if (conference.location) {
-        placeInfo = `<p class="text-sm text-gray-400 mt-1 mb-2">
+        placeInfo = `<p class="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
                             <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.002-.001L10 18.43l-5.192-5.192a6.875 6.875 0 010-9.719l.001-.001c2.7-2.7 7.075-2.7 9.774 0l.001.001a6.875 6.875 0 010 9.719L10 18.43zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                         </svg>
@@ -268,7 +305,7 @@ function createConferenceCard(conference) {
     }
 
     const conferenceDatesHTML = `
-        <p class="text-sm text-gray-400 mb-3">
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
                 <path fill-rule="evenodd" d="M5.75 3A2.25 2.25 0 003.5 5.25v9.5A2.25 2.25 0 005.75 17h8.5A2.25 2.25 0 0016.5 14.75v-9.5A2.25 2.25 0 0014.25 3h-8.5zM5 5.25c0-.414.336-.75.75-.75h8.5c.414 0 .75.336.75.75v9.5c0 .414-.336.75-.75.75h-8.5a.75.75 0 01-.75-.75v-9.5z" clip-rule="evenodd" />
                 <path fill-rule="evenodd" d="M10 7a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 0110 7zM5 1a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H5.75A.75.75 0 015 1zm8.5 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
@@ -278,7 +315,7 @@ function createConferenceCard(conference) {
 
     let noteInfo = '';
     if (conference.note) {
-        noteInfo = `<p class="text-gray-300 text-sm mt-2 mb-1 leading-relaxed">${conference.note}</p>`;
+        noteInfo = `<p class="text-gray-600 dark:text-gray-300 text-sm mt-2 mb-1 leading-relaxed">${conference.note}</p>`;
     }
 
     const urgencyBadge = getUrgencyBadge(conference);
@@ -323,7 +360,7 @@ function createConferenceCard(conference) {
         if (abstractStillOpen) {
             abstractDeadlineSectionHTML = `<div class="mt-2"> 
                                             <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
-                                            <p class="deadline-date-text text-sm text-pink-300">Abstract: ${abstractDateText}${abstractSuffix}</p>
+                                            <p class="deadline-date-text text-sm text-pink-600 dark:text-pink-300">Abstract: ${abstractDateText}${abstractSuffix}</p>
                                        </div>`;
         } else {
             abstractDeadlineSectionHTML = `<div class="mt-2"> 
@@ -358,13 +395,11 @@ function createConferenceCard(conference) {
 
     if (conference.title && conference.shortname) {
       titleHTML = `
-      <h2 class="text-2xl font-semibold text-white mb-1">${conference.title} (${conference.shortname})</h2>`
-    } else if (conference.title) {
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.title} (${conference.shortname})</h2>`
       titleHTML = `
-      <h2 class="text-2xl font-semibold text-white mb-1">${conference.title}</h2>`
-    } else {
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.title}</h2>`
       titleHTML = `
-      <h2 class="text-2xl font-semibold text-white mb-1">${conference.shortname}</h2>`
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.shortname}</h2>`
     }
 
     card.innerHTML = `
@@ -693,6 +728,8 @@ function setupEventListeners() {
 
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    
     if (showPastToggle) {
         currentFilterSettings.showPast = showPastToggle.checked;
         showPastToggle.setAttribute('aria-checked', showPastToggle.checked);
