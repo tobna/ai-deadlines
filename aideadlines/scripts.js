@@ -411,12 +411,10 @@ function createConferenceCard(conference) {
             ${noteInfo}
             ${tagsHTML}
         </div>
-        <div class="flex flex-col h-full justify-between">
-            <div>
-                ${mainDeadlineCountdownHTML}
-                ${mainDeadlineTextHTML}
-                ${abstractDeadlineSectionHTML}
-            </div>
+        <div class="mt-auto">
+            ${mainDeadlineCountdownHTML}
+            ${mainDeadlineTextHTML}
+            ${abstractDeadlineSectionHTML}
             ${websiteLinkHTML}
         </div>
     `;
