@@ -39,37 +39,29 @@ icassp2024:
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2024.ieeeicassp.org/
 icassp2025:
-  conferenceEndDate: '2025-04-11'
-  conferenceStartDate: '2025-04-06'
-  dataSrc: hf-repo
+  conferenceEndDate: '2025-04-19'
+  conferenceStartDate: '2025-04-14'
+  dataSrc: estimate
   id: icassp2025
-  isApproximateDeadline: false
-  location: Hyderabad International Convention Center, Hyderabad, India
+  isApproximateDeadline: true
   rating: B
   shortname: ICASSP 2025
   tags: *id001
   timeline:
-  - deadline: '2025-09-18T06:59:59Z'
-    note: Paper Submission
-  timezone: UTC-12
-  title: International Conference on Acoustics, Speech and Signal Processing
-  website: https://2025.ieeeicassp.org/
+  - deadline: '2024-09-05T23:59:59Z'
+  title: IEEE International Conference on Acoustics, Speech, and Signal Processing
 icassp2026:
-  conferenceEndDate: '2025-05-08'
-  conferenceStartDate: '2025-05-04'
-  dataSrc: hf-repo
+  conferenceEndDate: '2026-04-19'
+  conferenceStartDate: '2026-04-14'
+  dataSrc: estimate
   id: icassp2026
-  isApproximateDeadline: false
-  location: Barcelona International Convention Center (CCIB), Barcelona, Spain
+  isApproximateDeadline: true
   rating: B
   shortname: ICASSP 2026
   tags: *id001
   timeline:
-  - deadline: '2025-09-18T06:59:59Z'
-    note: Paper Submission
-  timezone: Etc/GMT-2
-  title: International Conference on Acoustics, Speech and Signal Processing
-  website: https://2026.ieeeicassp.org
+  - deadline: '2025-09-05T23:59:59Z'
+  title: IEEE International Conference on Acoustics, Speech, and Signal Processing
 icassp2027:
   conferenceEndDate: '2027-05-09'
   conferenceStartDate: '2027-05-04'

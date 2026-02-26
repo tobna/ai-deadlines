@@ -25,7 +25,7 @@ corl2025:
   shortname: CoRL 2025
   tags: *id001
   timeline:
-  - deadline: '2025-05-01T11:59:59Z'
+  - deadline: '2025-04-30T23:59:59Z'
   timezone: AoE
   title: The Conference on Robot Learning
   website: https://www.corl.org/

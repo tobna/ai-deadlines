@@ -9,8 +9,9 @@ chil2026:
   tags:
   - ML
   timeline:
-  - abstractDeadline: '2026-02-05T11:59:59Z'
-    deadline: '2026-02-05T11:59:59Z'
+  - abstractDeadline: '2026-02-04T23:59:59Z'
+    deadline: '2026-02-04T23:59:59Z'
+  - deadline: '2026-02-05T11:59:59Z'
     note: Paper Submission
   timezone: UTC-12
   title: AHLI Conference on Health, Inference, and Learning

@@ -41,7 +41,7 @@ naacl2025:
   shortname: NAACL 2025
   tags: *id001
   timeline:
-  - deadline: '2024-10-16T11:59:59Z'
+  - deadline: '2024-10-15T23:59:59Z'
   timezone: UTC-12
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics

@@ -10,7 +10,7 @@ cec2025:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2025-01-16T11:59:59Z'
+  - deadline: '2025-01-15T23:59:59Z'
   timezone: UTC-12
   title: IEEE Congress on Evolutionary Computation
   website: https://www.cec2025.org/
