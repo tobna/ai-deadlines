@@ -30,20 +30,22 @@ corl2025:
   title: The Conference on Robot Learning
   website: https://www.corl.org/
 corl2026:
-  conferenceEndDate: '2026-09-30'
-  conferenceStartDate: '2026-09-27'
-  dataSrc: ninoduarte-git
+  conferenceEndDate: '2026-11-12'
+  conferenceStartDate: '2026-11-09'
+  dataSrc: hf-repo
   h5Index: 76
   id: corl2026
   isApproximateDeadline: false
-  location: NA, NA
+  location: JW Marriott Austin, 110 E 2nd St, Austin, TX 78701
   shortname: CoRL 2026
   tags: *id001
   timeline:
-  - deadline: '2026-04-23T23:59:59Z'
+  - abstractDeadline: '2026-05-26T11:59:00Z'
+    deadline: '2026-05-29T11:59:00Z'
+    note: Paper submission deadline
   timezone: America/Los_Angeles
   title: The Conference on Robot Learning
-  website: http://www.corl.org/
+  website: https://www.corl.org/
 corl2027:
   conferenceEndDate: '2027-10-02'
   conferenceStartDate: '2027-09-27'
