@@ -6,6 +6,14 @@ import re
 import datetime
 
 TZ_REPLACE = {
+    # US timezone abbreviations
+    "Pacific Time": "PST",
+    "PT": "PST",
+    "Eastern Time": "EST",
+    "ET": "EST",
+    "Central Time": "CST",
+    "CT": "CST",
+    "Mountain Time": "MST",
     # Named timezone regions
     "Russia/Moscow": "GMT+3",
     "Europe/London": "GMT+0",
@@ -24,15 +32,6 @@ TZ_REPLACE = {
     "Asia/Kolkata": "GMT+5:30",
     "Australia/Sydney": "GMT+11",
     "Australia/Melbourne": "GMT+11",
-    # US timezone abbreviations
-    "Pacific Time": "PST",
-    "PT": "PST",
-    "Eastern Time": "EST",
-    "ET": "EST",
-    "Central Time": "CST",
-    "CT": "CST",
-    "Mountain Time": "MST",
-    "MT": "MST",
     # European timezone abbreviations
     "CET": "GMT+1",
     "CEST": "GMT+2",
@@ -59,9 +58,10 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
     if isinstance(timestr, str):
         for name, tz in TZ_REPLACE.items():
             timestr = timestr.replace(name, tz)
+        logger.debug(f"replaced to {timestr}")
         parsed_time = dateparser.parse(timestr)
         if parsed_time is None:
-            logger.warning("NONE:", timestr)
+            logger.warning(f"NONE: '{timestr}'")
             return None
     else:
         assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
@@ -102,12 +102,12 @@ def parse_all_times(conference):
             if month_day_re.match(timestr.strip()):
                 timestr += f", {year}"
             if " the " in timestr and not any(mnth in timestr for mnth in month_strs):
-                logger.info(f"WATCH OUT: {timestr} ->", end="\t")
+                old_time_str = timestr
                 if "End" in timekey:
                     timestr = timestr.replace(
                         " the ", " " + month_strs[int(conference["conferenceStartDate"].split("-")[1]) - 1] + " "
                     )
-                logger.info(timestr)
+                logger.info(f"WATCH OUT: {old_time_str} -> {timestr}")
 
             timestr = _parse_timestr(timestr, with_time=False, conf_tz=conf_tz)
             if timestr:
@@ -117,10 +117,10 @@ def parse_all_times(conference):
             if "deadline" in key.lower():
                 timestr = dates[key]
                 if isinstance(timestr, str) and month_day_time_re.match(timestr):
-                    logger.info(f"adding year to '{timestr}' -> ", end="\t")
+                    old_time_str = timestr
                     start, end = month_day_time_re.match(timestr).groups()
                     timestr = f"{start} {year}{end}"
-                    logger.info(timestr)
+                    logger.info(f"adding year to '{old_time_str}' -> '{timestr}'")
                 timestr = _parse_timestr(timestr, with_time=True, conf_tz=conf_tz)
                 if timestr:
                     dates[key] = timestr
