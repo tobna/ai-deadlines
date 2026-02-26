@@ -66,7 +66,7 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
             data["h5Index"] = last_conf["h5Index"]
         if data["id"] not in conferences:
             future_conferences[data["id"]] = data
-            logger.info("estimated %s" % data["id"])
+            logger.success("estimated %s" % data["id"])
         else:
             logger.debug(f"{data['id']} already in conferences")
         next_year += yearly_rythm
