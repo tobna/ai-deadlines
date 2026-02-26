@@ -81,8 +81,9 @@ if args.online:
             try:
                 yearly_data = parse_all_times(yearly_data)
             except Exception as e:
-                logger.warning(f"Error while parsing dates for conference {conf_parser} {year}: {e}")
-                logger.info(f"conference: {yearly_data}")
+                logger.warning(
+                    f"Error while parsing dates for conference {conf_parser} {year} (data={yearly_data}): {e}"
+                )
                 year -= 1
                 continue
             if len(yearly_data) == 0:

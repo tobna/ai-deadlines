@@ -28,7 +28,7 @@ def get_ccf_list():
 
     conf_list = []
     for i, file in enumerate(ccf_files):
-        logger.info(f"{i}/{len(ccf_files)}\tget {file} from ccf-deadlines")
+        start_num_confs = len(conf_list)
         ccf_infos = requests.get("https://raw.githubusercontent.com/ccfddl/ccf-deadlines/refs/heads/main/" + file)
         ccf_infos = yaml.safe_load(ccf_infos.text)
         if ccf_infos is None:
@@ -79,7 +79,7 @@ def get_ccf_list():
                             raise ValueError(f"Can't parse dates str '{date_str}' yet")
                         data["conferenceStartDate"] = f"{start_day} {start_month} {year}"
                         data["conferenceEndDate"] = f"{end_day} {end_month} {year}"
-                        logger.info(f"added conf dates for {data['id']}")
+                        logger.debug(f"added conf dates for {data['id']}")
                     except Exception as e:
                         logger.error(f"Error when trying to parse date '{date_str}': {e}")
                 else:
@@ -97,6 +97,14 @@ def get_ccf_list():
                 if len(data["timeline"]) == 0:
                     continue
                 conf_list.append(data)
+        if len(conf_list) > start_num_confs:
+            logger.info(
+                f"{i}/{len(ccf_files)}\tgot {len(conf_list) - start_num_confs} conferences of {file} from ccf-deadlines"
+            )
+        else:
+            logger.warning(
+                f"{i}/{len(ccf_files)}\tgot {len(conf_list) - start_num_confs} conferences of {file} from ccf-deadlines"
+            )
     return conf_list
 
 

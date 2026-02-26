@@ -68,7 +68,7 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
             future_conferences[data["id"]] = data
             logger.info("estimated %s" % data["id"])
         else:
-            logger.info(f"{data['id']} already in conferences")
+            logger.debug(f"{data['id']} already in conferences")
         next_year += yearly_rythm
 
     return future_conferences
