@@ -59,6 +59,23 @@ icra2025:
   timezone: UTC-4
   title: IEEE International Conference on Robotics and Automation
   website: https://2025.ieee-icra.org
+icra2026:
+  conferenceEndDate: '2026-06-05'
+  conferenceStartDate: '2026-06-01'
+  dataSrc: hf-repo
+  h5Index: 122
+  id: icra2026
+  isApproximateDeadline: false
+  location: To be anounced
+  rating: A*
+  shortname: ICRA 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-09-16T07:59:59Z'
+    note: Paper Submission
+  timezone: PST
+  title: International Conference on Robotics and Automation
+  website: https://2026.ieee-icra.org/
 icra2027:
   conferenceEndDate: '2027-06-06'
   conferenceStartDate: '2027-06-01'
@@ -70,7 +87,7 @@ icra2027:
   shortname: ICRA 2027
   tags: *id001
   timeline:
-  - deadline: '2026-07-15T16:00:00Z'
+  - deadline: '2025-07-15T12:00:00Z'
   title: IEEE International Conference on Robotics and Automation
 icra2028:
   conferenceEndDate: '2028-06-05'
@@ -83,5 +100,5 @@ icra2028:
   shortname: ICRA 2028
   tags: *id001
   timeline:
-  - deadline: '2026-07-15T16:00:00Z'
+  - deadline: '2026-07-15T12:00:00Z'
   title: IEEE International Conference on Robotics and Automation

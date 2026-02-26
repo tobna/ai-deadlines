@@ -1,3 +1,19 @@
+mathai2025:
+  conferenceEndDate: '2025-03-28'
+  conferenceStartDate: '2025-03-24'
+  dataSrc: hf-repo
+  id: mathai2025
+  isApproximateDeadline: false
+  location: Sirius International Mathematics Center, Sirius
+  shortname: MathAI 2025
+  tags: &id001
+  - ML
+  timeline:
+  - abstractDeadline: '2025-02-14T23:59:59Z'
+    deadline: '2025-02-19T23:59:59Z'
+    note: Full paper submission deadline
+  title: The International Conference dedicated to mathematics in artificial intelligence
+  website: https://mathai.club
 mathai2026:
   conferenceEndDate: '2026-04-03'
   conferenceStartDate: '2026-03-30'
@@ -6,11 +22,36 @@ mathai2026:
   isApproximateDeadline: false
   location: Sirius International Mathematics Center, Sirius
   shortname: MathAI 2026
-  tags:
-  - ML
+  tags: *id001
   timeline:
-  - abstractDeadline: '2026-02-01T00:00:00Z'
-    deadline: '2026-02-19T00:00:00Z'
+  - abstractDeadline: '2026-02-01T23:59:59Z'
+    deadline: '2026-02-19T23:59:59Z'
     note: Full paper submission deadline
   title: The International Conference dedicated to mathematics in artificial intelligence
   website: https://mathai.club
+mathai2027:
+  conferenceEndDate: '2027-04-04'
+  conferenceStartDate: '2027-03-30'
+  dataSrc: estimate
+  id: mathai2027
+  isApproximateDeadline: true
+  shortname: MathAI 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-02-01T23:59:59Z'
+    deadline: '2027-02-19T23:59:59Z'
+    note: 'From MathAI 2026: Full paper submission deadline'
+  title: The International Conference dedicated to mathematics in artificial intelligence
+mathai2028:
+  conferenceEndDate: '2028-04-03'
+  conferenceStartDate: '2028-03-29'
+  dataSrc: estimate
+  id: mathai2028
+  isApproximateDeadline: true
+  shortname: MathAI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-02-01T23:59:59Z'
+    deadline: '2028-02-19T23:59:59Z'
+    note: 'From MathAI 2026: Full paper submission deadline'
+  title: The International Conference dedicated to mathematics in artificial intelligence
