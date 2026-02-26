@@ -7,8 +7,8 @@ ls
 echo "1. update conference data"
 python3 update.py
 
-echo "2. update tailwindcss"
-./update_tailwind.sh
+# echo "2. update tailwindcss"
+# ./update_tailwind.sh
 
 echo "3. copy files over"
 mkdir -p html/data
