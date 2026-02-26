@@ -5,12 +5,19 @@ import pytz
 import re
 import datetime
 
+TZ_REPLACE = {
+    "Russia/Moscow": "GMT+3",
+    "Europe/London": "GMT+0",
+    "(Anywhere on Earth)": "AoE",
+    "AoE": "UTC-12",
+    "Pacific Time": "PT",
+}
+
 
 def _parse_timestr(timestr, with_time, conf_tz=None):
     if isinstance(timestr, str):
-        timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-        timestr = timestr.replace("AoE", "UTC-12")
-        timestr = timestr.replace("Pacific Time", "PT")
+        for name, tz in TZ_REPLACE.items():
+            timestr = timestr.replace(name, tz)
         parsed_time = dateparser.parse(timestr)
         if parsed_time is None:
             logger.warning("NONE:", timestr)
@@ -22,9 +29,8 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
     if not with_time:
         return parsed_time.strftime("%Y-%m-%d")
     if parsed_time.tzinfo is None and conf_tz is not None:
-        timestr = timestr + f" {conf_tz}"
-        timestr = timestr.replace("(Anywhere on Earth)", "AoE")
-        timestr = timestr.replace("AoE", "UTC-12")
+        for name, tz in TZ_REPLACE.items():
+            timestr = timestr.replace(name, tz)
         old_parsed_time = parsed_time
         parsed_time = dateparser.parse(timestr)
         if parsed_time is None:
@@ -49,7 +55,6 @@ def parse_all_times(conference):
     conf_tz = None
     if "timezone" in conference:
         conf_tz = conference["timezone"]
-        conf_tz = conf_tz.replace("Russia/Moscow", "GMT+3")
     for timekey in ["conferenceStartDate", "conferenceEndDate"]:
         if timekey in conference:
             timestr = str(conference[timekey])
