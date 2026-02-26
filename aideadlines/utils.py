@@ -6,11 +6,52 @@ import re
 import datetime
 
 TZ_REPLACE = {
+    # Named timezone regions
     "Russia/Moscow": "GMT+3",
     "Europe/London": "GMT+0",
+    "Europe/Paris": "GMT+1",
+    "Europe/Berlin": "GMT+1",
+    "Europe/Rome": "GMT+1",
+    "Europe/Madrid": "GMT+1",
+    "Europe/Amsterdam": "GMT+1",
+    "Europe/Zurich": "GMT+1",
+    "Europe/Vienna": "GMT+1",
+    "Asia/Tokyo": "GMT+9",
+    "Asia/Shanghai": "GMT+8",
+    "Asia/Singapore": "GMT+8",
+    "Asia/Seoul": "GMT+9",
+    "Asia/Hong_Kong": "GMT+8",
+    "Asia/Kolkata": "GMT+5:30",
+    "Australia/Sydney": "GMT+11",
+    "Australia/Melbourne": "GMT+11",
+    # US timezone abbreviations
+    "Pacific Time": "PST",
+    "PT": "PST",
+    "Eastern Time": "EST",
+    "ET": "EST",
+    "Central Time": "CST",
+    "CT": "CST",
+    "Mountain Time": "MST",
+    "MT": "MST",
+    # European timezone abbreviations
+    "CET": "GMT+1",
+    "CEST": "GMT+2",
+    "EET": "GMT+2",
+    "EEST": "GMT+3",
+    # Asian timezone abbreviations
+    "JST": "GMT+9",
+    "KST": "GMT+9",
+    "CST": "GMT+8",
+    "China Standard Time": "GMT+8",
+    "IST": "GMT+5:30",
+    # Australian timezone abbreviations
+    "AEST": "GMT+10",
+    "AEDT": "GMT+11",
+    "AWST": "GMT+8",
+    # Other common formats
     "(Anywhere on Earth)": "AoE",
+    "Anywhere on Earth": "AoE",
     "AoE": "UTC-12",
-    "Pacific Time": "PT",
 }
 
 
