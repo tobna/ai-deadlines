@@ -9,3 +9,7 @@ Errors from run at 2026-02-19 20:27:21.691806:
 2026-02-19 20:38:08.123 | ERROR    | aideadlines.parser.ccf_deadlines:get_ccf_list:78 - Error when trying to parse date 'TBD': Can't parse dates str 'TBD' yet
 2026-02-19 20:43:16.364 | ERROR    | aideadlines.parser.ccf_deadlines:get_ccf_list:80 - Error when trying to parse date 'December 6, 2026': not enough values to unpack (expected 2, got 1)
 2026-02-19 20:43:17.069 | ERROR    | aideadlines.parser.ccf_deadlines:get_ccf_list:80 - Error when trying to parse date 'July 5, 2026': not enough values to unpack (expected 2, got 1)
+2026-03-02 12:41:20.057 | ERROR    | __main__:<module>:153 - ERROR while parsing ninoduarte-git: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-02 12:41:20.058 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
+2026-03-02 12:41:21.142 | ERROR    | __main__:<module>:191 - ERROR while parsing ccf-deadlines: Expecting value: line 1 column 1 (char 0)
+2026-03-02 12:41:21.144 | ERROR    | __main__:<module>:195 - ERROR no ccf-conferences gotten
