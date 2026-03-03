@@ -26,17 +26,18 @@ pricai2025:
   title: Pacific Rim International Conference on Artificial Intelligence
   website: https://www.pricai.org/2025/
 pricai2026:
-  conferenceEndDate: '2026-11-22'
+  conferenceEndDate: '2026-11-20'
   conferenceStartDate: '2026-11-17'
-  dataSrc: estimate
+  dataSrc: ccf-deadlines
   id: pricai2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: PRICAI 2026
   tags: *id001
   timeline:
-  - deadline: '2026-06-27T23:59:59Z'
+  - deadline: '2026-06-13T23:59:59Z'
   title: Pacific Rim International Conference on Artificial Intelligence
+  website: https://2026.pricai.org/
 pricai2027:
   conferenceEndDate: '2027-11-22'
   conferenceStartDate: '2027-11-17'
@@ -47,5 +48,17 @@ pricai2027:
   shortname: PRICAI 2027
   tags: *id001
   timeline:
-  - deadline: '2027-06-27T23:59:59Z'
+  - deadline: '2027-06-13T23:59:59Z'
+  title: Pacific Rim International Conference on Artificial Intelligence
+pricai2028:
+  conferenceEndDate: '2028-11-21'
+  conferenceStartDate: '2028-11-16'
+  dataSrc: estimate
+  id: pricai2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: PRICAI 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-06-12T23:59:59Z'
   title: Pacific Rim International Conference on Artificial Intelligence
