@@ -1,6 +1,6 @@
 acmmm2024:
-  conferenceEndDate: "2024-11-01"
-  conferenceStartDate: "2024-10-28"
+  conferenceEndDate: '2024-11-01'
+  conferenceStartDate: '2024-10-28'
   dataSrc: off-website
   h5Index: 101
   id: acmmm2024
@@ -9,17 +9,17 @@ acmmm2024:
   rating: A*
   shortname: ACMMM 2024
   tags: &id001
-    - CV
-    - HCI
-    - ML
+  - CV
+  - HCI
+  - ML
   timeline:
-    - abstractDeadline: "2024-04-09T11:59:00Z"
-      deadline: "2024-04-13T11:59:00Z"
+  - abstractDeadline: '2024-04-09T11:59:00Z'
+    deadline: '2024-04-13T11:59:00Z'
   title: ACM Multimedia
   website: https://2024.acmmm.org/
 acmmm2025:
-  conferenceEndDate: "2025-10-31"
-  conferenceStartDate: "2025-10-27"
+  conferenceEndDate: '2025-10-31'
+  conferenceStartDate: '2025-10-27'
   dataSrc: hf-repo
   h5Index: 101
   id: acmmm2025
@@ -29,15 +29,15 @@ acmmm2025:
   shortname: ACMMM 2025
   tags: *id001
   timeline:
-    - abstractDeadline: "2025-04-05T11:59:59Z"
-      deadline: "2025-04-12T11:59:59Z"
-      note: Regular paper submission (including supplementary materials, if applicable)
+  - abstractDeadline: '2025-04-05T11:59:59Z'
+    deadline: '2025-04-12T11:59:59Z'
+    note: Regular paper submission (including supplementary materials, if applicable)
   timezone: AoE
   title: ACM Multimedia
   website: https://acmmm2025.org/
 acmmm2026:
-  conferenceEndDate: "2026-11-14"
-  conferenceStartDate: "2026-11-10"
+  conferenceEndDate: '2026-11-14'
+  conferenceStartDate: '2026-11-10'
   dataSrc: off-website
   h5Index: 101
   id: acmmm2026
@@ -47,12 +47,12 @@ acmmm2026:
   shortname: ACMMM 2026
   tags: *id001
   timeline:
-    - abstractDeadline: "2026-03-25T12:00:00Z"
-      deadline: "2026-04-01T12:00:00Z"
+  - abstractDeadline: '2026-03-25T12:00:00Z'
+    deadline: '2026-04-01T12:00:00Z'
   title: ACM Multimedia
 acmmm2027:
-  conferenceEndDate: "2027-11-01"
-  conferenceStartDate: "2027-10-27"
+  conferenceEndDate: '2027-11-01'
+  conferenceStartDate: '2027-10-27'
   dataSrc: estimate
   h5Index: 101
   id: acmmm2027
@@ -61,6 +61,20 @@ acmmm2027:
   shortname: ACMMM 2027
   tags: *id001
   timeline:
-    - abstractDeadline: "2027-04-05T11:59:59Z"
-      deadline: "2027-04-12T11:59:59Z"
+  - abstractDeadline: '2027-04-05T11:59:59Z'
+    deadline: '2027-04-12T11:59:59Z'
+  title: ACM Multimedia
+acmmm2028:
+  conferenceEndDate: '2028-11-14'
+  conferenceStartDate: '2028-11-09'
+  dataSrc: estimate
+  h5Index: 101
+  id: acmmm2028
+  isApproximateDeadline: true
+  rating: A*
+  shortname: ACMMM 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-03-24T12:00:00Z'
+    deadline: '2028-03-31T12:00:00Z'
   title: ACM Multimedia
