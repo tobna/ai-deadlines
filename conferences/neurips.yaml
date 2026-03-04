@@ -248,21 +248,23 @@ neurips2025:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2025/
 neurips2026:
-  conferenceEndDate: '2026-12-06'
+  conferenceEndDate: '2026-12-12'
   conferenceStartDate: '2026-12-06'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 371
   id: neurips2026
   isApproximateDeadline: false
-  location: NA, NA
+  location: Sydney, Australia
   rating: A*
   shortname: NeurIPS 2026
   tags: *id001
   timeline:
-  - deadline: '2026-05-07T11:59:00Z'
-  timezone: Etc/GMT+12
+  - abstractDeadline: '2026-05-05T11:59:59Z'
+    deadline: '2026-05-07T11:59:59Z'
+    note: Paper submission deadline
+  timezone: AoE
   title: Conference on Neural Information Processing Systems
-  website: https://neurips.cc/Conferences/2026
+  website: https://neurips.cc/
 neurips2027:
   conferenceEndDate: '2027-12-07'
   conferenceStartDate: '2027-12-02'
