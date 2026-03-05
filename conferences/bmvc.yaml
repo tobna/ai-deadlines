@@ -62,22 +62,23 @@ bmvc2025:
   title: British Machine Vision Conference
   website: https://bmvc2025.bmva.org/
 bmvc2026:
-  conferenceEndDate: '2026-11-29'
-  conferenceStartDate: '2026-11-24'
-  dataSrc: estimate
+  conferenceEndDate: '2026-11-26'
+  conferenceStartDate: '2026-11-23'
+  dataSrc: ccf-deadlines
   h5Index: 57
   id: bmvc2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A
   shortname: BMVC 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-05-13T23:59:59Z'
-    deadline: '2026-05-16T23:59:59Z'
+  - abstractDeadline: '2026-05-22T23:59:59Z'
+    deadline: '2026-05-29T23:59:59Z'
   title: British Machine Vision Conference
+  website: https://bmvc2026.bmva.org/
 bmvc2027:
-  conferenceEndDate: '2027-11-29'
-  conferenceStartDate: '2027-11-24'
+  conferenceEndDate: '2027-11-28'
+  conferenceStartDate: '2027-11-23'
   dataSrc: estimate
   h5Index: 57
   id: bmvc2027
@@ -86,6 +87,20 @@ bmvc2027:
   shortname: BMVC 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-05-13T23:59:59Z'
-    deadline: '2027-05-16T23:59:59Z'
+  - abstractDeadline: '2027-05-22T23:59:59Z'
+    deadline: '2027-05-29T23:59:59Z'
+  title: British Machine Vision Conference
+bmvc2028:
+  conferenceEndDate: '2028-11-27'
+  conferenceStartDate: '2028-11-22'
+  dataSrc: estimate
+  h5Index: 57
+  id: bmvc2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: BMVC 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-05-21T23:59:59Z'
+    deadline: '2028-05-28T23:59:59Z'
   title: British Machine Vision Conference
