@@ -27,7 +27,8 @@ esann2026:
   shortname: ESANN 2026
   tags: *id001
   timeline:
-  - deadline: '2025-11-20T11:59:59Z'
+  - abstractDeadline: '2026-02-14T11:59:59Z'
+    deadline: '2025-11-27T11:59:59Z'
     note: Paper submission deadline
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning

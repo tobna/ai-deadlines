@@ -6,7 +6,7 @@ collas2025:
   isApproximateDeadline: false
   location: Philadelphia, USA
   shortname: CoLLAs 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2025-02-27T11:59:59Z'
@@ -15,3 +15,45 @@ collas2025:
   timezone: AoE
   title: Conference on Lifelong Learning Agents
   website: https://lifelong-ml.cc
+collas2026:
+  conferenceEndDate: '2026-09-18'
+  conferenceStartDate: '2026-09-14'
+  dataSrc: hf-repo
+  id: collas2026
+  isApproximateDeadline: false
+  location: Bucharest, Romania
+  shortname: CoLLAs 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-04-10T23:59:00Z'
+    deadline: '2026-04-15T23:59:00Z'
+    note: Paper submission deadline
+  timezone: UTC
+  title: Fifth Conference on Lifelong Learning Agents
+  website: https://lifelong-ml.cc
+collas2027:
+  conferenceEndDate: '2027-09-19'
+  conferenceStartDate: '2027-09-14'
+  dataSrc: estimate
+  id: collas2027
+  isApproximateDeadline: true
+  shortname: CoLLAs 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-04-10T23:59:00Z'
+    deadline: '2027-04-15T23:59:00Z'
+    note: 'From CoLLAs 2026: Paper submission deadline'
+  title: Fifth Conference on Lifelong Learning Agents
+collas2028:
+  conferenceEndDate: '2028-09-18'
+  conferenceStartDate: '2028-09-13'
+  dataSrc: estimate
+  id: collas2028
+  isApproximateDeadline: true
+  shortname: CoLLAs 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-04-09T23:59:00Z'
+    deadline: '2028-04-14T23:59:00Z'
+    note: 'From CoLLAs 2026: Paper submission deadline'
+  title: Fifth Conference on Lifelong Learning Agents

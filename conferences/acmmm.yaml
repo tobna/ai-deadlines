@@ -49,6 +49,7 @@ acmmm2026:
   timeline:
   - abstractDeadline: '2026-03-25T12:00:00Z'
     deadline: '2026-04-01T12:00:00Z'
+  timezone: AoE
   title: ACM Multimedia
   website: https://2026.acmmm.org/
 acmmm2027:

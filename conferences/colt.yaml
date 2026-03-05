@@ -54,7 +54,7 @@ colt2026:
   timeline:
   - deadline: '2026-02-05T11:59:59Z'
     note: Paper submission deadline
-  timezone: UTC-12
+  timezone: AoE
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2026/
 colt2027:

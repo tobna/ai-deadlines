@@ -42,7 +42,7 @@ aamas2025:
   - abstractDeadline: '2024-10-10T11:59:59Z'
     deadline: '2024-10-17T11:59:59Z'
     note: Paper submission
-  timezone: UTC-12
+  timezone: AoE
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://aamas2025.org/
 aamas2026:
@@ -59,7 +59,7 @@ aamas2026:
   - abstractDeadline: '2025-10-02T11:59:59Z'
     deadline: '2025-10-09T11:59:59Z'
     note: Paper submission
-  timezone: UTC-12
+  timezone: AoE
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://cyprusconferences.org/aamas2026/
 aamas2027:

@@ -6,7 +6,7 @@ ecmlpkdd2025:
   isApproximateDeadline: false
   location: "Alf\xE2ndega Porto Congress Centre"
   shortname: ECMLPKDD 2025
-  tags:
+  tags: &id001
   - DM
   - ML
   timeline:
@@ -17,3 +17,48 @@ ecmlpkdd2025:
   title: European Conference on Machine Learning and Principles and Practice of Knowledge
     Discovery in Databases
   website: https://ecmlpkdd.org/2025/
+ecmlpkdd2026:
+  conferenceEndDate: '2026-09-11'
+  conferenceStartDate: '2026-09-07'
+  dataSrc: hf-repo
+  id: ecmlpkdd2026
+  isApproximateDeadline: false
+  location: Naples, Italy
+  shortname: ECMLPKDD 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-03-06T11:59:59Z'
+    deadline: '2026-03-13T11:59:59Z'
+    note: Paper submission (Research Track)
+  timezone: AoE
+  title: European Conference on Machine Learning and Principles and Practice of Knowledge
+    Discovery in Databases
+  website: https://ecmlpkdd.org/2026/
+ecmlpkdd2027:
+  conferenceEndDate: '2027-09-12'
+  conferenceStartDate: '2027-09-07'
+  dataSrc: estimate
+  id: ecmlpkdd2027
+  isApproximateDeadline: true
+  shortname: ECMLPKDD 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-03-06T11:59:59Z'
+    deadline: '2027-03-13T11:59:59Z'
+    note: 'From ECMLPKDD 2026: Paper submission (Research Track)'
+  title: European Conference on Machine Learning and Principles and Practice of Knowledge
+    Discovery in Databases
+ecmlpkdd2028:
+  conferenceEndDate: '2028-09-11'
+  conferenceStartDate: '2028-09-06'
+  dataSrc: estimate
+  id: ecmlpkdd2028
+  isApproximateDeadline: true
+  shortname: ECMLPKDD 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-03-05T11:59:59Z'
+    deadline: '2028-03-12T11:59:59Z'
+    note: 'From ECMLPKDD 2026: Paper submission (Research Track)'
+  title: European Conference on Machine Learning and Principles and Practice of Knowledge
+    Discovery in Databases

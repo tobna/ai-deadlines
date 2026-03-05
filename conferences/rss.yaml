@@ -47,14 +47,14 @@ rss2026:
   dataSrc: hf-repo
   id: rss2026
   isApproximateDeadline: false
-  location: Sydney, Australia
+  location: University of Technology Sydney
   shortname: RSS 2026
   tags: *id001
   timeline:
   - abstractDeadline: '2026-01-24T11:59:59Z'
     deadline: '2026-01-31T11:59:59Z'
     note: Paper Submission
-  timezone: UTC-12
+  timezone: AoE
   title: Robotics Science and Systems
   website: https://roboticsconference.org
 rss2027:

@@ -26,7 +26,7 @@ bis2026:
   timeline:
   - deadline: '2026-01-26T11:59:59Z'
     note: Paper submission deadline (extended)
-  timezone: UTC-12
+  timezone: AoE
   title: International Conference on Business Information Systems
   website: https://bisconf.org/2026
 bis2027:

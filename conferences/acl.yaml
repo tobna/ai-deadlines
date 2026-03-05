@@ -52,14 +52,14 @@ acl2025:
   h5Index: 236
   id: acl2025
   isApproximateDeadline: false
-  location: Vienna, Austria
+  location: Austria Center Vienna, Bruno-Kreisky-Platz 1, 1220 Wien, Austria
   rating: A*
   shortname: ACL 2025
   tags: *id001
   timeline:
   - deadline: '2025-02-16T11:59:59Z'
     note: Paper submission deadline
-  timezone: UTC-12
+  timezone: AoE
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2025.aclweb.org/
 acl2026:
@@ -69,7 +69,7 @@ acl2026:
   h5Index: 236
   id: acl2026
   isApproximateDeadline: false
-  location: San Diego, USA
+  location: Grand Hyatt Manchester San Diego, 1 Market Place, San Diego, CA 92101
   rating: A*
   shortname: ACL 2026
   tags: *id001

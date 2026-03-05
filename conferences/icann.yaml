@@ -41,7 +41,7 @@ icann2025:
   timeline:
   - deadline: '2025-03-30T11:59:59Z'
     note: Abstract and Full Paper Submission
-  timezone: UTC-12
+  timezone: AoE
   title: International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2025/
 icann2026:
@@ -58,7 +58,7 @@ icann2026:
   - abstractDeadline: '2026-03-17T11:59:59Z'
     deadline: '2026-03-17T11:59:59Z'
     note: Full Paper Submission
-  timezone: UTC-12
+  timezone: AoE
   title: 35th International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2026/
 icann2027:

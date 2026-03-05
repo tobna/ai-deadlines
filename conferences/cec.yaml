@@ -10,7 +10,8 @@ cec2025:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2025-01-15T23:59:59Z'
+  - deadline: '2025-01-16T11:59:59Z'
+    note: Paper submission deadline
   timezone: UTC-12
   title: IEEE Congress on Evolutionary Computation
   website: https://www.cec2025.org/
@@ -20,12 +21,13 @@ cec2026:
   dataSrc: hf-repo
   id: cec2026
   isApproximateDeadline: false
-  location: Maastricht, Netherlands
+  location: Maastricht Exhibition & Congress Centre (MECC)
   rating: B
   shortname: CEC 2026
   tags: *id001
   timeline:
-  - deadline: '2026-02-01T11:59:59Z'
+  - abstractDeadline: '2026-05-02T11:59:59Z'
+    deadline: '2026-02-01T11:59:59Z'
     note: Paper submission deadline
   timezone: UTC-12
   title: IEEE Congress on Evolutionary Computation

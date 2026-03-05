@@ -42,7 +42,7 @@ ecai2025:
   - abstractDeadline: '2025-04-30T11:59:59Z'
     deadline: '2025-05-07T11:59:59Z'
     note: Paper submission deadline
-  timezone: UTC-12
+  timezone: AoE
   title: European Conference on Artificial Intelligence
   website: https://ecai2025.org/deadlines/
 ecai2026:
@@ -59,7 +59,7 @@ ecai2026:
   - abstractDeadline: '2026-01-13T11:59:59Z'
     deadline: '2026-01-20T11:59:59Z'
     note: Full paper submission deadline
-  timezone: UTC-12
+  timezone: AoE
   title: European Conference on Artificial Intelligence
   website: https://2026.ijcai.org/
 ecai2027:
