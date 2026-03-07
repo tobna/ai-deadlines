@@ -15,3 +15,63 @@ Errors from run at 2026-02-19 20:27:21.691806:
 2026-03-02 12:41:21.144 | ERROR    | __main__:<module>:195 - ERROR no ccf-conferences gotten
 2026-03-03 20:30:51.074 | ERROR    | __main__:<module>:153 - ERROR while parsing ninoduarte-git: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 2026-03-03 20:30:51.075 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
+2026-03-07 22:15:18.419 | ERROR    | __main__:<module>:116 - while parsing hf list: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/huggingface/ai-deadlines/git/trees/main?recursive=1 (Caused by NameResolutionError("HTTPSConnection(host='api.github.com', port=443): Failed to resolve 'api.github.com' ([Errno -3] Try again)"))
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.9/socket.py", line 966, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Try again
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.github.com', port=443): Failed to resolve 'api.github.com' ([Errno -3] Try again)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.9/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/huggingface/ai-deadlines/git/trees/main?recursive=1 (Caused by NameResolutionError("HTTPSConnection(host='api.github.com', port=443): Failed to resolve 'api.github.com' ([Errno -3] Try again)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/aideadlines/update_data.py", line 113, in <module>
+    hf_conferences = get_hf_list()
+  File "/app/aideadlines/parser/hf_list.py", line 25, in get_hf_list
+    data = requests.get(conferences_list).text
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/huggingface/ai-deadlines/git/trees/main?recursive=1 (Caused by NameResolutionError("HTTPSConnection(host='api.github.com', port=443): Failed to resolve 'api.github.com' ([Errno -3] Try again)"))
+
+2026-03-07 22:15:18.419 | ERROR    | __main__:<module>:120 - no hf conferences found
+2026-03-07 22:15:24.279 | ERROR    | __main__:<module>:191 - ERROR while parsing ccf-deadlines: HTTPSConnectionPool(host='api.github.com', port=443): Max retries exceeded with url: /repos/ccfddl/ccf-deadlines/git/trees/main?recursive=1 (Caused by NameResolutionError("HTTPSConnection(host='api.github.com', port=443): Failed to resolve 'api.github.com' ([Errno -3] Try again)"))
+2026-03-07 22:15:24.280 | ERROR    | __main__:<module>:195 - ERROR no ccf-conferences gotten
