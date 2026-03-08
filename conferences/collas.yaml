@@ -16,12 +16,12 @@ collas2025:
   title: Conference on Lifelong Learning Agents
   website: https://lifelong-ml.cc
 collas2026:
-  conferenceEndDate: '2026-09-18'
+  conferenceEndDate: '2026-09-17'
   conferenceStartDate: '2026-09-14'
   dataSrc: hf-repo
   id: collas2026
   isApproximateDeadline: false
-  location: Bucharest, Romania
+  location: National University of Science and Technology Politehnica Bucharest
   shortname: CoLLAs 2026
   tags: *id001
   timeline:
