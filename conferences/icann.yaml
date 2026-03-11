@@ -1,21 +1,21 @@
 icann2023:
-  conferenceEndDate: "2023-09-29"
-  conferenceStartDate: "2023-09-26"
+  conferenceEndDate: '2023-09-29'
+  conferenceStartDate: '2023-09-26'
   dataSrc: ccf-deadlines
   id: icann2023
   isApproximateDeadline: false
   rating: C
   shortname: ICANN 2023
   tags: &id001
-    - ML
+  - ML
   timeline:
-    - abstractDeadline: "2023-04-09T23:59:59Z"
-      deadline: "2023-04-09T23:59:59Z"
+  - abstractDeadline: '2023-04-09T23:59:59Z'
+    deadline: '2023-04-09T23:59:59Z'
   title: International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2023/
 icann2024:
-  conferenceEndDate: "2024-09-20"
-  conferenceStartDate: "2024-09-17"
+  conferenceEndDate: '2024-09-20'
+  conferenceStartDate: '2024-09-17'
   dataSrc: hf-repo
   id: icann2025
   isApproximateDeadline: false
@@ -24,13 +24,13 @@ icann2024:
   shortname: ICANN 2024
   tags: *id001
   timeline:
-    - deadline: "2024-03-25T12:00:00Z"
+  - deadline: '2024-03-25T12:00:00Z'
   timezone: UTC-12
   title: International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2024/
 icann2025:
-  conferenceEndDate: "2025-09-12"
-  conferenceStartDate: "2025-09-09"
+  conferenceEndDate: '2025-09-12'
+  conferenceStartDate: '2025-09-09'
   dataSrc: hf-repo
   id: icann2025
   isApproximateDeadline: false
@@ -39,14 +39,14 @@ icann2025:
   shortname: ICANN 2025
   tags: *id001
   timeline:
-    - deadline: "2025-03-30T11:59:59Z"
-      note: Abstract and Full Paper Submission
+  - deadline: '2025-03-30T11:59:59Z'
+    note: Abstract and Full Paper Submission
   timezone: UTC-12
   title: International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2025/
 icann2026:
-  conferenceEndDate: "2026-09-17"
-  conferenceStartDate: "2026-09-14"
+  conferenceEndDate: '2026-09-17'
+  conferenceStartDate: '2026-09-14'
   dataSrc: off-website
   id: icann2026
   isApproximateDeadline: false
@@ -55,15 +55,15 @@ icann2026:
   shortname: ICANN 2026
   tags: *id001
   timeline:
-    - deadline: "2026-03-30 AoE"
-      note: Extended Paper Submission Deadline
-    - deadline: "2026-03-06 AoE"
-      note: Workshop Paper Submission Deadline
+  - deadline: '2026-03-06T12:00:00Z'
+    note: Workshop Paper Submission Deadline
+  - deadline: '2026-03-30T12:00:00Z'
+    note: Extended Paper Submission Deadline
   title: 35th International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2026/
 icann2027:
-  conferenceEndDate: "2027-09-19"
-  conferenceStartDate: "2027-09-14"
+  conferenceEndDate: '2027-09-19'
+  conferenceStartDate: '2027-09-14'
   dataSrc: estimate
   id: icann2027
   isApproximateDeadline: true
@@ -71,11 +71,11 @@ icann2027:
   shortname: ICANN 2027
   tags: *id001
   timeline:
-    - deadline: "2027-03-16T23:59:59Z"
+  - deadline: '2027-03-16T23:59:59Z'
   title: International Conference on Artificial Neural Networks
 icann2028:
-  conferenceEndDate: "2028-09-18"
-  conferenceStartDate: "2028-09-13"
+  conferenceEndDate: '2028-09-18'
+  conferenceStartDate: '2028-09-13'
   dataSrc: estimate
   id: icann2028
   isApproximateDeadline: true
@@ -83,6 +83,6 @@ icann2028:
   shortname: ICANN 2028
   tags: *id001
   timeline:
-    - abstractDeadline: "2028-03-16T11:59:59Z"
-      deadline: "2028-03-16T11:59:59Z"
+  - abstractDeadline: '2028-03-16T11:59:59Z'
+    deadline: '2028-03-16T11:59:59Z'
   title: 35th International Conference on Artificial Neural Networks
