@@ -248,9 +248,9 @@ neurips2025:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2025/
 neurips2026:
-  conferenceEndDate: '2026-12-12'
-  conferenceStartDate: '2026-12-06'
-  dataSrc: hf-repo
+  conferenceEndDate: '2026-12-10'
+  conferenceStartDate: '2026-12-08'
+  dataSrc: off-website
   h5Index: 371
   id: neurips2026
   isApproximateDeadline: false
@@ -259,12 +259,11 @@ neurips2026:
   shortname: NeurIPS 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-05-05T11:59:59Z'
-    deadline: '2026-05-07T11:59:59Z'
-    note: Paper submission deadline
+  - abstractDeadline: '2026-05-04T12:00:00Z'
+    deadline: '2026-05-06T12:00:00Z'
   timezone: AoE
-  title: Conference on Neural Information Processing Systems
-  website: https://neurips.cc/
+  title: Neural Information Processing Systems
+  website: https://neurips.cc/Conferences/2026/
 neurips2027:
   conferenceEndDate: '2027-12-07'
   conferenceStartDate: '2027-12-02'
