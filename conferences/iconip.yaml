@@ -39,20 +39,21 @@ iconip2025:
   title: International Conference on Neural Information Processing
   website: https://iconip2025.apnns.org/
 iconip2026:
-  conferenceEndDate: '2026-11-25'
-  conferenceStartDate: '2026-11-20'
-  dataSrc: estimate
+  conferenceEndDate: '2026-11-27'
+  conferenceStartDate: '2026-11-23'
+  dataSrc: ccf-deadlines
   id: iconip2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: ICONIP 2026
   tags: *id001
   timeline:
-  - deadline: '2026-05-22T23:59:59Z'
+  - deadline: '2026-05-10T23:59:59Z'
   title: International Conference on Neural Information Processing
+  website: https://www.iconip2026.org/
 iconip2027:
-  conferenceEndDate: '2027-11-25'
-  conferenceStartDate: '2027-11-20'
+  conferenceEndDate: '2027-11-28'
+  conferenceStartDate: '2027-11-23'
   dataSrc: estimate
   id: iconip2027
   isApproximateDeadline: true
@@ -60,5 +61,17 @@ iconip2027:
   shortname: ICONIP 2027
   tags: *id001
   timeline:
-  - deadline: '2027-05-22T23:59:59Z'
+  - deadline: '2027-05-10T23:59:59Z'
+  title: International Conference on Neural Information Processing
+iconip2028:
+  conferenceEndDate: '2028-11-27'
+  conferenceStartDate: '2028-11-22'
+  dataSrc: estimate
+  id: iconip2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: ICONIP 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-05-09T23:59:59Z'
   title: International Conference on Neural Information Processing
