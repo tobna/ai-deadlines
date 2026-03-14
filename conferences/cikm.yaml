@@ -86,21 +86,22 @@ cikm2025:
   title: Conference on Information and Knowledge Management
   website: https://cikm2025.org/
 cikm2026:
-  conferenceEndDate: '2026-11-16'
-  conferenceStartDate: '2026-11-11'
-  dataSrc: estimate
+  conferenceEndDate: '2026-11-11'
+  conferenceStartDate: '2026-11-07'
+  dataSrc: ccf-deadlines
   id: cikm2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A
   shortname: CIKM 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-05-17T11:59:00Z'
-    deadline: '2026-05-24T11:59:00Z'
-  title: Conference on Information and Knowledge Management
+  - abstractDeadline: '2026-05-18T23:59:59Z'
+    deadline: '2026-05-25T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+  website: https://cikm2026.diag.uniroma1.it/
 cikm2027:
-  conferenceEndDate: '2027-11-16'
-  conferenceStartDate: '2027-11-11'
+  conferenceEndDate: '2027-11-12'
+  conferenceStartDate: '2027-11-07'
   dataSrc: estimate
   id: cikm2027
   isApproximateDeadline: true
@@ -108,6 +109,19 @@ cikm2027:
   shortname: CIKM 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-05-17T11:59:00Z'
-    deadline: '2027-05-24T11:59:00Z'
-  title: Conference on Information and Knowledge Management
+  - abstractDeadline: '2027-05-18T23:59:59Z'
+    deadline: '2027-05-25T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management
+cikm2028:
+  conferenceEndDate: '2028-11-11'
+  conferenceStartDate: '2028-11-06'
+  dataSrc: estimate
+  id: cikm2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: CIKM 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-05-17T23:59:59Z'
+    deadline: '2028-05-24T23:59:59Z'
+  title: ACM International Conference on Information and Knowledge Management

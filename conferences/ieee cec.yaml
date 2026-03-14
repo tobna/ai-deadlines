@@ -1,0 +1,46 @@
+ieee cec2025:
+  conferenceEndDate: '2025-06-12'
+  conferenceStartDate: '2025-06-08'
+  dataSrc: ccf-deadlines
+  id: ieee cec2025
+  isApproximateDeadline: false
+  shortname: IEEE CEC 2025
+  tags: &id001 []
+  timeline:
+  - deadline: '2025-01-15T23:59:59Z'
+  title: IEEE Congress on Evolutionary Computation
+  website: https://www.cec2025.org/
+ieee cec2026:
+  conferenceEndDate: '2026-06-26'
+  conferenceStartDate: '2026-06-22'
+  dataSrc: ccf-deadlines
+  id: ieee cec2026
+  isApproximateDeadline: false
+  shortname: IEEE CEC 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-01-31T23:59:59Z'
+  title: IEEE Congress on Evolutionary Computation
+  website: https://attend.ieee.org/wcci-2026/ieee-cec-2025/
+ieee cec2027:
+  conferenceEndDate: '2027-06-27'
+  conferenceStartDate: '2027-06-22'
+  dataSrc: estimate
+  id: ieee cec2027
+  isApproximateDeadline: true
+  shortname: IEEE CEC 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-01-31T23:59:59Z'
+  title: IEEE Congress on Evolutionary Computation
+ieee cec2028:
+  conferenceEndDate: '2028-06-26'
+  conferenceStartDate: '2028-06-21'
+  dataSrc: estimate
+  id: ieee cec2028
+  isApproximateDeadline: true
+  shortname: IEEE CEC 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-01-31T23:59:59Z'
+  title: IEEE Congress on Evolutionary Computation
