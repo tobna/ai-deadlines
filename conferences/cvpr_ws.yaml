@@ -1,0 +1,14 @@
+cvpr_ws2026:
+  conferenceEndDate: '2026-06-04'
+  conferenceStartDate: '2026-06-03'
+  dataSrc: ninoduarte-git
+  id: cvpr_ws2026
+  isApproximateDeadline: false
+  location: Denver, USA
+  shortname: Egocentric Vision (EgoVis) Workshop 2026
+  tags:
+  - ML
+  timeline:
+  - deadline: '2024-04-27T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: https://egovis.github.io/cvpr26/#program
