@@ -79,3 +79,5 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.github.com', 
 2026-03-14 09:59:24.901 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
 2026-03-14 11:00:22.481 | ERROR    | __main__:<module>:153 - ERROR while parsing ninoduarte-git: Expecting value: line 99 column 1 (char 2861)
 2026-03-14 11:00:22.482 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
+2026-03-14 12:01:25.616 | ERROR    | __main__:<module>:153 - ERROR while parsing ninoduarte-git: Expecting value: line 99 column 1 (char 2861)
+2026-03-14 12:01:25.617 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
