@@ -60,8 +60,8 @@ emnlp2025:
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2025.emnlp.org/
 emnlp2026:
-  conferenceEndDate: '2026-10-26'
-  conferenceStartDate: '2026-10-22'
+  conferenceEndDate: '2026-10-29'
+  conferenceStartDate: '2026-10-24'
   dataSrc: hf-repo
   h5Index: 218
   id: emnlp2026

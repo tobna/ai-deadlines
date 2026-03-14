@@ -6,9 +6,42 @@ humanoids2025:
   isApproximateDeadline: false
   location: Seoul, Korea
   shortname: Humanoids 2025
-  tags:
+  tags: &id001
   - RO
   timeline:
   - deadline: '2025-05-15T21:59:59Z'
   timezone: America/Los_Angeles
   website: https://2025humanoids.org
+humanoids2026:
+  conferenceEndDate: '2026-12-09'
+  conferenceStartDate: '2026-12-06'
+  dataSrc: ninoduarte-git
+  id: humanoids2026
+  isApproximateDeadline: false
+  location: Santa Clara, California
+  shortname: Humanoids 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-07-31T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: https://2026.ieee-humanoids.org/
+humanoids2027:
+  conferenceEndDate: '2027-12-11'
+  conferenceStartDate: '2027-12-06'
+  dataSrc: estimate
+  id: humanoids2027
+  isApproximateDeadline: true
+  shortname: Humanoids 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-07-31T23:59:59Z'
+humanoids2028:
+  conferenceEndDate: '2028-12-10'
+  conferenceStartDate: '2028-12-05'
+  dataSrc: estimate
+  id: humanoids2028
+  isApproximateDeadline: true
+  shortname: Humanoids 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-07-30T23:59:59Z'
