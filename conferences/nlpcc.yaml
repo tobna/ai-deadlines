@@ -5,9 +5,43 @@ nlpcc2025:
   id: nlpcc2025
   isApproximateDeadline: false
   shortname: NLPCC 2025
-  tags:
+  tags: &id001
   - NLP
   timeline:
   - deadline: '2025-04-20T23:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2025/index.php
+nlpcc2026:
+  conferenceEndDate: '2026-11-05'
+  conferenceStartDate: '2026-11-03'
+  dataSrc: ccf-deadlines
+  id: nlpcc2026
+  isApproximateDeadline: false
+  shortname: NLPCC 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-05-26T23:59:59Z'
+  title: CCF International Conference on Natural Language Processing and Chinese Computing
+  website: http://tcci.ccf.org.cn/conference/2026/
+nlpcc2027:
+  conferenceEndDate: '2027-11-08'
+  conferenceStartDate: '2027-11-03'
+  dataSrc: estimate
+  id: nlpcc2027
+  isApproximateDeadline: true
+  shortname: NLPCC 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-05-26T23:59:59Z'
+  title: CCF International Conference on Natural Language Processing and Chinese Computing
+nlpcc2028:
+  conferenceEndDate: '2028-11-07'
+  conferenceStartDate: '2028-11-02'
+  dataSrc: estimate
+  id: nlpcc2028
+  isApproximateDeadline: true
+  shortname: NLPCC 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-05-25T23:59:59Z'
+  title: CCF International Conference on Natural Language Processing and Chinese Computing

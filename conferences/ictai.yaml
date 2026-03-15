@@ -6,9 +6,22 @@ ictai2021:
   isApproximateDeadline: false
   rating: B
   shortname: ICTAI 2021
-  tags:
+  tags: &id001
   - ML
   timeline:
   - deadline: '2021-06-20T23:59:00Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://ictai.computer.org/
+ictai2026:
+  conferenceEndDate: '2026-11-04'
+  conferenceStartDate: '2026-11-02'
+  dataSrc: ccf-deadlines
+  id: ictai2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICTAI 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-06-30T23:59:00Z'
+  title: International Conference on Tools with Artificial Intellignce
+  website: https://ictai.computer.org/2026/
