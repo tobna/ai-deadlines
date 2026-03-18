@@ -88,16 +88,18 @@ cikm2025:
 cikm2026:
   conferenceEndDate: '2026-11-11'
   conferenceStartDate: '2026-11-07'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: cikm2026
   isApproximateDeadline: false
+  location: Rome, Italy
   rating: A
   shortname: CIKM 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-05-18T23:59:59Z'
-    deadline: '2026-05-25T23:59:59Z'
-  title: ACM International Conference on Information and Knowledge Management
+  - abstractDeadline: '2026-05-19T11:59:00Z'
+    deadline: '2026-05-26T11:59:00Z'
+    note: Full paper submission deadline
+  title: Conference on Information and Knowledge Management
   website: https://cikm2026.diag.uniroma1.it/
 cikm2027:
   conferenceEndDate: '2027-11-12'
