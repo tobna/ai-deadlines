@@ -58,7 +58,7 @@ iros2026:
   timeline:
   - deadline: '2026-03-03T11:59:59Z'
     note: Paper submission deadline
-  - deadline: '2026-03-06T11:59:59Z'
+  - deadline: '2026-03-08T11:59:59Z'
     note: Paper video submission deadline
   timezone: America/Los_Angeles
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
