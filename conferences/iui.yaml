@@ -28,12 +28,12 @@ iui2025:
   title: ACM Conference on Intelligent User Interfaces
   website: https://iui.acm.org/2025/
 iui2026:
-  conferenceEndDate: '2026-03-26'
-  conferenceStartDate: '2026-03-23'
+  conferenceEndDate: '2026-07-16'
+  conferenceStartDate: '2026-07-13'
   dataSrc: hf-repo
   id: iui2026
   isApproximateDeadline: false
-  location: Coral Beach Hotel & Resort
+  location: St. Raphael Resort & Marina
   rating: A
   shortname: IUI 2026
   tags: *id001

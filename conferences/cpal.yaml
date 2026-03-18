@@ -24,7 +24,7 @@ cpal2026:
   shortname: CPAL 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-12-11T11:59:59Z'
+  - abstractDeadline: '2026-02-17T11:59:59Z'
     deadline: '2025-12-13T11:59:59Z'
     note: Paper submission deadline
   timezone: AoE
