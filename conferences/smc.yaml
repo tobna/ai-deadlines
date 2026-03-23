@@ -50,7 +50,7 @@ smc2026:
   shortname: SMC 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-22T23:59:59Z'
+  - deadline: '2026-04-19T23:59:59Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2026.org/
 smc2027:
