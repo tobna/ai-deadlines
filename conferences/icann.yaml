@@ -55,9 +55,9 @@ icann2026:
   shortname: ICANN 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-30T12:00:00Z'
+  - deadline: '2026-03-30'
     note: Extended Paper Submission Deadline
-  - deadline: '2026-06-06T12:00:00Z'
+  - deadline: '2026-06-06'
     note: Workshop Paper Submission Deadline
   title: 35th International Conference on Artificial Neural Networks
   website: https://e-nns.org/icann2026/

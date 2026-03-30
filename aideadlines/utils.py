@@ -55,7 +55,10 @@ TZ_REPLACE = {
 
 
 def _parse_timestr(timestr, with_time, conf_tz=None):
+    if conf_tz is None:
+        conf_tz = "AoE"
     if isinstance(timestr, str):
+        has_explicit_time = bool(re.search(r'\d+:\d+', timestr))
         for name, tz in TZ_REPLACE.items():
             timestr = timestr.replace(name, tz)
         logger.debug(f"replaced to {timestr}")
@@ -67,6 +70,7 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
         assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
         parsed_time = timestr
         timestr = timestr.isoformat()
+        has_explicit_time = True
     if not with_time:
         return parsed_time.strftime("%Y-%m-%d")
     if parsed_time.tzinfo is None and conf_tz is not None:
@@ -74,8 +78,14 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
             timestr = timestr.replace(name, tz)
         old_parsed_time = parsed_time
         parsed_time = dateparser.parse(timestr)
-        if parsed_time is None:
-            parsed_time = old_parsed_time
+        if parsed_time is None or parsed_time.tzinfo is None:
+            # Timezone wasn't embedded in the string; append the conference timezone
+            tz_str = conf_tz
+            for name, tz in TZ_REPLACE.items():
+                tz_str = tz_str.replace(name, tz)
+            parsed_time = dateparser.parse(timestr + " " + tz_str) or old_parsed_time
+    if not has_explicit_time:
+        parsed_time = parsed_time.replace(hour=23, minute=59, second=59)
     return parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
 
 
@@ -93,9 +103,7 @@ def parse_all_times(conference):
     except ValueError as e:
         logger.info(conference)
         raise e
-    conf_tz = None
-    if "timezone" in conference:
-        conf_tz = conference["timezone"]
+    conf_tz = conference.get("timezone", "AoE")
     for timekey in ["conferenceStartDate", "conferenceEndDate"]:
         if timekey in conference:
             timestr = str(conference[timekey])
