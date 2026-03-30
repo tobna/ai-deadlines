@@ -242,8 +242,8 @@ neurips2025:
   shortname: NeurIPS 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-05-11T12:00:00Z'
-    deadline: '2025-05-22T12:00:00Z'
+  - abstractDeadline: '2025-05-12T11:59:59Z'
+    deadline: '2025-05-23T11:59:59Z'
   timezone: UTC-8
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2025/
@@ -259,8 +259,8 @@ neurips2026:
   shortname: NeurIPS 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-05-04T12:00:00Z'
-    deadline: '2026-05-06T12:00:00Z'
+  - abstractDeadline: '2026-05-05T11:59:59Z'
+    deadline: '2026-05-07T11:59:59Z'
   timezone: AoE
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2026/

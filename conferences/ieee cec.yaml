@@ -7,7 +7,7 @@ ieee cec2025:
   shortname: IEEE CEC 2025
   tags: &id001 []
   timeline:
-  - deadline: '2025-01-15T23:59:59Z'
+  - deadline: '2025-01-16T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
   website: https://www.cec2025.org/
 ieee cec2026:
@@ -19,7 +19,7 @@ ieee cec2026:
   shortname: IEEE CEC 2026
   tags: *id001
   timeline:
-  - deadline: '2026-01-31T23:59:59Z'
+  - deadline: '2026-02-01T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
   website: https://attend.ieee.org/wcci-2026/ieee-cec-2025/
 ieee cec2027:
