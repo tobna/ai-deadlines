@@ -48,7 +48,7 @@ wacv2024:
 wacv2025:
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-28'
-  dataSrc: hf-repo
+  dataSrc: off-website
   h5Index: 131
   id: wacv2025
   isApproximateDeadline: false
@@ -57,11 +57,13 @@ wacv2025:
   shortname: WACV 2025
   tags: *id001
   timeline:
-  - deadline: '2024-07-16T06:59:59Z'
+  - deadline: '2024-07-16T07:59:00Z'
     note: Round 1
+  - deadline: '2024-09-10T07:59:00Z'
+    note: Round 2
   timezone: UTC-7
-  title: IEEE/CVF Winter Conference on Applications of Computer Vision
-  website: https://wacv2025.thecvf.com/
+  title: Winter Conference on Applications of Computer Vision
+  website: https://wacv2025.thecvf.com
 wacv2026:
   conferenceEndDate: '2026-03-10'
   conferenceStartDate: '2026-03-06'
