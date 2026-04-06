@@ -78,21 +78,23 @@ icra2026:
   title: IEEE International Conference on Robotics and Automation
   website: https://2026.ieee-icra.org/
 icra2027:
-  conferenceEndDate: '2027-06-06'
-  conferenceStartDate: '2027-06-01'
-  dataSrc: estimate
+  conferenceEndDate: '2027-05-28'
+  conferenceStartDate: '2027-05-24'
+  dataSrc: ninoduarte-git
   h5Index: 122
   id: icra2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: Seoul, South Korea
   rating: A*
   shortname: ICRA 2027
   tags: *id001
   timeline:
-  - deadline: '2025-07-15T12:00:00Z'
-  title: IEEE International Conference on Robotics and Automation
+  - deadline: '2027-09-15T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: https://2027.ieee-icra.org/
 icra2028:
-  conferenceEndDate: '2028-06-05'
-  conferenceStartDate: '2028-05-31'
+  conferenceEndDate: '2028-05-28'
+  conferenceStartDate: '2028-05-23'
   dataSrc: estimate
   h5Index: 122
   id: icra2028
@@ -101,5 +103,4 @@ icra2028:
   shortname: ICRA 2028
   tags: *id001
   timeline:
-  - deadline: '2026-07-15T12:00:00Z'
-  title: IEEE International Conference on Robotics and Automation
+  - deadline: '2028-09-14T23:59:59Z'
