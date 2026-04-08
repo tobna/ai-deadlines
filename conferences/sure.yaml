@@ -1,0 +1,15 @@
+sure2026:
+  conferenceEndDate: '2026-08-21'
+  conferenceStartDate: '2026-08-15'
+  dataSrc: off-website
+  id: sure2026
+  isApproximateDeadline: false
+  location: Bremen Exhibition Center
+  rating: A*
+  shortname: SuRE @ IJCAI 2026
+  tags: *id001
+  timeline:
+  - deadline: 2026-05-15 AoE
+    note: SuRE Workshop Submission Deadline
+  title: 1st Workshop on Sustainability and Resource-Efficiency of Artificial Intelligence @ IJCAI 2026
+  website: https://sure-wshop.github.io/
