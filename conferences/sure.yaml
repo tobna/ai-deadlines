@@ -10,7 +10,8 @@ sure2026:
   tags:
   - ML
   timeline:
-  - deadline: 2026-05-15 AoE
+  - deadline: '2026-05-16T11:59:59Z'
     note: SuRE Workshop Submission Deadline
-  title: 1st Workshop on Sustainability and Resource-Efficiency of Artificial Intelligence @ IJCAI 2026
+  title: 1st Workshop on Sustainability and Resource-Efficiency of Artificial Intelligence
+    @ IJCAI 2026
   website: https://sure-wshop.github.io/
