@@ -1,0 +1,12 @@
+euvip2026:
+  conferenceEndDate: '2026-10-01'
+  conferenceStartDate: '2026-09-28'
+  dataSrc: ccf-deadlines
+  id: euvip2026
+  isApproximateDeadline: false
+  shortname: EUVIP 2026
+  tags: []
+  timeline:
+  - deadline: '2026-05-22T11:59:59Z'
+  title: European Conference on Visual Information Processing
+  website: https://euvip2026.github.io/
