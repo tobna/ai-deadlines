@@ -1,12 +1,15 @@
 euvip2026:
   conferenceEndDate: '2026-10-01'
   conferenceStartDate: '2026-09-28'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: euvip2026
   isApproximateDeadline: false
+  location: Parc Hotel Alvisse, 120 Rte d'Echternach, 1453 Dommeldange, Luxembourg
   shortname: EUVIP 2026
   tags: []
   timeline:
-  - deadline: '2026-05-22T11:59:59Z'
+  - deadline: '2026-05-21T21:59:59Z'
+    note: Paper submission deadline
+  timezone: Europe/Luxembourg
   title: European Conference on Visual Information Processing
   website: https://euvip2026.github.io/
