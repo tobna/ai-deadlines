@@ -33,20 +33,23 @@ cec2026:
   title: IEEE Congress on Evolutionary Computation
   website: https://attend.ieee.org/wcci-2026/
 cec2027:
-  conferenceEndDate: '2027-06-26'
-  conferenceStartDate: '2027-06-21'
-  dataSrc: estimate
+  conferenceEndDate: '2027-07-28'
+  conferenceStartDate: '2027-07-25'
+  dataSrc: hf-repo
   id: cec2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: Edinburgh, United Kingdom
   rating: B
   shortname: CEC 2027
   tags: *id001
   timeline:
-  - deadline: '2027-02-01T11:59:59Z'
+  - deadline: '2027-01-16T11:59:59Z'
+    note: Paper submission deadline
   title: IEEE Congress on Evolutionary Computation
+  website: http://ieeecec.org
 cec2028:
-  conferenceEndDate: '2028-06-25'
-  conferenceStartDate: '2028-06-20'
+  conferenceEndDate: '2028-07-29'
+  conferenceStartDate: '2028-07-24'
   dataSrc: estimate
   id: cec2028
   isApproximateDeadline: true
@@ -54,5 +57,6 @@ cec2028:
   shortname: CEC 2028
   tags: *id001
   timeline:
-  - deadline: '2028-02-01T11:59:59Z'
+  - deadline: '2028-01-16T11:59:59Z'
+    note: 'From CEC 2027: Paper submission deadline'
   title: IEEE Congress on Evolutionary Computation
