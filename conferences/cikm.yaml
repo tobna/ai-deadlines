@@ -96,8 +96,8 @@ cikm2026:
   shortname: CIKM 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-05-19T11:59:00Z'
-    deadline: '2026-05-26T11:59:00Z'
+  - abstractDeadline: '2026-05-17T11:59:00Z'
+    deadline: '2026-05-24T11:59:00Z'
     note: Full paper submission deadline
   title: Conference on Information and Knowledge Management
   website: https://cikm2026.diag.uniroma1.it/
