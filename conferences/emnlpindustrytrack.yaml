@@ -10,6 +10,7 @@ emnlpindustrytrack2025:
   - NLP
   timeline:
   - deadline: '2025-07-05T11:59:59Z'
+    note: Paper submission deadline
   timezone: AoE
   title: The annual Conference on Empirical Methods in Natural Language Processing
     (Industry Track)
