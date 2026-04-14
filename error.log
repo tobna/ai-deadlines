@@ -100,3 +100,20 @@ Traceback (most recent call last):
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 
 2026-03-25 05:56:23.717 | ERROR    | __main__:<module>:120 - no hf conferences found
+2026-04-14 15:21:29.707 | ERROR    | __main__:<module>:116 - while parsing hf list: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/app/aideadlines/update_data.py", line 113, in <module>
+    hf_conferences = get_hf_list()
+  File "/app/aideadlines/parser/hf_list.py", line 26, in get_hf_list
+    hf_list = json.loads(data)["tree"]
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2026-04-14 15:21:29.707 | ERROR    | __main__:<module>:120 - no hf conferences found
+2026-04-14 15:21:44.859 | ERROR    | __main__:<module>:191 - ERROR while parsing ccf-deadlines: Expecting value: line 1 column 1 (char 0)
+2026-04-14 15:21:44.860 | ERROR    | __main__:<module>:195 - ERROR no ccf-conferences gotten
