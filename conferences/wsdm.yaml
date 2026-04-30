@@ -80,22 +80,23 @@ wsdm2026:
   title: ACM International Conference on Web Search and Data Mining
   website: https://wsdm-conference.org/2026/
 wsdm2027:
-  conferenceEndDate: '2027-02-27'
-  conferenceStartDate: '2027-02-22'
-  dataSrc: estimate
+  conferenceEndDate: '2027-02-19'
+  conferenceStartDate: '2027-02-15'
+  dataSrc: ccf-deadlines
   h5Index: 77
   id: wsdm2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A
   shortname: WSDM 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-08-07T23:59:59Z'
-    deadline: '2026-08-14T23:59:59Z'
+  - abstractDeadline: '2026-08-12T11:59:59Z'
+    deadline: '2026-08-19T11:59:59Z'
   title: International Conference on Web Search and Data Mining
+  website: https://wsdm-conference.org/2027/
 wsdm2028:
-  conferenceEndDate: '2028-02-27'
-  conferenceStartDate: '2028-02-22'
+  conferenceEndDate: '2028-02-20'
+  conferenceStartDate: '2028-02-15'
   dataSrc: estimate
   h5Index: 77
   id: wsdm2028
@@ -104,6 +105,6 @@ wsdm2028:
   shortname: WSDM 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-08-08T11:59:00Z'
-    deadline: '2027-08-15T11:59:00Z'
-  title: ACM International Conference on Web Search and Data Mining
+  - abstractDeadline: '2027-08-12T11:59:59Z'
+    deadline: '2027-08-19T11:59:59Z'
+  title: International Conference on Web Search and Data Mining
