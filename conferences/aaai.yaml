@@ -84,22 +84,23 @@ aaai2026:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-26/
 aaai2027:
-  conferenceEndDate: '2027-01-25'
-  conferenceStartDate: '2027-01-20'
-  dataSrc: estimate
+  conferenceEndDate: '2027-02-23'
+  conferenceStartDate: '2027-02-16'
+  dataSrc: ccf-deadlines
   h5Index: 232
   id: aaai2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: AAAI 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-07-26T11:59:59Z'
-    deadline: '2026-08-02T11:59:59Z'
+  - abstractDeadline: '2026-07-21T11:59:59Z'
+    deadline: '2026-07-28T11:59:59Z'
   title: AAAI Conference on Artificial Intelligence
+  website: https://aaai.org/conference/aaai/aaai-27/
 aaai2028:
-  conferenceEndDate: '2028-01-25'
-  conferenceStartDate: '2028-01-20'
+  conferenceEndDate: '2028-02-21'
+  conferenceStartDate: '2028-02-16'
   dataSrc: estimate
   h5Index: 232
   id: aaai2028
@@ -108,6 +109,6 @@ aaai2028:
   shortname: AAAI 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-07-26T11:59:59Z'
-    deadline: '2027-08-02T11:59:59Z'
+  - abstractDeadline: '2027-07-21T11:59:59Z'
+    deadline: '2027-07-28T11:59:59Z'
   title: AAAI Conference on Artificial Intelligence
