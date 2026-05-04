@@ -54,7 +54,7 @@ interspeech2025:
   website: https://www.interspeech2025.org/home
 interspeech2026:
   conferenceEndDate: '2026-10-01'
-  conferenceStartDate: '2026-09-27'
+  conferenceStartDate: '2026-09-28'
   dataSrc: hf-repo
   id: interspeech2026
   isApproximateDeadline: false
