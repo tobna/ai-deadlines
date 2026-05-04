@@ -30,6 +30,9 @@ kdd2026:
   shortname: KDD 2026
   tags: *id001
   timeline:
+  - abstractDeadline: '2025-07-25T11:59:59Z'
+    deadline: '2025-08-01T11:59:59Z'
+    note: Paper submission (First Cycle)
   - abstractDeadline: '2026-02-02T11:59:59Z'
     deadline: '2026-02-09T11:59:59Z'
     note: Paper submission (Second Cycle)
