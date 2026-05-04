@@ -45,12 +45,12 @@ miccai2025:
     Intervention
   website: https://conferences.miccai.org/2025/en/default.asp
 miccai2026:
-  conferenceEndDate: '2026-10-08'
-  conferenceStartDate: '2026-10-04'
+  conferenceEndDate: '2026-10-01'
+  conferenceStartDate: '2026-09-27'
   dataSrc: hf-repo
   id: miccai2026
   isApproximateDeadline: false
-  location: ADNEC Centre Abu Dhabi
+  location: Strasbourg Convention Center
   rating: A
   shortname: MICCAI 2026
   tags: *id001
