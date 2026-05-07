@@ -6,9 +6,32 @@ robosoft2026:
   isApproximateDeadline: false
   location: Kanazawa, Japan
   shortname: RoboSoft 2026
-  tags:
+  tags: &id001
   - RO
   timeline:
   - deadline: '2025-11-15T23:59:59Z'
   timezone: America/Los_Angeles
   website: https://robosoft2026.sakura.ne.jp/robosoft-wp/wp-content/uploads/2025/05/robosoft2026-v1.pdf
+robosoft2027:
+  conferenceEndDate: '2027-04-09'
+  conferenceStartDate: '2027-04-05'
+  dataSrc: ninoduarte-git
+  id: robosoft2027
+  isApproximateDeadline: false
+  location: Kanazawa, Japan
+  shortname: RoboSoft 2027
+  tags: *id001
+  timeline:
+  - deadline: '2026-10-30T23:59:59Z'
+  timezone: America/Los_Angeles
+  website: https://www.robosoft27.org
+robosoft2028:
+  conferenceEndDate: '2028-04-09'
+  conferenceStartDate: '2028-04-04'
+  dataSrc: estimate
+  id: robosoft2028
+  isApproximateDeadline: true
+  shortname: RoboSoft 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-10-30T23:59:59Z'
