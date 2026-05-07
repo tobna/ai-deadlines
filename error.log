@@ -117,3 +117,5 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-04-14 15:21:29.707 | ERROR    | __main__:<module>:120 - no hf conferences found
 2026-04-14 15:21:44.859 | ERROR    | __main__:<module>:191 - ERROR while parsing ccf-deadlines: Expecting value: line 1 column 1 (char 0)
 2026-04-14 15:21:44.860 | ERROR    | __main__:<module>:195 - ERROR no ccf-conferences gotten
+2026-05-07 08:39:32.046 | ERROR    | __main__:<module>:153 - ERROR while parsing ninoduarte-git: Expecting value: line 86 column 1 (char 2465)
+2026-05-07 08:39:32.047 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
