@@ -1,6 +1,6 @@
 cvpr2022:
-  conferenceEndDate: '2022-06-24'
-  conferenceStartDate: '2022-06-19'
+  conferenceEndDate: "2022-06-24"
+  conferenceStartDate: "2022-06-19"
   dataSrc: ccf-deadlines
   h5Index: 450
   id: cvpr2022
@@ -8,17 +8,17 @@ cvpr2022:
   rating: A*
   shortname: CVPR 2022
   tags: &id001
-  - CV
-  - ML
-  - RO
+    - CV
+    - ML
+    - RO
   timeline:
-  - abstractDeadline: '2021-11-10T11:59:00Z'
-    deadline: '2021-11-17T11:59:00Z'
+    - abstractDeadline: "2021-11-10T11:59:00Z"
+      deadline: "2021-11-17T11:59:00Z"
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   website: http://cvpr2022.thecvf.com/
 cvpr2023:
-  conferenceEndDate: '2023-06-22'
-  conferenceStartDate: '2023-06-20'
+  conferenceEndDate: "2023-06-22"
+  conferenceStartDate: "2023-06-20"
   dataSrc: off-website
   h5Index: 450
   id: cvpr2023
@@ -27,13 +27,13 @@ cvpr2023:
   shortname: CVPR 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-11-05T06:59:00Z'
-    deadline: '2022-11-12T07:59:00Z'
+    - abstractDeadline: "2022-11-05T06:59:00Z"
+      deadline: "2022-11-12T07:59:00Z"
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2023/
 cvpr2024:
-  conferenceEndDate: '2024-06-21'
-  conferenceStartDate: '2024-06-19'
+  conferenceEndDate: "2024-06-21"
+  conferenceStartDate: "2024-06-19"
   dataSrc: off-website
   h5Index: 450
   id: cvpr2024
@@ -42,13 +42,13 @@ cvpr2024:
   shortname: CVPR 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-11-04T06:59:00Z'
-    deadline: '2023-11-18T07:59:00Z'
+    - abstractDeadline: "2023-11-04T06:59:00Z"
+      deadline: "2023-11-18T07:59:00Z"
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2024/
 cvpr2025:
-  conferenceEndDate: '2025-06-14'
-  conferenceStartDate: '2025-06-13'
+  conferenceEndDate: "2025-06-14"
+  conferenceStartDate: "2025-06-13"
   dataSrc: off-website
   h5Index: 450
   id: cvpr2025
@@ -58,14 +58,14 @@ cvpr2025:
   shortname: CVPR 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-11-08T07:59:00Z'
-    deadline: '2024-11-15T07:59:00Z'
+    - abstractDeadline: "2024-11-08T07:59:00Z"
+      deadline: "2024-11-15T07:59:00Z"
   timezone: UTC-8
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2025/
 cvpr2026:
-  conferenceEndDate: '2026-06-07'
-  conferenceStartDate: '2026-06-05'
+  conferenceEndDate: "2026-06-07"
+  conferenceStartDate: "2026-06-05"
   dataSrc: off-website
   h5Index: 450
   id: cvpr2026
@@ -75,35 +75,8 @@ cvpr2026:
   shortname: CVPR 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-11-08T11:59:59Z'
-    deadline: '2025-11-14T11:59:59Z'
+    - abstractDeadline: "2025-11-08T11:59:59Z"
+      deadline: "2025-11-14T11:59:59Z"
   timezone: UTC-12
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2026/
-cvpr2027:
-  conferenceEndDate: '2027-06-26'
-  conferenceStartDate: '2027-06-19'
-  dataSrc: ninoduarte-git
-  h5Index: 450
-  id: cvpr2027
-  isApproximateDeadline: false
-  location: Denver, USA
-  rating: A*
-  shortname: CVPR 2027
-  tags: *id001
-  timeline:
-  - deadline: '2026-11-13T23:59:59Z'
-  timezone: Etc/GMT+12
-  website: https://cvpr.thecvf.com/
-cvpr2028:
-  conferenceEndDate: '2028-06-23'
-  conferenceStartDate: '2028-06-18'
-  dataSrc: estimate
-  h5Index: 450
-  id: cvpr2028
-  isApproximateDeadline: true
-  rating: A*
-  shortname: CVPR 2028
-  tags: *id001
-  timeline:
-  - deadline: '2027-11-13T23:59:59Z'
