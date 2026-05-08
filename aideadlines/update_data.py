@@ -42,6 +42,9 @@ parser.add_argument("--write", default=True, action=argparse.BooleanOptionalActi
 parser.add_argument(
     "--reestimate", default=False, action=argparse.BooleanOptionalAction, help="Force reestimate all conferences"
 )
+parser.add_argument(
+    "--load-nino-data", default=False, action=argparse.BooleanOptionalAction, help="Load data from ninoduartes github"
+)
 args = parser.parse_args()
 
 
@@ -146,42 +149,45 @@ if args.online:
         else:
             conferences[id] = join_conferences(slave=hf_data, master=conferences[id])
 
-    logger.info("load nino duarte data", flush=True)
-    try:
-        nino_confs = get_nino_list()
-    except Exception as e:
-        logger.error(f"ERROR while parsing ninoduarte-git: {e}")
-        # write_error(f"Failed parsing ninoduarte-git: {e}")
-        nino_confs = []
-    if len(nino_confs) == 0:
-        logger.error("ERROR no ninoduarte-git conferences found")
-        # write_error("No ninoduarte-git conferences found")
-    for nino_conf in nino_confs:
-        nino_conf = parse_all_times(nino_conf)
-        id = nino_conf["id"].replace("nips", "neurips")
-        if id.startswith("wacv") and len(nino_conf["timeline"]) == 1:  # nino data only hase one deadline for WACV
-            deadline = dateparser.parse(nino_conf["timeline"][0]["deadline"])
-            if deadline is None:
-                logger.warning("Failed to parse deadline for NINO conference {}".format(id))
-                round = 2
-            else:
-                round = 1 if deadline.month <= 8 else 2
-            nino_conf["timeline"][0]["note"] = f"Round {round}"
-        if id not in conferences:
-            conferences[id] = nino_conf
-            conferences[id]["dataSrc"] = "ninoduarte-git"
-            logger.success(f"NEW CONFERENCE: {conferences[id]}")
-            reestimate_future_for_groups.append(id[:-4])
-        elif _SOURCES.index(conferences[id]["dataSrc"]) < _SOURCES.index("ninoduarte-git"):
-            if conferences[id]["dataSrc"] == "estimate":
-                logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
-                reestimate_future_for_groups.append(id[:-4])
+    if args.load_nino_data:
+        logger.info("load nino duarte data", flush=True)
+        try:
+            nino_confs = get_nino_list()
+        except Exception as e:
+            logger.error(f"ERROR while parsing ninoduarte-git: {e}")
+            # write_error(f"Failed parsing ninoduarte-git: {e}")
+            nino_confs = []
+        if len(nino_confs) == 0:
+            logger.error("ERROR no ninoduarte-git conferences found")
+            # write_error("No ninoduarte-git conferences found")
+        for nino_conf in nino_confs:
+            nino_conf = parse_all_times(nino_conf)
+            id = nino_conf["id"].replace("nips", "neurips")
+            if id.startswith("wacv") and len(nino_conf["timeline"]) == 1:  # nino data only hase one deadline for WACV
+                deadline = dateparser.parse(nino_conf["timeline"][0]["deadline"])
+                if deadline is None:
+                    logger.warning("Failed to parse deadline for NINO conference {}".format(id))
+                    round = 2
+                else:
+                    round = 1 if deadline.month <= 8 else 2
+                nino_conf["timeline"][0]["note"] = f"Round {round}"
+            if id not in conferences:
                 conferences[id] = nino_conf
+                conferences[id]["dataSrc"] = "ninoduarte-git"
+                logger.success(f"NEW CONFERENCE: {conferences[id]}")
+                reestimate_future_for_groups.append(id[:-4])
+            elif _SOURCES.index(conferences[id]["dataSrc"]) < _SOURCES.index("ninoduarte-git"):
+                if conferences[id]["dataSrc"] == "estimate":
+                    logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[id]}")
+                    reestimate_future_for_groups.append(id[:-4])
+                    conferences[id] = nino_conf
+                else:
+                    conferences[id] = join_conferences(slave=conferences[id], master=nino_conf)
+                conferences[id]["dataSrc"] = "ninoduarte-git"
             else:
-                conferences[id] = join_conferences(slave=conferences[id], master=nino_conf)
-            conferences[id]["dataSrc"] = "ninoduarte-git"
+                conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
         else:
-            conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
+            logger.info("skipping ninoduarte-git (not that reliable)")
 
     logger.info("load ccf-deadlines")
     try:
