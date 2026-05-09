@@ -48,7 +48,7 @@ iconip2026:
   shortname: ICONIP 2026
   tags: *id001
   timeline:
-  - deadline: '2026-05-11T11:59:59Z'
+  - deadline: '2026-06-01T11:59:59Z'
   title: International Conference on Neural Information Processing
   website: https://www.iconip2026.org/
 iconip2027:
