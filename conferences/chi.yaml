@@ -48,21 +48,21 @@ chi2026:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2026.acm.org/
 chi2027:
-  conferenceEndDate: '2027-04-18'
-  conferenceStartDate: '2027-04-13'
-  dataSrc: estimate
+  conferenceEndDate: '2027-05-14'
+  conferenceStartDate: '2027-05-10'
+  dataSrc: ccf-deadlines
   id: chi2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: CHI 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-09-05T11:59:59Z'
-    deadline: '2026-09-12T11:59:59Z'
-  title: The ACM Conference on Human Factors in Computing Systems
+  - deadline: '2026-09-11T11:59:59Z'
+  title: ACM Conference on Human Factors in Computing Systems
+  website: https://chi2027.acm.org/
 chi2028:
-  conferenceEndDate: '2028-04-17'
-  conferenceStartDate: '2028-04-12'
+  conferenceEndDate: '2028-05-14'
+  conferenceStartDate: '2028-05-09'
   dataSrc: estimate
   id: chi2028
   isApproximateDeadline: true
@@ -70,6 +70,5 @@ chi2028:
   shortname: CHI 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-09-05T11:59:59Z'
-    deadline: '2027-09-12T11:59:59Z'
-  title: The ACM Conference on Human Factors in Computing Systems
+  - deadline: '2027-09-11T11:59:59Z'
+  title: ACM Conference on Human Factors in Computing Systems
