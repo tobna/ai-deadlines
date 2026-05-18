@@ -1,751 +1,753 @@
-// --- DOM Elements ---
-const conferenceGrid = document.getElementById('conferenceGrid');
-const tagFilterContainer = document.getElementById('tagFilterContainer');
-const showPastToggle = document.getElementById('showPastToggle');
-const showApproxFutureToggle = document.getElementById('showApproxFutureToggle');
-const minH5IndexInput = document.getElementById('minH5Index');
-const minRatingSelect = document.getElementById('minRating');
-const conferenceNameFilterInput = document.getElementById('conferenceNameFilter');
-const currentYearSpan = document.getElementById('currentYear');
-const themeToggle = document.getElementById('themeToggle');
+/* ============================================================
+   AI Conference Deadlines — Main Script
+   ============================================================ */
 
-const messageModal = document.getElementById('messageModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalMessage = document.getElementById('modalMessage');
-const closeModalButton = document.getElementById('closeModalButton');
-const loadingState = document.getElementById('loadingState');
-const filterToggle = document.getElementById('filterToggle');
-const filterControls = document.getElementById('filterControls');
+// --- Constants ---
+const TIERS = { 'A*': 0, 'A': 1, 'B': 2, 'C': 3, 'D': 4 };
+const TIER_COLORS = ['#d4a017', '#0d9488', '#3a6fb8', '#9a6a40', '#5a5a64'];
+const RATING_OPTIONS = ['All', 'A*', 'A', 'B', 'C', 'D'];
+const DAY = 86400000;
 
-// --- Theme Management ---
-function getThemePreference() {
-  const storedTheme = localStorage.getItem('theme');
-  if (storedTheme) {
-    return storedTheme;
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+function tierColor(rating) {
+  const idx = TIERS[rating];
+  return idx != null ? TIER_COLORS[idx] : null;
 }
 
-function setTheme(theme) {
-  if (theme === 'dark') {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-  localStorage.setItem('theme', theme);
-}
+function pad2(n) { return String(Math.floor(n)).padStart(2, '0'); }
 
-function initTheme() {
-  const preferredTheme = getThemePreference();
-  setTheme(preferredTheme);
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-      setTheme(e.matches ? 'dark' : 'light');
-    }
-  });
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    setTheme(isDark ? 'light' : 'dark');
-  });
+function urgencyOf(msLeft) {
+  const days = msLeft / DAY;
+  if (days < 7)  return 'urgent';
+  if (days < 30) return 'soon';
+  return 'normal';
 }
 
 // --- Application State ---
-let upcomingConferencesData = [];
-let archiveConferencesData = null;
-
-let currentFilterSettings = {
-  selectedTags: new Set(["ALL"]),
-  showPast: false,
-  showApproxFuture: true,
-  minH5: null,
-  minRating: "",
-  nameFilter: ""
+const state = {
+  upcoming: [],
+  archive: null,
+  filter: {
+    q: '',
+    tags: [],        // empty = all
+    minRating: 'C',
+    showPast: false,
+    showEstimated: true,
+  },
+  timers: new Map(), // confId → intervalId
 };
 
-const ratingOrder = { "A*": 5, "A": 4, "B": 3, "C": 2, "D": 1 };
-
-// --- Utility Functions ---
-function showModal(title, msg) {
-  if (modalTitle && modalMessage && messageModal && closeModalButton) {
-    modalTitle.textContent = title;
-    modalMessage.textContent = msg;
-    messageModal.classList.remove('hidden');
-    messageModal.classList.add('opacity-100');
-  } else {
-    console.error("Modal elements not found. Message:", title, msg);
-    alert(`${title}\n${msg}`);
-  }
+// --- Theme Management ---
+function getThemePref() {
+  const stored = localStorage.getItem('theme');
+  if (stored) return stored;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-if (closeModalButton) {
-  closeModalButton.addEventListener('click', () => {
-    if (messageModal) {
-      messageModal.classList.add('hidden');
-      messageModal.classList.remove('opacity-100');
+function applyTheme(theme) {
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+  localStorage.setItem('theme', theme);
+  // Update sun/moon icon visibility
+  const sunIcon  = document.getElementById('sunIcon');
+  const moonIcon = document.getElementById('moonIcon');
+  if (sunIcon)  sunIcon.style.display  = theme === 'dark' ? 'block' : 'none';
+  if (moonIcon) moonIcon.style.display = theme === 'dark' ? 'none'  : 'block';
+}
+
+// --- Filtering ---
+function applyFilter(list) {
+  const f = state.filter;
+  const now = Date.now();
+  return list.filter(conf => {
+    const deadline = conf.deadline ? new Date(conf.deadline).getTime() : null;
+    const isPast = !conf.isApproximateDeadline && deadline && deadline < now;
+    if (!f.showPast && isPast) return false;
+    if (conf.isApproximateDeadline && deadline && deadline < now) return false;
+    if (!f.showEstimated && conf.isApproximateDeadline) return false;
+
+    if (f.minRating !== 'All') {
+      const ct = TIERS[conf.rating];
+      if (ct == null) return false;
+      const minT = TIERS[f.minRating] ?? 99;
+      if (ct > minT) return false;
     }
+
+    if (f.tags.length) {
+      const ct = conf.tags || [];
+      if (!f.tags.some(tag => ct.includes(tag))) return false;
+    }
+
+    if (f.q) {
+      const q = f.q.toLowerCase();
+      const hay = ((conf.shortname || '') + ' ' + (conf.title || '')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+
+    return true;
   });
 }
 
-// --- Countdown Logic ---
-function getUrgencyClass(timeLeft) {
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  if (days < 1) return 'countdown-urgent-critical';
-  if (days < 7) return 'countdown-urgent-soon';
-  return '';
+function sortConferences(list) {
+  return list.slice().sort((a, b) => {
+    const aDeadline = a.deadline ? new Date(a.deadline).getTime() : Infinity;
+    const bDeadline = b.deadline ? new Date(b.deadline).getTime() : Infinity;
+    return aDeadline - bDeadline;
+  });
 }
 
-function getUrgencyBadge(conference) {
-  const eventDate = new Date(conference.deadline).getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-
-  if (timeLeft <= 0) return '';
-  if (days < 1) return '<span class="urgency-badge critical mt-auto">Less than 24h</span>';
-  if (days < 7) return '<span class="urgency-badge soon mt-auto">Due Soon</span>';
-  if (days < 30) return '<span class="urgency-badge upcoming mt-auto">This Month</span>';
-  return '';
+function getConferenceList() {
+  let base = [...state.upcoming];
+  if (state.filter.showPast && state.archive) base = base.concat(state.archive);
+  return sortConferences(applyFilter(base));
 }
 
-function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApproximate = false, urgencyClass = '') {
-  const countdownElement = document.getElementById(countdownElementId);
-  if (!countdownElement) return;
+function allConferences() {
+  let base = [...state.upcoming];
+  if (state.archive) base = base.concat(state.archive);
+  return base;
+}
 
-  const eventDate = new Date(targetDateStr).getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
+// --- Card Rendering ---
+function parseAcronymYear(conf) {
+  const shortname = conf.shortname || conf.title || '';
+  const m = shortname.match(/^(.*?)\s+(\d{4})$/);
+  if (m) return { acronym: m[1], year: m[2] };
+  // fallback: year from deadline
+  const yr = conf.deadline ? new Date(conf.deadline).getFullYear() : '';
+  return { acronym: shortname, year: yr };
+}
 
-  if (timeLeft <= 0) {
-    const passedLabel = isApproximate ? `${label} (Approx.) Passed` : `${label} Passed`;
-    countdownElement.innerHTML = `
-            <div class="ended-banner w-full text-center py-2 px-3 rounded-md text-md font-semibold">
-                ${passedLabel}
-            </div>`;
-    return;
+function formatDeadlineFull(isoStr, timezone) {
+  if (!isoStr) return '';
+  const d = new Date(isoStr);
+  const opts = { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
+  if (timezone) opts.timeZone = timezone;
+  try {
+    return d.toLocaleString('en-US', opts);
+  } catch {
+    return d.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+  }
+}
+
+function formatDateShort(isoStr) {
+  if (!isoStr) return '';
+  const d = new Date(isoStr.includes('T') ? isoStr : isoStr + 'T00:00:00Z');
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+
+function formatConfDates(conf) {
+  if (!conf.conferenceStartDate) return '';
+  const isApprox = conf.isApproximateDeadline;
+  const opts = isApprox
+    ? { year: 'numeric', month: 'short', timeZone: 'UTC' }
+    : { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' };
+  const start = new Date(conf.conferenceStartDate + (conf.conferenceStartDate.includes('T') ? '' : 'T00:00:00Z'));
+  let str = (isApprox ? '~' : '') + start.toLocaleDateString('en-US', opts);
+  if (conf.conferenceEndDate && conf.conferenceEndDate !== conf.conferenceStartDate) {
+    const end = new Date(conf.conferenceEndDate + (conf.conferenceEndDate.includes('T') ? '' : 'T00:00:00Z'));
+    str += ' — ' + (isApprox ? '~' : '') + end.toLocaleDateString('en-US', opts);
+  }
+  return str;
+}
+
+function countdownTilesHTML(ms, color) {
+  const days = Math.floor(ms / DAY);
+  const hrs  = Math.floor((ms % DAY) / 3600000);
+  const mins = Math.floor((ms % 3600000) / 60000);
+  const secs = Math.floor((ms % 60000) / 1000);
+  const tiles = [
+    { v: pad2(days), u: 'days' },
+    { v: pad2(hrs),  u: 'hrs'  },
+    { v: pad2(mins), u: 'min'  },
+    { v: pad2(secs), u: 'sec'  },
+  ];
+  return tiles.map(t =>
+    `<div class="count-tile" style="color:${color}">
+       <div class="count-value">${t.v}</div>
+       <div class="count-unit">${t.u}</div>
+     </div>`
+  ).join('');
+}
+
+function updateCountdown(conf, cardEl) {
+  const tilesEl    = cardEl.querySelector('.countdown-tiles');
+  const chipEl     = cardEl.querySelector('.urgency-chip');
+  const abstractEl = cardEl.querySelector('.abstract-countdown');
+
+  const now        = Date.now();
+  const deadline   = new Date(conf.deadline).getTime();
+  const ms         = Math.max(0, deadline - now);
+  const u          = urgencyOf(ms);
+  const urgColors  = { urgent: 'var(--urgent)', soon: 'var(--soon)', normal: 'var(--normal)' };
+  const color      = urgColors[u];
+
+  if (tilesEl) {
+    tilesEl.innerHTML = countdownTilesHTML(ms, color);
   }
 
-  const numberColorClass = urgencyClass
-    ? (urgencyClass === 'countdown-urgent-critical' ? 'text-red-600 dark:text-red-400' : 'text-amber-600 dark:text-amber-400')
-    : 'text-pink-600 dark:text-pink-400';
+  if (chipEl) {
+    const labels = { urgent: '<7d', soon: '<30d', normal: 'later' };
+    chipEl.style.color = color;
+    chipEl.querySelector('.urgency-dot').style.background = color;
+    chipEl.querySelector('.urgency-label').textContent = labels[u];
+  }
 
-  if (isApproximate) {
-    const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    let approxDaysText;
-    if (daysLeft < 0) {
-      approxDaysText = "Passed";
-    } else if (daysLeft < 10) {
-      approxDaysText = "<10 days";
+  // Abstract countdown
+  if (abstractEl && conf.abstractDeadline) {
+    const abDeadline = new Date(conf.abstractDeadline).getTime();
+    const abMs = Math.max(0, abDeadline - now);
+    if (abMs > 0) {
+      const abDays = Math.floor(abMs / DAY);
+      const abHrs  = Math.floor((abMs % DAY) / 3600000);
+      const abMins = Math.floor((abMs % 3600000) / 60000);
+      abstractEl.textContent = `${abDays}d ${pad2(abHrs)}h ${pad2(abMins)}m`;
     } else {
-      approxDaysText = `~${String(Math.round(daysLeft / 10) * 10)} days`;
-    }
-    countdownElement.innerHTML = `
-            <div class="countdown-label">${label}:</div>
-            <div class="text-lg sm:text-xl lg:text-2xl font-bold ${numberColorClass} text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                ${approxDaysText}
-            </div>
-        `;
-  } else {
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    countdownElement.innerHTML = `
-            <div class="countdown-label">${label} In:</div>
-            <div class="flex justify-around space-x-1 sm:space-x-2 ${urgencyClass}">
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(days).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Days</div>
-                </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(hours).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Hours</div>
-                </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(minutes).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Minutes</div>
-                </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(seconds).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Seconds</div>
-                </div>
-            </div>
-        `;
-  }
-}
-
-function updateSmallCountdown(targetDateStr, countdownElementId, label) {
-  const countdownElement = document.getElementById(countdownElementId);
-  if (!countdownElement) return;
-
-  const eventDate = new Date(targetDateStr).getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
-
-  if (timeLeft <= 0) {
-    countdownElement.innerHTML = `
-            <div class="ended-banner w-full text-center py-1 px-2 rounded-md text-sm font-semibold bg-gray-600">
-                ${label} Passed
-            </div>`;
-    return;
-  }
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-  countdownElement.innerHTML = `
-        <div class="flex items-center justify-between w-full">
-            <span class="countdown-label text-xs text-gray-500 dark:text-gray-400 leading-none mt-1">${label}:</span>
-            <div class="flex space-x-2 sm:space-x-3">
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(days).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">d</span></span>
-                </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(hours).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">h</span></span>
-                </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(minutes).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">m</span></span>
-                </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(seconds).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">s</span></span>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-// --- Format Date Helper ---
-function formatDate(dateString, formattingOptions = {}) {
-  if (!dateString) return 'N/A';
-
-  // Create a Date object. Assumes dateString is ISO 8601 UTC (ends with Z) or includes offset.
-  // For date-only strings (conference start/end), append 'T00:00:00Z' to treat as UTC start of day.
-  const date = new Date(
-    (dateString.includes('T') || dateString.endsWith('Z'))
-      ? dateString
-      : dateString + 'T00:00:00Z'
-  );
-
-  let effectiveOptions = {};
-
-  // Determine the timezone for display.
-  // If displayTimezoneIana is provided, use it. Otherwise, default to UTC for display.
-  effectiveOptions.timeZone = formattingOptions.displayTimezoneIana || 'UTC';
-
-  if (formattingOptions.monthYearOnly) {
-    effectiveOptions.year = 'numeric';
-    effectiveOptions.month = 'short';
-  } else {
-    effectiveOptions.year = 'numeric';
-    effectiveOptions.month = 'short';
-    effectiveOptions.day = 'numeric';
-    if (formattingOptions.includeTime) {
-      effectiveOptions.hour = '2-digit';
-      effectiveOptions.minute = '2-digit';
-      if (formattingOptions.includeTimezoneName) {
-        effectiveOptions.timeZoneName = 'short';
+      // Abstract deadline passed — update the whole row
+      const row = cardEl.querySelector('.abstract-row');
+      if (row) {
+        row.innerHTML = `
+          <span class="abstract-status passed">✓</span>
+          <span class="abstract-text">Abstract passed</span>
+          <span class="abstract-date">${formatDateShort(conf.abstractDeadline)}</span>`;
       }
     }
   }
-  return date.toLocaleDateString(undefined, effectiveOptions);
 }
 
+function createCard(conf) {
+  const now = Date.now();
+  const deadline = conf.deadline ? new Date(conf.deadline).getTime() : null;
+  const isApprox = conf.isApproximateDeadline || false;
+  const isPast = !isApprox && deadline && deadline < now;
 
-// --- Create Conference Cards ---
-function createConferenceCard(conference) {
-  const card = document.createElement('div');
-  card.id = `card-${conference.id}`;
-  card.className = 'card-gradient p-6 rounded-xl shadow-2xl flex flex-col justify-between transform hover:scale-[1.02] transition-transform duration-300';
-  card.tabIndex = 0;
+  const { acronym, year } = parseAcronymYear(conf);
+  const tc = tierColor(conf.rating);
+  const hairlineColor = tc || 'var(--text-dim)';
+  const hairlineOpacity = tc ? '0.95' : '0.35';
 
-  const isApprox = conference.isApproximateDeadline || false;
-  const approxDateFormatting = { monthYearOnly: true, displayTimezoneIana: conference.timezone || 'UTC' };
-  const preciseDeadlineFormat = { includeTime: true, includeTimezoneName: true, displayTimezoneIana: conference.timezone || 'UTC' };
-  const conferenceDayFormat = { displayTimezoneIana: conference.timezone || 'UTC' }; // Display conference days in its timezone or UTC
+  // Urgency for live countdowns
+  const ms = deadline ? Math.max(0, deadline - now) : 0;
+  const u = (isApprox || isPast) ? 'normal' : urgencyOf(ms);
+  const urgColors = { urgent: 'var(--urgent)', soon: 'var(--soon)', normal: 'var(--normal)' };
+  const urgColor = urgColors[u];
+  const urgLabels = { urgent: '<7d', soon: '<30d', normal: 'later' };
 
-  let metaInfoHTML = '<div class="conference-meta-info">';
-  let hasMeta = false;
-  if (conference.rating) {
-    metaInfoHTML += `<span><span class="label">Rating:</span> ${conference.rating}</span>`;
-    hasMeta = true;
+  // Build hairline style
+  const hairlineStyle = `background:${hairlineColor};opacity:${hairlineOpacity};`;
+
+  // Ribbon
+  const ribbonHTML = conf.rating && tc
+    ? `<div class="card-ribbon" style="background:${tc}">${conf.rating}</div>`
+    : '';
+
+  // Badges
+  let badges = '';
+  if (isApprox) badges += `<span class="card-badge estimated">estimated</span>`;
+  if (isPast)   badges += `<span class="card-badge closed">closed</span>`;
+
+  // Meta row
+  let metaHTML = '';
+  const confDates = formatConfDates(conf);
+  if (conf.location) {
+    metaHTML += `<span class="meta-item">
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 11s4-3.5 4-7a4 4 0 10-8 0c0 3.5 4 7 4 7z"/><circle cx="6" cy="4" r="1.4"/></svg>
+      ${conf.location}</span>`;
   }
-  if (conference.h5Index !== undefined) {
-    metaInfoHTML += `<span><span class="label">h5-index:</span> ${conference.h5Index}</span>`;
-    hasMeta = true;
+  if (confDates) {
+    metaHTML += `<span class="meta-item">
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="2.5" width="9" height="8" rx="1"/><path d="M1.5 5h9M4 1.5v2M8 1.5v2"/></svg>
+      ${confDates}</span>`;
   }
-  metaInfoHTML += '</div>';
-  if (!hasMeta) metaInfoHTML = '';
-
-  let placeInfo = '';
-  if (conference.location) {
-    placeInfo = `<p class="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
-                            <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.002-.001L10 18.43l-5.192-5.192a6.875 6.875 0 010-9.719l.001-.001c2.7-2.7 7.075-2.7 9.774 0l.001.001a6.875 6.875 0 010 9.719L10 18.43zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
-                        ${conference.location}
-                    </p>`;
+  if (conf.h5Index != null) {
+    metaHTML += `<span class="meta-item"><span class="h5-label">h5</span>${conf.h5Index}</span>`;
   }
 
-  let conferenceDateText;
-  const confStartFormat = isApprox ? approxDateFormatting : conferenceDayFormat;
-  if (isApprox) {
-    conferenceDateText = `Dates: ~${formatDate(conference.conferenceStartDate, confStartFormat)}`;
+  // Tags
+  const tagsHTML = (conf.tags && conf.tags.length)
+    ? `<div class="card-tags">${conf.tags.map(t => `<span class="conf-tag">${t}</span>`).join('')}</div>`
+    : '';
+
+  // Note
+  const noteHTML = conf.note
+    ? `<div class="card-note">${escHtml(conf.note)}</div>`
+    : '';
+
+  // Countdown / deadline section
+  let countdownContent = '';
+  let urgencyChipHTML = '';
+
+  if (isPast) {
+    const daysAgo = Math.round((now - deadline) / DAY);
+    const pastDateStr = new Date(deadline).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    countdownContent = `<div class="past-deadline">
+      <span class="past-date">${pastDateStr}</span>
+      <span class="past-ago"> · ${daysAgo} day${daysAgo !== 1 ? 's' : ''} ago</span>
+    </div>`;
+  } else if (isApprox) {
+    const rawDays = deadline ? Math.max(0, Math.floor((deadline - now) / DAY)) : 0;
+    const displayDays = rawDays < 10 ? rawDays : Math.round(rawDays / 10) * 10;
+    countdownContent = `<div class="approx-countdown">
+      <span class="approx-tilde">~</span>
+      <span class="approx-days">${displayDays}</span>
+      <span class="approx-unit">days</span>
+    </div>`;
   } else {
-    conferenceDateText = `Dates: ${formatDate(conference.conferenceStartDate, confStartFormat)}`;
-    if (conference.conferenceEndDate && conference.conferenceEndDate !== conference.conferenceStartDate) {
-      const confEndFormat = isApprox ? approxDateFormatting : conferenceDayFormat;
-      conferenceDateText += ` - ${isApprox ? '~' : ''}${formatDate(conference.conferenceEndDate, confEndFormat)}`;
+    urgencyChipHTML = `<span class="urgency-chip" style="color:${urgColor}">
+      <span class="urgency-dot" style="background:${urgColor}"></span>
+      <span class="urgency-label">${urgLabels[u]}</span>
+    </span>`;
+    countdownContent = `<div class="countdown-tiles">${countdownTilesHTML(ms, urgColor)}</div>`;
+  }
+
+  const deadlineLabelText = isPast ? 'Submission closed'
+    : isApprox ? 'Submission in (estimated)'
+    : 'Submission closes in';
+
+  let deadlineDateHTML = '';
+  if (!isPast && conf.deadline) {
+    const dateStr = isApprox
+      ? `~ ${new Date(conf.deadline).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })} · estimated from past trends`
+      : formatDeadlineFull(conf.deadline, conf.timezone);
+    deadlineDateHTML = `<div class="deadline-date">${dateStr}</div>`;
+  }
+
+  // Abstract row
+  let abstractHTML = '';
+  if (conf.abstractDeadline) {
+    const abDeadline = new Date(conf.abstractDeadline).getTime();
+    const abPast = abDeadline < now;
+    const abDateStr = formatDateShort(conf.abstractDeadline);
+
+    if (abPast) {
+      abstractHTML = `<div class="abstract-row">
+        <span class="abstract-status passed">✓</span>
+        <span class="abstract-text">Abstract passed</span>
+        <span class="abstract-date">${abDateStr}</span>
+      </div>`;
+    } else {
+      const abMs = abDeadline - now;
+      const abDays = Math.floor(abMs / DAY);
+      const abHrs  = Math.floor((abMs % DAY) / 3600000);
+      const abMins = Math.floor((abMs % 3600000) / 60000);
+      abstractHTML = `<div class="abstract-row">
+        <span class="abstract-status pending"></span>
+        <span class="abstract-text">Abstract in</span>
+        <span class="abstract-countdown">${abDays}d ${pad2(abHrs)}h ${pad2(abMins)}m</span>
+        <span class="abstract-date">${abDateStr}</span>
+      </div>`;
     }
   }
 
-  const conferenceDatesHTML = `
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
-                <path fill-rule="evenodd" d="M5.75 3A2.25 2.25 0 003.5 5.25v9.5A2.25 2.25 0 005.75 17h8.5A2.25 2.25 0 0016.5 14.75v-9.5A2.25 2.25 0 0014.25 3h-8.5zM5 5.25c0-.414.336-.75.75-.75h8.5c.414 0 .75.336.75.75v9.5c0 .414-.336.75-.75.75h-8.5a.75.75 0 01-.75-.75v-9.5z" clip-rule="evenodd" />
-                <path fill-rule="evenodd" d="M10 7a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 0110 7zM5 1a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H5.75A.75.75 0 015 1zm8.5 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-            </svg>
-            ${conferenceDateText}
-        </p>`;
-
-  let noteInfo = '';
-  if (conference.note) {
-    noteInfo = `<p class="text-gray-600 dark:text-gray-300 text-sm mt-2 mb-1 leading-relaxed">${conference.note}</p>`;
+  // Visit link
+  let visitHTML = '';
+  if (conf.website && !isApprox) {
+    visitHTML = `<a href="${escHtml(conf.website)}" class="visit-link" target="_blank" rel="noopener noreferrer">
+      Visit site
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h7M5.5 2.5L9 6l-3.5 3.5"/></svg>
+    </a>`;
   }
 
-  const urgencyBadge = getUrgencyBadge(conference);
+  const article = document.createElement('article');
+  article.className = `conf-card${isApprox ? ' is-approx' : ''}${isPast ? ' is-past' : ''}`;
+  article.id = `card-${conf.id}`;
+  article.innerHTML = `
+    <div class="card-hairline" style="${hairlineStyle}"></div>
+    ${ribbonHTML}
+    <div class="card-head">
+      <div class="card-acronym-row">
+        <span class="card-acronym">${escHtml(acronym)}</span>
+        <span class="card-year">${year}</span>
+        ${badges}
+      </div>
+      <div class="card-name">${escHtml(conf.title || '')}</div>
+    </div>
+    ${metaHTML ? `<div class="card-meta">${metaHTML}</div>` : ''}
+    ${tagsHTML}
+    ${noteHTML}
+    <div class="card-deadline">
+      <div class="deadline-header">
+        <span class="deadline-label">${deadlineLabelText}</span>
+        ${urgencyChipHTML}
+      </div>
+      ${countdownContent}
+      ${deadlineDateHTML}
+    </div>
+    ${abstractHTML}
+    ${visitHTML}
+  `;
 
-  let tagsHTML = '';
-  if (conference.tags && conference.tags.length > 0) {
-    tagsHTML = '<div class="mt-3 mb-2 flex flex-wrap">';
-    conference.tags.forEach(tag => {
-      tagsHTML += `<span class="conference-tag">${tag}</span>`;
+  return article;
+}
+
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// --- Rendering ---
+function clearTimers() {
+  state.timers.forEach(id => clearInterval(id));
+  state.timers.clear();
+}
+
+function render() {
+  const grid = document.getElementById('conferenceGrid');
+  if (!grid) return;
+
+  clearTimers();
+  grid.innerHTML = '';
+
+  const confs = getConferenceList();
+  updateCounts(confs.length);
+
+  const scrollBtn = document.getElementById('scrollToNowBtn');
+
+  if (confs.length === 0) {
+    grid.innerHTML = `<div class="empty-state">No conferences match. Try adjusting your filters.</div>`;
+    if (scrollBtn) scrollBtn.hidden = true;
+    return;
+  }
+
+  const now = Date.now();
+
+  // Find where past conferences start (past ones have earlier deadlines, so they come first in ascending sort)
+  let dividerInserted = false;
+  let hasPast = false;
+
+  confs.forEach((conf, i) => {
+    const deadline = conf.deadline ? new Date(conf.deadline).getTime() : null;
+    const isPast = !conf.isApproximateDeadline && deadline && deadline < now;
+
+    // Insert divider at the boundary: first future conference after past ones
+    if (!dividerInserted && !isPast && i > 0) {
+      const prevDeadline = confs[i - 1].deadline ? new Date(confs[i - 1].deadline).getTime() : null;
+      const prevIsPast = !confs[i - 1].isApproximateDeadline && prevDeadline && prevDeadline < now;
+      if (prevIsPast) {
+        const divider = document.createElement('div');
+        divider.id = 'now-divider';
+        divider.className = 'now-divider';
+        divider.textContent = 'Now';
+        grid.appendChild(divider);
+        dividerInserted = true;
+      }
+    }
+
+    if (isPast) hasPast = true;
+
+    const card = createCard(conf);
+    grid.appendChild(card);
+
+    if (!conf.isApproximateDeadline && !isPast && deadline) {
+      const id = setInterval(() => updateCountdown(conf, card), 1000);
+      state.timers.set(conf.id, id);
+    }
+  });
+
+  // Show/hide the jump button
+  if (scrollBtn) {
+    scrollBtn.hidden = !hasPast;
+  }
+}
+
+function updateCounts(filtered) {
+  const total = allConferences().length;
+  const el = document.getElementById('filteredCount');
+  const totalEl = document.getElementById('totalCount');
+  if (el) el.textContent = filtered;
+  if (totalEl) totalEl.textContent = ` / ${total}`;
+
+
+  // Also update sheet counts
+  const sf = document.getElementById('sheetFilteredCount');
+  const st = document.getElementById('sheetTotalCount');
+  if (sf) sf.textContent = filtered;
+  if (st) st.textContent = total;
+}
+
+// --- Filter UI ---
+function buildRatingSegments(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = RATING_OPTIONS.map(opt => {
+    const active = opt === state.filter.minRating;
+    return `<button class="segment-btn${active ? ' active' : ''}" data-rating="${opt}">${opt}</button>`;
+  }).join('');
+  el.querySelectorAll('.segment-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.filter.minRating = btn.dataset.rating;
+      syncFiltersToUI();
+      render();
     });
-    if (urgencyBadge) {
-      tagsHTML += urgencyBadge;
-    }
-    tagsHTML += '</div>';
-  } else if (urgencyBadge) {
-    tagsHTML = `<div class="mt-3 mb-2 flex flex-wrap">${urgencyBadge}</div>`;
-  }
-
-  const mainDeadlineCountdownHTML = `<div id="countdown-deadline-${conference.id}" class="deadline-section${conference.abstractDeadline ? '' : ' mb-auto'}"></div>`;
-  const deadlineLabelText = isApprox ? "Approx. Full Paper Submission" : "Full Paper Submission";
-  const deadlineDateTextSuffix = isApprox ? " (Approx.)" : "";
-
-  const mainDeadlineFormatOptions = isApprox
-    ? approxDateFormatting
-    : preciseDeadlineFormat;
-  const mainDeadlineText = isApprox
-    ? `~${formatDate(conference.deadline, mainDeadlineFormatOptions)}`
-    : formatDate(conference.deadline, mainDeadlineFormatOptions);
-  const mainDeadlineTextHTML = `<p class="deadline-date-text${conference.abstractDeadline ? '' : ' mb-auto'}">Deadline: ${mainDeadlineText}${deadlineDateTextSuffix}</p>`;
-
-  let abstractDeadlineSectionHTML = '';
-  if (conference.abstractDeadline) {
-    const abstractFormatOptions = isApprox ? approxDateFormatting : preciseDeadlineFormat;
-    const abstractDateText = isApprox
-      ? `~${formatDate(conference.abstractDeadline, abstractFormatOptions)}`
-      : formatDate(conference.abstractDeadline, abstractFormatOptions);
-    const abstractSuffix = isApprox ? " (Approx.)" : "";
-
-    const mainPassed = !isApprox && new Date(conference.deadline).getTime() < new Date().getTime();
-    const abstractStillOpen = mainPassed && new Date(conference.abstractDeadline).getTime() > new Date().getTime();
-
-    if (abstractStillOpen) {
-      abstractDeadlineSectionHTML = `<div class="mt-2"> 
-                                            <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
-                                            <p class="deadline-date-text text-sm text-pink-600 dark:text-pink-300">Abstract: ${abstractDateText}${abstractSuffix}</p>
-                                       </div>`;
-    } else {
-      abstractDeadlineSectionHTML = `<div class="mt-2"> 
-                                            <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
-                                            <p class="deadline-date-text text-sm">Abstract Deadline: ${abstractDateText}${abstractSuffix}</p>
-                                       </div>`;
-    }
-  } else {
-    abstractDeadlineSectionHTML = '';
-  }
-
-  let websiteLinkHTML;
-  if (isApprox) {
-    websiteLinkHTML = `
-        <a href="#" 
-           class="block w-full mt-4 bg-gray-500 text-gray-300 font-semibold text-center py-3 px-4 rounded-lg cursor-not-allowed opacity-70 shadow-md">
-            Visit Conference Site
-        </a>`;
-  } else if (!conference.website) {
-    websiteLinkHTML = `
-        <a href="#" 
-           class="block w-full mt-4 bg-gray-400 text-gray-200 font-semibold text-center py-3 px-4 rounded-lg cursor-not-allowed opacity-60 shadow-md">
-            Site Not Available
-        </a>`;
-  } else {
-    websiteLinkHTML = `
-        <a href="${conference.website}" target="_blank" rel="noopener noreferrer"
-           class="block w-full mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold text-center py-3 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg">
-            Visit Conference Site
-        </a>`;
-  }
-
-  let titleHTML = '';
-  if (conference.title && conference.shortname) {
-    titleHTML = `
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.title} (${conference.shortname})</h2>`
-  } else if (conference.title) {
-    titleHTML = `
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.title}</h2>`
-  } else if (conference.shortname) {
-    titleHTML = `
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.shortname}</h2>`
-  }
-
-  card.innerHTML = `
-        <div>
-            ${titleHTML}
-            ${metaInfoHTML}
-            ${placeInfo}
-            ${conferenceDatesHTML}
-            ${noteInfo}
-            ${tagsHTML}
-        </div>
-        <div class="mt-auto">
-            ${mainDeadlineCountdownHTML}
-            ${mainDeadlineTextHTML}
-            ${abstractDeadlineSectionHTML}
-            ${websiteLinkHTML}
-        </div>
-    `;
-  conferenceGrid.appendChild(card);
-
-  const eventDate = new Date(conference.deadline).getTime();
-  const now = new Date().getTime();
-  const urgencyClass = !isApprox ? getUrgencyClass(eventDate - now) : '';
-
-  updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, isApprox, urgencyClass);
-
-  if (conference.abstractDeadline && !isApprox) {
-    updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, "Abstract");
-  }
-
-  if (!isApprox) {
-    const intervalId = setInterval(() => {
-      const timeLeft = new Date(conference.deadline).getTime() - new Date().getTime();
-      const newUrgencyClass = getUrgencyClass(timeLeft);
-      updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, false, newUrgencyClass);
-
-      if (conference.abstractDeadline) {
-        updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, "Abstract");
-      }
-    }, 1000);
-    card.dataset.intervalId = intervalId;
-  }
+  });
 }
 
-// --- Populate Tag Filter ---
-function populateTagFilter(sourceConferences) {
-  if (!tagFilterContainer) return;
+function buildTagChips(containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
   const allTags = new Set();
-  sourceConferences.forEach(conf => {
-    if (conf.tags) {
-      conf.tags.forEach(tag => allTags.add(tag));
-    }
-  });
+  const all = [...state.upcoming, ...(state.archive || [])];
+  all.forEach(c => (c.tags || []).forEach(t => allTags.add(t)));
+  const tags = Array.from(allTags).sort();
 
-  tagFilterContainer.innerHTML = '';
-  let initialActiveButton = null;
+  const allActive = state.filter.tags.length === 0;
+  el.innerHTML = `<button class="chip-btn${allActive ? ' active' : ''}" data-tag="ALL">All</button>` +
+    tags.map(t => {
+      const active = state.filter.tags.includes(t);
+      return `<button class="chip-btn${active ? ' active' : ''}" data-tag="${t}">${t}</button>`;
+    }).join('');
 
-  const allButton = document.createElement('button');
-  allButton.textContent = 'All Conferences';
-  allButton.className = 'tag-button';
-  allButton.addEventListener('click', () => {
-    currentFilterSettings.selectedTags.clear();
-    currentFilterSettings.selectedTags.add("ALL");
-    setActiveTagButtons();
-    applyAllFilters();
-  });
-  tagFilterContainer.appendChild(allButton);
-  if (!currentFilterSettings.selectedTags) {
-    initialActiveButton = allButton;
-  }
-
-  Array.from(allTags).sort().forEach(tag => {
-    const button = document.createElement('button');
-    button.textContent = tag;
-    button.className = 'tag-button';
-    if (tag === currentFilterSettings.selectedTags) {
-      initialActiveButton = button;
-    }
-    button.addEventListener('click', () => {
-      // Clicking a normal tag while "All" is active → deselect "All"
-      currentFilterSettings.selectedTags.delete("ALL");
-
-      if (currentFilterSettings.selectedTags.has(tag)) {
-        currentFilterSettings.selectedTags.delete(tag);
+  el.querySelectorAll('.chip-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag;
+      if (tag === 'ALL') {
+        state.filter.tags = [];
       } else {
-        currentFilterSettings.selectedTags.add(tag);
+        if (state.filter.tags.includes(tag)) {
+          state.filter.tags = state.filter.tags.filter(x => x !== tag);
+        } else {
+          state.filter.tags = [...state.filter.tags, tag];
+        }
+        if (state.filter.tags.length === 0) state.filter.tags = [];
       }
-
-      // If no tag is selected → activate "ALL"
-      if (currentFilterSettings.selectedTags.size === 0) {
-        currentFilterSettings.selectedTags.add("ALL");
-      }
-
-      setActiveTagButtons();
-      applyAllFilters();
+      syncFiltersToUI();
+      render();
     });
-    tagFilterContainer.appendChild(button);
-  });
-
-  setActiveTagButtons();
-}
-
-function setActiveTagButtons() {
-  const buttons = Array.from(tagFilterContainer.children);
-
-  buttons.forEach(btn => {
-    const tag = btn.textContent;
-
-    if (tag === "All Conferences") {
-      btn.classList.toggle('active', currentFilterSettings.selectedTags.has("ALL"));
-    } else {
-      btn.classList.toggle('active', currentFilterSettings.selectedTags.has(tag));
-    }
   });
 }
 
-// --- Main Filtering and Rendering Logic ---
-function applyAllFilters() {
-  let baseData = [...upcomingConferencesData];
-  if (currentFilterSettings.showPast && archiveConferencesData) {
-    baseData = [...upcomingConferencesData, ...archiveConferencesData];
-  }
-
-  populateTagFilter(baseData);
-
-  renderConferences(
-    baseData,
-    currentFilterSettings.selectedTags,
-    currentFilterSettings.showPast,
-    currentFilterSettings.showApproxFuture,
-    currentFilterSettings.minH5,
-    currentFilterSettings.minRating,
-    currentFilterSettings.nameFilter
-  );
+function syncToggle(btnId, trackInBtn, value) {
+  const btn = document.getElementById(btnId);
+  if (!btn) return;
+  btn.dataset.active = String(value);
+  btn.setAttribute('aria-pressed', String(value));
+  const track = btn.querySelector('.toggle-track');
+  if (track) track.classList.toggle('active', value);
 }
 
-function renderConferences(
-  sourceConferenceData,
-  selectedTags,
-  shouldShowPast,
-  shouldShowApproxFuture,
-  minH5,
-  minRatingVal,
-  nameFilterVal
-) {
-  if (!conferenceGrid) return;
-
-  Array.from(conferenceGrid.children).forEach(card => {
-    const intervalId = card.dataset.intervalId;
-    if (intervalId) {
-      clearInterval(Number(intervalId));
-    }
+function syncFiltersToUI() {
+  // Rating segments
+  ['ratingSegments', 'mobileRatingSegments'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.querySelectorAll('.segment-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.rating === state.filter.minRating);
+    });
   });
-  conferenceGrid.innerHTML = '';
 
-  if (loadingState) {
-    loadingState.style.display = 'none';
+  // Tag chips
+  ['tagChips', 'mobileTagChips'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const allActive = state.filter.tags.length === 0;
+    el.querySelectorAll('.chip-btn').forEach(btn => {
+      const tag = btn.dataset.tag;
+      btn.classList.toggle('active', tag === 'ALL' ? allActive : state.filter.tags.includes(tag));
+    });
+  });
+
+  // Toggles
+  syncToggle('pastToggle', '.toggle-track', state.filter.showPast);
+  syncToggle('estimatedToggle', '.toggle-track', state.filter.showEstimated);
+  syncToggle('mobilePastToggle', '.toggle-track', state.filter.showPast);
+  syncToggle('mobileEstimatedToggle', '.toggle-track', state.filter.showEstimated);
+
+  // Mobile filter badge
+  updateFilterBadge();
+}
+
+function updateFilterBadge() {
+  const count =
+    state.filter.tags.length +
+    (state.filter.minRating !== 'All' ? 1 : 0) +
+    (state.filter.showPast ? 1 : 0) +
+    (!state.filter.showEstimated ? 1 : 0);
+
+  const badge = document.getElementById('filterBadge');
+  if (badge) {
+    badge.textContent = count;
+    badge.hidden = count === 0;
   }
+}
 
-  let filteredConferences = [...sourceConferenceData];
-  const now = new Date();
+// --- Event Listeners ---
+function setupEventListeners() {
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  if (nameFilterVal) {
-    const lowerCaseFilter = nameFilterVal.toLowerCase().trim();
-    if (lowerCaseFilter) {
-      filteredConferences = filteredConferences.filter(conf =>
-        (conf.title && conf.title.toLowerCase().includes(lowerCaseFilter)) ||
-        (conf.shortname && conf.shortname.toLowerCase().includes(lowerCaseFilter))
-      );
-    }
-  }
-
-  if (!shouldShowApproxFuture) {
-    filteredConferences = filteredConferences.filter(conf => {
-      const eventEndDateStr = conf.conferenceEndDate || conf.deadline || conf.conferenceStartDate;
-      let isConsideredFuture = true;
-      if (eventEndDateStr) {
-        const eventEndDate = new Date(eventEndDateStr.includes('T') ? eventEndDateStr : eventEndDateStr + 'T23:59:59Z');
-        isConsideredFuture = eventEndDate >= now;
-      }
-      return !(isConsideredFuture && conf.isApproximateDeadline);
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(isDark ? 'light' : 'dark');
     });
   }
 
-  if (minH5 !== null && minH5 !== '') {
-    const h5Threshold = parseInt(minH5, 10);
-    if (!isNaN(h5Threshold)) {
-      filteredConferences = filteredConferences.filter(conf =>
-        conf.h5Index !== undefined && conf.h5Index >= h5Threshold
-      );
-    }
-  }
-
-  if (minRatingVal && ratingOrder[minRatingVal]) {
-    const minRatingNumeric = ratingOrder[minRatingVal];
-    filteredConferences = filteredConferences.filter(conf =>
-      conf.rating && ratingOrder[conf.rating] && ratingOrder[conf.rating] >= minRatingNumeric
-    );
-  }
-
-  if (!currentFilterSettings.selectedTags.has("ALL")) {
-    filteredConferences = filteredConferences.filter(conf =>
-      conf.tags &&
-      conf.tags.some(t => currentFilterSettings.selectedTags.has(t))
-    );
-  }
-
-  const nowTimestamp = now.getTime();
-  filteredConferences.sort((a, b) => {
-    const deadlineA = new Date(a.deadline).getTime();
-    const deadlineB = new Date(b.deadline).getTime();
-    const aIsPastDeadline = deadlineA < nowTimestamp;
-    const bIsPastDeadline = deadlineB < nowTimestamp;
-
-    if (aIsPastDeadline && !bIsPastDeadline) return 1;
-    if (!aIsPastDeadline && bIsPastDeadline) return -1;
-    return deadlineA - deadlineB;
+  // System theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
   });
 
-  if (filteredConferences.length === 0) {
-    conferenceGrid.innerHTML = `
-            <div class="empty-state">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <h3>No conferences found</h3>
-                <p>Try adjusting your filters to see more results.</p>
-            </div>`;
-    return;
+  // Jump-to-now button
+  const scrollToNowBtn = document.getElementById('scrollToNowBtn');
+  if (scrollToNowBtn) {
+    scrollToNowBtn.addEventListener('click', () => {
+      const divider = document.getElementById('now-divider');
+      if (divider) divider.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   }
-  filteredConferences.forEach(createConferenceCard);
+
+  // Search
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      state.filter.q = searchInput.value;
+      if (searchClear) searchClear.hidden = !searchInput.value;
+      render();
+    });
+    // Ctrl/Cmd+F focuses search
+    document.addEventListener('keydown', e => {
+      if (e.key === 'f' && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+  if (searchClear) {
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      state.filter.q = '';
+      searchClear.hidden = true;
+      searchInput.focus();
+      render();
+    });
+  }
+
+  // Past toggle (desktop)
+  const pastToggle = document.getElementById('pastToggle');
+  if (pastToggle) {
+    pastToggle.addEventListener('click', () => {
+      state.filter.showPast = !state.filter.showPast;
+      if (state.filter.showPast && state.archive === null) {
+        loadArchiveAndRender();
+        return;
+      }
+      syncFiltersToUI();
+      render();
+    });
+  }
+
+  // Estimated toggle (desktop)
+  const estToggle = document.getElementById('estimatedToggle');
+  if (estToggle) {
+    estToggle.addEventListener('click', () => {
+      state.filter.showEstimated = !state.filter.showEstimated;
+      syncFiltersToUI();
+      render();
+    });
+  }
+
+  // Mobile filter button
+  const mobileBtn = document.getElementById('mobileFilterBtn');
+  const filterSheet = document.getElementById('filterSheet');
+  if (mobileBtn && filterSheet) {
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !filterSheet.hidden;
+      filterSheet.hidden = isOpen;
+      mobileBtn.classList.toggle('open', !isOpen);
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  // Mobile toggles
+  const mobilePastToggle = document.getElementById('mobilePastToggle');
+  if (mobilePastToggle) {
+    mobilePastToggle.addEventListener('click', () => {
+      state.filter.showPast = !state.filter.showPast;
+      if (state.filter.showPast && state.archive === null) {
+        loadArchiveAndRender();
+        return;
+      }
+      syncFiltersToUI();
+      render();
+    });
+  }
+  const mobileEstToggle = document.getElementById('mobileEstimatedToggle');
+  if (mobileEstToggle) {
+    mobileEstToggle.addEventListener('click', () => {
+      state.filter.showEstimated = !state.filter.showEstimated;
+      syncFiltersToUI();
+      render();
+    });
+  }
+
+  // Reset filters
+  const resetBtn = document.getElementById('resetFilters');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.filter.q = '';
+      state.filter.tags = [];
+      state.filter.minRating = 'All';
+      state.filter.showPast = false;
+      state.filter.showEstimated = true;
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) searchInput.value = '';
+      const searchClear = document.getElementById('searchClear');
+      if (searchClear) searchClear.hidden = true;
+      syncFiltersToUI();
+      buildTagChips('tagChips');
+      buildTagChips('mobileTagChips');
+      buildRatingSegments('ratingSegments');
+      buildRatingSegments('mobileRatingSegments');
+      render();
+    });
+  }
 }
 
 // --- Data Loading ---
 async function loadInitialData() {
+  const loadingEl = document.getElementById('loadingState');
   try {
-    const response = await fetch('data/conferences.json');
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status} for upcoming conferences`);
-    upcomingConferencesData = await response.json();
-    applyAllFilters();
-  } catch (error) {
-    console.error("Failed to load upcoming conferences:", error);
-    showModal("Error", "Could not load upcoming conference data. Please check data/conferences.json.");
-  }
-}
+    const res = await fetch('data/conferences.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    state.upcoming = await res.json();
 
-async function loadArchiveDataIfNeededAndRender() {
-  if (currentFilterSettings.showPast && archiveConferencesData === null) {
-    try {
-      const response = await fetch('data/conferences_archive.json');
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status} for archive conferences`);
-      archiveConferencesData = await response.json();
-    } catch (error) {
-      console.error("Failed to load archive conferences:", error);
-      archiveConferencesData = [];
-      showModal("Error", "Could not load past conference data. Please check data/conferences_archive.json.");
+    if (loadingEl) loadingEl.hidden = true;
+
+    buildRatingSegments('ratingSegments');
+    buildRatingSegments('mobileRatingSegments');
+    buildTagChips('tagChips');
+    buildTagChips('mobileTagChips');
+    syncFiltersToUI();
+    render();
+  } catch (err) {
+    console.error('Failed to load conferences:', err);
+    if (loadingEl) {
+      loadingEl.innerHTML = '<p style="color:var(--urgent);padding:40px;text-align:center">Failed to load conference data. Please refresh and try again.</p>';
     }
   }
-  applyAllFilters();
 }
 
-
-// --- Event Listeners Setup ---
-function setupEventListeners() {
-  if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
+async function loadArchiveAndRender() {
+  if (state.archive !== null) { syncFiltersToUI(); render(); return; }
+  try {
+    const res = await fetch('data/conferences_archive.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    state.archive = await res.json();
+  } catch (err) {
+    console.error('Failed to load archive:', err);
+    state.archive = [];
   }
-
-  if (filterToggle && filterControls) {
-    filterToggle.addEventListener('click', () => {
-      const isExpanded = filterToggle.getAttribute('aria-expanded') === 'true';
-      filterToggle.setAttribute('aria-expanded', !isExpanded);
-      filterControls.classList.toggle('open');
-    });
-  }
-
-  document.addEventListener('keydown', function (event) {
-    // Check if the 'f' key is pressed along with Ctrl (for Windows/Linux) or Command (for macOS)
-    if (event.key === 'f' && (event.ctrlKey || event.metaKey)) {
-      // Prevent the browser's default "Find" action
-      event.preventDefault();
-
-      // Focus the conference name filter input field
-      if (conferenceNameFilterInput) {
-        conferenceNameFilterInput.focus();
-      }
-    }
-  });
-
-  if (showPastToggle) {
-    showPastToggle.addEventListener('change', function () {
-      currentFilterSettings.showPast = this.checked;
-      this.setAttribute('aria-checked', this.checked);
-      loadArchiveDataIfNeededAndRender();
-    });
-  }
-  if (showApproxFutureToggle) {
-    showApproxFutureToggle.addEventListener('change', function () {
-      currentFilterSettings.showApproxFuture = this.checked;
-      this.setAttribute('aria-checked', this.checked);
-      applyAllFilters();
-    });
-  }
-  if (minH5IndexInput) {
-    minH5IndexInput.addEventListener('input', function () {
-      currentFilterSettings.minH5 = this.value === '' ? null : parseInt(this.value, 10);
-      if (isNaN(currentFilterSettings.minH5)) currentFilterSettings.minH5 = null;
-      applyAllFilters();
-    });
-  }
-  if (minRatingSelect) {
-    minRatingSelect.addEventListener('change', function () {
-      currentFilterSettings.minRating = this.value;
-      applyAllFilters();
-    });
-  }
-  if (conferenceNameFilterInput) {
-    conferenceNameFilterInput.addEventListener('input', function () {
-      currentFilterSettings.nameFilter = this.value;
-      applyAllFilters();
-    });
-  }
+  syncFiltersToUI();
+  render();
 }
 
-// --- Initialization ---
+// --- Init ---
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-
-  if (showPastToggle) {
-    currentFilterSettings.showPast = showPastToggle.checked;
-    showPastToggle.setAttribute('aria-checked', showPastToggle.checked);
-  }
-  if (showApproxFutureToggle) {
-    currentFilterSettings.showApproxFuture = showApproxFutureToggle.checked;
-    showApproxFutureToggle.setAttribute('aria-checked', showApproxFutureToggle.checked);
-  }
-  if (minH5IndexInput) {
-    currentFilterSettings.minH5 = minH5IndexInput.value === '' ? null : parseInt(minH5IndexInput.value, 10);
-    if (isNaN(currentFilterSettings.minH5)) currentFilterSettings.minH5 = null;
-  }
-  if (minRatingSelect) currentFilterSettings.minRating = minRatingSelect.value;
-  if (conferenceNameFilterInput) currentFilterSettings.nameFilter = conferenceNameFilterInput.value;
-
+  applyTheme(getThemePref());
   setupEventListeners();
   loadInitialData();
 });
