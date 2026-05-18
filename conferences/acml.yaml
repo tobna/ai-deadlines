@@ -57,23 +57,24 @@ acml2025:
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2025/
 acml2026:
-  conferenceEndDate: '2026-12-14'
-  conferenceStartDate: '2026-12-09'
-  dataSrc: estimate
+  conferenceEndDate: '2026-12-04'
+  conferenceStartDate: '2026-12-01'
+  dataSrc: ccf-deadlines
   id: acml2026
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: C
   shortname: ACML 2026
   tags: *id001
   timeline:
-  - deadline: '2026-05-30T23:59:59Z'
-    note: 'From ACML 2025: Journal Track'
-  - deadline: '2026-06-26T23:59:59Z'
-    note: 'From ACML 2025: Conference Track'
+  - deadline: '2025-06-27T11:59:59Z'
+    note: Conference Track
+  - deadline: '2026-06-07T11:59:59Z'
+    note: Journal Track
   title: Asian Conference on Machine Learning
+  website: https://www.acml-conf.org/2026/
 acml2027:
-  conferenceEndDate: '2027-12-14'
-  conferenceStartDate: '2027-12-09'
+  conferenceEndDate: '2027-12-06'
+  conferenceStartDate: '2027-12-01'
   dataSrc: estimate
   id: acml2027
   isApproximateDeadline: true
@@ -81,8 +82,23 @@ acml2027:
   shortname: ACML 2027
   tags: *id001
   timeline:
-  - deadline: '2027-05-30T23:59:59Z'
-    note: 'From ACML 2025: Journal Track'
-  - deadline: '2027-06-26T23:59:59Z'
-    note: 'From ACML 2025: Conference Track'
+  - deadline: '2026-06-27T11:59:59Z'
+    note: 'From ACML 2026: Conference Track'
+  - deadline: '2027-06-07T11:59:59Z'
+    note: 'From ACML 2026: Journal Track'
+  title: Asian Conference on Machine Learning
+acml2028:
+  conferenceEndDate: '2028-12-05'
+  conferenceStartDate: '2028-11-30'
+  dataSrc: estimate
+  id: acml2028
+  isApproximateDeadline: true
+  rating: C
+  shortname: ACML 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-06-27T11:59:59Z'
+    note: 'From ACML 2026: Conference Track'
+  - deadline: '2028-06-06T11:59:59Z'
+    note: 'From ACML 2026: Journal Track'
   title: Asian Conference on Machine Learning
