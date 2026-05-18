@@ -1,6 +1,6 @@
 sure2026:
-  conferenceEndDate: '2026-08-21'
-  conferenceStartDate: '2026-08-15'
+  conferenceEndDate: "2026-08-21"
+  conferenceStartDate: "2026-08-15"
   dataSrc: off-website
   id: sure2026
   isApproximateDeadline: false
@@ -8,10 +8,11 @@ sure2026:
   rating: A*
   shortname: SuRE @ IJCAI 2026
   tags:
-  - ML
+    - ML
   timeline:
-  - deadline: '2026-05-16T11:59:59Z'
-    note: SuRE Workshop Submission Deadline
-  title: 1st Workshop on Sustainability and Resource-Efficiency of Artificial Intelligence
+    - deadline: "2026-05-22T11:59:59Z"
+      note: SuRE Workshop Submission Deadline
+  title:
+    1st Workshop on Sustainability and Resource-Efficiency of Artificial Intelligence
     @ IJCAI 2026
   website: https://sure-wshop.github.io/
