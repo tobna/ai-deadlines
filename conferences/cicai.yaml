@@ -5,9 +5,21 @@ cicai2023:
   id: cicai2023
   isApproximateDeadline: false
   shortname: CICAI 2023
-  tags:
+  tags: &id001
   - ML
   timeline:
   - deadline: '2023-07-01T11:59:59Z'
   title: CAAI International Conference on Artificial Intelligence
   website: https://cicai.caai.cn/
+cicai2026:
+  conferenceEndDate: '2026-10-19'
+  conferenceStartDate: '2026-10-17'
+  dataSrc: ccf-deadlines
+  id: cicai2026
+  isApproximateDeadline: false
+  shortname: CICAI 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-06-09T11:59:59Z'
+  title: CAAI International Conference on Artificial Intelligence
+  website: https://cicai.caai.cn/index.html
