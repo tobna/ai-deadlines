@@ -1,0 +1,15 @@
+sibgrapi2026:
+  conferenceEndDate: '2026-10-02'
+  conferenceStartDate: '2026-09-29'
+  dataSrc: hf-repo
+  id: sibgrapi2026
+  isApproximateDeadline: false
+  location: "Federal University of Goi\xE1s (UFG)"
+  shortname: SIBGRAPI 2026
+  tags:
+  - CV
+  timeline:
+  - deadline: '2026-05-30T23:59:59Z'
+    note: Paper submission deadline
+  title: Conference on Graphics, Patterns and Images
+  website: https://sibgrapi.sbc.org.br/2026/
