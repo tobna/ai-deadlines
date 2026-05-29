@@ -97,11 +97,11 @@ wacv2027:
   shortname: WACV 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-06-19T11:59:59Z'
-    deadline: '2026-06-26T11:59:59Z'
+  - abstractDeadline: '2026-06-20T11:59:59Z'
+    deadline: '2026-06-27T11:59:59Z'
     note: Round 1
-  - abstractDeadline: '2026-08-21T11:59:59Z'
-    deadline: '2026-08-28T11:59:59Z'
+  - abstractDeadline: '2026-08-22T11:59:59Z'
+    deadline: '2026-08-29T11:59:59Z'
     note: Round 2
   timezone: America/Los_Angeles
   title: Winter Conference on Applications of Computer Vision
