@@ -5,8 +5,54 @@ dai2025:
   id: dai2025
   isApproximateDeadline: false
   shortname: DAI 2025
-  tags: []
+  tags: &id001 []
   timeline:
   - deadline: '2025-08-22T11:59:59Z'
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2025/index.html
+dai2026:
+  conferenceEndDate: '2026-12-02'
+  conferenceStartDate: '2026-11-29'
+  dataSrc: ccf-deadlines
+  id: dai2026
+  isApproximateDeadline: false
+  shortname: DAI 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-07-28T11:59:59Z'
+    deadline: '2026-08-04T11:59:59Z'
+    note: Research / Industry Track
+  - deadline: '2026-08-11T11:59:59Z'
+    note: AI Paper Track
+  title: International Conference on Distributed Artificial Intelligence
+  website: https://www.adai.ai/dai/2026/index.html
+dai2027:
+  conferenceEndDate: '2027-12-04'
+  conferenceStartDate: '2027-11-29'
+  dataSrc: estimate
+  id: dai2027
+  isApproximateDeadline: true
+  shortname: DAI 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-07-28T11:59:59Z'
+    deadline: '2027-08-04T11:59:59Z'
+    note: 'From DAI 2026: Research / Industry Track'
+  - deadline: '2027-08-11T11:59:59Z'
+    note: 'From DAI 2026: AI Paper Track'
+  title: International Conference on Distributed Artificial Intelligence
+dai2028:
+  conferenceEndDate: '2028-12-03'
+  conferenceStartDate: '2028-11-28'
+  dataSrc: estimate
+  id: dai2028
+  isApproximateDeadline: true
+  shortname: DAI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-07-27T11:59:59Z'
+    deadline: '2028-08-03T11:59:59Z'
+    note: 'From DAI 2026: Research / Industry Track'
+  - deadline: '2028-08-10T11:59:59Z'
+    note: 'From DAI 2026: AI Paper Track'
+  title: International Conference on Distributed Artificial Intelligence
