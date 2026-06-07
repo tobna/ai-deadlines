@@ -66,10 +66,10 @@ acml2026:
   shortname: ACML 2026
   tags: *id001
   timeline:
-  - deadline: '2025-06-27T11:59:59Z'
-    note: Conference Track
-  - deadline: '2026-06-07T11:59:59Z'
+  - deadline: '2026-06-21T11:59:59Z'
     note: Journal Track
+  - deadline: '2026-06-27T11:59:59Z'
+    note: Conference Track
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2026/
 acml2027:
