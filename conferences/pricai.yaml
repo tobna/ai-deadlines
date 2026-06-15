@@ -35,7 +35,7 @@ pricai2026:
   shortname: PRICAI 2026
   tags: *id001
   timeline:
-  - deadline: '2026-06-14T11:59:59Z'
+  - deadline: '2026-06-28T11:59:59Z'
   title: Pacific Rim International Conference on Artificial Intelligence
   website: https://2026.pricai.org/
 pricai2027:
