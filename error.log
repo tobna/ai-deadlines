@@ -121,3 +121,18 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-05-07 08:39:32.047 | ERROR    | __main__:<module>:157 - ERROR no ninoduarte-git conferences found
 2026-06-21 14:12:30.723 | ERROR    | __main__:<module>:197 - ERROR while parsing ccf-deadlines: Expecting value: line 1 column 1 (char 0)
 2026-06-21 14:12:30.725 | ERROR    | __main__:<module>:201 - ERROR no ccf-conferences gotten
+2026-06-21 15:13:14.549 | ERROR    | __main__:<module>:119 - while parsing hf list: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/app/aideadlines/update_data.py", line 116, in <module>
+    hf_conferences = get_hf_list()
+  File "/app/aideadlines/parser/hf_list.py", line 26, in get_hf_list
+    hf_list = json.loads(data)["tree"]
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+2026-06-21 15:13:14.550 | ERROR    | __main__:<module>:123 - no hf conferences found
