@@ -63,21 +63,22 @@ aamas2026:
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://cyprusconferences.org/aamas2026/
 aamas2027:
-  conferenceEndDate: '2027-06-01'
-  conferenceStartDate: '2027-05-27'
-  dataSrc: estimate
+  conferenceEndDate: '2027-05-03'
+  conferenceStartDate: '2027-05-03'
+  dataSrc: ccf-deadlines
   id: aamas2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A
   shortname: AAMAS 2027
   tags: *id001
   timeline:
-  - deadline: '2026-10-09T11:59:59Z'
-    note: 'From AAMAS 2026: Abstract deadline on 2025-10-01 23:59:59 UTC-12!'
+  - abstractDeadline: '2026-10-02T23:59:00Z'
+    deadline: '2026-10-09T23:59:00Z'
   title: International Conference on Autonomous Agents and Multiagent Systems
+  website: https://openreview.net/group?id=ifaamas.org/AAMAS/2027/Conference
 aamas2028:
-  conferenceEndDate: '2028-05-29'
-  conferenceStartDate: '2028-05-24'
+  conferenceEndDate: '2028-05-07'
+  conferenceStartDate: '2028-05-02'
   dataSrc: estimate
   id: aamas2028
   isApproximateDeadline: true
@@ -85,6 +86,6 @@ aamas2028:
   shortname: AAMAS 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-10-02T11:59:59Z'
-    deadline: '2027-10-09T11:59:59Z'
+  - abstractDeadline: '2027-10-02T23:59:00Z'
+    deadline: '2027-10-09T23:59:00Z'
   title: International Conference on Autonomous Agents and Multiagent Systems
