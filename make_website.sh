@@ -11,9 +11,10 @@ python3 update.py
 # ./update_tailwind.sh
 
 echo "3. copy files over"
-mkdir -p html/data
+mkdir -p html/data html/fonts
 cp aideadlines/*.html aideadlines/*.js aideadlines/*.css html/
 cp aideadlines/data/*.json html/data/
+cp aideadlines/fonts/*.woff2 html/fonts/
 cp aideadlines/*.ico aideadlines/*.svg aideadlines/*.png aideadlines/site.webmanifest aideadlines/robots.txt aideadlines/sitemap.xml html/
 
 echo "4. compress files: gzip"

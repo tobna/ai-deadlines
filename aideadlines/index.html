@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Conference Deadlines | An Open-Source Tracker</title>
   <link rel="stylesheet" href="styles.tailwind.css">
+  <link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <script defer data-domain="aideadlines.nauen-it.de" src="https://plausible.nauen-it.de/js/script.js"></script>
   <meta name="description"
     content="Track submission deadlines for major Artificial Intelligence (AI), Machine Learning (ML), and Computer Science conferences. An up-to-date, open-source list for researchers and students.">
@@ -17,119 +19,141 @@
   <link rel="manifest" href="/site.webmanifest" />
 </head>
 
-<body class="min-h-screen flex flex-col items-center p-4 sm:p-6 lg:p-8">
-  <div class="absolute top-4 right-4 sm:top-6 lg:top-8 flex items-center gap-3">
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-      <svg id="sunIcon" class="w-6 h-6 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
-      <svg id="moonIcon" class="w-6 h-6 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-      </svg>
-    </button>
-    <a href="https://github.com/tobna/ai-deadlines" target="_blank" rel="noopener noreferrer"
-      title="View source on GitHub" class="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-white transition-colors duration-200">
-      <span class="sr-only">View source on GitHub</span>
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-      </svg>
+<body>
+  <!-- ===== Status bar ===== -->
+  <header class="statusbar">
+    <a href="/" class="brand" aria-label="AI Deadlines home">
+      ai<span class="dot">·</span>deadlines<span class="cursor" aria-hidden="true"></span>
     </a>
-  </div>
-
-  <header class="mb-8 text-center">
-    <h1
-      class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-      AI Conference Deadlines</h1>
-    <p class="mt-2 text-xl text-gray-500 dark:text-gray-400">Stay updated on upcoming ai & ml events!</p>
-  </header>
-
-  <div class="filter-controls-main-container">
-    <button id="filterToggle" class="filter-drawer-toggle" aria-expanded="false" aria-controls="filterControls">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-      </svg>
-      <span>Filters</span>
-    </button>
-    <div id="filterControls" class="toggle-and-input-controls-container">
-      <div class="filter-input-container">
-        <label for="conferenceNameFilter" class="filter-label">Filter by Name:</label>
-        <input type="text" id="conferenceNameFilter" name="conferenceNameFilter" class="filter-input"
-          placeholder="e.g. NeurIPS">
+    <div class="statusbar-right">
+      <div class="aoe-clock" title="Current time, Anywhere on Earth (UTC−12) — the timezone most deadlines use">
+        <span class="pulse" aria-hidden="true"></span>
+        <b id="aoeClock">--:--:--</b>
+        <span class="tag">AoE</span>
       </div>
-      <div class="toggle-switch-container">
-        <label class="toggle-switch-label" for="showPastToggle">Show Past:</label>
-        <label class="toggle-switch">
-          <input type="checkbox" id="showPastToggle" role="switch" aria-checked="false">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="toggle-switch-container">
-        <label class="toggle-switch-label" for="showApproxFutureToggle">Show Approx. Future:</label>
-        <label class="toggle-switch">
-          <input type="checkbox" id="showApproxFutureToggle" checked role="switch" aria-checked="true">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="filter-input-container">
-        <label for="minH5Index" class="filter-label">Min. h5-index:</label>
-        <input type="number" id="minH5Index" name="minH5Index" class="filter-input" placeholder="e.g. 50">
-      </div>
-      <div class="filter-input-container">
-        <label for="minRating" class="filter-label">Min. Rating:</label>
-        <select id="minRating" name="minRating" class="filter-select">
-          <option value="">All Ratings</option>
-          <option value="A*">A* and above</option>
-          <option value="A">A and above</option>
-          <option value="B">B and above</option>
-          <option value="C" selected>C and above</option>
-          <option value="D">D and above</option>
-        </select>
-      </div>
-    </div>
-    <div id="tagFilterContainer" class="w-full text-center">
-    </div>
-  </div>
-
-  <div id="loadingState" class="loading-container" aria-live="polite">
-    <div class="spinner"></div>
-    <p class="loading-text">Loading conferences...</p>
-  </div>
-
-
-  <main id="conferenceGrid" class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  </main>
-
-  <footer class="mt-12 text-center text-gray-500 dark:text-gray-400 text-sm">
-    <p>&copy; <span id="currentYear"></span> Your AI Conference Tracker. All rights reserved.</p>
-    <!-- <p class="mt-1">Powered by good vibes and JavaScript.</p> -->
-    <p class="mt-4">
-      Help keep this list up-to-date!
-    </p>
-    <p class="mt-2">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg id="sunIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="moonIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
       <a href="https://github.com/tobna/ai-deadlines" target="_blank" rel="noopener noreferrer"
-        class="inline-flex items-center text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-white transition-colors duration-200">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        title="View source on GitHub" class="icon-btn">
+        <span class="sr-only">View source on GitHub</span>
+        <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path
             d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
         </svg>
-        <span class="ml-2">Contribute on GitHub</span>
       </a>
-    </p>
-    <p class="mt-4 text-xs text-gray-400 dark:text-gray-500">
-      Deadlines and timers on this site may be inaccurate. Always verify submission deadlines on the official conference website before submitting.
-    </p>
-  </footer>
+    </div>
+  </header>
 
-  <div id="messageModal"
-    class="fixed inset-0 bg-gray-900 bg-opacity-75 dark:bg-black dark:bg-opacity-80 flex items-center justify-center z-50 hidden transition-opacity duration-300">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm mx-auto text-gray-800 dark:text-gray-100">
-      <h3 id="modalTitle" class="text-xl font-semibold mb-4">Notification</h3>
-      <p id="modalMessage" class="mb-6">This is a sample message.</p>
-      <button id="closeModalButton"
-        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
-        OK
+  <div class="shell">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-lede">
+          <span class="eyebrow">Submission deadline tracker</span>
+          <h1>Don't miss<br>the <em>next</em> deadline.</h1>
+          <p>A live, open-source countdown to every major AI, ML, NLP and vision
+            conference, sorted by what's due first.</p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="n" id="statTracked">—</span>
+              <span class="l">conferences tracked</span>
+            </div>
+            <div class="hero-stat">
+              <span class="n" id="statWeek">—</span>
+              <span class="l">due within 7 days</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- featured "deadline to watch" ticker, filled by JS -->
+        <div id="nextUp" class="next-up">
+          <div class="next-up-top">
+            <span class="next-up-label"><span class="led" aria-hidden="true"></span> Deadline to watch</span>
+          </div>
+          <p class="next-up-empty">Syncing the timeline…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Filter console ===== -->
+    <div class="filter-controls-main-container">
+      <button id="filterToggle" class="filter-drawer-toggle" aria-expanded="false" aria-controls="filterControls">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+        </svg>
+        <span>Filters</span>
       </button>
+
+      <div id="filterControls" class="console-strip">
+        <div class="filter-input-container search-field">
+          <input type="text" id="conferenceNameFilter" name="conferenceNameFilter" class="filter-input"
+            placeholder="search by name…" aria-label="Filter by conference name">
+        </div>
+        <div class="toggle-switch-container">
+          <label class="toggle-switch-label" for="showPastToggle">Show past</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="showPastToggle" role="switch" aria-checked="false">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="toggle-switch-container">
+          <label class="toggle-switch-label" for="showApproxFutureToggle">Show estimated</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="showApproxFutureToggle" checked role="switch" aria-checked="true">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="filter-input-container">
+          <label for="minH5Index" class="filter-label">Min h5</label>
+          <input type="number" id="minH5Index" name="minH5Index" class="filter-input" placeholder="50">
+        </div>
+        <div class="filter-input-container">
+          <label for="minRating" class="filter-label">Min rating</label>
+          <select id="minRating" name="minRating" class="filter-select">
+            <option value="">all</option>
+            <option value="A*">&gt;= A*</option>
+            <option value="A">&gt;= A</option>
+            <option value="B">&gt;= B</option>
+            <option value="C" selected>&gt;= C</option>
+            <option value="D">&gt;= D</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="tagFilterContainer"></div>
+    </div>
+
+    <div id="loadingState" class="loading-container" aria-live="polite">
+      <div class="spinner"></div>
+      <p class="loading-text">Loading conferences…</p>
+    </div>
+
+    <main id="conferenceGrid"></main>
+
+    <footer class="site-footer">
+      <div class="row">
+        <span>&copy; <span id="currentYear"></span> ai·deadlines — open source &amp; community-maintained.</span>
+        <a href="https://github.com/tobna/ai-deadlines" target="_blank" rel="noopener noreferrer">Contribute on GitHub →</a>
+      </div>
+      <p class="disclaimer">
+        Deadlines and timers may be inaccurate. Always confirm the submission deadline on the
+        official conference website before you submit.
+      </p>
+    </footer>
+  </div>
+
+  <!-- ===== Modal ===== -->
+  <div id="messageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <h3 id="modalTitle">Notification</h3>
+      <p id="modalMessage">This is a sample message.</p>
+      <button id="closeModalButton">OK</button>
     </div>
   </div>
 

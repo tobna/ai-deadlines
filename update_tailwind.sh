@@ -1,7 +1,9 @@
 #!/bin/sh
 
-wget -nc https://github.com/tailwindlabs/tailwindcss/releases/download/v4.1.8/tailwindcss-linux-x64
-chmod +x tailwindcss-linux-x64
+# The frontend stylesheet is now a hand-authored, self-contained design system
+# (aideadlines/styles.css). There is no Tailwind build step anymore: the served
+# file (styles.tailwind.css, referenced by index.html) is just a verbatim copy.
+# This script keeps that copy in sync so the filename expected by the site and
+# make_website.sh stays valid.
 
-rm -f aideadlines/styles.tailwind.css
-./tailwindcss-linux-x64 -i aideadlines/styles.css -o aideadlines/styles.tailwind.css --content "./*.{html,js}" -m
+cp aideadlines/styles.css aideadlines/styles.tailwind.css

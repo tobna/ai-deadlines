@@ -17,6 +17,13 @@ const loadingState = document.getElementById('loadingState');
 const filterToggle = document.getElementById('filterToggle');
 const filterControls = document.getElementById('filterControls');
 
+const nextUpEl = document.getElementById('nextUp');
+const aoeClockEl = document.getElementById('aoeClock');
+const statTrackedEl = document.getElementById('statTracked');
+const statWeekEl = document.getElementById('statWeek');
+
+const DAY_MS = 1000 * 60 * 60 * 24;
+
 // --- Theme Management ---
 function getThemePreference() {
   const storedTheme = localStorage.getItem('theme');
@@ -56,6 +63,8 @@ if (themeToggle) {
 // --- Application State ---
 let upcomingConferencesData = [];
 let archiveConferencesData = null;
+let nextUpIntervalId = null;
+let nextUpConference = null;
 
 let currentFilterSettings = {
   selectedTags: new Set(["ALL"]),
@@ -73,8 +82,7 @@ function showModal(title, msg) {
   if (modalTitle && modalMessage && messageModal && closeModalButton) {
     modalTitle.textContent = title;
     modalMessage.textContent = msg;
-    messageModal.classList.remove('hidden');
-    messageModal.classList.add('opacity-100');
+    messageModal.classList.add('is-open');
   } else {
     console.error("Modal elements not found. Message:", title, msg);
     alert(`${title}\n${msg}`);
@@ -83,149 +91,124 @@ function showModal(title, msg) {
 
 if (closeModalButton) {
   closeModalButton.addEventListener('click', () => {
-    if (messageModal) {
-      messageModal.classList.add('hidden');
-      messageModal.classList.remove('opacity-100');
-    }
+    if (messageModal) messageModal.classList.remove('is-open');
+  });
+}
+if (messageModal) {
+  messageModal.addEventListener('click', (e) => {
+    if (e.target === messageModal) messageModal.classList.remove('is-open');
   });
 }
 
-// --- Countdown Logic ---
-function getUrgencyClass(timeLeft) {
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  if (days < 1) return 'countdown-urgent-critical';
-  if (days < 7) return 'countdown-urgent-soon';
-  return '';
+// --- Urgency: the signature hue-shift, encoded from time remaining ---
+const URGENCY_CLASSES = ['is-critical', 'is-soon', 'is-upcoming', 'is-past'];
+
+function urgencyClassFor(timeLeftMs) {
+  if (timeLeftMs <= 0) return 'is-past';
+  const days = timeLeftMs / DAY_MS;
+  if (days < 1) return 'is-critical';
+  if (days < 7) return 'is-soon';
+  if (days < 30) return 'is-upcoming';
+  return ''; // far away → calm "cool" default
+}
+
+function applyUrgency(card, deadlineStr) {
+  // Only swap the urgency modifier so the entrance animation never restarts.
+  card.classList.remove(...URGENCY_CLASSES);
+  const u = urgencyClassFor(new Date(deadlineStr).getTime() - Date.now());
+  if (u) card.classList.add(u);
+}
+
+// progress toward the deadline within a 90-day horizon (fuller = closer)
+function proximityPercent(timeLeftMs) {
+  const days = timeLeftMs / DAY_MS;
+  return Math.max(0, Math.min(1, 1 - days / 90)) * 100;
 }
 
 function getUrgencyBadge(conference) {
-  const eventDate = new Date(conference.deadline).getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-
+  const timeLeft = new Date(conference.deadline).getTime() - Date.now();
   if (timeLeft <= 0) return '';
-  if (days < 1) return '<span class="urgency-badge critical mt-auto">Less than 24h</span>';
-  if (days < 7) return '<span class="urgency-badge soon mt-auto">Due Soon</span>';
-  if (days < 30) return '<span class="urgency-badge upcoming mt-auto">This Month</span>';
+  const days = timeLeft / DAY_MS;
+  if (days < 1) return '<span class="urgency-badge">Less than 24h</span>';
+  if (days < 7) return '<span class="urgency-badge">Due this week</span>';
+  if (days < 30) return '<span class="urgency-badge">Due this month</span>';
   return '';
 }
 
-function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApproximate = false, urgencyClass = '') {
-  const countdownElement = document.getElementById(countdownElementId);
-  if (!countdownElement) return;
+// --- Countdown rendering ---
+function pad(n) { return String(n).padStart(2, '0'); }
 
-  const eventDate = new Date(targetDateStr).getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
+function breakdown(timeLeftMs) {
+  return {
+    days: Math.floor(timeLeftMs / DAY_MS),
+    hours: Math.floor((timeLeftMs % DAY_MS) / (1000 * 60 * 60)),
+    minutes: Math.floor((timeLeftMs % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((timeLeftMs % (1000 * 60)) / 1000)
+  };
+}
+
+function updateSpecificCountdown(targetDateStr, countdownElementId, label, isApproximate = false) {
+  const el = document.getElementById(countdownElementId);
+  if (!el) return;
+
+  const timeLeft = new Date(targetDateStr).getTime() - Date.now();
 
   if (timeLeft <= 0) {
-    const passedLabel = isApproximate ? `${label} (Approx.) Passed` : `${label} Passed`;
-    countdownElement.innerHTML = `
-            <div class="ended-banner w-full text-center py-2 px-3 rounded-md text-md font-semibold">
-                ${passedLabel}
-            </div>`;
+    const passedLabel = isApproximate ? `${label} (est.) passed` : `${label} passed`;
+    el.innerHTML = `<div class="ended-banner">${passedLabel}</div>`;
     return;
   }
 
-  const numberColorClass = urgencyClass
-    ? (urgencyClass === 'countdown-urgent-critical' ? 'text-red-600 dark:text-red-400' : 'text-amber-600 dark:text-amber-400')
-    : 'text-pink-600 dark:text-pink-400';
-
   if (isApproximate) {
-    const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    let approxDaysText;
-    if (daysLeft < 0) {
-      approxDaysText = "Passed";
-    } else if (daysLeft < 10) {
-      approxDaysText = "<10 days";
-    } else {
-      approxDaysText = `~${String(Math.round(daysLeft / 10) * 10)} days`;
-    }
-    countdownElement.innerHTML = `
-            <div class="countdown-label">${label}:</div>
-            <div class="text-lg sm:text-xl lg:text-2xl font-bold ${numberColorClass} text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                ${approxDaysText}
-            </div>
-        `;
-  } else {
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    countdownElement.innerHTML = `
-            <div class="countdown-label">${label} In:</div>
-            <div class="flex justify-around space-x-1 sm:space-x-2 ${urgencyClass}">
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(days).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Days</div>
-                </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(hours).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Hours</div>
-                </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(minutes).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Minutes</div>
-                </div>
-                <div class="countdown-item text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md shadow">
-                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold ${numberColorClass}">${String(seconds).padStart(2, '0')}</div>
-                    <div class="text-xs text-gray-600 dark:text-gray-300">Seconds</div>
-                </div>
-            </div>
-        `;
+    const daysLeft = Math.floor(timeLeft / DAY_MS);
+    let approxText;
+    if (daysLeft < 10) approxText = '< 10 days';
+    else approxText = `~${Math.round(daysLeft / 10) * 10} days`;
+    el.innerHTML = `
+      <div class="cd-label">${label}</div>
+      <div class="cd-approx">${approxText}</div>`;
+    return;
   }
+
+  const { days, hours, minutes, seconds } = breakdown(timeLeft);
+  const pct = proximityPercent(timeLeft).toFixed(1);
+  el.innerHTML = `
+    <div class="cd-label">${label} · in</div>
+    <div class="cd-meter"><span style="width:${pct}%"></span></div>
+    <div class="cd-grid">
+      <div class="cd-cell"><span class="cd-num">${pad(days)}</span><span class="cd-unit">days</span></div>
+      <div class="cd-cell"><span class="cd-num">${pad(hours)}</span><span class="cd-unit">hrs</span></div>
+      <div class="cd-cell"><span class="cd-num">${pad(minutes)}</span><span class="cd-unit">min</span></div>
+      <div class="cd-cell"><span class="cd-num">${pad(seconds)}</span><span class="cd-unit">sec</span></div>
+    </div>`;
 }
 
 function updateSmallCountdown(targetDateStr, countdownElementId, label) {
-  const countdownElement = document.getElementById(countdownElementId);
-  if (!countdownElement) return;
+  const el = document.getElementById(countdownElementId);
+  if (!el) return;
 
-  const eventDate = new Date(targetDateStr).getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
-
+  const timeLeft = new Date(targetDateStr).getTime() - Date.now();
   if (timeLeft <= 0) {
-    countdownElement.innerHTML = `
-            <div class="ended-banner w-full text-center py-1 px-2 rounded-md text-sm font-semibold bg-gray-600">
-                ${label} Passed
-            </div>`;
+    el.innerHTML = `<div class="ended-banner">${label} passed</div>`;
     return;
   }
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-  countdownElement.innerHTML = `
-        <div class="flex items-center justify-between w-full">
-            <span class="countdown-label text-xs text-gray-500 dark:text-gray-400 leading-none mt-1">${label}:</span>
-            <div class="flex space-x-2 sm:space-x-3">
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(days).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">d</span></span>
-                </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(hours).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">h</span></span>
-                </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(minutes).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">m</span></span>
-                </div>
-                <div class="countdown-item-sm text-center p-1 sm:p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
-                    <span class="text-base sm:text-lg font-semibold text-pink-600 dark:text-pink-300">${String(seconds).padStart(2, '0')}<span class="text-gray-600 dark:text-gray-400 text-xs ml-0.5">s</span></span>
-                </div>
-            </div>
-        </div>
-    `;
+  const { days, hours, minutes } = breakdown(timeLeft);
+  el.innerHTML = `
+    <div class="cd-abstract">
+      <span>${label} in</span>
+      <span class="vals">
+        <span class="chip">${pad(days)}d</span>
+        <span class="chip">${pad(hours)}h</span>
+        <span class="chip">${pad(minutes)}m</span>
+      </span>
+    </div>`;
 }
 
 // --- Format Date Helper ---
 function formatDate(dateString, formattingOptions = {}) {
   if (!dateString) return 'N/A';
 
-  // Create a Date object. Assumes dateString is ISO 8601 UTC (ends with Z) or includes offset.
-  // For date-only strings (conference start/end), append 'T00:00:00Z' to treat as UTC start of day.
   const date = new Date(
     (dateString.includes('T') || dateString.endsWith('Z'))
       ? dateString
@@ -233,10 +216,9 @@ function formatDate(dateString, formattingOptions = {}) {
   );
 
   let effectiveOptions = {};
-
-  // Determine the timezone for display.
-  // If displayTimezoneIana is provided, use it. Otherwise, default to UTC for display.
   effectiveOptions.timeZone = formattingOptions.displayTimezoneIana || 'UTC';
+  // "Etc/GMT+12" is the IANA spelling of Anywhere-on-Earth (UTC−12); show it as AoE.
+  const isAoE = effectiveOptions.timeZone === 'Etc/GMT+12';
 
   if (formattingOptions.monthYearOnly) {
     effectiveOptions.year = 'numeric';
@@ -253,197 +235,242 @@ function formatDate(dateString, formattingOptions = {}) {
       }
     }
   }
-  return date.toLocaleDateString(undefined, effectiveOptions);
+  let out = date.toLocaleDateString(undefined, effectiveOptions);
+  if (isAoE && effectiveOptions.timeZoneName) out = out.replace(/GMT[+-]12/, 'AoE');
+  return out;
 }
 
+// --- SVG icons (small, instrument-style) ---
+const ICON_PIN = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.002-.001L10 18.43l-5.192-5.192a6.875 6.875 0 010-9.719l.001-.001c2.7-2.7 7.075-2.7 9.774 0l.001.001a6.875 6.875 0 010 9.719L10 18.43zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>`;
+const ICON_CAL = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.75 3A2.25 2.25 0 003.5 5.25v9.5A2.25 2.25 0 005.75 17h8.5A2.25 2.25 0 0016.5 14.75v-9.5A2.25 2.25 0 0014.25 3h-8.5zM5 5.25c0-.414.336-.75.75-.75h8.5c.414 0 .75.336.75.75v9.5c0 .414-.336.75-.75.75h-8.5a.75.75 0 01-.75-.75v-9.5z" clip-rule="evenodd" /><path d="M7 8.5h2v2H7v-2zm0 3h2v2H7v-2zm4-3h2v2h-2v-2z" /></svg>`;
 
 // --- Create Conference Cards ---
-function createConferenceCard(conference) {
+function createConferenceCard(conference, index = 0) {
   const card = document.createElement('div');
   card.id = `card-${conference.id}`;
-  card.className = 'card-gradient p-6 rounded-xl shadow-2xl flex flex-col justify-between transform hover:scale-[1.02] transition-transform duration-300';
+  card.className = 'conf-card' + (conference.isApproximateDeadline ? ' is-approx' : '');
+  card.style.animationDelay = `${Math.min(index, 12) * 45}ms`;
   card.tabIndex = 0;
 
   const isApprox = conference.isApproximateDeadline || false;
   const approxDateFormatting = { monthYearOnly: true, displayTimezoneIana: conference.timezone || 'UTC' };
   const preciseDeadlineFormat = { includeTime: true, includeTimezoneName: true, displayTimezoneIana: conference.timezone || 'UTC' };
-  const conferenceDayFormat = { displayTimezoneIana: conference.timezone || 'UTC' }; // Display conference days in its timezone or UTC
+  const conferenceDayFormat = { displayTimezoneIana: conference.timezone || 'UTC' };
 
-  let metaInfoHTML = '<div class="conference-meta-info">';
-  let hasMeta = false;
+  // eyebrow: CORE rating + h5-index
+  let eyebrowParts = [];
   if (conference.rating) {
-    metaInfoHTML += `<span><span class="label">Rating:</span> ${conference.rating}</span>`;
-    hasMeta = true;
+    const top = ratingOrder[conference.rating] >= ratingOrder['A'];
+    eyebrowParts.push(`<span class="conf-rank${top ? ' rank-top' : ''}">CORE&nbsp;<b>${conference.rating}</b></span>`);
   }
   if (conference.h5Index !== undefined) {
-    metaInfoHTML += `<span><span class="label">h5-index:</span> ${conference.h5Index}</span>`;
-    hasMeta = true;
+    eyebrowParts.push(`<span class="conf-rank">h5&nbsp;<b>${conference.h5Index}</b></span>`);
   }
-  metaInfoHTML += '</div>';
-  if (!hasMeta) metaInfoHTML = '';
+  const eyebrowHTML = eyebrowParts.length
+    ? `<div class="conf-eyebrow">${eyebrowParts.join('')}</div>` : '';
 
-  let placeInfo = '';
-  if (conference.location) {
-    placeInfo = `<p class="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
-                            <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.002-.001L10 18.43l-5.192-5.192a6.875 6.875 0 010-9.719l.001-.001c2.7-2.7 7.075-2.7 9.774 0l.001.001a6.875 6.875 0 010 9.719L10 18.43zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
-                        ${conference.location}
-                    </p>`;
-  }
-
-  let conferenceDateText;
-  const confStartFormat = isApprox ? approxDateFormatting : conferenceDayFormat;
-  if (isApprox) {
-    conferenceDateText = `Dates: ~${formatDate(conference.conferenceStartDate, confStartFormat)}`;
-  } else {
-    conferenceDateText = `Dates: ${formatDate(conference.conferenceStartDate, confStartFormat)}`;
-    if (conference.conferenceEndDate && conference.conferenceEndDate !== conference.conferenceStartDate) {
-      const confEndFormat = isApprox ? approxDateFormatting : conferenceDayFormat;
-      conferenceDateText += ` - ${isApprox ? '~' : ''}${formatDate(conference.conferenceEndDate, confEndFormat)}`;
-    }
-  }
-
-  const conferenceDatesHTML = `
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 inline-block mr-1 align-text-bottom">
-                <path fill-rule="evenodd" d="M5.75 3A2.25 2.25 0 003.5 5.25v9.5A2.25 2.25 0 005.75 17h8.5A2.25 2.25 0 0016.5 14.75v-9.5A2.25 2.25 0 0014.25 3h-8.5zM5 5.25c0-.414.336-.75.75-.75h8.5c.414 0 .75.336.75.75v9.5c0 .414-.336.75-.75.75h-8.5a.75.75 0 01-.75-.75v-9.5z" clip-rule="evenodd" />
-                <path fill-rule="evenodd" d="M10 7a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 0110 7zM5 1a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H5.75A.75.75 0 015 1zm8.5 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-            </svg>
-            ${conferenceDateText}
-        </p>`;
-
-  let noteInfo = '';
-  if (conference.note) {
-    noteInfo = `<p class="text-gray-600 dark:text-gray-300 text-sm mt-2 mb-1 leading-relaxed">${conference.note}</p>`;
-  }
-
-  const urgencyBadge = getUrgencyBadge(conference);
-
-  let tagsHTML = '';
-  if (conference.tags && conference.tags.length > 0) {
-    tagsHTML = '<div class="mt-3 mb-2 flex flex-wrap">';
-    conference.tags.forEach(tag => {
-      tagsHTML += `<span class="conference-tag">${tag}</span>`;
-    });
-    if (urgencyBadge) {
-      tagsHTML += urgencyBadge;
-    }
-    tagsHTML += '</div>';
-  } else if (urgencyBadge) {
-    tagsHTML = `<div class="mt-3 mb-2 flex flex-wrap">${urgencyBadge}</div>`;
-  }
-
-  const mainDeadlineCountdownHTML = `<div id="countdown-deadline-${conference.id}" class="deadline-section${conference.abstractDeadline ? '' : ' mb-auto'}"></div>`;
-  const deadlineLabelText = isApprox ? "Approx. Full Paper Submission" : "Full Paper Submission";
-  const deadlineDateTextSuffix = isApprox ? " (Approx.)" : "";
-
-  const mainDeadlineFormatOptions = isApprox
-    ? approxDateFormatting
-    : preciseDeadlineFormat;
-  const mainDeadlineText = isApprox
-    ? `~${formatDate(conference.deadline, mainDeadlineFormatOptions)}`
-    : formatDate(conference.deadline, mainDeadlineFormatOptions);
-  const mainDeadlineTextHTML = `<p class="deadline-date-text${conference.abstractDeadline ? '' : ' mb-auto'}">Deadline: ${mainDeadlineText}${deadlineDateTextSuffix}</p>`;
-
-  let abstractDeadlineSectionHTML = '';
-  if (conference.abstractDeadline) {
-    const abstractFormatOptions = isApprox ? approxDateFormatting : preciseDeadlineFormat;
-    const abstractDateText = isApprox
-      ? `~${formatDate(conference.abstractDeadline, abstractFormatOptions)}`
-      : formatDate(conference.abstractDeadline, abstractFormatOptions);
-    const abstractSuffix = isApprox ? " (Approx.)" : "";
-
-    const mainPassed = !isApprox && new Date(conference.deadline).getTime() < new Date().getTime();
-    const abstractStillOpen = mainPassed && new Date(conference.abstractDeadline).getTime() > new Date().getTime();
-
-    if (abstractStillOpen) {
-      abstractDeadlineSectionHTML = `<div class="mt-2"> 
-                                            <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
-                                            <p class="deadline-date-text text-sm text-pink-600 dark:text-pink-300">Abstract: ${abstractDateText}${abstractSuffix}</p>
-                                       </div>`;
-    } else {
-      abstractDeadlineSectionHTML = `<div class="mt-2"> 
-                                            <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
-                                            <p class="deadline-date-text text-sm">Abstract Deadline: ${abstractDateText}${abstractSuffix}</p>
-                                       </div>`;
-    }
-  } else {
-    abstractDeadlineSectionHTML = '';
-  }
-
-  let websiteLinkHTML;
-  if (isApprox) {
-    websiteLinkHTML = `
-        <a href="#" 
-           class="block w-full mt-4 bg-gray-500 text-gray-300 font-semibold text-center py-3 px-4 rounded-lg cursor-not-allowed opacity-70 shadow-md">
-            Visit Conference Site
-        </a>`;
-  } else if (!conference.website) {
-    websiteLinkHTML = `
-        <a href="#" 
-           class="block w-full mt-4 bg-gray-400 text-gray-200 font-semibold text-center py-3 px-4 rounded-lg cursor-not-allowed opacity-60 shadow-md">
-            Site Not Available
-        </a>`;
-  } else {
-    websiteLinkHTML = `
-        <a href="${conference.website}" target="_blank" rel="noopener noreferrer"
-           class="block w-full mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold text-center py-3 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg">
-            Visit Conference Site
-        </a>`;
-  }
-
+  // title: shortname prominent, full title as a quiet mono subtitle
   let titleHTML = '';
-  if (conference.title && conference.shortname) {
-    titleHTML = `
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.title} (${conference.shortname})</h2>`
-  } else if (conference.title) {
-    titleHTML = `
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.title}</h2>`
-  } else if (conference.shortname) {
-    titleHTML = `
-      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-1">${conference.shortname}</h2>`
+  const shortname = conference.shortname;
+  const fullTitle = conference.title;
+  if (shortname && fullTitle) {
+    titleHTML = `<h2 class="conf-title">${shortname}<span class="full">${fullTitle}</span></h2>`;
+  } else if (fullTitle) {
+    titleHTML = `<h2 class="conf-title">${fullTitle}</h2>`;
+  } else if (shortname) {
+    titleHTML = `<h2 class="conf-title">${shortname}</h2>`;
+  }
+
+  // meta: location + conference dates
+  let conferenceDateText;
+  if (isApprox) {
+    conferenceDateText = `~${formatDate(conference.conferenceStartDate, approxDateFormatting)}`;
+  } else {
+    conferenceDateText = formatDate(conference.conferenceStartDate, conferenceDayFormat);
+    if (conference.conferenceEndDate && conference.conferenceEndDate !== conference.conferenceStartDate) {
+      conferenceDateText += ` – ${formatDate(conference.conferenceEndDate, conferenceDayFormat)}`;
+    }
+  }
+  let metaRows = '';
+  if (conference.location) {
+    metaRows += `<div class="conf-meta-row">${ICON_PIN}<span>${conference.location}</span></div>`;
+  }
+  if (conference.conferenceStartDate) {
+    metaRows += `<div class="conf-meta-row">${ICON_CAL}<span>${conferenceDateText}</span></div>`;
+  }
+  const metaHTML = metaRows ? `<div class="conf-meta">${metaRows}</div>` : '';
+
+  // tags + urgency badge
+  let tagsHTML = '';
+  const urgencyBadge = isApprox ? '' : getUrgencyBadge(conference);
+  if ((conference.tags && conference.tags.length) || urgencyBadge) {
+    tagsHTML = '<div class="conf-tags">';
+    (conference.tags || []).forEach(tag => { tagsHTML += `<span class="conf-tag">${tag}</span>`; });
+    tagsHTML += urgencyBadge;
+    tagsHTML += '</div>';
+  }
+
+  const noteHTML = conference.note ? `<p class="conf-note">${conference.note}</p>` : '';
+
+  // ---- foot: countdown + deadline line + abstract + CTA ----
+  const deadlineLabel = isApprox ? 'Est. paper deadline' : 'Paper deadline';
+  const mainDeadlineFmt = isApprox ? approxDateFormatting : preciseDeadlineFormat;
+  const mainDeadlineText = (isApprox ? '~' : '') + formatDate(conference.deadline, mainDeadlineFmt);
+  const deadlineLineHTML =
+    `<p class="deadline-date-text">Deadline: <b>${mainDeadlineText}${isApprox ? ' (est.)' : ''}</b></p>`;
+
+  let abstractHTML = '';
+  if (conference.abstractDeadline) {
+    const abstractFmt = isApprox ? approxDateFormatting : preciseDeadlineFormat;
+    const abstractText = (isApprox ? '~' : '') + formatDate(conference.abstractDeadline, abstractFmt);
+    abstractHTML = `
+      <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
+      <p class="deadline-date-text">Abstract: <b>${abstractText}${isApprox ? ' (est.)' : ''}</b></p>`;
+  }
+
+  let ctaHTML;
+  if (isApprox) {
+    ctaHTML = `<span class="conf-cta disabled">Estimated — no site yet</span>`;
+  } else if (!conference.website) {
+    ctaHTML = `<span class="conf-cta disabled">Site not available</span>`;
+  } else {
+    ctaHTML = `<a href="${conference.website}" target="_blank" rel="noopener noreferrer" class="conf-cta">Visit site <span class="arrow">→</span></a>`;
   }
 
   card.innerHTML = `
-        <div>
-            ${titleHTML}
-            ${metaInfoHTML}
-            ${placeInfo}
-            ${conferenceDatesHTML}
-            ${noteInfo}
-            ${tagsHTML}
-        </div>
-        <div class="mt-auto">
-            ${mainDeadlineCountdownHTML}
-            ${mainDeadlineTextHTML}
-            ${abstractDeadlineSectionHTML}
-            ${websiteLinkHTML}
-        </div>
-    `;
+    <div>
+      ${eyebrowHTML}
+      ${titleHTML}
+      ${metaHTML}
+      ${tagsHTML}
+      ${noteHTML}
+    </div>
+    <div class="conf-foot">
+      <div id="countdown-deadline-${conference.id}" class="deadline-section"></div>
+      ${deadlineLineHTML}
+      ${abstractHTML}
+      ${ctaHTML}
+    </div>`;
   conferenceGrid.appendChild(card);
 
-  const eventDate = new Date(conference.deadline).getTime();
-  const now = new Date().getTime();
-  const urgencyClass = !isApprox ? getUrgencyClass(eventDate - now) : '';
+  if (!isApprox) applyUrgency(card, conference.deadline);
 
-  updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, isApprox, urgencyClass);
-
+  updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabel, isApprox);
   if (conference.abstractDeadline && !isApprox) {
-    updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, "Abstract");
+    updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, 'Abstract');
   }
 
   if (!isApprox) {
     const intervalId = setInterval(() => {
-      const timeLeft = new Date(conference.deadline).getTime() - new Date().getTime();
-      const newUrgencyClass = getUrgencyClass(timeLeft);
-      updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabelText, false, newUrgencyClass);
-
+      applyUrgency(card, conference.deadline);
+      updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabel, false);
       if (conference.abstractDeadline) {
-        updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, "Abstract");
+        updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, 'Abstract');
       }
     }, 1000);
     card.dataset.intervalId = intervalId;
+  }
+}
+
+// --- Featured "Deadline to watch" ticker ---
+// Feature the deadline most worth watching, not merely the soonest. Prestige
+// (CORE rating, nudged by h5-index) is weighed against how far away the deadline
+// is: a top-tier conference a few weeks out can outrank a minor one due in days,
+// but an imminent deadline still wins once it's close enough.
+const RATING_WEIGHT = { "A*": 8, "A": 5, "B": 3, "C": 1, "D": 0.5 };
+const WATCH_TAU_DAYS = 30; // patience for prestige — larger looks further ahead
+
+function conferenceImportance(c) {
+  let score = RATING_WEIGHT[c.rating] ?? 1; // unrated → treat as ~C
+  if (typeof c.h5Index === 'number') score += c.h5Index / 120;
+  return score;
+}
+
+function watchScore(c, now) {
+  const days = (new Date(c.deadline).getTime() - now) / DAY_MS;
+  if (days <= 0) return -Infinity;
+  return conferenceImportance(c) * Math.exp(-days / WATCH_TAU_DAYS);
+}
+
+function pickNextDeadline() {
+  const now = Date.now();
+  let best = null, bestScore = -Infinity;
+  for (const c of upcomingConferencesData) {
+    if (c.isApproximateDeadline || !c.deadline) continue;
+    const score = watchScore(c, now);
+    if (score > bestScore) { bestScore = score; best = c; }
+  }
+  return best;
+}
+
+function renderNextUp() {
+  if (!nextUpEl) return;
+  nextUpConference = pickNextDeadline();
+
+  if (!nextUpConference) {
+    nextUpEl.classList.remove('is-soon', 'is-critical');
+    nextUpEl.innerHTML = `
+      <div class="next-up-top">
+        <span class="next-up-label"><span class="led" aria-hidden="true"></span> Deadline to watch</span>
+      </div>
+      <p class="next-up-empty">No upcoming confirmed deadlines right now. Enable “Show estimated” to see what's coming.</p>`;
+    return;
+  }
+
+  const c = nextUpConference;
+  const name = c.shortname || c.title || 'Conference';
+  const when = formatDate(c.deadline, { includeTime: true, includeTimezoneName: true, displayTimezoneIana: c.timezone || 'UTC' });
+  nextUpEl.innerHTML = `
+    <div class="next-up-top">
+      <span class="next-up-label"><span class="led" aria-hidden="true"></span> Deadline to watch</span>
+    </div>
+    <div class="next-up-name">${name}</div>
+    <div class="next-up-sub">Paper submission · ${when}</div>
+    <div class="next-up-clock" id="nextUpClock" aria-hidden="true"></div>`;
+  updateNextUp();
+}
+
+function updateNextUp() {
+  if (!nextUpConference || !nextUpEl) return;
+  const timeLeft = new Date(nextUpConference.deadline).getTime() - Date.now();
+
+  if (timeLeft <= 0) { renderNextUp(); return; }
+
+  // Mirror the per-card urgency colour so the hero and its card always match.
+  const u = urgencyClassFor(timeLeft);
+  nextUpEl.classList.remove('is-upcoming', 'is-soon', 'is-critical');
+  if (u && u !== 'is-past') nextUpEl.classList.add(u);
+
+  const clock = document.getElementById('nextUpClock');
+  if (!clock) return;
+  const { days, hours, minutes, seconds } = breakdown(timeLeft);
+  clock.innerHTML = `
+    <div class="nu-cell"><span class="v">${pad(days)}</span><span class="u">days</span></div>
+    <div class="nu-cell"><span class="v">${pad(hours)}</span><span class="u">hrs</span></div>
+    <div class="nu-cell"><span class="v">${pad(minutes)}</span><span class="u">min</span></div>
+    <div class="nu-cell"><span class="v">${pad(seconds)}</span><span class="u">sec</span></div>`;
+}
+
+// --- Live "Anywhere on Earth" clock ---
+function updateAoeClock() {
+  if (!aoeClockEl) return;
+  aoeClockEl.textContent = new Date().toLocaleTimeString('en-GB', {
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+    timeZone: 'Etc/GMT+12', hour12: false
+  });
+}
+
+// --- Hero stats ---
+function updateHeroStats() {
+  if (statTrackedEl) statTrackedEl.textContent = upcomingConferencesData.length;
+  if (statWeekEl) {
+    const now = Date.now();
+    const count = upcomingConferencesData.filter(c => {
+      if (c.isApproximateDeadline || !c.deadline) return false;
+      const t = new Date(c.deadline).getTime() - now;
+      return t > 0 && t < 7 * DAY_MS;
+    }).length;
+    statWeekEl.textContent = count;
   }
 }
 
@@ -452,13 +479,10 @@ function populateTagFilter(sourceConferences) {
   if (!tagFilterContainer) return;
   const allTags = new Set();
   sourceConferences.forEach(conf => {
-    if (conf.tags) {
-      conf.tags.forEach(tag => allTags.add(tag));
-    }
+    if (conf.tags) conf.tags.forEach(tag => allTags.add(tag));
   });
 
   tagFilterContainer.innerHTML = '';
-  let initialActiveButton = null;
 
   const allButton = document.createElement('button');
   allButton.textContent = 'All Conferences';
@@ -470,32 +494,21 @@ function populateTagFilter(sourceConferences) {
     applyAllFilters();
   });
   tagFilterContainer.appendChild(allButton);
-  if (!currentFilterSettings.selectedTags) {
-    initialActiveButton = allButton;
-  }
 
   Array.from(allTags).sort().forEach(tag => {
     const button = document.createElement('button');
     button.textContent = tag;
     button.className = 'tag-button';
-    if (tag === currentFilterSettings.selectedTags) {
-      initialActiveButton = button;
-    }
     button.addEventListener('click', () => {
-      // Clicking a normal tag while "All" is active → deselect "All"
       currentFilterSettings.selectedTags.delete("ALL");
-
       if (currentFilterSettings.selectedTags.has(tag)) {
         currentFilterSettings.selectedTags.delete(tag);
       } else {
         currentFilterSettings.selectedTags.add(tag);
       }
-
-      // If no tag is selected → activate "ALL"
       if (currentFilterSettings.selectedTags.size === 0) {
         currentFilterSettings.selectedTags.add("ALL");
       }
-
       setActiveTagButtons();
       applyAllFilters();
     });
@@ -507,10 +520,8 @@ function populateTagFilter(sourceConferences) {
 
 function setActiveTagButtons() {
   const buttons = Array.from(tagFilterContainer.children);
-
   buttons.forEach(btn => {
     const tag = btn.textContent;
-
     if (tag === "All Conferences") {
       btn.classList.toggle('active', currentFilterSettings.selectedTags.has("ALL"));
     } else {
@@ -552,15 +563,11 @@ function renderConferences(
 
   Array.from(conferenceGrid.children).forEach(card => {
     const intervalId = card.dataset.intervalId;
-    if (intervalId) {
-      clearInterval(Number(intervalId));
-    }
+    if (intervalId) clearInterval(Number(intervalId));
   });
   conferenceGrid.innerHTML = '';
 
-  if (loadingState) {
-    loadingState.style.display = 'none';
-  }
+  if (loadingState) loadingState.style.display = 'none';
 
   let filteredConferences = [...sourceConferenceData];
   const now = new Date();
@@ -605,8 +612,7 @@ function renderConferences(
 
   if (!currentFilterSettings.selectedTags.has("ALL")) {
     filteredConferences = filteredConferences.filter(conf =>
-      conf.tags &&
-      conf.tags.some(t => currentFilterSettings.selectedTags.has(t))
+      conf.tags && conf.tags.some(t => currentFilterSettings.selectedTags.has(t))
     );
   }
 
@@ -616,7 +622,6 @@ function renderConferences(
     const deadlineB = new Date(b.deadline).getTime();
     const aIsPastDeadline = deadlineA < nowTimestamp;
     const bIsPastDeadline = deadlineB < nowTimestamp;
-
     if (aIsPastDeadline && !bIsPastDeadline) return 1;
     if (!aIsPastDeadline && bIsPastDeadline) return -1;
     return deadlineA - deadlineB;
@@ -624,16 +629,16 @@ function renderConferences(
 
   if (filteredConferences.length === 0) {
     conferenceGrid.innerHTML = `
-            <div class="empty-state">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <h3>No conferences found</h3>
-                <p>Try adjusting your filters to see more results.</p>
-            </div>`;
+      <div class="empty-state">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <h3>Nothing matches those filters</h3>
+        <p>Widen the rating, clear the search, or turn on “Show estimated”.</p>
+      </div>`;
     return;
   }
-  filteredConferences.forEach(createConferenceCard);
+  filteredConferences.forEach((conf, i) => createConferenceCard(conf, i));
 }
 
 // --- Data Loading ---
@@ -642,10 +647,12 @@ async function loadInitialData() {
     const response = await fetch('data/conferences.json');
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status} for upcoming conferences`);
     upcomingConferencesData = await response.json();
+    updateHeroStats();
+    renderNextUp();
     applyAllFilters();
   } catch (error) {
     console.error("Failed to load upcoming conferences:", error);
-    showModal("Error", "Could not load upcoming conference data. Please check data/conferences.json.");
+    showModal("Couldn't load deadlines", "The conference data didn't load. Check your connection and refresh, or report it on GitHub.");
   }
 }
 
@@ -658,18 +665,15 @@ async function loadArchiveDataIfNeededAndRender() {
     } catch (error) {
       console.error("Failed to load archive conferences:", error);
       archiveConferencesData = [];
-      showModal("Error", "Could not load past conference data. Please check data/conferences_archive.json.");
+      showModal("Couldn't load the archive", "Past conference data didn't load. Check your connection and refresh.");
     }
   }
   applyAllFilters();
 }
 
-
 // --- Event Listeners Setup ---
 function setupEventListeners() {
-  if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
-  }
+  if (currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
 
   if (filterToggle && filterControls) {
     filterToggle.addEventListener('click', () => {
@@ -680,16 +684,11 @@ function setupEventListeners() {
   }
 
   document.addEventListener('keydown', function (event) {
-    // Check if the 'f' key is pressed along with Ctrl (for Windows/Linux) or Command (for macOS)
     if (event.key === 'f' && (event.ctrlKey || event.metaKey)) {
-      // Prevent the browser's default "Find" action
       event.preventDefault();
-
-      // Focus the conference name filter input field
-      if (conferenceNameFilterInput) {
-        conferenceNameFilterInput.focus();
-      }
+      if (conferenceNameFilterInput) conferenceNameFilterInput.focus();
     }
+    if (event.key === 'Escape' && messageModal) messageModal.classList.remove('is-open');
   });
 
   if (showPastToggle) {
@@ -745,6 +744,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (minRatingSelect) currentFilterSettings.minRating = minRatingSelect.value;
   if (conferenceNameFilterInput) currentFilterSettings.nameFilter = conferenceNameFilterInput.value;
+
+  updateAoeClock();
+  setInterval(updateAoeClock, 1000);
+  nextUpIntervalId = setInterval(updateNextUp, 1000);
 
   setupEventListeners();
   loadInitialData();

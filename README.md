@@ -94,3 +94,50 @@ Don't want to use the command line? No problem! You can edit files and create a 
 5. **Create the Pull Request:** You will be taken to a new page. All you need to do here is click the green **"Create pull request"** button.
 
 And that's it! 🎉 You've successfully submitted a contribution. We will be notified and can review your changes. Thank you for helping keep the list accurate for everyone!
+
+---
+
+## How the "Deadline to watch" is chosen
+
+The website's hero highlights a single **Deadline to watch**. This is *not* simply the
+next deadline on the calendar — a minor workshop due tomorrow usually matters less than a
+top-tier conference due in a few weeks. Instead, every confirmed upcoming deadline is
+scored by **importance × urgency**, and the highest score wins:
+
+```
+score = importance × exp(−days_until_deadline / 30)
+
+importance = RATING_WEIGHT[rating] + h5Index / 120
+RATING_WEIGHT = { "A*": 8, "A": 5, "B": 3, "C": 1, "D": 0.5 }   // unrated ≈ C (1)
+```
+
+- **Importance** rewards prestige. The CORE `rating` is the main signal; the Google Scholar
+  `h5Index` is a gentle nudge on top, so strongly-cited (or unrated-but-notable) venues
+  aren't overlooked.
+- **Urgency** is the `exp(−days / 30)` term: a smooth decay that approaches `1` for an
+  imminent deadline and shrinks as the deadline moves further out. The `30` is a "patience"
+  constant (`WATCH_TAU_DAYS` in [`aideadlines/scripts.js`](./aideadlines/scripts.js)) —
+  larger values look further ahead for prestige; smaller values favor whatever is soonest.
+
+Only **confirmed** deadlines are eligible. Estimated/approximate entries
+(`isApproximateDeadline: true`) are excluded, because their dates are only accurate to the
+month and a live ticking countdown would be misleading.
+
+### Worked example
+
+Given four upcoming conferences, the scores work out like this:
+
+| Conference | Rating | h5  | Days away | importance | exp(−days/30) | **score** |
+| :--------- | :----: | :-: | :-------: | :--------: | :-----------: | :-------: |
+| AAAI 2027  |  A\*   | 232 |    29     |    9.93    |     0.38      | **3.78** ✅ |
+| ICTAI 2026 |   B    |  –  |     2     |    3.00    |     0.94      |   2.81    |
+| ACCV 2026  |   B    | 52  |     7     |    3.43    |     0.79      |   2.72    |
+| CHI 2027   |  A\*   |  –  |    74     |    8.00    |     0.09      |   0.68    |
+
+**AAAI** wins even though **ICTAI** is due far sooner: the A\* rating and high h5-index
+outweigh ICTAI's head start. But the margin is small (3.78 vs 2.81) — if no A\*/A deadline
+were within reach, the imminent B-rated ICTAI would take the spot. And **CHI**, despite
+being A\*, scores low because it's still 74 days out.
+
+> **Rule of thumb:** an imminent deadline wins once it's close enough, but a clearly more
+> important conference can "jump the queue" if it's within roughly two months.
