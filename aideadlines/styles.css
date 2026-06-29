@@ -59,10 +59,10 @@ ul { list-style: none; }
   --muted:      #56627A;
   --faint:      #8B95A6;
 
-  --accent:     #B8780C;   /* amber / "this month" — also brand       */
+  --accent:     #E3A52B;   /* amber / "this month" (a touch darker)   */
   --accent-ink: #2A2007;   /* dark text on amber (AA on the CTA)      */
   --cool:       #0C8B77;   /* far / plenty of time (teal)             */
-  --warn:       #E0500F;   /* this week (vivid orange, clear of amber)*/
+  --warn:       #D83A18;   /* this week (red-orange, clear of amber)  */
   --hot:        #C8161D;   /* < 24h (red)                             */
 
   --cd-bg:      #F1F4F8;
@@ -80,10 +80,10 @@ ul { list-style: none; }
 /* ---- Tokens: dark (signature) ----------------------------------------- */
 .dark {
   --ink:        #0E1116;
-  --panel:      #151A21;
-  --panel-2:    #1B222B;
-  --line:       #28313C;
-  --line-2:     #3A4651;
+  --panel:      #1C232E;
+  --panel-2:    #242D39;
+  --line:       #303A46;
+  --line-2:     #414D5A;
   --text:       #EDF1F7;
   --muted:      #B6C0CE;
   --faint:      #909BAB;
@@ -392,9 +392,9 @@ body {
   white-space: nowrap;
 }
 .filter-input, .filter-select {
-  background: var(--panel-2);
+  background: var(--ink);
   color: var(--text);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-2);
   border-radius: 7px;
   padding: .4rem .6rem;
   font-family: var(--font-mono);
