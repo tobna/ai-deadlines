@@ -372,12 +372,35 @@ function createConferenceCard(conference, index = 0) {
   }
 }
 
-// --- Featured "Next Deadline" ticker ---
+// --- Featured "Deadline to watch" ticker ---
+// Feature the deadline most worth watching, not merely the soonest. Prestige
+// (CORE rating, nudged by h5-index) is weighed against how far away the deadline
+// is: a top-tier conference a few weeks out can outrank a minor one due in days,
+// but an imminent deadline still wins once it's close enough.
+const RATING_WEIGHT = { "A*": 8, "A": 5, "B": 3, "C": 1, "D": 0.5 };
+const WATCH_TAU_DAYS = 30; // patience for prestige — larger looks further ahead
+
+function conferenceImportance(c) {
+  let score = RATING_WEIGHT[c.rating] ?? 1; // unrated → treat as ~C
+  if (typeof c.h5Index === 'number') score += c.h5Index / 120;
+  return score;
+}
+
+function watchScore(c, now) {
+  const days = (new Date(c.deadline).getTime() - now) / DAY_MS;
+  if (days <= 0) return -Infinity;
+  return conferenceImportance(c) * Math.exp(-days / WATCH_TAU_DAYS);
+}
+
 function pickNextDeadline() {
   const now = Date.now();
-  return upcomingConferencesData
-    .filter(c => !c.isApproximateDeadline && c.deadline && new Date(c.deadline).getTime() > now)
-    .sort((a, b) => new Date(a.deadline) - new Date(b.deadline))[0] || null;
+  let best = null, bestScore = -Infinity;
+  for (const c of upcomingConferencesData) {
+    if (c.isApproximateDeadline || !c.deadline) continue;
+    const score = watchScore(c, now);
+    if (score > bestScore) { bestScore = score; best = c; }
+  }
+  return best;
 }
 
 function renderNextUp() {
@@ -388,7 +411,7 @@ function renderNextUp() {
     nextUpEl.classList.remove('is-soon', 'is-critical');
     nextUpEl.innerHTML = `
       <div class="next-up-top">
-        <span class="next-up-label"><span class="led" aria-hidden="true"></span> Next deadline</span>
+        <span class="next-up-label"><span class="led" aria-hidden="true"></span> Deadline to watch</span>
       </div>
       <p class="next-up-empty">No upcoming confirmed deadlines right now. Enable “Show estimated” to see what's coming.</p>`;
     return;
@@ -399,7 +422,7 @@ function renderNextUp() {
   const when = formatDate(c.deadline, { includeTime: true, includeTimezoneName: true, displayTimezoneIana: c.timezone || 'UTC' });
   nextUpEl.innerHTML = `
     <div class="next-up-top">
-      <span class="next-up-label"><span class="led" aria-hidden="true"></span> Next deadline</span>
+      <span class="next-up-label"><span class="led" aria-hidden="true"></span> Deadline to watch</span>
     </div>
     <div class="next-up-name">${name}</div>
     <div class="next-up-sub">Paper submission · ${when}</div>
