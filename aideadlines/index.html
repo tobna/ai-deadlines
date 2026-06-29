@@ -71,8 +71,8 @@
           </div>
         </div>
 
-        <!-- featured "next deadline" ticker, filled by JS -->
-        <div id="nextUp" class="next-up" aria-live="polite">
+        <!-- featured "deadline to watch" ticker, filled by JS -->
+        <div id="nextUp" class="next-up">
           <div class="next-up-top">
             <span class="next-up-label"><span class="led" aria-hidden="true"></span> Deadline to watch</span>
           </div>
@@ -117,11 +117,11 @@
           <label for="minRating" class="filter-label">Min rating</label>
           <select id="minRating" name="minRating" class="filter-select">
             <option value="">all</option>
-            <option value="A*">A* +</option>
-            <option value="A">A +</option>
-            <option value="B">B +</option>
-            <option value="C" selected>C +</option>
-            <option value="D">D +</option>
+            <option value="A*">&gt;= A*</option>
+            <option value="A">&gt;= A</option>
+            <option value="B">&gt;= B</option>
+            <option value="C" selected>&gt;= C</option>
+            <option value="D">&gt;= D</option>
           </select>
         </div>
       </div>

@@ -59,11 +59,11 @@ ul { list-style: none; }
   --muted:      #56627A;
   --faint:      #8B95A6;
 
-  --accent:     #B8780C;   /* amber, darkened for light bg            */
-  --accent-ink: #FFFFFF;
-  --cool:       #0C8B77;   /* far / plenty of time                    */
-  --warn:       #C85316;   /* this week                               */
-  --hot:        #D62121;   /* < 24h                                   */
+  --accent:     #B8780C;   /* amber / "this month" — also brand       */
+  --accent-ink: #2A2007;   /* dark text on amber (AA on the CTA)      */
+  --cool:       #0C8B77;   /* far / plenty of time (teal)             */
+  --warn:       #E0500F;   /* this week (vivid orange, clear of amber)*/
+  --hot:        #C8161D;   /* < 24h (red)                             */
 
   --cd-bg:      #F1F4F8;
   --grid-line:  rgba(16,21,28,.045);
@@ -88,11 +88,11 @@ ul { list-style: none; }
   --muted:      #B6C0CE;
   --faint:      #909BAB;
 
-  --accent:     #F4B740;
+  --accent:     #F4B740;   /* amber / "this month" — also brand       */
   --accent-ink: #15110A;
-  --cool:       #3FD0B6;
-  --warn:       #FF9244;
-  --hot:        #FF5C5C;
+  --cool:       #3FD0B6;   /* far (teal)                              */
+  --warn:       #FF7A33;   /* this week (orange, clear of amber)      */
+  --hot:        #FF5C5C;   /* < 24h (red)                             */
 
   --cd-bg:      #10151B;
   --grid-line:  rgba(255,255,255,.035);
@@ -284,13 +284,14 @@ body {
   box-shadow: var(--shadow);
   padding: 1.4rem 1.5rem 1.5rem;
   overflow: hidden;
-  --u: var(--accent);
+  --u: var(--cool);
 }
 .next-up::before {
   content: "";
   position: absolute; left: 0; top: 0; bottom: 0;
   width: 4px; background: var(--u);
 }
+.next-up.is-upcoming { --u: var(--accent); }
 .next-up.is-soon { --u: var(--warn); }
 .next-up.is-critical { --u: var(--hot); }
 .next-up-top {

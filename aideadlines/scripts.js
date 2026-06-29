@@ -426,7 +426,7 @@ function renderNextUp() {
     </div>
     <div class="next-up-name">${name}</div>
     <div class="next-up-sub">Paper submission · ${when}</div>
-    <div class="next-up-clock" id="nextUpClock"></div>`;
+    <div class="next-up-clock" id="nextUpClock" aria-hidden="true"></div>`;
   updateNextUp();
 }
 
@@ -436,9 +436,10 @@ function updateNextUp() {
 
   if (timeLeft <= 0) { renderNextUp(); return; }
 
+  // Mirror the per-card urgency colour so the hero and its card always match.
   const u = urgencyClassFor(timeLeft);
-  nextUpEl.classList.toggle('is-soon', u === 'is-soon' || u === 'is-upcoming');
-  nextUpEl.classList.toggle('is-critical', u === 'is-critical');
+  nextUpEl.classList.remove('is-upcoming', 'is-soon', 'is-critical');
+  if (u && u !== 'is-past') nextUpEl.classList.add(u);
 
   const clock = document.getElementById('nextUpClock');
   if (!clock) return;
