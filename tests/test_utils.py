@@ -11,6 +11,7 @@ import pytest
 from aideadlines.utils import (
     _parse_timestr,
     join_conferences,
+    normalize_timezone_for_js,
     parse_all_times,
     parse_stuff,
     unite_tags,
@@ -109,6 +110,20 @@ class TestJoinConferences:
 # --------------------------------------------------------------------------- #
 # unite_tags
 # --------------------------------------------------------------------------- #
+@pytest.mark.parametrize(
+    "raw,expected",
+    [
+        ("AoE", "Etc/GMT+12"),
+        ("UTC+5", "Etc/GMT-5"),  # POSIX sign flip
+        ("UTC-3", "Etc/GMT+3"),
+        ("Russia/Moscow", "Etc/GMT+3"),
+        ("Etc/GMT-2", "Etc/GMT-2"),  # already normalized -> unchanged
+    ],
+)
+def test_normalize_timezone_for_js(raw, expected):
+    assert normalize_timezone_for_js(raw) == expected
+
+
 def test_unite_tags_shares_sorted_union_across_group():
     group = {
         "a2025": {"id": "a2025", "tags": ["ML", "CV"], "timeline": []},

@@ -29,10 +29,9 @@ def test_max_approximations_caps_count(real_conf_pair, clone):
     assert list(fut.keys()) == ["abc2025"]
 
 
-def test_deadline_shift_current_leap_year_drift(real_conf_pair, clone):
-    # KNOWN BUG (Phase 3 target): timedelta(days=365) ignores leap years, so the 2024-01-15
-    # deadline drifts one day to 2025-01-14. This pins current behavior; update to
-    # 2025-01-15 once the calendar-aware shift lands.
+def test_deadline_shift_is_calendar_aware(real_conf_pair, clone):
+    # The calendar-aware relativedelta shift keeps the same month/day across leap years:
+    # 2024-01-15 -> 2025-01-15 (the old timedelta(days=365) drifted it to 2025-01-14).
     fut = estimate_future_conferences(clone(real_conf_pair), end_in_years=2, max_approximations=2)
     dl = fut["abc2025"]["timeline"][0]["deadline"]
-    assert dl.year == 2025 and dl.month == 1 and dl.day == 14
+    assert dl.year == 2025 and dl.month == 1 and dl.day == 15

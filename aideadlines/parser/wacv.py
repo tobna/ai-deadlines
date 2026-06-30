@@ -1,5 +1,4 @@
 import re
-from copy import deepcopy
 
 import requests
 from bs4 import BeautifulSoup
