@@ -63,13 +63,11 @@ def merge_one(conferences, new_conf, conf_id, src_name, reestimate_groups, overw
         conferences[conf_id] = join_conferences(slave=new_conf, master=conferences[conf_id])
 
 
-def merge_source(conferences, items, src_name, reestimate_groups, overwrite_equal=True, id_transform=None):
-    """Merge every record in ``items`` from one source into ``conferences``.
+def merge_source(conferences, items, src_name, reestimate_groups, overwrite_equal=True):
+    """Merge every record in ``items`` from one source into ``conferences`` by its ``id``.
 
-    ``id_transform`` optionally rewrites each record's id (e.g. ``nips`` -> ``neurips`` for
-    the ninoduarte feed). WACV round tagging is applied before merging.
+    WACV round tagging is applied before merging.
     """
     for item in items:
-        conf_id = item["id"] if id_transform is None else id_transform(item["id"])
-        tag_wacv_round(item, conf_id)
-        merge_one(conferences, item, conf_id, src_name, reestimate_groups, overwrite_equal=overwrite_equal)
+        tag_wacv_round(item, item["id"])
+        merge_one(conferences, item, item["id"], src_name, reestimate_groups, overwrite_equal=overwrite_equal)

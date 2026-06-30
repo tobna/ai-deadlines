@@ -102,15 +102,12 @@ def scrape_online(conferences, args, reestimate_groups):
 
     if args.load_nino_data:
         logger.info("load nino duarte data")
-        nino_confs = _safe_fetch("ninoduarte-git", get_nino_list)
-        merge_source(
-            conferences,
-            [parse_all_times(c) for c in nino_confs],
-            "ninoduarte-git",
-            reestimate_groups,
-            overwrite_equal=False,
-            id_transform=lambda i: i.replace("nips", "neurips"),
-        )
+        nino_items = []
+        for conf in _safe_fetch("ninoduarte-git", get_nino_list):
+            conf = parse_all_times(conf)
+            conf["id"] = conf["id"].replace("nips", "neurips")
+            nino_items.append(conf)
+        merge_source(conferences, nino_items, "ninoduarte-git", reestimate_groups, overwrite_equal=False)
     else:
         logger.info("skipping ninoduarte-git (not that reliable)")
 
@@ -158,7 +155,7 @@ def drop_empty_timelines(conferences):
 def write_groups(conferences, reestimate_groups, args):
     """Group by conference family, estimate future instances, attach ranks, and write YAML."""
     reestimate_groups = set(reestimate_groups)
-    add_conf_rank = make_conf_rank_function(online=False)  # google doesn't allow scraping of h5 data right now
+    add_conf_rank = make_conf_rank_function()
 
     conf_groups = {}
     for key, val in conferences.items():

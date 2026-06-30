@@ -85,15 +85,14 @@ class TestTagWacvRound:
         assert "note" not in c["timeline"][0]
 
 
-def test_merge_source_applies_id_transform():
+def test_merge_source_merges_each_item_by_its_id():
     conferences, groups = {}, []
     merge_source(
         conferences,
-        [{"id": "nips2025", "tags": ["ML"], "timeline": [{"deadline": "2025-01-01"}]}],
+        [{"id": "neurips2025", "tags": ["ML"], "timeline": [{"deadline": "2025-01-01"}]}],
         "ninoduarte-git",
         groups,
         overwrite_equal=False,
-        id_transform=lambda i: i.replace("nips", "neurips"),
     )
     assert "neurips2025" in conferences
     assert conferences["neurips2025"]["dataSrc"] == "ninoduarte-git"
