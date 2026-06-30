@@ -86,8 +86,8 @@ wacv2026:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2026/
 wacv2027:
-  conferenceEndDate: '2027-03-10'
-  conferenceStartDate: '2027-03-05'
+  conferenceEndDate: '2027-01-08'
+  conferenceStartDate: '2027-01-06'
   dataSrc: off-website
   h5Index: 131
   id: wacv2027
