@@ -3,6 +3,7 @@
 import pytest
 from bs4 import BeautifulSoup
 
+from aideadlines.parser import common_website
 from aideadlines.parser.ccf_deadlines import conference_from_ccf, parse_ccf_date_range
 from aideadlines.parser.common_website import extract_dates_from_soup
 from aideadlines.parser.hf_list import conference_from_hf
@@ -187,3 +188,63 @@ def test_extract_dates_from_soup_handles_missing_next_cell():
     soup = BeautifulSoup(html, "html.parser")
     data = extract_dates_from_soup({"timeline": [{}]}, soup)
     assert "deadline" not in data["timeline"][0]
+
+
+# --------------------------------------------------------------------------- #
+# common_website factory — pins the metadata of the deduplicated parsers so the
+# config-driven factory can't silently drift from the 5 originals it replaced.
+# Network is mocked; the live behavior is exercised separately, not in CI.
+# --------------------------------------------------------------------------- #
+_FAKE_DATES_HTML = """
+<table>
+  <tr><td>Paper Submission Deadline</td><td>March 1, 2025</td></tr>
+  <tr><td>Main Conference Day</td><td>June 10, 2025</td></tr>
+</table>
+"""
+
+
+def _website_parser(name):
+    return {p.__name__: p for p in common_website.PARSER}[name]
+
+
+@pytest.fixture
+def fake_dates_page(monkeypatch):
+    monkeypatch.setattr(
+        common_website, "fetch_soup", lambda url, **kw: BeautifulSoup(_FAKE_DATES_HTML, "html.parser")
+    )
+
+
+@pytest.mark.parametrize(
+    "name,year,cid,short,title,tag",
+    [
+        ("parse_cvpr", 2025, "cvpr2025", "CVPR 2025", "Computer Vision and Pattern Recognition Conference", "CV"),
+        ("parse_neurips", 2025, "neurips2025", "NeurIPS 2025", "Neural Information Processing Systems", "ML"),
+        ("parse_icml", 2025, "icml2025", "ICML 2025", "International Conference on Machine Learning", "ML"),
+        ("parse_iccv", 2025, "iccv2025", "ICCV 2025", "International Conference on Computer Vision", "CV"),
+        ("parse_eccv", 2024, "eccv2024", "ECCV 2024", "European Conference on Computer Vision", "CV"),
+    ],
+)
+def test_website_factory_metadata(fake_dates_page, name, year, cid, short, title, tag):
+    d = _website_parser(name)(year)
+    assert d["id"] == cid
+    assert d["shortname"] == short
+    assert d["title"] == title
+    assert d["tags"] == [tag]
+    assert d["website"].startswith("https://")
+    assert d["timeline"][0]["deadline"].strip() == "March 1, 2025"
+    assert d["conferenceStartDate"].strip() == "June 10, 2025"
+
+
+def test_iccv_skips_even_years():
+    assert _website_parser("parse_iccv")(2024) == {}
+
+
+def test_eccv_skips_odd_years():
+    assert _website_parser("parse_eccv")(2025) == {}
+
+
+def test_website_parser_returns_empty_without_deadline(monkeypatch):
+    monkeypatch.setattr(
+        common_website, "fetch_soup", lambda url, **kw: BeautifulSoup("<html></html>", "html.parser")
+    )
+    assert _website_parser("parse_cvpr")(2025) == {}
