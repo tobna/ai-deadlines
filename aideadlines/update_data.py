@@ -73,14 +73,14 @@ if args.online:
         year = current_year + 2
         no_data_years = 0
         while no_data_years < 5 and (year >= current_year - 1 or args.historic):
-            logger.info(f"{conf_parser} {year}", end="\t")
+            logger.info(f"{conf_parser} {year}")
             try:
                 yearly_data = conf_parser(year)
             except Exception as e:
                 logger.warning(f"Error while parsing conference: {e}")
                 year -= 1
                 continue
-            logger.info("no data" if len(yearly_data) == 0 else "loaded data", flush=True)
+            logger.info("no data" if len(yearly_data) == 0 else "loaded data")
             try:
                 yearly_data = parse_all_times(yearly_data)
             except Exception as e:
@@ -111,7 +111,7 @@ if args.online:
                     conferences[id] = join_conferences(slave=yearly_data, master=conferences[id])
             year -= 1
 
-    logger.info("load hf data", flush=True)
+    logger.info("load hf data")
     try:
         hf_conferences = get_hf_list()
     except Exception as e:
@@ -150,7 +150,7 @@ if args.online:
             conferences[id] = join_conferences(slave=hf_data, master=conferences[id])
 
     if args.load_nino_data:
-        logger.info("load nino duarte data", flush=True)
+        logger.info("load nino duarte data")
         try:
             nino_confs = get_nino_list()
         except Exception as e:
@@ -186,8 +186,8 @@ if args.online:
                 conferences[id]["dataSrc"] = "ninoduarte-git"
             else:
                 conferences[id] = join_conferences(slave=nino_conf, master=conferences[id])
-        else:
-            logger.info("skipping ninoduarte-git (not that reliable)")
+    else:
+        logger.info("skipping ninoduarte-git (not that reliable)")
 
     logger.info("load ccf-deadlines")
     try:
@@ -278,7 +278,7 @@ add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
 if not args.reestimate:
     logger.info(f"Will reestimate futures for: {reestimate_future_for_groups}")
 for group, conferences in conf_groups.items():
-    logger.info(f"write out group {group}: {list(conferences.keys())}", flush=True)
+    logger.info(f"write out group {group}: {list(conferences.keys())}")
     if group in reestimate_future_for_groups or args.reestimate:
         conferences = {key: conf for key, conf in conferences.items() if not conf["isApproximateDeadline"]}
     try:
