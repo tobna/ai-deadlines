@@ -14,3 +14,8 @@ aideadlines/data/*.json
 aideadlines/plausible.js
 aideadlines/data/.last_core_update
 TODO.md
+
+# python caches
+__pycache__/
+*.pyc
+.pytest_cache/
