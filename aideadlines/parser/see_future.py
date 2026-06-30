@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta
 from ..log_config import logger
 
-import json
 import os
 import dateparser
 import yaml
+from dateutil.relativedelta import relativedelta
 
 
 def estimate_future_conferences(conferences, end_in_years=2, max_approximations=2):
@@ -40,9 +40,11 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
             "shortname": last_conf["shortname"][:-4] + str(next_year),
             "tags": last_conf["tags"],
             "timeline": [],
-            "conferenceStartDate": last_start + timedelta(days=365 * (next_year - last_start.year)),
+            # Calendar-aware year shift (keeps the same month/day across leap years instead
+            # of drifting a day every ~4 years the way timedelta(days=365 * n) did).
+            "conferenceStartDate": last_start + relativedelta(years=next_year - last_start.year),
             "conferenceEndDate": (
-                last_start + timedelta(days=365 * (next_year - last_start.year) + 5)
+                last_start + relativedelta(years=next_year - last_start.year) + timedelta(days=5)
             ),  # just assume 1 week
         }
         for dates in last_conf["timeline"]:
@@ -52,7 +54,7 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
                     old_date = dates[key]
                     if isinstance(old_date, str):
                         old_date = dateparser.parse(old_date)
-                    next_timeline[key] = old_date + timedelta(days=365 * (next_year - last_start.year))
+                    next_timeline[key] = old_date + relativedelta(years=next_year - last_start.year)
                 elif key == "note":
                     next_timeline[key] = f"From {last_conf['shortname']}: {dates[key]}"
                 else:

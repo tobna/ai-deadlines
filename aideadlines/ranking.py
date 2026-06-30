@@ -12,69 +12,15 @@ from .log_config import logger
 this_folder = os.path.dirname(__file__)
 
 
-def make_conf_rank_function(online=False):
-    short_to_scholar_name = {
-        "neurips": "Neural Information Processing Systems",
-        "iclr": "International Conference on Learning Representations",
-        "icml": "International Conference on Machine Learning",
-        "aaai": "AAAI Conference on Artificial Intelligence",
-        "ijcai": "International Joint Conference on Artificial Intelligence (IJCAI)",
-        "aistats": "International Conference on Artificial Intelligence and Statistics",
-        "cvpr": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
-        "iccv": "IEEE/CVF International Conference on Computer Vision",
-        "eccv": "European Conference on Computer Vision",
-        "wacv": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
-        "icip": "IEEE International Conference on Image Processing (ICIP)",
-        "bmvc": "British Machine Vision Conference (BMVC)",
-        "icpr": "International Conference on Pattern Recognition",
-        "icdar": "International Conference on Document Analysis and Recognition",
-        "acl": "Meeting of the Association for Computational Linguistics (ACL)",
-        "emnlp": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-        "naacl": (
-            "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language"
-            " Technologies (HLT-NAACL)"
-        ),
-        "coling": "International Conference on Computational Linguistics (COLING)",
-        "conll": "Conference on Computational Natural Language Learning (CoNLL)",
-    }
-    scholar_name_to_short = {val: key for key, val in short_to_scholar_name.items()}
-
-    google_scholar_keywords = [
-        "eng_artificialintelligence",
-        "eng_computationallinguistics",
-        "eng_computervisionpatternrecognition",
-    ]
-    google_scholar_base_url = "https://scholar.google.com/citations?view_op=top_venues&hl=en&vq="
+def make_conf_rank_function():
+    # Google Scholar blocks scraping, so h5 values are read from the committed YAML only.
     h5_file = os.path.join(this_folder, os.pardir, "rank", "h5index.yaml")
     with open(h5_file, "r") as f:
         _short_to_h5 = yaml.safe_load(f)
-
-    updated_h5s = False
-    if online:
-        for kw in google_scholar_keywords:
-            rank_list = requests.get(google_scholar_base_url + kw)
-            rank_list = BeautifulSoup(rank_list.text, "html.parser")
-
-            for row in rank_list.find_all("tr"):
-                tds = row.find_all("td")
-                if len(tds) != 4:
-                    continue
-
-                if tds[1].get_text().strip() in scholar_name_to_short:
-                    short = scholar_name_to_short[tds[1].get_text().strip()]
-                    h5idx = int(tds[2].get_text().strip())
-                    _short_to_h5[short] = h5idx
-                    updated_h5s = True
-                    print(f"INFO: updated h5 data for {short} -> {h5idx}")
-
-    if updated_h5s:
-        with open(h5_file, "w") as f:
-            yaml.safe_dump(_short_to_h5)
     print(f"got {len(_short_to_h5)} conference h5 values", flush=True)
 
     def add_h5(conf):
         conf_id = conf["id"][:-4]
-
         if conf_id in _short_to_h5:
             conf["h5Index"] = _short_to_h5[conf_id]
         return conf

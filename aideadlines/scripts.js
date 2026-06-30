@@ -63,8 +63,12 @@ if (themeToggle) {
 // --- Application State ---
 let upcomingConferencesData = [];
 let archiveConferencesData = null;
-let nextUpIntervalId = null;
 let nextUpConference = null;
+
+// Live (non-approximate) cards currently in the DOM. A single global ticker updates all
+// of them once per second, instead of one setInterval per card (which, with ~100 cards,
+// meant ~100 timers each rewriting innerHTML every second).
+let liveCards = [];
 
 let currentFilterSettings = {
   selectedTags: new Set(["ALL"]),
@@ -78,6 +82,40 @@ let currentFilterSettings = {
 const ratingOrder = { "A*": 5, "A": 4, "B": 3, "C": 2, "D": 1 };
 
 // --- Utility Functions ---
+// Conference data is community-contributed and scraped from arbitrary sites, so every
+// value interpolated into innerHTML must be escaped, and any URL used in an href must be
+// restricted to http(s) — otherwise a crafted note/title/website is a stored-XSS vector.
+function escapeHtml(value) {
+  if (value === null || value === undefined) return '';
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function safeHref(url) {
+  if (typeof url !== 'string') return null;
+  const trimmed = url.trim();
+  if (!/^https?:\/\//i.test(trimmed)) return null; // reject javascript:, data:, relative, etc.
+  try {
+    const u = new URL(trimmed);
+    return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
+  } catch {
+    return null;
+  }
+}
+
+// Coalesce rapid input events so we don't rebuild the whole grid on every keystroke.
+function debounce(fn, wait = 150) {
+  let timer = null;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), wait);
+  };
+}
+
 function showModal(title, msg) {
   if (modalTitle && modalMessage && messageModal && closeModalButton) {
     modalTitle.textContent = title;
@@ -261,18 +299,18 @@ function createConferenceCard(conference, index = 0) {
   let eyebrowParts = [];
   if (conference.rating) {
     const top = ratingOrder[conference.rating] >= ratingOrder['A'];
-    eyebrowParts.push(`<span class="conf-rank${top ? ' rank-top' : ''}">CORE&nbsp;<b>${conference.rating}</b></span>`);
+    eyebrowParts.push(`<span class="conf-rank${top ? ' rank-top' : ''}">CORE&nbsp;<b>${escapeHtml(conference.rating)}</b></span>`);
   }
   if (conference.h5Index !== undefined) {
-    eyebrowParts.push(`<span class="conf-rank">h5&nbsp;<b>${conference.h5Index}</b></span>`);
+    eyebrowParts.push(`<span class="conf-rank">h5&nbsp;<b>${escapeHtml(conference.h5Index)}</b></span>`);
   }
   const eyebrowHTML = eyebrowParts.length
     ? `<div class="conf-eyebrow">${eyebrowParts.join('')}</div>` : '';
 
   // title: shortname prominent, full title as a quiet mono subtitle
   let titleHTML = '';
-  const shortname = conference.shortname;
-  const fullTitle = conference.title;
+  const shortname = escapeHtml(conference.shortname);
+  const fullTitle = escapeHtml(conference.title);
   if (shortname && fullTitle) {
     titleHTML = `<h2 class="conf-title">${shortname}<span class="full">${fullTitle}</span></h2>`;
   } else if (fullTitle) {
@@ -293,7 +331,7 @@ function createConferenceCard(conference, index = 0) {
   }
   let metaRows = '';
   if (conference.location) {
-    metaRows += `<div class="conf-meta-row">${ICON_PIN}<span>${conference.location}</span></div>`;
+    metaRows += `<div class="conf-meta-row">${ICON_PIN}<span>${escapeHtml(conference.location)}</span></div>`;
   }
   if (conference.conferenceStartDate) {
     metaRows += `<div class="conf-meta-row">${ICON_CAL}<span>${conferenceDateText}</span></div>`;
@@ -305,12 +343,12 @@ function createConferenceCard(conference, index = 0) {
   const urgencyBadge = isApprox ? '' : getUrgencyBadge(conference);
   if ((conference.tags && conference.tags.length) || urgencyBadge) {
     tagsHTML = '<div class="conf-tags">';
-    (conference.tags || []).forEach(tag => { tagsHTML += `<span class="conf-tag">${tag}</span>`; });
+    (conference.tags || []).forEach(tag => { tagsHTML += `<span class="conf-tag">${escapeHtml(tag)}</span>`; });
     tagsHTML += urgencyBadge;
     tagsHTML += '</div>';
   }
 
-  const noteHTML = conference.note ? `<p class="conf-note">${conference.note}</p>` : '';
+  const noteHTML = conference.note ? `<p class="conf-note">${escapeHtml(conference.note)}</p>` : '';
 
   // ---- foot: countdown + deadline line + abstract + CTA ----
   const deadlineLabel = isApprox ? 'Est. paper deadline' : 'Paper deadline';
@@ -324,17 +362,18 @@ function createConferenceCard(conference, index = 0) {
     const abstractFmt = isApprox ? approxDateFormatting : preciseDeadlineFormat;
     const abstractText = (isApprox ? '~' : '') + formatDate(conference.abstractDeadline, abstractFmt);
     abstractHTML = `
-      <div id="countdown-abstract-${conference.id}" class="deadline-section"></div>
+      <div id="countdown-abstract-${escapeHtml(conference.id)}" class="deadline-section"></div>
       <p class="deadline-date-text">Abstract: <b>${abstractText}${isApprox ? ' (est.)' : ''}</b></p>`;
   }
 
   let ctaHTML;
+  const websiteHref = safeHref(conference.website);
   if (isApprox) {
     ctaHTML = `<span class="conf-cta disabled">Estimated — no site yet</span>`;
-  } else if (!conference.website) {
+  } else if (!websiteHref) {
     ctaHTML = `<span class="conf-cta disabled">Site not available</span>`;
   } else {
-    ctaHTML = `<a href="${conference.website}" target="_blank" rel="noopener noreferrer" class="conf-cta">Visit site <span class="arrow">→</span></a>`;
+    ctaHTML = `<a href="${escapeHtml(websiteHref)}" target="_blank" rel="noopener noreferrer" class="conf-cta">Visit site <span class="arrow">→</span></a>`;
   }
 
   card.innerHTML = `
@@ -346,7 +385,7 @@ function createConferenceCard(conference, index = 0) {
       ${noteHTML}
     </div>
     <div class="conf-foot">
-      <div id="countdown-deadline-${conference.id}" class="deadline-section"></div>
+      <div id="countdown-deadline-${escapeHtml(conference.id)}" class="deadline-section"></div>
       ${deadlineLineHTML}
       ${abstractHTML}
       ${ctaHTML}
@@ -360,15 +399,18 @@ function createConferenceCard(conference, index = 0) {
     updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, 'Abstract');
   }
 
-  if (!isApprox) {
-    const intervalId = setInterval(() => {
-      applyUrgency(card, conference.deadline);
-      updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabel, false);
-      if (conference.abstractDeadline) {
-        updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, 'Abstract');
-      }
-    }, 1000);
-    card.dataset.intervalId = intervalId;
+  // Register for the global ticker instead of spinning up a per-card interval.
+  if (!isApprox) liveCards.push({ card, conference, deadlineLabel });
+}
+
+// One timer drives every live card's countdown + urgency colour.
+function tickLiveCards() {
+  for (const { card, conference, deadlineLabel } of liveCards) {
+    applyUrgency(card, conference.deadline);
+    updateSpecificCountdown(conference.deadline, `countdown-deadline-${conference.id}`, deadlineLabel, false);
+    if (conference.abstractDeadline) {
+      updateSmallCountdown(conference.abstractDeadline, `countdown-abstract-${conference.id}`, 'Abstract');
+    }
   }
 }
 
@@ -418,7 +460,7 @@ function renderNextUp() {
   }
 
   const c = nextUpConference;
-  const name = c.shortname || c.title || 'Conference';
+  const name = escapeHtml(c.shortname || c.title || 'Conference');
   const when = formatDate(c.deadline, { includeTime: true, includeTimezoneName: true, displayTimezoneIana: c.timezone || 'UTC' });
   nextUpEl.innerHTML = `
     <div class="next-up-top">
@@ -475,12 +517,24 @@ function updateHeroStats() {
 }
 
 // --- Populate Tag Filter ---
+let renderedTagSignature = null;
+
 function populateTagFilter(sourceConferences) {
   if (!tagFilterContainer) return;
   const allTags = new Set();
   sourceConferences.forEach(conf => {
     if (conf.tags) conf.tags.forEach(tag => allTags.add(tag));
   });
+  const sortedTags = Array.from(allTags).sort();
+
+  // Only rebuild the buttons when the available tag set actually changes; otherwise just
+  // refresh the active states. Avoids tearing down/rebuilding the tag bar on every keystroke.
+  const signature = sortedTags.join('|');
+  if (signature === renderedTagSignature) {
+    setActiveTagButtons();
+    return;
+  }
+  renderedTagSignature = signature;
 
   tagFilterContainer.innerHTML = '';
 
@@ -495,7 +549,7 @@ function populateTagFilter(sourceConferences) {
   });
   tagFilterContainer.appendChild(allButton);
 
-  Array.from(allTags).sort().forEach(tag => {
+  sortedTags.forEach(tag => {
     const button = document.createElement('button');
     button.textContent = tag;
     button.className = 'tag-button';
@@ -561,10 +615,8 @@ function renderConferences(
 ) {
   if (!conferenceGrid) return;
 
-  Array.from(conferenceGrid.children).forEach(card => {
-    const intervalId = card.dataset.intervalId;
-    if (intervalId) clearInterval(Number(intervalId));
-  });
+  // Drop the previous card registry; the grid is about to be rebuilt from scratch.
+  liveCards = [];
   conferenceGrid.innerHTML = '';
 
   if (loadingState) loadingState.style.display = 'none';
@@ -706,11 +758,11 @@ function setupEventListeners() {
     });
   }
   if (minH5IndexInput) {
-    minH5IndexInput.addEventListener('input', function () {
+    minH5IndexInput.addEventListener('input', debounce(function () {
       currentFilterSettings.minH5 = this.value === '' ? null : parseInt(this.value, 10);
       if (isNaN(currentFilterSettings.minH5)) currentFilterSettings.minH5 = null;
       applyAllFilters();
-    });
+    }));
   }
   if (minRatingSelect) {
     minRatingSelect.addEventListener('change', function () {
@@ -719,10 +771,10 @@ function setupEventListeners() {
     });
   }
   if (conferenceNameFilterInput) {
-    conferenceNameFilterInput.addEventListener('input', function () {
+    conferenceNameFilterInput.addEventListener('input', debounce(function () {
       currentFilterSettings.nameFilter = this.value;
       applyAllFilters();
-    });
+    }));
   }
 }
 
@@ -745,9 +797,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (minRatingSelect) currentFilterSettings.minRating = minRatingSelect.value;
   if (conferenceNameFilterInput) currentFilterSettings.nameFilter = conferenceNameFilterInput.value;
 
+  // A single 1s ticker drives the AoE clock, the "deadline to watch" hero, and every
+  // live card — instead of separate timers per concern and per card.
   updateAoeClock();
-  setInterval(updateAoeClock, 1000);
-  nextUpIntervalId = setInterval(updateNextUp, 1000);
+  setInterval(() => {
+    updateAoeClock();
+    updateNextUp();
+    tickLiveCards();
+  }, 1000);
 
   setupEventListeners();
   loadInitialData();

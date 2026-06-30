@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 from copy import deepcopy
 from datetime import datetime
 
@@ -9,59 +8,58 @@ import pytz
 import yaml
 
 from .log_config import logger
+from .utils import normalize_timezone_for_js
 
-this_folder = os.path.dirname(__file__)
-sys.path.append(this_folder)
+THIS_FOLDER = os.path.dirname(__file__)
+CONFERENCE_FOLDER = os.path.join(THIS_FOLDER, os.pardir, "conferences")
+DATA_FOLDER = os.path.join(THIS_FOLDER, "data")
 
-conference_folder = os.path.join(this_folder, os.pardir, "conferences")
 
-conferences = {}
-for conf_file in os.listdir(conference_folder):
-    with open(os.path.join(conference_folder, conf_file), "r") as f:
-        file_confs = yaml.safe_load(f)
-    conferences = {**file_confs, **conferences}
-logger.info(f"managing {len(conferences)} conference instances")
-logger.info(sorted(list(conferences.keys())))
+def load_conferences():
+    conferences = {}
+    for conf_file in os.listdir(CONFERENCE_FOLDER):
+        with open(os.path.join(CONFERENCE_FOLDER, conf_file), "r") as f:
+            file_confs = yaml.safe_load(f)
+        conferences = {**file_confs, **conferences}
+    return conferences
 
-future_conf = {}
-past_conf = {}
 
-for id, conf in conferences.items():
-    js_tz = conf.get("timezone", "AoE")
-    old_tz = js_tz
-    if "UTC" in js_tz:
-        if "+" in js_tz:
-            char = "+"
-        elif "-" in js_tz:
-            char = "-"
-        else:
-            char = None
+def split_future_past(conferences):
+    """Explode each conference's timeline into one record per deadline, partitioned by now."""
+    future_conf, past_conf = {}, {}
+    now = datetime.now().astimezone(pytz.UTC)
+    for conf_id, conf in conferences.items():
+        conf["timezone"] = normalize_timezone_for_js(conf.get("timezone", "AoE"))
+        for i, dates in enumerate(conf["timeline"]):
+            conf_cpy = deepcopy(conf)
+            conf_cpy.pop("timeline")
+            conf_cpy = {**conf_cpy, **dates}
+            record_id = f"{conf_id}-{i + 1}"
+            conf_cpy["id"] = record_id
+            try:
+                if dateparser.parse(conf_cpy["deadline"]) > now:
+                    future_conf[record_id] = conf_cpy
+                else:
+                    past_conf[record_id] = conf_cpy
+            except TypeError as e:
+                logger.error(f"Type Error for conference {conf_cpy}: {e}")
+    return future_conf, past_conf
 
-        if char is not None:
-            old_tz = js_tz
-            offset = int(js_tz.split(char)[-1])
-            js_tz = f"Etc/GMT{'+' if char == '-' else '-'}{offset}"
-    js_tz = js_tz.replace("AoE", "Etc/GMT+12").replace("Russia/Moscow", "Etc/GMT+3")
-    if old_tz != js_tz:
-        logger.debug(f"Parsing timezone for json: {old_tz} -> {js_tz}")
-    conf["timezone"] = js_tz
-    for i, dates in enumerate(conf["timeline"]):
-        conf_cpy = deepcopy(conf)
-        conf_cpy.pop("timeline")
-        conf_cpy = {**conf_cpy, **dates}
-        conf_cpy["id"] = f"{id}-{i+1}"
-        try:
-            if dateparser.parse(conf_cpy["deadline"]) > datetime.now().astimezone(pytz.UTC):
-                future_conf[f"{id}-{i+1}"] = conf_cpy
-            else:
-                past_conf[f"{id}-{i+1}"] = conf_cpy
-        except TypeError as e:
-            logger.error(f"Type Error for conference {conf_cpy}: {e}")
 
-logger.info(f"past: {sorted(list(past_conf.keys()))}")
-logger.info(f"future: {sorted(list(future_conf.keys()))}")
+def main():
+    conferences = load_conferences()
+    logger.info(f"managing {len(conferences)} conference instances")
+    logger.info(sorted(list(conferences.keys())))
 
-with open(os.path.join(this_folder, "data", "conferences.json"), "w") as f:
-    json.dump(list(future_conf.values()), f)
-with open(os.path.join(this_folder, "data", "conferences_archive.json"), "w") as f:
-    json.dump(list(past_conf.values()), f)
+    future_conf, past_conf = split_future_past(conferences)
+    logger.info(f"past: {sorted(list(past_conf.keys()))}")
+    logger.info(f"future: {sorted(list(future_conf.keys()))}")
+
+    with open(os.path.join(DATA_FOLDER, "conferences.json"), "w") as f:
+        json.dump(list(future_conf.values()), f)
+    with open(os.path.join(DATA_FOLDER, "conferences_archive.json"), "w") as f:
+        json.dump(list(past_conf.values()), f)
+
+
+if __name__ == "__main__":
+    main()

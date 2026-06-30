@@ -171,16 +171,34 @@ def unite_tags(conf_group):
     return conf_group
 
 
-def parse_stuff(conferneces):
+def normalize_timezone_for_js(js_tz):
+    """Normalize a conference timezone string to an IANA 'Etc/GMT±N' zone the frontend uses.
+
+    Handles 'UTC±N' offsets (note the POSIX sign flip in 'Etc/GMT') plus the named cases
+    AoE (UTC−12) and Russia/Moscow.
+    """
+    old_tz = js_tz
+    if "UTC" in js_tz:
+        char = "+" if "+" in js_tz else ("-" if "-" in js_tz else None)
+        if char is not None:
+            offset = int(js_tz.split(char)[-1])
+            js_tz = f"Etc/GMT{'+' if char == '-' else '-'}{offset}"
+    js_tz = js_tz.replace("AoE", "Etc/GMT+12").replace("Russia/Moscow", "Etc/GMT+3")
+    if old_tz != js_tz:
+        logger.debug(f"Parsing timezone for json: {old_tz} -> {js_tz}")
+    return js_tz
+
+
+def parse_stuff(conferences):
     # parse GMT timezone strings for use with js
-    for conf in conferneces.values():
+    for conf in conferences.values():
         if "timezone" in conf:
             if conf["timezone"].startswith("GMT"):
                 offset = int(conf["timezone"][3:])
                 conf["timezone"] = f"Etc/GMT{-offset:+}"
 
     # join deadlines that are the exact same
-    for conf in conferneces.values():
+    for conf in conferences.values():
         deadline_dates = {dl["deadline"] for dl in conf["timeline"]}
         timeline = [dict(deadline=dl) for dl in sorted(deadline_dates)]
         for tldl in timeline:
@@ -191,4 +209,4 @@ def parse_stuff(conferneces):
                             tldl[key] = cnfdl[key].strip()
         conf["timeline"] = timeline
 
-    return conferneces
+    return conferences
