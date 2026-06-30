@@ -32,6 +32,23 @@ def _parse_submission_deadlines(soup, data):
             data["timeline"][round_idx]["deadline"] = ":".join(txt.split(":")[1:]).split("(")[0].strip()
 
 
+def _split_session_dates(date_text):
+    """Split a 'Jan 6th - 8th' / 'Feb 28 - Mar 3' range into (start, end), or None.
+
+    The end borrows the start's month when it omits one; the year is appended later by
+    parse_all_times from the conference id.
+    """
+    sep = next((s for s in ("–", "—", "-") if s in date_text), None)
+    if sep is None:
+        return None
+    start, end = (part.strip() for part in date_text.split(sep, 1))
+    if not start or not end:
+        return None
+    if end[:1].isdigit():  # end omits the month -> borrow it from the start
+        end = f"{start.split(' ')[0]} {end}"
+    return start, end
+
+
 def _parse_dates_fallback(year, data):
     """Fall back to the thecvf 'Dates' table, which labels each round explicitly."""
     url = f"https://wacv.thecvf.com/Conferences/{year}/"
@@ -44,6 +61,11 @@ def _parse_dates_fallback(year, data):
     deadline_re = re.compile(r"Round (\d) .*Paper .*Submission.*")
     for row in soup.find_all("tr"):
         tds = row.find_all("td")
+        # The "Main Conference Session(s)" row carries the event dates in the next cell.
+        if len(tds) >= 2 and "main conference" in tds[0].get_text().lower():
+            session_dates = _split_session_dates(tds[1].get_text(" ", strip=True))
+            if session_dates is not None:
+                data["conferenceStartDate"], data["conferenceEndDate"] = session_dates
         for i, td in enumerate(tds):
             if i + 1 >= len(tds):
                 continue

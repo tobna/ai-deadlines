@@ -8,6 +8,7 @@ from aideadlines.parser.ccf_deadlines import conference_from_ccf, parse_ccf_date
 from aideadlines.parser.common_website import extract_dates_from_soup
 from aideadlines.parser.hf_list import conference_from_hf
 from aideadlines.parser.ninoduarte_list import conference_from_nino, parse_past_conferences
+from aideadlines.parser.wacv import _split_session_dates
 
 
 # --------------------------------------------------------------------------- #
@@ -248,3 +249,20 @@ def test_website_parser_returns_empty_without_deadline(monkeypatch):
         common_website, "fetch_soup", lambda url, **kw: BeautifulSoup("<html></html>", "html.parser")
     )
     assert _website_parser("parse_cvpr")(2025) == {}
+
+
+# --------------------------------------------------------------------------- #
+# wacv — conference-session date splitting (from the thecvf 'Dates' table)
+# --------------------------------------------------------------------------- #
+class TestWacvSessionDates:
+    def test_same_month_range_borrows_month_for_end(self):
+        assert _split_session_dates("Jan 6th - 8th") == ("Jan 6th", "Jan 8th")
+
+    def test_cross_month_range_keeps_both_months(self):
+        assert _split_session_dates("Feb 28 - Mar 3") == ("Feb 28", "Mar 3")
+
+    def test_en_dash_separator(self):
+        assert _split_session_dates("Jan 6th – 8th") == ("Jan 6th", "Jan 8th")
+
+    def test_no_range_returns_none(self):
+        assert _split_session_dates("sometime in January") is None
