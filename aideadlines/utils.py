@@ -189,16 +189,16 @@ def normalize_timezone_for_js(js_tz):
     return js_tz
 
 
-def parse_stuff(conferneces):
+def parse_stuff(conferences):
     # parse GMT timezone strings for use with js
-    for conf in conferneces.values():
+    for conf in conferences.values():
         if "timezone" in conf:
             if conf["timezone"].startswith("GMT"):
                 offset = int(conf["timezone"][3:])
                 conf["timezone"] = f"Etc/GMT{-offset:+}"
 
     # join deadlines that are the exact same
-    for conf in conferneces.values():
+    for conf in conferences.values():
         deadline_dates = {dl["deadline"] for dl in conf["timeline"]}
         timeline = [dict(deadline=dl) for dl in sorted(deadline_dates)]
         for tldl in timeline:
@@ -209,4 +209,4 @@ def parse_stuff(conferneces):
                             tldl[key] = cnfdl[key].strip()
         conf["timeline"] = timeline
 
-    return conferneces
+    return conferences

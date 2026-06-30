@@ -55,6 +55,11 @@ def main():
     print("run update script", flush=True)
     run(["python3", "-m", "aideadlines.update_data", "--online"])
 
+    print("validate conference data", flush=True)
+    if run(["python3", "-m", "aideadlines.validate"]).returncode != 0:
+        print("conference validation failed; aborting before json conversion and commit", flush=True)
+        return
+
     print("convert data to json", flush=True)
     run(["python3", "-m", "aideadlines.data_to_json"])
 

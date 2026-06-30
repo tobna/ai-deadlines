@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    # Skip CI on the automated data-only commits the update pipeline pushes.
+    paths-ignore:
+      - 'conferences/**'
+      - 'rank/**'
+      - 'README.md'
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Lint (ruff)
+        run: ruff check aideadlines/ tests/ update.py
+      - name: Test (pytest)
+        run: pytest
