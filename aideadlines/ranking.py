@@ -17,7 +17,7 @@ def make_conf_rank_function():
     h5_file = os.path.join(this_folder, os.pardir, "rank", "h5index.yaml")
     with open(h5_file, "r") as f:
         _short_to_h5 = yaml.safe_load(f)
-    print(f"got {len(_short_to_h5)} conference h5 values", flush=True)
+    logger.info(f"got {len(_short_to_h5)} conference h5 values", flush=True)
 
     def add_h5(conf):
         conf_id = conf["id"][:-4]
