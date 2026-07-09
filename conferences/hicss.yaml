@@ -1,0 +1,14 @@
+hicss2027:
+  conferenceEndDate: '2027-01-08'
+  conferenceStartDate: '2027-01-05'
+  dataSrc: hf-repo
+  id: hicss2027
+  isApproximateDeadline: false
+  location: Waikoloa, USA
+  shortname: HICSS 2027
+  tags: []
+  timeline:
+  - deadline: '2026-06-16T09:59:59Z'
+    note: Paper Submission
+  title: Hawaii International Conference on System Sciences
+  website: https://hicss.hawaii.edu/
