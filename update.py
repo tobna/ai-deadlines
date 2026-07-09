@@ -6,6 +6,9 @@ from datetime import datetime
 THIS_DIR = os.path.dirname(__file__)
 REPO_URL = "https://github.com/tobna/ai-deadlines"
 GIT_USER = "tobna"
+# Same file loguru's ERROR sink writes to (log_config.py). ponytail: assumes CWD == repo root,
+# which is true for make_website.sh; that is the only deploy entry point.
+ERROR_FILE = os.path.join(THIS_DIR, "error.log")
 
 # A git credential helper that reads the token from the environment at call time, so the
 # secret never appears in argv (world-readable via /proc and shell history) the way it did
@@ -47,28 +50,46 @@ def update_readme_badge(count):
         f.write(content)
 
 
+def error_line_count():
+    if not os.path.isfile(ERROR_FILE):
+        return 0
+    with open(ERROR_FILE) as f:
+        return sum(1 for _ in f)
+
+
 def main():
-    token = load_token()
-    if token:
-        git_authenticated(["pull", REPO_URL], token)
+    open(ERROR_FILE, "w").close()  # fresh per-run log so the status marker reflects only this run
+    failed_steps = 0
+    try:
+        token = load_token()
+        if token:
+            git_authenticated(["pull", REPO_URL], token)
 
-    print("run update script", flush=True)
-    run(["python3", "-m", "aideadlines.update_data", "--online"])
+        print("run update script", flush=True)
+        failed_steps += run(["python3", "-m", "aideadlines.update_data", "--online"]).returncode != 0
 
-    print("validate conference data", flush=True)
-    if run(["python3", "-m", "aideadlines.validate"]).returncode != 0:
-        print("conference validation failed; aborting before json conversion and commit", flush=True)
-        return
+        print("validate conference data", flush=True)
+        if run(["python3", "-m", "aideadlines.validate"]).returncode != 0:
+            print("conference validation failed; aborting before json conversion and commit", flush=True)
+            failed_steps += 1
+            return
 
-    print("convert data to json", flush=True)
-    run(["python3", "-m", "aideadlines.data_to_json"])
+        print("convert data to json", flush=True)
+        failed_steps += run(["python3", "-m", "aideadlines.data_to_json"]).returncode != 0
 
-    if token:
-        conferences_tracked = [f for f in os.listdir(os.path.join(THIS_DIR, "conferences")) if f.endswith(".yaml")]
-        update_readme_badge(len(conferences_tracked))
-        run(["git", "add", "."])
-        run(["git", "commit", "-m", f"Update conference data at {datetime.now().isoformat()}"])
-        git_authenticated(["push", REPO_URL], token)
+        if token:
+            conferences_tracked = [f for f in os.listdir(os.path.join(THIS_DIR, "conferences")) if f.endswith(".yaml")]
+            update_readme_badge(len(conferences_tracked))
+            run(["git", "add", "."])
+            run(["git", "commit", "-m", f"Update conference data at {datetime.now().isoformat()}"])
+            git_authenticated(["push", REPO_URL], token)
+    finally:
+        # Machine-readable last line for Uptime Kuma: keyword monitor on "=== PIPELINE OK ===".
+        errors = error_line_count()
+        if errors == 0 and failed_steps == 0:
+            print("=== PIPELINE OK ===", flush=True)
+        else:
+            print(f"=== PIPELINE FAILED: {errors} error(s), {failed_steps} failed step(s) ===", flush=True)
 
 
 if __name__ == "__main__":

@@ -20,4 +20,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 error.log
+status.txt
 .claude
+status.ansi
