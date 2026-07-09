@@ -32,6 +32,7 @@ TZ_REPLACE = {
     "Asia/Kolkata": "GMT+5:30",
     "Australia/Sydney": "GMT+11",
     "Australia/Melbourne": "GMT+11",
+    "Pacific/Honolulu": "UTC-10",
     # European timezone abbreviations
     "CET": "GMT+1",
     "CEST": "GMT+2",
