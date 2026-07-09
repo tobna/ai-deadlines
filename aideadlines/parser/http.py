@@ -31,18 +31,18 @@ def fetch(url, *, timeout=DEFAULT_TIMEOUT, retries=DEFAULT_RETRIES, backoff=BACK
         try:
             response = _session.get(url, timeout=timeout)
         except requests.RequestException as e:
-            logger.warning(f"GET {url} failed (attempt {attempt}/{retries}): {e}")
+            logger.info(f"GET {url} failed (attempt {attempt}/{retries}): {e}")
         else:
             if response.status_code == 200:
                 return response
             if response.status_code in _RETRY_STATUS:
-                logger.warning(f"GET {url} -> {response.status_code} (attempt {attempt}/{retries})")
+                logger.info(f"GET {url} -> {response.status_code} (attempt {attempt}/{retries})")
             else:
                 logger.warning(f"GET {url} -> {response.status_code}; giving up")
                 return None
         if attempt < retries:
             time.sleep(backoff * attempt)
-    logger.error(f"GET {url} failed after {retries} attempts")
+    logger.warning(f"GET {url} failed after {retries} attempts")
     return None
 
 
