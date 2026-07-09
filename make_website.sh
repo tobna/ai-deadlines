@@ -23,5 +23,10 @@ cp aideadlines/*.ico aideadlines/*.svg aideadlines/*.png aideadlines/site.webman
 echo "3. render status page"
 python3 aideadlines/ansi_to_html.py html/status.html <status.ansi
 
+# Machine-readable freshness + health for the Uptime Kuma JSON-query monitor (served at /status.json).
+# Monitor: expression `ok and ($millis()/1000 - updated < 7200)`, expected `true` (down if failed OR >2h stale).
+grep -q '=== PIPELINE OK ===' status.ansi && ok=true || ok=false
+printf '{"updated": %s, "ok": %s}\n' "$(date +%s)" "$ok" >html/status.json
+
 echo "4. compress files: gzip"
 find html -type f \( -name '*.json' -o -name '*.html' -o -name '*.js' -o -name '*.css' -o -name '*.ttf' -o -name '*.woff2' -o -name '*.xml' -o -name '*.svg' -o -name '*.jpg' -o -name '*.webp' \) -exec gzip -v -k -f --best {} \;
