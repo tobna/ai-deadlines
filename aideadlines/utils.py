@@ -58,13 +58,13 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
     if conf_tz is None:
         conf_tz = "AoE"
     if isinstance(timestr, str):
-        has_explicit_time = bool(re.search(r'\d+:\d+', timestr))
+        has_explicit_time = bool(re.search(r"\d+:\d+", timestr))
         for name, tz in TZ_REPLACE.items():
             timestr = timestr.replace(name, tz)
         logger.debug(f"replaced to {timestr}")
         parsed_time = dateparser.parse(timestr)
         if parsed_time is None:
-            logger.warning(f"NONE: '{timestr}'")
+            logger.error(f"NONE: '{timestr}'")
             return None
     else:
         assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
