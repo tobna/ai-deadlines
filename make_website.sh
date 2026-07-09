@@ -2,8 +2,6 @@
 
 echo "updating and creating website"
 
-ls
-
 echo "1. update conference data"
 # tee shows the run live on the console and saves the raw colored stream for rendering below.
 python3 update.py 2>&1 | tee status.ansi
