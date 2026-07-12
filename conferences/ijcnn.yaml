@@ -45,22 +45,21 @@ ijcnn2026:
   title: International Joint Conference on Neural Networks
   website: https://attend.ieee.org/wcci-2026/
 ijcnn2027:
-  conferenceEndDate: '2027-06-26'
-  conferenceStartDate: '2027-06-21'
-  dataSrc: estimate
+  conferenceEndDate: '2027-06-18'
+  conferenceStartDate: '2027-06-14'
+  dataSrc: ccf-deadlines
   id: ijcnn2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: IJCNN 2027
   tags: *id001
   timeline:
-  - deadline: '2026-09-25T11:59:59Z'
   - deadline: '2027-02-01T11:59:59Z'
-    note: 'From IJCNN 2026: Paper Submission'
   title: International Joint Conference on Neural Networks
+  website: https://ijcnn.org/2027
 ijcnn2028:
-  conferenceEndDate: '2028-06-25'
-  conferenceStartDate: '2028-06-20'
+  conferenceEndDate: '2028-06-19'
+  conferenceStartDate: '2028-06-14'
   dataSrc: estimate
   id: ijcnn2028
   isApproximateDeadline: true
