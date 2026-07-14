@@ -94,8 +94,8 @@ aaai2027:
   shortname: AAAI 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-07-21T11:59:59Z'
-    deadline: '2026-07-28T11:59:59Z'
+  - abstractDeadline: '2026-07-22T11:59:59Z'
+    deadline: '2026-07-29T11:59:59Z'
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-27/
 aaai2028:
