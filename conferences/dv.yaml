@@ -1,0 +1,16 @@
+dv2027:
+  conferenceEndDate: '2027-04-09'
+  conferenceStartDate: '2027-04-06'
+  dataSrc: hf-repo
+  id: dv2027
+  isApproximateDeadline: false
+  location: Thessaloniki, Greece
+  shortname: DV 2027
+  tags:
+  - CV
+  - ML
+  timeline:
+  - deadline: '2026-08-28T18:00:00Z'
+    note: Paper Submission Deadline
+  title: International Conference on 3D Vision
+  website: https://3dvconf.github.io/2027/
