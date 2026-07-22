@@ -8,6 +8,7 @@ threedv2024:
   shortname: 3DV 2024
   tags: &id001
   - CV
+  - ML
   timeline:
   - deadline: '2023-08-08T11:59:59Z'
   title: International Conference on 3D Vision
@@ -43,15 +44,16 @@ threedv2026:
 threedv2027:
   conferenceEndDate: '2027-04-09'
   conferenceStartDate: '2027-04-06'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 56
   id: threedv2027
   isApproximateDeadline: false
+  location: Thessaloniki Concert Hall (M2 building), Thessaloniki, Greece
   shortname: 3DV 2027
   tags: *id001
   timeline:
-  - deadline: '2026-08-28T23:00:00Z'
-    note: Supplementary material due Sep 2, 2026. All deadlines are 11:00 am PDT.
+  - deadline: '2026-08-28T18:00:00Z'
+    note: Paper Submission Deadline
   title: International Conference on 3D Vision
   website: https://3dvconf.github.io/2027/
 threedv2028:
