@@ -39,6 +39,7 @@ eacl2027:
   tags: *id001
   timeline:
   - deadline: '2026-08-04T11:59:59Z'
+    note: 'ARR Submission; commitment deadline: 2026-10-11'
   title: The Annual Conference of the European Chapter of the Association for Computational
     Linguistics
   website: https://2027.eacl.org/

@@ -26,7 +26,8 @@ ijcnlp2026:
   tags: *id001
   timeline:
   - deadline: '2026-05-26T11:59:59Z'
-    note: ARR Submission; AACL-IJCNLP 2026 (the 5th AACL & 15th IJCNLP)
+    note: 'ARR Submission; commitment deadline: 2026-08-02; AACL-IJCNLP 2026 (the
+      5th AACL & 15th IJCNLP)'
   title: International Joint Conference on Natural Language Processing
   website: https://2026.aaclnet.org/
 ijcnlp2027:
