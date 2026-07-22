@@ -84,6 +84,20 @@ class TestConferenceFromHf:
         assert out["timeline"] == [{"deadline": "2024-11-01"}]
         assert out["conferenceStartDate"] == "2025-06-01"
 
+    def test_digit_in_shortname_kept_and_3dv_matches_ccf_id(self):
+        conference = {
+            "title": "3DV",
+            "full_name": "International Conference on 3D Vision",
+            "year": 2027,
+            "deadline": "2026-08-28",
+            "start": "2027-04-06",
+            "end": "2027-04-09",
+            "tags": ["computer-vision"],
+        }
+        out = conference_from_hf(conference)
+        assert out["id"] == "threedv2027"  # matches ccf_deadlines id so instances merge
+        assert out["shortname"] == "3DV 2027"
+
     def test_missing_tags_does_not_crash(self):
         conference = {
             "title": "ABC",

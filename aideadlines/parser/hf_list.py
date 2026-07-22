@@ -13,7 +13,7 @@ _tag_dict = {
     "signal-processing": "SP",
 }
 
-no_dig_re = re.compile(r"[a-zA-Z]*$")
+_trailing_year_re = re.compile(r"\d{4}$")
 hf_date_re = re.compile(r"([A-Z][a-z]+)[ ,]*(\d+) *[-|–] *([A-Z,a-z]*) *(\d+), *(\d+)$")
 
 _HF_TREE = "https://api.github.com/repos/huggingface/ai-deadlines/git/trees/main?recursive=1"
@@ -60,12 +60,13 @@ def _build_timeline(conference):
 
 def conference_from_hf(conference):
     """Convert one HF conference entry to our schema, or None to skip it."""
-    shortname = re.sub(r"[^a-zA-Z]", "", conference["title"])
-    if no_dig_re.match(shortname):
+    shortname = re.sub(r"[^a-zA-Z0-9]", "", conference["title"])
+    if _trailing_year_re.search(shortname):
+        conf_id = shortname.lower()
+    else:
         conf_id = shortname.lower() + str(conference["year"])
         shortname = shortname + " " + str(conference["year"])
-    else:
-        conf_id = shortname.lower()
+    conf_id = conf_id.replace("3dv", "threedv")  # match ccf_deadlines id so instances merge
     out_conf = {
         "id": conf_id,
         "title": conference["full_name"],
