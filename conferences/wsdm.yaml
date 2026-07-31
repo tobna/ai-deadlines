@@ -92,6 +92,9 @@ wsdm2027:
   timeline:
   - abstractDeadline: '2026-08-18T11:59:59Z'
     deadline: '2026-08-25T11:59:59Z'
+    note: Full Paper
+  - deadline: '2026-11-18T11:59:59Z'
+    note: Short Paper
   title: International Conference on Web Search and Data Mining
   website: https://wsdm-conference.org/2027/
 wsdm2028:
