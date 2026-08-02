@@ -90,7 +90,7 @@ iclr2026:
   website: https://iclr.cc/Conferences/2026
 iclr2027:
   conferenceEndDate: '2027-04-30'
-  conferenceStartDate: '2027-04-27'
+  conferenceStartDate: '2027-04-26'
   dataSrc: ccf-deadlines
   h5Index: 362
   id: iclr2027
@@ -99,8 +99,8 @@ iclr2027:
   shortname: ICLR 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-09-12T11:59:59Z'
-    deadline: '2026-09-17T11:59:59Z'
+  - abstractDeadline: '2026-09-19T11:59:59Z'
+    deadline: '2026-09-26T11:59:59Z'
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2027
 iclr2028:
