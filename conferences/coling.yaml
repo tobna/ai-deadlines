@@ -46,29 +46,32 @@ coling2025:
   timezone: AoE
   title: International Conference on Computational Linguistics
   website: https://coling2025.org/
-coling2026:
-  conferenceEndDate: '2026-01-24'
-  conferenceStartDate: '2026-01-19'
-  dataSrc: estimate
-  h5Index: 81
-  id: coling2026
-  isApproximateDeadline: true
-  rating: B
-  shortname: COLING 2026
-  tags: *id001
-  timeline:
-  - deadline: '2025-09-17T11:59:59Z'
-  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
 coling2027:
-  conferenceEndDate: '2027-01-24'
-  conferenceStartDate: '2027-01-19'
-  dataSrc: estimate
+  conferenceEndDate: '2027-05-14'
+  conferenceStartDate: '2027-05-09'
+  dataSrc: ccf-deadlines
   h5Index: 81
   id: coling2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: COLING 2027
   tags: *id001
   timeline:
-  - deadline: '2026-09-17T11:59:59Z'
+  - deadline: '2026-10-13T11:59:59Z'
+    note: ARR Submission
+  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  website: https://2027.coling-iccl.org/
+coling2028:
+  conferenceEndDate: '2028-05-14'
+  conferenceStartDate: '2028-05-09'
+  dataSrc: estimate
+  h5Index: 81
+  id: coling2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: COLING 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-10-13T11:59:59Z'
+    note: 'From COLING 2027: ARR Submission'
   title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
