@@ -82,21 +82,22 @@ wsdm2026:
 wsdm2027:
   conferenceEndDate: '2027-02-19'
   conferenceStartDate: '2027-02-15'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 77
   id: wsdm2027
   isApproximateDeadline: false
+  location: Cordis, Hong Kong
   rating: A
   shortname: WSDM 2027
   tags: *id001
   timeline:
   - abstractDeadline: '2026-08-18T11:59:59Z'
     deadline: '2026-08-25T11:59:59Z'
-    note: Full Paper
+    note: Paper submission (full papers)
   - deadline: '2026-11-18T11:59:59Z'
-    note: Short Paper
-  title: International Conference on Web Search and Data Mining
-  website: https://wsdm-conference.org/2027/
+    note: Paper submission (short papers)
+  title: ACM International Conference on Web Search and Data Mining
+  website: https://www.wsdm-conference.org/2027/
 wsdm2028:
   conferenceEndDate: '2028-02-20'
   conferenceStartDate: '2028-02-15'
