@@ -45,20 +45,21 @@ alt2026:
   title: International Conference on Algorithmic Learning Theory
   website: https://algorithmiclearningtheory.org/alt2026/
 alt2027:
-  conferenceEndDate: '2027-02-28'
-  conferenceStartDate: '2027-02-23'
-  dataSrc: estimate
+  conferenceEndDate: '2027-03-12'
+  conferenceStartDate: '2027-03-09'
+  dataSrc: ccf-deadlines
   id: alt2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: ALT 2027
   tags: *id001
   timeline:
-  - deadline: '2026-10-02T09:59:59Z'
+  - deadline: '2026-10-13T11:59:59Z'
   title: International Conference on Algorithmic Learning Theory
+  website: https://algorithmiclearningtheory.org/alt2027/
 alt2028:
-  conferenceEndDate: '2028-02-28'
-  conferenceStartDate: '2028-02-23'
+  conferenceEndDate: '2028-03-14'
+  conferenceStartDate: '2028-03-09'
   dataSrc: estimate
   id: alt2028
   isApproximateDeadline: true
@@ -66,5 +67,5 @@ alt2028:
   shortname: ALT 2028
   tags: *id001
   timeline:
-  - deadline: '2027-10-03T11:59:59Z'
+  - deadline: '2027-10-13T11:59:59Z'
   title: International Conference on Algorithmic Learning Theory
