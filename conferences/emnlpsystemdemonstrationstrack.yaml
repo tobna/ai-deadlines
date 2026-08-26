@@ -6,7 +6,7 @@ emnlpsystemdemonstrationstrack2025:
   isApproximateDeadline: false
   location: Suzhou, China
   shortname: EMNLPSystemDemonstrationsTrack 2025
-  tags:
+  tags: &id001
   - NLP
   timeline:
   - deadline: '2025-07-05T11:59:59Z'
@@ -15,3 +15,44 @@ emnlpsystemdemonstrationstrack2025:
   title: The annual Conference on Empirical Methods in Natural Language Processing
     (System Demonstrations Track)
   website: https://2025.emnlp.org/
+emnlpsystemdemonstrationstrack2026:
+  conferenceEndDate: '2026-10-29'
+  conferenceStartDate: '2026-10-24'
+  dataSrc: hf-repo
+  id: emnlpsystemdemonstrationstrack2026
+  isApproximateDeadline: false
+  location: HUNGEXPO Budapest Congress & Exhibition Center, Budapest, Hungary
+  shortname: EMNLPSystemDemonstrationsTrack 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-07-11T11:59:59Z'
+    note: Paper submission deadline
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+    (System Demonstrations Track)
+  website: https://2026.emnlp.org/
+emnlpsystemdemonstrationstrack2027:
+  conferenceEndDate: '2027-10-29'
+  conferenceStartDate: '2027-10-24'
+  dataSrc: estimate
+  id: emnlpsystemdemonstrationstrack2027
+  isApproximateDeadline: true
+  shortname: EMNLPSystemDemonstrationsTrack 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-07-11T11:59:59Z'
+    note: 'From EMNLPSystemDemonstrationsTrack 2026: Paper submission deadline'
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+    (System Demonstrations Track)
+emnlpsystemdemonstrationstrack2028:
+  conferenceEndDate: '2028-10-29'
+  conferenceStartDate: '2028-10-24'
+  dataSrc: estimate
+  id: emnlpsystemdemonstrationstrack2028
+  isApproximateDeadline: true
+  shortname: EMNLPSystemDemonstrationsTrack 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-07-11T11:59:59Z'
+    note: 'From EMNLPSystemDemonstrationsTrack 2026: Paper submission deadline'
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+    (System Demonstrations Track)
