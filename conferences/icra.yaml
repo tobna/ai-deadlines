@@ -80,16 +80,17 @@ icra2026:
 icra2027:
   conferenceEndDate: '2027-05-28'
   conferenceStartDate: '2027-05-24'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 122
   id: icra2027
   isApproximateDeadline: false
-  location: Seoul, South Korea
+  location: COEX, Seoul, South Korea
   rating: A*
   shortname: ICRA 2027
   tags: *id001
   timeline:
-  - deadline: '2026-09-16T11:59:59Z'
+  - deadline: '2026-09-16T07:59:59Z'
+    note: Paper Submission
   timezone: America/Los_Angeles
   title: IEEE International Conference on Robotics and Automation
   website: https://2027.ieee-icra.org/
