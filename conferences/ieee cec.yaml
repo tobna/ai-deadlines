@@ -23,24 +23,25 @@ ieee cec2026:
   title: IEEE Congress on Evolutionary Computation
   website: https://attend.ieee.org/wcci-2026/ieee-cec-2025/
 ieee cec2027:
-  conferenceEndDate: '2027-06-27'
-  conferenceStartDate: '2027-06-22'
-  dataSrc: estimate
+  conferenceEndDate: '2027-07-28'
+  conferenceStartDate: '2027-07-25'
+  dataSrc: ccf-deadlines
   id: ieee cec2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   shortname: IEEE CEC 2027
   tags: *id001
   timeline:
-  - deadline: '2027-01-31T23:59:59Z'
+  - deadline: '2027-03-01T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
+  website: https://ieeecec.org/2027
 ieee cec2028:
-  conferenceEndDate: '2028-06-26'
-  conferenceStartDate: '2028-06-21'
+  conferenceEndDate: '2028-07-30'
+  conferenceStartDate: '2028-07-25'
   dataSrc: estimate
   id: ieee cec2028
   isApproximateDeadline: true
   shortname: IEEE CEC 2028
   tags: *id001
   timeline:
-  - deadline: '2028-01-31T23:59:59Z'
+  - deadline: '2028-03-01T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
