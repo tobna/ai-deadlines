@@ -89,17 +89,19 @@ www2026:
 www2027:
   conferenceEndDate: '2027-05-14'
   conferenceStartDate: '2027-05-10'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: www2027
   isApproximateDeadline: false
+  location: Dublin, Ireland
   rating: A*
   shortname: WWW 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-10-12T11:59:59Z'
-    deadline: '2026-10-19T11:59:59Z'
-  title: International World Wide Web Conferences
-  website: https://acmweb2027.org/
+  - abstractDeadline: '2026-10-19T11:59:59Z'
+    deadline: '2026-10-26T11:59:59Z'
+    note: Paper Submission
+  title: The Web Conference
+  website: https://www2027.thewebconf.org/
 www2028:
   conferenceEndDate: '2028-05-15'
   conferenceStartDate: '2028-05-10'
