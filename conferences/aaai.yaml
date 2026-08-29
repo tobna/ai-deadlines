@@ -86,16 +86,18 @@ aaai2026:
 aaai2027:
   conferenceEndDate: '2027-02-23'
   conferenceStartDate: '2027-02-16'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   h5Index: 232
   id: aaai2027
   isApproximateDeadline: false
+  location: "Palais des congr\xE8s de Montr\xE9al, Montr\xE9al, Canada"
   rating: A*
   shortname: AAAI 2027
   tags: *id001
   timeline:
   - abstractDeadline: '2026-07-22T11:59:59Z'
     deadline: '2026-07-29T11:59:59Z'
+    note: Paper submission deadline
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-27/
 aaai2028:
