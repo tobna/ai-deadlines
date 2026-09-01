@@ -63,19 +63,21 @@ aamas2026:
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://cyprusconferences.org/aamas2026/
 aamas2027:
-  conferenceEndDate: '2027-05-03'
+  conferenceEndDate: '2027-05-07'
   conferenceStartDate: '2027-05-03'
-  dataSrc: ccf-deadlines
+  dataSrc: hf-repo
   id: aamas2027
   isApproximateDeadline: false
+  location: JW Marriott Hotel, Hanoi, Vietnam
   rating: A
   shortname: AAMAS 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-10-02T23:59:00Z'
-    deadline: '2026-10-09T23:59:00Z'
+  - abstractDeadline: '2026-10-02T11:59:59Z'
+    deadline: '2026-10-09T11:59:59Z'
+    note: Paper submission
   title: International Conference on Autonomous Agents and Multiagent Systems
-  website: https://openreview.net/group?id=ifaamas.org/AAMAS/2027/Conference
+  website: https://warwick.ac.uk/fac/sci/dcs/aamas2027/
 aamas2028:
   conferenceEndDate: '2028-05-07'
   conferenceStartDate: '2028-05-02'
