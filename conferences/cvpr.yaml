@@ -81,22 +81,23 @@ cvpr2026:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2026/
 cvpr2027:
-  conferenceEndDate: '2027-06-10'
-  conferenceStartDate: '2027-06-05'
-  dataSrc: estimate
+  conferenceEndDate: '2027-06-03'
+  conferenceStartDate: '2025-06-22'
+  dataSrc: off-website
   h5Index: 450
   id: cvpr2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: CVPR 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-11-08T11:59:59Z'
-    deadline: '2026-11-14T11:59:59Z'
+  - abstractDeadline: '2026-11-11T11:59:59Z'
+    deadline: '2026-11-17T11:59:59Z'
   title: Computer Vision and Pattern Recognition Conference
+  website: https://cvpr.thecvf.com/Conferences/2027/
 cvpr2028:
-  conferenceEndDate: '2028-06-09'
-  conferenceStartDate: '2028-06-04'
+  conferenceEndDate: '2028-06-10'
+  conferenceStartDate: '2028-06-05'
   dataSrc: estimate
   h5Index: 450
   id: cvpr2028
