@@ -12,7 +12,7 @@ coling2022:
   timeline:
   - deadline: '2022-05-18T11:59:00Z'
     note: Papers Due
-  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  title: International Conference on Computational Linguistics
   website: https://coling2022.org/
 coling2024:
   conferenceEndDate: '2024-05-25'
@@ -27,7 +27,7 @@ coling2024:
   timeline:
   - deadline: '2023-10-22T11:59:59Z'
     note: Long, short and position papers due
-  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  title: International Conference on Computational Linguistics
   website: https://lrec-coling-2024.lrec-conf.org/
 coling2025:
   conferenceEndDate: '2025-01-24'
@@ -59,7 +59,7 @@ coling2027:
   timeline:
   - deadline: '2026-10-13T11:59:59Z'
     note: ARR Submission
-  title: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  title: International Conference on Computational Linguistics
   website: https://2027.coling-iccl.org/
 coling2028:
   conferenceEndDate: '2028-05-14'
