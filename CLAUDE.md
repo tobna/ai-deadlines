@@ -108,6 +108,7 @@ Single-page static app — no backend:
 - `aideadlines/scripts.js` — loads JSON, handles filtering/sorting/theming.
 - `aideadlines/styles.tailwind.css` — Tailwind CSS
 - `html/` — generated output directory (gitignored)
+- `aideadlines/sitemap.xml` — template; `make_website.sh` stamps `<lastmod>` with the build date on the way into `html/`, so the daily rebuild never shows up as a git change.
 
 Agent/LLM access (the page renders client-side, so fetching the HTML yields nothing):
 - `aideadlines/llms.txt` — served at `/llms.txt`, the [llms.txt](https://llmstxt.org) entry point: links the data files and documents the JSON schema and field semantics. Static; keep it in sync when the schema changes.

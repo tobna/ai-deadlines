@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Template: <lastmod> is replaced with the build date by make_website.sh; do not update it here. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aideadlines.nauen-it.de/</loc>

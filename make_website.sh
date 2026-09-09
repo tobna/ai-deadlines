@@ -14,7 +14,11 @@ mkdir -p html/data html/fonts
 cp aideadlines/*.html aideadlines/*.js aideadlines/*.css html/
 cp aideadlines/data/*.json aideadlines/data/*.md html/data/
 cp aideadlines/fonts/*.woff2 html/fonts/
-cp aideadlines/*.ico aideadlines/*.svg aideadlines/*.png aideadlines/site.webmanifest aideadlines/robots.txt aideadlines/sitemap.xml aideadlines/llms.txt html/
+cp aideadlines/*.ico aideadlines/*.svg aideadlines/*.png aideadlines/site.webmanifest aideadlines/robots.txt aideadlines/llms.txt html/
+
+# The site is rebuilt daily, so <lastmod> is stamped here instead of in the committed
+# template — that keeps the date out of git and out of every auto-commit's diff.
+sed "s|<lastmod>.*</lastmod>|<lastmod>$(date +%F)</lastmod>|" aideadlines/sitemap.xml >html/sitemap.xml
 
 # Render the colored run into the served status page (served at /status.html).
 # The plain "=== PIPELINE OK ===" marker survives verbatim for the Uptime Kuma keyword check.
