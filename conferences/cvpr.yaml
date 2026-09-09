@@ -1,4 +1,7 @@
 cvpr2022:
+  acceptanceRate: 25.29
+  acceptanceRateYear: 2022
+  acceptedPapers: 2064
   conferenceEndDate: '2022-06-24'
   conferenceStartDate: '2022-06-19'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ cvpr2022:
   isApproximateDeadline: false
   rating: A*
   shortname: CVPR 2022
+  submittedPapers: 8161
   tags: &id001
   - CV
   - ML
@@ -17,6 +21,9 @@ cvpr2022:
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   website: http://cvpr2022.thecvf.com/
 cvpr2023:
+  acceptanceRate: 25.77
+  acceptanceRateYear: 2023
+  acceptedPapers: 2359
   conferenceEndDate: '2023-06-22'
   conferenceStartDate: '2023-06-20'
   dataSrc: off-website
@@ -25,6 +32,7 @@ cvpr2023:
   isApproximateDeadline: false
   rating: A*
   shortname: CVPR 2023
+  submittedPapers: 9155
   tags: *id001
   timeline:
   - abstractDeadline: '2022-11-05T06:59:00Z'
@@ -32,6 +40,9 @@ cvpr2023:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2023/
 cvpr2024:
+  acceptanceRate: 23.58
+  acceptanceRateYear: 2024
+  acceptedPapers: 2719
   conferenceEndDate: '2024-06-21'
   conferenceStartDate: '2024-06-19'
   dataSrc: off-website
@@ -40,6 +51,7 @@ cvpr2024:
   isApproximateDeadline: false
   rating: A*
   shortname: CVPR 2024
+  submittedPapers: 11532
   tags: *id001
   timeline:
   - abstractDeadline: '2023-11-04T06:59:00Z'
@@ -47,6 +59,9 @@ cvpr2024:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2024/
 cvpr2025:
+  acceptanceRate: 22.12
+  acceptanceRateYear: 2025
+  acceptedPapers: 2878
   conferenceEndDate: '2025-06-14'
   conferenceStartDate: '2025-06-13'
   dataSrc: off-website
@@ -56,6 +71,7 @@ cvpr2025:
   location: Music City Center, Nashville, USA
   rating: A*
   shortname: CVPR 2025
+  submittedPapers: 13008
   tags: *id001
   timeline:
   - abstractDeadline: '2024-11-08T07:59:00Z'
@@ -64,6 +80,9 @@ cvpr2025:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2025/
 cvpr2026:
+  acceptanceRate: 25.3
+  acceptanceRateYear: 2026
+  acceptedPapers: 4071
   conferenceEndDate: '2026-06-07'
   conferenceStartDate: '2026-06-05'
   dataSrc: off-website
@@ -73,6 +92,7 @@ cvpr2026:
   location: Denver Convention Center, Colorado, USA
   rating: A*
   shortname: CVPR 2026
+  submittedPapers: 16092
   tags: *id001
   timeline:
   - abstractDeadline: '2025-11-08T11:59:59Z'
@@ -81,6 +101,9 @@ cvpr2026:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2026/
 cvpr2027:
+  acceptanceRate: 25.3
+  acceptanceRateYear: 2026
+  acceptedPapers: 4071
   conferenceEndDate: '2027-06-09'
   conferenceStartDate: '2025-06-22'
   dataSrc: off-website
@@ -89,6 +112,7 @@ cvpr2027:
   isApproximateDeadline: false
   rating: A*
   shortname: CVPR 2027
+  submittedPapers: 16092
   tags: *id001
   timeline:
   - abstractDeadline: '2026-11-11T11:59:59Z'
@@ -96,6 +120,9 @@ cvpr2027:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2027/
 cvpr2028:
+  acceptanceRate: 25.3
+  acceptanceRateYear: 2026
+  acceptedPapers: 4071
   conferenceEndDate: '2028-06-10'
   conferenceStartDate: '2028-06-05'
   dataSrc: estimate
@@ -104,6 +131,7 @@ cvpr2028:
   isApproximateDeadline: true
   rating: A*
   shortname: CVPR 2028
+  submittedPapers: 16092
   tags: *id001
   timeline:
   - abstractDeadline: '2027-11-08T11:59:59Z'

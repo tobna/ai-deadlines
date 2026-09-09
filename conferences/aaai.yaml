@@ -1,4 +1,7 @@
 aaai2022:
+  acceptanceRate: 14.96
+  acceptanceRateYear: 2022
+  acceptedPapers: 1349
   conferenceEndDate: '2022-03-01'
   conferenceStartDate: '2022-02-22'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ aaai2022:
   isApproximateDeadline: false
   rating: A*
   shortname: AAAI 2022
+  submittedPapers: 9020
   tags: &id001
   - CV
   - DM
@@ -18,6 +22,9 @@ aaai2022:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/Conferences/AAAI-22/
 aaai2023:
+  acceptanceRate: 19.61
+  acceptanceRateYear: 2023
+  acceptedPapers: 1721
   conferenceEndDate: '2023-02-14'
   conferenceStartDate: '2023-02-07'
   dataSrc: ccf-deadlines
@@ -26,6 +33,7 @@ aaai2023:
   isApproximateDeadline: false
   rating: A*
   shortname: AAAI 2023
+  submittedPapers: 8777
   tags: *id001
   timeline:
   - abstractDeadline: '2022-08-09T11:59:59Z'
@@ -33,6 +41,9 @@ aaai2023:
   title: AAAI Conference on Artificial Intelligence
   website: https://www.aaai.org/Conferences/AAAI-23/
 aaai2024:
+  acceptanceRate: 23.75
+  acceptanceRateYear: 2024
+  acceptedPapers: 2342
   conferenceEndDate: '2024-02-27'
   conferenceStartDate: '2024-02-20'
   dataSrc: ccf-deadlines
@@ -41,6 +52,7 @@ aaai2024:
   isApproximateDeadline: false
   rating: A*
   shortname: AAAI 2024
+  submittedPapers: 9862
   tags: *id001
   timeline:
   - abstractDeadline: '2023-08-09T11:59:59Z'
@@ -48,6 +60,9 @@ aaai2024:
   title: AAAI Conference on Artificial Intelligence
   website: https://www.aaai.org/aaai-conference/
 aaai2025:
+  acceptanceRate: 23.4
+  acceptanceRateYear: 2025
+  acceptedPapers: 3032
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-25'
   dataSrc: hf-repo
@@ -57,6 +72,7 @@ aaai2025:
   location: Pennsylvania Convention Center, Philadelphia, USA
   rating: A*
   shortname: AAAI 2025
+  submittedPapers: 12957
   tags: *id001
   timeline:
   - abstractDeadline: '2024-08-08T11:59:59Z'
@@ -66,6 +82,9 @@ aaai2025:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-25/
 aaai2026:
+  acceptanceRate: 17.6
+  acceptanceRateYear: 2026
+  acceptedPapers: 4167
   conferenceEndDate: '2026-01-27'
   conferenceStartDate: '2026-01-20'
   dataSrc: hf-repo
@@ -75,6 +94,7 @@ aaai2026:
   location: Singapore EXPO, Singapore
   rating: A*
   shortname: AAAI 2026
+  submittedPapers: 23680
   tags: *id001
   timeline:
   - abstractDeadline: '2025-07-26T11:59:59Z'
@@ -84,6 +104,9 @@ aaai2026:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-26/
 aaai2027:
+  acceptanceRate: 17.6
+  acceptanceRateYear: 2026
+  acceptedPapers: 4167
   conferenceEndDate: '2027-02-23'
   conferenceStartDate: '2027-02-16'
   dataSrc: hf-repo
@@ -93,6 +116,7 @@ aaai2027:
   location: "Palais des congr\xE8s de Montr\xE9al, Montr\xE9al, Canada"
   rating: A*
   shortname: AAAI 2027
+  submittedPapers: 23680
   tags: *id001
   timeline:
   - abstractDeadline: '2026-07-22T11:59:59Z'
@@ -101,6 +125,9 @@ aaai2027:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-27/
 aaai2028:
+  acceptanceRate: 17.6
+  acceptanceRateYear: 2026
+  acceptedPapers: 4167
   conferenceEndDate: '2028-02-21'
   conferenceStartDate: '2028-02-16'
   dataSrc: estimate
@@ -109,6 +136,7 @@ aaai2028:
   isApproximateDeadline: true
   rating: A*
   shortname: AAAI 2028
+  submittedPapers: 23680
   tags: *id001
   timeline:
   - abstractDeadline: '2027-07-21T11:59:59Z'

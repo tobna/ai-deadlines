@@ -1,4 +1,7 @@
 iccv2021:
+  acceptanceRate: 25.93
+  acceptanceRateYear: 2021
+  acceptedPapers: 1617
   conferenceEndDate: '2021-10-17'
   conferenceStartDate: '2021-10-10'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ iccv2021:
   isApproximateDeadline: false
   rating: A*
   shortname: ICCV 2021
+  submittedPapers: 6236
   tags: &id001
   - CV
   - ML
@@ -15,6 +19,9 @@ iccv2021:
   title: IEEE International Conference on Computer Vision
   website: http://iccv2021.thecvf.com/home/
 iccv2023:
+  acceptanceRate: 26.71
+  acceptanceRateYear: 2023
+  acceptedPapers: 2160
   conferenceEndDate: '2023-10-06'
   conferenceStartDate: '2023-10-02'
   dataSrc: ccf-deadlines
@@ -23,12 +30,16 @@ iccv2023:
   isApproximateDeadline: false
   rating: A*
   shortname: ICCV 2023
+  submittedPapers: 8088
   tags: *id001
   timeline:
   - deadline: '2023-03-09T11:59:59Z'
   title: IEEE International Conference on Computer Vision
   website: http://iccv2023.thecvf.com/home/
 iccv2025:
+  acceptanceRate: 24.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 2698
   conferenceEndDate: '2025-10-23'
   conferenceStartDate: '2025-10-21'
   dataSrc: off-website
@@ -38,6 +49,7 @@ iccv2025:
   location: Honolulu, USA
   rating: A*
   shortname: ICCV 2025
+  submittedPapers: 11239
   tags: *id001
   timeline:
   - abstractDeadline: '2025-03-04T09:59:00Z'
@@ -46,6 +58,9 @@ iccv2025:
   title: International Conference on Computer Vision
   website: https://iccv.thecvf.com/Conferences/2025/
 iccv2027:
+  acceptanceRate: 24.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 2698
   conferenceEndDate: '2027-10-26'
   conferenceStartDate: '2027-10-21'
   dataSrc: estimate
@@ -54,6 +69,7 @@ iccv2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICCV 2027
+  submittedPapers: 11239
   tags: *id001
   timeline:
   - abstractDeadline: '2027-03-04T09:59:00Z'

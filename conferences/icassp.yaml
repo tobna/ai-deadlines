@@ -1,4 +1,7 @@
 icassp2022:
+  acceptanceRate: 45.0
+  acceptanceRateYear: 2022
+  acceptedPapers: 1785
   conferenceEndDate: '2022-05-27'
   conferenceStartDate: '2022-05-22'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ icassp2022:
   isApproximateDeadline: false
   rating: B
   shortname: ICASSP 2022
+  submittedPapers: 3967
   tags: &id001
   - SP
   timeline:
@@ -13,6 +17,9 @@ icassp2022:
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2022.ieeeicassp.org
 icassp2023:
+  acceptanceRate: 45.13
+  acceptanceRateYear: 2023
+  acceptedPapers: 2765
   conferenceEndDate: '2023-06-09'
   conferenceStartDate: '2023-06-04'
   dataSrc: ccf-deadlines
@@ -20,12 +27,16 @@ icassp2023:
   isApproximateDeadline: false
   rating: B
   shortname: ICASSP 2023
+  submittedPapers: 6127
   tags: *id001
   timeline:
   - deadline: '2022-10-27T11:59:59Z'
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2023.ieeeicassp.org
 icassp2024:
+  acceptanceRate: 48.52
+  acceptanceRateYear: 2024
+  acceptedPapers: 2812
   conferenceEndDate: '2024-04-19'
   conferenceStartDate: '2024-04-14'
   dataSrc: ccf-deadlines
@@ -33,12 +44,16 @@ icassp2024:
   isApproximateDeadline: false
   rating: B
   shortname: ICASSP 2024
+  submittedPapers: 5796
   tags: *id001
   timeline:
   - deadline: '2023-09-07T11:59:59Z'
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2024.ieeeicassp.org/
 icassp2025:
+  acceptanceRate: 45.27
+  acceptanceRateYear: 2025
+  acceptedPapers: 3145
   conferenceEndDate: '2025-04-11'
   conferenceStartDate: '2025-04-06'
   dataSrc: hf-repo
@@ -47,6 +62,7 @@ icassp2025:
   location: Hyderabad International Convention Center, Hyderabad, India
   rating: B
   shortname: ICASSP 2025
+  submittedPapers: 6947
   tags: *id001
   timeline:
   - deadline: '2025-09-18T06:59:59Z'
@@ -55,6 +71,9 @@ icassp2025:
   title: International Conference on Acoustics, Speech and Signal Processing
   website: https://2025.ieeeicassp.org/
 icassp2026:
+  acceptanceRate: 45.27
+  acceptanceRateYear: 2025
+  acceptedPapers: 3145
   conferenceEndDate: '2025-05-08'
   conferenceStartDate: '2025-05-04'
   dataSrc: hf-repo
@@ -63,6 +82,7 @@ icassp2026:
   location: Barcelona International Convention Center (CCIB), Barcelona, Spain
   rating: B
   shortname: ICASSP 2026
+  submittedPapers: 6947
   tags: *id001
   timeline:
   - deadline: '2025-09-18T06:59:59Z'
@@ -71,6 +91,9 @@ icassp2026:
   title: International Conference on Acoustics, Speech and Signal Processing
   website: https://2026.ieeeicassp.org
 icassp2027:
+  acceptanceRate: 45.27
+  acceptanceRateYear: 2025
+  acceptedPapers: 3145
   conferenceEndDate: '2027-05-21'
   conferenceStartDate: '2027-05-16'
   dataSrc: ccf-deadlines
@@ -78,12 +101,16 @@ icassp2027:
   isApproximateDeadline: false
   rating: B
   shortname: ICASSP 2027
+  submittedPapers: 6947
   tags: *id001
   timeline:
   - deadline: '2026-09-17T11:59:59Z'
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2027.ieeeicassp.org/
 icassp2028:
+  acceptanceRate: 45.27
+  acceptanceRateYear: 2025
+  acceptedPapers: 3145
   conferenceEndDate: '2028-05-20'
   conferenceStartDate: '2028-05-15'
   dataSrc: estimate
@@ -91,6 +118,7 @@ icassp2028:
   isApproximateDeadline: true
   rating: B
   shortname: ICASSP 2028
+  submittedPapers: 6947
   tags: *id001
   timeline:
   - deadline: '2027-09-17T11:59:59Z'

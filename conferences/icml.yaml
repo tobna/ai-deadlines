@@ -1,4 +1,7 @@
 icml2017:
+  acceptanceRate: 25.89
+  acceptanceRateYear: 2017
+  acceptedPapers: 434
   conferenceEndDate: '2017-09-04'
   conferenceStartDate: '2017-08-07'
   dataSrc: off-website
@@ -7,6 +10,7 @@ icml2017:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2017
+  submittedPapers: 1676
   tags: &id001
   - ML
   timeline:
@@ -14,6 +18,9 @@ icml2017:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2017/
 icml2018:
+  acceptanceRate: 25.11
+  acceptanceRateYear: 2018
+  acceptedPapers: 621
   conferenceEndDate: '2018-07-13'
   conferenceStartDate: '2018-07-11'
   dataSrc: off-website
@@ -22,12 +29,16 @@ icml2018:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2018
+  submittedPapers: 2473
   tags: *id001
   timeline:
   - deadline: '2018-03-03T07:59:00Z'
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2018/
 icml2019:
+  acceptanceRate: 22.61
+  acceptanceRateYear: 2019
+  acceptedPapers: 774
   conferenceEndDate: '2019-07-13'
   conferenceStartDate: '2019-07-11'
   dataSrc: off-website
@@ -36,6 +47,7 @@ icml2019:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2019
+  submittedPapers: 3424
   tags: *id001
   timeline:
   - abstractDeadline: '2019-01-18T23:59:00Z'
@@ -43,6 +55,9 @@ icml2019:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2019/
 icml2020:
+  acceptanceRate: 21.8
+  acceptanceRateYear: 2020
+  acceptedPapers: 1088
   conferenceEndDate: '2020-07-18'
   conferenceStartDate: '2020-07-13'
   dataSrc: off-website
@@ -51,6 +66,7 @@ icml2020:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2020
+  submittedPapers: 4990
   tags: *id001
   timeline:
   - abstractDeadline: '2020-01-30T12:00:00Z'
@@ -58,6 +74,9 @@ icml2020:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2020/
 icml2021:
+  acceptanceRate: 21.48
+  acceptanceRateYear: 2021
+  acceptedPapers: 1184
   conferenceEndDate: '2021-07-24'
   conferenceStartDate: '2021-07-18'
   dataSrc: off-website
@@ -66,6 +85,7 @@ icml2021:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2021
+  submittedPapers: 5513
   tags: *id001
   timeline:
   - abstractDeadline: '2021-01-28T12:00:00Z'
@@ -73,6 +93,9 @@ icml2021:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2021/
 icml2022:
+  acceptanceRate: 21.94
+  acceptanceRateYear: 2022
+  acceptedPapers: 1235
   conferenceEndDate: '2022-07-21'
   conferenceStartDate: '2022-07-19'
   dataSrc: off-website
@@ -81,6 +104,7 @@ icml2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2022
+  submittedPapers: 5630
   tags: *id001
   timeline:
   - abstractDeadline: '2022-01-20T12:00:00Z'
@@ -88,6 +112,9 @@ icml2022:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2022/
 icml2023:
+  acceptanceRate: 27.94
+  acceptanceRateYear: 2023
+  acceptedPapers: 1827
   conferenceEndDate: '2023-07-27'
   conferenceStartDate: '2023-07-25'
   dataSrc: off-website
@@ -96,12 +123,16 @@ icml2023:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2023
+  submittedPapers: 6538
   tags: *id001
   timeline:
   - deadline: '2023-01-26T19:59:00Z'
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2023/
 icml2024:
+  acceptanceRate: 27.54
+  acceptanceRateYear: 2024
+  acceptedPapers: 2609
   conferenceEndDate: '2024-07-25'
   conferenceStartDate: '2024-07-23'
   dataSrc: off-website
@@ -110,12 +141,16 @@ icml2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ICML 2024
+  submittedPapers: 9473
   tags: *id001
   timeline:
   - deadline: '2024-02-01T12:00:00Z'
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2024/
 icml2025:
+  acceptanceRate: 26.93
+  acceptanceRateYear: 2025
+  acceptedPapers: 3260
   conferenceEndDate: '2025-07-17'
   conferenceStartDate: '2025-07-15'
   dataSrc: off-website
@@ -125,6 +160,7 @@ icml2025:
   location: Vancouver Convention Center
   rating: A*
   shortname: ICML 2025
+  submittedPapers: 12107
   tags: *id001
   timeline:
   - abstractDeadline: '2025-01-24T11:59:59Z'
@@ -133,6 +169,9 @@ icml2025:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2025/
 icml2026:
+  acceptanceRate: 26.56
+  acceptanceRateYear: 2026
+  acceptedPapers: 6352
   conferenceEndDate: '2026-07-11'
   conferenceStartDate: '2026-07-06'
   dataSrc: hf-repo
@@ -142,6 +181,7 @@ icml2026:
   location: Coex Convention & Exhibition Center
   rating: A*
   shortname: ICML 2026
+  submittedPapers: 23918
   tags: *id001
   timeline:
   - abstractDeadline: '2026-01-24T11:59:59Z'
@@ -151,6 +191,9 @@ icml2026:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2026/CallForPapers
 icml2027:
+  acceptanceRate: 26.56
+  acceptanceRateYear: 2026
+  acceptedPapers: 6352
   conferenceEndDate: '2027-07-11'
   conferenceStartDate: '2027-07-06'
   dataSrc: estimate
@@ -159,6 +202,7 @@ icml2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ICML 2027
+  submittedPapers: 23918
   tags: *id001
   timeline:
   - abstractDeadline: '2026-01-24T11:59:59Z'
@@ -167,6 +211,9 @@ icml2027:
       UTC-0'
   title: International Conference on Machine Learning
 icml2028:
+  acceptanceRate: 26.56
+  acceptanceRateYear: 2026
+  acceptedPapers: 6352
   conferenceEndDate: '2028-07-10'
   conferenceStartDate: '2028-07-05'
   dataSrc: estimate
@@ -175,6 +222,7 @@ icml2028:
   isApproximateDeadline: true
   rating: A*
   shortname: ICML 2028
+  submittedPapers: 23918
   tags: *id001
   timeline:
   - abstractDeadline: '2028-01-24T11:59:59Z'

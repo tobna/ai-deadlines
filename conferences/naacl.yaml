@@ -1,4 +1,7 @@
 naacl2022:
+  acceptanceRate: 21.02
+  acceptanceRateYear: 2022
+  acceptedPapers: 442
   conferenceEndDate: '2022-07-15'
   conferenceStartDate: '2022-07-10'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ naacl2022:
   isApproximateDeadline: false
   rating: A
   shortname: NAACL 2022
+  submittedPapers: 2103
   tags: &id001
   - NLP
   timeline:
@@ -15,6 +19,9 @@ naacl2022:
     Computational Linguistics
   website: https://2022.naacl.org/
 naacl2024:
+  acceptanceRate: 23.21
+  acceptanceRateYear: 2024
+  acceptedPapers: 565
   conferenceEndDate: '2024-06-21'
   conferenceStartDate: '2024-06-16'
   dataSrc: ccf-deadlines
@@ -23,6 +30,7 @@ naacl2024:
   isApproximateDeadline: false
   rating: A
   shortname: NAACL 2024
+  submittedPapers: 2434
   tags: *id001
   timeline:
   - deadline: '2023-12-16T11:59:59Z'
@@ -30,6 +38,9 @@ naacl2024:
     Computational Linguistics
   website: https://2024.naacl.org/
 naacl2025:
+  acceptanceRate: 22.57
+  acceptanceRateYear: 2025
+  acceptedPapers: 719
   conferenceEndDate: '2025-05-04'
   conferenceStartDate: '2025-04-29'
   dataSrc: hf-repo
@@ -39,6 +50,7 @@ naacl2025:
   location: Albuquerque, New Mexico
   rating: A
   shortname: NAACL 2025
+  submittedPapers: 3185
   tags: *id001
   timeline:
   - deadline: '2024-10-16T11:59:59Z'
@@ -47,6 +59,9 @@ naacl2025:
     Computational Linguistics
   website: https://2025.naacl.org/
 naacl2027:
+  acceptanceRate: 22.57
+  acceptanceRateYear: 2025
+  acceptedPapers: 719
   conferenceEndDate: '2027-06-05'
   conferenceStartDate: '2027-06-01'
   dataSrc: hf-repo
@@ -56,6 +71,7 @@ naacl2027:
   location: San Francisco, USA
   rating: A
   shortname: NAACL 2027
+  submittedPapers: 3185
   tags: *id001
   timeline:
   - deadline: '2026-10-13T11:59:59Z'

@@ -1,4 +1,7 @@
 eccv2022:
+  acceptanceRate: 28.34
+  acceptanceRateYear: 2022
+  acceptedPapers: 1645
   conferenceEndDate: '2022-10-28'
   conferenceStartDate: '2022-10-24'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ eccv2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ECCV 2022
+  submittedPapers: 5804
   tags: &id001
   - CV
   timeline:
@@ -14,6 +18,9 @@ eccv2022:
   title: European Conference on Computer Vision
   website: https://eccv2022.ecva.net/
 eccv2024:
+  acceptanceRate: 27.8
+  acceptanceRateYear: 2024
+  acceptedPapers: 2387
   conferenceEndDate: '2024-10-04'
   conferenceStartDate: '2024-10-01'
   dataSrc: off-website
@@ -22,6 +29,7 @@ eccv2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ECCV 2024
+  submittedPapers: 8585
   tags: *id001
   timeline:
   - abstractDeadline: '2024-02-29T21:00:00Z'
@@ -29,6 +37,9 @@ eccv2024:
   title: European Conference on Computer Vision
   website: https://eccv.ecva.net/Conferences/2024/
 eccv2026:
+  acceptanceRate: 27.53
+  acceptanceRateYear: 2026
+  acceptedPapers: 2883
   conferenceEndDate: '2026-09-13'
   conferenceStartDate: '2026-09-10'
   dataSrc: off-website
@@ -38,6 +49,7 @@ eccv2026:
   location: "Malm\xF6, Sweden"
   rating: A*
   shortname: ECCV 2026
+  submittedPapers: 10473
   tags: *id001
   timeline:
   - abstractDeadline: '2026-02-26T22:00:00Z'
@@ -46,6 +58,9 @@ eccv2026:
   title: European Conference on Computer Vision
   website: https://eccv.ecva.net/Conferences/2026/
 eccv2028:
+  acceptanceRate: 27.53
+  acceptanceRateYear: 2026
+  acceptedPapers: 2883
   conferenceEndDate: '2028-09-12'
   conferenceStartDate: '2028-09-07'
   dataSrc: estimate
@@ -54,6 +69,7 @@ eccv2028:
   isApproximateDeadline: true
   rating: A*
   shortname: ECCV 2028
+  submittedPapers: 10473
   tags: *id001
   timeline:
   - deadline: '2028-03-05T11:00:00Z'

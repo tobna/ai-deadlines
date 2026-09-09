@@ -1,4 +1,7 @@
 siggraph2025:
+  acceptanceRate: 22.57
+  acceptanceRateYear: 2025
+  acceptedPapers: 174
   conferenceEndDate: '2025-08-14'
   conferenceStartDate: '2025-08-10'
   dataSrc: hf-repo
@@ -7,6 +10,7 @@ siggraph2025:
   location: Convention Centre, Vancouver, Canada
   rating: A*
   shortname: SIGGRAPH 2025
+  submittedPapers: 771
   tags: &id001 []
   timeline:
   - deadline: '2025-01-23T22:00:00Z'
@@ -15,6 +19,9 @@ siggraph2025:
   title: Conference on Computer Graphics and Interactive Techniques
   website: https://s2025.siggraph.org/
 siggraph2026:
+  acceptanceRate: 22.57
+  acceptanceRateYear: 2025
+  acceptedPapers: 174
   conferenceEndDate: '2026-07-23'
   conferenceStartDate: '2026-07-19'
   dataSrc: hf-repo
@@ -23,6 +30,7 @@ siggraph2026:
   location: Los Angeles Convention Center, Los Angeles, California
   rating: A*
   shortname: SIGGRAPH 2026
+  submittedPapers: 771
   tags: *id001
   timeline:
   - deadline: '2026-01-22T22:00:00Z'
@@ -30,6 +38,9 @@ siggraph2026:
   title: Conference on Computer Graphics and Interactive Techniques
   website: https://s2026.siggraph.org/
 siggraph2027:
+  acceptanceRate: 22.57
+  acceptanceRateYear: 2025
+  acceptedPapers: 174
   conferenceEndDate: '2027-07-24'
   conferenceStartDate: '2027-07-19'
   dataSrc: estimate
@@ -37,11 +48,15 @@ siggraph2027:
   isApproximateDeadline: true
   rating: A*
   shortname: SIGGRAPH 2027
+  submittedPapers: 771
   tags: *id001
   timeline:
   - deadline: '2027-01-22T22:00:00Z'
   title: Conference on Computer Graphics and Interactive Techniques
 siggraph2028:
+  acceptanceRate: 22.57
+  acceptanceRateYear: 2025
+  acceptedPapers: 174
   conferenceEndDate: '2028-07-23'
   conferenceStartDate: '2028-07-18'
   dataSrc: estimate
@@ -49,6 +64,7 @@ siggraph2028:
   isApproximateDeadline: true
   rating: A*
   shortname: SIGGRAPH 2028
+  submittedPapers: 771
   tags: *id001
   timeline:
   - deadline: '2028-01-22T22:00:00Z'

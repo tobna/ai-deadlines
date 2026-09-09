@@ -1,4 +1,7 @@
 wsdm2022:
+  acceptanceRate: 15.84
+  acceptanceRateYear: 2022
+  acceptedPapers: 80
   conferenceEndDate: '2022-02-25'
   conferenceStartDate: '2022-02-21'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ wsdm2022:
   isApproximateDeadline: false
   rating: A
   shortname: WSDM 2022
+  submittedPapers: 505
   tags: &id001
   - DM
   timeline:
@@ -14,6 +18,9 @@ wsdm2022:
   title: International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2022/
 wsdm2023:
+  acceptanceRate: 17.83
+  acceptanceRateYear: 2023
+  acceptedPapers: 123
   conferenceEndDate: '2023-03-03'
   conferenceStartDate: '2023-02-27'
   dataSrc: ccf-deadlines
@@ -22,12 +29,16 @@ wsdm2023:
   isApproximateDeadline: false
   rating: A
   shortname: WSDM 2023
+  submittedPapers: 690
   tags: *id001
   timeline:
   - deadline: '2022-08-13T11:59:59Z'
   title: International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2023/
 wsdm2024:
+  acceptanceRate: 17.72
+  acceptanceRateYear: 2024
+  acceptedPapers: 109
   conferenceEndDate: '2024-03-08'
   conferenceStartDate: '2024-03-04'
   dataSrc: ccf-deadlines
@@ -36,12 +47,16 @@ wsdm2024:
   isApproximateDeadline: false
   rating: A
   shortname: WSDM 2024
+  submittedPapers: 615
   tags: *id001
   timeline:
   - deadline: '2023-08-11T11:59:59Z'
   title: International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2024/
 wsdm2025:
+  acceptanceRate: 17.29
+  acceptanceRateYear: 2025
+  acceptedPapers: 106
   conferenceEndDate: '2025-03-14'
   conferenceStartDate: '2025-03-10'
   dataSrc: hf-repo
@@ -51,6 +66,7 @@ wsdm2025:
   location: Hannover Congress Center, Hannover, Germany
   rating: A
   shortname: WSDM 2025
+  submittedPapers: 613
   tags: *id001
   timeline:
   - abstractDeadline: '2024-08-08T11:59:00Z'
@@ -60,6 +76,9 @@ wsdm2025:
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2025/
 wsdm2026:
+  acceptanceRate: 16.31
+  acceptanceRateYear: 2026
+  acceptedPapers: 100
   conferenceEndDate: '2026-02-26'
   conferenceStartDate: '2026-02-22'
   dataSrc: hf-repo
@@ -69,6 +88,7 @@ wsdm2026:
   location: Boise, Idaho, USA
   rating: A
   shortname: WSDM 2026
+  submittedPapers: 613
   tags: *id001
   timeline:
   - abstractDeadline: '2025-08-08T11:59:00Z'
@@ -80,6 +100,9 @@ wsdm2026:
   title: ACM International Conference on Web Search and Data Mining
   website: https://wsdm-conference.org/2026/
 wsdm2027:
+  acceptanceRate: 16.31
+  acceptanceRateYear: 2026
+  acceptedPapers: 100
   conferenceEndDate: '2027-02-19'
   conferenceStartDate: '2027-02-15'
   dataSrc: hf-repo
@@ -89,6 +112,7 @@ wsdm2027:
   location: Cordis, Hong Kong
   rating: A
   shortname: WSDM 2027
+  submittedPapers: 613
   tags: *id001
   timeline:
   - abstractDeadline: '2026-08-18T11:59:59Z'
@@ -99,6 +123,9 @@ wsdm2027:
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2027/
 wsdm2028:
+  acceptanceRate: 16.31
+  acceptanceRateYear: 2026
+  acceptedPapers: 100
   conferenceEndDate: '2028-02-20'
   conferenceStartDate: '2028-02-15'
   dataSrc: estimate
@@ -107,6 +134,7 @@ wsdm2028:
   isApproximateDeadline: true
   rating: A
   shortname: WSDM 2028
+  submittedPapers: 613
   tags: *id001
   timeline:
   - abstractDeadline: '2027-08-12T11:59:59Z'

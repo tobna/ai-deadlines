@@ -1,4 +1,7 @@
 sigir2021:
+  acceptanceRate: 20.97
+  acceptanceRateYear: 2021
+  acceptedPapers: 151
   conferenceEndDate: '2021-07-15'
   conferenceStartDate: '2021-07-11'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ sigir2021:
   isApproximateDeadline: false
   rating: A*
   shortname: SIGIR 2021
+  submittedPapers: 720
   tags: &id001
   - DM
   - NLP
@@ -15,6 +19,9 @@ sigir2021:
   title: International Conference on Research on Development in Information Retrieval
   website: http://sigir.org/sigir2021/
 sigir2022:
+  acceptanceRate: 20.3
+  acceptanceRateYear: 2022
+  acceptedPapers: 161
   conferenceEndDate: '2022-07-15'
   conferenceStartDate: '2022-07-11'
   dataSrc: ccf-deadlines
@@ -22,6 +29,7 @@ sigir2022:
   isApproximateDeadline: false
   rating: A*
   shortname: SIGIR 2022
+  submittedPapers: 793
   tags: *id001
   timeline:
   - abstractDeadline: '2022-01-22T11:59:59Z'
@@ -29,6 +37,9 @@ sigir2022:
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir.org/sigir2022/
 sigir2023:
+  acceptanceRate: 20.07
+  acceptanceRateYear: 2023
+  acceptedPapers: 165
   conferenceEndDate: '2023-07-27'
   conferenceStartDate: '2023-07-23'
   dataSrc: ccf-deadlines
@@ -36,6 +47,7 @@ sigir2023:
   isApproximateDeadline: false
   rating: A*
   shortname: SIGIR 2023
+  submittedPapers: 822
   tags: *id001
   timeline:
   - abstractDeadline: '2023-01-25T11:59:59Z'
@@ -43,6 +55,9 @@ sigir2023:
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir.org/sigir2023/
 sigir2024:
+  acceptanceRate: 20.23
+  acceptanceRateYear: 2024
+  acceptedPapers: 160
   conferenceEndDate: '2024-07-18'
   conferenceStartDate: '2024-07-14'
   dataSrc: ccf-deadlines
@@ -50,6 +65,7 @@ sigir2024:
   isApproximateDeadline: false
   rating: A*
   shortname: SIGIR 2024
+  submittedPapers: 791
   tags: *id001
   timeline:
   - abstractDeadline: '2024-01-20T11:59:59Z'
@@ -57,6 +73,9 @@ sigir2024:
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir-2024.github.io/index.html
 sigir2025:
+  acceptanceRate: 22.32
+  acceptanceRateYear: 2025
+  acceptedPapers: 239
   conferenceEndDate: '2025-07-18'
   conferenceStartDate: '2025-07-13'
   dataSrc: ccf-deadlines
@@ -64,6 +83,7 @@ sigir2025:
   isApproximateDeadline: false
   rating: A*
   shortname: SIGIR 2025
+  submittedPapers: 1071
   tags: *id001
   timeline:
   - abstractDeadline: '2025-01-17T11:59:59Z'
@@ -71,6 +91,9 @@ sigir2025:
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir2025.dei.unipd.it/
 sigir2026:
+  acceptanceRate: 18.41
+  acceptanceRateYear: 2026
+  acceptedPapers: 234
   conferenceEndDate: '2026-07-24'
   conferenceStartDate: '2026-07-20'
   dataSrc: hf-repo
@@ -79,6 +102,7 @@ sigir2026:
   location: Melbourne Convention and Exhibition Centre (MCEC)
   rating: A*
   shortname: SIGIR 2026
+  submittedPapers: 1271
   tags: *id001
   timeline:
   - abstractDeadline: '2026-01-16T11:59:59Z'
@@ -89,6 +113,9 @@ sigir2026:
     Retrieval
   website: https://sigir2026.org/en-AU
 sigir2027:
+  acceptanceRate: 18.41
+  acceptanceRateYear: 2026
+  acceptedPapers: 234
   conferenceEndDate: '2027-07-25'
   conferenceStartDate: '2027-07-20'
   dataSrc: estimate
@@ -96,6 +123,7 @@ sigir2027:
   isApproximateDeadline: true
   rating: A*
   shortname: SIGIR 2027
+  submittedPapers: 1271
   tags: *id001
   timeline:
   - abstractDeadline: '2027-01-16T11:59:59Z'
@@ -104,6 +132,9 @@ sigir2027:
   title: International ACM SIGIR Conference on Research and Development in Information
     Retrieval
 sigir2028:
+  acceptanceRate: 18.41
+  acceptanceRateYear: 2026
+  acceptedPapers: 234
   conferenceEndDate: '2028-07-24'
   conferenceStartDate: '2028-07-19'
   dataSrc: estimate
@@ -111,6 +142,7 @@ sigir2028:
   isApproximateDeadline: true
   rating: A*
   shortname: SIGIR 2028
+  submittedPapers: 1271
   tags: *id001
   timeline:
   - abstractDeadline: '2028-01-16T11:59:59Z'

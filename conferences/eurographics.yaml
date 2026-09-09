@@ -1,4 +1,7 @@
 eurographics2025:
+  acceptanceRate: 36.59
+  acceptanceRateYear: 2025
+  acceptedPapers: 75
   conferenceEndDate: '2025-05-16'
   conferenceStartDate: '2025-05-12'
   dataSrc: hf-repo
@@ -6,6 +9,7 @@ eurographics2025:
   isApproximateDeadline: false
   location: BFI Southbank
   shortname: Eurographics 2025
+  submittedPapers: 205
   tags: &id001 []
   timeline:
   - deadline: '2024-10-03T23:59:59Z'
@@ -14,6 +18,9 @@ eurographics2025:
   title: The 46th Annual Conference of the European Association for Computer Graphics
   website: https://eg25.cs.ucl.ac.uk/
 eurographics2026:
+  acceptanceRate: 36.59
+  acceptanceRateYear: 2025
+  acceptedPapers: 75
   conferenceEndDate: '2026-05-08'
   conferenceStartDate: '2026-05-04'
   dataSrc: hf-repo
@@ -21,6 +28,7 @@ eurographics2026:
   isApproximateDeadline: false
   location: Aachen, Germany
   shortname: Eurographics 2026
+  submittedPapers: 205
   tags: *id001
   timeline:
   - abstractDeadline: '2025-09-22T23:59:59Z'
@@ -29,6 +37,9 @@ eurographics2026:
   title: The 47th Annual Conference of the European Association for Computer Graphics
   website: https://eg2026.github.io/
 eurographics2027:
+  acceptanceRate: 36.59
+  acceptanceRateYear: 2025
+  acceptedPapers: 75
   conferenceEndDate: '2027-05-14'
   conferenceStartDate: '2027-05-10'
   dataSrc: hf-repo
@@ -36,6 +47,7 @@ eurographics2027:
   isApproximateDeadline: false
   location: IMT Campus, Lucca, Italy
   shortname: Eurographics 2027
+  submittedPapers: 205
   tags: *id001
   timeline:
   - abstractDeadline: '2026-09-25T23:59:59Z'
@@ -44,12 +56,16 @@ eurographics2027:
   title: The 48th Annual Conference of the European Association for Computer Graphics
   website: https://eg2027.isti.cnr.it/
 eurographics2028:
+  acceptanceRate: 36.59
+  acceptanceRateYear: 2025
+  acceptedPapers: 75
   conferenceEndDate: '2028-05-15'
   conferenceStartDate: '2028-05-10'
   dataSrc: estimate
   id: eurographics2028
   isApproximateDeadline: true
   shortname: Eurographics 2028
+  submittedPapers: 205
   tags: *id001
   timeline:
   - abstractDeadline: '2027-09-25T23:59:59Z'

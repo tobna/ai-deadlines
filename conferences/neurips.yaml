@@ -56,6 +56,9 @@ neurips2012:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2012/
 neurips2013:
+  acceptanceRate: 25.35
+  acceptanceRateYear: 2013
+  acceptedPapers: 360
   conferenceEndDate: '2013-12-08'
   conferenceStartDate: '2013-12-06'
   dataSrc: off-website
@@ -64,6 +67,7 @@ neurips2013:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2013
+  submittedPapers: 1420
   tags: *id001
   timeline:
   - abstractDeadline: '2013-09-17T06:59:00Z'
@@ -71,6 +75,9 @@ neurips2013:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2013/
 neurips2014:
+  acceptanceRate: 24.67
+  acceptanceRateYear: 2014
+  acceptedPapers: 414
   conferenceEndDate: '2014-12-11'
   conferenceStartDate: '2014-12-09'
   dataSrc: off-website
@@ -79,12 +86,16 @@ neurips2014:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2014
+  submittedPapers: 1678
   tags: *id001
   timeline:
   - deadline: '2014-06-06T23:00:00Z'
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2014/
 neurips2015:
+  acceptanceRate: 21.93
+  acceptanceRateYear: 2015
+  acceptedPapers: 403
   conferenceEndDate: '2015-12-10'
   conferenceStartDate: '2015-12-08'
   dataSrc: off-website
@@ -93,12 +104,16 @@ neurips2015:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2015
+  submittedPapers: 1838
   tags: *id001
   timeline:
   - deadline: '2015-06-05T23:00:00Z'
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2015/
 neurips2016:
+  acceptanceRate: 23.61
+  acceptanceRateYear: 2016
+  acceptedPapers: 568
   conferenceEndDate: '2016-12-08'
   conferenceStartDate: '2016-12-06'
   dataSrc: off-website
@@ -107,12 +122,16 @@ neurips2016:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2016
+  submittedPapers: 2406
   tags: *id001
   timeline:
   - deadline: '2016-05-20T16:00:00Z'
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2016/
 neurips2017:
+  acceptanceRate: 20.93
+  acceptanceRateYear: 2017
+  acceptedPapers: 678
   conferenceEndDate: '2017-12-07'
   conferenceStartDate: '2017-12-05'
   dataSrc: off-website
@@ -121,12 +140,16 @@ neurips2017:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2017
+  submittedPapers: 3240
   tags: *id001
   timeline:
   - deadline: '2017-05-19T20:00:00Z'
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2017/
 neurips2018:
+  acceptanceRate: 20.82
+  acceptanceRateYear: 2018
+  acceptedPapers: 1011
   conferenceEndDate: '2018-12-06'
   conferenceStartDate: '2018-12-04'
   dataSrc: off-website
@@ -135,12 +158,16 @@ neurips2018:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2018
+  submittedPapers: 4856
   tags: *id001
   timeline:
   - deadline: '2018-05-18T20:00:00Z'
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2018/
 neurips2019:
+  acceptanceRate: 21.18
+  acceptanceRateYear: 2019
+  acceptedPapers: 1428
   conferenceEndDate: '2019-12-12'
   conferenceStartDate: '2019-12-10'
   dataSrc: off-website
@@ -149,6 +176,7 @@ neurips2019:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2019
+  submittedPapers: 6743
   tags: *id001
   timeline:
   - abstractDeadline: '2019-05-16T20:00:00Z'
@@ -156,6 +184,9 @@ neurips2019:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2019/
 neurips2020:
+  acceptanceRate: 20.05
+  acceptanceRateYear: 2020
+  acceptedPapers: 1898
   conferenceEndDate: '2020-12-10'
   conferenceStartDate: '2020-12-08'
   dataSrc: off-website
@@ -164,6 +195,7 @@ neurips2020:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2020
+  submittedPapers: 9467
   tags: *id001
   timeline:
   - abstractDeadline: '2020-05-27T20:00:00Z'
@@ -171,6 +203,9 @@ neurips2020:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2020/
 neurips2021:
+  acceptanceRate: 25.59
+  acceptanceRateYear: 2021
+  acceptedPapers: 2334
   conferenceEndDate: '2021-12-10'
   conferenceStartDate: '2021-12-07'
   dataSrc: off-website
@@ -179,6 +214,7 @@ neurips2021:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2021
+  submittedPapers: 9122
   tags: *id001
   timeline:
   - abstractDeadline: '2021-05-28T20:00:00Z'
@@ -186,6 +222,9 @@ neurips2021:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2021/
 neurips2022:
+  acceptanceRate: 25.67
+  acceptanceRateYear: 2022
+  acceptedPapers: 2672
   conferenceEndDate: '2022-12-01'
   conferenceStartDate: '2022-11-29'
   dataSrc: off-website
@@ -194,6 +233,7 @@ neurips2022:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2022
+  submittedPapers: 10411
   tags: *id001
   timeline:
   - abstractDeadline: '2022-05-16T20:00:00Z'
@@ -201,6 +241,9 @@ neurips2022:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2022/
 neurips2023:
+  acceptanceRate: 26.07
+  acceptanceRateYear: 2023
+  acceptedPapers: 3218
   conferenceEndDate: '2023-12-14'
   conferenceStartDate: '2023-12-12'
   dataSrc: off-website
@@ -209,6 +252,7 @@ neurips2023:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2023
+  submittedPapers: 12343
   tags: *id001
   timeline:
   - abstractDeadline: '2023-05-11T20:00:00Z'
@@ -216,6 +260,9 @@ neurips2023:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2023/
 neurips2024:
+  acceptanceRate: 25.8
+  acceptanceRateYear: 2024
+  acceptedPapers: 4043
   conferenceEndDate: '2024-12-13'
   conferenceStartDate: '2024-12-11'
   dataSrc: off-website
@@ -224,6 +271,7 @@ neurips2024:
   isApproximateDeadline: false
   rating: A*
   shortname: NeurIPS 2024
+  submittedPapers: 15671
   tags: *id001
   timeline:
   - abstractDeadline: '2024-05-15T20:00:00Z'
@@ -231,6 +279,9 @@ neurips2024:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2024/
 neurips2025:
+  acceptanceRate: 24.52
+  acceptanceRateYear: 2025
+  acceptedPapers: 5290
   conferenceEndDate: '2025-12-05'
   conferenceStartDate: '2025-12-03'
   dataSrc: off-website
@@ -240,6 +291,7 @@ neurips2025:
   location: San Diego Convention Center, San Diego, USA
   rating: A*
   shortname: NeurIPS 2025
+  submittedPapers: 21575
   tags: *id001
   timeline:
   - abstractDeadline: '2025-05-12T11:59:59Z'
@@ -248,6 +300,9 @@ neurips2025:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2025/
 neurips2026:
+  acceptanceRate: 24.52
+  acceptanceRateYear: 2025
+  acceptedPapers: 5290
   conferenceEndDate: '2026-12-10'
   conferenceStartDate: '2026-12-08'
   dataSrc: off-website
@@ -257,6 +312,7 @@ neurips2026:
   location: Sydney, Australia
   rating: A*
   shortname: NeurIPS 2026
+  submittedPapers: 21575
   tags: *id001
   timeline:
   - abstractDeadline: '2026-05-05T11:59:59Z'
@@ -265,6 +321,9 @@ neurips2026:
   title: Neural Information Processing Systems
   website: https://neurips.cc/Conferences/2026/
 neurips2027:
+  acceptanceRate: 24.52
+  acceptanceRateYear: 2025
+  acceptedPapers: 5290
   conferenceEndDate: '2027-12-07'
   conferenceStartDate: '2027-12-02'
   dataSrc: estimate
@@ -273,11 +332,15 @@ neurips2027:
   isApproximateDeadline: true
   rating: A*
   shortname: NeurIPS 2027
+  submittedPapers: 21575
   tags: *id001
   timeline:
   - deadline: '2027-05-15T23:59:59Z'
   title: Neural Information Processing Systems
 neurips2028:
+  acceptanceRate: 24.52
+  acceptanceRateYear: 2025
+  acceptedPapers: 5290
   conferenceEndDate: '2028-12-06'
   conferenceStartDate: '2028-12-01'
   dataSrc: estimate
@@ -286,6 +349,7 @@ neurips2028:
   isApproximateDeadline: true
   rating: A*
   shortname: NeurIPS 2028
+  submittedPapers: 21575
   tags: *id001
   timeline:
   - deadline: '2028-05-14T23:59:59Z'

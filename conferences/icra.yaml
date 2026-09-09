@@ -1,4 +1,7 @@
 icra2022:
+  acceptanceRate: 43.76
+  acceptanceRateYear: 2022
+  acceptedPapers: 1428
   conferenceEndDate: '2022-05-27'
   conferenceStartDate: '2022-05-23'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ icra2022:
   isApproximateDeadline: false
   rating: A*
   shortname: ICRA 2022
+  submittedPapers: 3263
   tags: &id001
   - CV
   - ML
@@ -16,6 +20,9 @@ icra2022:
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2022.org/
 icra2023:
+  acceptanceRate: 43.04
+  acceptanceRateYear: 2023
+  acceptedPapers: 1345
   conferenceEndDate: '2023-06-02'
   conferenceStartDate: '2023-05-29'
   dataSrc: ccf-deadlines
@@ -24,12 +31,16 @@ icra2023:
   isApproximateDeadline: false
   rating: A*
   shortname: ICRA 2023
+  submittedPapers: 3125
   tags: *id001
   timeline:
   - deadline: '2022-09-16T11:59:59Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://www.icra2023.org/
 icra2024:
+  acceptanceRate: 44.7
+  acceptanceRateYear: 2024
+  acceptedPapers: 1760
   conferenceEndDate: '2024-05-17'
   conferenceStartDate: '2024-05-13'
   dataSrc: ccf-deadlines
@@ -38,12 +49,16 @@ icra2024:
   isApproximateDeadline: false
   rating: A*
   shortname: ICRA 2024
+  submittedPapers: 3937
   tags: *id001
   timeline:
   - deadline: '2023-09-16T11:59:00Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://2024.ieee-icra.org
 icra2025:
+  acceptanceRate: 38.67
+  acceptanceRateYear: 2025
+  acceptedPapers: 1606
   conferenceEndDate: '2025-05-23'
   conferenceStartDate: '2025-05-19'
   dataSrc: hf-repo
@@ -53,6 +68,7 @@ icra2025:
   location: Georgia World Congress Center, Atlanta, USA
   rating: A*
   shortname: ICRA 2025
+  submittedPapers: 4153
   tags: *id001
   timeline:
   - deadline: '2024-09-16T07:59:59Z'
@@ -61,6 +77,9 @@ icra2025:
   title: IEEE International Conference on Robotics and Automation
   website: https://2025.ieee-icra.org
 icra2026:
+  acceptanceRate: 38.67
+  acceptanceRateYear: 2025
+  acceptedPapers: 1606
   conferenceEndDate: '2026-06-05'
   conferenceStartDate: '2026-06-01'
   dataSrc: hf-repo
@@ -70,6 +89,7 @@ icra2026:
   location: Messe Wien Exhibition & Congress Center, Vienna, Austria
   rating: A*
   shortname: ICRA 2026
+  submittedPapers: 4153
   tags: *id001
   timeline:
   - deadline: '2025-09-16T07:59:59Z'
@@ -78,6 +98,9 @@ icra2026:
   title: IEEE International Conference on Robotics and Automation
   website: https://2026.ieee-icra.org/
 icra2027:
+  acceptanceRate: 38.67
+  acceptanceRateYear: 2025
+  acceptedPapers: 1606
   conferenceEndDate: '2027-05-28'
   conferenceStartDate: '2027-05-24'
   dataSrc: hf-repo
@@ -87,6 +110,7 @@ icra2027:
   location: COEX, Seoul, South Korea
   rating: A*
   shortname: ICRA 2027
+  submittedPapers: 4153
   tags: *id001
   timeline:
   - deadline: '2026-09-16T07:59:59Z'
@@ -95,6 +119,9 @@ icra2027:
   title: IEEE International Conference on Robotics and Automation
   website: https://2027.ieee-icra.org/
 icra2028:
+  acceptanceRate: 38.67
+  acceptanceRateYear: 2025
+  acceptedPapers: 1606
   conferenceEndDate: '2028-05-28'
   conferenceStartDate: '2028-05-23'
   dataSrc: estimate
@@ -103,6 +130,7 @@ icra2028:
   isApproximateDeadline: true
   rating: A*
   shortname: ICRA 2028
+  submittedPapers: 4153
   tags: *id001
   timeline:
   - deadline: '2028-09-14T23:59:59Z'

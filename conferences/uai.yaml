@@ -1,4 +1,7 @@
 uai2021:
+  acceptanceRate: 29.54
+  acceptanceRateYear: 2021
+  acceptedPapers: 205
   conferenceEndDate: '2021-07-29'
   conferenceStartDate: '2021-07-27'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ uai2021:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2021
+  submittedPapers: 694
   tags: &id001
   - ML
   timeline:
@@ -13,6 +17,9 @@ uai2021:
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2021/
 uai2023:
+  acceptanceRate: 31.23
+  acceptanceRateYear: 2023
+  acceptedPapers: 243
   conferenceEndDate: '2023-08-03'
   conferenceStartDate: '2023-08-01'
   dataSrc: ccf-deadlines
@@ -20,12 +27,16 @@ uai2023:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2023
+  submittedPapers: 778
   tags: *id001
   timeline:
   - deadline: '2023-02-18T11:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2023/
 uai2024:
+  acceptanceRate: 27.97
+  acceptanceRateYear: 2024
+  acceptedPapers: 200
   conferenceEndDate: '2024-07-19'
   conferenceStartDate: '2024-07-15'
   dataSrc: ccf-deadlines
@@ -33,12 +44,16 @@ uai2024:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2024
+  submittedPapers: 715
   tags: *id001
   timeline:
   - deadline: '2024-02-10T11:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2024/
 uai2025:
+  acceptanceRate: 30.67
+  acceptanceRateYear: 2025
+  acceptedPapers: 230
   conferenceEndDate: '2025-07-25'
   conferenceStartDate: '2025-07-21'
   dataSrc: hf-repo
@@ -47,6 +62,7 @@ uai2025:
   location: Rio de Janeiro, Brazil
   rating: A
   shortname: UAI 2025
+  submittedPapers: 750
   tags: *id001
   timeline:
   - deadline: '2025-02-11T11:59:59Z'
@@ -54,6 +70,9 @@ uai2025:
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2025/
 uai2026:
+  acceptanceRate: 30.54
+  acceptanceRateYear: 2026
+  acceptedPapers: 332
   conferenceEndDate: '2025-08-21'
   conferenceStartDate: '2025-08-17'
   dataSrc: hf-repo
@@ -62,6 +81,7 @@ uai2026:
   location: Amsterdam, Netherlands
   rating: A
   shortname: UAI 2026
+  submittedPapers: 1087
   tags: *id001
   timeline:
   - deadline: '2026-02-26T11:59:59Z'
@@ -69,6 +89,9 @@ uai2026:
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2026/
 uai2027:
+  acceptanceRate: 30.54
+  acceptanceRateYear: 2026
+  acceptedPapers: 332
   conferenceEndDate: '2027-08-22'
   conferenceStartDate: '2027-08-17'
   dataSrc: estimate
@@ -76,6 +99,7 @@ uai2027:
   isApproximateDeadline: true
   rating: A
   shortname: UAI 2027
+  submittedPapers: 1087
   tags: *id001
   timeline:
   - deadline: '2028-02-26T11:59:59Z'

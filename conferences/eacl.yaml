@@ -1,10 +1,14 @@
 eacl2024:
+  acceptanceRate: 20.29
+  acceptanceRateYear: 2024
+  acceptedPapers: 226
   dataSrc: ccf-deadlines
   h5Index: 77
   id: eacl2024
   isApproximateDeadline: false
   rating: A
   shortname: EACL 2024
+  submittedPapers: 1114
   tags: &id001
   - NLP
   timeline:
@@ -13,6 +17,9 @@ eacl2024:
     Linguistics
   website: https://2024.eacl.org/
 eacl2026:
+  acceptanceRate: 20.29
+  acceptanceRateYear: 2024
+  acceptedPapers: 226
   conferenceEndDate: '2026-03-29'
   conferenceStartDate: '2026-03-24'
   dataSrc: ccf-deadlines
@@ -21,6 +28,7 @@ eacl2026:
   isApproximateDeadline: false
   rating: A
   shortname: EACL 2026
+  submittedPapers: 1114
   tags: *id001
   timeline:
   - deadline: '2025-10-07T11:59:59Z'
@@ -28,6 +36,9 @@ eacl2026:
     Linguistics
   website: https://2026.eacl.org/
 eacl2027:
+  acceptanceRate: 20.29
+  acceptanceRateYear: 2024
+  acceptedPapers: 226
   conferenceEndDate: '2027-03-14'
   conferenceStartDate: '2027-03-09'
   dataSrc: ccf-deadlines
@@ -36,6 +47,7 @@ eacl2027:
   isApproximateDeadline: false
   rating: A
   shortname: EACL 2027
+  submittedPapers: 1114
   tags: *id001
   timeline:
   - deadline: '2026-08-04T11:59:59Z'
@@ -44,6 +56,9 @@ eacl2027:
     Linguistics
   website: https://2027.eacl.org/
 eacl2028:
+  acceptanceRate: 20.29
+  acceptanceRateYear: 2024
+  acceptedPapers: 226
   conferenceEndDate: '2028-03-13'
   conferenceStartDate: '2028-03-08'
   dataSrc: estimate
@@ -52,6 +67,7 @@ eacl2028:
   isApproximateDeadline: true
   rating: A
   shortname: EACL 2028
+  submittedPapers: 1114
   tags: *id001
   timeline:
   - deadline: '2027-08-04T11:59:59Z'

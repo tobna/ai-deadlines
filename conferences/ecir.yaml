@@ -1,4 +1,7 @@
 ecir2025:
+  acceptanceRate: 23.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 52
   conferenceEndDate: '2025-04-10'
   conferenceStartDate: '2025-04-06'
   dataSrc: hf-repo
@@ -7,6 +10,7 @@ ecir2025:
   location: IMT School for Advanced Studies Lucca, Lucca, Italy
   rating: A
   shortname: ECIR 2025
+  submittedPapers: 226
   tags: &id001
   - DM
   timeline:
@@ -17,6 +21,9 @@ ecir2025:
   title: European Conference on Information Retrieval
   website: https://ecir2025.eu/
 ecir2026:
+  acceptanceRate: 23.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 52
   conferenceEndDate: '2026-04-02'
   conferenceStartDate: '2026-03-29'
   dataSrc: hf-repo
@@ -25,6 +32,7 @@ ecir2026:
   location: Lijm & Cultuur, Delft, The Netherlands
   rating: A
   shortname: ECIR 2026
+  submittedPapers: 226
   tags: *id001
   timeline:
   - abstractDeadline: '2025-09-26T11:59:59Z'
@@ -34,6 +42,9 @@ ecir2026:
   title: European Conference on Information Retrieval
   website: https://ecir2026.eu/
 ecir2027:
+  acceptanceRate: 23.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 52
   conferenceEndDate: '2027-03-25'
   conferenceStartDate: '2027-03-21'
   dataSrc: hf-repo
@@ -42,6 +53,7 @@ ecir2027:
   location: Southampton Football Club (St Mary's Stadium), Southampton, United Kingdom
   rating: A
   shortname: ECIR 2027
+  submittedPapers: 226
   tags: *id001
   timeline:
   - abstractDeadline: '2026-09-22T11:59:59Z'
@@ -50,6 +62,9 @@ ecir2027:
   title: European Conference on Information Retrieval
   website: https://www.ecir2027.co.uk/
 ecir2028:
+  acceptanceRate: 23.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 52
   conferenceEndDate: '2028-03-26'
   conferenceStartDate: '2028-03-21'
   dataSrc: estimate
@@ -57,6 +72,7 @@ ecir2028:
   isApproximateDeadline: true
   rating: A
   shortname: ECIR 2028
+  submittedPapers: 226
   tags: *id001
   timeline:
   - abstractDeadline: '2027-09-26T11:59:59Z'

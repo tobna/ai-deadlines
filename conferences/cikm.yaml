@@ -1,4 +1,7 @@
 cikm2020:
+  acceptanceRate: 23.32
+  acceptanceRateYear: 2020
+  acceptedPapers: 274
   conferenceEndDate: '2021-10-23'
   conferenceStartDate: '2021-10-19'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ cikm2020:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2020
+  submittedPapers: 1175
   tags: &id001
   - DM
   - ML
@@ -14,6 +18,9 @@ cikm2020:
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2020.org/
 cikm2021:
+  acceptanceRate: 21.66
+  acceptanceRateYear: 2021
+  acceptedPapers: 271
   conferenceEndDate: '2021-11-05'
   conferenceStartDate: '2021-11-01'
   dataSrc: ccf-deadlines
@@ -21,12 +28,16 @@ cikm2021:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2021
+  submittedPapers: 1251
   tags: *id001
   timeline:
   - deadline: '2021-05-27T11:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2021.org/
 cikm2022:
+  acceptanceRate: 23.32
+  acceptanceRateYear: 2022
+  acceptedPapers: 274
   conferenceEndDate: '2022-10-22'
   conferenceStartDate: '2022-10-17'
   dataSrc: ccf-deadlines
@@ -34,6 +45,7 @@ cikm2022:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2022
+  submittedPapers: 1175
   tags: *id001
   timeline:
   - abstractDeadline: '2022-05-13T11:59:59Z'
@@ -41,6 +53,9 @@ cikm2022:
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2022.org/
 cikm2023:
+  acceptanceRate: 24.05
+  acceptanceRateYear: 2023
+  acceptedPapers: 354
   conferenceEndDate: '2023-10-25'
   conferenceStartDate: '2023-10-21'
   dataSrc: ccf-deadlines
@@ -48,6 +63,7 @@ cikm2023:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2023
+  submittedPapers: 1472
   tags: *id001
   timeline:
   - abstractDeadline: '2023-05-27T11:59:59Z'
@@ -55,6 +71,9 @@ cikm2023:
   title: ACM International Conference on Information and Knowledge Management
   website: https://uobevents.eventsair.com/cikm2023/
 cikm2024:
+  acceptanceRate: 23.2
+  acceptanceRateYear: 2024
+  acceptedPapers: 347
   conferenceEndDate: '2024-10-25'
   conferenceStartDate: '2024-10-21'
   dataSrc: ccf-deadlines
@@ -62,6 +81,7 @@ cikm2024:
   isApproximateDeadline: false
   rating: A
   shortname: CIKM 2024
+  submittedPapers: 1496
   tags: *id001
   timeline:
   - abstractDeadline: '2024-05-14T11:59:59Z'
@@ -69,6 +89,9 @@ cikm2024:
   title: ACM International Conference on Information and Knowledge Management
   website: https://cikm2024.org/
 cikm2025:
+  acceptanceRate: 27.23
+  acceptanceRateYear: 2025
+  acceptedPapers: 443
   conferenceEndDate: '2025-11-14'
   conferenceStartDate: '2025-11-10'
   dataSrc: hf-repo
@@ -77,6 +100,7 @@ cikm2025:
   location: COEX, Seoul, South Korea
   rating: A
   shortname: CIKM 2025
+  submittedPapers: 1627
   tags: *id001
   timeline:
   - abstractDeadline: '2025-05-17T11:59:00Z'
@@ -86,6 +110,9 @@ cikm2025:
   title: Conference on Information and Knowledge Management
   website: https://cikm2025.org/
 cikm2026:
+  acceptanceRate: 27.23
+  acceptanceRateYear: 2025
+  acceptedPapers: 443
   conferenceEndDate: '2026-11-11'
   conferenceStartDate: '2026-11-07'
   dataSrc: hf-repo
@@ -94,6 +121,7 @@ cikm2026:
   location: Rome, Italy
   rating: A
   shortname: CIKM 2026
+  submittedPapers: 1627
   tags: *id001
   timeline:
   - abstractDeadline: '2026-05-17T11:59:00Z'
@@ -102,6 +130,9 @@ cikm2026:
   title: Conference on Information and Knowledge Management
   website: https://cikm2026.diag.uniroma1.it/
 cikm2027:
+  acceptanceRate: 27.23
+  acceptanceRateYear: 2025
+  acceptedPapers: 443
   conferenceEndDate: '2027-11-12'
   conferenceStartDate: '2027-11-07'
   dataSrc: estimate
@@ -109,12 +140,16 @@ cikm2027:
   isApproximateDeadline: true
   rating: A
   shortname: CIKM 2027
+  submittedPapers: 1627
   tags: *id001
   timeline:
   - abstractDeadline: '2027-05-18T23:59:59Z'
     deadline: '2027-05-25T23:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
 cikm2028:
+  acceptanceRate: 27.23
+  acceptanceRateYear: 2025
+  acceptedPapers: 443
   conferenceEndDate: '2028-11-11'
   conferenceStartDate: '2028-11-06'
   dataSrc: estimate
@@ -122,6 +157,7 @@ cikm2028:
   isApproximateDeadline: true
   rating: A
   shortname: CIKM 2028
+  submittedPapers: 1627
   tags: *id001
   timeline:
   - abstractDeadline: '2028-05-17T23:59:59Z'

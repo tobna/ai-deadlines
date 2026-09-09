@@ -1,10 +1,14 @@
 nlpcc2025:
+  acceptanceRate: 30.1
+  acceptanceRateYear: 2025
+  acceptedPapers: 152
   conferenceEndDate: '2025-08-10'
   conferenceStartDate: '2025-08-08'
   dataSrc: ccf-deadlines
   id: nlpcc2025
   isApproximateDeadline: false
   shortname: NLPCC 2025
+  submittedPapers: 505
   tags: &id001
   - NLP
   timeline:
@@ -12,35 +16,47 @@ nlpcc2025:
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2025/index.php
 nlpcc2026:
+  acceptanceRate: 30.1
+  acceptanceRateYear: 2025
+  acceptedPapers: 152
   conferenceEndDate: '2026-11-05'
   conferenceStartDate: '2026-11-03'
   dataSrc: ccf-deadlines
   id: nlpcc2026
   isApproximateDeadline: false
   shortname: NLPCC 2026
+  submittedPapers: 505
   tags: *id001
   timeline:
   - deadline: '2026-06-21T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2026/
 nlpcc2027:
+  acceptanceRate: 30.1
+  acceptanceRateYear: 2025
+  acceptedPapers: 152
   conferenceEndDate: '2027-11-08'
   conferenceStartDate: '2027-11-03'
   dataSrc: estimate
   id: nlpcc2027
   isApproximateDeadline: true
   shortname: NLPCC 2027
+  submittedPapers: 505
   tags: *id001
   timeline:
   - deadline: '2027-05-26T23:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
 nlpcc2028:
+  acceptanceRate: 30.1
+  acceptanceRateYear: 2025
+  acceptedPapers: 152
   conferenceEndDate: '2028-11-07'
   conferenceStartDate: '2028-11-02'
   dataSrc: estimate
   id: nlpcc2028
   isApproximateDeadline: true
   shortname: NLPCC 2028
+  submittedPapers: 505
   tags: *id001
   timeline:
   - deadline: '2028-05-25T23:59:59Z'

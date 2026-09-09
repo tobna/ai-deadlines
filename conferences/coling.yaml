@@ -1,4 +1,7 @@
 coling2022:
+  acceptanceRate: 33.4
+  acceptanceRateYear: 2022
+  acceptedPapers: 522
   conferenceEndDate: '2022-06-17'
   conferenceStartDate: '2022-06-12'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ coling2022:
   isApproximateDeadline: false
   rating: B
   shortname: COLING 2022
+  submittedPapers: 1563
   tags: &id001
   - NLP
   timeline:
@@ -15,6 +19,9 @@ coling2022:
   title: International Conference on Computational Linguistics
   website: https://coling2022.org/
 coling2024:
+  acceptanceRate: 44.83
+  acceptanceRateYear: 2024
+  acceptedPapers: 1556
   conferenceEndDate: '2024-05-25'
   conferenceStartDate: '2024-05-20'
   dataSrc: ccf-deadlines
@@ -23,6 +30,7 @@ coling2024:
   isApproximateDeadline: false
   rating: B
   shortname: COLING 2024
+  submittedPapers: 3471
   tags: *id001
   timeline:
   - deadline: '2023-10-22T11:59:59Z'
@@ -30,6 +38,9 @@ coling2024:
   title: International Conference on Computational Linguistics
   website: https://lrec-coling-2024.lrec-conf.org/
 coling2025:
+  acceptanceRate: 31.74
+  acceptanceRateYear: 2025
+  acceptedPapers: 663
   conferenceEndDate: '2025-01-24'
   conferenceStartDate: '2025-01-19'
   dataSrc: hf-repo
@@ -39,6 +50,7 @@ coling2025:
   location: Abu Dhabi National Exhibition Centre (ADNEC), Abu Dhabi, UAE
   rating: B
   shortname: COLING 2025
+  submittedPapers: 2089
   tags: *id001
   timeline:
   - deadline: '2024-09-17T11:59:59Z'
@@ -47,6 +59,9 @@ coling2025:
   title: International Conference on Computational Linguistics
   website: https://coling2025.org/
 coling2027:
+  acceptanceRate: 31.74
+  acceptanceRateYear: 2025
+  acceptedPapers: 663
   conferenceEndDate: '2027-05-14'
   conferenceStartDate: '2027-05-09'
   dataSrc: ccf-deadlines
@@ -55,6 +70,7 @@ coling2027:
   isApproximateDeadline: false
   rating: B
   shortname: COLING 2027
+  submittedPapers: 2089
   tags: *id001
   timeline:
   - deadline: '2026-10-13T11:59:59Z'
@@ -62,6 +78,9 @@ coling2027:
   title: International Conference on Computational Linguistics
   website: https://2027.coling-iccl.org/
 coling2028:
+  acceptanceRate: 31.74
+  acceptanceRateYear: 2025
+  acceptedPapers: 663
   conferenceEndDate: '2028-05-14'
   conferenceStartDate: '2028-05-09'
   dataSrc: estimate
@@ -70,6 +89,7 @@ coling2028:
   isApproximateDeadline: true
   rating: B
   shortname: COLING 2028
+  submittedPapers: 2089
   tags: *id001
   timeline:
   - deadline: '2027-10-13T11:59:59Z'

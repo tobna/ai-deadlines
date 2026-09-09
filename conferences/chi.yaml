@@ -1,4 +1,7 @@
 chi2024:
+  acceptanceRate: 26.2
+  acceptanceRateYear: 2024
+  acceptedPapers: 1060
   conferenceEndDate: '2024-05-16'
   conferenceStartDate: '2024-05-11'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ chi2024:
   isApproximateDeadline: false
   rating: A*
   shortname: CHI 2024
+  submittedPapers: 4046
   tags: &id001
   - HCI
   timeline:
@@ -14,6 +18,9 @@ chi2024:
   title: ACM Conference on Human Factors in Computing Systems
   website: http://chi2024.acm.org/
 chi2025:
+  acceptanceRate: 24.88
+  acceptanceRateYear: 2025
+  acceptedPapers: 1249
   conferenceEndDate: '2025-05-01'
   conferenceStartDate: '2025-04-26'
   dataSrc: hf-repo
@@ -22,6 +29,7 @@ chi2025:
   location: Pacifico Yokohama Conference Center, Yokohama, Japan
   rating: A*
   shortname: CHI 2025
+  submittedPapers: 5020
   tags: *id001
   timeline:
   - abstractDeadline: '2024-09-06T11:59:59Z'
@@ -31,6 +39,9 @@ chi2025:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2025.acm.org/
 chi2026:
+  acceptanceRate: 24.88
+  acceptanceRateYear: 2025
+  acceptedPapers: 1249
   conferenceEndDate: '2026-04-17'
   conferenceStartDate: '2026-04-13'
   dataSrc: hf-repo
@@ -39,6 +50,7 @@ chi2026:
   location: Centre de Convencions Internacional de Barcelona, Barcelona, Spain
   rating: A*
   shortname: CHI 2026
+  submittedPapers: 5020
   tags: *id001
   timeline:
   - abstractDeadline: '2025-09-05T11:59:59Z'
@@ -48,6 +60,9 @@ chi2026:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2026.acm.org/
 chi2027:
+  acceptanceRate: 24.88
+  acceptanceRateYear: 2025
+  acceptedPapers: 1249
   conferenceEndDate: '2027-05-14'
   conferenceStartDate: '2027-05-10'
   dataSrc: hf-repo
@@ -56,6 +71,7 @@ chi2027:
   location: David L. Lawrence Convention Center, Pittsburgh, USA
   rating: A*
   shortname: CHI 2027
+  submittedPapers: 5020
   tags: *id001
   timeline:
   - deadline: '2026-09-11T11:59:59Z'
@@ -63,6 +79,9 @@ chi2027:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2027.acm.org/
 chi2028:
+  acceptanceRate: 24.88
+  acceptanceRateYear: 2025
+  acceptedPapers: 1249
   conferenceEndDate: '2028-05-14'
   conferenceStartDate: '2028-05-09'
   dataSrc: estimate
@@ -70,6 +89,7 @@ chi2028:
   isApproximateDeadline: true
   rating: A*
   shortname: CHI 2028
+  submittedPapers: 5020
   tags: *id001
   timeline:
   - deadline: '2027-09-11T11:59:59Z'
