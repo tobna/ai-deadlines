@@ -44,6 +44,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`).
 - `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`).
 - `ranking.py` — CORE rating + Google Scholar h5-index lookups.
+- `parser/openaccept.py` — acceptance rates from the openaccept.org metadata repo (not a deadline source, see below).
 - `parser/http.py` — resilient HTTP layer used by all parsers (see below).
 - `parser/*.py` — one module per source (see Data Pipeline).
 
@@ -61,7 +62,7 @@ The pipeline modules are **functions with `main()` guards** — importing them d
    - CCF deadlines (`parser/ccf_deadlines.py`)
 3. `normalize_nips()` — rename lingering `nips`/`NIPS` to `neurips`/`NeurIPS`.
 4. `drop_empty_timelines()` — drop unparseable deadlines and conferences with none left.
-5. `write_groups()` — group by conference family, estimate future instances (`parser/see_future.py`), attach CORE/h5 ranks (`ranking.py`), and write YAML back to `conferences/`.
+5. `write_groups()` — group by conference family, estimate future instances (`parser/see_future.py`), attach CORE/h5 ranks (`ranking.py`) and acceptance rates (`parser/openaccept.py`), and write YAML back to `conferences/`.
 
 `data_to_json.py:main()` then splits YAML into:
 - `aideadlines/data/conferences.json` — upcoming deadlines
@@ -79,6 +80,31 @@ Merging is centralized in `merge.py`. Lower priority is silently overwritten by 
 `estimate` < `ninoduarte-git` < `ccf-deadlines` < `hf-repo` < `off-website` < `manual`
 
 `manual` is the highest priority: hand-curated edits win over every scraper. `estimate` is the lowest: a guessed instance yields to any real data. (`ninoduarte-git` merges with strict `<`; the others with `<=`, via `merge_one(..., overwrite_equal=...)`.)
+
+### Acceptance rates (`parser/openaccept.py`)
+
+Not a deadline source, so it doesn't take part in the `dataSrc` merge — rates are attached in
+`write_groups` the way CORE ratings are.
+
+The data comes from **[OpenAccept/openaccept-metadata](https://github.com/OpenAccept/openaccept-metadata)**,
+not from openaccept.org: the site is a small volunteer project that answers 429 to a scraper
+walking its ~31 conference pages, while the repo publishes the same numbers as one
+schema-checked JSON per conference. Same tree-then-raw pattern as `ccf_deadlines`/`hf_list`.
+Files are keyed by lower-cased basename (`ai/NeurIPS.json` -> `neurips`), `ALIASES` maps the few
+group ids that differ, and paths are `quote`d (`gm/ACM MM.json` has a space). `yearly_data` is the
+main research track — Findings and other second tracks live under `second_track_yearly_data`, so
+they're ignored for free.
+
+There is deliberately **no cache file** — `conferences/*.yaml` already holds the last known rates,
+so on a failed fetch nothing is attached and they are written back unchanged. The only state is a
+gitignored `aideadlines/data/.last_openaccept_update` stamp whose *mtime* throttles the fetch to
+once per `REFRESH_HOURS` (30, deliberately longer than the daily pipeline run). It is only touched
+after a fetch that returned data, so a failure retries on the next run.
+
+A conference with no rate for its own year gets the most recent *earlier* year's, tagged with
+`acceptanceRateYear` — never a later year, so past instances aren't backdated. The raw
+`acceptedPapers`/`submittedPapers` counts ride along: the card pill shows only `~25%`, and the
+tooltip spells out `Acceptance rate 2025: 24.52% (5,290 of 21,575 papers). Source: openaccept.org`.
 
 ### Parser conventions
 
@@ -99,6 +125,7 @@ Key fields in each `conferences/<id>.yaml`:
 - `dataSrc`: source identifier (controls merge priority)
 - `isApproximateDeadline`: true for estimated entries
 - `h5Index`, `rating`: auto-populated from ranking files
+- `acceptanceRate`, `acceptanceRateYear`, `acceptedPapers`, `submittedPapers`: auto-populated from openaccept.org
 - `timezone`: deadline timezone (default AoE)
 
 ### Frontend

@@ -57,8 +57,11 @@ Machine-readable: <https://aideadlines.nauen-it.de/data/conferences.json> (same 
 <https://aideadlines.nauen-it.de/data/conferences_archive.json>.
 Source and corrections: <https://github.com/tobna/ai-deadlines>
 
-| Conference | Deadline (UTC) | Abstract | Dates | Location | Tags | CORE | h5 | Website |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+`Accept` is the main-track acceptance rate, with the year it is from (openaccept.org) — for an
+upcoming conference that is the most recent past year, not a prediction.
+
+| Conference | Deadline (UTC) | Abstract | Dates | Location | Tags | CORE | h5 | Accept | Website |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 """
 
 
@@ -80,6 +83,8 @@ def conferences_to_markdown(records):
         if conf.get("isApproximateDeadline"):
             deadline += " (est.)"
         website = _cell(conf.get("website"))
+        rate = conf.get("acceptanceRate")
+        accept = f"{rate:.1f}% ({conf.get('acceptanceRateYear')})" if rate else ""
         rows.append(
             "| "
             + " | ".join(
@@ -92,6 +97,7 @@ def conferences_to_markdown(records):
                     _cell(conf.get("tags")),
                     _cell(conf.get("rating")),
                     _cell(conf.get("h5Index")),
+                    accept,
                     f"<{website}>" if website else "",
                 ]
             )

@@ -11,6 +11,7 @@ from .parser.ccf_deadlines import get_ccf_list
 from .parser.common_website import PARSER
 from .parser.hf_list import get_hf_list
 from .parser.ninoduarte_list import get_nino_list
+from .parser.openaccept import attach_rate, get_acceptance_stats
 from .parser.see_future import estimate_future_conferences
 from .parser.wacv import parse_wacv
 from .ranking import make_conf_rank_function, make_core_rank_function
@@ -162,6 +163,7 @@ def write_groups(conferences, reestimate_groups, args):
         conf_groups.setdefault(key[:-4], {})[key] = val
 
     add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
+    acceptance_stats = get_acceptance_stats(conf_groups.keys()) if args.online else {}
 
     if not args.reestimate:
         logger.info(f"Will reestimate futures for: {reestimate_groups}")
@@ -181,6 +183,8 @@ def write_groups(conferences, reestimate_groups, args):
         group_confs = {**future_conferences, **group_confs}
         group_confs = {key: add_conf_rank(conf) for key, conf in group_confs.items()}
         group_confs = {key: add_core_rank(conf) for key, conf in group_confs.items()}
+        if group in acceptance_stats:
+            group_confs = {key: attach_rate(conf, acceptance_stats[group]) for key, conf in group_confs.items()}
         group_confs = unite_tags(group_confs)
         group_confs = parse_stuff(group_confs)
         if args.write:

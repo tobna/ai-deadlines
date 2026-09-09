@@ -552,6 +552,7 @@ input:checked + .slider::before { transform: translateX(18px); }
   border: 1px solid var(--line);
   border-radius: 5px;
 }
+.conf-rank svg { width: .8rem; height: .8rem; color: var(--faint); flex: none; }
 .conf-rank b { color: var(--text); font-weight: 600; }
 .conf-rank.rank-top b { color: var(--accent); }
 .conf-eyebrow .sep { color: var(--faint); }

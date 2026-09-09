@@ -75,6 +75,7 @@ Date formats are flexible and will be automatically converted to `YYYY-MM-DDTHH:
 | **`isApproximateDeadline`** | Should always be **`false`** for user contributions. The system sets this automatically for future estimated dates.                                                                  | `false`                                      |
 | **`h5Index`**               | **Don't set this one.** It will be automatically set from the `rank/h5index.yaml` file. You may however update that file :)                                                          |                                              |
 | **`rating`**                | **Don't set this one.** It will be automatically updated from the CORE conference rank once a day.                                                                                   |                                              |
+| **`acceptanceRate`**        | **Don't set this one.** Main-track acceptance rate in percent, pulled every ~30h from [openaccept.org](https://openaccept.org)'s [metadata repo](https://github.com/OpenAccept/openaccept-metadata) (CC BY-SA 4.0), together with `acceptanceRateYear`, `acceptedPapers` and `submittedPapers`.         |                                              |
 
 ### ✏️ Easy In-Browser Pull Request (No Git Required!)
 

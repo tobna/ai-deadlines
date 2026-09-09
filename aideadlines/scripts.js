@@ -282,6 +282,8 @@ function formatDate(dateString, formattingOptions = {}) {
 const ICON_PIN = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.002-.001L10 18.43l-5.192-5.192a6.875 6.875 0 010-9.719l.001-.001c2.7-2.7 7.075-2.7 9.774 0l.001.001a6.875 6.875 0 010 9.719L10 18.43zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>`;
 const ICON_CAL = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.75 3A2.25 2.25 0 003.5 5.25v9.5A2.25 2.25 0 005.75 17h8.5A2.25 2.25 0 0016.5 14.75v-9.5A2.25 2.25 0 0014.25 3h-8.5zM5 5.25c0-.414.336-.75.75-.75h8.5c.414 0 .75.336.75.75v9.5c0 .414-.336.75-.75.75h-8.5a.75.75 0 01-.75-.75v-9.5z" clip-rule="evenodd" /><path d="M7 8.5h2v2H7v-2zm0 3h2v2H7v-2zm4-3h2v2h-2v-2z" /></svg>`;
 
+const ICON_ACCEPT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>`;
+
 // --- Create Conference Cards ---
 function createConferenceCard(conference, index = 0) {
   const card = document.createElement('div');
@@ -295,7 +297,7 @@ function createConferenceCard(conference, index = 0) {
   const preciseDeadlineFormat = { includeTime: true, includeTimezoneName: true, displayTimezoneIana: conference.timezone || 'UTC' };
   const conferenceDayFormat = { displayTimezoneIana: conference.timezone || 'UTC' };
 
-  // eyebrow: CORE rating + h5-index
+  // eyebrow: CORE rating + h5-index + acceptance rate
   let eyebrowParts = [];
   if (conference.rating) {
     const top = ratingOrder[conference.rating] >= ratingOrder['A'];
@@ -303,6 +305,17 @@ function createConferenceCard(conference, index = 0) {
   }
   if (conference.h5Index !== undefined) {
     eyebrowParts.push(`<span class="conf-rank">h5&nbsp;<b>${escapeHtml(conference.h5Index)}</b></span>`);
+  }
+  if (typeof conference.acceptanceRate === 'number') {
+    // the pill stays tiny (~25%); the exact figure, year and paper counts live in the tooltip
+    const accepted = conference.acceptedPapers, submitted = conference.submittedPapers;
+    const counts = typeof accepted === 'number' && typeof submitted === 'number'
+      ? ` (${accepted.toLocaleString()} of ${submitted.toLocaleString()} papers)` : '';
+    const detail = `Acceptance rate ${conference.acceptanceRateYear}: `
+      + `${conference.acceptanceRate}%${counts}.\nSource: openaccept.org`;
+    eyebrowParts.push(
+      `<span class="conf-rank" title="${escapeHtml(detail)}">` +
+      `${ICON_ACCEPT}<b>~${escapeHtml(Math.round(conference.acceptanceRate))}%</b></span>`);
   }
   const eyebrowHTML = eyebrowParts.length
     ? `<div class="conf-eyebrow">${eyebrowParts.join('')}</div>` : '';

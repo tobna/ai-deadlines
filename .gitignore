@@ -13,6 +13,7 @@ aideadlines/parser/__pycache__
 aideadlines/data/*.json
 aideadlines/plausible.js
 aideadlines/data/.last_core_update
+aideadlines/data/.last_openaccept_update
 TODO.md
 
 # python caches

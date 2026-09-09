@@ -20,6 +20,8 @@ RECORDS = [
         "website": "https://example.org/",
         "rating": "A*",
         "h5Index": 42,
+        "acceptanceRate": 24.52,
+        "acceptanceRateYear": 2025,
     },
 ]
 
@@ -31,10 +33,11 @@ def test_rows_are_sorted_by_deadline_and_marked():
     assert rows[0].startswith("| AAA 2026 |")
     assert "(est.)" not in rows[0]
     assert "(est.)" in rows[1]
+    assert "| 24.5% (2025) |" in rows[0]
 
 
 def test_every_row_has_the_same_column_count_with_pipes_escaped():
     lines = conferences_to_markdown(RECORDS).splitlines()
     rows = [line for line in lines if line.startswith("| ")]
-    assert all(row.count("|") - row.count("\\|") == 10 for row in rows)
+    assert all(row.count("|") - row.count("\\|") == 11 for row in rows)
     assert "Somewhere \\| Else" in lines[-1]

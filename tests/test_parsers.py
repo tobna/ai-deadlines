@@ -1,13 +1,16 @@
 """Unit tests for the pure parsing helpers (no network)."""
 
+import os
+
 import pytest
 from bs4 import BeautifulSoup
 
-from aideadlines.parser import common_website
+from aideadlines.parser import common_website, openaccept
 from aideadlines.parser.ccf_deadlines import conference_from_ccf, parse_ccf_date_range
 from aideadlines.parser.common_website import extract_dates_from_soup
 from aideadlines.parser.hf_list import conference_from_hf
 from aideadlines.parser.ninoduarte_list import conference_from_nino, parse_past_conferences
+from aideadlines.parser.openaccept import attach_rate, files_by_name, stats_from_metadata
 from aideadlines.parser.wacv import _split_session_dates
 
 
@@ -280,3 +283,65 @@ class TestWacvSessionDates:
 
     def test_no_range_returns_none(self):
         assert _split_session_dates("sometime in January") is None
+
+
+# --------------------------------------------------------------------------- #
+# openaccept
+# --------------------------------------------------------------------------- #
+class TestOpenAccept:
+    def _metadata(self):
+        return {
+            "name": "ACL",
+            "yearly_data": [
+                {"year": 2025, "submitted": 8360, "accepted": 1699},
+                {"year": 2024, "submitted": 4407, "accepted": 943},
+                {"year": 2023, "submitted": 0, "accepted": 0},
+                {"year": 2022, "submitted": 100, "accepted": 200},
+            ],
+            # Findings: must never be mistaken for the main track
+            "second_track": "Findings",
+            "second_track_yearly_data": [{"year": 2025, "submitted": 8360, "accepted": 1392}],
+        }
+
+    def test_only_the_main_track_with_sane_counts_is_read(self):
+        assert stats_from_metadata(self._metadata()) == {2025: (8360, 1699), 2024: (4407, 943)}
+
+    def test_missing_yearly_data_is_not_an_error(self):
+        assert stats_from_metadata({"name": "ACL"}) == {}
+
+    def test_files_are_keyed_by_lowercased_name_skipping_dotfiles(self):
+        tree = {"tree": [
+            {"path": "ai/NeurIPS.json"},
+            {"path": "gm/ACM MM.json"},
+            {"path": ".schema/conference-schema.jsons"},
+            {"path": "README.md"},
+        ]}
+        assert files_by_name(tree) == {"neurips": "ai/NeurIPS.json", "acm mm": "gm/ACM MM.json"}
+
+    def _stats(self):
+        return {2025: (21575, 5290), 2023: (12343, 3218)}
+
+    def test_exact_year_wins_and_carries_the_counts(self):
+        assert attach_rate({"id": "neurips2023"}, self._stats()) == {
+            "id": "neurips2023",
+            "acceptanceRate": 26.07,
+            "acceptanceRateYear": 2023,
+            "acceptedPapers": 3218,
+            "submittedPapers": 12343,
+        }
+
+    def test_upcoming_year_falls_back_to_the_latest_past_year(self):
+        conf = attach_rate({"id": "neurips2027"}, self._stats())
+        assert (conf["acceptanceRate"], conf["acceptanceRateYear"]) == (24.52, 2025)
+
+    def test_a_later_year_is_never_used_for_an_older_conference(self):
+        assert attach_rate({"id": "neurips2015"}, self._stats()) == {"id": "neurips2015"}
+
+    def test_scraping_is_throttled_to_the_refresh_interval(self, tmp_path, monkeypatch):
+        stamp = tmp_path / "stamp"
+        monkeypatch.setattr(openaccept, "_STAMP_FILE", str(stamp))
+        assert openaccept._due(), "never scraped"
+        stamp.touch()
+        assert not openaccept._due(), "just scraped"
+        os.utime(stamp, (0, 0))
+        assert openaccept._due(), "stale"

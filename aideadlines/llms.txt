@@ -30,6 +30,10 @@ two submission rounds appears twice, distinguished by `note`):
 - `location`, `website` — optional strings
 - `tags` — subset of `DM`, `ML`, `NLP`, `CV`, `HCI`, `RO`, `SP`
 - `rating` — CORE ranking (`A*`, `A`, `B`, ...); `h5Index` — Google Scholar h5-index
+- `acceptanceRate` — main-track acceptance rate in percent, from [openaccept.org](https://openaccept.org)
+  (CC BY-SA 4.0); `acceptedPapers`/`submittedPapers` — the counts it was computed from;
+  `acceptanceRateYear` — the year it is from. For an upcoming conference that is the most recent
+  past year, not a prediction — always quote the year alongside the rate.
 - `dataSrc` — where the record came from (`manual`, `off-website`, `hf-repo`, `ccf-deadlines`, `ninoduarte-git`, `estimate`)
 
 Always check `isApproximateDeadline` before telling someone a date is final, and quote the
