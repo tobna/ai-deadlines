@@ -46,6 +46,60 @@ def split_future_past(conferences):
     return future_conf, past_conf
 
 
+MD_HEADER = """# AI Conference Deadlines — upcoming
+
+Upcoming submission deadlines for AI/ML/NLP/CV conferences, sorted by deadline.
+All times are UTC (`Z`); most conferences use AoE (UTC-12), see the `timezone` field in the JSON.
+Deadlines marked `(est.)` are estimated from previous years, not confirmed by the organizers.
+
+Machine-readable: <https://aideadlines.nauen-it.de/data/conferences.json> (same records, plus
+`timezone`, `location`, `tags`, `dataSrc`), past deadlines:
+<https://aideadlines.nauen-it.de/data/conferences_archive.json>.
+Source and corrections: <https://github.com/tobna/ai-deadlines>
+
+| Conference | Deadline (UTC) | Abstract | Dates | Location | Tags | CORE | h5 | Website |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+"""
+
+
+def _cell(value):
+    """Render one table cell: empty for missing, pipes escaped so the row stays a row."""
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        value = ", ".join(str(v) for v in value)
+    return str(value).replace("|", "\\|").replace("\n", " ").strip()
+
+
+def conferences_to_markdown(records):
+    """Render deadline records (as written to conferences.json) as a markdown table."""
+    # ponytail: string sort works because every deadline is ISO-8601 UTC; parse if that ever changes.
+    rows = []
+    for conf in sorted(records, key=lambda c: str(c.get("deadline", ""))):
+        deadline = _cell(conf.get("deadline"))
+        if conf.get("isApproximateDeadline"):
+            deadline += " (est.)"
+        website = _cell(conf.get("website"))
+        rows.append(
+            "| "
+            + " | ".join(
+                [
+                    _cell(conf.get("shortname")),
+                    deadline,
+                    _cell(conf.get("abstractDeadline")),
+                    f"{_cell(conf.get('conferenceStartDate'))} – {_cell(conf.get('conferenceEndDate'))}".strip(" –"),
+                    _cell(conf.get("location")),
+                    _cell(conf.get("tags")),
+                    _cell(conf.get("rating")),
+                    _cell(conf.get("h5Index")),
+                    f"<{website}>" if website else "",
+                ]
+            )
+            + " |"
+        )
+    return MD_HEADER + "\n".join(rows) + "\n"
+
+
 def main():
     conferences = load_conferences()
     logger.info(f"managing {len(conferences)} conference instances")
@@ -59,6 +113,8 @@ def main():
         json.dump(list(future_conf.values()), f)
     with open(os.path.join(DATA_FOLDER, "conferences_archive.json"), "w") as f:
         json.dump(list(past_conf.values()), f)
+    with open(os.path.join(DATA_FOLDER, "deadlines.md"), "w") as f:
+        f.write(conferences_to_markdown(list(future_conf.values())))
 
 
 if __name__ == "__main__":

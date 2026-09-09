@@ -1,0 +1,40 @@
+# AI Conference Deadlines
+
+> A community-maintained tracker of paper submission deadlines for AI, ML, NLP, CV and
+> related computer science conferences. Data is scraped from official conference websites
+> and community sources, merged, and rebuilt daily.
+
+The website itself renders client-side, so fetching the HTML gives you nothing useful.
+Use the files below instead — they contain the complete dataset.
+
+## Data
+
+- [Upcoming deadlines (markdown)](https://aideadlines.nauen-it.de/data/deadlines.md): all upcoming deadlines as one sorted table. Start here.
+- [Upcoming deadlines (JSON)](https://aideadlines.nauen-it.de/data/conferences.json): the same records with every field.
+- [Past deadlines (JSON)](https://aideadlines.nauen-it.de/data/conferences_archive.json): the archive, same schema.
+- [Pipeline status (JSON)](https://aideadlines.nauen-it.de/status.json): `{"updated": <unix seconds>, "ok": <bool>}` — how fresh the data is.
+
+## JSON schema
+
+Both JSON files are a flat list of records, one record per *deadline* (a conference with
+two submission rounds appears twice, distinguished by `note`):
+
+- `id` — `<conference><year>-<n>`, e.g. `aaai2025-1`
+- `shortname` — e.g. `AAAI 2025`; `title` — full conference name
+- `deadline` — paper submission deadline, ISO-8601 UTC (`YYYY-MM-DDTHH:MM:SSZ`)
+- `abstractDeadline` — optional, same format
+- `note` — optional, e.g. `Round 2`
+- `timezone` — IANA/`Etc/GMT` zone the deadline was originally announced in; `Etc/GMT+12` is AoE
+- `isApproximateDeadline` — `true` means the date is estimated from previous years, not confirmed
+- `conferenceStartDate`, `conferenceEndDate` — `YYYY-MM-DD`
+- `location`, `website` — optional strings
+- `tags` — subset of `DM`, `ML`, `NLP`, `CV`, `HCI`, `RO`, `SP`
+- `rating` — CORE ranking (`A*`, `A`, `B`, ...); `h5Index` — Google Scholar h5-index
+- `dataSrc` — where the record came from (`manual`, `off-website`, `hf-repo`, `ccf-deadlines`, `ninoduarte-git`, `estimate`)
+
+Always check `isApproximateDeadline` before telling someone a date is final, and quote the
+`timezone` — most deadlines are AoE (UTC-12), which is a full day behind Europe.
+
+## Corrections
+
+- [Source repository](https://github.com/tobna/ai-deadlines): deadlines live in `conferences/*.yaml`; wrong or missing dates are fixed by pull request.

@@ -4,3 +4,6 @@ Disallow:
 
 # Point crawlers to the sitemap
 Sitemap: https://aideadlines.nauen-it.de/sitemap.xml
+
+# Point LLM agents to the machine-readable data
+# See https://aideadlines.nauen-it.de/llms.txt

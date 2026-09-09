@@ -66,6 +66,9 @@ The pipeline modules are **functions with `main()` guards** — importing them d
 `data_to_json.py:main()` then splits YAML into:
 - `aideadlines/data/conferences.json` — upcoming deadlines
 - `aideadlines/data/conferences_archive.json` — past deadlines
+- `aideadlines/data/deadlines.md` — upcoming deadlines as one markdown table (`conferences_to_markdown`), for LLM agents that fetch a URL and can't run the page's JavaScript
+
+All three are generated and gitignored; `make_website.sh` copies them into `html/data/`.
 
 `update.py` chains these for the unattended run: pull → `update_data --online` → **`validate` (aborts the commit on failure)** → `data_to_json` → update README badge → commit/push.
 
@@ -106,6 +109,10 @@ Single-page static app — no backend:
 - `aideadlines/styles.tailwind.css` — Tailwind CSS
 - `html/` — generated output directory (gitignored)
 
+Agent/LLM access (the page renders client-side, so fetching the HTML yields nothing):
+- `aideadlines/llms.txt` — served at `/llms.txt`, the [llms.txt](https://llmstxt.org) entry point: links the data files and documents the JSON schema and field semantics. Static; keep it in sync when the schema changes.
+- `index.html` carries an HTML comment plus `<link rel="alternate">` tags pointing at `/data/deadlines.md` and `/data/conferences.json`.
+
 Conventions in `scripts.js`:
 - Conference data is community-sourced, so **every value interpolated into `innerHTML` must go through `escapeHtml`**, and any URL used in an `href` through `safeHref` (http/https only).
 - A **single global ticker** updates all visible countdowns once per second (do not create per-card intervals); filter inputs are debounced.
@@ -116,6 +123,7 @@ Conventions in `scripts.js`:
 - Backend characterization tests (`test_utils.py`, `test_see_future.py`, `test_merge_priority.py`, `test_validate.py`) pin current behavior so refactors stay safe. (`data_to_json`'s timezone normalization is covered via `normalize_timezone_for_js` in `test_utils.py`.)
 - `test_http.py` exercises retry/status/timeout via a monkeypatched session.
 - `test_parsers.py` covers the pure parser helpers and the `common_website` factory metadata (mocked `fetch_soup`).
+- `test_deadlines_md.py` pins the markdown export's sorting, `(est.)` marking and pipe escaping.
 
 Live parser behavior is verified manually against real sites, not in CI. CI (`.github/workflows/ci.yml`) runs `ruff` + `pytest` and skips data-only auto-commits.
 

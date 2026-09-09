@@ -12,9 +12,9 @@ python3 update.py 2>&1 | tee status.ansi
 echo "2. copy files over"
 mkdir -p html/data html/fonts
 cp aideadlines/*.html aideadlines/*.js aideadlines/*.css html/
-cp aideadlines/data/*.json html/data/
+cp aideadlines/data/*.json aideadlines/data/*.md html/data/
 cp aideadlines/fonts/*.woff2 html/fonts/
-cp aideadlines/*.ico aideadlines/*.svg aideadlines/*.png aideadlines/site.webmanifest aideadlines/robots.txt aideadlines/sitemap.xml html/
+cp aideadlines/*.ico aideadlines/*.svg aideadlines/*.png aideadlines/site.webmanifest aideadlines/robots.txt aideadlines/sitemap.xml aideadlines/llms.txt html/
 
 # Render the colored run into the served status page (served at /status.html).
 # The plain "=== PIPELINE OK ===" marker survives verbatim for the Uptime Kuma keyword check.
@@ -27,4 +27,4 @@ grep -q '=== PIPELINE OK ===' status.ansi && ok=true || ok=false
 printf '{"updated": %s, "ok": %s}\n' "$(date +%s)" "$ok" >html/status.json
 
 echo "4. compress files: gzip"
-find html -type f \( -name '*.json' -o -name '*.html' -o -name '*.js' -o -name '*.css' -o -name '*.ttf' -o -name '*.woff2' -o -name '*.xml' -o -name '*.svg' -o -name '*.jpg' -o -name '*.webp' \) -exec gzip -v -k -f --best {} \;
+find html -type f \( -name '*.json' -o -name '*.md' -o -name '*.txt' -o -name '*.html' -o -name '*.js' -o -name '*.css' -o -name '*.ttf' -o -name '*.woff2' -o -name '*.xml' -o -name '*.svg' -o -name '*.jpg' -o -name '*.webp' \) -exec gzip -v -k -f --best {} \;
