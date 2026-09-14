@@ -1,0 +1,13 @@
+evoapplications2027:
+  conferenceEndDate: '2027-04-02'
+  conferenceStartDate: '2027-03-31'
+  dataSrc: ccf-deadlines
+  id: evoapplications2027
+  isApproximateDeadline: false
+  shortname: EvoApplications 2027
+  tags: []
+  timeline:
+  - deadline: '2026-11-02T11:59:00Z'
+    note: Full papers
+  title: International Conference on the Applications of Evolutionary Computation
+  website: https://www.evostar.org/2027/evoapps/
