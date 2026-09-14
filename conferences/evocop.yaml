@@ -4,6 +4,7 @@ evocop2027:
   dataSrc: ccf-deadlines
   id: evocop2027
   isApproximateDeadline: false
+  rating: B
   shortname: EvoCOP 2027
   tags: []
   timeline:

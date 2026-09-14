@@ -4,6 +4,7 @@ evoapplications2027:
   dataSrc: ccf-deadlines
   id: evoapplications2027
   isApproximateDeadline: false
+  rating: B
   shortname: EvoApplications 2027
   tags: []
   timeline:

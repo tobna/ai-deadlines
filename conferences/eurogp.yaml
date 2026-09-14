@@ -4,6 +4,7 @@ eurogp2027:
   dataSrc: ccf-deadlines
   id: eurogp2027
   isApproximateDeadline: false
+  rating: B
   shortname: EuroGP 2027
   tags: []
   timeline:
