@@ -6,7 +6,7 @@ import traceback
 import yaml
 
 from .log_config import logger
-from .merge import merge_one, merge_source
+from .merge import canonical_id, is_blocked, merge_one, merge_source
 from .parser.ccf_deadlines import get_ccf_list
 from .parser.common_website import PARSER
 from .parser.hf_list import get_hf_list
@@ -45,8 +45,13 @@ def load_conferences():
     for conf_file in os.listdir(CONFERENCE_FOLDER):
         with open(os.path.join(CONFERENCE_FOLDER, conf_file), "r") as f:
             file_confs = yaml.safe_load(f)
-        file_confs = {key: parse_all_times(conf) for key, conf in file_confs.items()}
-        conferences = {**file_confs, **conferences}
+        for key, conf in file_confs.items():
+            if is_blocked(conf):
+                continue
+            conf["id"] = key = canonical_id(key)
+            if key in conferences:  # alias file loaded next to its canonical one: keep the canonical
+                continue
+            conferences[key] = parse_all_times(conf)
     return conferences
 
 

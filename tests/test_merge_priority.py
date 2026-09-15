@@ -5,7 +5,7 @@ lowest), the estimate-gets-replaced rule, the <= vs < asymmetry, WACV round tagg
 transforms.
 """
 
-from aideadlines.merge import SOURCES, merge_one, merge_source, tag_wacv_round
+from aideadlines.merge import SOURCES, canonical_id, is_blocked, merge_one, merge_source, tag_wacv_round
 
 
 def _conf(dataSrc=None, title="t", tags=("ML",), deadline="2025-01-01"):
@@ -96,3 +96,34 @@ def test_merge_source_merges_each_item_by_its_id():
     )
     assert "neurips2025" in conferences
     assert conferences["neurips2025"]["dataSrc"] == "ninoduarte-git"
+
+
+class TestBlocklistAndAliases:
+    def test_blocked_by_group_and_by_domain(self):
+        assert is_blocked({"id": "cvc2027", "website": None})
+        assert is_blocked({"id": "intellisys2027", "website": "https://saiconference.com/IntelliSys"})
+        assert not is_blocked({"id": "cvpr2027", "website": "https://cvpr.thecvf.com"})
+
+    def test_alias_ids_fold_into_canonical_group(self):
+        assert canonical_id("ieee cec2026") == "cec2026"
+        assert canonical_id("ruleml+rr2026") == "rulemlrr2026"
+        assert canonical_id("cvpr2026") == "cvpr2026"
+
+    def test_merge_source_drops_blocked_and_canonicalizes(self):
+        conferences = {}
+        items = [
+            {"id": "cvc2027", "website": "https://saiconference.com/CVC", "tags": [], "timeline": []},
+            {"id": "ieee cec2026", "tags": [], "timeline": [{"deadline": "2026-02-01"}]},
+        ]
+        merge_source(conferences, items, "ccf-deadlines", [])
+        assert list(conferences) == ["cec2026"]
+        assert conferences["cec2026"]["id"] == "cec2026"
+
+
+def test_core_lookup_falls_back_to_alias_spelling(monkeypatch):
+    from aideadlines import ranking
+
+    monkeypatch.setattr(ranking, "_get_core_rank", lambda name: {"ruleml+rr": "B", "cec": "B"}.get(name))
+    assert ranking._lookup_core_rank("rulemlrr") == "B"
+    assert ranking._lookup_core_rank("cec") == "B"
+    assert ranking._lookup_core_rank("nope") is None

@@ -8,6 +8,7 @@ import yaml
 from bs4 import BeautifulSoup
 
 from .log_config import logger
+from .merge import ID_ALIASES
 
 this_folder = os.path.dirname(__file__)
 
@@ -49,6 +50,19 @@ def _get_core_rank(shortname):
     return None
 
 
+def _core_search_names(group):
+    """CORE may list a group under a spelling we fold away (``rulemlrr`` -> ``ruleml+rr``)."""
+    return [group] + [alias for alias, canonical in ID_ALIASES.items() if canonical == group]
+
+
+def _lookup_core_rank(group):
+    for name in _core_search_names(group):
+        rank = _get_core_rank(name)
+        if rank is not None:
+            return rank
+    return None
+
+
 def make_core_rank_function(conference_groups, online=True, force_update=False):
     core_save_file = os.path.join(this_folder, os.pardir, "rank", "core.yaml")
     if os.path.isfile(core_save_file):
@@ -76,7 +90,7 @@ def make_core_rank_function(conference_groups, online=True, force_update=False):
         logger.info(f"Updating core ranks for {len(conference_groups)} conferences")
 
         for i, group in enumerate(conference_groups):
-            rank = _get_core_rank(group)
+            rank = _lookup_core_rank(group)
             if rank is not None:
                 core_ranks[group] = rank
                 logger.info(f"{i+1}/{len(conference_groups)}: {group} -> {rank}")

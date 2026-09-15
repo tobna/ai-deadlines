@@ -41,7 +41,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `update_data.py` — orchestrates scraping + merging; `main()` entry point.
 - `data_to_json.py` — splits merged YAML into upcoming/archive JSON; `main()` entry point.
 - `validate.py` — schema validation (`validate_conferences`); `main()` exits non-zero on problems.
-- `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`).
+- `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`), plus the id blocklist/aliases (see below).
 - `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`).
 - `ranking.py` — CORE rating + Google Scholar h5-index lookups.
 - `parser/openaccept.py` — acceptance rates from the openaccept.org metadata repo (not a deadline source, see below).
@@ -80,6 +80,17 @@ Merging is centralized in `merge.py`. Lower priority is silently overwritten by 
 `estimate` < `ninoduarte-git` < `ccf-deadlines` < `hf-repo` < `off-website` < `manual`
 
 `manual` is the highest priority: hand-curated edits win over every scraper. `estimate` is the lowest: a guessed instance yields to any real data. (`ninoduarte-git` merges with strict `<`; the others with `<=`, via `merge_one(..., overwrite_equal=...)`.)
+
+### Blocklist and id aliases (`merge.py`)
+
+`BLOCKED_GROUPS` / `BLOCKED_DOMAINS` drop predatory or stray entries (SAI Conference venues such as
+CVC, single workshop ids like `cvpr_ws`) and `ID_ALIASES` folds a source's alternate spelling into
+the canonical group (`ieee cec` -> `cec`, `ruleml+rr` -> `rulemlrr`). Both are applied in
+`merge_source` (every list source) and in `load_conferences` (stale YAML), so a blocked or aliased
+conference cannot come back through the daily run. To block a new venue add its domain or group id
+there; to merge duplicate groups add the alias — `ranking.py` searches CORE under the canonical id
+and every alias spelling, so the rating follows automatically on the next online refresh (never
+hand-edit `rank/core.yaml`).
 
 ### Acceptance rates (`parser/openaccept.py`)
 

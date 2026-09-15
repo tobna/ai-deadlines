@@ -15,6 +15,30 @@ from .utils import join_conferences
 # scraper. ``estimate`` is lowest: a guessed instance yields to any real data.
 SOURCES = ["estimate", "ninoduarte-git", "ccf-deadlines", "hf-repo", "off-website", "manual"]
 
+# Sources spell the same conference differently; fold the alternate id prefix into the canonical one
+# so the instances land in one group instead of two YAML files.
+ID_ALIASES = {"ieee cec": "cec", "ruleml+rr": "rulemlrr"}
+
+# Predatory / vanity venues and stray workshop ids that should never reach conferences/.
+BLOCKED_GROUPS = {"cvc", "cvpr_ws", "neurips_ws"}
+BLOCKED_DOMAINS = ("saiconference.com",)
+
+
+def canonical_id(conf_id):
+    """Map an alias id (``ieee cec2026``) to its canonical form (``cec2026``)."""
+    for alias, canonical in ID_ALIASES.items():
+        if conf_id.startswith(alias):
+            return canonical + conf_id[len(alias) :]
+    return conf_id
+
+
+def is_blocked(conf):
+    """True for conferences on the blocklist, by group id or by website domain."""
+    if conf["id"][:-4] in BLOCKED_GROUPS:
+        return True
+    website = conf.get("website") or ""
+    return any(domain in website for domain in BLOCKED_DOMAINS)
+
 
 def tag_wacv_round(conf, conf_id):
     """WACV feeds often carry a single undated round; label it Round 1/2 by deadline month.
@@ -66,8 +90,13 @@ def merge_one(conferences, new_conf, conf_id, src_name, reestimate_groups, overw
 def merge_source(conferences, items, src_name, reestimate_groups, overwrite_equal=True):
     """Merge every record in ``items`` from one source into ``conferences`` by its ``id``.
 
-    WACV round tagging is applied before merging.
+    Blocked conferences are dropped and alias ids canonicalized; WACV round tagging is applied
+    before merging.
     """
     for item in items:
+        if is_blocked(item):
+            logger.info(f"skipping blocked conference {item['id']} ({item.get('website')})")
+            continue
+        item["id"] = canonical_id(item["id"])
         tag_wacv_round(item, item["id"])
         merge_one(conferences, item, item["id"], src_name, reestimate_groups, overwrite_equal=overwrite_equal)
