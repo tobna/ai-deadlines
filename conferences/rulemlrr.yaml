@@ -5,6 +5,7 @@ rulemlrr2026:
   id: rulemlrr2026
   isApproximateDeadline: false
   location: null
+  rating: B
   shortname: RuleMLRR 2026
   tags:
   - DB
