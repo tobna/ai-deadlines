@@ -1,4 +1,7 @@
 interspeech2022:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2022-09-22'
   conferenceStartDate: '2022-09-18'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ interspeech2022:
   isApproximateDeadline: false
   rating: A
   shortname: InterSpeech 2022
+  submittedPapers: 1990
   tags: &id001
   - SP
   timeline:
@@ -13,6 +17,9 @@ interspeech2022:
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2022.org/
 interspeech2023:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2023-08-24'
   conferenceStartDate: '2023-08-20'
   dataSrc: ccf-deadlines
@@ -20,12 +27,16 @@ interspeech2023:
   isApproximateDeadline: false
   rating: A
   shortname: InterSpeech 2023
+  submittedPapers: 1990
   tags: *id001
   timeline:
   - deadline: '2023-03-09T11:59:59Z'
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2023.org/
 interspeech2024:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2024-09-05'
   conferenceStartDate: '2024-09-01'
   dataSrc: ccf-deadlines
@@ -33,6 +44,7 @@ interspeech2024:
   isApproximateDeadline: false
   rating: A
   shortname: InterSpeech 2024
+  submittedPapers: 1990
   tags: *id001
   timeline:
   - abstractDeadline: '2024-03-02T11:59:59Z'
@@ -40,6 +52,9 @@ interspeech2024:
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2024.org/
 interspeech2025:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2025-08-22'
   conferenceStartDate: '2025-08-17'
   dataSrc: ccf-deadlines
@@ -47,12 +62,16 @@ interspeech2025:
   isApproximateDeadline: false
   rating: A
   shortname: InterSpeech 2025
+  submittedPapers: 1990
   tags: *id001
   timeline:
   - deadline: '2025-02-20T11:59:59Z'
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2025.org/home
 interspeech2026:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2026-10-01'
   conferenceStartDate: '2026-09-28'
   dataSrc: hf-repo
@@ -61,6 +80,7 @@ interspeech2026:
   location: International Convention Centre (ICC) Sydney
   rating: A
   shortname: Interspeech 2026
+  submittedPapers: 1990
   tags: *id001
   timeline:
   - deadline: '2026-02-26T11:59:59Z'
@@ -69,6 +89,9 @@ interspeech2026:
   title: Interspeech
   website: https://interspeech2026.org
 interspeech2027:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2027-10-02'
   conferenceStartDate: '2027-09-27'
   dataSrc: estimate
@@ -76,11 +99,15 @@ interspeech2027:
   isApproximateDeadline: true
   rating: A
   shortname: Interspeech 2027
+  submittedPapers: 1990
   tags: *id001
   timeline:
   - deadline: '2027-03-03T11:59:59Z'
   title: Interspeech
 interspeech2028:
+  acceptanceRate: 48.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 963
   conferenceEndDate: '2028-10-01'
   conferenceStartDate: '2028-09-26'
   dataSrc: estimate
@@ -88,6 +115,7 @@ interspeech2028:
   isApproximateDeadline: true
   rating: A
   shortname: Interspeech 2028
+  submittedPapers: 1990
   tags: *id001
   timeline:
   - deadline: '2028-02-26T11:59:59Z'

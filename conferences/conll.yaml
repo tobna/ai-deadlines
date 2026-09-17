@@ -1,4 +1,7 @@
 conll2025:
+  acceptanceRate: 23.35
+  acceptanceRateYear: 2020
+  acceptedPapers: 53
   conferenceEndDate: '2025-08-01'
   conferenceStartDate: '2025-07-31'
   dataSrc: hf-repo
@@ -8,6 +11,7 @@ conll2025:
   location: Vienna, Austria
   rating: B
   shortname: CoNLL 2025
+  submittedPapers: 227
   tags: &id001
   - NLP
   timeline:
@@ -17,6 +21,9 @@ conll2025:
   title: The SIGNLL Conference on Computational Natural Language Learning
   website: https://conll.org/
 conll2026:
+  acceptanceRate: 23.35
+  acceptanceRateYear: 2020
+  acceptedPapers: 53
   conferenceEndDate: '2026-07-04'
   conferenceStartDate: '2026-07-03'
   dataSrc: hf-repo
@@ -26,6 +33,7 @@ conll2026:
   location: San Diego, California, USA
   rating: B
   shortname: CoNLL 2026
+  submittedPapers: 227
   tags: *id001
   timeline:
   - deadline: '2026-02-20T11:59:59Z'
@@ -34,6 +42,9 @@ conll2026:
   title: The SIGNLL Conference on Computational Natural Language Learning
   website: https://conll.org/
 conll2027:
+  acceptanceRate: 23.35
+  acceptanceRateYear: 2020
+  acceptedPapers: 53
   conferenceEndDate: '2027-07-08'
   conferenceStartDate: '2027-07-03'
   dataSrc: estimate
@@ -42,11 +53,15 @@ conll2027:
   isApproximateDeadline: true
   rating: B
   shortname: CoNLL 2027
+  submittedPapers: 227
   tags: *id001
   timeline:
   - deadline: '2027-02-20T11:59:59Z'
   title: The SIGNLL Conference on Computational Natural Language Learning
 conll2028:
+  acceptanceRate: 23.35
+  acceptanceRateYear: 2020
+  acceptedPapers: 53
   conferenceEndDate: '2028-07-07'
   conferenceStartDate: '2028-07-02'
   dataSrc: estimate
@@ -55,6 +70,7 @@ conll2028:
   isApproximateDeadline: true
   rating: B
   shortname: CoNLL 2028
+  submittedPapers: 227
   tags: *id001
   timeline:
   - deadline: '2028-02-20T11:59:59Z'

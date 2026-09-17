@@ -16,12 +16,16 @@ wacv2021:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2021.thecvf.com
 wacv2023:
+  acceptanceRate: 40.65
+  acceptanceRateYear: 2023
+  acceptedPapers: 641
   dataSrc: off-website
   h5Index: 131
   id: wacv2023
   isApproximateDeadline: false
   rating: A
   shortname: WACV 2023
+  submittedPapers: 1577
   tags: *id001
   timeline:
   - deadline: '2022-07-13T19:59:00Z'
@@ -31,12 +35,16 @@ wacv2023:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2023.thecvf.com
 wacv2024:
+  acceptanceRate: 41.41
+  acceptanceRateYear: 2024
+  acceptedPapers: 846
   dataSrc: off-website
   h5Index: 131
   id: wacv2024
   isApproximateDeadline: false
   rating: A
   shortname: WACV 2024
+  submittedPapers: 2043
   tags: *id001
   timeline:
   - deadline: '2023-06-28T19:59:00Z'
@@ -46,6 +54,9 @@ wacv2024:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2024.thecvf.com
 wacv2025:
+  acceptanceRate: 41.41
+  acceptanceRateYear: 2024
+  acceptedPapers: 846
   conferenceEndDate: '2025-03-04'
   conferenceStartDate: '2025-02-28'
   dataSrc: off-website
@@ -55,6 +66,7 @@ wacv2025:
   location: JW Marriott Starpass in Tucson, Arizona, USA
   rating: A
   shortname: WACV 2025
+  submittedPapers: 2043
   tags: *id001
   timeline:
   - deadline: '2024-07-16T07:59:00Z'
@@ -65,6 +77,9 @@ wacv2025:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2025.thecvf.com
 wacv2026:
+  acceptanceRate: 41.41
+  acceptanceRateYear: 2024
+  acceptedPapers: 846
   conferenceEndDate: '2026-03-10'
   conferenceStartDate: '2026-03-06'
   dataSrc: off-website
@@ -74,6 +89,7 @@ wacv2026:
   location: JW Marriott Starpass in Tucson, Arizona, USA
   rating: A
   shortname: WACV 2026
+  submittedPapers: 2043
   tags: *id001
   timeline:
   - abstractDeadline: '2025-07-12T11:59:59Z'
@@ -86,6 +102,9 @@ wacv2026:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2026/
 wacv2027:
+  acceptanceRate: 41.41
+  acceptanceRateYear: 2024
+  acceptedPapers: 846
   conferenceEndDate: '2027-01-08'
   conferenceStartDate: '2027-01-06'
   dataSrc: off-website
@@ -95,6 +114,7 @@ wacv2027:
   location: Orlando, Florida
   rating: A
   shortname: WACV 2027
+  submittedPapers: 2043
   tags: *id001
   timeline:
   - abstractDeadline: '2026-06-20T11:59:59Z'
@@ -107,6 +127,9 @@ wacv2027:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2027/
 wacv2028:
+  acceptanceRate: 41.41
+  acceptanceRateYear: 2024
+  acceptedPapers: 846
   conferenceEndDate: '2028-03-09'
   conferenceStartDate: '2028-03-04'
   dataSrc: estimate
@@ -115,6 +138,7 @@ wacv2028:
   isApproximateDeadline: true
   rating: A
   shortname: WACV 2028
+  submittedPapers: 2043
   tags: *id001
   timeline:
   - deadline: '2027-07-18T23:59:59Z'

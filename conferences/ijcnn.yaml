@@ -1,4 +1,7 @@
 ijcnn2024:
+  acceptanceRate: 51.99
+  acceptanceRateYear: 2024
+  acceptedPapers: 1701
   conferenceEndDate: '2024-07-05'
   conferenceStartDate: '2024-06-30'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ ijcnn2024:
   isApproximateDeadline: false
   rating: B
   shortname: IJCNN 2024
+  submittedPapers: 3272
   tags: &id001
   - ML
   timeline:
@@ -13,6 +17,9 @@ ijcnn2024:
   title: International Joint Conference on Neural Networks
   website: https://2024.ieeewcci.org/
 ijcnn2025:
+  acceptanceRate: 40.0
+  acceptanceRateYear: 2025
+  acceptedPapers: 2320
   conferenceEndDate: '2025-07-05'
   conferenceStartDate: '2025-06-30'
   dataSrc: hf-repo
@@ -21,6 +28,7 @@ ijcnn2025:
   location: Rome, Italy
   rating: B
   shortname: IJCNN 2025
+  submittedPapers: 5800
   tags: *id001
   timeline:
   - deadline: '2025-01-31T11:59:59Z'
@@ -29,6 +37,9 @@ ijcnn2025:
   title: International Joint Conference on Neural Networks
   website: https://2025.ijcnn.org/
 ijcnn2026:
+  acceptanceRate: 40.0
+  acceptanceRateYear: 2025
+  acceptedPapers: 2320
   conferenceEndDate: '2026-06-26'
   conferenceStartDate: '2026-06-21'
   dataSrc: hf-repo
@@ -37,6 +48,7 @@ ijcnn2026:
   location: MECC Maastricht
   rating: B
   shortname: IJCNN 2026
+  submittedPapers: 5800
   tags: *id001
   timeline:
   - deadline: '2026-02-01T11:59:59Z'
@@ -45,6 +57,9 @@ ijcnn2026:
   title: International Joint Conference on Neural Networks
   website: https://attend.ieee.org/wcci-2026/
 ijcnn2027:
+  acceptanceRate: 40.0
+  acceptanceRateYear: 2025
+  acceptedPapers: 2320
   conferenceEndDate: '2027-06-18'
   conferenceStartDate: '2027-06-14'
   dataSrc: ccf-deadlines
@@ -52,12 +67,16 @@ ijcnn2027:
   isApproximateDeadline: false
   rating: B
   shortname: IJCNN 2027
+  submittedPapers: 5800
   tags: *id001
   timeline:
   - deadline: '2027-02-01T11:59:59Z'
   title: International Joint Conference on Neural Networks
   website: https://ijcnn.org/2027
 ijcnn2028:
+  acceptanceRate: 40.0
+  acceptanceRateYear: 2025
+  acceptedPapers: 2320
   conferenceEndDate: '2028-06-19'
   conferenceStartDate: '2028-06-14'
   dataSrc: estimate
@@ -65,6 +84,7 @@ ijcnn2028:
   isApproximateDeadline: true
   rating: B
   shortname: IJCNN 2028
+  submittedPapers: 5800
   tags: *id001
   timeline:
   - deadline: '2028-02-01T11:59:59Z'
