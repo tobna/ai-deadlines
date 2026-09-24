@@ -5,10 +5,47 @@ log2025:
   id: log2025
   isApproximateDeadline: false
   shortname: LOG 2025
-  tags:
+  tags: &id001
   - ML
   timeline:
   - abstractDeadline: '2025-08-23T11:59:59Z'
     deadline: '2025-08-30T11:59:59Z'
   title: Learning on Graphs Conference
   website: https://logconference.org/
+log2026:
+  conferenceEndDate: '2026-11-22'
+  conferenceStartDate: '2026-11-20'
+  dataSrc: ccf-deadlines
+  id: log2026
+  isApproximateDeadline: false
+  shortname: LOG 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-08-06T11:59:59Z'
+    deadline: '2026-08-08T11:59:59Z'
+  title: Learning on Graphs Conference
+  website: https://logconference.org/
+log2027:
+  conferenceEndDate: '2027-11-25'
+  conferenceStartDate: '2027-11-20'
+  dataSrc: estimate
+  id: log2027
+  isApproximateDeadline: true
+  shortname: LOG 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-08-06T11:59:59Z'
+    deadline: '2027-08-08T11:59:59Z'
+  title: Learning on Graphs Conference
+log2028:
+  conferenceEndDate: '2028-11-25'
+  conferenceStartDate: '2028-11-20'
+  dataSrc: estimate
+  id: log2028
+  isApproximateDeadline: true
+  shortname: LOG 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-08-06T11:59:59Z'
+    deadline: '2028-08-08T11:59:59Z'
+  title: Learning on Graphs Conference
