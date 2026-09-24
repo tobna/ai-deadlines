@@ -31,26 +31,27 @@ cpal2026:
   title: The Conference on Parsimony and Learning
   website: https://cpal.cc/
 cpal2027:
-  conferenceEndDate: '2027-03-28'
+  conferenceEndDate: '2027-03-26'
   conferenceStartDate: '2027-03-23'
-  dataSrc: estimate
+  dataSrc: ccf-deadlines
   id: cpal2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   shortname: CPAL 2027
   tags: *id001
   timeline:
-  - deadline: '2026-12-05T23:59:59Z'
+  - abstractDeadline: '2026-11-24T11:59:59Z'
+    deadline: '2026-12-06T11:59:59Z'
   title: The Conference on Parsimony and Learning
+  website: https://cpal.cc/
 cpal2028:
-  conferenceEndDate: '2028-03-27'
-  conferenceStartDate: '2028-03-22'
+  conferenceEndDate: '2028-03-28'
+  conferenceStartDate: '2028-03-23'
   dataSrc: estimate
   id: cpal2028
   isApproximateDeadline: true
   shortname: CPAL 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-12-11T11:59:59Z'
-    deadline: '2027-12-13T11:59:59Z'
-  - deadline: '2027-12-16T11:59:59Z'
+  - abstractDeadline: '2027-11-24T11:59:59Z'
+    deadline: '2027-12-06T11:59:59Z'
   title: The Conference on Parsimony and Learning

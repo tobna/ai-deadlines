@@ -34,18 +34,19 @@ esann2026:
     and Machine Learning
   website: https://www.esann.org/
 esann2027:
-  conferenceEndDate: '2027-04-27'
-  conferenceStartDate: '2027-04-22'
-  dataSrc: estimate
+  conferenceEndDate: '2027-04-23'
+  conferenceStartDate: '2027-04-21'
+  dataSrc: ccf-deadlines
   id: esann2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: ESANN 2027
   tags: *id001
   timeline:
-  - deadline: '2026-11-19T23:59:59Z'
+  - deadline: '2026-11-19T11:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
+  website: https://www.esann.org/
 esann2028:
   conferenceEndDate: '2028-04-26'
   conferenceStartDate: '2028-04-21'
@@ -56,6 +57,6 @@ esann2028:
   shortname: ESANN 2028
   tags: *id001
   timeline:
-  - deadline: '2027-11-20T11:59:59Z'
+  - deadline: '2027-11-19T11:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning

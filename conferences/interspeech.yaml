@@ -89,34 +89,27 @@ interspeech2026:
   title: Interspeech
   website: https://interspeech2026.org
 interspeech2027:
-  acceptanceRate: 48.39
-  acceptanceRateYear: 2021
-  acceptedPapers: 963
-  conferenceEndDate: '2027-10-02'
-  conferenceStartDate: '2027-09-27'
-  dataSrc: estimate
+  conferenceEndDate: '2027-09-02'
+  conferenceStartDate: '2027-08-29'
+  dataSrc: ccf-deadlines
   id: interspeech2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A
-  shortname: Interspeech 2027
-  submittedPapers: 1990
+  shortname: InterSpeech 2027
   tags: *id001
   timeline:
-  - deadline: '2027-03-03T11:59:59Z'
-  title: Interspeech
+  - deadline: '2027-02-10T11:59:59Z'
+  title: Conference of the International Speech Communication Association
+  website: https://interspeech2027.org/
 interspeech2028:
-  acceptanceRate: 48.39
-  acceptanceRateYear: 2021
-  acceptedPapers: 963
-  conferenceEndDate: '2028-10-01'
-  conferenceStartDate: '2028-09-26'
+  conferenceEndDate: '2028-09-03'
+  conferenceStartDate: '2028-08-29'
   dataSrc: estimate
   id: interspeech2028
   isApproximateDeadline: true
   rating: A
-  shortname: Interspeech 2028
-  submittedPapers: 1990
+  shortname: InterSpeech 2028
   tags: *id001
   timeline:
-  - deadline: '2028-02-26T11:59:59Z'
-  title: Interspeech
+  - deadline: '2028-02-10T11:59:59Z'
+  title: Conference of the International Speech Communication Association

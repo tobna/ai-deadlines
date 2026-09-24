@@ -113,40 +113,29 @@ sigir2026:
     Retrieval
   website: https://sigir2026.org/en-AU
 sigir2027:
-  acceptanceRate: 18.41
-  acceptanceRateYear: 2026
-  acceptedPapers: 234
-  conferenceEndDate: '2027-07-25'
-  conferenceStartDate: '2027-07-20'
-  dataSrc: estimate
+  conferenceEndDate: '2027-07-24'
+  conferenceStartDate: '2027-07-18'
+  dataSrc: ccf-deadlines
   id: sigir2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: SIGIR 2027
-  submittedPapers: 1271
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-01-16T11:59:59Z'
-    deadline: '2027-01-23T11:59:59Z'
-    note: 'From SIGIR 2026: Full research paper submission deadline'
-  title: International ACM SIGIR Conference on Research and Development in Information
-    Retrieval
+  - abstractDeadline: '2027-01-15T11:59:59Z'
+    deadline: '2027-01-22T11:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval
+  website: https://sigir2027.org/
 sigir2028:
-  acceptanceRate: 18.41
-  acceptanceRateYear: 2026
-  acceptedPapers: 234
-  conferenceEndDate: '2028-07-24'
-  conferenceStartDate: '2028-07-19'
+  conferenceEndDate: '2028-07-23'
+  conferenceStartDate: '2028-07-18'
   dataSrc: estimate
   id: sigir2028
   isApproximateDeadline: true
   rating: A*
   shortname: SIGIR 2028
-  submittedPapers: 1271
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-01-16T11:59:59Z'
-    deadline: '2028-01-23T11:59:59Z'
-    note: 'From SIGIR 2026: Full research paper submission deadline'
-  title: International ACM SIGIR Conference on Research and Development in Information
-    Retrieval
+  - abstractDeadline: '2028-01-15T11:59:59Z'
+    deadline: '2028-01-22T11:59:59Z'
+  title: International Conference on Research on Development in Information Retrieval

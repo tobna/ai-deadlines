@@ -30,24 +30,25 @@ bis2026:
   title: International Conference on Business Information Systems
   website: https://bisconf.org/2026
 bis2027:
-  conferenceEndDate: '2027-06-15'
-  conferenceStartDate: '2027-06-10'
-  dataSrc: estimate
+  conferenceEndDate: '2027-06-25'
+  conferenceStartDate: '2027-06-23'
+  dataSrc: ccf-deadlines
   id: bis2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   shortname: BIS 2027
   tags: *id001
   timeline:
-  - deadline: '2027-01-16T11:59:00Z'
+  - deadline: '2027-01-12T11:59:59Z'
   title: International Conference on Business Information Systems
+  website: https://bisconf.org/2027/
 bis2028:
-  conferenceEndDate: '2028-06-14'
-  conferenceStartDate: '2028-06-09'
+  conferenceEndDate: '2028-06-28'
+  conferenceStartDate: '2028-06-23'
   dataSrc: estimate
   id: bis2028
   isApproximateDeadline: true
   shortname: BIS 2028
   tags: *id001
   timeline:
-  - deadline: '2028-01-16T11:59:59Z'
+  - deadline: '2028-01-12T11:59:59Z'
   title: International Conference on Business Information Systems
