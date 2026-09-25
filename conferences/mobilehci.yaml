@@ -7,10 +7,24 @@ mobilehci2025:
   location: Sharm El-Sheikh, Egypt
   rating: B
   shortname: MobileHCI 2025
-  tags:
+  tags: &id001
   - HCI
   timeline:
   - deadline: '2025-06-12T12:00:00Z'
     note: Late-Breaking Work
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2025/index.php
+mobilehci2027:
+  conferenceEndDate: '2027-09-23'
+  conferenceStartDate: '2027-09-20'
+  dataSrc: ccf-deadlines
+  id: mobilehci2027
+  isApproximateDeadline: false
+  rating: B
+  shortname: MobileHCI 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-02-11T11:59:59Z'
+    deadline: '2027-02-18T11:59:59Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  website: https://mobilehci.acm.org/2027/
