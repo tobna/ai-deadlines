@@ -2,8 +2,8 @@ cikm2020:
   acceptanceRate: 23.32
   acceptanceRateYear: 2020
   acceptedPapers: 274
-  conferenceEndDate: '2021-10-23'
-  conferenceStartDate: '2021-10-19'
+  conferenceEndDate: '2020-10-23'
+  conferenceStartDate: '2020-10-19'
   dataSrc: ccf-deadlines
   id: cikm2020
   isApproximateDeadline: false
