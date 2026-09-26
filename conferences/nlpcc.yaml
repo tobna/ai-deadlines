@@ -1,16 +1,41 @@
+nlpcc2023:
+  conferenceEndDate: '2023-10-15'
+  conferenceStartDate: '2023-10-12'
+  dataSrc: ccf-deadlines
+  id: nlpcc2023
+  isApproximateDeadline: false
+  shortname: NLPCC 2023
+  tags: &id001
+  - NLP
+  timeline:
+  - deadline: '2023-05-19T11:59:00Z'
+    note: English and Chinese papers; extended deadline
+  title: CCF International Conference on Natural Language Processing and Chinese Computing
+  website: http://tcci.ccf.org.cn/conference/2023/index.php
+nlpcc2024:
+  conferenceEndDate: '2024-11-03'
+  conferenceStartDate: '2024-11-01'
+  dataSrc: ccf-deadlines
+  id: nlpcc2024
+  isApproximateDeadline: false
+  shortname: NLPCC 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-06-12T11:59:00Z'
+  title: CCF International Conference on Natural Language Processing and Chinese Computing
+  website: http://tcci.ccf.org.cn/conference/2024/index.php
 nlpcc2025:
   acceptanceRate: 30.1
   acceptanceRateYear: 2025
   acceptedPapers: 152
-  conferenceEndDate: '2025-08-10'
-  conferenceStartDate: '2025-08-08'
+  conferenceEndDate: '2025-08-09'
+  conferenceStartDate: '2025-08-07'
   dataSrc: ccf-deadlines
   id: nlpcc2025
   isApproximateDeadline: false
   shortname: NLPCC 2025
   submittedPapers: 505
-  tags: &id001
-  - NLP
+  tags: *id001
   timeline:
   - deadline: '2025-04-21T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
@@ -32,32 +57,24 @@ nlpcc2026:
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2026/
 nlpcc2027:
-  acceptanceRate: 30.1
-  acceptanceRateYear: 2025
-  acceptedPapers: 152
   conferenceEndDate: '2027-11-08'
   conferenceStartDate: '2027-11-03'
   dataSrc: estimate
   id: nlpcc2027
   isApproximateDeadline: true
   shortname: NLPCC 2027
-  submittedPapers: 505
   tags: *id001
   timeline:
-  - deadline: '2027-05-26T23:59:59Z'
+  - deadline: '2027-06-21T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
 nlpcc2028:
-  acceptanceRate: 30.1
-  acceptanceRateYear: 2025
-  acceptedPapers: 152
-  conferenceEndDate: '2028-11-07'
-  conferenceStartDate: '2028-11-02'
+  conferenceEndDate: '2028-11-08'
+  conferenceStartDate: '2028-11-03'
   dataSrc: estimate
   id: nlpcc2028
   isApproximateDeadline: true
   shortname: NLPCC 2028
-  submittedPapers: 505
   tags: *id001
   timeline:
-  - deadline: '2028-05-25T23:59:59Z'
+  - deadline: '2028-06-21T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing

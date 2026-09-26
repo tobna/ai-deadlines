@@ -8,10 +8,11 @@ log2025:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2025-08-23T11:59:59Z'
-    deadline: '2025-08-30T11:59:59Z'
+  - deadline: '2025-08-30T11:59:59Z'
+    note: 'Regular papers: abstract August 24, 2025 (AoE), exact abstract time unverified;
+      existing paper time still needs primary confirmation'
   title: Learning on Graphs Conference
-  website: https://logconference.org/
+  website: https://log2025.logconference.org/
 log2026:
   conferenceEndDate: '2026-11-22'
   conferenceStartDate: '2026-11-20'

@@ -1,4 +1,6 @@
 wacv2021:
+  conferenceEndDate: '2021-01-09'
+  conferenceStartDate: '2021-01-05'
   dataSrc: off-website
   h5Index: 131
   id: wacv2021
@@ -19,6 +21,8 @@ wacv2023:
   acceptanceRate: 40.65
   acceptanceRateYear: 2023
   acceptedPapers: 641
+  conferenceEndDate: '2023-01-07'
+  conferenceStartDate: '2023-01-03'
   dataSrc: off-website
   h5Index: 131
   id: wacv2023
@@ -38,6 +42,8 @@ wacv2024:
   acceptanceRate: 41.41
   acceptanceRateYear: 2024
   acceptedPapers: 846
+  conferenceEndDate: '2024-01-08'
+  conferenceStartDate: '2024-01-04'
   dataSrc: off-website
   h5Index: 131
   id: wacv2024

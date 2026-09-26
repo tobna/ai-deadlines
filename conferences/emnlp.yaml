@@ -1,3 +1,22 @@
+emnlp2021:
+  conferenceEndDate: '2021-11-11'
+  conferenceStartDate: '2021-11-07'
+  dataSrc: ccf-deadlines
+  h5Index: 218
+  id: emnlp2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: EMNLP 2021
+  tags: &id001
+  - NLP
+  timeline:
+  - deadline: '2021-05-16T11:59:00Z'
+    note: ARR pilot submission; reviews must be ready by July 29
+  - abstractDeadline: '2021-05-11T11:59:00Z'
+    deadline: '2021-05-18T11:59:00Z'
+    note: Direct submission
+  title: The annual Conference on Empirical Methods in Natural Language Processing
+  website: https://2021.emnlp.org/
 emnlp2022:
   acceptanceRate: 19.79
   acceptanceRateYear: 2022
@@ -11,11 +30,13 @@ emnlp2022:
   rating: A*
   shortname: EMNLP 2022
   submittedPapers: 4190
-  tags: &id001
-  - NLP
+  tags: *id001
   timeline:
   - abstractDeadline: '2022-06-18T11:59:59Z'
     deadline: '2022-06-25T11:59:59Z'
+    note: Direct submission
+  - deadline: '2022-07-25T11:59:00Z'
+    note: Commitment deadline for papers reviewed by ARR
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2022.emnlp.org
 emnlp2023:
@@ -35,6 +56,9 @@ emnlp2023:
   timeline:
   - abstractDeadline: '2023-06-17T11:59:59Z'
     deadline: '2023-06-24T11:59:59Z'
+    note: Direct submission
+  - deadline: '2023-08-23T11:59:00Z'
+    note: Commitment deadline for papers reviewed by ARR
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2023.emnlp.org
 emnlp2024:
@@ -53,6 +77,9 @@ emnlp2024:
   tags: *id001
   timeline:
   - deadline: '2024-06-16T11:59:59Z'
+    note: ARR Submission
+  - deadline: '2024-08-21T11:59:00Z'
+    note: Commitment deadline for papers reviewed by ARR
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2024.emnlp.org
 emnlp2025:
@@ -96,9 +123,6 @@ emnlp2026:
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2026.emnlp.org/
 emnlp2027:
-  acceptanceRate: 22.16
-  acceptanceRateYear: 2025
-  acceptedPapers: 1811
   conferenceEndDate: '2027-10-29'
   conferenceStartDate: '2027-10-24'
   dataSrc: estimate
@@ -107,25 +131,22 @@ emnlp2027:
   isApproximateDeadline: true
   rating: A*
   shortname: EMNLP 2027
-  submittedPapers: 8174
   tags: *id001
   timeline:
-  - deadline: '2027-05-20T11:59:59Z'
+  - deadline: '2027-05-26T11:59:59Z'
+    note: 'From EMNLP 2026: Paper submission deadline'
   title: The annual Conference on Empirical Methods in Natural Language Processing
 emnlp2028:
-  acceptanceRate: 22.16
-  acceptanceRateYear: 2025
-  acceptedPapers: 1811
-  conferenceEndDate: '2028-10-28'
-  conferenceStartDate: '2028-10-23'
+  conferenceEndDate: '2028-10-29'
+  conferenceStartDate: '2028-10-24'
   dataSrc: estimate
   h5Index: 218
   id: emnlp2028
   isApproximateDeadline: true
   rating: A*
   shortname: EMNLP 2028
-  submittedPapers: 8174
   tags: *id001
   timeline:
-  - deadline: '2028-05-19T11:59:59Z'
+  - deadline: '2028-05-26T11:59:59Z'
+    note: 'From EMNLP 2026: Paper submission deadline'
   title: The annual Conference on Empirical Methods in Natural Language Processing

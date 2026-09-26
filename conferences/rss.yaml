@@ -11,7 +11,7 @@ rss2023:
   timeline:
   - deadline: '2023-02-04T11:59:59Z'
   title: Robotics Science and Systems
-  website: https://roboticsconference.org/
+  website: https://roboticsconference.org/2023/
 rss2024:
   conferenceEndDate: '2024-07-19'
   conferenceStartDate: '2024-07-15'
@@ -23,7 +23,7 @@ rss2024:
   timeline:
   - deadline: '2024-02-03T11:59:00Z'
   title: Robotics Science and Systems
-  website: https://roboticsconference.org/
+  website: https://roboticsconference.org/2024/
 rss2025:
   conferenceEndDate: '2025-06-25'
   conferenceStartDate: '2025-06-21'
@@ -58,25 +58,27 @@ rss2026:
   title: Robotics Science and Systems
   website: https://roboticsconference.org
 rss2027:
-  conferenceEndDate: '2027-07-18'
-  conferenceStartDate: '2027-07-13'
-  dataSrc: estimate
+  conferenceEndDate: '2027-07-11'
+  conferenceStartDate: '2027-07-06'
+  dataSrc: ccf-deadlines
   id: rss2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   shortname: RSS 2027
   tags: *id001
   timeline:
-  - deadline: '2027-01-31T22:59:59Z'
+  - deadline: '2026-12-05T11:59:00Z'
+    note: 'Stage 1: initial 6-page extended abstract submission'
   title: Robotics Science and Systems
+  website: https://roboticsconference.org/
 rss2028:
-  conferenceEndDate: '2028-07-17'
-  conferenceStartDate: '2028-07-12'
+  conferenceEndDate: '2028-07-11'
+  conferenceStartDate: '2028-07-06'
   dataSrc: estimate
   id: rss2028
   isApproximateDeadline: true
   shortname: RSS 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-01-24T11:59:59Z'
-    deadline: '2028-01-31T11:59:59Z'
+  - deadline: '2027-12-05T11:59:00Z'
+    note: 'From RSS 2027: Stage 1: initial 6-page extended abstract submission'
   title: Robotics Science and Systems

@@ -73,9 +73,7 @@ dai2026:
   tags: *id001
   timeline:
   - deadline: '2026-08-04T11:59:59Z'
-    note: Research / Industry Track
-  - deadline: '2026-08-11T11:59:59Z'
-    note: AI Paper Track
+    note: Regular research papers
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2026/index.html
 dai2027:

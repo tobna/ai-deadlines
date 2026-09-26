@@ -2,8 +2,8 @@ coling2022:
   acceptanceRate: 33.4
   acceptanceRateYear: 2022
   acceptedPapers: 522
-  conferenceEndDate: '2022-06-17'
-  conferenceStartDate: '2022-06-12'
+  conferenceEndDate: '2022-10-17'
+  conferenceStartDate: '2022-10-12'
   dataSrc: ccf-deadlines
   h5Index: 81
   id: coling2022
@@ -33,8 +33,8 @@ coling2024:
   submittedPapers: 3471
   tags: *id001
   timeline:
-  - deadline: '2023-10-22T11:59:59Z'
-    note: Long, short and position papers due
+  - deadline: '2023-10-21T11:59:59Z'
+    note: Regular full papers due
   title: International Conference on Computational Linguistics
   website: https://lrec-coling-2024.lrec-conf.org/
 coling2025:
@@ -75,6 +75,8 @@ coling2027:
   timeline:
   - deadline: '2026-10-13T11:59:59Z'
     note: ARR Submission
+  - deadline: '2026-12-24T11:59:59Z'
+    note: COLING commitment after ARR meta-reviews; reviewed papers only
   title: International Conference on Computational Linguistics
   website: https://2027.coling-iccl.org/
 coling2028:

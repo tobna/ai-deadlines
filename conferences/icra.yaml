@@ -16,9 +16,9 @@ icra2022:
   - ML
   - RO
   timeline:
-  - deadline: '2021-09-15T14:59:00Z'
+  - deadline: '2021-09-16T11:59:00Z'
   title: IEEE International Conference on Robotics and Automation
-  website: https://www.icra2022.org/
+  website: https://ewh.ieee.org/soc/ras/conf/fullysponsored/icra/2022/icra2022.org/
 icra2023:
   acceptanceRate: 43.04
   acceptanceRateYear: 2023
@@ -36,7 +36,7 @@ icra2023:
   timeline:
   - deadline: '2022-09-16T11:59:59Z'
   title: IEEE International Conference on Robotics and Automation
-  website: https://www.icra2023.org/
+  website: https://ewh.ieee.org/soc/ras/conf/fullysponsored/icra/ICRA%202023/www.icra2023.org/
 icra2024:
   acceptanceRate: 44.7
   acceptanceRateYear: 2024

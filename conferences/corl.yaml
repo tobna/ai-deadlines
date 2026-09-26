@@ -1,3 +1,19 @@
+corl2021:
+  conferenceEndDate: '2021-11-11'
+  conferenceStartDate: '2021-11-08'
+  dataSrc: ccf-deadlines
+  h5Index: 76
+  id: corl2021
+  isApproximateDeadline: false
+  shortname: CoRL 2021
+  tags: &id001
+  - ML
+  - RO
+  timeline:
+  - deadline: '2021-06-19T11:59:59Z'
+    note: Regular Papers
+  title: The Conference on Robot Learning
+  website: https://2021.corl.org/
 corl2024:
   conferenceEndDate: '2024-11-09'
   conferenceStartDate: '2024-11-06'
@@ -6,9 +22,7 @@ corl2024:
   id: corl2024
   isApproximateDeadline: false
   shortname: CoRL 2024
-  tags: &id001
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2024-06-07T11:59:59Z'
   title: The Conference on Robot Learning
@@ -46,21 +60,9 @@ corl2026:
   timezone: America/Los_Angeles
   title: The Conference on Robot Learning
   website: https://www.corl.org/
-corl2027:
-  conferenceEndDate: '2027-10-02'
-  conferenceStartDate: '2027-09-27'
-  dataSrc: estimate
-  h5Index: 76
-  id: corl2027
-  isApproximateDeadline: true
-  shortname: CoRL 2027
-  tags: *id001
-  timeline:
-  - deadline: '2027-04-23T23:59:59Z'
-  title: The Conference on Robot Learning
 corl2028:
-  conferenceEndDate: '2028-10-01'
-  conferenceStartDate: '2028-09-26'
+  conferenceEndDate: '2028-11-14'
+  conferenceStartDate: '2028-11-09'
   dataSrc: estimate
   h5Index: 76
   id: corl2028
@@ -68,5 +70,7 @@ corl2028:
   shortname: CoRL 2028
   tags: *id001
   timeline:
-  - deadline: '2028-04-22T23:59:59Z'
+  - abstractDeadline: '2028-05-26T11:59:00Z'
+    deadline: '2028-05-29T11:59:00Z'
+    note: 'From CoRL 2026: Paper submission deadline'
   title: The Conference on Robot Learning
