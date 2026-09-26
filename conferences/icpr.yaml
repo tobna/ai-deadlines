@@ -10,7 +10,11 @@ icpr2024:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2024-04-11T11:59:59Z'
+  - abstractDeadline: '2024-04-11T11:59:59Z'
+    deadline: '2024-04-18T11:59:59Z'
+    note: First round
+  - deadline: '2024-07-09T11:59:59Z'
+    note: Second round (new papers; no separate abstract deadline)
   title: International Conference on Pattern Recognition
   website: https://icpr2024.org/
 icpr2026:

@@ -68,7 +68,7 @@ sigir2024:
   submittedPapers: 791
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-01-20T11:59:59Z'
+  - abstractDeadline: '2024-01-19T11:59:59Z'
     deadline: '2024-01-26T11:59:59Z'
   title: International Conference on Research on Development in Information Retrieval
   website: https://sigir-2024.github.io/index.html
