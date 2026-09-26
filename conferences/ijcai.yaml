@@ -1,3 +1,19 @@
+ijcai2021:
+  conferenceEndDate: '2021-08-26'
+  conferenceStartDate: '2021-08-19'
+  dataSrc: ccf-deadlines
+  h5Index: 136
+  id: ijcai2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: IJCAI 2021
+  tags: &id001
+  - ML
+  timeline:
+  - abstractDeadline: '2021-01-14T11:59:00Z'
+    deadline: '2021-01-21T11:59:00Z'
+  title: International Joint Conference on Artificial Intelligence
+  website: https://ijcai-21.org/
 ijcai2022:
   acceptanceRate: 14.97
   acceptanceRateYear: 2022
@@ -11,10 +27,12 @@ ijcai2022:
   rating: A*
   shortname: IJCAI 2022
   submittedPapers: 4537
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
-  - deadline: '2022-01-15T11:59:59Z'
+  - abstractDeadline: '2022-01-09T00:59:00Z'
+    deadline: '2022-01-15T11:59:59Z'
+    note: 'Abstract: January 7, 23:59 AoE (UTC-12), converted to CET (UTC+1); full
+      paper: January 14, 23:59 CET'
   title: International Joint Conference on Artificial Intelligence
   website: https://ijcai-22.org
 ijcai2023:
@@ -100,9 +118,6 @@ ijcai2026:
   title: International Joint Conference on Artificial Intelligence
   website: https://2026.ijcai.org/
 ijcai2027:
-  acceptanceRate: 13.63
-  acceptanceRateYear: 2026
-  acceptedPapers: 713
   conferenceEndDate: '2027-08-20'
   conferenceStartDate: '2027-08-15'
   dataSrc: estimate
@@ -111,27 +126,24 @@ ijcai2027:
   isApproximateDeadline: true
   rating: A*
   shortname: IJCAI 2027
-  submittedPapers: 5233
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-01-12T23:59:59Z'
-    deadline: '2027-01-19T23:59:59Z'
+  - abstractDeadline: '2027-01-13T11:59:59Z'
+    deadline: '2027-01-20T11:59:59Z'
+    note: 'From IJCAI 2026: Full paper submission deadline'
   title: International Joint Conference on Artificial Intelligence
 ijcai2028:
-  acceptanceRate: 13.63
-  acceptanceRateYear: 2026
-  acceptedPapers: 713
-  conferenceEndDate: '2028-08-19'
-  conferenceStartDate: '2028-08-14'
+  conferenceEndDate: '2028-08-20'
+  conferenceStartDate: '2028-08-15'
   dataSrc: estimate
   h5Index: 136
   id: ijcai2028
   isApproximateDeadline: true
   rating: A*
   shortname: IJCAI 2028
-  submittedPapers: 5233
   tags: *id001
   timeline:
   - abstractDeadline: '2028-01-13T11:59:59Z'
     deadline: '2028-01-20T11:59:59Z'
+    note: 'From IJCAI 2026: Full paper submission deadline'
   title: International Joint Conference on Artificial Intelligence

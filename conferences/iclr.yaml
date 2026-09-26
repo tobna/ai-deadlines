@@ -1,3 +1,24 @@
+iclr2021:
+  conferenceEndDate: '2021-05-07'
+  conferenceStartDate: '2021-05-03'
+  dataSrc: ccf-deadlines
+  h5Index: 362
+  id: iclr2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICLR 2021
+  tags: &id001
+  - CV
+  - DM
+  - ML
+  - NLP
+  - RO
+  - SP
+  timeline:
+  - abstractDeadline: '2020-09-28T20:00:00Z'
+    deadline: '2020-10-02T20:00:00Z'
+  title: International Conference on Learning Representations
+  website: https://iclr.cc/Conferences/2021
 iclr2022:
   acceptanceRate: 32.29
   acceptanceRateYear: 2022
@@ -11,17 +32,11 @@ iclr2022:
   rating: A*
   shortname: ICLR 2022
   submittedPapers: 3391
-  tags: &id001
-  - CV
-  - DM
-  - ML
-  - NLP
-  - RO
-  - SP
+  tags: *id001
   timeline:
-  - abstractDeadline: '2021-09-30T00:00:00Z'
-    deadline: '2021-10-22T00:00:00Z'
-    note: Mandatory abstract deadline on Sep 29, 2021.
+  - abstractDeadline: '2021-09-29T05:00:00Z'
+    deadline: '2021-10-06T05:00:00Z'
+    note: Mandatory abstract deadline; both deadlines at 17:00 PDT (UTC-7).
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2022
 iclr2023:
@@ -41,7 +56,7 @@ iclr2023:
   timeline:
   - abstractDeadline: '2022-09-22T11:59:59Z'
     deadline: '2022-09-29T11:59:59Z'
-    note: Mandatory abstract deadline on Sep. 11, 2022.
+    note: Mandatory abstract deadline on Sep. 21, 2022.
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2023
 iclr2024:
@@ -59,9 +74,9 @@ iclr2024:
   submittedPapers: 7304
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-09-22T11:59:59Z'
+  - abstractDeadline: '2023-09-24T11:59:59Z'
     deadline: '2023-09-29T11:59:59Z'
-    note: Mandatory abstract deadline on Sep. 21, 2023.
+    note: Mandatory abstract deadline extended to Sep. 23, 2023.
   title: International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2024
 iclr2025:
@@ -130,20 +145,17 @@ iclr2027:
   title: The Fifteenth International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2027
 iclr2028:
-  acceptanceRate: 28.18
-  acceptanceRateYear: 2026
-  acceptedPapers: 5339
-  conferenceEndDate: '2028-05-02'
-  conferenceStartDate: '2028-04-27'
+  conferenceEndDate: '2028-05-01'
+  conferenceStartDate: '2028-04-26'
   dataSrc: estimate
   h5Index: 362
   id: iclr2028
   isApproximateDeadline: true
   rating: A*
   shortname: ICLR 2028
-  submittedPapers: 18949
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-09-12T11:59:59Z'
-    deadline: '2027-09-17T11:59:59Z'
-  title: International Conference on Learning Representations
+  - abstractDeadline: '2027-09-19T11:59:59Z'
+    deadline: '2027-09-26T11:59:59Z'
+    note: 'From ICLR 2027: Paper Submission'
+  title: The Fifteenth International Conference on Learning Representations

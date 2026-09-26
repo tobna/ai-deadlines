@@ -27,7 +27,7 @@ pricai2025:
   website: https://www.pricai.org/2025/
 pricai2026:
   conferenceEndDate: '2026-11-20'
-  conferenceStartDate: '2026-11-17'
+  conferenceStartDate: '2026-11-16'
   dataSrc: ccf-deadlines
   id: pricai2026
   isApproximateDeadline: false

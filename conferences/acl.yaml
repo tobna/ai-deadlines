@@ -1,3 +1,20 @@
+acl2021:
+  conferenceEndDate: '2021-08-06'
+  conferenceStartDate: '2021-08-01'
+  dataSrc: ccf-deadlines
+  h5Index: 236
+  id: acl2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ACL 2021
+  tags: &id001
+  - NLP
+  timeline:
+  - abstractDeadline: '2021-01-26T11:59:59Z'
+    deadline: '2021-02-03T11:59:59Z'
+    note: ACL-IJCNLP 2021; extended full-paper deadline
+  title: Annual Meeting of the Association for Computational Linguistics
+  website: https://2021.aclweb.org/
 acl2022:
   acceptanceRate: 20.75
   acceptanceRateYear: 2022
@@ -11,15 +28,14 @@ acl2022:
   rating: A*
   shortname: ACL 2022
   submittedPapers: 3378
-  tags: &id001
-  - NLP
+  tags: *id001
   timeline:
   - deadline: '2021-09-16T11:59:59Z'
   - deadline: '2021-10-16T11:59:59Z'
   - deadline: '2021-11-16T11:59:59Z'
-    note: final submission deadline
+    note: 'Final ARR submission deadline; ACL commitment deadline: January 15, 2022.'
   title: Annual Meeting of the Association for Computational Linguistics
-  website: https://www.2022.aclweb.org/
+  website: https://2022.aclweb.org/
 acl2023:
   acceptanceRate: 22.08
   acceptanceRateYear: 2023
@@ -35,8 +51,11 @@ acl2023:
   submittedPapers: 4864
   tags: *id001
   timeline:
+  - deadline: '2022-12-16T11:59:59Z'
+    note: ARR submission
   - abstractDeadline: '2023-01-14T11:59:59Z'
     deadline: '2023-01-21T11:59:59Z'
+    note: 'Direct submission; ARR commitment deadline: March 17, 2023.'
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2023.aclweb.org/
 acl2024:
@@ -55,6 +74,7 @@ acl2024:
   tags: *id001
   timeline:
   - deadline: '2024-02-16T11:59:59Z'
+    note: 'ARR submission; ACL commitment deadline: April 20, 2024.'
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2024.aclweb.org/
 acl2025:
@@ -100,9 +120,6 @@ acl2026:
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2026.aclweb.org/
 acl2027:
-  acceptanceRate: 18.91
-  acceptanceRateYear: 2026
-  acceptedPapers: 2297
   conferenceEndDate: '2027-07-07'
   conferenceStartDate: '2027-07-02'
   dataSrc: estimate
@@ -111,25 +128,22 @@ acl2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ACL 2027
-  submittedPapers: 12148
   tags: *id001
   timeline:
-  - deadline: '2027-01-05T23:59:59Z'
+  - deadline: '2027-01-06T11:59:59Z'
+    note: 'From ACL 2026: Paper submission deadline'
   title: Annual Meeting of the Association for Computational Linguistics
 acl2028:
-  acceptanceRate: 18.91
-  acceptanceRateYear: 2026
-  acceptedPapers: 2297
-  conferenceEndDate: '2028-07-06'
-  conferenceStartDate: '2028-07-01'
+  conferenceEndDate: '2028-07-07'
+  conferenceStartDate: '2028-07-02'
   dataSrc: estimate
   h5Index: 236
   id: acl2028
   isApproximateDeadline: true
   rating: A*
   shortname: ACL 2028
-  submittedPapers: 12148
   tags: *id001
   timeline:
   - deadline: '2028-01-06T11:59:59Z'
+    note: 'From ACL 2026: Paper submission deadline'
   title: Annual Meeting of the Association for Computational Linguistics

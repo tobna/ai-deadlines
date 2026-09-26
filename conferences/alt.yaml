@@ -1,3 +1,18 @@
+alt2021:
+  conferenceEndDate: '2021-03-19'
+  conferenceStartDate: '2021-03-16'
+  dataSrc: ccf-deadlines
+  id: alt2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: ALT 2021
+  tags: &id001
+  - ML
+  timeline:
+  - deadline: '2020-10-01T05:00:00Z'
+    note: Official CFP and submission instructions specify 5:00 PM EST (UTC-5)
+  title: International Conference on Algorithmic Learning Theory
+  website: https://algorithmiclearningtheory.org/alt2021/
 alt2024:
   conferenceEndDate: '2024-02-28'
   conferenceStartDate: '2024-02-25'
@@ -6,8 +21,7 @@ alt2024:
   isApproximateDeadline: false
   rating: B
   shortname: ALT 2024
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-09-27T11:59:59Z'
     deadline: '2023-09-27T11:59:59Z'
@@ -57,15 +71,3 @@ alt2027:
   - deadline: '2026-10-13T11:59:59Z'
   title: International Conference on Algorithmic Learning Theory
   website: https://algorithmiclearningtheory.org/alt2027/
-alt2028:
-  conferenceEndDate: '2028-03-14'
-  conferenceStartDate: '2028-03-09'
-  dataSrc: estimate
-  id: alt2028
-  isApproximateDeadline: true
-  rating: B
-  shortname: ALT 2028
-  tags: *id001
-  timeline:
-  - deadline: '2027-10-13T11:59:59Z'
-  title: International Conference on Algorithmic Learning Theory

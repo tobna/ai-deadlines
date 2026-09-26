@@ -1,3 +1,63 @@
+conll2021:
+  conferenceEndDate: '2021-11-11'
+  conferenceStartDate: '2021-11-10'
+  dataSrc: ccf-deadlines
+  h5Index: 30
+  id: conll2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: CoNLL 2021
+  tags: &id001
+  - NLP
+  timeline:
+  - deadline: '2021-06-15T11:59:00Z'
+  title: Conference on Computational Natural Language Learning
+  website: https://www.conll.org/2021
+conll2022:
+  conferenceEndDate: '2022-12-08'
+  conferenceStartDate: '2022-12-07'
+  dataSrc: ccf-deadlines
+  h5Index: 30
+  id: conll2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: CoNLL 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-07-01T11:59:00Z'
+    note: 'Direct submissions; ARR commitment deadline: August 1, 2022, 23:59 UTC-12'
+  title: Conference on Computational Natural Language Learning
+  website: https://www.conll.org/2022
+conll2023:
+  conferenceEndDate: '2023-12-07'
+  conferenceStartDate: '2023-12-06'
+  dataSrc: ccf-deadlines
+  h5Index: 30
+  id: conll2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: CoNLL 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-07-01T11:59:00Z'
+  title: Conference on Computational Natural Language Learning
+  website: https://www.conll.org/2023
+conll2024:
+  conferenceEndDate: '2024-11-16'
+  conferenceStartDate: '2024-11-15'
+  dataSrc: ccf-deadlines
+  h5Index: 30
+  id: conll2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: CoNLL 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-07-08T11:59:00Z'
+    note: 'Direct submissions (extended); ARR commitment deadline: August 30, 2024,
+      23:59 UTC-12'
+  title: Conference on Computational Natural Language Learning
+  website: https://www.conll.org/2024
 conll2025:
   acceptanceRate: 23.35
   acceptanceRateYear: 2020
@@ -12,8 +72,7 @@ conll2025:
   rating: B
   shortname: CoNLL 2025
   submittedPapers: 227
-  tags: &id001
-  - NLP
+  tags: *id001
   timeline:
   - deadline: '2025-03-15T11:59:59Z'
     note: Paper submission deadline
@@ -42,9 +101,6 @@ conll2026:
   title: The SIGNLL Conference on Computational Natural Language Learning
   website: https://conll.org/
 conll2027:
-  acceptanceRate: 23.35
-  acceptanceRateYear: 2020
-  acceptedPapers: 53
   conferenceEndDate: '2027-07-08'
   conferenceStartDate: '2027-07-03'
   dataSrc: estimate
@@ -53,25 +109,22 @@ conll2027:
   isApproximateDeadline: true
   rating: B
   shortname: CoNLL 2027
-  submittedPapers: 227
   tags: *id001
   timeline:
   - deadline: '2027-02-20T11:59:59Z'
+    note: 'From CoNLL 2026: Paper submission deadline'
   title: The SIGNLL Conference on Computational Natural Language Learning
 conll2028:
-  acceptanceRate: 23.35
-  acceptanceRateYear: 2020
-  acceptedPapers: 53
-  conferenceEndDate: '2028-07-07'
-  conferenceStartDate: '2028-07-02'
+  conferenceEndDate: '2028-07-08'
+  conferenceStartDate: '2028-07-03'
   dataSrc: estimate
   h5Index: 30
   id: conll2028
   isApproximateDeadline: true
   rating: B
   shortname: CoNLL 2028
-  submittedPapers: 227
   tags: *id001
   timeline:
   - deadline: '2028-02-20T11:59:59Z'
+    note: 'From CoNLL 2026: Paper submission deadline'
   title: The SIGNLL Conference on Computational Natural Language Learning

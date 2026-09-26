@@ -1,3 +1,18 @@
+iros2022:
+  conferenceEndDate: '2022-10-27'
+  conferenceStartDate: '2022-10-23'
+  dataSrc: ccf-deadlines
+  h5Index: 86
+  id: iros2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: IROS 2022
+  tags: &id001
+  - RO
+  timeline:
+  - deadline: '2022-03-02T11:59:00Z'
+  title: IEEE/RSJ International Conference on Intelligent Robots and Systems
+  website: https://iros2022.org/
 iros2023:
   conferenceEndDate: '2023-10-05'
   conferenceStartDate: '2023-10-01'
@@ -7,8 +22,7 @@ iros2023:
   isApproximateDeadline: false
   rating: A
   shortname: IROS 2023
-  tags: &id001
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2023-03-02T11:59:59Z'
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
@@ -64,26 +78,34 @@ iros2026:
   title: IEEE\RSJ International Conference on Intelligent Robots and Systems
   website: https://2026.ieee-iros.org/
 iros2027:
-  conferenceEndDate: '2027-10-24'
-  conferenceStartDate: '2027-10-19'
+  conferenceEndDate: '2027-10-02'
+  conferenceStartDate: '2027-09-27'
   dataSrc: estimate
   h5Index: 86
   id: iros2027
   isApproximateDeadline: true
   rating: A
-  shortname: iROS 2027
+  shortname: IROS 2027
   tags: *id001
   timeline:
-  - deadline: '2027-03-01T23:59:59Z'
+  - deadline: '2027-03-03T11:59:59Z'
+    note: 'From IROS 2026: Paper submission deadline'
+  - deadline: '2027-03-08T11:59:59Z'
+    note: 'From IROS 2026: Paper video submission deadline'
+  title: IEEE\RSJ International Conference on Intelligent Robots and Systems
 iros2028:
-  conferenceEndDate: '2028-10-23'
-  conferenceStartDate: '2028-10-18'
+  conferenceEndDate: '2028-10-02'
+  conferenceStartDate: '2028-09-27'
   dataSrc: estimate
   h5Index: 86
   id: iros2028
   isApproximateDeadline: true
   rating: A
-  shortname: iROS 2028
+  shortname: IROS 2028
   tags: *id001
   timeline:
-  - deadline: '2028-02-29T23:59:59Z'
+  - deadline: '2028-03-03T11:59:59Z'
+    note: 'From IROS 2026: Paper submission deadline'
+  - deadline: '2028-03-08T11:59:59Z'
+    note: 'From IROS 2026: Paper video submission deadline'
+  title: IEEE\RSJ International Conference on Intelligent Robots and Systems

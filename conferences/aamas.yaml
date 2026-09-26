@@ -1,3 +1,33 @@
+aamas2021:
+  conferenceEndDate: '2021-05-07'
+  conferenceStartDate: '2021-05-03'
+  dataSrc: ccf-deadlines
+  id: aamas2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: AAMAS 2021
+  tags: &id001
+  - ML
+  - RO
+  timeline:
+  - abstractDeadline: '2020-10-03T11:59:59Z'
+    deadline: '2020-10-10T11:59:59Z'
+  title: International Conference on Autonomous Agents and Multiagent Systems
+  website: https://www.ifaamas.org/AAMAS/aamas2021/
+aamas2022:
+  conferenceEndDate: '2022-05-13'
+  conferenceStartDate: '2022-05-09'
+  dataSrc: ccf-deadlines
+  id: aamas2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: AAMAS 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2021-10-02T11:59:59Z'
+    deadline: '2021-10-09T11:59:59Z'
+  title: International Conference on Autonomous Agents and Multiagent Systems
+  website: https://aamas2022-conference.auckland.ac.nz/
 aamas2023:
   conferenceEndDate: '2023-06-02'
   conferenceStartDate: '2023-05-29'
@@ -6,12 +36,10 @@ aamas2023:
   isApproximateDeadline: false
   rating: A
   shortname: AAMAS 2023
-  tags: &id001
-  - ML
-  - RO
+  tags: *id001
   timeline:
-  - abstractDeadline: '2022-10-21T12:00:00Z'
-    deadline: '2022-10-28T12:00:00Z'
+  - abstractDeadline: '2022-10-22T11:59:59Z'
+    deadline: '2022-10-29T11:59:59Z'
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://aamas2023.soton.ac.uk/
 aamas2024:
@@ -79,8 +107,8 @@ aamas2027:
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://warwick.ac.uk/fac/sci/dcs/aamas2027/
 aamas2028:
-  conferenceEndDate: '2028-05-07'
-  conferenceStartDate: '2028-05-02'
+  conferenceEndDate: '2028-05-08'
+  conferenceStartDate: '2028-05-03'
   dataSrc: estimate
   id: aamas2028
   isApproximateDeadline: true
@@ -88,6 +116,7 @@ aamas2028:
   shortname: AAMAS 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-10-02T23:59:00Z'
-    deadline: '2027-10-09T23:59:00Z'
+  - abstractDeadline: '2027-10-02T11:59:59Z'
+    deadline: '2027-10-09T11:59:59Z'
+    note: 'From AAMAS 2027: Paper submission'
   title: International Conference on Autonomous Agents and Multiagent Systems

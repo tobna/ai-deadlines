@@ -1,17 +1,33 @@
+ecai2022:
+  conferenceEndDate: '2022-07-29'
+  conferenceStartDate: '2022-07-23'
+  dataSrc: ccf-deadlines
+  id: ecai2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: ECAI 2022
+  tags: &id001
+  - ML
+  timeline:
+  - abstractDeadline: '2022-01-09T00:59:00Z'
+    deadline: '2022-01-15T11:59:00Z'
+    note: 'Joint IJCAI-ECAI; abstract: January 7, 23:59 AoE (UTC-12), converted to
+      CET (UTC+1)'
+  title: European Conference on Artificial Intelligence
+  website: https://ijcai-22.org/
 ecai2023:
   acceptanceRate: 23.97
   acceptanceRateYear: 2023
   acceptedPapers: 391
-  conferenceEndDate: '2023-10-05'
-  conferenceStartDate: '2023-10-02'
+  conferenceEndDate: '2023-10-04'
+  conferenceStartDate: '2023-09-30'
   dataSrc: ccf-deadlines
   id: ecai2023
   isApproximateDeadline: false
   rating: A
   shortname: ECAI 2023
   submittedPapers: 1631
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-05-03T11:59:59Z'
     deadline: '2023-05-09T11:59:59Z'
@@ -96,9 +112,6 @@ ecai2027:
   title: European Conference on Artificial Intelligence
   website: https://ecai2027.org/
 ecai2028:
-  acceptanceRate: 23.47
-  acceptanceRateYear: 2025
-  acceptedPapers: 626
   conferenceEndDate: '2028-10-07'
   conferenceStartDate: '2028-10-02'
   dataSrc: estimate
@@ -106,7 +119,6 @@ ecai2028:
   isApproximateDeadline: true
   rating: A
   shortname: ECAI 2028
-  submittedPapers: 2667
   tags: *id001
   timeline:
   - deadline: '2028-04-15T11:59:59Z'
