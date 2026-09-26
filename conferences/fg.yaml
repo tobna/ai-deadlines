@@ -1,3 +1,36 @@
+fg2021:
+  conferenceEndDate: '2021-12-18'
+  conferenceStartDate: '2021-12-15'
+  dataSrc: ccf-deadlines
+  id: fg2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: FG 2021
+  tags: &id001
+  - CV
+  timeline:
+  - deadline: '2021-05-02T11:59:00Z'
+    note: Round 1
+  - deadline: '2021-08-21T11:59:00Z'
+    note: Round 2 (new submissions and revised Round 1 papers)
+  title: International Conference on Automatic Face and Gesture Recognition
+  website: https://iab-rubric.org/fg2021/
+fg2024:
+  conferenceEndDate: '2024-05-31'
+  conferenceStartDate: '2024-05-27'
+  dataSrc: ccf-deadlines
+  id: fg2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: FG 2024
+  tags: *id001
+  timeline:
+  - deadline: '2023-10-03T11:59:00Z'
+    note: Round 1 (extended; official literal PST)
+  - deadline: '2024-01-27T11:59:00Z'
+    note: Round 2 (extended)
+  title: International Conference on Automatic Face and Gesture Recognition
+  website: https://fg2024.ieee-biometrics.org/
 fg2025:
   conferenceEndDate: '2025-05-30'
   conferenceStartDate: '2025-05-26'
@@ -6,8 +39,7 @@ fg2025:
   isApproximateDeadline: false
   rating: B
   shortname: FG 2025
-  tags: &id001
-  - CV
+  tags: *id001
   timeline:
   - deadline: '2024-10-01T11:59:59Z'
     note: Round 1

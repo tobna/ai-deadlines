@@ -1,3 +1,18 @@
+cec2021:
+  conferenceEndDate: '2021-07-01'
+  conferenceStartDate: '2021-06-28'
+  dataSrc: ccf-deadlines
+  id: cec2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: IEEE CEC 2021
+  tags: &id001
+  - ML
+  timeline:
+  - deadline: '2021-02-24T11:59:00Z'
+    note: Final extended paper submission deadline
+  title: IEEE Congress on Evolutionary Computation
+  website: https://cec2021.mini.pw.edu.pl/en/index.html
 cec2025:
   conferenceEndDate: '2025-06-12'
   conferenceStartDate: '2025-06-08'
@@ -7,8 +22,7 @@ cec2025:
   location: Hangzhou, China
   rating: B
   shortname: CEC 2025
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2025-01-16T11:59:59Z'
     note: Paper submission deadline
@@ -47,16 +61,3 @@ cec2027:
     note: Paper submission deadline
   title: IEEE Congress on Evolutionary Computation
   website: http://ieeecec.org
-cec2028:
-  conferenceEndDate: '2028-07-29'
-  conferenceStartDate: '2028-07-24'
-  dataSrc: estimate
-  id: cec2028
-  isApproximateDeadline: true
-  rating: B
-  shortname: CEC 2028
-  tags: *id001
-  timeline:
-  - deadline: '2028-01-16T11:59:59Z'
-    note: 'From CEC 2027: Paper submission deadline'
-  title: IEEE Congress on Evolutionary Computation

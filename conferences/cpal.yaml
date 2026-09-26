@@ -1,3 +1,17 @@
+cpal2024:
+  conferenceEndDate: '2024-01-06'
+  conferenceStartDate: '2024-01-03'
+  dataSrc: ccf-deadlines
+  id: cpal2024
+  isApproximateDeadline: false
+  shortname: CPAL 2024
+  tags: &id001
+  - ML
+  timeline:
+  - deadline: '2023-08-29T11:59:00Z'
+    note: Proceedings Track
+  title: The Conference on Parsimony and Learning
+  website: https://2024.cpal.cc/
 cpal2025:
   conferenceEndDate: '2025-03-27'
   conferenceStartDate: '2025-03-24'
@@ -6,8 +20,7 @@ cpal2025:
   isApproximateDeadline: false
   location: Simonyi Conference Center, Stanford University
   shortname: CPAL 2025
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2024-11-26T11:59:59Z'
     note: Paper submission deadline

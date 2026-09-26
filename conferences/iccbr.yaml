@@ -1,6 +1,6 @@
 iccbr2024:
-  conferenceEndDate: '2024-06-04'
-  conferenceStartDate: '2024-06-01'
+  conferenceEndDate: '2024-07-04'
+  conferenceStartDate: '2024-07-01'
   dataSrc: ccf-deadlines
   id: iccbr2024
   isApproximateDeadline: false
@@ -13,7 +13,7 @@ iccbr2024:
   - deadline: '2024-04-02T12:00:00Z'
     note: Late Submission
   title: International Conference on Case-Based Reasoning
-  website: https://www.iccbr2024.org/
+  website: https://link.springer.com/book/10.1007/978-3-031-63646-2
 iccbr2026:
   conferenceEndDate: '2026-08-16'
   conferenceStartDate: '2026-08-13'

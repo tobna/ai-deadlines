@@ -1,3 +1,19 @@
+kr2021:
+  conferenceEndDate: '2021-11-12'
+  conferenceStartDate: '2021-11-03'
+  dataSrc: ccf-deadlines
+  id: kr2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: KR 2021
+  tags: &id001
+  - ML
+  - NLP
+  timeline:
+  - abstractDeadline: '2021-03-25T11:59:00Z'
+    deadline: '2021-04-01T11:59:00Z'
+  title: International Conference on Principles of Knowledge Representation and Reasoning
+  website: https://kr.org/KR2021/
 kr2023:
   conferenceEndDate: '2023-09-08'
   conferenceStartDate: '2023-09-02'
@@ -6,12 +22,10 @@ kr2023:
   isApproximateDeadline: false
   rating: A*
   shortname: KR 2023
-  tags: &id001
-  - ML
-  - NLP
+  tags: *id001
   timeline:
-  - abstractDeadline: '2023-03-03T12:00:00Z'
-    deadline: '2023-03-14T12:00:00Z'
+  - abstractDeadline: '2023-03-04T11:59:00Z'
+    deadline: '2023-03-15T11:59:00Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2023/
 kr2024:
@@ -66,12 +80,12 @@ kr2027:
   shortname: KR 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-02-08T23:59:59Z'
-    deadline: '2027-02-13T23:59:59Z'
+  - abstractDeadline: '2027-02-09T11:59:59Z'
+    deadline: '2027-02-14T11:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
 kr2028:
-  conferenceEndDate: '2028-07-24'
-  conferenceStartDate: '2028-07-19'
+  conferenceEndDate: '2028-07-25'
+  conferenceStartDate: '2028-07-20'
   dataSrc: estimate
   id: kr2028
   isApproximateDeadline: true
@@ -79,6 +93,6 @@ kr2028:
   shortname: KR 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-02-08T23:59:59Z'
-    deadline: '2028-02-13T23:59:59Z'
+  - abstractDeadline: '2028-02-09T11:59:59Z'
+    deadline: '2028-02-14T11:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning

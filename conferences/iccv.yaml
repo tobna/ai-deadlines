@@ -3,7 +3,7 @@ iccv2021:
   acceptanceRateYear: 2021
   acceptedPapers: 1617
   conferenceEndDate: '2021-10-17'
-  conferenceStartDate: '2021-10-10'
+  conferenceStartDate: '2021-10-11'
   dataSrc: ccf-deadlines
   h5Index: 256
   id: iccv2021
@@ -15,9 +15,12 @@ iccv2021:
   - CV
   - ML
   timeline:
-  - deadline: '2021-03-18T11:59:59Z'
+  - abstractDeadline: '2021-03-11T12:59:00Z'
+    deadline: '2021-03-18T11:59:59Z'
+    note: 'Registration: March 10 23:59 PST (UTC-8), converted to UTC-7; paper deadline:
+      March 17 23:59 PDT (UTC-7).'
   title: IEEE International Conference on Computer Vision
-  website: http://iccv2021.thecvf.com/home/
+  website: https://iccv2021.thecvf.com/
 iccv2023:
   acceptanceRate: 26.71
   acceptanceRateYear: 2023
@@ -35,7 +38,7 @@ iccv2023:
   timeline:
   - deadline: '2023-03-09T11:59:59Z'
   title: IEEE International Conference on Computer Vision
-  website: http://iccv2023.thecvf.com/home/
+  website: https://iccv2023.thecvf.com/
 iccv2025:
   acceptanceRate: 24.01
   acceptanceRateYear: 2025
