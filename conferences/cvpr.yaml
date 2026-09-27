@@ -1,4 +1,7 @@
 cvpr2021:
+  acceptanceRate: 23.71
+  acceptanceRateYear: 2021
+  acceptedPapers: 1663
   conferenceEndDate: '2021-06-25'
   conferenceStartDate: '2021-06-19'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ cvpr2021:
   isApproximateDeadline: false
   rating: A*
   shortname: CVPR 2021
+  submittedPapers: 7015
   tags: &id001
   - CV
   - ML
@@ -135,6 +139,9 @@ cvpr2027:
   title: Computer Vision and Pattern Recognition Conference
   website: https://cvpr.thecvf.com/Conferences/2027/
 cvpr2028:
+  acceptanceRate: 25.3
+  acceptanceRateYear: 2026
+  acceptedPapers: 4071
   conferenceEndDate: '2028-06-10'
   conferenceStartDate: '2028-06-05'
   dataSrc: estimate
@@ -143,6 +150,7 @@ cvpr2028:
   isApproximateDeadline: true
   rating: A*
   shortname: CVPR 2028
+  submittedPapers: 16092
   tags: *id001
   timeline:
   - abstractDeadline: '2027-11-08T11:59:59Z'

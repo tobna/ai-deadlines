@@ -1,4 +1,7 @@
 naacl2021:
+  acceptanceRate: 26.54
+  acceptanceRateYear: 2021
+  acceptedPapers: 477
   conferenceEndDate: '2021-06-11'
   conferenceStartDate: '2021-06-06'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ naacl2021:
   isApproximateDeadline: false
   rating: A
   shortname: NAACL 2021
+  submittedPapers: 1797
   tags: &id001
   - NLP
   timeline:

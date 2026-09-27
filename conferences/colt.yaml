@@ -1,9 +1,13 @@
 colt2021:
+  acceptanceRate: 35.14
+  acceptanceRateYear: 2021
+  acceptedPapers: 136
   dataSrc: ccf-deadlines
   id: colt2021
   isApproximateDeadline: false
   rating: A*
   shortname: COLT 2021
+  submittedPapers: 387
   tags: &id001
   - ML
   timeline:
@@ -28,6 +32,9 @@ colt2022:
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2022/index.html
 colt2023:
+  acceptanceRate: 34.6
+  acceptanceRateYear: 2023
+  acceptedPapers: 164
   conferenceEndDate: '2023-07-15'
   conferenceStartDate: '2023-07-12'
   dataSrc: ccf-deadlines
@@ -35,6 +42,7 @@ colt2023:
   isApproximateDeadline: false
   rating: A*
   shortname: COLT 2023
+  submittedPapers: 474
   tags: *id001
   timeline:
   - deadline: '2023-02-11T04:00:00Z'
@@ -98,6 +106,9 @@ colt2026:
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2026/
 colt2027:
+  acceptanceRate: 31.83
+  acceptanceRateYear: 2025
+  acceptedPapers: 177
   conferenceEndDate: '2027-07-04'
   conferenceStartDate: '2027-06-29'
   dataSrc: estimate
@@ -105,12 +116,16 @@ colt2027:
   isApproximateDeadline: true
   rating: A*
   shortname: COLT 2027
+  submittedPapers: 556
   tags: *id001
   timeline:
   - deadline: '2027-02-05T11:59:59Z'
     note: 'From COLT 2026: Paper submission deadline'
   title: Annual Conference on Learning Theory
 colt2028:
+  acceptanceRate: 31.83
+  acceptanceRateYear: 2025
+  acceptedPapers: 177
   conferenceEndDate: '2028-07-04'
   conferenceStartDate: '2028-06-29'
   dataSrc: estimate
@@ -118,6 +133,7 @@ colt2028:
   isApproximateDeadline: true
   rating: A*
   shortname: COLT 2028
+  submittedPapers: 556
   tags: *id001
   timeline:
   - deadline: '2028-02-05T11:59:59Z'

@@ -17,6 +17,9 @@ uai2021:
   title: Conference on Uncertainty in Artificial Intelligence
   website: http://auai.org/uai2021/
 uai2022:
+  acceptanceRate: 32.3
+  acceptanceRateYear: 2022
+  acceptedPapers: 230
   conferenceEndDate: '2022-08-05'
   conferenceStartDate: '2022-08-01'
   dataSrc: ccf-deadlines
@@ -24,6 +27,7 @@ uai2022:
   isApproximateDeadline: false
   rating: A
   shortname: UAI 2022
+  submittedPapers: 712
   tags: *id001
   timeline:
   - deadline: '2022-02-26T11:59:00Z'
@@ -102,6 +106,9 @@ uai2026:
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2026/
 uai2027:
+  acceptanceRate: 30.54
+  acceptanceRateYear: 2026
+  acceptedPapers: 332
   conferenceEndDate: '2027-08-22'
   conferenceStartDate: '2027-08-17'
   dataSrc: estimate
@@ -109,6 +116,7 @@ uai2027:
   isApproximateDeadline: true
   rating: A
   shortname: UAI 2027
+  submittedPapers: 1087
   tags: *id001
   timeline:
   - deadline: '2028-02-26T11:59:59Z'

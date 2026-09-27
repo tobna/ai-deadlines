@@ -1,4 +1,7 @@
 eacl2021:
+  acceptanceRate: 24.7
+  acceptanceRateYear: 2021
+  acceptedPapers: 326
   conferenceEndDate: '2021-04-23'
   conferenceStartDate: '2021-04-19'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ eacl2021:
   isApproximateDeadline: false
   rating: A
   shortname: EACL 2021
+  submittedPapers: 1320
   tags: &id001
   - NLP
   timeline:
@@ -15,6 +19,9 @@ eacl2021:
     Linguistics
   website: https://2021.eacl.org/
 eacl2023:
+  acceptanceRate: 24.1
+  acceptanceRateYear: 2023
+  acceptedPapers: 281
   conferenceEndDate: '2023-05-06'
   conferenceStartDate: '2023-05-02'
   dataSrc: ccf-deadlines
@@ -23,6 +30,7 @@ eacl2023:
   isApproximateDeadline: false
   rating: A
   shortname: EACL 2023
+  submittedPapers: 1166
   tags: *id001
   timeline:
   - abstractDeadline: '2022-10-14T11:59:00Z'

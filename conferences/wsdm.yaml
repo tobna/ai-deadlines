@@ -1,4 +1,7 @@
 wsdm2021:
+  acceptanceRate: 18.57
+  acceptanceRateYear: 2021
+  acceptedPapers: 112
   conferenceEndDate: '2021-03-12'
   conferenceStartDate: '2021-03-08'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ wsdm2021:
   isApproximateDeadline: false
   rating: A
   shortname: WSDM 2021
+  submittedPapers: 603
   tags: &id001
   - DM
   timeline:
@@ -139,6 +143,9 @@ wsdm2027:
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2027/
 wsdm2028:
+  acceptanceRate: 16.31
+  acceptanceRateYear: 2026
+  acceptedPapers: 100
   conferenceEndDate: '2028-02-20'
   conferenceStartDate: '2028-02-15'
   dataSrc: estimate
@@ -147,6 +154,7 @@ wsdm2028:
   isApproximateDeadline: true
   rating: A
   shortname: WSDM 2028
+  submittedPapers: 613
   tags: *id001
   timeline:
   - abstractDeadline: '2027-08-18T11:59:59Z'

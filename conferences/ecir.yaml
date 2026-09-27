@@ -1,4 +1,7 @@
 ecir2021:
+  acceptanceRate: 24.04
+  acceptanceRateYear: 2021
+  acceptedPapers: 50
   conferenceEndDate: '2021-04-01'
   conferenceStartDate: '2021-03-28'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ ecir2021:
   isApproximateDeadline: false
   rating: A
   shortname: ECIR 2021
+  submittedPapers: 208
   tags: &id001
   - DM
   timeline:
@@ -15,6 +19,9 @@ ecir2021:
   title: European Conference on Information Retrieval
   website: https://www.ecir2021.eu/
 ecir2022:
+  acceptanceRate: 20.0
+  acceptanceRateYear: 2022
+  acceptedPapers: 35
   conferenceEndDate: '2022-04-14'
   conferenceStartDate: '2022-04-10'
   dataSrc: ccf-deadlines
@@ -22,6 +29,7 @@ ecir2022:
   isApproximateDeadline: false
   rating: A
   shortname: ECIR 2022
+  submittedPapers: 175
   tags: *id001
   timeline:
   - abstractDeadline: '2021-10-01T11:59:00Z'
@@ -29,6 +37,9 @@ ecir2022:
   title: European Conference on Information Retrieval
   website: https://ecir2022.org/
 ecir2023:
+  acceptanceRate: 25.45
+  acceptanceRateYear: 2023
+  acceptedPapers: 57
   conferenceEndDate: '2023-04-06'
   conferenceStartDate: '2023-04-02'
   dataSrc: ccf-deadlines
@@ -36,6 +47,7 @@ ecir2023:
   isApproximateDeadline: false
   rating: A
   shortname: ECIR 2023
+  submittedPapers: 224
   tags: *id001
   timeline:
   - abstractDeadline: '2022-10-01T11:59:00Z'
@@ -43,6 +55,9 @@ ecir2023:
   title: European Conference on Information Retrieval
   website: https://ecir2023.org/
 ecir2024:
+  acceptanceRate: 24.78
+  acceptanceRateYear: 2024
+  acceptedPapers: 57
   conferenceEndDate: '2024-03-28'
   conferenceStartDate: '2024-03-24'
   dataSrc: ccf-deadlines
@@ -50,6 +65,7 @@ ecir2024:
   isApproximateDeadline: false
   rating: A
   shortname: ECIR 2024
+  submittedPapers: 230
   tags: *id001
   timeline:
   - abstractDeadline: '2023-09-28T11:59:00Z'
@@ -120,6 +136,9 @@ ecir2027:
   title: European Conference on Information Retrieval
   website: https://www.ecir2027.co.uk/
 ecir2028:
+  acceptanceRate: 23.01
+  acceptanceRateYear: 2025
+  acceptedPapers: 52
   conferenceEndDate: '2028-03-26'
   conferenceStartDate: '2028-03-21'
   dataSrc: estimate
@@ -127,6 +146,7 @@ ecir2028:
   isApproximateDeadline: true
   rating: A
   shortname: ECIR 2028
+  submittedPapers: 226
   tags: *id001
   timeline:
   - abstractDeadline: '2027-09-22T11:59:59Z'

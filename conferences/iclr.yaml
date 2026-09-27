@@ -1,4 +1,7 @@
 iclr2021:
+  acceptanceRate: 28.7
+  acceptanceRateYear: 2021
+  acceptedPapers: 860
   conferenceEndDate: '2021-05-07'
   conferenceStartDate: '2021-05-03'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ iclr2021:
   isApproximateDeadline: false
   rating: A*
   shortname: ICLR 2021
+  submittedPapers: 2997
   tags: &id001
   - CV
   - DM
@@ -145,6 +149,9 @@ iclr2027:
   title: The Fifteenth International Conference on Learning Representations
   website: https://iclr.cc/Conferences/2027
 iclr2028:
+  acceptanceRate: 28.18
+  acceptanceRateYear: 2026
+  acceptedPapers: 5339
   conferenceEndDate: '2028-05-01'
   conferenceStartDate: '2028-04-26'
   dataSrc: estimate
@@ -153,6 +160,7 @@ iclr2028:
   isApproximateDeadline: true
   rating: A*
   shortname: ICLR 2028
+  submittedPapers: 18949
   tags: *id001
   timeline:
   - abstractDeadline: '2027-09-19T11:59:59Z'
