@@ -1,3 +1,54 @@
+ijcnlp2021:
+  conferenceEndDate: '2021-08-06'
+  conferenceStartDate: '2021-08-01'
+  dataSrc: ccf-deadlines
+  h5Index: 41
+  id: ijcnlp2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNLP 2021
+  tags: &id001
+  - NLP
+  timeline:
+  - abstractDeadline: '2021-01-26T11:59:00Z'
+    deadline: '2021-02-03T11:59:00Z'
+    note: Regular papers; final one-day extension due to submission-system outage
+  title: International Joint Conference on Natural Language Processing
+  website: https://2021.aclweb.org/
+ijcnlp2022:
+  conferenceEndDate: '2022-11-23'
+  conferenceStartDate: '2022-11-20'
+  dataSrc: ccf-deadlines
+  h5Index: 41
+  id: ijcnlp2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNLP 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-07-16T11:59:00Z'
+    note: Regular papers, direct submission
+  - deadline: '2022-08-22T11:59:00Z'
+    note: Regular papers, ARR commitment
+  title: International Joint Conference on Natural Language Processing
+  website: https://www.aacl2022.org/
+ijcnlp2023:
+  conferenceEndDate: '2023-11-04'
+  conferenceStartDate: '2023-11-01'
+  dataSrc: ccf-deadlines
+  h5Index: 41
+  id: ijcnlp2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNLP 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-05-24T11:59:00Z'
+    note: Regular papers, direct submission
+  - deadline: '2023-08-16T11:59:00Z'
+    note: Regular papers, ARR commitment
+  title: International Joint Conference on Natural Language Processing
+  website: https://www.afnlp.org/conferences/ijcnlp2023/wp/
 ijcnlp2025:
   conferenceEndDate: '2025-12-24'
   conferenceStartDate: '2025-12-20'
@@ -7,11 +58,12 @@ ijcnlp2025:
   isApproximateDeadline: false
   rating: B
   shortname: IJCNLP 2025
-  tags: &id001
-  - NLP
+  tags: *id001
   timeline:
   - deadline: '2025-07-29T11:59:59Z'
-    note: ACL Rolling Review
+    note: Regular papers, ACL Rolling Review
+  - deadline: '2025-10-11T11:59:00Z'
+    note: Regular papers, ARR commitment
   title: International Joint Conference on Natural Language Processing
   website: https://www.afnlp.org/conferences/ijcnlp2025/
 ijcnlp2026:
@@ -42,12 +94,12 @@ ijcnlp2027:
   tags: *id001
   timeline:
   - deadline: '2027-05-26T11:59:59Z'
-    note: 'From IJCNLP 2026: ARR Submission; AACL-IJCNLP 2026 (the 5th AACL & 15th
-      IJCNLP)'
+    note: 'From IJCNLP 2026: ARR Submission; commitment deadline: 2026-08-07; second-round
+      commitment: 2026-08-25; AACL-IJCNLP 2026 (the 5th AACL & 15th IJCNLP)'
   title: International Joint Conference on Natural Language Processing
 ijcnlp2028:
-  conferenceEndDate: '2028-11-10'
-  conferenceStartDate: '2028-11-05'
+  conferenceEndDate: '2028-11-11'
+  conferenceStartDate: '2028-11-06'
   dataSrc: estimate
   h5Index: 41
   id: ijcnlp2028
@@ -56,7 +108,7 @@ ijcnlp2028:
   shortname: IJCNLP 2028
   tags: *id001
   timeline:
-  - deadline: '2028-05-25T11:59:59Z'
-    note: 'From IJCNLP 2026: ARR Submission; AACL-IJCNLP 2026 (the 5th AACL & 15th
-      IJCNLP)'
+  - deadline: '2028-05-26T11:59:59Z'
+    note: 'From IJCNLP 2026: ARR Submission; commitment deadline: 2026-08-07; second-round
+      commitment: 2026-08-25; AACL-IJCNLP 2026 (the 5th AACL & 15th IJCNLP)'
   title: International Joint Conference on Natural Language Processing

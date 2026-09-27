@@ -1,3 +1,87 @@
+eurogp2021:
+  conferenceEndDate: '2021-04-09'
+  conferenceStartDate: '2021-04-07'
+  dataSrc: ccf-deadlines
+  id: eurogp2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: EuroGP 2021
+  tags: &id001 []
+  timeline:
+  - deadline: '2020-11-20T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Genetic Programming
+  website: https://www.evostar.org/2021/eurogp/
+eurogp2022:
+  conferenceEndDate: '2022-04-22'
+  conferenceStartDate: '2022-04-20'
+  dataSrc: ccf-deadlines
+  id: eurogp2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: EuroGP 2022
+  tags: *id001
+  timeline:
+  - deadline: '2021-11-25T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Genetic Programming
+  website: https://www.evostar.org/2022/eurogp/
+eurogp2023:
+  conferenceEndDate: '2023-04-14'
+  conferenceStartDate: '2023-04-12'
+  dataSrc: ccf-deadlines
+  id: eurogp2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: EuroGP 2023
+  tags: *id001
+  timeline:
+  - deadline: '2022-11-17T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Genetic Programming
+  website: https://www.evostar.org/2023/eurogp/
+eurogp2024:
+  conferenceEndDate: '2024-04-05'
+  conferenceStartDate: '2024-04-03'
+  dataSrc: ccf-deadlines
+  id: eurogp2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: EuroGP 2024
+  tags: *id001
+  timeline:
+  - deadline: '2023-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Genetic Programming
+  website: https://www.evostar.org/2024/wp-content/uploads/2023/10/evo2024-conf-flyers-extended-deadline-eurogp-261023.pdf
+eurogp2025:
+  conferenceEndDate: '2025-04-25'
+  conferenceStartDate: '2025-04-23'
+  dataSrc: ccf-deadlines
+  id: eurogp2025
+  isApproximateDeadline: false
+  rating: B
+  shortname: EuroGP 2025
+  tags: *id001
+  timeline:
+  - deadline: '2024-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Genetic Programming
+  website: https://www.evostar.org/2025/eurogp/
+eurogp2026:
+  conferenceEndDate: '2026-04-10'
+  conferenceStartDate: '2026-04-08'
+  dataSrc: ccf-deadlines
+  id: eurogp2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: EuroGP 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Genetic Programming
+  website: https://www.evostar.org/2026/eurogp/
 eurogp2027:
   conferenceEndDate: '2027-04-02'
   conferenceStartDate: '2027-03-31'
@@ -6,9 +90,22 @@ eurogp2027:
   isApproximateDeadline: false
   rating: B
   shortname: EuroGP 2027
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-11-02T11:59:00Z'
     note: Full papers
   title: European Conference on Genetic Programming
   website: https://www.evostar.org/2027/eurogp/
+eurogp2028:
+  conferenceEndDate: '2028-04-05'
+  conferenceStartDate: '2028-03-31'
+  dataSrc: estimate
+  id: eurogp2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: EuroGP 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-11-02T11:59:00Z'
+    note: 'From EuroGP 2027: Full papers'
+  title: European Conference on Genetic Programming

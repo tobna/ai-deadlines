@@ -1,3 +1,80 @@
+rulemlrr2021:
+  conferenceEndDate: '2021-09-15'
+  conferenceStartDate: '2021-09-13'
+  dataSrc: ccf-deadlines
+  id: rulemlrr2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: RuleML+RR 2021
+  tags: &id001
+  - DB
+  - ML
+  timeline:
+  - abstractDeadline: '2021-06-28T11:59:00Z'
+    deadline: '2021-07-03T11:59:00Z'
+    note: Regular papers
+  title: International Joint Conference on Rules and Reasoning
+  website: https://declarativeai2021.net/conference/
+rulemlrr2022:
+  conferenceEndDate: '2022-09-28'
+  conferenceStartDate: '2022-09-26'
+  dataSrc: ccf-deadlines
+  id: rulemlrr2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: RuleML+RR 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-06-20T11:59:00Z'
+    deadline: '2022-06-24T11:59:00Z'
+    note: Regular papers
+  title: International Joint Conference on Rules and Reasoning
+  website: https://2022.declarativeai.net/events/ruleml-rr/ruleml-rr-cfp
+rulemlrr2023:
+  conferenceEndDate: '2023-09-20'
+  conferenceStartDate: '2023-09-18'
+  dataSrc: ccf-deadlines
+  id: rulemlrr2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: RuleML+RR 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-06-18T11:59:00Z'
+    deadline: '2023-06-18T11:59:00Z'
+    note: Regular papers
+  title: International Joint Conference on Rules and Reasoning
+  website: https://2023.declarativeai.net/events/ruleml-rr/ruleml-rr-cfp
+rulemlrr2024:
+  conferenceEndDate: '2024-09-18'
+  conferenceStartDate: '2024-09-16'
+  dataSrc: ccf-deadlines
+  id: rulemlrr2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: RuleML+RR 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2024-06-16T11:59:00Z'
+    deadline: '2024-06-16T11:59:00Z'
+    note: Regular papers
+  title: International Joint Conference on Rules and Reasoning
+  website: https://2024.declarativeai.net/events/ruleml-rr/cfp
+rulemlrr2025:
+  conferenceEndDate: '2025-09-24'
+  conferenceStartDate: '2025-09-22'
+  dataSrc: ccf-deadlines
+  id: rulemlrr2025
+  isApproximateDeadline: false
+  rating: B
+  shortname: RuleML+RR 2025
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2025-06-21T11:59:00Z'
+    deadline: '2025-06-21T11:59:00Z'
+    note: Regular papers
+  title: International Joint Conference on Rules and Reasoning
+  website: https://2025.declarativeai.net/events/ruleml-rr/cfp
 rulemlrr2026:
   conferenceEndDate: '2026-08-26'
   conferenceStartDate: '2026-08-24'
@@ -7,9 +84,7 @@ rulemlrr2026:
   location: null
   rating: B
   shortname: RuleMLRR 2026
-  tags:
-  - DB
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2026-05-09T11:59:59Z'
     deadline: '2026-05-16T11:59:59Z'
@@ -17,3 +92,31 @@ rulemlrr2026:
   timezone: AoE
   title: International Joint Conference on Rules and Reasoning
   website: https://2026.declarativeai.net/events/ruleml-rr
+rulemlrr2027:
+  conferenceEndDate: '2027-08-29'
+  conferenceStartDate: '2027-08-24'
+  dataSrc: estimate
+  id: rulemlrr2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: RuleMLRR 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-05-09T11:59:59Z'
+    deadline: '2027-05-16T11:59:59Z'
+    note: 'From RuleMLRR 2026: Paper Submission (AoE)'
+  title: International Joint Conference on Rules and Reasoning
+rulemlrr2028:
+  conferenceEndDate: '2028-08-29'
+  conferenceStartDate: '2028-08-24'
+  dataSrc: estimate
+  id: rulemlrr2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: RuleMLRR 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-05-09T11:59:59Z'
+    deadline: '2028-05-16T11:59:59Z'
+    note: 'From RuleMLRR 2026: Paper Submission (AoE)'
+  title: International Joint Conference on Rules and Reasoning

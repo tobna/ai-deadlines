@@ -1,3 +1,78 @@
+evomusart2021:
+  conferenceEndDate: '2021-04-09'
+  conferenceStartDate: '2021-04-07'
+  dataSrc: ccf-deadlines
+  id: evomusart2021
+  isApproximateDeadline: false
+  rating: C
+  shortname: EvoMUSART 2021
+  tags: &id001 []
+  timeline:
+  - deadline: '2020-11-20T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: International Conference on Artificial Intelligence in Music, Sound, Art
+    and Design
+  website: https://www.evostar.org/2021/evomusart/
+evomusart2022:
+  conferenceEndDate: '2022-04-22'
+  conferenceStartDate: '2022-04-20'
+  dataSrc: ccf-deadlines
+  id: evomusart2022
+  isApproximateDeadline: false
+  rating: C
+  shortname: EvoMUSART 2022
+  tags: *id001
+  timeline:
+  - deadline: '2021-11-25T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: International Conference on Artificial Intelligence in Music, Sound, Art
+    and Design
+  website: https://www.evostar.org/2022/evomusart/
+evomusart2023:
+  conferenceEndDate: '2023-04-14'
+  conferenceStartDate: '2023-04-12'
+  dataSrc: ccf-deadlines
+  id: evomusart2023
+  isApproximateDeadline: false
+  rating: C
+  shortname: EvoMUSART 2023
+  tags: *id001
+  timeline:
+  - deadline: '2022-11-17T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: International Conference on Artificial Intelligence in Music, Sound, Art
+    and Design
+  website: https://www.evostar.org/2023/evomusart/
+evomusart2025:
+  conferenceEndDate: '2025-04-25'
+  conferenceStartDate: '2025-04-23'
+  dataSrc: ccf-deadlines
+  id: evomusart2025
+  isApproximateDeadline: false
+  rating: C
+  shortname: EvoMUSART 2025
+  tags: *id001
+  timeline:
+  - deadline: '2024-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: International Conference on Artificial Intelligence in Music, Sound, Art
+    and Design
+  website: https://www.evostar.org/2025/evomusart/
+evomusart2026:
+  conferenceEndDate: '2026-04-10'
+  conferenceStartDate: '2026-04-08'
+  dataSrc: ccf-deadlines
+  id: evomusart2026
+  isApproximateDeadline: false
+  rating: C
+  shortname: EvoMUSART 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: International Conference on Artificial Intelligence in Music, Sound, Art
+    and Design
+  website: https://www.evostar.org/2026/evomusart/
 evomusart2027:
   conferenceEndDate: '2027-04-02'
   conferenceStartDate: '2027-03-31'
@@ -6,10 +81,24 @@ evomusart2027:
   isApproximateDeadline: false
   rating: C
   shortname: EvoMUSART 2027
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-11-02T11:59:00Z'
     note: Full papers
   title: International Conference on Artificial Intelligence in Music, Sound, Art
     and Design
   website: https://www.evostar.org/2027/evomusart/
+evomusart2028:
+  conferenceEndDate: '2028-04-05'
+  conferenceStartDate: '2028-03-31'
+  dataSrc: estimate
+  id: evomusart2028
+  isApproximateDeadline: true
+  rating: C
+  shortname: EvoMUSART 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-11-02T11:59:00Z'
+    note: 'From EvoMUSART 2027: Full papers'
+  title: International Conference on Artificial Intelligence in Music, Sound, Art
+    and Design

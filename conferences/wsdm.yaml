@@ -1,3 +1,19 @@
+wsdm2021:
+  conferenceEndDate: '2021-03-12'
+  conferenceStartDate: '2021-03-08'
+  dataSrc: ccf-deadlines
+  h5Index: 77
+  id: wsdm2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: WSDM 2021
+  tags: &id001
+  - DM
+  timeline:
+  - deadline: '2020-08-17T11:59:00Z'
+    note: Regular full papers; CFP explicitly specifies Alofi time (UTC-11)
+  title: International Conference on Web Search and Data Mining
+  website: https://www.wsdm-conference.org/2021/
 wsdm2022:
   acceptanceRate: 15.84
   acceptanceRateYear: 2022
@@ -11,10 +27,10 @@ wsdm2022:
   rating: A
   shortname: WSDM 2022
   submittedPapers: 505
-  tags: &id001
-  - DM
+  tags: *id001
   timeline:
-  - deadline: '2021-08-10T11:59:59Z'
+  - deadline: '2021-08-14T11:59:59Z'
+    note: Regular full papers; extended deadline
   title: International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2022/
 wsdm2023:
@@ -123,9 +139,6 @@ wsdm2027:
   title: ACM International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2027/
 wsdm2028:
-  acceptanceRate: 16.31
-  acceptanceRateYear: 2026
-  acceptedPapers: 100
   conferenceEndDate: '2028-02-20'
   conferenceStartDate: '2028-02-15'
   dataSrc: estimate
@@ -134,9 +147,11 @@ wsdm2028:
   isApproximateDeadline: true
   rating: A
   shortname: WSDM 2028
-  submittedPapers: 613
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-08-12T11:59:59Z'
-    deadline: '2027-08-19T11:59:59Z'
-  title: International Conference on Web Search and Data Mining
+  - abstractDeadline: '2027-08-18T11:59:59Z'
+    deadline: '2027-08-25T11:59:59Z'
+    note: 'From WSDM 2027: Paper submission (full papers)'
+  - deadline: '2027-11-18T11:59:59Z'
+    note: 'From WSDM 2027: Paper submission (short papers)'
+  title: ACM International Conference on Web Search and Data Mining

@@ -1,3 +1,87 @@
+evocop2021:
+  conferenceEndDate: '2021-04-09'
+  conferenceStartDate: '2021-04-07'
+  dataSrc: ccf-deadlines
+  id: evocop2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoCOP 2021
+  tags: &id001 []
+  timeline:
+  - deadline: '2020-11-20T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation
+  website: https://www.evostar.org/2021/evocop/
+evocop2022:
+  conferenceEndDate: '2022-04-22'
+  conferenceStartDate: '2022-04-20'
+  dataSrc: ccf-deadlines
+  id: evocop2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoCOP 2022
+  tags: *id001
+  timeline:
+  - deadline: '2021-11-25T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation
+  website: https://www.evostar.org/2022/evocop/
+evocop2023:
+  conferenceEndDate: '2023-04-14'
+  conferenceStartDate: '2023-04-12'
+  dataSrc: ccf-deadlines
+  id: evocop2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoCOP 2023
+  tags: *id001
+  timeline:
+  - deadline: '2022-11-17T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation
+  website: https://www.evostar.org/2023/evocop/
+evocop2024:
+  conferenceEndDate: '2024-04-05'
+  conferenceStartDate: '2024-04-03'
+  dataSrc: ccf-deadlines
+  id: evocop2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoCOP 2024
+  tags: *id001
+  timeline:
+  - deadline: '2023-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation
+  website: https://www.evostar.org/2024/wp-content/uploads/2023/10/evo2024-conf-flyers-extended-deadline-evocop-261023.pdf
+evocop2025:
+  conferenceEndDate: '2025-04-25'
+  conferenceStartDate: '2025-04-23'
+  dataSrc: ccf-deadlines
+  id: evocop2025
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoCOP 2025
+  tags: *id001
+  timeline:
+  - deadline: '2024-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation
+  website: https://www.evostar.org/2025/evocop/
+evocop2026:
+  conferenceEndDate: '2026-04-10'
+  conferenceStartDate: '2026-04-08'
+  dataSrc: ccf-deadlines
+  id: evocop2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoCOP 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-11-16T11:59:59Z'
+    note: Regular papers; extended deadline
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation
+  website: https://www.evostar.org/2026/evocop/
 evocop2027:
   conferenceEndDate: '2027-04-02'
   conferenceStartDate: '2027-03-31'
@@ -6,9 +90,22 @@ evocop2027:
   isApproximateDeadline: false
   rating: B
   shortname: EvoCOP 2027
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-11-02T11:59:00Z'
     note: Full papers
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2027/evocop/
+evocop2028:
+  conferenceEndDate: '2028-04-05'
+  conferenceStartDate: '2028-03-31'
+  dataSrc: estimate
+  id: evocop2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: EvoCOP 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-11-02T11:59:00Z'
+    note: 'From EvoCOP 2027: Full papers'
+  title: European Conference on Evolutionary Computation in Combinatorial Optimisation

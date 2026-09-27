@@ -1,3 +1,62 @@
+ecir2021:
+  conferenceEndDate: '2021-04-01'
+  conferenceStartDate: '2021-03-28'
+  dataSrc: ccf-deadlines
+  id: ecir2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: ECIR 2021
+  tags: &id001
+  - DM
+  timeline:
+  - deadline: '2020-10-16T11:59:00Z'
+    note: Full paper submission extended from October 1; no separate abstract cutoff
+      verified
+  title: European Conference on Information Retrieval
+  website: https://www.ecir2021.eu/
+ecir2022:
+  conferenceEndDate: '2022-04-14'
+  conferenceStartDate: '2022-04-10'
+  dataSrc: ccf-deadlines
+  id: ecir2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: ECIR 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2021-10-01T11:59:00Z'
+    deadline: '2021-10-08T11:59:00Z'
+  title: European Conference on Information Retrieval
+  website: https://ecir2022.org/
+ecir2023:
+  conferenceEndDate: '2023-04-06'
+  conferenceStartDate: '2023-04-02'
+  dataSrc: ccf-deadlines
+  id: ecir2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: ECIR 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-10-01T11:59:00Z'
+    deadline: '2022-10-08T11:59:00Z'
+  title: European Conference on Information Retrieval
+  website: https://ecir2023.org/
+ecir2024:
+  conferenceEndDate: '2024-03-28'
+  conferenceStartDate: '2024-03-24'
+  dataSrc: ccf-deadlines
+  id: ecir2024
+  isApproximateDeadline: false
+  rating: A
+  shortname: ECIR 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-09-28T11:59:00Z'
+    deadline: '2023-10-05T11:59:00Z'
+    note: Full paper deadlines extended by one week
+  title: European Conference on Information Retrieval
+  website: https://www.ecir2024.org/
 ecir2025:
   acceptanceRate: 23.01
   acceptanceRateYear: 2025
@@ -11,8 +70,7 @@ ecir2025:
   rating: A
   shortname: ECIR 2025
   submittedPapers: 226
-  tags: &id001
-  - DM
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-10-03T11:59:59Z'
     deadline: '2024-10-10T11:59:59Z'
@@ -62,9 +120,6 @@ ecir2027:
   title: European Conference on Information Retrieval
   website: https://www.ecir2027.co.uk/
 ecir2028:
-  acceptanceRate: 23.01
-  acceptanceRateYear: 2025
-  acceptedPapers: 52
   conferenceEndDate: '2028-03-26'
   conferenceStartDate: '2028-03-21'
   dataSrc: estimate
@@ -72,9 +127,9 @@ ecir2028:
   isApproximateDeadline: true
   rating: A
   shortname: ECIR 2028
-  submittedPapers: 226
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-09-26T11:59:59Z'
-    deadline: '2027-10-03T11:59:59Z'
+  - abstractDeadline: '2027-09-22T11:59:59Z'
+    deadline: '2027-10-06T11:59:59Z'
+    note: 'From ECIR 2027: Full paper submission deadline'
   title: European Conference on Information Retrieval
