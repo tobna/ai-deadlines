@@ -1,9 +1,26 @@
+aistats2021:
+  conferenceEndDate: '2021-04-15'
+  conferenceStartDate: '2021-04-13'
+  dataSrc: ccf-deadlines
+  h5Index: 101
+  id: aistats2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: AISTATS 2021
+  tags: &id001
+  - ML
+  timeline:
+  - abstractDeadline: '2020-10-08T20:00:00Z'
+    deadline: '2020-10-15T20:00:00Z'
+    note: Official CFP specifies 08:00 AM PST (UTC-8)
+  title: International Conference on Artificial Intelligence and Statistics
+  website: https://aistats.org/aistats2021/
 aistats2022:
   acceptanceRate: 29.26
   acceptanceRateYear: 2022
   acceptedPapers: 493
-  conferenceEndDate: '2022-04-01'
-  conferenceStartDate: '2022-03-30'
+  conferenceEndDate: '2022-03-30'
+  conferenceStartDate: '2022-03-28'
   dataSrc: ccf-deadlines
   h5Index: 101
   id: aistats2022
@@ -11,12 +28,27 @@ aistats2022:
   rating: A
   shortname: AISTATS 2022
   submittedPapers: 1685
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
-  - deadline: '2021-10-15T23:59:00Z'
+  - abstractDeadline: '2021-10-09T23:59:00Z'
+    deadline: '2021-10-15T23:59:00Z'
   title: International Conference on Artificial Intelligence and Statistics
   website: https://aistats.org/aistats2022/
+aistats2023:
+  conferenceEndDate: '2023-04-27'
+  conferenceStartDate: '2023-04-25'
+  dataSrc: ccf-deadlines
+  h5Index: 101
+  id: aistats2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: AISTATS 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-10-07T11:59:59Z'
+    deadline: '2022-10-14T11:59:59Z'
+  title: International Conference on Artificial Intelligence and Statistics
+  website: https://aistats.org/aistats2023/
 aistats2024:
   acceptanceRate: 27.58
   acceptanceRateYear: 2024
@@ -101,9 +133,6 @@ aistats2027:
   title: International Conference on Artificial Intelligence and Statistics
   website: https://virtual.aistats.org/Conferences/2027
 aistats2028:
-  acceptanceRate: 31.33
-  acceptanceRateYear: 2025
-  acceptedPapers: 583
   conferenceEndDate: '2028-05-08'
   conferenceStartDate: '2028-05-03'
   dataSrc: estimate
@@ -112,7 +141,6 @@ aistats2028:
   isApproximateDeadline: true
   rating: A
   shortname: AISTATS 2028
-  submittedPapers: 1861
   tags: *id001
   timeline:
   - abstractDeadline: '2027-09-30T11:59:59Z'
