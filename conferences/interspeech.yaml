@@ -1,3 +1,18 @@
+interspeech2021:
+  conferenceEndDate: '2021-09-03'
+  conferenceStartDate: '2021-08-30'
+  dataSrc: ccf-deadlines
+  id: interspeech2021
+  isApproximateDeadline: false
+  rating: A
+  shortname: InterSpeech 2021
+  tags: &id001
+  - SP
+  timeline:
+  - deadline: '2021-03-27T11:59:00Z'
+    note: Regular papers; later paper updates excluded
+  title: Conference of the International Speech Communication Association
+  website: https://www.interspeech2021.org/
 interspeech2022:
   acceptanceRate: 48.39
   acceptanceRateYear: 2021
@@ -10,8 +25,7 @@ interspeech2022:
   rating: A
   shortname: InterSpeech 2022
   submittedPapers: 1990
-  tags: &id001
-  - SP
+  tags: *id001
   timeline:
   - deadline: '2022-03-22T11:59:59Z'
   title: Conference of the International Speech Communication Association
@@ -30,7 +44,8 @@ interspeech2023:
   submittedPapers: 1990
   tags: *id001
   timeline:
-  - deadline: '2023-03-09T11:59:59Z'
+  - deadline: '2023-03-02T11:59:00Z'
+    note: Regular papers; March 8 updates excluded
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2023.org/
 interspeech2024:
@@ -47,8 +62,8 @@ interspeech2024:
   submittedPapers: 1990
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-03-02T11:59:59Z'
-    deadline: '2024-03-10T11:59:59Z'
+  - deadline: '2024-03-03T11:59:00Z'
+    note: Regular papers; later paper updates excluded
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2024.org/
 interspeech2025:
@@ -65,7 +80,8 @@ interspeech2025:
   submittedPapers: 1990
   tags: *id001
   timeline:
-  - deadline: '2025-02-20T11:59:59Z'
+  - deadline: '2025-02-13T11:59:00Z'
+    note: Regular papers; February 19 updates excluded
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2025.org/home
 interspeech2026:
