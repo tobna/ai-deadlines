@@ -1,3 +1,65 @@
+sgp2021:
+  conferenceEndDate: '2021-07-14'
+  conferenceStartDate: '2021-07-12'
+  dataSrc: ccf-deadlines
+  id: sgp2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: SGP 2021
+  tags: &id001
+  - CV
+  - ML
+  timeline:
+  - abstractDeadline: '2021-04-20T11:59:00Z'
+    deadline: '2021-04-25T11:59:00Z'
+    note: Regular technical papers; recommended abstract registration
+  title: Eurographics Symposium on Geometry Processing
+  website: https://sgp2021.github.io/
+sgp2022:
+  conferenceEndDate: '2022-07-06'
+  conferenceStartDate: '2022-07-04'
+  dataSrc: ccf-deadlines
+  id: sgp2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: SGP 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-04-08T11:59:00Z'
+    deadline: '2022-04-12T11:59:00Z'
+    note: Regular technical papers; recommended abstract registration
+  title: Eurographics Symposium on Geometry Processing
+  website: https://sgp2022.github.io/
+sgp2023:
+  conferenceEndDate: '2023-07-05'
+  conferenceStartDate: '2023-07-03'
+  dataSrc: ccf-deadlines
+  id: sgp2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: SGP 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-04-08T11:59:00Z'
+    deadline: '2023-04-13T11:59:00Z'
+    note: Regular technical papers; recommended abstract registration
+  title: Eurographics Symposium on Geometry Processing
+  website: https://sgp2023.github.io/
+sgp2024:
+  conferenceEndDate: '2024-06-26'
+  conferenceStartDate: '2024-06-24'
+  dataSrc: ccf-deadlines
+  id: sgp2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: SGP 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2024-04-11T11:59:00Z'
+    deadline: '2024-04-13T11:59:00Z'
+    note: Regular technical papers; recommended abstract registration
+  title: Eurographics Symposium on Geometry Processing
+  website: https://sgp2024.github.io/
 sgp2025:
   conferenceEndDate: '2025-07-04'
   conferenceStartDate: '2025-06-30'
@@ -7,9 +69,7 @@ sgp2025:
   location: Bizkaia Aretoa, Bilbao, Spain
   rating: B
   shortname: SGP 2025
-  tags: &id001
-  - CV
-  - ML
+  tags: *id001
   timeline:
   - abstractDeadline: '2025-02-04T23:59:00Z'
     deadline: '2025-02-07T23:59:00Z'
@@ -52,12 +112,14 @@ sgp2027:
   timeline:
   - abstractDeadline: '2027-02-02T22:59:00Z'
     deadline: '2027-02-04T22:59:00Z'
+    note: 'From SGP 2026: Paper submission (Round 1)'
   - abstractDeadline: '2027-04-13T22:59:00Z'
     deadline: '2027-04-15T22:59:00Z'
+    note: 'From SGP 2026: Paper submission (Round 2)'
   title: Symposium on Geometry Processing
 sgp2028:
-  conferenceEndDate: '2028-07-05'
-  conferenceStartDate: '2028-06-30'
+  conferenceEndDate: '2028-07-06'
+  conferenceStartDate: '2028-07-01'
   dataSrc: estimate
   id: sgp2028
   isApproximateDeadline: true
@@ -67,6 +129,8 @@ sgp2028:
   timeline:
   - abstractDeadline: '2028-02-02T22:59:00Z'
     deadline: '2028-02-04T22:59:00Z'
-  - abstractDeadline: '2028-04-12T22:59:00Z'
-    deadline: '2028-04-14T22:59:00Z'
+    note: 'From SGP 2026: Paper submission (Round 1)'
+  - abstractDeadline: '2028-04-13T22:59:00Z'
+    deadline: '2028-04-15T22:59:00Z'
+    note: 'From SGP 2026: Paper submission (Round 2)'
   title: Symposium on Geometry Processing
