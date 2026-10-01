@@ -1,6 +1,6 @@
 ijcb2021:
   conferenceEndDate: '2021-08-07'
-  conferenceStartDate: '2021-08-04'
+  conferenceStartDate: '2021-08-05'
   dataSrc: ccf-deadlines
   id: ijcb2021
   isApproximateDeadline: false
@@ -10,12 +10,24 @@ ijcb2021:
   - HCI
   timeline:
   - deadline: '2021-04-07T11:59:00Z'
-    note: Final extended paper submission; official site specifies PST
   title: International Joint Conference on Biometrics
   website: https://ijcb2021.iapr-tc4.org/
+ijcb2022:
+  conferenceEndDate: '2022-10-13'
+  conferenceStartDate: '2022-10-11'
+  dataSrc: ccf-deadlines
+  id: ijcb2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCB 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-05-17T11:59:59Z'
+  title: International Joint Conference on Biometrics
+  website: https://iapr.org/archives/ijcb2022/
 ijcb2023:
   conferenceEndDate: '2023-09-28'
-  conferenceStartDate: '2023-09-25'
+  conferenceStartDate: '2023-09-26'
   dataSrc: ccf-deadlines
   id: ijcb2023
   isApproximateDeadline: false
@@ -24,12 +36,11 @@ ijcb2023:
   tags: *id001
   timeline:
   - deadline: '2023-05-09T11:59:00Z'
-    note: Main conference papers; final extension
   title: International Joint Conference on Biometrics
   website: https://ijcb2023.ieee-biometrics.org/
 ijcb2024:
   conferenceEndDate: '2024-09-18'
-  conferenceStartDate: '2024-09-15'
+  conferenceStartDate: '2024-09-16'
   dataSrc: ccf-deadlines
   id: ijcb2024
   isApproximateDeadline: false
@@ -39,12 +50,11 @@ ijcb2024:
   timeline:
   - abstractDeadline: '2024-05-01T11:59:00Z'
     deadline: '2024-05-01T11:59:00Z'
-    note: Main conference papers; final extension
   title: International Joint Conference on Biometrics
   website: https://iapr.org/archives/ijcb2024/index.html
 ijcb2025:
   conferenceEndDate: '2025-09-11'
-  conferenceStartDate: '2025-09-08'
+  conferenceStartDate: '2025-09-09'
   dataSrc: ccf-deadlines
   id: ijcb2025
   isApproximateDeadline: false
@@ -54,7 +64,6 @@ ijcb2025:
   timeline:
   - abstractDeadline: '2025-05-06T11:59:59Z'
     deadline: '2025-05-06T11:59:59Z'
-    note: Main conference papers; final extension
   title: International Joint Conference on Biometrics
   website: https://iapr.org/archives/ijcb2025/index.html
 ijcb2026:

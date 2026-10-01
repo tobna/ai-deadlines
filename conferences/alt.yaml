@@ -10,7 +10,6 @@ alt2021:
   - ML
   timeline:
   - deadline: '2020-10-01T05:00:00Z'
-    note: Official CFP and submission instructions specify 5:00 PM EST (UTC-5)
   title: International Conference on Algorithmic Learning Theory
   website: https://algorithmiclearningtheory.org/alt2021/
 alt2024:
@@ -23,8 +22,7 @@ alt2024:
   shortname: ALT 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-09-27T11:59:59Z'
-    deadline: '2023-09-27T11:59:59Z'
+  - deadline: '2023-09-27T11:59:00Z'
   title: International Conference on Algorithmic Learning Theory
   website: http://algorithmiclearningtheory.org/alt2024/
 alt2025:

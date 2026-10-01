@@ -1,6 +1,6 @@
 acml2021:
   conferenceEndDate: '2021-11-19'
-  conferenceStartDate: '2021-11-17'
+  conferenceStartDate: '2021-11-18'
   dataSrc: ccf-deadlines
   id: acml2021
   isApproximateDeadline: false
@@ -11,6 +11,9 @@ acml2021:
   - ML
   - NLP
   timeline:
+  - abstractDeadline: '2021-05-15T11:59:00Z'
+    deadline: '2021-05-15T11:59:00Z'
+    note: Journal Track
   - deadline: '2021-07-03T11:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
@@ -25,13 +28,16 @@ acml2022:
   shortname: ACML 2022
   tags: *id001
   timeline:
+  - abstractDeadline: '2022-05-27T11:59:00Z'
+    deadline: '2022-05-27T11:59:00Z'
+    note: Journal Track
   - deadline: '2022-06-24T11:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2022/
 acml2023:
   conferenceEndDate: '2023-11-14'
-  conferenceStartDate: '2023-11-11'
+  conferenceStartDate: '2023-11-12'
   dataSrc: ccf-deadlines
   id: acml2023
   isApproximateDeadline: false
@@ -39,12 +45,15 @@ acml2023:
   shortname: ACML 2023
   tags: *id001
   timeline:
+  - abstractDeadline: '2023-06-03T11:59:00Z'
+    deadline: '2023-06-03T11:59:00Z'
+    note: Journal Track
   - deadline: '2023-07-01T11:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2023/index.html
 acml2024:
-  conferenceEndDate: '2024-12-08'
+  conferenceEndDate: '2024-12-07'
   conferenceStartDate: '2024-12-05'
   dataSrc: ccf-deadlines
   id: acml2024
@@ -53,12 +62,15 @@ acml2024:
   shortname: ACML 2024
   tags: *id001
   timeline:
+  - abstractDeadline: '2024-05-30T11:59:00Z'
+    deadline: '2024-05-30T11:59:00Z'
+    note: Journal Track
   - deadline: '2024-07-04T11:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
   website: https://www.acml-conf.org/2024/index.html
 acml2025:
-  conferenceEndDate: '2025-12-12'
+  conferenceEndDate: '2025-12-11'
   conferenceStartDate: '2025-12-09'
   dataSrc: ccf-deadlines
   id: acml2025
@@ -67,6 +79,8 @@ acml2025:
   shortname: ACML 2025
   tags: *id001
   timeline:
+  - deadline: '2025-05-31T11:59:00Z'
+    note: Journal Track
   - deadline: '2025-06-27T11:59:59Z'
     note: Conference Track
   title: Asian Conference on Machine Learning
