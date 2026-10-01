@@ -17,6 +17,23 @@ wacv2021:
     note: Round 2
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv2021.thecvf.com
+wacv2022:
+  conferenceEndDate: '2022-01-07'
+  conferenceStartDate: '2022-01-05'
+  dataSrc: ccf-deadlines
+  h5Index: 131
+  id: wacv2022
+  isApproximateDeadline: false
+  rating: A
+  shortname: WACV 2022
+  tags: *id001
+  timeline:
+  - deadline: '2021-06-10T11:59:00Z'
+    note: First round
+  - deadline: '2021-08-19T11:59:00Z'
+    note: Second round
+  title: IEEE/CVF Winter Conference on Applications of Computer Vision
+  website: https://wacv2022.thecvf.com/
 wacv2023:
   acceptanceRate: 40.65
   acceptanceRateYear: 2023
@@ -133,19 +150,20 @@ wacv2027:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2027/
 wacv2028:
-  acceptanceRate: 41.41
-  acceptanceRateYear: 2024
-  acceptedPapers: 846
-  conferenceEndDate: '2028-03-09'
-  conferenceStartDate: '2028-03-04'
+  conferenceEndDate: '2028-01-11'
+  conferenceStartDate: '2028-01-06'
   dataSrc: estimate
   h5Index: 131
   id: wacv2028
   isApproximateDeadline: true
   rating: A
   shortname: WACV 2028
-  submittedPapers: 2043
   tags: *id001
   timeline:
-  - deadline: '2027-07-18T23:59:59Z'
+  - abstractDeadline: '2027-06-20T11:59:59Z'
+    deadline: '2027-06-27T11:59:59Z'
     note: 'From WACV 2027: Round 1'
+  - abstractDeadline: '2027-08-22T11:59:59Z'
+    deadline: '2027-08-29T11:59:59Z'
+    note: 'From WACV 2027: Round 2'
+  title: Winter Conference on Applications of Computer Vision

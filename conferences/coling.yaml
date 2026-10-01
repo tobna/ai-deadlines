@@ -2,7 +2,7 @@ coling2022:
   acceptanceRate: 33.4
   acceptanceRateYear: 2022
   acceptedPapers: 522
-  conferenceEndDate: '2022-10-17'
+  conferenceEndDate: '2022-10-15'
   conferenceStartDate: '2022-10-12'
   dataSrc: ccf-deadlines
   h5Index: 81
@@ -15,15 +15,14 @@ coling2022:
   - NLP
   timeline:
   - deadline: '2022-05-18T11:59:00Z'
-    note: Papers Due
   title: International Conference on Computational Linguistics
   website: https://coling2022.org/
 coling2024:
   acceptanceRate: 44.83
   acceptanceRateYear: 2024
   acceptedPapers: 1556
-  conferenceEndDate: '2024-05-25'
-  conferenceStartDate: '2024-05-20'
+  conferenceEndDate: '2024-05-24'
+  conferenceStartDate: '2024-05-22'
   dataSrc: ccf-deadlines
   h5Index: 81
   id: coling2024
@@ -34,7 +33,6 @@ coling2024:
   tags: *id001
   timeline:
   - deadline: '2023-10-21T11:59:59Z'
-    note: Regular full papers due
   title: International Conference on Computational Linguistics
   website: https://lrec-coling-2024.lrec-conf.org/
 coling2025:

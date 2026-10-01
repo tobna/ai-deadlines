@@ -2,7 +2,7 @@ emnlp2021:
   acceptanceRate: 23.33
   acceptanceRateYear: 2021
   acceptedPapers: 840
-  conferenceEndDate: '2021-11-11'
+  conferenceEndDate: '2021-11-09'
   conferenceStartDate: '2021-11-07'
   dataSrc: ccf-deadlines
   h5Index: 218
@@ -15,7 +15,7 @@ emnlp2021:
   - NLP
   timeline:
   - deadline: '2021-05-16T11:59:00Z'
-    note: ARR pilot submission; reviews must be ready by July 29
+    note: ARR pilot; reviews ready by July 29
   - abstractDeadline: '2021-05-11T11:59:00Z'
     deadline: '2021-05-18T11:59:00Z'
     note: Direct submission
@@ -26,7 +26,7 @@ emnlp2022:
   acceptanceRateYear: 2022
   acceptedPapers: 829
   conferenceEndDate: '2022-12-11'
-  conferenceStartDate: '2022-12-07'
+  conferenceStartDate: '2022-12-09'
   dataSrc: ccf-deadlines
   h5Index: 218
   id: emnlp2022
@@ -48,7 +48,7 @@ emnlp2023:
   acceptanceRateYear: 2023
   acceptedPapers: 1047
   conferenceEndDate: '2023-12-10'
-  conferenceStartDate: '2023-12-06'
+  conferenceStartDate: '2023-12-08'
   dataSrc: ccf-deadlines
   h5Index: 218
   id: emnlp2023
@@ -58,6 +58,8 @@ emnlp2023:
   submittedPapers: 4909
   tags: *id001
   timeline:
+  - deadline: '2023-06-16T11:59:00Z'
+    note: ARR submission
   - abstractDeadline: '2023-06-17T11:59:59Z'
     deadline: '2023-06-24T11:59:59Z'
     note: Direct submission
@@ -69,7 +71,7 @@ emnlp2024:
   acceptanceRate: 20.82
   acceptanceRateYear: 2024
   acceptedPapers: 1271
-  conferenceEndDate: '2024-11-16'
+  conferenceEndDate: '2024-11-14'
   conferenceStartDate: '2024-11-12'
   dataSrc: ccf-deadlines
   h5Index: 218
