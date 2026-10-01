@@ -11,8 +11,6 @@ icip2021:
   - CV
   timeline:
   - deadline: '2021-01-26T11:59:00Z'
-    note: Final extended regular-paper date verified; 23:59:00 and AoE are repository
-      defaults for the unpublished time and zone.
   title: The IEEE International Conference on Image Processing
   website: https://www.2021.ieeeicip.org/www.2021.ieeeicip.org/index.html
 icip2022:
@@ -27,13 +25,11 @@ icip2022:
   tags: *id001
   timeline:
   - deadline: '2022-02-26T11:59:00Z'
-    note: Final extended regular-paper date verified; 23:59:00 and AoE are repository
-      defaults for the unpublished time and zone.
   title: The IEEE International Conference on Image Processing
   website: https://2022.ieeeicip.org/
 icip2023:
   conferenceEndDate: '2023-10-11'
-  conferenceStartDate: '2023-10-08'
+  conferenceStartDate: '2023-10-09'
   dataSrc: ccf-deadlines
   h5Index: 55
   id: icip2023
@@ -43,8 +39,6 @@ icip2023:
   tags: *id001
   timeline:
   - deadline: '2023-02-25T11:59:00Z'
-    note: Final extended regular-paper date verified; 23:59:00 and AoE are repository
-      defaults for the unpublished time and zone.
   title: The IEEE International Conference on Image Processing
   website: https://2023.ieeeicip.org/
 icip2024:
@@ -78,8 +72,8 @@ icip2025:
   title: International Conference on Image Processing
   website: https://2025.ieeeicip.org
 icip2026:
-  conferenceEndDate: '2026-09-17'
-  conferenceStartDate: '2026-09-13'
+  conferenceEndDate: '2026-09-16'
+  conferenceStartDate: '2026-09-14'
   dataSrc: ccf-deadlines
   h5Index: 55
   id: icip2026

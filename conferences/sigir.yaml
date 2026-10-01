@@ -2,8 +2,8 @@ sigir2021:
   acceptanceRate: 20.97
   acceptanceRateYear: 2021
   acceptedPapers: 151
-  conferenceEndDate: '2021-07-15'
-  conferenceStartDate: '2021-07-11'
+  conferenceEndDate: '2021-07-14'
+  conferenceStartDate: '2021-07-12'
   dataSrc: ccf-deadlines
   id: sigir2021
   isApproximateDeadline: false
@@ -40,8 +40,8 @@ sigir2023:
   acceptanceRate: 20.07
   acceptanceRateYear: 2023
   acceptedPapers: 165
-  conferenceEndDate: '2023-07-27'
-  conferenceStartDate: '2023-07-23'
+  conferenceEndDate: '2023-07-26'
+  conferenceStartDate: '2023-07-24'
   dataSrc: ccf-deadlines
   id: sigir2023
   isApproximateDeadline: false
@@ -58,8 +58,8 @@ sigir2024:
   acceptanceRate: 20.23
   acceptanceRateYear: 2024
   acceptedPapers: 160
-  conferenceEndDate: '2024-07-18'
-  conferenceStartDate: '2024-07-14'
+  conferenceEndDate: '2024-07-17'
+  conferenceStartDate: '2024-07-15'
   dataSrc: ccf-deadlines
   id: sigir2024
   isApproximateDeadline: false
@@ -76,8 +76,8 @@ sigir2025:
   acceptanceRate: 22.32
   acceptanceRateYear: 2025
   acceptedPapers: 239
-  conferenceEndDate: '2025-07-18'
-  conferenceStartDate: '2025-07-13'
+  conferenceEndDate: '2025-07-16'
+  conferenceStartDate: '2025-07-14'
   dataSrc: ccf-deadlines
   id: sigir2025
   isApproximateDeadline: false

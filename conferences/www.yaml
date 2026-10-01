@@ -22,7 +22,7 @@ www2022:
   acceptanceRateYear: 2022
   acceptedPapers: 323
   conferenceEndDate: '2022-04-29'
-  conferenceStartDate: '2022-04-25'
+  conferenceStartDate: '2022-04-27'
   dataSrc: ccf-deadlines
   id: www2022
   isApproximateDeadline: false
@@ -39,8 +39,8 @@ www2023:
   acceptanceRate: 20.47
   acceptanceRateYear: 2023
   acceptedPapers: 365
-  conferenceEndDate: '2023-05-05'
-  conferenceStartDate: '2023-05-01'
+  conferenceEndDate: '2023-05-04'
+  conferenceStartDate: '2023-05-02'
   dataSrc: ccf-deadlines
   id: www2023
   isApproximateDeadline: false
@@ -58,7 +58,7 @@ www2024:
   acceptanceRateYear: 2024
   acceptedPapers: 405
   conferenceEndDate: '2024-05-17'
-  conferenceStartDate: '2024-05-13'
+  conferenceStartDate: '2024-05-15'
   dataSrc: ccf-deadlines
   id: www2024
   isApproximateDeadline: false
@@ -76,7 +76,7 @@ www2025:
   acceptanceRateYear: 2025
   acceptedPapers: 409
   conferenceEndDate: '2025-05-02'
-  conferenceStartDate: '2025-04-28'
+  conferenceStartDate: '2025-04-30'
   dataSrc: ccf-deadlines
   id: www2025
   isApproximateDeadline: false
