@@ -1,3 +1,17 @@
+rss2021:
+  conferenceEndDate: '2021-07-16'
+  conferenceStartDate: '2021-07-12'
+  dataSrc: ccf-deadlines
+  id: rss2021
+  isApproximateDeadline: false
+  shortname: RSS 2021
+  tags: &id001
+  - ML
+  - RO
+  timeline:
+  - deadline: '2021-03-02T11:59:00Z'
+  title: Robotics Science and Systems
+  website: https://roboticsconference.org/2021/
 rss2023:
   conferenceEndDate: '2023-07-14'
   conferenceStartDate: '2023-07-10'
@@ -5,9 +19,7 @@ rss2023:
   id: rss2023
   isApproximateDeadline: false
   shortname: RSS 2023
-  tags: &id001
-  - ML
-  - RO
+  tags: *id001
   timeline:
   - deadline: '2023-02-04T11:59:59Z'
   title: Robotics Science and Systems

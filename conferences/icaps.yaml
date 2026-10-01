@@ -1,3 +1,60 @@
+icaps2021:
+  conferenceEndDate: '2021-08-13'
+  conferenceStartDate: '2021-08-02'
+  dataSrc: ccf-deadlines
+  id: icaps2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICAPS 2021
+  tags: &id001
+  - RO
+  timeline:
+  - abstractDeadline: '2020-12-12T11:59:00Z'
+    deadline: '2020-12-19T11:59:00Z'
+  title: International Conference on Automated Planning and Scheduling
+  website: https://icaps21.icaps-conference.org/Calls/main-track.html
+icaps2022:
+  conferenceEndDate: '2022-06-24'
+  conferenceStartDate: '2022-06-13'
+  dataSrc: ccf-deadlines
+  id: icaps2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICAPS 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2021-12-11T11:59:00Z'
+    deadline: '2021-12-16T11:59:00Z'
+  title: International Conference on Automated Planning and Scheduling
+  website: https://icaps22.icaps-conference.org/
+icaps2023:
+  conferenceEndDate: '2023-07-13'
+  conferenceStartDate: '2023-07-08'
+  dataSrc: ccf-deadlines
+  id: icaps2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICAPS 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-11-26T11:59:00Z'
+    deadline: '2022-12-01T11:59:00Z'
+  title: International Conference on Automated Planning and Scheduling
+  website: https://icaps23.icaps-conference.org/
+icaps2024:
+  conferenceEndDate: '2024-06-06'
+  conferenceStartDate: '2024-06-01'
+  dataSrc: ccf-deadlines
+  id: icaps2024
+  isApproximateDeadline: false
+  rating: A*
+  shortname: ICAPS 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-12-08T11:59:00Z'
+    deadline: '2023-12-14T11:59:00Z'
+  title: International Conference on Automated Planning and Scheduling
+  website: https://icaps24.icaps-conference.org/
 icaps2025:
   conferenceEndDate: '2025-11-14'
   conferenceStartDate: '2025-11-09'
@@ -6,8 +63,7 @@ icaps2025:
   isApproximateDeadline: false
   rating: A*
   shortname: ICAPS 2025
-  tags: &id001
-  - RO
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-10-26T11:59:59Z'
     deadline: '2024-11-02T11:59:59Z'

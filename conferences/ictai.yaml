@@ -9,9 +9,48 @@ ictai2021:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2021-06-21T11:59:00Z'
+  - deadline: '2021-07-27T11:59:00Z'
   title: International Conference on Tools with Artificial Intellignce
-  website: https://ictai.computer.org/
+  website: https://ictai.computer.org/2021/
+ictai2022:
+  conferenceEndDate: '2022-11-02'
+  conferenceStartDate: '2022-10-31'
+  dataSrc: ccf-deadlines
+  id: ictai2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICTAI 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-08-09T11:59:00Z'
+  title: International Conference on Tools with Artificial Intellignce
+  website: https://ictai.computer.org/2022/
+ictai2024:
+  conferenceEndDate: '2024-10-30'
+  conferenceStartDate: '2024-10-28'
+  dataSrc: ccf-deadlines
+  id: ictai2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICTAI 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-07-22T11:59:00Z'
+  title: International Conference on Tools with Artificial Intellignce
+  website: https://ictai.computer.org/2024/
+ictai2025:
+  conferenceEndDate: '2025-11-05'
+  conferenceStartDate: '2025-11-03'
+  dataSrc: ccf-deadlines
+  id: ictai2025
+  isApproximateDeadline: false
+  rating: B
+  shortname: ICTAI 2025
+  tags: *id001
+  timeline:
+  - deadline: '2025-07-16T11:59:00Z'
+  title: International Conference on Tools with Artificial Intellignce
+  website: https://easyconferences.eu/ictai2025/
 ictai2026:
   conferenceEndDate: '2026-11-04'
   conferenceStartDate: '2026-11-02'
@@ -25,3 +64,27 @@ ictai2026:
   - deadline: '2026-07-22T11:59:00Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://ictai.computer.org/2026/
+ictai2027:
+  conferenceEndDate: '2027-11-07'
+  conferenceStartDate: '2027-11-02'
+  dataSrc: estimate
+  id: ictai2027
+  isApproximateDeadline: true
+  rating: B
+  shortname: ICTAI 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-07-22T11:59:00Z'
+  title: International Conference on Tools with Artificial Intellignce
+ictai2028:
+  conferenceEndDate: '2028-11-07'
+  conferenceStartDate: '2028-11-02'
+  dataSrc: estimate
+  id: ictai2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: ICTAI 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-07-22T11:59:00Z'
+  title: International Conference on Tools with Artificial Intellignce

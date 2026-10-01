@@ -1,3 +1,46 @@
+chi2021:
+  conferenceEndDate: '2021-05-14'
+  conferenceStartDate: '2021-05-10'
+  dataSrc: ccf-deadlines
+  id: chi2021
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CHI 2021
+  tags: &id001
+  - HCI
+  timeline:
+  - abstractDeadline: '2020-09-11T00:00:00Z'
+    deadline: '2020-09-18T00:00:00Z'
+  title: ACM Conference on Human Factors in Computing Systems
+  website: https://chi2021.acm.org/
+chi2022:
+  conferenceEndDate: '2022-05-05'
+  conferenceStartDate: '2022-05-02'
+  dataSrc: ccf-deadlines
+  id: chi2022
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CHI 2022
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2021-09-03T11:59:00Z'
+    deadline: '2021-09-10T11:59:00Z'
+  title: ACM Conference on Human Factors in Computing Systems
+  website: https://chi2022.acm.org/
+chi2023:
+  conferenceEndDate: '2023-04-27'
+  conferenceStartDate: '2023-04-24'
+  dataSrc: ccf-deadlines
+  id: chi2023
+  isApproximateDeadline: false
+  rating: A*
+  shortname: CHI 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2022-09-09T11:59:00Z'
+    deadline: '2022-09-16T11:59:00Z'
+  title: ACM Conference on Human Factors in Computing Systems
+  website: https://chi2023.acm.org/
 chi2024:
   acceptanceRate: 26.2
   acceptanceRateYear: 2024
@@ -10,8 +53,7 @@ chi2024:
   rating: A*
   shortname: CHI 2024
   submittedPapers: 4046
-  tags: &id001
-  - HCI
+  tags: *id001
   timeline:
   - abstractDeadline: '2023-09-08T11:59:59Z'
     deadline: '2023-09-15T11:59:59Z'
@@ -79,18 +121,15 @@ chi2027:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2027.acm.org/
 chi2028:
-  acceptanceRate: 24.88
-  acceptanceRateYear: 2025
-  acceptedPapers: 1249
-  conferenceEndDate: '2028-05-14'
-  conferenceStartDate: '2028-05-09'
+  conferenceEndDate: '2028-05-15'
+  conferenceStartDate: '2028-05-10'
   dataSrc: estimate
   id: chi2028
   isApproximateDeadline: true
   rating: A*
   shortname: CHI 2028
-  submittedPapers: 5020
   tags: *id001
   timeline:
   - deadline: '2027-09-11T11:59:59Z'
-  title: ACM Conference on Human Factors in Computing Systems
+    note: 'From CHI 2027: Full Paper Due'
+  title: The ACM Conference on Human Factors in Computing Systems
