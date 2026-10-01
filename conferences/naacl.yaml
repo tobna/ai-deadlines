@@ -2,8 +2,8 @@ naacl2021:
   acceptanceRate: 26.54
   acceptanceRateYear: 2021
   acceptedPapers: 477
-  conferenceEndDate: '2021-06-11'
-  conferenceStartDate: '2021-06-06'
+  conferenceEndDate: '2021-06-09'
+  conferenceStartDate: '2021-06-07'
   dataSrc: ccf-deadlines
   h5Index: 126
   id: naacl2021
@@ -22,8 +22,8 @@ naacl2022:
   acceptanceRate: 21.02
   acceptanceRateYear: 2022
   acceptedPapers: 442
-  conferenceEndDate: '2022-07-15'
-  conferenceStartDate: '2022-07-10'
+  conferenceEndDate: '2022-07-13'
+  conferenceStartDate: '2022-07-11'
   dataSrc: ccf-deadlines
   h5Index: 126
   id: naacl2022
@@ -44,8 +44,8 @@ naacl2024:
   acceptanceRate: 23.21
   acceptanceRateYear: 2024
   acceptedPapers: 565
-  conferenceEndDate: '2024-06-21'
-  conferenceStartDate: '2024-06-16'
+  conferenceEndDate: '2024-06-19'
+  conferenceStartDate: '2024-06-17'
   dataSrc: ccf-deadlines
   h5Index: 126
   id: naacl2024

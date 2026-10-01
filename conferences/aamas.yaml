@@ -16,7 +16,7 @@ aamas2021:
   website: https://www.ifaamas.org/AAMAS/aamas2021/
 aamas2022:
   conferenceEndDate: '2022-05-13'
-  conferenceStartDate: '2022-05-09'
+  conferenceStartDate: '2022-05-11'
   dataSrc: ccf-deadlines
   id: aamas2022
   isApproximateDeadline: false
@@ -30,7 +30,7 @@ aamas2022:
   website: https://aamas2022-conference.auckland.ac.nz/
 aamas2023:
   conferenceEndDate: '2023-06-02'
-  conferenceStartDate: '2023-05-29'
+  conferenceStartDate: '2023-05-31'
   dataSrc: ccf-deadlines
   id: aamas2023
   isApproximateDeadline: false
@@ -44,7 +44,7 @@ aamas2023:
   website: https://aamas2023.soton.ac.uk/
 aamas2024:
   conferenceEndDate: '2024-05-10'
-  conferenceStartDate: '2024-05-06'
+  conferenceStartDate: '2024-05-08'
   dataSrc: ccf-deadlines
   id: aamas2024
   isApproximateDeadline: false
@@ -54,6 +54,9 @@ aamas2024:
   timeline:
   - abstractDeadline: '2023-10-03T11:59:59Z'
     deadline: '2023-10-10T11:59:59Z'
+    note: Main track
+  - deadline: '2024-01-09T11:59:00Z'
+    note: AAAI track
   title: International Conference on Autonomous Agents and Multiagent Systems
   website: https://www.aamas2024-conference.auckland.ac.nz/
 aamas2025:

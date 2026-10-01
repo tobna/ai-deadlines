@@ -10,9 +10,6 @@ ksem2021:
   - ML
   timeline:
   - deadline: '2021-05-01T11:59:00Z'
-    note: Regular papers; firm deadline. Cutoff clock and timezone unpublished. 23:59:00
-      uses the repository default where the source gives no clear cutoff clock. AoE
-      uses the repository default because the source gives no timezone.
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://www.cloud-conf.net/ksem21/index.html
 ksem2022:
@@ -26,9 +23,6 @@ ksem2022:
   tags: *id001
   timeline:
   - deadline: '2022-04-26T11:59:00Z'
-    note: Regular papers; firm extension. Cutoff clock and timezone unpublished. 23:59:00
-      uses the repository default where the source gives no clear cutoff clock. AoE
-      uses the repository default because the source gives no timezone.
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem22.smart-conf.net/
 ksem2023:
@@ -45,7 +39,7 @@ ksem2023:
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://www.ksem2023.conferences.academy/
 ksem2024:
-  conferenceEndDate: '2024-08-18'
+  conferenceEndDate: '2024-08-17'
   conferenceStartDate: '2024-08-16'
   dataSrc: ccf-deadlines
   id: ksem2024
@@ -54,7 +48,7 @@ ksem2024:
   shortname: KSEM 2024
   tags: *id001
   timeline:
-  - deadline: '2024-02-16T11:59:00Z'
+  - deadline: '2024-04-16T11:59:00Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem24.ai-edge.net/
 ksem2025:
@@ -74,7 +68,7 @@ ksem2025:
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2025.scimeeting.cn/
 ksem2026:
-  conferenceEndDate: '2026-07-19'
+  conferenceEndDate: '2026-07-18'
   conferenceStartDate: '2026-07-17'
   dataSrc: ccf-deadlines
   id: ksem2026
@@ -84,9 +78,6 @@ ksem2026:
   tags: *id001
   timeline:
   - deadline: '2026-03-01T11:59:00Z'
-    note: Regular papers; cutoff clock and timezone unpublished. 23:59:00 uses the
-      repository default where the source gives no clear cutoff clock. AoE uses the
-      repository default because the source gives no timezone.
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2026.rosc.org.cn/
 ksem2027:

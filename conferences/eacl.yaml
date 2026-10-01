@@ -3,7 +3,7 @@ eacl2021:
   acceptanceRateYear: 2021
   acceptedPapers: 326
   conferenceEndDate: '2021-04-23'
-  conferenceStartDate: '2021-04-19'
+  conferenceStartDate: '2021-04-21'
   dataSrc: ccf-deadlines
   h5Index: 77
   id: eacl2021
@@ -22,7 +22,7 @@ eacl2023:
   acceptanceRate: 24.1
   acceptanceRateYear: 2023
   acceptedPapers: 281
-  conferenceEndDate: '2023-05-06'
+  conferenceEndDate: '2023-05-04'
   conferenceStartDate: '2023-05-02'
   dataSrc: ccf-deadlines
   h5Index: 77
@@ -33,6 +33,8 @@ eacl2023:
   submittedPapers: 1166
   tags: *id001
   timeline:
+  - deadline: '2022-10-16T11:59:00Z'
+    note: ARR submission
   - abstractDeadline: '2022-10-14T11:59:00Z'
     deadline: '2022-10-21T11:59:00Z'
     note: Direct submission
@@ -43,8 +45,8 @@ eacl2024:
   acceptanceRate: 20.29
   acceptanceRateYear: 2024
   acceptedPapers: 226
-  conferenceEndDate: '2024-03-22'
-  conferenceStartDate: '2024-03-17'
+  conferenceEndDate: '2024-03-20'
+  conferenceStartDate: '2024-03-18'
   dataSrc: ccf-deadlines
   h5Index: 77
   id: eacl2024
@@ -65,8 +67,8 @@ eacl2026:
   acceptanceRate: 20.29
   acceptanceRateYear: 2024
   acceptedPapers: 226
-  conferenceEndDate: '2026-03-29'
-  conferenceStartDate: '2026-03-24'
+  conferenceEndDate: '2026-03-27'
+  conferenceStartDate: '2026-03-25'
   dataSrc: ccf-deadlines
   h5Index: 77
   id: eacl2026
