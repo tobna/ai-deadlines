@@ -1,3 +1,58 @@
+mobilehci2021:
+  conferenceEndDate: '2021-10-01'
+  conferenceStartDate: '2021-09-28'
+  dataSrc: ccf-deadlines
+  id: mobilehci2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: MobileHCI 2021
+  tags: &id001
+  - HCI
+  timeline:
+  - deadline: '2021-02-05T11:59:00Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  website: https://mobilehci.acm.org/2021/
+mobilehci2022:
+  conferenceEndDate: '2022-09-30'
+  conferenceStartDate: '2022-09-28'
+  dataSrc: ccf-deadlines
+  id: mobilehci2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: MobileHCI 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-02-04T11:59:00Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  website: https://mobilehci.acm.org/2022/
+mobilehci2023:
+  conferenceEndDate: '2023-09-29'
+  conferenceStartDate: '2023-09-27'
+  dataSrc: ccf-deadlines
+  id: mobilehci2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: MobileHCI 2023
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2023-01-21T11:59:00Z'
+    deadline: '2023-01-28T11:59:00Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  website: https://mobilehci.acm.org/2023/
+mobilehci2024:
+  conferenceEndDate: '2024-10-03'
+  conferenceStartDate: '2024-10-01'
+  dataSrc: ccf-deadlines
+  id: mobilehci2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: MobileHCI 2024
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2024-02-15T11:59:00Z'
+    deadline: '2024-02-22T11:59:00Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  website: https://mobilehci.acm.org/2024/
 mobilehci2025:
   conferenceEndDate: '2025-09-26'
   conferenceStartDate: '2025-09-22'
@@ -7,13 +62,25 @@ mobilehci2025:
   location: Sharm El-Sheikh, Egypt
   rating: B
   shortname: MobileHCI 2025
-  tags: &id001
-  - HCI
+  tags: *id001
   timeline:
   - deadline: '2025-06-12T12:00:00Z'
     note: Late-Breaking Work
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2025/index.php
+mobilehci2026:
+  conferenceEndDate: '2026-09-03'
+  conferenceStartDate: '2026-09-01'
+  dataSrc: ccf-deadlines
+  id: mobilehci2026
+  isApproximateDeadline: false
+  rating: B
+  shortname: MobileHCI 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-01-30T11:59:00Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction
+  website: https://mobilehci.acm.org/2026/
 mobilehci2027:
   conferenceEndDate: '2027-09-23'
   conferenceStartDate: '2027-09-20'
@@ -28,3 +95,16 @@ mobilehci2027:
     deadline: '2027-02-18T11:59:59Z'
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2027/
+mobilehci2028:
+  conferenceEndDate: '2028-09-25'
+  conferenceStartDate: '2028-09-20'
+  dataSrc: estimate
+  id: mobilehci2028
+  isApproximateDeadline: true
+  rating: B
+  shortname: MobileHCI 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-02-11T11:59:59Z'
+    deadline: '2028-02-18T11:59:59Z'
+  title: ACM International Conference on Mobile Human-Computer Interaction

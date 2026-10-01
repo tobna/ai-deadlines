@@ -1,3 +1,51 @@
+hicss2022:
+  conferenceEndDate: '2022-01-07'
+  conferenceStartDate: '2022-01-03'
+  dataSrc: ccf-deadlines
+  id: hicss2022
+  isApproximateDeadline: false
+  shortname: HICSS 2022
+  tags: &id001 []
+  timeline:
+  - deadline: '2021-06-16T11:59:00Z'
+  title: Hawaii International Conference on System Sciences
+  website: https://hicss.hawaii.edu/
+hicss2024:
+  conferenceEndDate: '2024-01-06'
+  conferenceStartDate: '2024-01-04'
+  dataSrc: ccf-deadlines
+  id: hicss2024
+  isApproximateDeadline: false
+  shortname: HICSS 2024
+  tags: *id001
+  timeline:
+  - deadline: '2023-06-16T11:59:00Z'
+  title: Hawaii International Conference on System Sciences
+  website: https://hicss.hawaii.edu/
+hicss2025:
+  conferenceEndDate: '2025-01-10'
+  conferenceStartDate: '2025-01-08'
+  dataSrc: ccf-deadlines
+  id: hicss2025
+  isApproximateDeadline: false
+  shortname: HICSS 2025
+  tags: *id001
+  timeline:
+  - deadline: '2024-06-16T11:59:00Z'
+  title: Hawaii International Conference on System Sciences
+  website: https://hicss.hawaii.edu/
+hicss2026:
+  conferenceEndDate: '2026-01-09'
+  conferenceStartDate: '2026-01-07'
+  dataSrc: ccf-deadlines
+  id: hicss2026
+  isApproximateDeadline: false
+  shortname: HICSS 2026
+  tags: *id001
+  timeline:
+  - deadline: '2025-06-16T11:59:00Z'
+  title: Hawaii International Conference on System Sciences
+  website: https://hicss.hawaii.edu/
 hicss2027:
   conferenceEndDate: '2027-01-08'
   conferenceStartDate: '2027-01-05'
@@ -6,9 +54,21 @@ hicss2027:
   isApproximateDeadline: false
   location: Waikoloa, USA
   shortname: HICSS 2027
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-06-16T09:59:59Z'
     note: Paper Submission
   title: Hawaii International Conference on System Sciences
   website: https://hicss.hawaii.edu/
+hicss2028:
+  conferenceEndDate: '2028-01-10'
+  conferenceStartDate: '2028-01-05'
+  dataSrc: estimate
+  id: hicss2028
+  isApproximateDeadline: true
+  shortname: HICSS 2028
+  tags: *id001
+  timeline:
+  - deadline: '2027-06-16T09:59:59Z'
+    note: 'From HICSS 2027: Paper Submission'
+  title: Hawaii International Conference on System Sciences
