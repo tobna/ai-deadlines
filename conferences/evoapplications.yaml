@@ -9,7 +9,6 @@ evoapplications2021:
   tags: &id001 []
   timeline:
   - deadline: '2020-11-20T11:59:59Z'
-    note: Regular papers; extended deadline
   title: International Conference on the Applications of Evolutionary Computation
   website: https://www.evostar.org/2021/evoapps/
 evoapplications2022:
@@ -23,7 +22,6 @@ evoapplications2022:
   tags: *id001
   timeline:
   - deadline: '2021-11-25T11:59:59Z'
-    note: Regular papers; extended deadline
   title: International Conference on the Applications of Evolutionary Computation
   website: https://www.evostar.org/2022/evoapps/
 evoapplications2023:
@@ -37,9 +35,21 @@ evoapplications2023:
   tags: *id001
   timeline:
   - deadline: '2022-11-17T11:59:59Z'
-    note: Regular papers; extended deadline
   title: International Conference on the Applications of Evolutionary Computation
   website: https://www.evostar.org/2023/evoapps/
+evoapplications2024:
+  conferenceEndDate: '2024-04-05'
+  conferenceStartDate: '2024-04-03'
+  dataSrc: ccf-deadlines
+  id: evoapplications2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: EvoApplications 2024
+  tags: *id001
+  timeline:
+  - deadline: '2023-11-16T11:59:00Z'
+  title: International Conference on the Applications of Evolutionary Computation
+  website: https://www.evostar.org/2024/wp-content/uploads/2023/10/evo2024-conf-flyers-extended-deadline-evoapp-261023.pdf
 evoapplications2025:
   conferenceEndDate: '2025-04-25'
   conferenceStartDate: '2025-04-23'
@@ -51,7 +61,6 @@ evoapplications2025:
   tags: *id001
   timeline:
   - deadline: '2024-11-16T11:59:59Z'
-    note: Regular papers; extended deadline
   title: International Conference on the Applications of Evolutionary Computation
   website: https://www.evostar.org/2025/evoapps/
 evoapplications2026:
@@ -65,7 +74,6 @@ evoapplications2026:
   tags: *id001
   timeline:
   - deadline: '2025-11-16T11:59:59Z'
-    note: Regular papers; extended deadline
   title: International Conference on the Applications of Evolutionary Computation
   website: https://www.evostar.org/2026/evoapps/
 evoapplications2027:

@@ -9,7 +9,6 @@ evocop2021:
   tags: &id001 []
   timeline:
   - deadline: '2020-11-20T11:59:59Z'
-    note: Regular papers; extended deadline
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2021/evocop/
 evocop2022:
@@ -23,7 +22,6 @@ evocop2022:
   tags: *id001
   timeline:
   - deadline: '2021-11-25T11:59:59Z'
-    note: Regular papers; extended deadline
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2022/evocop/
 evocop2023:
@@ -37,7 +35,6 @@ evocop2023:
   tags: *id001
   timeline:
   - deadline: '2022-11-17T11:59:59Z'
-    note: Regular papers; extended deadline
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2023/evocop/
 evocop2024:
@@ -51,7 +48,6 @@ evocop2024:
   tags: *id001
   timeline:
   - deadline: '2023-11-16T11:59:59Z'
-    note: Regular papers; extended deadline
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2024/wp-content/uploads/2023/10/evo2024-conf-flyers-extended-deadline-evocop-261023.pdf
 evocop2025:
@@ -65,7 +61,6 @@ evocop2025:
   tags: *id001
   timeline:
   - deadline: '2024-11-16T11:59:59Z'
-    note: Regular papers; extended deadline
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2025/evocop/
 evocop2026:
@@ -79,7 +74,6 @@ evocop2026:
   tags: *id001
   timeline:
   - deadline: '2025-11-16T11:59:59Z'
-    note: Regular papers; extended deadline
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2026/evocop/
 evocop2027:
