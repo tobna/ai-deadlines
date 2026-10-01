@@ -1,4 +1,7 @@
 aaai2021:
+  acceptanceRate: 21.39
+  acceptanceRateYear: 2021
+  acceptedPapers: 1692
   conferenceEndDate: '2021-02-07'
   conferenceStartDate: '2021-02-04'
   dataSrc: ccf-deadlines
@@ -7,6 +10,7 @@ aaai2021:
   isApproximateDeadline: false
   rating: A*
   shortname: AAAI 2021
+  submittedPapers: 7911
   tags: &id001
   - CV
   - DM
@@ -156,6 +160,9 @@ aaai2027:
   title: AAAI Conference on Artificial Intelligence
   website: https://aaai.org/conference/aaai/aaai-27/
 aaai2028:
+  acceptanceRate: 17.6
+  acceptanceRateYear: 2026
+  acceptedPapers: 4167
   conferenceEndDate: '2028-02-21'
   conferenceStartDate: '2028-02-16'
   dataSrc: estimate
@@ -164,6 +171,7 @@ aaai2028:
   isApproximateDeadline: true
   rating: A*
   shortname: AAAI 2028
+  submittedPapers: 23680
   tags: *id001
   timeline:
   - abstractDeadline: '2027-07-22T11:59:59Z'

@@ -21,8 +21,8 @@ cikm2021:
   acceptanceRate: 21.66
   acceptanceRateYear: 2021
   acceptedPapers: 271
-  conferenceEndDate: '2021-11-05'
-  conferenceStartDate: '2021-11-01'
+  conferenceEndDate: '2021-11-04'
+  conferenceStartDate: '2021-11-02'
   dataSrc: ccf-deadlines
   id: cikm2021
   isApproximateDeadline: false
@@ -58,7 +58,7 @@ cikm2023:
   acceptanceRateYear: 2023
   acceptedPapers: 354
   conferenceEndDate: '2023-10-25'
-  conferenceStartDate: '2023-10-21'
+  conferenceStartDate: '2023-10-23'
   dataSrc: ccf-deadlines
   id: cikm2023
   isApproximateDeadline: false
@@ -75,8 +75,8 @@ cikm2024:
   acceptanceRate: 23.2
   acceptanceRateYear: 2024
   acceptedPapers: 347
-  conferenceEndDate: '2024-10-25'
-  conferenceStartDate: '2024-10-21'
+  conferenceEndDate: '2024-10-24'
+  conferenceStartDate: '2024-10-22'
   dataSrc: ccf-deadlines
   id: cikm2024
   isApproximateDeadline: false
@@ -88,7 +88,7 @@ cikm2024:
   - abstractDeadline: '2024-05-14T11:59:59Z'
     deadline: '2024-05-21T11:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
-  website: https://cikm2024.org/
+  website: https://web.archive.org/web/20241108001720/https://cikm2024.org/
 cikm2025:
   acceptanceRate: 27.23
   acceptanceRateYear: 2025

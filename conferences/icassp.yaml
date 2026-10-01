@@ -1,4 +1,7 @@
 icassp2021:
+  acceptanceRate: 48.03
+  acceptanceRateYear: 2021
+  acceptedPapers: 1734
   conferenceEndDate: '2021-06-11'
   conferenceStartDate: '2021-06-08'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ icassp2021:
   isApproximateDeadline: false
   rating: B
   shortname: ICASSP 2021
+  submittedPapers: 3610
   tags: &id001
   - SP
   timeline:
@@ -123,6 +127,9 @@ icassp2027:
   title: IEEE International Conference on Acoustics, Speech, and Signal Processing
   website: https://2027.ieeeicassp.org/
 icassp2028:
+  acceptanceRate: 45.27
+  acceptanceRateYear: 2025
+  acceptedPapers: 3145
   conferenceEndDate: '2028-05-21'
   conferenceStartDate: '2028-05-16'
   dataSrc: estimate
@@ -130,6 +137,7 @@ icassp2028:
   isApproximateDeadline: true
   rating: B
   shortname: ICASSP 2028
+  submittedPapers: 6947
   tags: *id001
   timeline:
   - deadline: '2027-09-24T11:59:59Z'

@@ -1,4 +1,7 @@
 chi2021:
+  acceptanceRate: 26.26
+  acceptanceRateYear: 2021
+  acceptedPapers: 747
   conferenceEndDate: '2021-05-14'
   conferenceStartDate: '2021-05-10'
   dataSrc: ccf-deadlines
@@ -6,6 +9,7 @@ chi2021:
   isApproximateDeadline: false
   rating: A*
   shortname: CHI 2021
+  submittedPapers: 2845
   tags: &id001
   - HCI
   timeline:
@@ -14,6 +18,9 @@ chi2021:
   title: ACM Conference on Human Factors in Computing Systems
   website: https://chi2021.acm.org/
 chi2022:
+  acceptanceRate: 24.7
+  acceptanceRateYear: 2022
+  acceptedPapers: 637
   conferenceEndDate: '2022-05-05'
   conferenceStartDate: '2022-05-02'
   dataSrc: ccf-deadlines
@@ -21,6 +28,7 @@ chi2022:
   isApproximateDeadline: false
   rating: A*
   shortname: CHI 2022
+  submittedPapers: 2579
   tags: *id001
   timeline:
   - abstractDeadline: '2021-09-03T11:59:00Z'
@@ -28,6 +36,9 @@ chi2022:
   title: ACM Conference on Human Factors in Computing Systems
   website: https://chi2022.acm.org/
 chi2023:
+  acceptanceRate: 27.62
+  acceptanceRateYear: 2023
+  acceptedPapers: 879
   conferenceEndDate: '2023-04-27'
   conferenceStartDate: '2023-04-24'
   dataSrc: ccf-deadlines
@@ -35,6 +46,7 @@ chi2023:
   isApproximateDeadline: false
   rating: A*
   shortname: CHI 2023
+  submittedPapers: 3182
   tags: *id001
   timeline:
   - abstractDeadline: '2022-09-09T11:59:00Z'
@@ -121,6 +133,9 @@ chi2027:
   title: The ACM Conference on Human Factors in Computing Systems
   website: https://chi2027.acm.org/
 chi2028:
+  acceptanceRate: 24.88
+  acceptanceRateYear: 2025
+  acceptedPapers: 1249
   conferenceEndDate: '2028-05-15'
   conferenceStartDate: '2028-05-10'
   dataSrc: estimate
@@ -128,6 +143,7 @@ chi2028:
   isApproximateDeadline: true
   rating: A*
   shortname: CHI 2028
+  submittedPapers: 5020
   tags: *id001
   timeline:
   - deadline: '2027-09-11T11:59:59Z'

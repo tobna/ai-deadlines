@@ -2,7 +2,7 @@ uai2021:
   acceptanceRate: 29.54
   acceptanceRateYear: 2021
   acceptedPapers: 205
-  conferenceEndDate: '2021-07-30'
+  conferenceEndDate: '2021-07-29'
   conferenceStartDate: '2021-07-27'
   dataSrc: ccf-deadlines
   id: uai2021
@@ -20,8 +20,8 @@ uai2022:
   acceptanceRate: 32.3
   acceptanceRateYear: 2022
   acceptedPapers: 230
-  conferenceEndDate: '2022-08-05'
-  conferenceStartDate: '2022-08-01'
+  conferenceEndDate: '2022-08-04'
+  conferenceStartDate: '2022-08-02'
   dataSrc: ccf-deadlines
   id: uai2022
   isApproximateDeadline: false
@@ -37,8 +37,8 @@ uai2023:
   acceptanceRate: 31.23
   acceptanceRateYear: 2023
   acceptedPapers: 243
-  conferenceEndDate: '2023-08-04'
-  conferenceStartDate: '2023-07-31'
+  conferenceEndDate: '2023-08-03'
+  conferenceStartDate: '2023-08-01'
   dataSrc: ccf-deadlines
   id: uai2023
   isApproximateDeadline: false
@@ -54,8 +54,8 @@ uai2024:
   acceptanceRate: 27.97
   acceptanceRateYear: 2024
   acceptedPapers: 200
-  conferenceEndDate: '2024-07-19'
-  conferenceStartDate: '2024-07-15'
+  conferenceEndDate: '2024-07-18'
+  conferenceStartDate: '2024-07-16'
   dataSrc: ccf-deadlines
   id: uai2024
   isApproximateDeadline: false
