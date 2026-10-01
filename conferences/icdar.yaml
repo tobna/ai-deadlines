@@ -1,6 +1,6 @@
 icdar2021:
   conferenceEndDate: '2021-09-10'
-  conferenceStartDate: '2021-09-05'
+  conferenceStartDate: '2021-09-08'
   dataSrc: ccf-deadlines
   id: icdar2021
   isApproximateDeadline: false
@@ -9,10 +9,46 @@ icdar2021:
   tags: &id001
   - CV
   timeline:
+  - deadline: '2020-11-19T15:59:00Z'
+    note: Journal track (soft deadline)
   - deadline: '2021-02-25T11:59:00Z'
-    note: Conference papers; final extension
+    note: Conference track
   title: International Conference on Document Analysis and Recognition
   website: https://iapr.org/archives/icdar2021/index.html
+icdar2023:
+  conferenceEndDate: '2023-08-23'
+  conferenceStartDate: '2023-08-21'
+  dataSrc: ccf-deadlines
+  id: icdar2023
+  isApproximateDeadline: false
+  rating: A
+  shortname: ICDAR 2023
+  tags: *id001
+  timeline:
+  - deadline: '2022-11-15T11:59:00Z'
+    note: Journal track
+  - abstractDeadline: '2023-02-04T11:59:00Z'
+    deadline: '2023-02-11T11:59:00Z'
+    note: Conference track
+  title: International Conference on Document Analysis and Recognition
+  website: https://iapr.org/archives/icdar2023/index.html
+icdar2024:
+  conferenceEndDate: '2024-09-04'
+  conferenceStartDate: '2024-09-02'
+  dataSrc: ccf-deadlines
+  id: icdar2024
+  isApproximateDeadline: false
+  rating: A
+  shortname: ICDAR 2024
+  tags: *id001
+  timeline:
+  - deadline: '2023-11-15T11:59:00Z'
+    note: Journal track
+  - abstractDeadline: '2024-02-02T11:59:00Z'
+    deadline: '2024-02-13T11:59:00Z'
+    note: Conference track
+  title: International Conference on Document Analysis and Recognition
+  website: https://icdar2024.net/
 icdar2025:
   conferenceEndDate: '2025-09-21'
   conferenceStartDate: '2025-09-17'
@@ -61,3 +97,16 @@ icdar2027:
     deadline: '2027-02-21T11:59:59Z'
   title: International Conference on Document Analysis and Recognition
   website: https://icdar2027.org/
+icdar2028:
+  conferenceEndDate: '2028-08-23'
+  conferenceStartDate: '2028-08-18'
+  dataSrc: estimate
+  id: icdar2028
+  isApproximateDeadline: true
+  rating: A
+  shortname: ICDAR 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-02-01T11:59:59Z'
+    deadline: '2028-02-21T11:59:59Z'
+  title: International Conference on Document Analysis and Recognition

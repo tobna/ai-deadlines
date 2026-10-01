@@ -1,3 +1,18 @@
+accv2022:
+  conferenceEndDate: '2022-12-08'
+  conferenceStartDate: '2022-12-06'
+  dataSrc: ccf-deadlines
+  h5Index: 52
+  id: accv2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: ACCV 2022
+  tags: &id001
+  - CV
+  timeline:
+  - deadline: '2022-07-07T11:59:00Z'
+  title: Asian Conference on Computer Vision
+  website: https://web.archive.org/web/20221219093710/https://accv2022.org/en/
 accv2024:
   conferenceEndDate: '2024-12-12'
   conferenceStartDate: '2024-12-08'
@@ -8,8 +23,7 @@ accv2024:
   location: Hanoi, Vietnam
   rating: B
   shortname: ACCV 2024
-  tags: &id001
-  - CV
+  tags: *id001
   timeline:
   - abstractDeadline: '2024-07-03T09:00:00Z'
     deadline: '2024-07-05T09:00:00Z'
@@ -18,7 +32,7 @@ accv2024:
   website: https://accv202.org/
 accv2026:
   conferenceEndDate: '2026-12-18'
-  conferenceStartDate: '2026-12-14'
+  conferenceStartDate: '2026-12-16'
   dataSrc: ccf-deadlines
   h5Index: 52
   id: accv2026
@@ -34,8 +48,8 @@ accv2026:
   title: Asian Conference on Computer Vision
   website: https://accv2026.org/
 accv2028:
-  conferenceEndDate: '2028-12-18'
-  conferenceStartDate: '2028-12-13'
+  conferenceEndDate: '2028-12-21'
+  conferenceStartDate: '2028-12-16'
   dataSrc: estimate
   h5Index: 52
   id: accv2028
@@ -44,5 +58,6 @@ accv2028:
   shortname: ACCV 2028
   tags: *id001
   timeline:
-  - deadline: '2028-07-04T23:59:59Z'
+  - abstractDeadline: '2028-07-04T11:59:59Z'
+    deadline: '2028-07-06T11:59:59Z'
   title: Asian Conference on Computer Vision

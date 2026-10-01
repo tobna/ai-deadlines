@@ -1,3 +1,63 @@
+euvip2021:
+  conferenceEndDate: '2021-06-25'
+  conferenceStartDate: '2021-06-23'
+  dataSrc: ccf-deadlines
+  id: euvip2021
+  isApproximateDeadline: false
+  shortname: EUVIP 2021
+  tags: &id001 []
+  timeline:
+  - deadline: '2021-04-09T11:59:00Z'
+  title: European Conference on Visual Information Processing
+  website: https://www-l2ti.univ-paris13.fr/euvip2020/Home.html
+euvip2022:
+  conferenceEndDate: '2022-09-14'
+  conferenceStartDate: '2022-09-12'
+  dataSrc: ccf-deadlines
+  id: euvip2022
+  isApproximateDeadline: false
+  shortname: EUVIP 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-06-07T11:59:00Z'
+  title: European Conference on Visual Information Processing
+  website: https://www.euvip2022.org/
+euvip2023:
+  conferenceEndDate: '2023-09-14'
+  conferenceStartDate: '2023-09-12'
+  dataSrc: ccf-deadlines
+  id: euvip2023
+  isApproximateDeadline: false
+  shortname: EUVIP 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-05-30T11:59:00Z'
+  title: European Conference on Visual Information Processing
+  website: https://www.euvip2023.org/
+euvip2024:
+  conferenceEndDate: '2024-09-11'
+  conferenceStartDate: '2024-09-09'
+  dataSrc: ccf-deadlines
+  id: euvip2024
+  isApproximateDeadline: false
+  shortname: EUVIP 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-05-25T11:59:00Z'
+  title: European Conference on Visual Information Processing
+  website: https://www.euvip2024.org/
+euvip2025:
+  conferenceEndDate: '2025-10-16'
+  conferenceStartDate: '2025-10-14'
+  dataSrc: ccf-deadlines
+  id: euvip2025
+  isApproximateDeadline: false
+  shortname: EUVIP 2025
+  tags: *id001
+  timeline:
+  - deadline: '2025-06-16T11:59:00Z'
+  title: European Conference on Visual Information Processing
+  website: https://www.euvip2025.org/
 euvip2026:
   conferenceEndDate: '2026-10-01'
   conferenceStartDate: '2026-09-28'
@@ -6,10 +66,34 @@ euvip2026:
   isApproximateDeadline: false
   location: Parc Hotel Alvisse, 120 Rte d'Echternach, 1453 Dommeldange, Luxembourg
   shortname: EUVIP 2026
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-06-05T21:59:59Z'
     note: Paper submission deadline
   timezone: Europe/Luxembourg
   title: European Conference on Visual Information Processing
   website: https://euvip2026.github.io/
+euvip2027:
+  conferenceEndDate: '2027-10-03'
+  conferenceStartDate: '2027-09-28'
+  dataSrc: estimate
+  id: euvip2027
+  isApproximateDeadline: true
+  shortname: EUVIP 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-06-05T21:59:59Z'
+    note: 'From EUVIP 2026: Paper submission deadline'
+  title: European Conference on Visual Information Processing
+euvip2028:
+  conferenceEndDate: '2028-10-03'
+  conferenceStartDate: '2028-09-28'
+  dataSrc: estimate
+  id: euvip2028
+  isApproximateDeadline: true
+  shortname: EUVIP 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-06-05T21:59:59Z'
+    note: 'From EUVIP 2026: Paper submission deadline'
+  title: European Conference on Visual Information Processing
