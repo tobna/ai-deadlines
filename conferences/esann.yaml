@@ -1,3 +1,60 @@
+esann2021:
+  conferenceEndDate: '2021-10-08'
+  conferenceStartDate: '2021-10-06'
+  dataSrc: ccf-deadlines
+  id: esann2021
+  isApproximateDeadline: false
+  rating: B
+  shortname: ESANN 2021
+  tags: &id001
+  - ML
+  timeline:
+  - deadline: '2021-05-18T11:59:00Z'
+  title: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  website: https://www.esann.org/
+esann2022:
+  conferenceEndDate: '2022-10-07'
+  conferenceStartDate: '2022-10-05'
+  dataSrc: ccf-deadlines
+  id: esann2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: ESANN 2022
+  tags: *id001
+  timeline:
+  - deadline: '2022-05-10T11:59:00Z'
+  title: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  website: https://www.esann.org/
+esann2023:
+  conferenceEndDate: '2023-10-06'
+  conferenceStartDate: '2023-10-04'
+  dataSrc: ccf-deadlines
+  id: esann2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: ESANN 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-05-06T11:59:00Z'
+  title: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  website: https://www.esann.org/
+esann2024:
+  conferenceEndDate: '2024-10-11'
+  conferenceStartDate: '2024-10-09'
+  dataSrc: ccf-deadlines
+  id: esann2024
+  isApproximateDeadline: false
+  rating: B
+  shortname: ESANN 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-05-07T11:59:00Z'
+  title: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  website: https://www.esann.org/
 esann2025:
   conferenceEndDate: '2025-04-25'
   conferenceStartDate: '2025-04-23'
@@ -7,8 +64,7 @@ esann2025:
   location: Bruges, Belgium
   rating: B
   shortname: ESANN 2025
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2024-11-20T08:00:00Z'
     note: Paper submission deadline

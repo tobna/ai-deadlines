@@ -1,3 +1,63 @@
+probml2021:
+  conferenceEndDate: '2021-02-17'
+  conferenceStartDate: '2021-01-13'
+  dataSrc: ccf-deadlines
+  id: probml2021
+  isApproximateDeadline: false
+  shortname: ProbML 2021
+  tags: &id001 []
+  timeline:
+  - deadline: '2020-11-14T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
+  website: https://probml.cc/archives/2021/index.html
+probml2022:
+  conferenceEndDate: '2022-02-02'
+  conferenceStartDate: '2022-02-01'
+  dataSrc: ccf-deadlines
+  id: probml2022
+  isApproximateDeadline: false
+  shortname: ProbML 2022
+  tags: *id001
+  timeline:
+  - deadline: '2021-11-20T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
+  website: https://probml.cc/archives/2022/index.html
+probml2023:
+  conferenceEndDate: '2023-07-23'
+  conferenceStartDate: '2023-07-23'
+  dataSrc: ccf-deadlines
+  id: probml2023
+  isApproximateDeadline: false
+  shortname: ProbML 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-04-15T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
+  website: https://probml.cc/archives/2023/index.html
+probml2024:
+  conferenceEndDate: '2024-07-21'
+  conferenceStartDate: '2024-07-21'
+  dataSrc: ccf-deadlines
+  id: probml2024
+  isApproximateDeadline: false
+  shortname: ProbML 2024
+  tags: *id001
+  timeline:
+  - deadline: '2024-03-30T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
+  website: https://probml.cc/archives/2024/index.html
+probml2025:
+  conferenceEndDate: '2025-04-29'
+  conferenceStartDate: '2025-04-29'
+  dataSrc: ccf-deadlines
+  id: probml2025
+  isApproximateDeadline: false
+  shortname: ProbML 2025
+  tags: *id001
+  timeline:
+  - deadline: '2025-02-15T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
+  website: https://probml.cc/archives/2025/index.html
 probml2026:
   conferenceEndDate: '2026-07-05'
   conferenceStartDate: '2026-07-05'
@@ -5,8 +65,30 @@ probml2026:
   id: probml2026
   isApproximateDeadline: false
   shortname: ProbML 2026
-  tags: []
+  tags: *id001
   timeline:
   - deadline: '2026-03-21T11:59:00Z'
   title: Symposium on Probabilistic Machine Learning
   website: https://probml.cc
+probml2027:
+  conferenceEndDate: '2027-07-10'
+  conferenceStartDate: '2027-07-05'
+  dataSrc: estimate
+  id: probml2027
+  isApproximateDeadline: true
+  shortname: ProbML 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-03-21T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
+probml2028:
+  conferenceEndDate: '2028-07-10'
+  conferenceStartDate: '2028-07-05'
+  dataSrc: estimate
+  id: probml2028
+  isApproximateDeadline: true
+  shortname: ProbML 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-03-21T11:59:00Z'
+  title: Symposium on Probabilistic Machine Learning
