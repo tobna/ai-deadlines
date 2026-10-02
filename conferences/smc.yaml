@@ -9,7 +9,7 @@ smc2023:
   tags: &id001
   - RO
   timeline:
-  - deadline: '2023-03-31T11:59:59Z'
+  - deadline: '2023-04-16T11:59:00Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://ieeesmc2023.org/
 smc2024:
@@ -22,12 +22,12 @@ smc2024:
   shortname: SMC 2024
   tags: *id001
   timeline:
-  - deadline: '2024-04-09T11:59:59Z'
+  - deadline: '2024-05-01T11:59:00Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
   website: https://www.ieeesmc2024.org/
 smc2025:
   conferenceEndDate: '2025-10-08'
-  conferenceStartDate: '2025-10-05'
+  conferenceStartDate: '2025-10-06'
   dataSrc: ccf-deadlines
   id: smc2025
   isApproximateDeadline: false
