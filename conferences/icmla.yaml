@@ -4,6 +4,7 @@ icmla2022:
   dataSrc: ccf-deadlines
   id: icmla2022
   isApproximateDeadline: false
+  rating: C
   shortname: ICMLA 2022
   tags: &id001 []
   timeline:
@@ -17,6 +18,7 @@ icmla2023:
   dataSrc: ccf-deadlines
   id: icmla2023
   isApproximateDeadline: false
+  rating: C
   shortname: ICMLA 2023
   tags: *id001
   timeline:
@@ -30,6 +32,7 @@ icmla2024:
   dataSrc: ccf-deadlines
   id: icmla2024
   isApproximateDeadline: false
+  rating: C
   shortname: ICMLA 2024
   tags: *id001
   timeline:
@@ -43,6 +46,7 @@ icmla2025:
   dataSrc: ccf-deadlines
   id: icmla2025
   isApproximateDeadline: false
+  rating: C
   shortname: ICMLA 2025
   tags: *id001
   timeline:
@@ -56,6 +60,7 @@ icmla2026:
   dataSrc: ccf-deadlines
   id: icmla2026
   isApproximateDeadline: false
+  rating: C
   shortname: ICMLA 2026
   tags: *id001
   timeline:
@@ -69,6 +74,7 @@ icmla2027:
   dataSrc: estimate
   id: icmla2027
   isApproximateDeadline: true
+  rating: C
   shortname: ICMLA 2027
   tags: *id001
   timeline:
@@ -81,6 +87,7 @@ icmla2028:
   dataSrc: estimate
   id: icmla2028
   isApproximateDeadline: true
+  rating: C
   shortname: ICMLA 2028
   tags: *id001
   timeline:
