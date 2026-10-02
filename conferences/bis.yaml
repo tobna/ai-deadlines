@@ -1,3 +1,18 @@
+bis2021:
+  conferenceEndDate: '2021-06-17'
+  conferenceStartDate: '2021-06-15'
+  dataSrc: ccf-deadlines
+  id: bis2021
+  isApproximateDeadline: false
+  shortname: BIS 2021
+  tags: &id001
+  - DM
+  - ML
+  - NLP
+  timeline:
+  - deadline: '2021-02-22T11:59:00Z'
+  title: International Conference on Business Information Systems
+  website: https://bisconf.org/2021/
 bis2025:
   conferenceEndDate: '2025-06-27'
   conferenceStartDate: '2025-06-25'
@@ -5,10 +20,7 @@ bis2025:
   id: bis2025
   isApproximateDeadline: false
   shortname: BIS 2025
-  tags: &id001
-  - DM
-  - ML
-  - NLP
+  tags: *id001
   timeline:
   - deadline: '2025-02-01T11:59:59Z'
   title: International Conference on Business Information Systems
@@ -41,14 +53,3 @@ bis2027:
   - deadline: '2027-01-12T11:59:59Z'
   title: International Conference on Business Information Systems
   website: https://bisconf.org/2027/
-bis2028:
-  conferenceEndDate: '2028-06-28'
-  conferenceStartDate: '2028-06-23'
-  dataSrc: estimate
-  id: bis2028
-  isApproximateDeadline: true
-  shortname: BIS 2028
-  tags: *id001
-  timeline:
-  - deadline: '2028-01-12T11:59:59Z'
-  title: International Conference on Business Information Systems

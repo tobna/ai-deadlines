@@ -9,8 +9,7 @@ log2025:
   - ML
   timeline:
   - deadline: '2025-08-30T11:59:59Z'
-    note: 'Regular papers: abstract August 24, 2025 (AoE), exact abstract time unverified;
-      existing paper time still needs primary confirmation'
+    note: Abstract cutoff unresolved; full precision unverified
   title: Learning on Graphs Conference
   website: https://log2025.logconference.org/
 log2026:
