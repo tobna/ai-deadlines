@@ -1,3 +1,31 @@
+ijcnn2022:
+  conferenceEndDate: '2022-07-23'
+  conferenceStartDate: '2022-07-19'
+  dataSrc: ccf-deadlines
+  id: ijcnn2022
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNN 2022
+  tags: &id001
+  - ML
+  timeline:
+  - abstractDeadline: '2022-02-01T11:59:00Z'
+    deadline: '2022-02-15T11:59:00Z'
+  title: International Joint Conference on Neural Networks
+  website: https://wcci2022.org/
+ijcnn2023:
+  conferenceEndDate: '2023-06-22'
+  conferenceStartDate: '2023-06-19'
+  dataSrc: ccf-deadlines
+  id: ijcnn2023
+  isApproximateDeadline: false
+  rating: B
+  shortname: IJCNN 2023
+  tags: *id001
+  timeline:
+  - deadline: '2023-02-08T11:59:00Z'
+  title: International Joint Conference on Neural Networks
+  website: https://2023.ijcnn.org/
 ijcnn2024:
   acceptanceRate: 51.99
   acceptanceRateYear: 2024
@@ -10,8 +38,7 @@ ijcnn2024:
   rating: B
   shortname: IJCNN 2024
   submittedPapers: 3272
-  tags: &id001
-  - ML
+  tags: *id001
   timeline:
   - deadline: '2024-01-30T11:59:59Z'
   title: International Joint Conference on Neural Networks
@@ -74,9 +101,6 @@ ijcnn2027:
   title: International Joint Conference on Neural Networks
   website: https://ijcnn.org/2027
 ijcnn2028:
-  acceptanceRate: 40.0
-  acceptanceRateYear: 2025
-  acceptedPapers: 2320
   conferenceEndDate: '2028-06-19'
   conferenceStartDate: '2028-06-14'
   dataSrc: estimate
@@ -84,7 +108,6 @@ ijcnn2028:
   isApproximateDeadline: true
   rating: B
   shortname: IJCNN 2028
-  submittedPapers: 5800
   tags: *id001
   timeline:
   - deadline: '2028-02-01T11:59:59Z'

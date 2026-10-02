@@ -30,7 +30,7 @@ bmvc2022:
   title: British Machine Vision Conference
   website: https://bmvc2022.org/
 bmvc2023:
-  conferenceEndDate: '2023-11-24'
+  conferenceEndDate: '2023-11-23'
   conferenceStartDate: '2023-11-20'
   dataSrc: ccf-deadlines
   h5Index: 57
@@ -40,7 +40,8 @@ bmvc2023:
   shortname: BMVC 2023
   tags: *id001
   timeline:
-  - deadline: '2023-05-13T11:59:59Z'
+  - abstractDeadline: '2023-05-06T11:59:00Z'
+    deadline: '2023-05-13T11:59:59Z'
   title: British Machine Vision Conference
   website: https://www.bmvc2023.org/
 bmvc2024:
@@ -61,7 +62,7 @@ bmvc2024:
   title: British Machine Vision Conference
   website: https://bmvc2024.org/
 bmvc2025:
-  conferenceEndDate: '2025-11-27'
+  conferenceEndDate: '2025-11-26'
   conferenceStartDate: '2025-11-24'
   dataSrc: ccf-deadlines
   h5Index: 57

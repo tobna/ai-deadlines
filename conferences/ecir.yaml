@@ -2,8 +2,8 @@ ecir2021:
   acceptanceRate: 24.04
   acceptanceRateYear: 2021
   acceptedPapers: 50
-  conferenceEndDate: '2021-04-01'
-  conferenceStartDate: '2021-03-28'
+  conferenceEndDate: '2021-03-31'
+  conferenceStartDate: '2021-03-29'
   dataSrc: ccf-deadlines
   id: ecir2021
   isApproximateDeadline: false
@@ -14,16 +14,14 @@ ecir2021:
   - DM
   timeline:
   - deadline: '2020-10-16T11:59:00Z'
-    note: Full paper submission extended from October 1; no separate abstract cutoff
-      verified
   title: European Conference on Information Retrieval
   website: https://www.ecir2021.eu/
 ecir2022:
   acceptanceRate: 20.0
   acceptanceRateYear: 2022
   acceptedPapers: 35
-  conferenceEndDate: '2022-04-14'
-  conferenceStartDate: '2022-04-10'
+  conferenceEndDate: '2022-04-13'
+  conferenceStartDate: '2022-04-11'
   dataSrc: ccf-deadlines
   id: ecir2022
   isApproximateDeadline: false
@@ -58,8 +56,8 @@ ecir2024:
   acceptanceRate: 24.78
   acceptanceRateYear: 2024
   acceptedPapers: 57
-  conferenceEndDate: '2024-03-28'
-  conferenceStartDate: '2024-03-24'
+  conferenceEndDate: '2024-03-27'
+  conferenceStartDate: '2024-03-25'
   dataSrc: ccf-deadlines
   id: ecir2024
   isApproximateDeadline: false
@@ -70,7 +68,6 @@ ecir2024:
   timeline:
   - abstractDeadline: '2023-09-28T11:59:00Z'
     deadline: '2023-10-05T11:59:00Z'
-    note: Full paper deadlines extended by one week
   title: European Conference on Information Retrieval
   website: https://www.ecir2024.org/
 ecir2025:

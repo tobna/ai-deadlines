@@ -2,8 +2,8 @@ icra2022:
   acceptanceRate: 43.76
   acceptanceRateYear: 2022
   acceptedPapers: 1428
-  conferenceEndDate: '2022-05-27'
-  conferenceStartDate: '2022-05-23'
+  conferenceEndDate: '2022-05-26'
+  conferenceStartDate: '2022-05-24'
   dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2022
@@ -16,15 +16,18 @@ icra2022:
   - ML
   - RO
   timeline:
+  - deadline: '2021-09-10T11:59:00Z'
+    note: RA-L with ICRA option
   - deadline: '2021-09-16T11:59:00Z'
+    note: Conference papers
   title: IEEE International Conference on Robotics and Automation
   website: https://ewh.ieee.org/soc/ras/conf/fullysponsored/icra/2022/icra2022.org/
 icra2023:
   acceptanceRate: 43.04
   acceptanceRateYear: 2023
   acceptedPapers: 1345
-  conferenceEndDate: '2023-06-02'
-  conferenceStartDate: '2023-05-29'
+  conferenceEndDate: '2023-06-01'
+  conferenceStartDate: '2023-05-30'
   dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2023
@@ -41,8 +44,8 @@ icra2024:
   acceptanceRate: 44.7
   acceptanceRateYear: 2024
   acceptedPapers: 1760
-  conferenceEndDate: '2024-05-17'
-  conferenceStartDate: '2024-05-13'
+  conferenceEndDate: '2024-05-16'
+  conferenceStartDate: '2024-05-14'
   dataSrc: ccf-deadlines
   h5Index: 122
   id: icra2024

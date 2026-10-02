@@ -1,6 +1,6 @@
 dai2021:
   conferenceEndDate: '2022-01-05'
-  conferenceStartDate: '2022-01-03'
+  conferenceStartDate: '2022-01-04'
   dataSrc: ccf-deadlines
   id: dai2021
   isApproximateDeadline: false
@@ -8,12 +8,11 @@ dai2021:
   tags: &id001 []
   timeline:
   - deadline: '2021-10-01T11:59:00Z'
-    note: Regular papers
   title: International Conference on Distributed Artificial Intelligence
   website: https://adai.ai/dai/2021/index.html
 dai2022:
   conferenceEndDate: '2022-12-17'
-  conferenceStartDate: '2022-12-15'
+  conferenceStartDate: '2022-12-16'
   dataSrc: ccf-deadlines
   id: dai2022
   isApproximateDeadline: false
@@ -21,12 +20,11 @@ dai2022:
   tags: *id001
   timeline:
   - deadline: '2022-10-16T11:59:00Z'
-    note: Regular papers
   title: International Conference on Distributed Artificial Intelligence
   website: https://adai.ai/dai/2022/2022.html
 dai2023:
   conferenceEndDate: '2023-12-03'
-  conferenceStartDate: '2023-11-30'
+  conferenceStartDate: '2023-12-02'
   dataSrc: ccf-deadlines
   id: dai2023
   isApproximateDeadline: false
@@ -34,12 +32,11 @@ dai2023:
   tags: *id001
   timeline:
   - deadline: '2023-09-16T11:59:00Z'
-    note: Regular papers
   title: International Conference on Distributed Artificial Intelligence
   website: https://adai.ai/dai/2023/
 dai2024:
-  conferenceEndDate: '2024-12-22'
-  conferenceStartDate: '2024-12-18'
+  conferenceEndDate: '2024-12-21'
+  conferenceStartDate: '2024-12-20'
   dataSrc: ccf-deadlines
   id: dai2024
   isApproximateDeadline: false
@@ -47,12 +44,11 @@ dai2024:
   tags: *id001
   timeline:
   - deadline: '2024-09-11T11:59:00Z'
-    note: Regular papers
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2024/index.html
 dai2025:
   conferenceEndDate: '2025-11-24'
-  conferenceStartDate: '2025-11-21'
+  conferenceStartDate: '2025-11-23'
   dataSrc: ccf-deadlines
   id: dai2025
   isApproximateDeadline: false
@@ -60,12 +56,11 @@ dai2025:
   tags: *id001
   timeline:
   - deadline: '2025-08-22T11:59:59Z'
-    note: Regular papers (extended)
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2025/index.html
 dai2026:
-  conferenceEndDate: '2026-12-02'
-  conferenceStartDate: '2026-11-29'
+  conferenceEndDate: '2026-12-01'
+  conferenceStartDate: '2026-11-30'
   dataSrc: ccf-deadlines
   id: dai2026
   isApproximateDeadline: false
@@ -73,7 +68,6 @@ dai2026:
   tags: *id001
   timeline:
   - deadline: '2026-08-04T11:59:59Z'
-    note: Regular research papers
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2026/index.html
 dai2027:
