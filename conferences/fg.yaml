@@ -9,9 +9,9 @@ fg2021:
   tags: &id001
   - CV
   timeline:
-  - deadline: '2021-05-02T11:59:00Z'
+  - deadline: '2021-05-02T11:59:59Z'
     note: Round 1
-  - deadline: '2021-08-21T11:59:00Z'
+  - deadline: '2021-08-21T11:59:59Z'
     note: Round 2
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://iab-rubric.org/fg2021/
@@ -25,7 +25,7 @@ fg2023:
   shortname: FG 2023
   tags: *id001
   timeline:
-  - deadline: '2022-07-16T11:59:00Z'
+  - deadline: '2022-07-16T11:59:59Z'
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2023.ieee-biometrics.org/
 fg2024:
@@ -38,9 +38,9 @@ fg2024:
   shortname: FG 2024
   tags: *id001
   timeline:
-  - deadline: '2023-10-03T11:59:00Z'
+  - deadline: '2023-10-03T11:59:59Z'
     note: Round 1
-  - deadline: '2024-01-27T11:59:00Z'
+  - deadline: '2024-01-27T11:59:59Z'
     note: Round 2
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2024.ieee-biometrics.org/

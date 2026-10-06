@@ -10,7 +10,7 @@ icip2021:
   tags: &id001
   - CV
   timeline:
-  - deadline: '2021-01-26T11:59:00Z'
+  - deadline: '2021-01-26T11:59:59Z'
   title: The IEEE International Conference on Image Processing
   website: https://www.2021.ieeeicip.org/www.2021.ieeeicip.org/index.html
 icip2022:
@@ -24,7 +24,7 @@ icip2022:
   shortname: ICIP 2022
   tags: *id001
   timeline:
-  - deadline: '2022-02-26T11:59:00Z'
+  - deadline: '2022-02-26T11:59:59Z'
   title: The IEEE International Conference on Image Processing
   website: https://2022.ieeeicip.org/
 icip2023:
@@ -38,7 +38,7 @@ icip2023:
   shortname: ICIP 2023
   tags: *id001
   timeline:
-  - deadline: '2023-02-25T11:59:00Z'
+  - deadline: '2023-02-25T11:59:59Z'
   title: The IEEE International Conference on Image Processing
   website: https://2023.ieeeicip.org/
 icip2024:

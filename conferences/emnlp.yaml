@@ -14,10 +14,10 @@ emnlp2021:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2021-05-16T11:59:00Z'
+  - deadline: '2021-05-16T11:59:59Z'
     note: ARR pilot; reviews ready by July 29
-  - abstractDeadline: '2021-05-11T11:59:00Z'
-    deadline: '2021-05-18T11:59:00Z'
+  - abstractDeadline: '2021-05-11T11:59:59Z'
+    deadline: '2021-05-18T11:59:59Z'
     note: Direct submission
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2021.emnlp.org/
@@ -39,7 +39,7 @@ emnlp2022:
   - abstractDeadline: '2022-06-18T11:59:59Z'
     deadline: '2022-06-25T11:59:59Z'
     note: Direct submission
-  - deadline: '2022-07-25T11:59:00Z'
+  - deadline: '2022-07-25T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2022.emnlp.org
@@ -58,12 +58,12 @@ emnlp2023:
   submittedPapers: 4909
   tags: *id001
   timeline:
-  - deadline: '2023-06-16T11:59:00Z'
+  - deadline: '2023-06-16T11:59:59Z'
     note: ARR submission
   - abstractDeadline: '2023-06-17T11:59:59Z'
     deadline: '2023-06-24T11:59:59Z'
     note: Direct submission
-  - deadline: '2023-08-23T11:59:00Z'
+  - deadline: '2023-08-23T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2023.emnlp.org
@@ -84,7 +84,7 @@ emnlp2024:
   timeline:
   - deadline: '2024-06-16T11:59:59Z'
     note: ARR Submission
-  - deadline: '2024-08-21T11:59:00Z'
+  - deadline: '2024-08-21T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2024.emnlp.org

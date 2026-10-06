@@ -10,7 +10,7 @@ accv2022:
   tags: &id001
   - CV
   timeline:
-  - deadline: '2022-07-07T11:59:00Z'
+  - deadline: '2022-07-07T11:59:59Z'
   title: Asian Conference on Computer Vision
   website: https://web.archive.org/web/20221219093710/https://accv2022.org/en/
 accv2024:

@@ -8,8 +8,8 @@ gecco2021:
   shortname: GECCO 2021
   tags: &id001 []
   timeline:
-  - abstractDeadline: '2021-01-29T11:59:00Z'
-    deadline: '2021-02-05T11:59:00Z'
+  - abstractDeadline: '2021-01-29T11:59:59Z'
+    deadline: '2021-02-05T11:59:59Z'
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2021.sigevo.org/
 gecco2022:
@@ -22,8 +22,8 @@ gecco2022:
   shortname: GECCO 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-01-28T11:59:00Z'
-    deadline: '2022-02-04T11:59:00Z'
+  - abstractDeadline: '2022-01-28T11:59:59Z'
+    deadline: '2022-02-04T11:59:59Z'
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2022.sigevo.org/
 gecco2023:
@@ -36,8 +36,8 @@ gecco2023:
   shortname: GECCO 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-02-04T11:59:00Z'
-    deadline: '2023-02-11T11:59:00Z'
+  - abstractDeadline: '2023-02-04T11:59:59Z'
+    deadline: '2023-02-11T11:59:59Z'
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2023.sigevo.org/HomePage.html
 gecco2024:
@@ -50,8 +50,8 @@ gecco2024:
   shortname: GECCO 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-01-26T11:59:00Z'
-    deadline: '2024-02-02T11:59:00Z'
+  - abstractDeadline: '2024-01-26T11:59:59Z'
+    deadline: '2024-02-02T11:59:59Z'
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2024.sigevo.org/
 gecco2025:
@@ -64,8 +64,8 @@ gecco2025:
   shortname: GECCO 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-01-23T11:59:00Z'
-    deadline: '2025-01-30T11:59:00Z'
+  - abstractDeadline: '2025-01-23T11:59:59Z'
+    deadline: '2025-01-30T11:59:59Z'
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2025.sigevo.org/HomePage
 gecco2026:
@@ -78,8 +78,8 @@ gecco2026:
   shortname: GECCO 2026
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-01-20T11:59:00Z'
-    deadline: '2026-01-27T11:59:00Z'
+  - abstractDeadline: '2026-01-20T11:59:59Z'
+    deadline: '2026-01-27T11:59:59Z'
   title: Genetic and Evolutionary Computation Conference
   website: https://gecco-2026.sigevo.org/HomePage
 gecco2027:

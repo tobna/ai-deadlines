@@ -10,8 +10,8 @@ kr2021:
   - ML
   - NLP
   timeline:
-  - abstractDeadline: '2021-03-25T11:59:00Z'
-    deadline: '2021-04-01T11:59:00Z'
+  - abstractDeadline: '2021-03-25T11:59:59Z'
+    deadline: '2021-04-01T11:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2021/
 kr2022:
@@ -24,8 +24,8 @@ kr2022:
   shortname: KR 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-02-03T11:59:00Z'
-    deadline: '2022-02-12T11:59:00Z'
+  - abstractDeadline: '2022-02-03T11:59:59Z'
+    deadline: '2022-02-12T11:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2022/
 kr2023:
@@ -38,8 +38,8 @@ kr2023:
   shortname: KR 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-03-04T11:59:00Z'
-    deadline: '2023-03-15T11:59:00Z'
+  - abstractDeadline: '2023-03-04T11:59:59Z'
+    deadline: '2023-03-15T11:59:59Z'
   title: International Conference on Principles of Knowledge Representation and Reasoning
   website: https://kr.org/KR2023/
 kr2024:

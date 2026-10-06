@@ -9,7 +9,7 @@ mobilehci2021:
   tags: &id001
   - HCI
   timeline:
-  - deadline: '2021-02-05T11:59:00Z'
+  - deadline: '2021-02-05T11:59:59Z'
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2021/
 mobilehci2022:
@@ -22,7 +22,7 @@ mobilehci2022:
   shortname: MobileHCI 2022
   tags: *id001
   timeline:
-  - deadline: '2022-02-04T11:59:00Z'
+  - deadline: '2022-02-04T11:59:59Z'
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2022/
 mobilehci2023:
@@ -35,8 +35,8 @@ mobilehci2023:
   shortname: MobileHCI 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-01-21T11:59:00Z'
-    deadline: '2023-01-28T11:59:00Z'
+  - abstractDeadline: '2023-01-21T11:59:59Z'
+    deadline: '2023-01-28T11:59:59Z'
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2023/
 mobilehci2024:
@@ -49,8 +49,8 @@ mobilehci2024:
   shortname: MobileHCI 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-02-15T11:59:00Z'
-    deadline: '2024-02-22T11:59:00Z'
+  - abstractDeadline: '2024-02-15T11:59:59Z'
+    deadline: '2024-02-22T11:59:59Z'
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2024/
 mobilehci2025:
@@ -78,7 +78,7 @@ mobilehci2026:
   shortname: MobileHCI 2026
   tags: *id001
   timeline:
-  - deadline: '2026-01-30T11:59:00Z'
+  - deadline: '2026-01-30T11:59:59Z'
   title: ACM International Conference on Mobile Human-Computer Interaction
   website: https://mobilehci.acm.org/2026/
 mobilehci2027:

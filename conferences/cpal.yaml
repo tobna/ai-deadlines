@@ -8,7 +8,7 @@ cpal2024:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2023-08-29T11:59:00Z'
+  - deadline: '2023-08-29T11:59:59Z'
     note: Proceedings Track
   title: The Conference on Parsimony and Learning
   website: https://2024.cpal.cc/

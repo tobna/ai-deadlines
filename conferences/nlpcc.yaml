@@ -12,7 +12,7 @@ nlpcc2021:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2021-06-09T11:59:00Z'
+  - deadline: '2021-06-09T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2021/
 nlpcc2022:
@@ -28,7 +28,7 @@ nlpcc2022:
   submittedPapers: 327
   tags: *id001
   timeline:
-  - deadline: '2022-05-14T11:59:00Z'
+  - deadline: '2022-05-14T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2022/
 nlpcc2023:
@@ -44,7 +44,7 @@ nlpcc2023:
   submittedPapers: 478
   tags: *id001
   timeline:
-  - deadline: '2023-05-19T11:59:00Z'
+  - deadline: '2023-05-19T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2023/index.php
 nlpcc2024:
@@ -60,7 +60,7 @@ nlpcc2024:
   submittedPapers: 451
   tags: *id001
   timeline:
-  - deadline: '2024-06-12T11:59:00Z'
+  - deadline: '2024-06-12T11:59:59Z'
   title: CCF International Conference on Natural Language Processing and Chinese Computing
   website: http://tcci.ccf.org.cn/conference/2024/index.php
 nlpcc2025:

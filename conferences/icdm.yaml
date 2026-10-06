@@ -32,7 +32,7 @@ icdm2022:
   submittedPapers: 870
   tags: *id001
   timeline:
-  - deadline: '2022-06-11T11:59:00Z'
+  - deadline: '2022-06-11T11:59:59Z'
   title: IEEE International Conference on Data Mining
   website: https://icdm22.cse.usf.edu/key-dates.html
 icdm2023:

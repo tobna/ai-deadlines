@@ -10,8 +10,8 @@ icpr2022:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2022-01-18T11:59:00Z'
-    deadline: '2022-01-25T11:59:00Z'
+  - abstractDeadline: '2022-01-18T11:59:59Z'
+    deadline: '2022-01-25T11:59:59Z'
   title: International Conference on Pattern Recognition
   website: https://iapr.org/archives/icpr2022/index.html
 icpr2024:

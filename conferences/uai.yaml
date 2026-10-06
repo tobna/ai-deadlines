@@ -30,7 +30,7 @@ uai2022:
   submittedPapers: 712
   tags: *id001
   timeline:
-  - deadline: '2022-02-26T11:59:00Z'
+  - deadline: '2022-02-26T11:59:59Z'
   title: Conference on Uncertainty in Artificial Intelligence
   website: https://www.auai.org/uai2022/
 uai2023:

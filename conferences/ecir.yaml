@@ -13,7 +13,7 @@ ecir2021:
   tags: &id001
   - DM
   timeline:
-  - deadline: '2020-10-16T11:59:00Z'
+  - deadline: '2020-10-16T11:59:59Z'
   title: European Conference on Information Retrieval
   website: https://www.ecir2021.eu/
 ecir2022:
@@ -30,8 +30,8 @@ ecir2022:
   submittedPapers: 175
   tags: *id001
   timeline:
-  - abstractDeadline: '2021-10-01T11:59:00Z'
-    deadline: '2021-10-08T11:59:00Z'
+  - abstractDeadline: '2021-10-01T11:59:59Z'
+    deadline: '2021-10-08T11:59:59Z'
   title: European Conference on Information Retrieval
   website: https://ecir2022.org/
 ecir2023:
@@ -48,8 +48,8 @@ ecir2023:
   submittedPapers: 224
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-10-01T11:59:00Z'
-    deadline: '2022-10-08T11:59:00Z'
+  - abstractDeadline: '2022-10-01T11:59:59Z'
+    deadline: '2022-10-08T11:59:59Z'
   title: European Conference on Information Retrieval
   website: https://ecir2023.org/
 ecir2024:
@@ -66,8 +66,8 @@ ecir2024:
   submittedPapers: 230
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-09-28T11:59:00Z'
-    deadline: '2023-10-05T11:59:00Z'
+  - abstractDeadline: '2023-09-28T11:59:59Z'
+    deadline: '2023-10-05T11:59:59Z'
   title: European Conference on Information Retrieval
   website: https://www.ecir2024.org/
 ecir2025:

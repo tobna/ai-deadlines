@@ -14,7 +14,7 @@ naacl2021:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2020-11-24T11:59:00Z'
+  - deadline: '2020-11-24T11:59:59Z'
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics
   website: https://2021.naacl.org/
@@ -35,7 +35,7 @@ naacl2022:
   timeline:
   - deadline: '2022-01-16T11:59:59Z'
     note: ARR January cycle
-  - deadline: '2022-03-07T11:59:00Z'
+  - deadline: '2022-03-07T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics
@@ -57,7 +57,7 @@ naacl2024:
   timeline:
   - deadline: '2023-12-16T11:59:59Z'
     note: ARR Submission
-  - deadline: '2024-02-21T11:59:00Z'
+  - deadline: '2024-02-21T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The Annual Conference of the North American Chapter of the Association for
     Computational Linguistics

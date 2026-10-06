@@ -16,9 +16,9 @@ icra2022:
   - ML
   - RO
   timeline:
-  - deadline: '2021-09-10T11:59:00Z'
+  - deadline: '2021-09-10T11:59:59Z'
     note: RA-L with ICRA option
-  - deadline: '2021-09-16T11:59:00Z'
+  - deadline: '2021-09-16T11:59:59Z'
     note: Conference papers
   title: IEEE International Conference on Robotics and Automation
   website: https://ewh.ieee.org/soc/ras/conf/fullysponsored/icra/2022/icra2022.org/
@@ -55,7 +55,7 @@ icra2024:
   submittedPapers: 3937
   tags: *id001
   timeline:
-  - deadline: '2023-09-16T11:59:00Z'
+  - deadline: '2023-09-16T11:59:59Z'
   title: IEEE International Conference on Robotics and Automation
   website: https://2024.ieee-icra.org
 icra2025:

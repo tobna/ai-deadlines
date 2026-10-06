@@ -14,7 +14,7 @@ wsdm2021:
   tags: &id001
   - DM
   timeline:
-  - deadline: '2020-08-17T11:59:00Z'
+  - deadline: '2020-08-17T11:59:59Z'
   title: International Conference on Web Search and Data Mining
   website: https://www.wsdm-conference.org/2021/
 wsdm2022:

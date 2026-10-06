@@ -9,7 +9,7 @@ esann2021:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2021-05-18T11:59:00Z'
+  - deadline: '2021-05-18T11:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/
@@ -23,7 +23,7 @@ esann2022:
   shortname: ESANN 2022
   tags: *id001
   timeline:
-  - deadline: '2022-05-10T11:59:00Z'
+  - deadline: '2022-05-10T11:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/
@@ -37,7 +37,7 @@ esann2023:
   shortname: ESANN 2023
   tags: *id001
   timeline:
-  - deadline: '2023-05-06T11:59:00Z'
+  - deadline: '2023-05-06T11:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/
@@ -51,7 +51,7 @@ esann2024:
   shortname: ESANN 2024
   tags: *id001
   timeline:
-  - deadline: '2024-05-07T11:59:00Z'
+  - deadline: '2024-05-07T11:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/

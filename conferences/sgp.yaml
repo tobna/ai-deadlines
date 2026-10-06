@@ -10,8 +10,8 @@ sgp2021:
   - CV
   - ML
   timeline:
-  - abstractDeadline: '2021-04-20T11:59:00Z'
-    deadline: '2021-04-25T11:59:00Z'
+  - abstractDeadline: '2021-04-20T11:59:59Z'
+    deadline: '2021-04-25T11:59:59Z'
     note: Recommended abstract / full paper
   title: Eurographics Symposium on Geometry Processing
   website: https://sgp2021.github.io/
@@ -25,8 +25,8 @@ sgp2022:
   shortname: SGP 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-04-08T11:59:00Z'
-    deadline: '2022-04-12T11:59:00Z'
+  - abstractDeadline: '2022-04-08T11:59:59Z'
+    deadline: '2022-04-12T11:59:59Z'
     note: Recommended abstract / full paper
   title: Eurographics Symposium on Geometry Processing
   website: https://sgp2022.github.io/
@@ -40,8 +40,8 @@ sgp2023:
   shortname: SGP 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-04-08T11:59:00Z'
-    deadline: '2023-04-13T11:59:00Z'
+  - abstractDeadline: '2023-04-08T11:59:59Z'
+    deadline: '2023-04-13T11:59:59Z'
     note: Recommended abstract / full paper
   title: Eurographics Symposium on Geometry Processing
   website: https://sgp2023.github.io/
@@ -55,8 +55,8 @@ sgp2024:
   shortname: SGP 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-04-11T11:59:00Z'
-    deadline: '2024-04-13T11:59:00Z'
+  - abstractDeadline: '2024-04-11T11:59:59Z'
+    deadline: '2024-04-13T11:59:59Z'
     note: Recommended abstract / full paper
   title: Eurographics Symposium on Geometry Processing
   website: https://sgp2024.github.io/

@@ -22,7 +22,7 @@ alt2024:
   shortname: ALT 2024
   tags: *id001
   timeline:
-  - deadline: '2023-09-27T11:59:00Z'
+  - deadline: '2023-09-27T11:59:59Z'
   title: International Conference on Algorithmic Learning Theory
   website: http://algorithmiclearningtheory.org/alt2024/
 alt2025:

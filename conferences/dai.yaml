@@ -7,7 +7,7 @@ dai2021:
   shortname: DAI 2021
   tags: &id001 []
   timeline:
-  - deadline: '2021-10-01T11:59:00Z'
+  - deadline: '2021-10-01T11:59:59Z'
   title: International Conference on Distributed Artificial Intelligence
   website: https://adai.ai/dai/2021/index.html
 dai2022:
@@ -19,7 +19,7 @@ dai2022:
   shortname: DAI 2022
   tags: *id001
   timeline:
-  - deadline: '2022-10-16T11:59:00Z'
+  - deadline: '2022-10-16T11:59:59Z'
   title: International Conference on Distributed Artificial Intelligence
   website: https://adai.ai/dai/2022/2022.html
 dai2023:
@@ -31,7 +31,7 @@ dai2023:
   shortname: DAI 2023
   tags: *id001
   timeline:
-  - deadline: '2023-09-16T11:59:00Z'
+  - deadline: '2023-09-16T11:59:59Z'
   title: International Conference on Distributed Artificial Intelligence
   website: https://adai.ai/dai/2023/
 dai2024:
@@ -43,7 +43,7 @@ dai2024:
   shortname: DAI 2024
   tags: *id001
   timeline:
-  - deadline: '2024-09-11T11:59:00Z'
+  - deadline: '2024-09-11T11:59:59Z'
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2024/index.html
 dai2025:

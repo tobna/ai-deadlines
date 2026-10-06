@@ -7,7 +7,7 @@ euvip2021:
   shortname: EUVIP 2021
   tags: &id001 []
   timeline:
-  - deadline: '2021-04-09T11:59:00Z'
+  - deadline: '2021-04-09T11:59:59Z'
   title: European Conference on Visual Information Processing
   website: https://www-l2ti.univ-paris13.fr/euvip2020/Home.html
 euvip2022:
@@ -19,7 +19,7 @@ euvip2022:
   shortname: EUVIP 2022
   tags: *id001
   timeline:
-  - deadline: '2022-06-07T11:59:00Z'
+  - deadline: '2022-06-07T11:59:59Z'
   title: European Conference on Visual Information Processing
   website: https://www.euvip2022.org/
 euvip2023:
@@ -31,7 +31,7 @@ euvip2023:
   shortname: EUVIP 2023
   tags: *id001
   timeline:
-  - deadline: '2023-05-30T11:59:00Z'
+  - deadline: '2023-05-30T11:59:59Z'
   title: European Conference on Visual Information Processing
   website: https://www.euvip2023.org/
 euvip2024:
@@ -43,7 +43,7 @@ euvip2024:
   shortname: EUVIP 2024
   tags: *id001
   timeline:
-  - deadline: '2024-05-25T11:59:00Z'
+  - deadline: '2024-05-25T11:59:59Z'
   title: European Conference on Visual Information Processing
   website: https://www.euvip2024.org/
 euvip2025:
@@ -55,7 +55,7 @@ euvip2025:
   shortname: EUVIP 2025
   tags: *id001
   timeline:
-  - deadline: '2025-06-16T11:59:00Z'
+  - deadline: '2025-06-16T11:59:59Z'
   title: European Conference on Visual Information Processing
   website: https://www.euvip2025.org/
 euvip2026:

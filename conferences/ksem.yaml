@@ -9,7 +9,7 @@ ksem2021:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2021-05-01T11:59:00Z'
+  - deadline: '2021-05-01T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://www.cloud-conf.net/ksem21/index.html
 ksem2022:
@@ -22,7 +22,7 @@ ksem2022:
   shortname: KSEM 2022
   tags: *id001
   timeline:
-  - deadline: '2022-04-26T11:59:00Z'
+  - deadline: '2022-04-26T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem22.smart-conf.net/
 ksem2023:
@@ -35,7 +35,7 @@ ksem2023:
   shortname: KSEM 2023
   tags: *id001
   timeline:
-  - deadline: '2023-05-06T11:59:00Z'
+  - deadline: '2023-05-06T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://www.ksem2023.conferences.academy/
 ksem2024:
@@ -48,7 +48,7 @@ ksem2024:
   shortname: KSEM 2024
   tags: *id001
   timeline:
-  - deadline: '2024-04-16T11:59:00Z'
+  - deadline: '2024-04-16T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem24.ai-edge.net/
 ksem2025:
@@ -77,7 +77,7 @@ ksem2026:
   shortname: KSEM 2026
   tags: *id001
   timeline:
-  - deadline: '2026-03-01T11:59:00Z'
+  - deadline: '2026-03-01T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
   website: https://ksem2026.rosc.org.cn/
 ksem2027:

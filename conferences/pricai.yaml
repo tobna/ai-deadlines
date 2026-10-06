@@ -9,7 +9,7 @@ pricai2022:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2022-06-30T11:59:00Z'
+  - deadline: '2022-06-30T11:59:59Z'
   title: Pacific Rim International Conference on Artificial Intelligence
   website: https://2022.pricai.org/
 pricai2023:
@@ -22,7 +22,7 @@ pricai2023:
   shortname: PRICAI 2023
   tags: *id001
   timeline:
-  - deadline: '2023-06-13T11:59:00Z'
+  - deadline: '2023-06-13T11:59:59Z'
   title: Pacific Rim International Conference on Artificial Intelligence
   website: https://www.pricai.org/2023/
 pricai2024:

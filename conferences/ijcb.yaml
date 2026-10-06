@@ -9,7 +9,7 @@ ijcb2021:
   tags: &id001
   - HCI
   timeline:
-  - deadline: '2021-04-07T11:59:00Z'
+  - deadline: '2021-04-07T11:59:59Z'
   title: International Joint Conference on Biometrics
   website: https://ijcb2021.iapr-tc4.org/
 ijcb2022:
@@ -35,7 +35,7 @@ ijcb2023:
   shortname: IJCB 2023
   tags: *id001
   timeline:
-  - deadline: '2023-05-09T11:59:00Z'
+  - deadline: '2023-05-09T11:59:59Z'
   title: International Joint Conference on Biometrics
   website: https://ijcb2023.ieee-biometrics.org/
 ijcb2024:
@@ -48,8 +48,8 @@ ijcb2024:
   shortname: IJCB 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-05-01T11:59:00Z'
-    deadline: '2024-05-01T11:59:00Z'
+  - abstractDeadline: '2024-05-01T11:59:59Z'
+    deadline: '2024-05-01T11:59:59Z'
   title: International Joint Conference on Biometrics
   website: https://iapr.org/archives/ijcb2024/index.html
 ijcb2025:

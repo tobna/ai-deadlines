@@ -11,7 +11,7 @@ icdar2021:
   timeline:
   - deadline: '2020-11-19T15:59:00Z'
     note: Journal track (soft deadline)
-  - deadline: '2021-02-25T11:59:00Z'
+  - deadline: '2021-02-25T11:59:59Z'
     note: Conference track
   title: International Conference on Document Analysis and Recognition
   website: https://iapr.org/archives/icdar2021/index.html
@@ -25,10 +25,10 @@ icdar2023:
   shortname: ICDAR 2023
   tags: *id001
   timeline:
-  - deadline: '2022-11-15T11:59:00Z'
+  - deadline: '2022-11-15T11:59:59Z'
     note: Journal track
-  - abstractDeadline: '2023-02-04T11:59:00Z'
-    deadline: '2023-02-11T11:59:00Z'
+  - abstractDeadline: '2023-02-04T11:59:59Z'
+    deadline: '2023-02-11T11:59:59Z'
     note: Conference track
   title: International Conference on Document Analysis and Recognition
   website: https://iapr.org/archives/icdar2023/index.html
@@ -42,10 +42,10 @@ icdar2024:
   shortname: ICDAR 2024
   tags: *id001
   timeline:
-  - deadline: '2023-11-15T11:59:00Z'
+  - deadline: '2023-11-15T11:59:59Z'
     note: Journal track
-  - abstractDeadline: '2024-02-02T11:59:00Z'
-    deadline: '2024-02-13T11:59:00Z'
+  - abstractDeadline: '2024-02-02T11:59:59Z'
+    deadline: '2024-02-13T11:59:59Z'
     note: Conference track
   title: International Conference on Document Analysis and Recognition
   website: https://icdar2024.net/

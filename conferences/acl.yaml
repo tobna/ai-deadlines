@@ -33,19 +33,19 @@ acl2022:
   submittedPapers: 3378
   tags: *id001
   timeline:
-  - deadline: '2021-05-16T11:59:00Z'
+  - deadline: '2021-05-16T11:59:59Z'
     note: ARR May cycle
-  - deadline: '2021-06-16T11:59:00Z'
+  - deadline: '2021-06-16T11:59:59Z'
     note: ARR June cycle
-  - deadline: '2021-07-16T11:59:00Z'
+  - deadline: '2021-07-16T11:59:59Z'
     note: ARR July cycle
-  - deadline: '2021-08-16T11:59:00Z'
+  - deadline: '2021-08-16T11:59:59Z'
     note: ARR August cycle
   - deadline: '2021-09-16T11:59:59Z'
   - deadline: '2021-10-16T11:59:59Z'
   - deadline: '2021-11-16T11:59:59Z'
     note: Final ARR submission
-  - deadline: '2022-01-16T11:59:00Z'
+  - deadline: '2022-01-16T11:59:59Z'
     note: ARR commitment; reviewed papers only
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2022.aclweb.org/
@@ -69,7 +69,7 @@ acl2023:
   - abstractDeadline: '2023-01-14T11:59:59Z'
     deadline: '2023-01-21T11:59:59Z'
     note: Direct submission
-  - deadline: '2023-03-18T11:59:00Z'
+  - deadline: '2023-03-18T11:59:59Z'
     note: ARR commitment; reviewed papers only
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2023.aclweb.org/
@@ -90,7 +90,7 @@ acl2024:
   timeline:
   - deadline: '2024-02-16T11:59:59Z'
     note: ARR submission
-  - deadline: '2024-04-21T11:59:00Z'
+  - deadline: '2024-04-21T11:59:59Z'
     note: ARR commitment; reviewed papers only
   title: Annual Meeting of the Association for Computational Linguistics
   website: https://2024.aclweb.org/

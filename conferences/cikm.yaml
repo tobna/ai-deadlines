@@ -31,7 +31,7 @@ cikm2021:
   submittedPapers: 1251
   tags: *id001
   timeline:
-  - abstractDeadline: '2021-05-20T11:59:00Z'
+  - abstractDeadline: '2021-05-20T11:59:59Z'
     deadline: '2021-05-27T11:59:59Z'
   title: ACM International Conference on Information and Knowledge Management
   website: https://www.cikm2021.org/

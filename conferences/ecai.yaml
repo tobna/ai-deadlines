@@ -14,7 +14,7 @@ ecai2022:
   - ML
   timeline:
   - abstractDeadline: '2022-01-09T00:59:00Z'
-    deadline: '2022-01-15T11:59:00Z'
+    deadline: '2022-01-15T11:59:59Z'
     note: Joint IJCAI-ECAI
   title: European Conference on Artificial Intelligence
   website: https://ijcai-22.org/

@@ -23,7 +23,7 @@ corl2023:
   shortname: CoRL 2023
   tags: *id001
   timeline:
-  - deadline: '2023-06-09T11:59:00Z'
+  - deadline: '2023-06-09T11:59:59Z'
   title: The Conference on Robot Learning
   website: https://www.corl2023.org/
 corl2024:

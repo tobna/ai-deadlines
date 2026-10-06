@@ -14,8 +14,8 @@ ijcai2021:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2021-01-14T11:59:00Z'
-    deadline: '2021-01-21T11:59:00Z'
+  - abstractDeadline: '2021-01-14T11:59:59Z'
+    deadline: '2021-01-21T11:59:59Z'
   title: International Joint Conference on Artificial Intelligence
   website: https://ijcai-21.org/
 ijcai2022:

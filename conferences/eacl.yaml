@@ -14,7 +14,7 @@ eacl2021:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2020-10-08T11:59:00Z'
+  - deadline: '2020-10-08T11:59:59Z'
   title: The Annual Conference of the European Chapter of the Association for Computational
     Linguistics
   website: https://2021.eacl.org/
@@ -33,10 +33,10 @@ eacl2023:
   submittedPapers: 1166
   tags: *id001
   timeline:
-  - deadline: '2022-10-16T11:59:00Z'
+  - deadline: '2022-10-16T11:59:59Z'
     note: ARR submission
-  - abstractDeadline: '2022-10-14T11:59:00Z'
-    deadline: '2022-10-21T11:59:00Z'
+  - abstractDeadline: '2022-10-14T11:59:59Z'
+    deadline: '2022-10-21T11:59:59Z'
     note: Direct submission
   title: The Annual Conference of the European Chapter of the Association for Computational
     Linguistics
@@ -56,9 +56,9 @@ eacl2024:
   submittedPapers: 1114
   tags: *id001
   timeline:
-  - deadline: '2023-10-16T11:59:00Z'
+  - deadline: '2023-10-16T11:59:59Z'
     note: ARR Submission
-  - deadline: '2023-12-21T11:59:00Z'
+  - deadline: '2023-12-21T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The Annual Conference of the European Chapter of the Association for Computational
     Linguistics
@@ -80,7 +80,7 @@ eacl2026:
   timeline:
   - deadline: '2025-10-07T11:59:59Z'
     note: ARR Submission
-  - deadline: '2025-12-15T11:59:00Z'
+  - deadline: '2025-12-15T11:59:59Z'
     note: Commitment deadline for papers reviewed by ARR
   title: The Annual Conference of the European Chapter of the Association for Computational
     Linguistics

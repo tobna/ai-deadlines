@@ -10,9 +10,9 @@ iros2021:
   tags: &id001
   - RO
   timeline:
-  - deadline: '2021-02-25T11:59:00Z'
+  - deadline: '2021-02-25T11:59:59Z'
     note: RA-L with IROS option
-  - deadline: '2021-03-06T11:59:00Z'
+  - deadline: '2021-03-06T11:59:59Z'
     note: Conference papers
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   website: https://www.iros2021.org/
@@ -27,9 +27,9 @@ iros2022:
   shortname: IROS 2022
   tags: *id001
   timeline:
-  - deadline: '2022-02-25T11:59:00Z'
+  - deadline: '2022-02-25T11:59:59Z'
     note: RA-L with IROS option
-  - deadline: '2022-03-02T11:59:00Z'
+  - deadline: '2022-03-02T11:59:59Z'
     note: Conference papers
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   website: https://iros2022.org/
@@ -44,7 +44,7 @@ iros2023:
   shortname: IROS 2023
   tags: *id001
   timeline:
-  - deadline: '2023-03-03T11:59:00Z'
+  - deadline: '2023-03-03T11:59:59Z'
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   website: https://2023.ieee-iros.org/
 iros2024:
@@ -108,7 +108,7 @@ iros2027:
   shortname: IROS 2027
   tags: *id001
   timeline:
-  - deadline: '2027-03-02T11:59:00Z'
+  - deadline: '2027-03-02T11:59:59Z'
     note: 'Paper submission deadline: March 1, 2027; exact cutoff time and timezone
       not specified on the official IEEE RAS event page'
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems

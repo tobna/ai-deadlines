@@ -16,8 +16,8 @@ cvpr2021:
   - ML
   - RO
   timeline:
-  - abstractDeadline: '2020-11-10T11:59:00Z'
-    deadline: '2020-11-17T11:59:00Z'
+  - abstractDeadline: '2020-11-10T11:59:59Z'
+    deadline: '2020-11-17T11:59:59Z'
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   website: https://cvpr2021.thecvf.com/
 cvpr2022:
@@ -35,7 +35,7 @@ cvpr2022:
   submittedPapers: 8161
   tags: *id001
   timeline:
-  - abstractDeadline: '2021-11-10T11:59:00Z'
+  - abstractDeadline: '2021-11-10T11:59:59Z'
     deadline: '2021-11-18T23:59:00Z'
   title: IEEE/CVF Conference on Computer Vision and Pattern Recognition
   website: http://cvpr2022.thecvf.com/

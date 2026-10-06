@@ -9,7 +9,7 @@ interspeech2021:
   tags: &id001
   - SP
   timeline:
-  - deadline: '2021-03-27T11:59:00Z'
+  - deadline: '2021-03-27T11:59:59Z'
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2021.org/
 interspeech2022:
@@ -43,7 +43,7 @@ interspeech2023:
   submittedPapers: 1990
   tags: *id001
   timeline:
-  - deadline: '2023-03-02T11:59:00Z'
+  - deadline: '2023-03-02T11:59:59Z'
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2023.org/
 interspeech2024:
@@ -60,7 +60,7 @@ interspeech2024:
   submittedPapers: 1990
   tags: *id001
   timeline:
-  - deadline: '2024-03-03T11:59:00Z'
+  - deadline: '2024-03-03T11:59:59Z'
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2024.org/
 interspeech2025:
@@ -77,7 +77,7 @@ interspeech2025:
   submittedPapers: 1990
   tags: *id001
   timeline:
-  - deadline: '2025-02-13T11:59:00Z'
+  - deadline: '2025-02-13T11:59:59Z'
   title: Conference of the International Speech Communication Association
   website: https://www.interspeech2025.org/home
 interspeech2026:

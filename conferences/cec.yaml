@@ -9,7 +9,7 @@ cec2021:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2021-02-24T11:59:00Z'
+  - deadline: '2021-02-24T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
   website: https://cec2021.mini.pw.edu.pl/en/index.html
 cec2022:
@@ -22,8 +22,8 @@ cec2022:
   shortname: IEEE CEC 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-02-01T11:59:00Z'
-    deadline: '2022-02-15T11:59:00Z'
+  - abstractDeadline: '2022-02-01T11:59:59Z'
+    deadline: '2022-02-15T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
   website: https://wcci2022.org/
 cec2023:
@@ -36,7 +36,7 @@ cec2023:
   shortname: IEEE CEC 2023
   tags: *id001
   timeline:
-  - deadline: '2023-01-28T11:59:00Z'
+  - deadline: '2023-01-28T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
   website: https://2023.ieee-cec.org/
 cec2024:
@@ -49,7 +49,7 @@ cec2024:
   shortname: IEEE CEC 2024
   tags: *id001
   timeline:
-  - deadline: '2024-01-30T11:59:00Z'
+  - deadline: '2024-01-30T11:59:59Z'
   title: IEEE Congress on Evolutionary Computation
   website: https://2024.ieeewcci.org/
 cec2025:

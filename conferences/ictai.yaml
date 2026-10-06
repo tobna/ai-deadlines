@@ -9,7 +9,7 @@ ictai2021:
   tags: &id001
   - ML
   timeline:
-  - deadline: '2021-07-27T11:59:00Z'
+  - deadline: '2021-07-27T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://ictai.computer.org/2021/
 ictai2022:
@@ -22,7 +22,7 @@ ictai2022:
   shortname: ICTAI 2022
   tags: *id001
   timeline:
-  - deadline: '2022-08-09T11:59:00Z'
+  - deadline: '2022-08-09T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://ictai.computer.org/2022/
 ictai2024:
@@ -35,7 +35,7 @@ ictai2024:
   shortname: ICTAI 2024
   tags: *id001
   timeline:
-  - deadline: '2024-07-22T11:59:00Z'
+  - deadline: '2024-07-22T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://ictai.computer.org/2024/
 ictai2025:
@@ -48,7 +48,7 @@ ictai2025:
   shortname: ICTAI 2025
   tags: *id001
   timeline:
-  - deadline: '2025-07-16T11:59:00Z'
+  - deadline: '2025-07-16T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://easyconferences.eu/ictai2025/
 ictai2026:
@@ -61,7 +61,7 @@ ictai2026:
   shortname: ICTAI 2026
   tags: *id001
   timeline:
-  - deadline: '2026-07-22T11:59:00Z'
+  - deadline: '2026-07-22T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce
   website: https://ictai.computer.org/2026/
 ictai2027:

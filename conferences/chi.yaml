@@ -31,8 +31,8 @@ chi2022:
   submittedPapers: 2579
   tags: *id001
   timeline:
-  - abstractDeadline: '2021-09-03T11:59:00Z'
-    deadline: '2021-09-10T11:59:00Z'
+  - abstractDeadline: '2021-09-03T11:59:59Z'
+    deadline: '2021-09-10T11:59:59Z'
   title: ACM Conference on Human Factors in Computing Systems
   website: https://chi2022.acm.org/
 chi2023:
@@ -49,8 +49,8 @@ chi2023:
   submittedPapers: 3182
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-09-09T11:59:00Z'
-    deadline: '2022-09-16T11:59:00Z'
+  - abstractDeadline: '2022-09-09T11:59:59Z'
+    deadline: '2022-09-16T11:59:59Z'
   title: ACM Conference on Human Factors in Computing Systems
   website: https://chi2023.acm.org/
 chi2024:

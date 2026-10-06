@@ -8,7 +8,7 @@ icmla2022:
   shortname: ICMLA 2022
   tags: &id001 []
   timeline:
-  - deadline: '2022-07-19T11:59:00Z'
+  - deadline: '2022-07-19T11:59:59Z'
     note: Main Conference Papers DDL.
   title: International Conference on Machine Learning and Applications
   website: https://www.icmla-conference.org/icmla22/
@@ -22,7 +22,7 @@ icmla2023:
   shortname: ICMLA 2023
   tags: *id001
   timeline:
-  - deadline: '2023-08-01T11:59:00Z'
+  - deadline: '2023-08-01T11:59:59Z'
     note: Main Conference Papers DDL.
   title: International Conference on Machine Learning and Applications
   website: https://www.icmla-conference.org/icmla23/
@@ -36,7 +36,7 @@ icmla2024:
   shortname: ICMLA 2024
   tags: *id001
   timeline:
-  - deadline: '2024-08-01T11:59:00Z'
+  - deadline: '2024-08-01T11:59:59Z'
     note: Main Conference Papers DDL.
   title: International Conference on Machine Learning and Applications
   website: https://www.icmla-conference.org/icmla24/
@@ -50,7 +50,7 @@ icmla2025:
   shortname: ICMLA 2025
   tags: *id001
   timeline:
-  - deadline: '2025-07-29T11:59:00Z'
+  - deadline: '2025-07-29T11:59:59Z'
     note: Main Conference Papers DDL.
   title: International Conference on Machine Learning and Applications
   website: https://www.icmla-conference.org/icmla25/
@@ -64,7 +64,7 @@ icmla2026:
   shortname: ICMLA 2026
   tags: *id001
   timeline:
-  - deadline: '2026-06-01T11:59:00Z'
+  - deadline: '2026-06-01T11:59:59Z'
     note: Main Conference Papers DDL.
   title: International Conference on Machine Learning and Applications
   website: https://www.icmla-conference.org/icmla26/

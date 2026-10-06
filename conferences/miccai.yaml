@@ -9,8 +9,8 @@ miccai2021:
   tags: &id001
   - CV
   timeline:
-  - abstractDeadline: '2021-02-23T11:59:00Z'
-    deadline: '2021-03-04T11:59:00Z'
+  - abstractDeadline: '2021-02-23T11:59:59Z'
+    deadline: '2021-03-04T11:59:59Z'
   title: International Conference on Medical Image Computing and Computer Assisted
     Intervention
   website: https://miccai2021.org/en/default.asp
@@ -24,8 +24,8 @@ miccai2022:
   shortname: MICCAI 2022
   tags: *id001
   timeline:
-  - abstractDeadline: '2022-02-16T11:59:00Z'
-    deadline: '2022-03-02T11:59:00Z'
+  - abstractDeadline: '2022-02-16T11:59:59Z'
+    deadline: '2022-03-02T11:59:59Z'
   title: International Conference on Medical Image Computing and Computer Assisted
     Intervention
   website: https://conferences.miccai.org/2022/en/
@@ -39,7 +39,7 @@ miccai2023:
   shortname: MICCAI 2023
   tags: *id001
   timeline:
-  - abstractDeadline: '2023-02-24T11:59:00Z'
+  - abstractDeadline: '2023-02-24T11:59:59Z'
     deadline: '2023-03-10T11:59:59Z'
   title: International Conference on Medical Image Computing and Computer Assisted
     Intervention
@@ -54,7 +54,7 @@ miccai2024:
   shortname: MICCAI 2024
   tags: *id001
   timeline:
-  - abstractDeadline: '2024-02-23T11:59:00Z'
+  - abstractDeadline: '2024-02-23T11:59:59Z'
     deadline: '2024-03-08T11:59:59Z'
   title: International Conference on Medical Image Computing and Computer Assisted
     Intervention
@@ -69,8 +69,8 @@ miccai2025:
   shortname: MICCAI 2025
   tags: *id001
   timeline:
-  - abstractDeadline: '2025-02-14T11:59:00Z'
-    deadline: '2025-02-28T11:59:00Z'
+  - abstractDeadline: '2025-02-14T11:59:59Z'
+    deadline: '2025-02-28T11:59:59Z'
   title: International Conference on Medical Image Computing and Computer Assisted
     Intervention
   website: https://conferences.miccai.org/2025/en/default.asp

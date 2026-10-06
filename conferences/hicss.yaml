@@ -7,7 +7,7 @@ hicss2022:
   shortname: HICSS 2022
   tags: &id001 []
   timeline:
-  - deadline: '2021-06-16T11:59:00Z'
+  - deadline: '2021-06-16T11:59:59Z'
   title: Hawaii International Conference on System Sciences
   website: https://hicss.hawaii.edu/
 hicss2024:
@@ -19,7 +19,7 @@ hicss2024:
   shortname: HICSS 2024
   tags: *id001
   timeline:
-  - deadline: '2023-06-16T11:59:00Z'
+  - deadline: '2023-06-16T11:59:59Z'
   title: Hawaii International Conference on System Sciences
   website: https://hicss.hawaii.edu/
 hicss2025:
@@ -31,7 +31,7 @@ hicss2025:
   shortname: HICSS 2025
   tags: *id001
   timeline:
-  - deadline: '2024-06-16T11:59:00Z'
+  - deadline: '2024-06-16T11:59:59Z'
   title: Hawaii International Conference on System Sciences
   website: https://hicss.hawaii.edu/
 hicss2026:
@@ -43,7 +43,7 @@ hicss2026:
   shortname: HICSS 2026
   tags: *id001
   timeline:
-  - deadline: '2025-06-16T11:59:00Z'
+  - deadline: '2025-06-16T11:59:59Z'
   title: Hawaii International Conference on System Sciences
   website: https://hicss.hawaii.edu/
 hicss2027:

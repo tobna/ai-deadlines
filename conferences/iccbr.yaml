@@ -8,7 +8,7 @@ iccbr2021:
   shortname: ICCBR 2021
   tags: &id001 []
   timeline:
-  - deadline: '2021-05-06T11:59:00Z'
+  - deadline: '2021-05-06T11:59:59Z'
   title: International Conference on Case-Based Reasoning
   website: https://www.iccbr.org/iccbr21/
 iccbr2022:
@@ -21,7 +21,7 @@ iccbr2022:
   shortname: ICCBR 2022
   tags: *id001
   timeline:
-  - deadline: '2022-05-02T11:59:00Z'
+  - deadline: '2022-05-02T11:59:59Z'
   title: International Conference on Case-Based Reasoning
   website: https://iccbr2022.loria.fr/
 iccbr2023:
@@ -34,7 +34,7 @@ iccbr2023:
   shortname: ICCBR 2023
   tags: *id001
   timeline:
-  - deadline: '2023-04-25T11:59:00Z'
+  - deadline: '2023-04-25T11:59:59Z'
   title: International Conference on Case-Based Reasoning
   website: https://www.iccbr2023.org/
 iccbr2024:
@@ -63,10 +63,10 @@ iccbr2025:
   shortname: ICCBR 2025
   tags: *id001
   timeline:
-  - deadline: '2025-02-27T11:59:00Z'
+  - deadline: '2025-02-27T11:59:59Z'
     note: Early submission
-  - abstractDeadline: '2025-03-17T11:59:00Z'
-    deadline: '2025-03-17T11:59:00Z'
+  - abstractDeadline: '2025-03-17T11:59:59Z'
+    deadline: '2025-03-17T11:59:59Z'
     note: Late submission
   title: International Conference on Case-Based Reasoning
   website: https://2025.iccbr.org/

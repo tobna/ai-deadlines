@@ -9,8 +9,8 @@ ijcnn2022:
   tags: &id001
   - ML
   timeline:
-  - abstractDeadline: '2022-02-01T11:59:00Z'
-    deadline: '2022-02-15T11:59:00Z'
+  - abstractDeadline: '2022-02-01T11:59:59Z'
+    deadline: '2022-02-15T11:59:59Z'
   title: International Joint Conference on Neural Networks
   website: https://wcci2022.org/
 ijcnn2023:
@@ -23,7 +23,7 @@ ijcnn2023:
   shortname: IJCNN 2023
   tags: *id001
   timeline:
-  - deadline: '2023-02-08T11:59:00Z'
+  - deadline: '2023-02-08T11:59:59Z'
   title: International Joint Conference on Neural Networks
   website: https://2023.ijcnn.org/
 ijcnn2024:

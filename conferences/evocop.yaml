@@ -86,7 +86,7 @@ evocop2027:
   shortname: EvoCOP 2027
   tags: *id001
   timeline:
-  - deadline: '2026-11-02T11:59:00Z'
+  - deadline: '2026-11-02T11:59:59Z'
     note: Full papers
   title: European Conference on Evolutionary Computation in Combinatorial Optimisation
   website: https://www.evostar.org/2027/evocop/

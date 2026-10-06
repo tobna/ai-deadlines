@@ -14,7 +14,7 @@ coling2022:
   tags: &id001
   - NLP
   timeline:
-  - deadline: '2022-05-18T11:59:00Z'
+  - deadline: '2022-05-18T11:59:59Z'
   title: International Conference on Computational Linguistics
   website: https://coling2022.org/
 coling2024:
