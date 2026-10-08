@@ -200,6 +200,20 @@ def test_extract_dates_from_soup_reads_deadline_table():
     assert data["timeline"][0]["abstractDeadline"].strip() == "Feb 22, 2025"
 
 
+@pytest.mark.parametrize(
+    "cell,start,end",
+    [
+        ("June 22-25, 2027", "June 22", "June 25"),  # cvpr2027: the year used to become the end day
+        ("July 21 - 27", "July 21", "July 27"),
+        ("Dec 10, 15", "Dec 10", "Dec 15"),
+    ],
+)
+def test_extract_dates_from_soup_reads_main_conference_range(cell, start, end):
+    html = f"<table><tr><td>Main Conference Sessions</td><td>{cell}</td></tr></table>"
+    data = extract_dates_from_soup({"timeline": [{}]}, BeautifulSoup(html, "html.parser"))
+    assert (data["conferenceStartDate"], data["conferenceEndDate"]) == (start, end)
+
+
 def test_extract_dates_from_soup_handles_missing_next_cell():
     # A deadline label with no following cell must not raise (was a tds[i+1] IndexError risk).
     html = "<table><tr><td>Paper Submission Deadline</td></tr></table>"

@@ -2,6 +2,10 @@ import re
 
 from .http import fetch_soup
 
+# "June 22-25, 2027" / "Dec 10 – 15" / "July 13, 14" -> (month, first day, last day); a trailing
+# year is ignored (the id carries it). ponytail: same-month ranges only, like the split it replaced.
+_DAY_RANGE_RE = re.compile(r"([A-Za-z]+)\.? (\d{1,2})\s*[-–,]\s*(\d{1,2})\b")
+
 
 def _cell_after(tds, i):
     """Text of the cell after index ``i``, or None when ``i`` is the last cell."""
@@ -54,16 +58,11 @@ def extract_dates_from_soup(data, website):
                     word in lower for word in ["submission", "decision", "paper", "notification", "deadline"]
                 ):
                     date = _cell_after(tds, i)
-                    if date is None:
-                        continue
-                    month = date.split(" ")[0]
-                    if month.endswith(","):
-                        month = month[:-1]
-                    days = date[len(month) + 1:]
-                    days = days.split(",") if "," in days else days.split("-")
-                    if len(days) >= 2:
-                        data["conferenceStartDate"] = f"{month} {days[0].strip()}"
-                        data["conferenceEndDate"] = f"{month} {days[1].strip()}"
+                    match = date and _DAY_RANGE_RE.search(date)
+                    if match:
+                        month, start, end = match.groups()
+                        data["conferenceStartDate"] = f"{month} {start}"
+                        data["conferenceEndDate"] = f"{month} {end}"
 
             header = row.find_next("th")
             if header and ("conference sessions" in header.get_text().lower()):
