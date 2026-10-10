@@ -122,40 +122,34 @@ ijcai2026:
   title: International Joint Conference on Artificial Intelligence
   website: https://2026.ijcai.org/
 ijcai2027:
-  acceptanceRate: 13.63
-  acceptanceRateYear: 2026
-  acceptedPapers: 713
-  conferenceEndDate: '2027-08-20'
-  conferenceStartDate: '2027-08-15'
-  dataSrc: estimate
+  conferenceEndDate: '2027-08-13'
+  conferenceStartDate: '2027-08-07'
+  dataSrc: ccf-deadlines
   h5Index: 136
   id: ijcai2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: IJCAI 2027
-  submittedPapers: 5233
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-01-13T11:59:59Z'
-    deadline: '2027-01-20T11:59:59Z'
-    note: 'From IJCAI 2026: Full paper submission deadline'
+  - abstractDeadline: '2027-01-05T11:59:00Z'
+    deadline: '2027-01-12T11:59:00Z'
+    note: 'Separate satellite event: August 15-17, 2027, Hengqin, China'
   title: International Joint Conference on Artificial Intelligence
+  website: https://2027.ijcai.org/
 ijcai2028:
-  acceptanceRate: 13.63
-  acceptanceRateYear: 2026
-  acceptedPapers: 713
-  conferenceEndDate: '2028-08-20'
-  conferenceStartDate: '2028-08-15'
+  conferenceEndDate: '2028-08-12'
+  conferenceStartDate: '2028-08-07'
   dataSrc: estimate
   h5Index: 136
   id: ijcai2028
   isApproximateDeadline: true
   rating: A*
   shortname: IJCAI 2028
-  submittedPapers: 5233
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-01-13T11:59:59Z'
-    deadline: '2028-01-20T11:59:59Z'
-    note: 'From IJCAI 2026: Full paper submission deadline'
+  - abstractDeadline: '2028-01-05T11:59:00Z'
+    deadline: '2028-01-12T11:59:00Z'
+    note: 'From IJCAI 2027: Separate satellite event: August 15-17, 2027, Hengqin,
+      China'
   title: International Joint Conference on Artificial Intelligence
