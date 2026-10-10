@@ -122,6 +122,9 @@ ijcai2026:
   title: International Joint Conference on Artificial Intelligence
   website: https://2026.ijcai.org/
 ijcai2027:
+  acceptanceRate: 13.63
+  acceptanceRateYear: 2026
+  acceptedPapers: 713
   conferenceEndDate: '2027-08-13'
   conferenceStartDate: '2027-08-07'
   dataSrc: ccf-deadlines
@@ -130,6 +133,7 @@ ijcai2027:
   isApproximateDeadline: false
   rating: A*
   shortname: IJCAI 2027
+  submittedPapers: 5233
   tags: *id001
   timeline:
   - abstractDeadline: '2027-01-05T11:59:00Z'
@@ -138,6 +142,9 @@ ijcai2027:
   title: International Joint Conference on Artificial Intelligence
   website: https://2027.ijcai.org/
 ijcai2028:
+  acceptanceRate: 13.63
+  acceptanceRateYear: 2026
+  acceptedPapers: 713
   conferenceEndDate: '2028-08-12'
   conferenceStartDate: '2028-08-07'
   dataSrc: estimate
@@ -146,6 +153,7 @@ ijcai2028:
   isApproximateDeadline: true
   rating: A*
   shortname: IJCAI 2028
+  submittedPapers: 5233
   tags: *id001
   timeline:
   - abstractDeadline: '2028-01-05T11:59:00Z'

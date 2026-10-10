@@ -114,6 +114,9 @@ icdm2026:
   title: International Conference on Data Mining
   website: http://icdm2026.neu.edu.cn/
 icdm2027:
+  acceptanceRate: 13.5
+  acceptanceRateYear: 2025
+  acceptedPapers: 106
   conferenceEndDate: '2027-11-18'
   conferenceStartDate: '2027-11-15'
   dataSrc: ccf-deadlines
@@ -122,6 +125,7 @@ icdm2027:
   isApproximateDeadline: false
   rating: A*
   shortname: ICDM 2027
+  submittedPapers: 785
   tags: *id001
   timeline:
   - deadline: '2027-06-07T11:59:00Z'
@@ -129,6 +133,9 @@ icdm2027:
   title: IEEE International Conference on Data Mining
   website: https://icdm2027-website.onrender.com/
 icdm2028:
+  acceptanceRate: 13.5
+  acceptanceRateYear: 2025
+  acceptedPapers: 106
   conferenceEndDate: '2028-11-20'
   conferenceStartDate: '2028-11-15'
   dataSrc: estimate
@@ -137,6 +144,7 @@ icdm2028:
   isApproximateDeadline: true
   rating: A*
   shortname: ICDM 2028
+  submittedPapers: 785
   tags: *id001
   timeline:
   - deadline: '2028-06-07T11:59:00Z'
