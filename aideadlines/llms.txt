@@ -28,7 +28,7 @@ two submission rounds appears twice, distinguished by `note`):
 - `isApproximateDeadline` — `true` means the date is estimated from previous years, not confirmed
 - `conferenceStartDate`, `conferenceEndDate` — `YYYY-MM-DD`
 - `location`, `website` — optional strings
-- `tags` — subset of `DM`, `ML`, `NLP`, `CV`, `HCI`, `RO`, `SP`
+- `tags` — subset of `DM`, `ML`, `NLP`, `CV`, `HCI`, `RO`, `SP`, `XAI` (explainable/trustworthy AI)
 - `rating` — CORE ranking (`A*`, `A`, `B`, ...); `h5Index` — Google Scholar h5-index
 - `acceptanceRate` — main-track acceptance rate in percent, from [openaccept.org](https://openaccept.org)
   (CC BY-SA 4.0); `acceptedPapers`/`submittedPapers` — the counts it was computed from;

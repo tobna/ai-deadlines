@@ -1,0 +1,61 @@
+aies2025:
+  conferenceEndDate: '2025-10-22'
+  conferenceStartDate: '2025-10-20'
+  dataSrc: off-website
+  h5Index: 62
+  id: aies2025
+  isApproximateDeadline: false
+  location: IE University Tower, Madrid, Spain
+  rating: C
+  shortname: AIES 2025
+  tags: &id001
+  - XAI
+  timeline:
+  - abstractDeadline: '2025-05-17T11:59:59Z'
+    deadline: '2025-05-24T11:59:59Z'
+  title: AAAI/ACM Conference on AI, Ethics, and Society
+  website: https://www.aies-conference.com/2025/
+aies2026:
+  conferenceEndDate: '2026-10-14'
+  conferenceStartDate: '2026-10-12'
+  dataSrc: off-website
+  h5Index: 62
+  id: aies2026
+  isApproximateDeadline: false
+  location: Malmo Live, Malmo, Sweden
+  rating: C
+  shortname: AIES 2026
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2026-05-15T11:59:59Z'
+    deadline: '2026-05-22T11:59:59Z'
+  title: AAAI/ACM Conference on AI, Ethics, and Society
+  website: https://www.aies-conference.com/2026/
+aies2027:
+  conferenceEndDate: '2027-10-17'
+  conferenceStartDate: '2027-10-12'
+  dataSrc: estimate
+  h5Index: 62
+  id: aies2027
+  isApproximateDeadline: true
+  rating: C
+  shortname: AIES 2027
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2027-05-15T11:59:59Z'
+    deadline: '2027-05-22T11:59:59Z'
+  title: AAAI/ACM Conference on AI, Ethics, and Society
+aies2028:
+  conferenceEndDate: '2028-10-17'
+  conferenceStartDate: '2028-10-12'
+  dataSrc: estimate
+  h5Index: 62
+  id: aies2028
+  isApproximateDeadline: true
+  rating: C
+  shortname: AIES 2028
+  tags: *id001
+  timeline:
+  - abstractDeadline: '2028-05-15T11:59:59Z'
+    deadline: '2028-05-22T11:59:59Z'
+  title: AAAI/ACM Conference on AI, Ethics, and Society

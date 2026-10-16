@@ -2,6 +2,7 @@ iui2022:
   conferenceEndDate: '2022-03-25'
   conferenceStartDate: '2022-03-22'
   dataSrc: ccf-deadlines
+  h5Index: 50
   id: iui2022
   isApproximateDeadline: false
   rating: A
@@ -17,6 +18,7 @@ iui2023:
   conferenceEndDate: '2023-03-31'
   conferenceStartDate: '2023-03-28'
   dataSrc: ccf-deadlines
+  h5Index: 50
   id: iui2023
   isApproximateDeadline: false
   rating: A
@@ -31,6 +33,7 @@ iui2024:
   conferenceEndDate: '2024-03-21'
   conferenceStartDate: '2024-03-18'
   dataSrc: ccf-deadlines
+  h5Index: 50
   id: iui2024
   isApproximateDeadline: false
   rating: A
@@ -45,6 +48,7 @@ iui2025:
   conferenceEndDate: '2025-03-27'
   conferenceStartDate: '2025-03-24'
   dataSrc: ccf-deadlines
+  h5Index: 50
   id: iui2025
   isApproximateDeadline: false
   rating: A
@@ -59,6 +63,7 @@ iui2026:
   conferenceEndDate: '2026-07-16'
   conferenceStartDate: '2026-07-13'
   dataSrc: hf-repo
+  h5Index: 50
   id: iui2026
   isApproximateDeadline: false
   location: St. Raphael Resort & Marina
@@ -76,6 +81,7 @@ iui2027:
   conferenceEndDate: '2027-02-11'
   conferenceStartDate: '2027-02-08'
   dataSrc: ccf-deadlines
+  h5Index: 50
   id: iui2027
   isApproximateDeadline: false
   rating: A
@@ -90,6 +96,7 @@ iui2028:
   conferenceEndDate: '2028-02-13'
   conferenceStartDate: '2028-02-08'
   dataSrc: estimate
+  h5Index: 50
   id: iui2028
   isApproximateDeadline: true
   rating: A

@@ -3,7 +3,7 @@ import os
 from ..log_config import logger
 from .http import fetch_json, fetch_yaml
 
-load_conferences = ["AI", "CG/3dv"]
+load_conferences = ["AI", "CG/3dv", "SC/satml"]
 
 _CCF_TREE = "https://api.github.com/repos/ccfddl/ccf-deadlines/git/trees/main?recursive=1"
 _CCF_RAW = "https://raw.githubusercontent.com/ccfddl/ccf-deadlines/refs/heads/main/"

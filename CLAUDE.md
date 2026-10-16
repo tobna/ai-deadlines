@@ -44,6 +44,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`), plus the id blocklist/aliases (see below).
 - `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`).
 - `ranking.py` — CORE rating + Google Scholar h5-index lookups.
+- `parser/xai.py` — the XAI venues' own sites (xAI, AIES, EXPLAINS), see below.
 - `parser/openaccept.py` — acceptance rates from the openaccept.org metadata repo (not a deadline source, see below).
 - `parser/http.py` — resilient HTTP layer used by all parsers (see below).
 - `parser/*.py` — one module per source (see Data Pipeline).
@@ -56,10 +57,10 @@ The pipeline modules are **functions with `main()` guards** — importing them d
 
 1. `load_conferences()` — load all `conferences/*.yaml`, parsing timestamps.
 2. With `--online`, `scrape_online()` fetches and merges each source in ascending priority:
-   - Official conference websites (`parser/common_website.py`, `parser/wacv.py`)
+   - Official conference websites (`parser/common_website.py`, `parser/wacv.py`, `parser/xai.py`)
    - Hugging Face AI deadlines repo (`parser/hf_list.py`)
    - Nino Duarte's deadlines repo (`parser/ninoduarte_list.py`, only with `--load-nino-data`)
-   - CCF deadlines (`parser/ccf_deadlines.py`)
+   - CCF deadlines (`parser/ccf_deadlines.py`): the whole `AI` category plus the single files listed in `load_conferences` (`CG/3dv`, `SC/satml`), and any file named like an existing `conferences/<id>.yaml`
 3. `normalize_nips()` — rename lingering `nips`/`NIPS` to `neurips`/`NeurIPS`.
 4. `drop_empty_timelines()` — drop unparseable deadlines and conferences with none left.
 5. `write_groups()` — group by conference family, estimate future instances (`parser/see_future.py`), attach CORE/h5 ranks (`ranking.py`) and acceptance rates (`parser/openaccept.py`), and write YAML back to `conferences/`.
@@ -124,6 +125,10 @@ All parsers fetch through `parser/http.py`, never `requests.get` directly:
 - `fetch` / `fetch_text` / `fetch_json` / `fetch_yaml` / `fetch_soup` use a pooled session with a **timeout**, **status checking**, and **bounded retries + backoff** on transient failures (429/5xx, connection errors). They return `None` on persistent failure.
 - Callers treat `None` as "skip this file/record" and degrade gracefully rather than aborting the whole source.
 - Per-record parsing is wrapped so one malformed conference is logged and skipped, not fatal.
+- `parser/xai.py` reads xAI (`xaiworldconference.com/<year>/`), AIES (`aies-conference.com/<year>/`) and EXPLAINS
+  (INSTICC's `ImportantDates.aspx?y=<year>`, whose span ids are the same on every INSTICC/SCITEPRESS conference).
+  Each parser **rejects a page that isn't for the requested year**: xAI puts next year's page up early with the
+  old deadlines copied in, and INSTICC redirects an unknown year to the current edition.
 - The shared "Dates"-table conferences (CVPR/ICCV/ECCV/NeurIPS/ICML) come from one config-driven factory in `common_website.py` (`_CONFIGS` + `_make_parser`); add a new one by appending to `_CONFIGS`. Table extraction lives in `extract_dates_from_soup` (pure, unit-tested).
 
 ### Conference YAML Schema
@@ -132,7 +137,9 @@ Key fields in each `conferences/<id>.yaml`:
 - `id`, `shortname`, `title`, `website`, `location`
 - `conferenceStartDate`, `conferenceEndDate`
 - `timeline`: list of `{deadline, abstractDeadline?, note?}` entries
-- `tags`: from `[DM, ML, NLP, CV, HCI, RO, SP]`
+- `tags`: from `[DM, ML, NLP, CV, HCI, RO, SP, XAI]`. Tags are united across a group and kept on every merge, so a
+  tag no source provides (FAccT's/SaTML's `XAI`) is added once to the YAML and sticks. The frontend builds its tag
+  filter from the data, so a new tag needs no frontend change (but keep `llms.txt` in sync).
 - `dataSrc`: source identifier (controls merge priority)
 - `isApproximateDeadline`: true for estimated entries
 - `h5Index`, `rating`: auto-populated from ranking files
@@ -161,7 +168,7 @@ Conventions in `scripts.js`:
 `pytest` lives in `tests/` and runs with no network:
 - Backend characterization tests (`test_utils.py`, `test_see_future.py`, `test_merge_priority.py`, `test_validate.py`) pin current behavior so refactors stay safe. (`data_to_json`'s timezone normalization is covered via `normalize_timezone_for_js` in `test_utils.py`.)
 - `test_http.py` exercises retry/status/timeout via a monkeypatched session.
-- `test_parsers.py` covers the pure parser helpers and the `common_website` factory metadata (mocked `fetch_soup`).
+- `test_parsers.py` covers the pure parser helpers, the `common_website` factory metadata and the `xai` year guards (mocked `fetch_soup`).
 - `test_deadlines_md.py` pins the markdown export's sorting, `(est.)` marking and pipe escaping.
 
 Live parser behavior is verified manually against real sites, not in CI. CI (`.github/workflows/ci.yml`) runs `ruff` + `pytest` and skips data-only auto-commits.

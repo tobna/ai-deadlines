@@ -1,0 +1,62 @@
+explains2025:
+  conferenceEndDate: '2025-10-24'
+  conferenceStartDate: '2025-10-22'
+  dataSrc: off-website
+  id: explains2025
+  isApproximateDeadline: false
+  location: Marbella, Spain
+  shortname: EXPLAINS 2025
+  tags: &id001
+  - ML
+  - XAI
+  timeline:
+  - deadline: '2025-06-07T11:59:59Z'
+    note: Regular Papers
+  - deadline: '2025-07-04T11:59:59Z'
+    note: Position / Regular Papers (2nd stage)
+  title: International Conference on Explainable AI for Neural and Symbolic Methods
+  website: https://explains.scitevents.org/?y=2025
+explains2026:
+  conferenceEndDate: '2026-10-30'
+  conferenceStartDate: '2026-10-28'
+  dataSrc: off-website
+  id: explains2026
+  isApproximateDeadline: false
+  location: Angers, France
+  shortname: EXPLAINS 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-06-10T11:59:59Z'
+    note: Regular Papers
+  - deadline: '2026-07-04T11:59:59Z'
+    note: Position / Regular Papers (2nd stage)
+  title: International Conference on Explainable AI for Neural and Symbolic Methods
+  website: https://explains.scitevents.org/?y=2026
+explains2027:
+  conferenceEndDate: '2027-11-02'
+  conferenceStartDate: '2027-10-28'
+  dataSrc: estimate
+  id: explains2027
+  isApproximateDeadline: true
+  shortname: EXPLAINS 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-06-10T11:59:59Z'
+    note: 'From EXPLAINS 2026: Regular Papers'
+  - deadline: '2027-07-04T11:59:59Z'
+    note: 'From EXPLAINS 2026: Position / Regular Papers (2nd stage)'
+  title: International Conference on Explainable AI for Neural and Symbolic Methods
+explains2028:
+  conferenceEndDate: '2028-11-02'
+  conferenceStartDate: '2028-10-28'
+  dataSrc: estimate
+  id: explains2028
+  isApproximateDeadline: true
+  shortname: EXPLAINS 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-06-10T11:59:59Z'
+    note: 'From EXPLAINS 2026: Regular Papers'
+  - deadline: '2028-07-04T11:59:59Z'
+    note: 'From EXPLAINS 2026: Position / Regular Papers (2nd stage)'
+  title: International Conference on Explainable AI for Neural and Symbolic Methods

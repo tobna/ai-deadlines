@@ -2,6 +2,7 @@ aaai: 232
 accv: 52
 acl: 236
 acmmm: 101
+aies: 62
 aistats: 101
 bmvc: 57
 coling: 81
@@ -11,6 +12,7 @@ cvpr: 450
 eacl: 77
 eccv: 262
 emnlp: 218
+facct: 103
 iccv: 256
 icdm: 50
 icip: 55
@@ -21,6 +23,7 @@ icra: 122
 ijcai: 136
 ijcnlp: 41
 iros: 86
+iui: 50
 kdd: 124
 lrec: 68
 naacl: 126
@@ -29,3 +32,4 @@ sigdial: 31
 threedv: 56
 wacv: 131
 wsdm: 77
+xai: 14

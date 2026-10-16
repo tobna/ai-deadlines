@@ -14,6 +14,7 @@ from .parser.ninoduarte_list import get_nino_list
 from .parser.openaccept import attach_rate, get_acceptance_stats
 from .parser.see_future import estimate_future_conferences
 from .parser.wacv import parse_wacv
+from .parser.xai import PARSER as XAI_PARSER
 from .ranking import make_conf_rank_function, make_core_rank_function
 from .utils import _parse_timestr, join_conferences, parse_all_times, parse_stuff, unite_tags
 
@@ -57,7 +58,7 @@ def load_conferences():
 
 def scrape_official_websites(conferences, args, reestimate_groups):
     """Walk each official-website parser backwards through years, merging what it finds."""
-    for conf_parser in PARSER + [parse_wacv]:
+    for conf_parser in PARSER + [parse_wacv] + XAI_PARSER:
         current_year = datetime.datetime.now().year
         year = current_year + 2
         no_data_years = 0

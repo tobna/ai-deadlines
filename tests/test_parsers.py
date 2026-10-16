@@ -5,13 +5,14 @@ import os
 import pytest
 from bs4 import BeautifulSoup
 
-from aideadlines.parser import common_website, openaccept
+from aideadlines.parser import common_website, openaccept, xai
 from aideadlines.parser.ccf_deadlines import conference_from_ccf, parse_ccf_date_range
 from aideadlines.parser.common_website import extract_dates_from_soup
 from aideadlines.parser.hf_list import conference_from_hf
 from aideadlines.parser.ninoduarte_list import conference_from_nino, parse_past_conferences
 from aideadlines.parser.openaccept import attach_rate, files_by_name, stats_from_metadata
 from aideadlines.parser.wacv import _split_session_dates
+from aideadlines.parser.xai import extract_aies_dates, extract_insticc_dates, extract_xai_timeline
 
 
 # --------------------------------------------------------------------------- #
@@ -297,6 +298,103 @@ class TestWacvSessionDates:
 
     def test_no_range_returns_none(self):
         assert _split_session_dates("sometime in January") is None
+
+
+# --------------------------------------------------------------------------- #
+# xai — the XAI venues' own sites (markup trimmed from the real 2024-2026 pages)
+# --------------------------------------------------------------------------- #
+_XAI_DATES_HTML = """
+<table>
+  <tr><td>Authors/title registration deadline (<em>easy-chair</em>)*:</td><td><s>March, 1st</s>, <s>March, 8th, 2024</s></td></tr>
+  <tr><td>Article upload deadline on submission platform*:</td><td><s>March, 5</s>, <s>March 15th, 2024</s></td></tr>
+  <tr><td>Accepted article presentation (at xAI-2024)</td><td>17-19 July, 2024</td></tr>
+</table>
+<table>
+  <tr><td>Late-breaking work &amp; demo article upload deadline:</td><td>May 20th 2024</td></tr>
+</table>
+"""
+
+
+def _soup(html):
+    return BeautifulSoup(html, "html.parser")
+
+
+def test_xai_timeline_takes_the_extended_date_of_the_main_track():
+    assert extract_xai_timeline(_soup(_XAI_DATES_HTML), 2024) == {
+        "abstractDeadline": "March 8, 2024",
+        "deadline": "March 15, 2024",
+    }
+
+
+def test_xai_timeline_reads_day_first_dates():
+    html = "<table><tr><td>Final article upload deadline*:</td><td>1st of February, 2026</td></tr></table>"
+    assert extract_xai_timeline(_soup(html), 2026) == {"deadline": "February 1, 2026"}
+
+
+def test_parse_xai_reads_banner_dates_and_location(monkeypatch):
+    home = '<div class="banner-desc"><p>01-03 July, 2026 <br/> Fortaleza, Brazil <br/> Building transparent AI</p></div>'
+    dates = "<table><tr><td>Final article upload deadline*:</td><td><s>February 1, 2026, </s> <s>February 8, 2026</s></td></tr></table>"
+    monkeypatch.setattr(xai, "fetch_soup", lambda url, **kw: _soup(dates if "important-dates" in url else home))
+    d = xai.parse_xai(2026)
+    assert d["id"] == "xai2026"
+    assert d["timeline"] == [{"deadline": "February 8, 2026"}]
+    assert (d["conferenceStartDate"], d["conferenceEndDate"]) == ("July 1, 2026", "July 3, 2026")
+    assert d["location"] == "Fortaleza, Brazil"
+    assert "XAI" in d["tags"]
+
+
+def test_parse_xai_rejects_dates_copied_from_last_year(monkeypatch):
+    # xai2027's page went up with the 2026 deadlines still in it
+    home = '<div class="banner-desc"><p>05-07 July, 2027 - Somewhere</p></div>'
+    dates = "<table><tr><td>Final article upload deadline*:</td><td>1st of February, 2026</td></tr></table>"
+    monkeypatch.setattr(xai, "fetch_soup", lambda url, **kw: _soup(dates if "important-dates" in url else home))
+    assert xai.parse_xai(2027) == {}
+
+
+def test_parse_xai_needs_announced_dates(monkeypatch):
+    monkeypatch.setattr(
+        xai, "fetch_soup", lambda url, **kw: _soup('<div class="banner-desc"><p>dates/location to be announced</p></div>')
+    )
+    assert xai.parse_xai(2027) == {}
+
+
+def test_aies_dates():
+    home = """<ul><li>
+      <div class="tp-caption">Ninth AAAI/ACM Conference on</div>
+      <div class="tp-caption">Malmo Live<br/>Malmo, Sweden</div>
+      <div class="tp-caption">October 12-14, 2026</div>
+    </li></ul>"""
+    cfp = "<p>Abstract Registration Deadline: May 14, 2026 – 11:59 AoE<br/>Submission deadline: May 21, 2026 – 11:59pm AoE</p>"
+    assert extract_aies_dates(_soup(home), _soup(cfp), 2026) == {
+        "timeline": [{"deadline": "May 21, 2026", "abstractDeadline": "May 14, 2026"}],
+        "conferenceStartDate": "October 12, 2026",
+        "conferenceEndDate": "October 14, 2026",
+        "location": "Malmo Live, Malmo, Sweden",
+    }
+
+
+_INSTICC_HTML = """
+<head><meta name="location" content="28 - 30 October, 2026, Angers, France" /></head>
+<span id="ctl00_pageContent_ctl00_lblRPaperSubDates">June 9, 2026 (expired)</span>
+<span id="ctl00_pageContent_ctl00_lblPPaperSubDates">July 3, 2026 (expired)</span>
+"""
+
+
+def test_insticc_dates():
+    assert extract_insticc_dates(_soup(_INSTICC_HTML), 2026) == {
+        "timeline": [
+            {"deadline": "June 9, 2026", "note": "Regular Papers"},
+            {"deadline": "July 3, 2026", "note": "Position / Regular Papers (2nd stage)"},
+        ],
+        "conferenceStartDate": "October 28, 2026",
+        "conferenceEndDate": "October 30, 2026",
+        "location": "Angers, France",
+    }
+
+
+def test_insticc_unknown_year_is_rejected():
+    # ?y=2027 redirects to an error page that still carries the 2026 edition's metadata
+    assert extract_insticc_dates(_soup(_INSTICC_HTML), 2027) is None
 
 
 # --------------------------------------------------------------------------- #

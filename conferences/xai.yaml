@@ -1,0 +1,55 @@
+xai2025:
+  conferenceEndDate: '2025-07-11'
+  conferenceStartDate: '2025-07-09'
+  dataSrc: off-website
+  h5Index: 14
+  id: xai2025
+  isApproximateDeadline: false
+  location: Istanbul, Turkey
+  shortname: xAI 2025
+  tags: &id001
+  - ML
+  - XAI
+  timeline:
+  - abstractDeadline: '2025-02-11T11:59:59Z'
+    deadline: '2025-03-01T11:59:59Z'
+  title: World Conference on Explainable Artificial Intelligence
+  website: https://xaiworldconference.com/2025/
+xai2026:
+  conferenceEndDate: '2026-07-03'
+  conferenceStartDate: '2026-07-01'
+  dataSrc: off-website
+  h5Index: 14
+  id: xai2026
+  isApproximateDeadline: false
+  location: Fortaleza, Brazil
+  shortname: xAI 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-02-09T11:59:59Z'
+  title: World Conference on Explainable Artificial Intelligence
+  website: https://xaiworldconference.com/2026/
+xai2027:
+  conferenceEndDate: '2027-07-06'
+  conferenceStartDate: '2027-07-01'
+  dataSrc: estimate
+  h5Index: 14
+  id: xai2027
+  isApproximateDeadline: true
+  shortname: xAI 2027
+  tags: *id001
+  timeline:
+  - deadline: '2027-02-09T11:59:59Z'
+  title: World Conference on Explainable Artificial Intelligence
+xai2028:
+  conferenceEndDate: '2028-07-06'
+  conferenceStartDate: '2028-07-01'
+  dataSrc: estimate
+  h5Index: 14
+  id: xai2028
+  isApproximateDeadline: true
+  shortname: xAI 2028
+  tags: *id001
+  timeline:
+  - deadline: '2028-02-09T11:59:59Z'
+  title: World Conference on Explainable Artificial Intelligence
