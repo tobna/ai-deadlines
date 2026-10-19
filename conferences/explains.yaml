@@ -33,30 +33,32 @@ explains2026:
   title: International Conference on Explainable AI for Neural and Symbolic Methods
   website: https://explains.scitevents.org/?y=2026
 explains2027:
-  conferenceEndDate: '2027-11-02'
-  conferenceStartDate: '2027-10-28'
-  dataSrc: estimate
+  conferenceEndDate: '2027-10-29'
+  conferenceStartDate: '2027-10-27'
+  dataSrc: off-website
   id: explains2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
+  location: Porto, Portugal
   shortname: EXPLAINS 2027
   tags: *id001
   timeline:
-  - deadline: '2027-06-10T11:59:59Z'
-    note: 'From EXPLAINS 2026: Regular Papers'
-  - deadline: '2027-07-04T11:59:59Z'
-    note: 'From EXPLAINS 2026: Position / Regular Papers (2nd stage)'
+  - deadline: '2027-04-28T11:59:59Z'
+    note: Regular Papers
+  - deadline: '2027-06-04T11:59:59Z'
+    note: Position / Regular Papers (2nd stage)
   title: International Conference on Explainable AI for Neural and Symbolic Methods
+  website: https://explains.scitevents.org/?y=2027
 explains2028:
-  conferenceEndDate: '2028-11-02'
-  conferenceStartDate: '2028-10-28'
+  conferenceEndDate: '2028-11-01'
+  conferenceStartDate: '2028-10-27'
   dataSrc: estimate
   id: explains2028
   isApproximateDeadline: true
   shortname: EXPLAINS 2028
   tags: *id001
   timeline:
-  - deadline: '2028-06-10T11:59:59Z'
-    note: 'From EXPLAINS 2026: Regular Papers'
-  - deadline: '2028-07-04T11:59:59Z'
-    note: 'From EXPLAINS 2026: Position / Regular Papers (2nd stage)'
+  - deadline: '2028-04-28T11:59:59Z'
+    note: 'From EXPLAINS 2027: Regular Papers'
+  - deadline: '2028-06-04T11:59:59Z'
+    note: 'From EXPLAINS 2027: Position / Regular Papers (2nd stage)'
   title: International Conference on Explainable AI for Neural and Symbolic Methods
