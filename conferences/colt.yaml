@@ -106,6 +106,9 @@ colt2026:
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2026/
 colt2027:
+  acceptanceRate: 29.07
+  acceptanceRateYear: 2026
+  acceptedPapers: 191
   conferenceEndDate: '2027-07-02'
   conferenceStartDate: '2027-06-28'
   dataSrc: ccf-deadlines
@@ -113,6 +116,7 @@ colt2027:
   isApproximateDeadline: false
   rating: A*
   shortname: COLT 2027
+  submittedPapers: 657
   tags: *id001
   timeline:
   - deadline: '2027-01-30T11:59:59Z'
@@ -121,6 +125,9 @@ colt2027:
   title: Annual Conference on Learning Theory
   website: https://learningtheory.org/colt2027/
 colt2028:
+  acceptanceRate: 29.07
+  acceptanceRateYear: 2026
+  acceptedPapers: 191
   conferenceEndDate: '2028-07-03'
   conferenceStartDate: '2028-06-28'
   dataSrc: estimate
@@ -128,6 +135,7 @@ colt2028:
   isApproximateDeadline: true
   rating: A*
   shortname: COLT 2028
+  submittedPapers: 657
   tags: *id001
   timeline:
   - deadline: '2028-01-30T11:59:59Z'
