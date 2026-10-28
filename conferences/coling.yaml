@@ -72,9 +72,6 @@ coling2027:
   tags: *id001
   timeline:
   - deadline: '2026-10-13T11:59:59Z'
-    note: ARR Submission
-  - deadline: '2026-12-24T11:59:59Z'
-    note: COLING commitment after ARR meta-reviews; reviewed papers only
   title: International Conference on Computational Linguistics
   website: https://2027.coling-iccl.org/
 coling2028:
