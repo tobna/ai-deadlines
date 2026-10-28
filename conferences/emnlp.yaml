@@ -109,9 +109,9 @@ emnlp2025:
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2025.emnlp.org/
 emnlp2026:
-  acceptanceRate: 22.16
-  acceptanceRateYear: 2025
-  acceptedPapers: 1811
+  acceptanceRate: 15.32
+  acceptanceRateYear: 2026
+  acceptedPapers: 2705
   conferenceEndDate: '2026-10-29'
   conferenceStartDate: '2026-10-24'
   dataSrc: hf-repo
@@ -121,7 +121,7 @@ emnlp2026:
   location: Hungexpo, Budapest, Hungary
   rating: A*
   shortname: EMNLP 2026
-  submittedPapers: 8174
+  submittedPapers: 17661
   tags: *id001
   timeline:
   - deadline: '2026-05-26T11:59:59Z'
@@ -129,9 +129,9 @@ emnlp2026:
   title: The annual Conference on Empirical Methods in Natural Language Processing
   website: https://2026.emnlp.org/
 emnlp2027:
-  acceptanceRate: 22.16
-  acceptanceRateYear: 2025
-  acceptedPapers: 1811
+  acceptanceRate: 15.32
+  acceptanceRateYear: 2026
+  acceptedPapers: 2705
   conferenceEndDate: '2027-10-29'
   conferenceStartDate: '2027-10-24'
   dataSrc: estimate
@@ -140,16 +140,16 @@ emnlp2027:
   isApproximateDeadline: true
   rating: A*
   shortname: EMNLP 2027
-  submittedPapers: 8174
+  submittedPapers: 17661
   tags: *id001
   timeline:
   - deadline: '2027-05-26T11:59:59Z'
     note: 'From EMNLP 2026: Paper submission deadline'
   title: The annual Conference on Empirical Methods in Natural Language Processing
 emnlp2028:
-  acceptanceRate: 22.16
-  acceptanceRateYear: 2025
-  acceptedPapers: 1811
+  acceptanceRate: 15.32
+  acceptanceRateYear: 2026
+  acceptedPapers: 2705
   conferenceEndDate: '2028-10-29'
   conferenceStartDate: '2028-10-24'
   dataSrc: estimate
@@ -158,7 +158,7 @@ emnlp2028:
   isApproximateDeadline: true
   rating: A*
   shortname: EMNLP 2028
-  submittedPapers: 8174
+  submittedPapers: 17661
   tags: *id001
   timeline:
   - deadline: '2028-05-26T11:59:59Z'
