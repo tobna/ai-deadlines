@@ -80,20 +80,21 @@ ijcb2026:
   title: International Joint Conference on Biometrics
   website: https://ijcb2026.ieee-biometrics.org/
 ijcb2027:
-  conferenceEndDate: '2027-09-06'
-  conferenceStartDate: '2027-09-01'
-  dataSrc: estimate
+  conferenceEndDate: '2027-09-17'
+  conferenceStartDate: '2027-09-13'
+  dataSrc: ccf-deadlines
   id: ijcb2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: B
   shortname: IJCB 2027
   tags: *id001
   timeline:
-  - deadline: '2027-05-01T11:59:59Z'
+  - deadline: '2027-04-11T11:59:59Z'
   title: International Joint Conference on Biometrics
+  website: https://ijcb2027.ieee-biometrics.org/
 ijcb2028:
-  conferenceEndDate: '2028-09-06'
-  conferenceStartDate: '2028-09-01'
+  conferenceEndDate: '2028-09-18'
+  conferenceStartDate: '2028-09-13'
   dataSrc: estimate
   id: ijcb2028
   isApproximateDeadline: true
@@ -101,5 +102,5 @@ ijcb2028:
   shortname: IJCB 2028
   tags: *id001
   timeline:
-  - deadline: '2028-05-01T11:59:59Z'
+  - deadline: '2028-04-11T11:59:59Z'
   title: International Joint Conference on Biometrics
