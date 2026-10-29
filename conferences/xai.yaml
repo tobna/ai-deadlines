@@ -30,7 +30,7 @@ xai2026:
   title: World Conference on Explainable Artificial Intelligence
   website: https://xaiworldconference.com/2026/
 xai2027:
-  conferenceEndDate: July 0, 2027
+  conferenceEndDate: '2027-07-09'
   conferenceStartDate: '2027-07-07'
   dataSrc: off-website
   h5Index: 14
