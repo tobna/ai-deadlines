@@ -99,7 +99,7 @@ esann2027:
   shortname: ESANN 2027
   tags: *id001
   timeline:
-  - deadline: '2026-11-19T11:59:59Z'
+  - deadline: '2026-11-19T15:59:59Z'
   title: European Symposium on Artificial Neural Networks, Computational Intelligence
     and Machine Learning
   website: https://www.esann.org/
