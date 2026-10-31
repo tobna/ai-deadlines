@@ -1,4 +1,6 @@
+import datetime
 import os
+import re
 
 from ..log_config import logger
 from .http import fetch_json, fetch_yaml
@@ -8,35 +10,42 @@ load_conferences = ["AI", "CG/3dv", "SC/satml"]
 _CCF_TREE = "https://api.github.com/repos/ccfddl/ccf-deadlines/git/trees/main?recursive=1"
 _CCF_RAW = "https://raw.githubusercontent.com/ccfddl/ccf-deadlines/refs/heads/main/"
 
+_MONTH_NAMES = ["january", "february", "march", "april", "may", "june", "july", "august", "september",
+                "october", "november", "december"]  # fmt: skip
+# "june", "jun" and "sept" -> month number; any other word (and, in-person, Sydney) is ignored
+_MONTHS = {**{m: i for i, m in enumerate(_MONTH_NAMES, 1)}, **{m[:3]: i for i, m in enumerate(_MONTH_NAMES, 1)}}
+_MONTHS["sept"] = 9
+
 
 def parse_ccf_date_range(date_str, fallback_year):
-    """Parse a ccf-deadlines 'date' string into (start, end) 'D Mon YYYY' strings.
+    """Parse a ccf-deadlines 'date' string into ISO (start, end) dates.
 
-    Returns None for 'TBD'. Raises ValueError/AssertionError for shapes it can't handle.
+    CCF writes anything from 'June 1-5, 2025' to 'May 9-14 (in-person) and 6-7 (virtual), 2027'
+    or 'March 31, 2023 (virtual); April 3-5, 2023 (in person)'. Every day gets the last month
+    named before it and the first year named after it; the earliest and latest day span the
+    conference. Returns None for TBD dates, raises ValueError when there is no day at all.
     """
-    if date_str == "TBD":
-        return None
-    parts = date_str.replace("-", " - ").replace("  ", " ").split(" ")
-    if len(parts) == 3:
-        month, days, year = parts
-        start_month = end_month = month
-        days = days.split("-")
-        start_day, end_day = days if len(days) == 2 else (days[0], days[0])
-    elif len(parts) == 5:
-        if int(parts[-1]) >= 1900:
-            month, start_day, dash, end_day, year = parts
-            assert dash == "-", f"No '-', but '{dash}'"
-            start_month = end_month = month
-        else:
-            start_month, start_day, dash, end_month, end_day = parts
-            assert len(end_month) >= 3, f"Thought {end_month} was a month"
-            year = str(fallback_year)
-    elif len(parts) == 6:
-        start_month, start_day, dash, end_month, end_day, year = parts
-        assert dash == "-", f"No '-', but '{dash}'"
-    else:
+    text = re.sub(r"\([^)]*\)", " ", date_str)  # "(in-person)", "(San Diego and Mexico City)"
+    month, days, years = None, [], []  # years: (number of days before it, year)
+    for token in re.findall(r"[A-Za-z]+|\d+", text):
+        if token.isalpha():
+            month = _MONTHS.get(token.lower(), month)
+        elif len(token) == 4:
+            years.append((len(days), int(token)))
+        elif month is not None:
+            days.append((month, int(token)))
+    if not days:
+        if "TBD" in date_str:  # "TBD", "May 2027 (exact dates TBD)"
+            return None
         raise ValueError(f"Can't parse dates str '{date_str}' yet")
-    return f"{start_day} {start_month} {year}", f"{end_day} {end_month} {year}"
+    # shortcut: a range across New Year that writes no year ('Dec 30 - Jan 2') gets one year for
+    # both days; CCF has always written the year so far.
+    last_year = years[-1][1] if years else fallback_year
+    dates = [
+        datetime.date(next((year for pos, year in years if pos > i), last_year), month, day)
+        for i, (month, day) in enumerate(days)
+    ]
+    return min(dates).isoformat(), max(dates).isoformat()
 
 
 def conference_from_ccf(ccf_info, conf):

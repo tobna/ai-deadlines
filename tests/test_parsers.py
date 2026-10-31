@@ -22,15 +22,27 @@ class TestCcfDateRange:
     def test_tbd_returns_none(self):
         assert parse_ccf_date_range("TBD", 2025) is None
 
-    def test_single_month_day_range(self):
-        # The trailing comma on the end day is a known quirk dateparser tolerates downstream.
-        assert parse_ccf_date_range("June 1-5, 2025", 2025) == ("1 June 2025", "5, June 2025")
+    @pytest.mark.parametrize(
+        "date_str,expected",
+        [
+            ("June 1-5, 2025", ("2025-06-01", "2025-06-05")),
+            ("June 30 - July 4, 2025", ("2025-06-30", "2025-07-04")),
+            ("June 5 2025", ("2025-06-05", "2025-06-05")),
+            ("Sept. 3-5", ("2025-09-03", "2025-09-05")),  # no year written -> the conference's
+            # split events span from the earliest to the latest day, whatever order they are listed in
+            ("May 9-14 (in-person) and 6-7 (virtual), 2027", ("2027-05-06", "2027-05-14")),
+            ("November 28-December 1 (In-person) and December 6-8 (Virtual), 2022", ("2022-11-28", "2022-12-08")),
+            ("December 8-10 (Sydney), December 9-11 (Atlanta and Paris), 2026", ("2026-12-08", "2026-12-11")),
+            ("March 31, 2023 (virtual); April 3-5, 2023 (in person)", ("2023-03-31", "2023-04-05")),
+            ("July 7 (online) and July 12-14, 2022", ("2022-07-07", "2022-07-14")),
+            ("December 30, 2025 - January 2, 2026", ("2025-12-30", "2026-01-02")),
+        ],
+    )
+    def test_date_ranges(self, date_str, expected):
+        assert parse_ccf_date_range(date_str, 2025) == expected
 
-    def test_cross_month_range(self):
-        assert parse_ccf_date_range("June 30 - July 4, 2025", 2025) == ("30 June 2025", "4, July 2025")
-
-    def test_single_day(self):
-        assert parse_ccf_date_range("June 5 2025", 2025) == ("5 June 2025", "5 June 2025")
+    def test_month_only_tbd_returns_none(self):
+        assert parse_ccf_date_range("May 2027 (exact dates TBD)", 2027) is None
 
     def test_unparseable_raises(self):
         with pytest.raises(ValueError):
@@ -59,7 +71,7 @@ class TestConferenceFromCcf:
         out = conference_from_ccf(self._info(), conf)
         assert out["id"] == "cvpr2025"
         assert out["website"] == "https://cvpr.org"
-        assert out["conferenceStartDate"] == "1 June 2025"
+        assert out["conferenceStartDate"] == "2025-06-01"
         assert out["timeline"] == [{"deadline": "2024-11-01", "note": "paper"}]
 
     def test_3dv_id_is_rewritten(self):
