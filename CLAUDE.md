@@ -47,7 +47,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `validate.py` — schema validation (`validate_conferences`); `main()` exits non-zero on problems.
 - `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`), the id blocklist/aliases (see below), and `load_conference_files`, the one `conferences/*.yaml` loader used by the pipeline, the validator and the JSON export.
 - `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`). Zone names in a deadline string are swapped for offsets via `TZ_REPLACE` (whole words only); a conference `timezone` that pytz knows (IANA, `CET`) is applied with DST, anything else (`AoE`, `UTC-12`, `PST`) via dateparser, and an unknown one is an ERROR, never the server clock.
-- `ranking.py` — CORE rating + Google Scholar h5-index lookups.
+- `ranking.py` — CORE rating + Google Scholar h5-index lookups. CORE answers 403 to a burst of requests, so each online run looks up a single random group; with hourly runs every group is rechecked every few days on average. h5 values come from the committed `rank/h5index.yaml` only.
 - `parser/xai.py` — the XAI venues' own sites (xAI, AIES, EXPLAINS), see below.
 - `parser/openaccept.py` — acceptance rates from the openaccept.org metadata repo (not a deadline source, see below).
 - `parser/http.py` — resilient HTTP layer used by all parsers (see below).
@@ -95,7 +95,7 @@ the canonical group (`ieee cec` -> `cec`, `ruleml+rr` -> `rulemlrr`). Both are a
 and the JSON export), so a blocked or aliased
 conference cannot come back through the daily run. To block a new venue add its domain or group id
 there; to merge duplicate groups add the alias — `ranking.py` searches CORE under the canonical id
-and every alias spelling, so the rating follows automatically on the next online refresh (never
+and every alias spelling, so the rating follows automatically when the CORE rotation reaches the group (never
 hand-edit `rank/core.yaml`).
 
 ### Acceptance rates (`parser/openaccept.py`)
@@ -125,7 +125,7 @@ tooltip spells out `Acceptance rate 2025: 24.52% (5,290 of 21,575 papers). Sourc
 
 ### Parser conventions
 
-All parsers, and the CORE lookup in `ranking.py`, fetch through `parser/http.py`, never `requests.get` directly (CORE: an unreachable portal aborts the refresh with an ERROR and keeps `rank/core.yaml`):
+All parsers, and the CORE lookup in `ranking.py`, fetch through `parser/http.py`, never `requests.get` directly (CORE: a failed lookup is an ERROR and keeps the stored rank):
 
 - `fetch` / `fetch_text` / `fetch_json` / `fetch_yaml` / `fetch_soup` use a pooled session with a **timeout** and **status checking**, and make **one attempt** (no retries: the next hourly run is the retry, and the stored data stays until then). They return `None` on any failure (error status, timeout, connection error).
 - Callers treat `None` as "skip this file/record" and degrade gracefully rather than aborting the whole source.

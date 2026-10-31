@@ -142,14 +142,31 @@ def test_core_lookup_falls_back_to_alias_spelling(monkeypatch):
     assert ranking._lookup_core_rank("nope") is None
 
 
-def test_core_refresh_keeps_stored_ranks_when_portal_is_down(monkeypatch, tmp_path):
+def _fake_package(monkeypatch, tmp_path, core_yaml):
+    """Point ranking at tmp_path: core.yaml is read from <pkg>/../rank."""
     from aideadlines import ranking
 
     (tmp_path / "rank").mkdir()
     (tmp_path / "pkg").mkdir()  # <pkg>/.. only resolves if <pkg> exists
-    (tmp_path / "rank" / "core.yaml").write_text("cvpr: A*\n")
-    monkeypatch.setattr(ranking, "this_folder", str(tmp_path / "pkg"))  # core.yaml is read from <pkg>/../rank
+    (tmp_path / "rank" / "core.yaml").write_text(core_yaml)
+    monkeypatch.setattr(ranking, "this_folder", str(tmp_path / "pkg"))
+    return ranking
+
+
+def test_core_refresh_keeps_stored_ranks_when_portal_is_down(monkeypatch, tmp_path):
+    ranking = _fake_package(monkeypatch, tmp_path, "cvpr: A*\n")
     monkeypatch.setattr(ranking, "fetch_soup", lambda url: None)
-    add_rank = ranking.make_core_rank_function(["cvpr", "iccv"], online=True, force_update=True)
+    add_rank = ranking.make_core_rank_function(["cvpr", "iccv"], online=True)
     assert add_rank({"id": "cvpr2027"})["rating"] == "A*"
     assert (tmp_path / "rank" / "core.yaml").read_text() == "cvpr: A*\n"  # not overwritten
+
+
+def test_core_refresh_asks_about_one_group_per_run(monkeypatch, tmp_path):
+    ranking = _fake_package(monkeypatch, tmp_path, "cvpr: B\n")
+    asked = []
+    monkeypatch.setattr(ranking, "_lookup_core_rank", lambda group: asked.append(group) or "A*")
+    add_rank = ranking.make_core_rank_function(["iccv", "cvpr", "eccv"], online=True)
+    assert len(asked) == 1 and asked[0] in {"iccv", "cvpr", "eccv"}
+    assert add_rank({"id": f"{asked[0]}2028"})["rating"] == "A*"  # found rank is stored and used
+    ranking.make_core_rank_function(["iccv", "cvpr", "eccv"], online=False)
+    assert len(asked) == 1  # offline: no lookup

@@ -1,8 +1,7 @@
 import os
+import random
 import re
-from datetime import datetime, timedelta
 
-import dateparser
 import yaml
 
 from .log_config import logger
@@ -35,7 +34,7 @@ def _get_core_rank(shortname):
     shortname = shortname.lower().replace("threedv", "3dv")
     core_url = f"https://portal.core.edu.au/conf-ranks/?search={shortname}&by=all"
     core_res = fetch_soup(core_url)
-    if core_res is None:  # unreachable, or blocking us (403): the remaining lookups would fail too
+    if core_res is None:  # unreachable, or blocking us (403)
         raise ConnectionError(f"CORE portal did not answer {core_url}")
 
     for row in core_res.find_all("tr"):
@@ -63,45 +62,31 @@ def _lookup_core_rank(group):
     return None
 
 
-def make_core_rank_function(conference_groups, online=True, force_update=False):
+def make_core_rank_function(conference_groups, online=True):
+    """Rank lookup from ``rank/core.yaml``; online, first refresh one random group's rank from CORE.
+
+    The CORE portal answers 403 to a burst of requests, and its rankings change only every few
+    years, so each run asks about a single group picked at random: with hourly runs every group
+    is rechecked every few days on average, with no state to keep.
+    """
     core_save_file = os.path.join(this_folder, os.pardir, "rank", "core.yaml")
+    core_ranks = {}
     if os.path.isfile(core_save_file):
-        with open(core_save_file, "r") as f:
-            core_ranks = yaml.safe_load(f)
-        if core_ranks is None:
-            core_ranks = {}
-    else:
-        core_ranks = {}
-        force_update = True
+        with open(core_save_file) as f:
+            core_ranks = yaml.safe_load(f) or {}
 
-    last_update_file = os.path.join(this_folder, "data", ".last_core_update")
-    if not os.path.isfile(last_update_file):
-        force_update = True
-    else:
-        with open(last_update_file, "r") as f:
-            last_update = dateparser.parse(f.read().strip())
-
-        if last_update is None:
-            force_update = True
-        else:
-            force_update = force_update or last_update + timedelta(days=1) < datetime.now()
-
-    if force_update and online:
-        logger.info(f"Updating core ranks for {len(conference_groups)} conferences")
+    if online and conference_groups:
+        group = random.choice(list(conference_groups))
         try:
-            for i, group in enumerate(conference_groups):
-                rank = _lookup_core_rank(group)
-                if rank is not None:
-                    core_ranks[group] = rank
-                    logger.info(f"{i+1}/{len(conference_groups)}: {group} -> {rank}")
+            rank = _lookup_core_rank(group)
         except ConnectionError as e:
-            # Keep the stored ranks and no stamp, so the next run tries again.
-            logger.error(f"ERROR updating CORE ranks, keeping the stored ones: {e}")
+            logger.error(f"ERROR looking up the CORE rank of {group}, keeping the stored one: {e}")
         else:
-            with open(core_save_file, "w") as f:
-                yaml.safe_dump(core_ranks, f)
-            with open(last_update_file, "w") as f:
-                f.write(datetime.now().isoformat())
+            logger.info(f"CORE rank of {group}: {rank}")
+            if rank is not None and core_ranks.get(group) != rank:
+                core_ranks[group] = rank
+                with open(core_save_file, "w") as f:
+                    yaml.safe_dump(core_ranks, f)
 
     def add_core_rank(conf):
         conf_id = conf["id"][:-4]
