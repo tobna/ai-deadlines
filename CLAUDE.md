@@ -154,6 +154,7 @@ Single-page static app — no backend:
 - `aideadlines/scripts.js` — loads JSON, handles filtering/sorting/theming.
 - `aideadlines/styles.css` — hand-written stylesheet, served as is (no build step)
 - `html/` — generated output directory (gitignored)
+- `nginx.conf` — site config of the `website` container (`nginx:latest`, mounted over `/etc/nginx/conf.d/default.conf` in the docker-stacks compose file): serves `.md` as `text/markdown`, text as UTF-8, and the `.gz` files `make_website.sh` writes via `gzip_static`. nginx reads it at start, so restart the container after a change.
 - `aideadlines/sitemap.xml` — template; `make_website.sh` stamps `<lastmod>` with the build date on the way into `html/`, so the daily rebuild never shows up as a git change.
 
 Agent/LLM access (the page renders client-side, so fetching the HTML yields nothing):
