@@ -174,11 +174,11 @@ icml2026:
   acceptedPapers: 6352
   conferenceEndDate: '2026-07-11'
   conferenceStartDate: '2026-07-06'
-  dataSrc: hf-repo
+  dataSrc: off-website
   h5Index: 272
   id: icml2026
   isApproximateDeadline: false
-  location: Coex Convention & Exhibition Center
+  location: COEX Convention & Exhibition Center, Seoul, South Korea
   rating: A*
   shortname: ICML 2026
   submittedPapers: 23918
@@ -186,45 +186,6 @@ icml2026:
   timeline:
   - abstractDeadline: '2026-01-24T11:59:59Z'
     deadline: '2026-01-29T11:59:59Z'
-    note: Paper Submission
   timezone: UTC-12
   title: International Conference on Machine Learning
-  website: https://icml.cc/Conferences/2026/CallForPapers
-icml2027:
-  acceptanceRate: 26.56
-  acceptanceRateYear: 2026
-  acceptedPapers: 6352
-  conferenceEndDate: '2027-07-11'
-  conferenceStartDate: '2027-07-06'
-  dataSrc: estimate
-  h5Index: 272
-  id: icml2027
-  isApproximateDeadline: true
-  rating: A*
-  shortname: ICML 2027
-  submittedPapers: 23918
-  tags: *id001
-  timeline:
-  - abstractDeadline: '2026-01-24T11:59:59Z'
-    deadline: '2027-01-29T11:59:59Z'
-    note: 'From ICML 2026: Paper Submissions Open on OpenReview Jan 08 2026 12:00AM
-      UTC-0'
-  title: International Conference on Machine Learning
-icml2028:
-  acceptanceRate: 26.56
-  acceptanceRateYear: 2026
-  acceptedPapers: 6352
-  conferenceEndDate: '2028-07-10'
-  conferenceStartDate: '2028-07-05'
-  dataSrc: estimate
-  h5Index: 272
-  id: icml2028
-  isApproximateDeadline: true
-  rating: A*
-  shortname: ICML 2028
-  submittedPapers: 23918
-  tags: *id001
-  timeline:
-  - abstractDeadline: '2028-01-24T11:59:59Z'
-    deadline: '2028-01-29T11:59:59Z'
-  title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2026/
