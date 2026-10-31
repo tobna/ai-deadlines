@@ -142,6 +142,29 @@ def drop_empty_timelines(conferences):
     return conferences
 
 
+def flag_implausible_abstracts(conferences):
+    """Log an error for an upcoming deadline whose abstract is after it or more than 90 days before.
+
+    Sources have got either date wrong (a typo'd abstract year, a camera-ready date as the paper
+    deadline), so nothing is dropped: a person fixes the record with ``dataSrc: manual``. Past
+    deadlines are left alone, they no longer matter to anyone submitting.
+    """
+    now = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+    for conf in conferences.values():
+        for entry in conf["timeline"]:
+            try:
+                paper, abstract = (
+                    datetime.datetime.strptime(entry[key], "%Y-%m-%dT%H:%M:%SZ") for key in ("deadline", "abstractDeadline")
+                )
+            except (KeyError, TypeError, ValueError):  # no abstract, or not a parsed timestamp
+                continue
+            if paper > now and not datetime.timedelta(0) <= paper - abstract <= datetime.timedelta(days=90):
+                logger.error(
+                    f"ERROR {conf['id']} ({conf.get('dataSrc')}): abstract deadline {entry['abstractDeadline']} "
+                    f"does not fit paper deadline {entry['deadline']}; correct it with dataSrc: manual"
+                )
+
+
 def write_groups(conferences, args):
     """Group by conference family, estimate future instances, attach ranks, and write YAML."""
     add_conf_rank = make_conf_rank_function()
@@ -185,6 +208,7 @@ def main():
         scrape_online(conferences, args)
     normalize_nips(conferences)
     drop_empty_timelines(conferences)
+    flag_implausible_abstracts(conferences)
     write_groups(conferences, args)
 
 
