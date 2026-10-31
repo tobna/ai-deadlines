@@ -42,7 +42,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `data_to_json.py` — splits merged YAML into upcoming/archive JSON; `main()` entry point.
 - `validate.py` — schema validation (`validate_conferences`); `main()` exits non-zero on problems.
 - `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`), the id blocklist/aliases (see below), and `load_conference_files`, the one `conferences/*.yaml` loader used by the pipeline, the validator and the JSON export.
-- `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`).
+- `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`). Zone names in a deadline string are swapped for offsets via `TZ_REPLACE` (whole words only); a conference `timezone` that pytz knows (IANA, `CET`) is applied with DST, anything else (`AoE`, `UTC-12`, `PST`) via dateparser, and an unknown one is an ERROR, never the server clock.
 - `ranking.py` — CORE rating + Google Scholar h5-index lookups.
 - `parser/xai.py` — the XAI venues' own sites (xAI, AIES, EXPLAINS), see below.
 - `parser/openaccept.py` — acceptance rates from the openaccept.org metadata repo (not a deadline source, see below).

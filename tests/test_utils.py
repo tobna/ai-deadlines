@@ -36,10 +36,34 @@ class TestParseTimestr:
     def test_unparseable_returns_none(self):
         assert _parse_timestr("not a date xyz", with_time=True) is None
 
-    def test_named_timezone_replacement(self):
-        # CET is mapped via TZ_REPLACE; this pins the *current* observed conversion.
-        # (The exact UTC offset here is suspected buggy and may change in a later phase.)
-        assert _parse_timestr("May 1, 2025 18:00 CET", with_time=True) == "2025-05-01T16:00:00Z"
+    @pytest.mark.parametrize(
+        "timestr,expected",
+        [
+            ("May 1, 2025 18:00 CET", "2025-05-01T17:00:00Z"),  # the "ET" inside "CET" is not Eastern Time
+            ("Mar 1, 2026 23:59 EET", "2026-03-01T21:59:00Z"),
+            ("Mar 1, 2026 23:59 Central Time", "2026-03-02T05:59:00Z"),  # US Central, not China's CST
+            ("Mar 1, 2026 23:59 CST", "2026-03-01T15:59:00Z"),  # CST is China Standard Time here
+            ("SEPT 15, 2026 23:59 AoE", "2026-09-16T11:59:00Z"),  # "PT" inside "SEPT" is not Pacific Time
+        ],
+    )
+    def test_named_timezone_replacement(self, timestr, expected):
+        assert _parse_timestr(timestr, with_time=True) == expected
+
+    @pytest.mark.parametrize(
+        "timestr,conf_tz,expected",
+        [
+            ("Mar 1, 2026 23:59", "America/Los_Angeles", "2026-03-02T07:59:00Z"),  # PST
+            ("Jul 15, 2026", "America/Los_Angeles", "2026-07-16T06:59:59Z"),  # PDT, end of day
+            ("Jul 15, 2026 23:59", "Europe/Berlin", "2026-07-15T21:59:00Z"),  # CEST
+            ("Mar 1, 2026 23:59", "Etc/GMT-2", "2026-03-01T21:59:00Z"),  # POSIX sign: UTC+2
+            ("Mar 1, 2026 23:59", "UTC-8", "2026-03-02T07:59:00Z"),
+        ],
+    )
+    def test_conference_timezone_applies_when_the_string_has_none(self, timestr, conf_tz, expected):
+        assert _parse_timestr(timestr, with_time=True, conf_tz=conf_tz) == expected
+
+    def test_unknown_conference_timezone_returns_none(self):
+        assert _parse_timestr("Mar 1, 2026 23:59", with_time=True, conf_tz="Mars/Olympus") is None
 
     def test_datetime_input_passthrough(self):
         dt = datetime.datetime(2025, 3, 1, 10, 30, tzinfo=datetime.timezone.utc)

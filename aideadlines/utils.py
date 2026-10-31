@@ -11,8 +11,8 @@ TZ_REPLACE = {
     "PT": "PST",
     "Eastern Time": "EST",
     "ET": "EST",
-    "Central Time": "CST",
-    "CT": "CST",
+    "Central Time": "UTC-6",  # not "CST", which is China below
+    "CT": "UTC-6",
     "Mountain Time": "MST",
     # Named timezone regions
     "Russia/Moscow": "GMT+3",
@@ -53,6 +53,27 @@ TZ_REPLACE = {
     "Anywhere on Earth": "AoE",
     "AoE": "UTC-12",
 }
+# Whole words only, so the "ET" inside "CET" stays put. Applied in order, so "AoE" -> "UTC-12" chains.
+_TZ_PATTERNS = [(re.compile(rf"(?<!\w){re.escape(name)}(?!\w)"), tz) for name, tz in TZ_REPLACE.items()]
+
+
+def _replace_tz_names(text):
+    """Swap the zone names dateparser misreads or doesn't know for UTC offsets."""
+    for pattern, tz in _TZ_PATTERNS:
+        text = pattern.sub(tz, text)
+    return text
+
+
+def _localize(naive, conf_tz):
+    """``naive`` as wall time in the conference timezone, or None if that zone is unknown."""
+    try:  # IANA names ("America/Los_Angeles", "Etc/GMT-2", "CET"), with daylight saving time
+        return pytz.timezone(conf_tz).localize(naive)
+    except pytz.UnknownTimeZoneError:  # "AoE", "UTC-12", "PST": dateparser reads the offset
+        aware = dateparser.parse(f"{naive.isoformat()} {_replace_tz_names(conf_tz)}")
+    if aware is None or aware.tzinfo is None:
+        logger.error(f"ERROR unknown conference timezone '{conf_tz}'")
+        return None
+    return aware
 
 
 def _parse_timestr(timestr, with_time, conf_tz=None):
@@ -60,8 +81,7 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
         conf_tz = "AoE"
     if isinstance(timestr, str):
         has_explicit_time = bool(re.search(r"\d+:\d+", timestr))
-        for name, tz in TZ_REPLACE.items():
-            timestr = timestr.replace(name, tz)
+        timestr = _replace_tz_names(timestr)
         logger.debug(f"replaced to {timestr}")
         parsed_time = dateparser.parse(timestr)
         if parsed_time is None:
@@ -70,23 +90,15 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
     else:
         assert isinstance(timestr, datetime.datetime), f"timestr has to be str or datetime, but got {type(timestr)}"
         parsed_time = timestr
-        timestr = timestr.isoformat()
         has_explicit_time = True
     if not with_time:
         return parsed_time.strftime("%Y-%m-%d")
-    if parsed_time.tzinfo is None and conf_tz is not None:
-        for name, tz in TZ_REPLACE.items():
-            timestr = timestr.replace(name, tz)
-        old_parsed_time = parsed_time
-        parsed_time = dateparser.parse(timestr)
-        if parsed_time is None or parsed_time.tzinfo is None:
-            # Timezone wasn't embedded in the string; append the conference timezone
-            tz_str = conf_tz
-            for name, tz in TZ_REPLACE.items():
-                tz_str = tz_str.replace(name, tz)
-            parsed_time = dateparser.parse(timestr + " " + tz_str) or old_parsed_time
     if not has_explicit_time:
         parsed_time = parsed_time.replace(hour=23, minute=59, second=59)
+    if parsed_time.tzinfo is None:  # no zone in the string: it is the conference's
+        parsed_time = _localize(parsed_time, conf_tz)
+        if parsed_time is None:
+            return None
     return parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
 
 
