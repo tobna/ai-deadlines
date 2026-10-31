@@ -35,7 +35,7 @@ def _get_core_rank(shortname):
     shortname = shortname.lower().replace("threedv", "3dv")
     core_url = f"https://portal.core.edu.au/conf-ranks/?search={shortname}&by=all"
     core_res = fetch_soup(core_url)
-    if core_res is None:  # fetch_soup already retried; the portal is down for every group then
+    if core_res is None:  # unreachable, or blocking us (403): the remaining lookups would fail too
         raise ConnectionError(f"CORE portal did not answer {core_url}")
 
     for row in core_res.find_all("tr"):

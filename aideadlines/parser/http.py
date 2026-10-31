@@ -1,13 +1,11 @@
-"""Resilient HTTP helpers shared by the parsers.
+"""HTTP helpers shared by the parsers: a pooled session, a timeout, and a status check.
 
-Every parser used to fetch URLs with a bare ``requests.get(...).text``/``.json()`` — no
-timeout (a slow host could hang the whole pipeline), no status check (an error page would be
-parsed as data), and no retry. These helpers add a pooled session, a timeout, status
-checking, and bounded retries with backoff for transient failures, returning ``None`` on
-persistent failure so callers can skip a source or record instead of crashing.
+A bare ``requests.get`` has no timeout (a slow host could hang the whole pipeline) and parses
+an error page as data. These helpers return ``None`` on any failure so callers can skip a
+source or record instead of crashing. There are deliberately no retries: the pipeline runs
+every hour, a failed source keeps its stored data until then, and in practice every retried
+URL was a host that never answers (each retry only added another timeout).
 """
-
-import time
 
 import requests
 import yaml
@@ -16,34 +14,23 @@ from bs4 import BeautifulSoup
 from ..log_config import logger
 
 DEFAULT_TIMEOUT = 20
-DEFAULT_RETRIES = 3
-BACKOFF_SECONDS = 1.0
-_RETRY_STATUS = {429, 500, 502, 503, 504}
 _USER_AGENT = "aideadlines-bot (+https://aideadlines.nauen-it.de)"
 
 _session = requests.Session()
 _session.headers.update({"User-Agent": _USER_AGENT})
 
 
-def fetch(url, *, timeout=DEFAULT_TIMEOUT, retries=DEFAULT_RETRIES, backoff=BACKOFF_SECONDS):
-    """GET ``url``, retrying transient failures. Returns a 200 Response, or ``None``."""
-    for attempt in range(1, retries + 1):
-        try:
-            response = _session.get(url, timeout=timeout)
-        except requests.RequestException as e:
-            logger.info(f"GET {url} failed (attempt {attempt}/{retries}): {e}")
-        else:
-            if response.status_code == 200:
-                return response
-            if response.status_code in _RETRY_STATUS:
-                logger.info(f"GET {url} -> {response.status_code} (attempt {attempt}/{retries})")
-            else:
-                logger.warning(f"GET {url} -> {response.status_code}; giving up")
-                return None
-        if attempt < retries:
-            time.sleep(backoff * attempt)
-    logger.warning(f"GET {url} failed after {retries} attempts")
-    return None
+def fetch(url, *, timeout=DEFAULT_TIMEOUT):
+    """GET ``url`` once. Returns a 200 Response, or ``None`` (logged) on any failure."""
+    try:
+        response = _session.get(url, timeout=timeout)
+    except requests.RequestException as e:
+        logger.warning(f"GET {url} failed: {e}")
+        return None
+    if response.status_code != 200:
+        logger.warning(f"GET {url} -> {response.status_code}")
+        return None
+    return response
 
 
 def fetch_text(url, **kwargs):

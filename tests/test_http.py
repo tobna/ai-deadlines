@@ -1,4 +1,4 @@
-"""Tests for aideadlines.parser.http — retry/timeout/status behavior, no real network."""
+"""Tests for aideadlines.parser.http — status and error handling, no real network."""
 
 import requests
 
@@ -37,7 +37,6 @@ class FakeSession:
 def _install(monkeypatch, outcomes):
     session = FakeSession(outcomes)
     monkeypatch.setattr(http, "_session", session)
-    monkeypatch.setattr(http.time, "sleep", lambda _s: None)  # don't actually wait
     return session
 
 
@@ -47,33 +46,21 @@ class TestFetch:
         resp = http.fetch("http://x")
         assert resp is not None and resp.text == "ok"
 
-    def test_retries_transient_then_succeeds(self, monkeypatch):
+    def test_error_status_returns_none_without_retrying(self, monkeypatch):
         session = _install(monkeypatch, [FakeResponse(503), FakeResponse(200, text="ok")])
-        resp = http.fetch("http://x", retries=3)
-        assert resp is not None and resp.text == "ok"
-        assert session.calls == 2
+        assert http.fetch("http://x") is None
+        assert session.calls == 1  # the next hourly run is the retry
 
-    def test_gives_up_after_retries_on_persistent_5xx(self, monkeypatch):
-        session = _install(monkeypatch, [FakeResponse(503)] * 3)
-        assert http.fetch("http://x", retries=3) is None
-        assert session.calls == 3
-
-    def test_non_retry_status_returns_none_immediately(self, monkeypatch):
-        session = _install(monkeypatch, [FakeResponse(404)])
-        assert http.fetch("http://x", retries=3) is None
-        assert session.calls == 1  # 404 is not retried
-
-    def test_retries_on_request_exception(self, monkeypatch):
-        session = _install(monkeypatch, [requests.ConnectionError("boom"), FakeResponse(200, text="ok")])
-        resp = http.fetch("http://x", retries=3)
-        assert resp is not None and resp.text == "ok"
-        assert session.calls == 2
+    def test_request_exception_returns_none(self, monkeypatch):
+        session = _install(monkeypatch, [requests.ConnectionError("boom")])
+        assert http.fetch("http://x") is None
+        assert session.calls == 1
 
 
 class TestTypedFetchers:
     def test_fetch_text_passes_through_none(self, monkeypatch):
-        _install(monkeypatch, [FakeResponse(500)] * 3)
-        assert http.fetch_text("http://x", retries=3) is None
+        _install(monkeypatch, [FakeResponse(500)])
+        assert http.fetch_text("http://x") is None
 
     def test_fetch_json_parses(self, monkeypatch):
         _install(monkeypatch, [FakeResponse(200, json_data={"a": 1})])
@@ -97,5 +84,5 @@ class TestTypedFetchers:
         assert soup is not None and soup.find("td").get_text() == "hi"
 
     def test_fetch_soup_none_on_failure(self, monkeypatch):
-        _install(monkeypatch, [FakeResponse(500)] * 3)
-        assert http.fetch_soup("http://x", retries=3) is None
+        _install(monkeypatch, [FakeResponse(500)])
+        assert http.fetch_soup("http://x") is None

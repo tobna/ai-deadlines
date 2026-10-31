@@ -127,7 +127,7 @@ tooltip spells out `Acceptance rate 2025: 24.52% (5,290 of 21,575 papers). Sourc
 
 All parsers, and the CORE lookup in `ranking.py`, fetch through `parser/http.py`, never `requests.get` directly (CORE: an unreachable portal aborts the refresh with an ERROR and keeps `rank/core.yaml`):
 
-- `fetch` / `fetch_text` / `fetch_json` / `fetch_yaml` / `fetch_soup` use a pooled session with a **timeout**, **status checking**, and **bounded retries + backoff** on transient failures (429/5xx, connection errors). They return `None` on persistent failure.
+- `fetch` / `fetch_text` / `fetch_json` / `fetch_yaml` / `fetch_soup` use a pooled session with a **timeout** and **status checking**, and make **one attempt** (no retries: the next hourly run is the retry, and the stored data stays until then). They return `None` on any failure (error status, timeout, connection error).
 - Callers treat `None` as "skip this file/record" and degrade gracefully rather than aborting the whole source.
 - Per-record parsing is wrapped so one malformed conference is logged and skipped, not fatal.
 - `parser/xai.py` reads xAI (`xaiworldconference.com/<year>/`), AIES (`aies-conference.com/<year>/`) and EXPLAINS
@@ -175,7 +175,7 @@ Conventions in `scripts.js`:
 
 `pytest` lives in `tests/` and runs with no network:
 - Backend characterization tests (`test_utils.py`, `test_see_future.py`, `test_merge_priority.py`, `test_validate.py`) pin current behavior so refactors stay safe. (`data_to_json`'s timezone normalization is covered via `normalize_timezone_for_js` in `test_utils.py`.)
-- `test_http.py` exercises retry/status/timeout via a monkeypatched session.
+- `test_http.py` exercises status/error handling (one attempt, `None` on failure) via a monkeypatched session.
 - `test_parsers.py` covers the pure parser helpers, the `common_website` factory metadata and the `xai` year guards (mocked `fetch_soup`).
 - `test_deadlines_md.py` pins the markdown export's sorting, `(est.)` marking and pipe escaping.
 - `test_update_data.py` covers pipeline steps (the `--historic` loop ends, implausible abstract deadlines are flagged); `test_update_pipeline.py` runs `update.py`'s `main` with every subprocess replaced (a failed push fails the run).
