@@ -59,37 +59,45 @@ def error_line_count():
 
 def main():
     open(ERROR_FILE, "w").close()  # fresh per-run log so the status marker reflects only this run
-    failed_steps = 0
+    failed_steps = []
+
+    def check(step, result):
+        """Record a failed step, with a red line that lands in status.html next to its output."""
+        if result.returncode != 0:
+            print(f"\x1b[1;31mERROR: {step} failed (exit code {result.returncode})\x1b[0m", flush=True)
+            failed_steps.append(step)
+        return result.returncode == 0
+
     try:
         token = load_token()
         if token:
-            git_authenticated(["pull", REPO_URL], token)
+            check("git pull", git_authenticated(["pull", REPO_URL], token))
 
         print("run update script", flush=True)
-        failed_steps += run(["python3", "-m", "aideadlines.update_data", "--online"]).returncode != 0
+        check("update data", run(["python3", "-m", "aideadlines.update_data", "--online"]))
 
         print("validate conference data", flush=True)
-        if run(["python3", "-m", "aideadlines.validate"]).returncode != 0:
+        if not check("validate", run(["python3", "-m", "aideadlines.validate"])):
             print("conference validation failed; aborting before json conversion and commit", flush=True)
-            failed_steps += 1
             return
 
         print("convert data to json", flush=True)
-        failed_steps += run(["python3", "-m", "aideadlines.data_to_json"]).returncode != 0
+        check("convert to json", run(["python3", "-m", "aideadlines.data_to_json"]))
 
         if token:
             conferences_tracked = [f for f in os.listdir(os.path.join(THIS_DIR, "conferences")) if f.endswith(".yaml")]
             update_readme_badge(len(conferences_tracked))
             run(["git", "add", "."])
-            run(["git", "commit", "-m", f"Update conference data at {datetime.now().isoformat()}"])
-            git_authenticated(["push", REPO_URL], token)
+            run(["git", "commit", "-m", f"Update conference data at {datetime.now().isoformat()}"])  # 1 = nothing new
+            check("git push", git_authenticated(["push", REPO_URL], token))
     finally:
         # Machine-readable last line for Uptime Kuma: keyword monitor on "=== PIPELINE OK ===".
         errors = error_line_count()
-        if errors == 0 and failed_steps == 0:
+        if errors == 0 and not failed_steps:
             print("=== PIPELINE OK ===", flush=True)
         else:
-            print(f"=== PIPELINE FAILED: {errors} error(s), {failed_steps} failed step(s) ===", flush=True)
+            failed = ", ".join(failed_steps) or "none"
+            print(f"=== PIPELINE FAILED: {errors} error(s), failed step(s): {failed} ===", flush=True)
 
 
 if __name__ == "__main__":

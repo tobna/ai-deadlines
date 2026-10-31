@@ -72,7 +72,7 @@ The pipeline modules are **functions with `main()` guards** — importing them d
 
 All three are generated and gitignored; `make_website.sh` copies them into `html/data/`.
 
-`update.py` chains these for the unattended run: pull → `update_data --online` → **`validate` (aborts the commit on failure)** → `data_to_json` → update README badge → commit/push.
+`update.py` chains these for the unattended run: pull → `update_data --online` → **`validate` (aborts the commit on failure)** → `data_to_json` → update README badge → commit/push. Every step except the commit (which exits 1 when nothing changed) is checked: a failure prints a red `ERROR: <step> failed` line and the final `=== PIPELINE FAILED: … failed step(s): <steps> ===` names it (both end up in `status.html`).
 
 ### Source Priority (`dataSrc` field)
 
