@@ -3,12 +3,11 @@ import re
 from datetime import datetime, timedelta
 
 import dateparser
-import requests
 import yaml
-from bs4 import BeautifulSoup
 
 from .log_config import logger
 from .merge import ID_ALIASES
+from .parser.http import fetch_soup
 
 this_folder = os.path.dirname(__file__)
 
@@ -35,8 +34,9 @@ _allowed_rank_re = re.compile(r"[A-H]\*?$")
 def _get_core_rank(shortname):
     shortname = shortname.lower().replace("threedv", "3dv")
     core_url = f"https://portal.core.edu.au/conf-ranks/?search={shortname}&by=all"
-    core_res = requests.get(core_url)
-    core_res = BeautifulSoup(core_res.text, "html.parser")
+    core_res = fetch_soup(core_url)
+    if core_res is None:  # fetch_soup already retried; the portal is down for every group then
+        raise ConnectionError(f"CORE portal did not answer {core_url}")
 
     for row in core_res.find_all("tr"):
         tds = row.find_all("td")
@@ -88,17 +88,20 @@ def make_core_rank_function(conference_groups, online=True, force_update=False):
 
     if force_update and online:
         logger.info(f"Updating core ranks for {len(conference_groups)} conferences")
-
-        for i, group in enumerate(conference_groups):
-            rank = _lookup_core_rank(group)
-            if rank is not None:
-                core_ranks[group] = rank
-                logger.info(f"{i+1}/{len(conference_groups)}: {group} -> {rank}")
-
-        with open(core_save_file, "w") as f:
-            yaml.safe_dump(core_ranks, f)
-        with open(last_update_file, "w") as f:
-            f.write(datetime.now().isoformat())
+        try:
+            for i, group in enumerate(conference_groups):
+                rank = _lookup_core_rank(group)
+                if rank is not None:
+                    core_ranks[group] = rank
+                    logger.info(f"{i+1}/{len(conference_groups)}: {group} -> {rank}")
+        except ConnectionError as e:
+            # Keep the stored ranks and no stamp, so the next run tries again.
+            logger.error(f"ERROR updating CORE ranks, keeping the stored ones: {e}")
+        else:
+            with open(core_save_file, "w") as f:
+                yaml.safe_dump(core_ranks, f)
+            with open(last_update_file, "w") as f:
+                f.write(datetime.now().isoformat())
 
     def add_core_rank(conf):
         conf_id = conf["id"][:-4]

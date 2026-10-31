@@ -121,7 +121,7 @@ tooltip spells out `Acceptance rate 2025: 24.52% (5,290 of 21,575 papers). Sourc
 
 ### Parser conventions
 
-All parsers fetch through `parser/http.py`, never `requests.get` directly:
+All parsers, and the CORE lookup in `ranking.py`, fetch through `parser/http.py`, never `requests.get` directly (CORE: an unreachable portal aborts the refresh with an ERROR and keeps `rank/core.yaml`):
 
 - `fetch` / `fetch_text` / `fetch_json` / `fetch_yaml` / `fetch_soup` use a pooled session with a **timeout**, **status checking**, and **bounded retries + backoff** on transient failures (429/5xx, connection errors). They return `None` on persistent failure.
 - Callers treat `None` as "skip this file/record" and degrade gracefully rather than aborting the whole source.

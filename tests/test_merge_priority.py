@@ -140,3 +140,16 @@ def test_core_lookup_falls_back_to_alias_spelling(monkeypatch):
     assert ranking._lookup_core_rank("rulemlrr") == "B"
     assert ranking._lookup_core_rank("cec") == "B"
     assert ranking._lookup_core_rank("nope") is None
+
+
+def test_core_refresh_keeps_stored_ranks_when_portal_is_down(monkeypatch, tmp_path):
+    from aideadlines import ranking
+
+    (tmp_path / "rank").mkdir()
+    (tmp_path / "pkg").mkdir()  # <pkg>/.. only resolves if <pkg> exists
+    (tmp_path / "rank" / "core.yaml").write_text("cvpr: A*\n")
+    monkeypatch.setattr(ranking, "this_folder", str(tmp_path / "pkg"))  # core.yaml is read from <pkg>/../rank
+    monkeypatch.setattr(ranking, "fetch_soup", lambda url: None)
+    add_rank = ranking.make_core_rank_function(["cvpr", "iccv"], online=True, force_update=True)
+    assert add_rank({"id": "cvpr2027"})["rating"] == "A*"
+    assert (tmp_path / "rank" / "core.yaml").read_text() == "cvpr: A*\n"  # not overwritten
