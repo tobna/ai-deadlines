@@ -158,6 +158,8 @@ Single-page static app — no backend:
 Agent/LLM access (the page renders client-side, so fetching the HTML yields nothing):
 - `aideadlines/llms.txt` — served at `/llms.txt`, the [llms.txt](https://llmstxt.org) entry point: links the data files and documents the JSON schema and field semantics. Static; keep it in sync when the schema changes.
 - `index.html` carries an HTML comment plus `<link rel="alternate">` tags pointing at `/data/deadlines.md` and `/data/conferences.json`.
+  Agent fetchers strip `<head>` and comments, so the pointer that actually reaches them is in the body: `<main id="conferenceGrid">`
+  starts with an `.agent-note` addressed to LLMs (scripts.js replaces it with the cards), and the footer links the agent files.
 
 Conventions in `scripts.js`:
 - Conference data is community-sourced, so **every value interpolated into `innerHTML` must go through `escapeHtml`**, and any URL used in an `href` through `safeHref` (http/https only).
