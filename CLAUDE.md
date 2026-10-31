@@ -151,7 +151,7 @@ Key fields in each `conferences/<id>.yaml`:
 Single-page static app — no backend:
 - `aideadlines/index.html` — structure, filter controls, and a strict Content-Security-Policy.
 - `aideadlines/scripts.js` — loads JSON, handles filtering/sorting/theming.
-- `aideadlines/styles.tailwind.css` — Tailwind CSS
+- `aideadlines/styles.css` — hand-written stylesheet, served as is (no build step)
 - `html/` — generated output directory (gitignored)
 - `aideadlines/sitemap.xml` — template; `make_website.sh` stamps `<lastmod>` with the build date on the way into `html/`, so the daily rebuild never shows up as a git change.
 

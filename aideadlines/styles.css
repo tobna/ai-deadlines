@@ -1,7 +1,6 @@
 /* =========================================================================
    AI DEADLINES — "The Deadline Console"
-   A self-contained design system. No build step required: this file is the
-   source of truth and is copied verbatim to styles.tailwind.css (served).
+   A self-contained design system. No build step: this file is served as is.
 
    Identity: an instrument/console for researchers racing submission cutoffs.
    Signature: the countdown is the hero, and a single urgency hue shifts with

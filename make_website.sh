@@ -6,9 +6,6 @@ echo "1. update conference data"
 # tee shows the run live on the console and saves the raw colored stream for rendering below.
 python3 update.py 2>&1 | tee status.ansi
 
-# echo "2. update tailwindcss"
-# ./update_tailwind.sh
-
 echo "2. copy files over"
 mkdir -p html/data html/fonts
 cp aideadlines/*.html aideadlines/*.js aideadlines/*.css html/
