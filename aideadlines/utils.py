@@ -90,7 +90,6 @@ def _parse_timestr(timestr, with_time, conf_tz=None):
     return parsed_time.astimezone(pytz.UTC).isoformat().replace("+00:00", "Z")
 
 
-# month_day_re = re.compile(r"[A-Z][a-z]* \d?\d$")
 month_day_re = re.compile(r"^[A-Z,a-z, ]*\d?\d[a-z]*$")
 month_day_time_re = re.compile(r"^([A-Z,a-z, ,\,]*\d?\d[a-z]*)(,? *\d\d:\d\d[A-Z,a-z, ]*)$")
 month_strs = [datetime.datetime.strptime(f"2024-{mnth:02d}-10", "%Y-%m-%d").strftime("%b") for mnth in range(1, 13)]
@@ -135,16 +134,6 @@ def parse_all_times(conference):
                     dates[key] = timestr
 
     return conference
-
-
-def _update_to_multiple_deadlines(conf):
-    timeline = [{"deadline": conf.pop("deadline")}]
-    if "abstractDeadline" in conf:
-        timeline[0]["abstractDeadline"] = conf.pop("abstractDeadline")
-    if "note" in conf:
-        timeline[0]["note"] = conf.pop("note")
-    conf["timeline"] = timeline
-    return conf
 
 
 def join_conferences(master, slave):
