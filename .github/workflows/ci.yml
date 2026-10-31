@@ -12,14 +12,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      UV_PYTHON: "3.13"  # the server's Python (uv:python3.13-alpine)
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v6
       - name: Install dependencies
-        run: pip install -r requirements-dev.txt
+        # --locked fails if uv.lock is out of date with pyproject.toml.
+        run: uv sync --locked
       - name: Lint (ruff)
-        run: ruff check aideadlines/ tests/ update.py
+        run: uv run ruff check aideadlines/ tests/ update.py
       - name: Test (pytest)
-        run: pytest
+        run: uv run pytest

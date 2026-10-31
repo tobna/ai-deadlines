@@ -1,0 +1,27 @@
+[project]
+name = "aideadlines"
+version = "0.1.0"
+description = "Scraper & data pipeline for AI conference deadlines"
+authors = [{ name = "Tobias Christian Nauen", email = "tobias@nauen-it.de" }]
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13",
+    "dateparser>=1.2",
+    "loguru>=0.7",
+    "python-dateutil>=2.9",
+    "pytz>=2025.2",
+    "pyyaml>=6.0",
+    "requests>=2.32",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1",
+    "ruff>=0.15",
+]

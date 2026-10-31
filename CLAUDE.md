@@ -11,26 +11,30 @@ Data is stored as YAML files in `conferences/`, scraped/merged from multiple sou
 ## Common Commands
 
 ```bash
+# Install everything (runtime + dev group) into .venv from uv.lock
+uv sync
+
 # Full update pipeline (pull, scrape, validate, convert, commit/push)
-python3 update.py
+uv run update.py
 
 # Scrape online sources and merge into conferences/ YAML files
-python3 -m aideadlines.update_data --online
+uv run python -m aideadlines.update_data --online
 
 # Validate the conferences/*.yaml data (used as a gate before auto-commit)
-python3 -m aideadlines.validate
+uv run python -m aideadlines.validate
 
 # Convert YAML → JSON only (no scraping)
-python3 -m aideadlines.data_to_json
+uv run python -m aideadlines.data_to_json
 
-# Build static website (copy files, gzip compress)
-./make_website.sh
+# Build static website (runs update.py, copies files, gzip compress) — the server's hourly job
+uv run ./make_website.sh
 
 # Tests + lint (CI runs both)
-pip install -r requirements-dev.txt
-pytest
-ruff check aideadlines/ tests/ update.py
+uv run pytest
+uv run ruff check aideadlines/ tests/ update.py
 ```
+
+`make_website.sh` and `update.py` call plain `python3`; under `uv run` that is the project's venv.
 
 The `update.py` script requires a `.gittkn` file (git token, gitignored) for auto-commit/push. The token is passed to git via a credential helper reading from the environment — it is never placed on a command line.
 
@@ -49,7 +53,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `parser/http.py` — resilient HTTP layer used by all parsers (see below).
 - `parser/*.py` — one module per source (see Data Pipeline).
 
-The pipeline modules are **functions with `main()` guards** — importing them does not run the pipeline (important for tests and for the `aideadlines-update` console entry point in `setup.cfg`).
+The pipeline modules are **functions with `main()` guards** — importing them does not run the pipeline (important for tests).
 
 ### Data Pipeline
 
@@ -174,12 +178,14 @@ Conventions in `scripts.js`:
 - `test_http.py` exercises retry/status/timeout via a monkeypatched session.
 - `test_parsers.py` covers the pure parser helpers, the `common_website` factory metadata and the `xai` year guards (mocked `fetch_soup`).
 - `test_deadlines_md.py` pins the markdown export's sorting, `(est.)` marking and pipe escaping.
+- `test_update_data.py` covers pipeline steps (the `--historic` loop ends, implausible abstract deadlines are flagged); `test_update_pipeline.py` runs `update.py`'s `main` with every subprocess replaced (a failed push fails the run).
 
-Live parser behavior is verified manually against real sites, not in CI. CI (`.github/workflows/ci.yml`) runs `ruff` + `pytest` and skips data-only auto-commits.
+Live parser behavior is verified manually against real sites, not in CI. CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, `ruff` and `pytest` on Python 3.13 and skips data-only auto-commits.
 
 ## Dependencies
 
-Runtime (pinned in `requirements.txt`): `requests`, `beautifulsoup4`, `pytz`, `PyYAML`, `dateparser`, `python-dateutil`, `loguru`.
-Dev (`requirements-dev.txt`): `pytest`, `ruff`.
+Managed with uv: `pyproject.toml` holds lower bounds (`>=MAJOR.MINOR`), `uv.lock` pins every package including transitive ones. Add or change one with `uv add <pkg>` (dev tools: `uv add --dev`), upgrade deliberately with `uv lock --upgrade`, and commit `uv.lock`. The project has no build system, so uv installs only the dependencies and the code runs from the repo.
 
-Install: `pip install -r requirements-dev.txt` (or `pip install -e .` for runtime only).
+Runtime: `requests`, `beautifulsoup4`, `pytz`, `PyYAML`, `dateparser`, `python-dateutil`, `loguru`. Dev group: `pytest`, `ruff`. `requires-python = ">=3.13"`, the server's Python.
+
+Server: the `updater` service in `docker-stacks/ai-deadlines.yaml` (outside this repo) runs the stock `ghcr.io/astral-sh/uv:python3.13-alpine` image and calls `uv run --frozen ./make_website.sh` every hour, so a changed `uv.lock` is installed on the next run without rebuilding an image. `--frozen` matters: the run must never rewrite `uv.lock`, because `update.py` commits with `git add .`.
