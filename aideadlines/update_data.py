@@ -1,12 +1,11 @@
 import argparse
 import datetime
-import os
 import traceback
 
 import yaml
 
 from .log_config import logger
-from .merge import canonical_id, is_blocked, merge_one, merge_source
+from .merge import CONFERENCE_FOLDER, load_conference_files, merge_one, merge_source
 from .parser.ccf_deadlines import get_ccf_list
 from .parser.common_website import PARSER
 from .parser.hf_list import get_hf_list
@@ -17,9 +16,6 @@ from .parser.wacv import parse_wacv
 from .parser.xai import PARSER as XAI_PARSER
 from .ranking import make_conf_rank_function, make_core_rank_function
 from .utils import _parse_timestr, join_conferences, parse_all_times, parse_stuff, unite_tags
-
-THIS_FOLDER = os.path.dirname(__file__)
-CONFERENCE_FOLDER = os.path.join(THIS_FOLDER, os.pardir, "conferences")
 
 
 def parse_args():
@@ -42,18 +38,7 @@ def parse_args():
 
 def load_conferences():
     """Load every conferences/*.yaml file, parsing all timestamps."""
-    conferences = {}
-    for conf_file in os.listdir(CONFERENCE_FOLDER):
-        with open(os.path.join(CONFERENCE_FOLDER, conf_file), "r") as f:
-            file_confs = yaml.safe_load(f)
-        for key, conf in file_confs.items():
-            if is_blocked(conf):
-                continue
-            conf["id"] = key = canonical_id(key)
-            if key in conferences:  # alias file loaded next to its canonical one: keep the canonical
-                continue
-            conferences[key] = parse_all_times(conf)
-    return conferences
+    return {key: parse_all_times(conf) for key, conf in load_conference_files().items()}
 
 
 def scrape_official_websites(conferences, args, reestimate_groups):
@@ -194,7 +179,7 @@ def write_groups(conferences, reestimate_groups, args):
         group_confs = unite_tags(group_confs)
         group_confs = parse_stuff(group_confs)
         if args.write:
-            with open(os.path.join(CONFERENCE_FOLDER, f"{group}.yaml"), "w") as f:
+            with open(CONFERENCE_FOLDER / f"{group}.yaml", "w") as f:
                 yaml.safe_dump(group_confs, f)
         else:
             logger.info(group_confs)

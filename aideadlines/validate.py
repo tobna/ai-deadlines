@@ -5,16 +5,12 @@ repository. ``validate_conferences`` is pure and unit-tested; ``main`` exits non
 any problem is found.
 """
 
-import os
 import sys
 
 import dateparser
-import yaml
 
 from .log_config import logger
-
-THIS_FOLDER = os.path.dirname(__file__)
-CONFERENCE_FOLDER = os.path.join(THIS_FOLDER, os.pardir, "conferences")
+from .merge import load_conference_files
 
 REQUIRED_KEYS = ("id", "timeline")
 
@@ -43,16 +39,8 @@ def validate_conferences(conferences):
     return errors
 
 
-def load_conferences():
-    conferences = {}
-    for conf_file in os.listdir(CONFERENCE_FOLDER):
-        with open(os.path.join(CONFERENCE_FOLDER, conf_file)) as f:
-            conferences.update(yaml.safe_load(f) or {})
-    return conferences
-
-
 def main():
-    errors = validate_conferences(load_conferences())
+    errors = validate_conferences(load_conference_files())
     if errors:
         for e in errors:
             logger.error(f"VALIDATION: {e}")

@@ -5,23 +5,13 @@ from datetime import datetime
 
 import dateparser
 import pytz
-import yaml
 
 from .log_config import logger
+from .merge import load_conference_files
 from .utils import normalize_timezone_for_js
 
 THIS_FOLDER = os.path.dirname(__file__)
-CONFERENCE_FOLDER = os.path.join(THIS_FOLDER, os.pardir, "conferences")
 DATA_FOLDER = os.path.join(THIS_FOLDER, "data")
-
-
-def load_conferences():
-    conferences = {}
-    for conf_file in os.listdir(CONFERENCE_FOLDER):
-        with open(os.path.join(CONFERENCE_FOLDER, conf_file), "r") as f:
-            file_confs = yaml.safe_load(f)
-        conferences = {**file_confs, **conferences}
-    return conferences
 
 
 def split_future_past(conferences):
@@ -107,7 +97,7 @@ def conferences_to_markdown(records):
 
 
 def main():
-    conferences = load_conferences()
+    conferences = load_conference_files()
     logger.info(f"managing {len(conferences)} conference instances")
     logger.info(sorted(list(conferences.keys())))
 

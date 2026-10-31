@@ -5,10 +5,15 @@ This consolidates logic that was previously copy-pasted four times (once per sou
 what makes it testable (see ``tests/test_merge_priority.py``).
 """
 
+from pathlib import Path
+
 import dateparser
+import yaml
 
 from .log_config import logger
 from .utils import join_conferences
+
+CONFERENCE_FOLDER = Path(__file__).parent.parent / "conferences"
 
 # Lower index = lower priority. A source overwrites another only when the existing source
 # is at the same-or-lower priority. ``manual`` is highest: hand-curated edits win over every
@@ -38,6 +43,24 @@ def is_blocked(conf):
         return True
     website = conf.get("website") or ""
     return any(domain in website for domain in BLOCKED_DOMAINS)
+
+
+def load_conference_files(folder=CONFERENCE_FOLDER):
+    """Every conference in ``<folder>/*.yaml`` by id, as stored (timestamps not parsed).
+
+    Shared by the pipeline, the validator and the JSON export so all three see the same set:
+    empty files are skipped, blocklisted conferences dropped, and alias ids folded into their
+    canonical one (if both exist, the file first in name order wins).
+    """
+    conferences = {}
+    for path in sorted(Path(folder).glob("*.yaml")):
+        for key, conf in (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).items():
+            if isinstance(conf, dict):  # anything else is reported by validate
+                conf["id"] = key = canonical_id(key)
+                if is_blocked(conf):
+                    continue
+            conferences.setdefault(key, conf)
+    return conferences
 
 
 def tag_wacv_round(conf, conf_id):

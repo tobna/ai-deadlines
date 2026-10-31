@@ -5,7 +5,15 @@ lowest), the estimate-gets-replaced rule, the <= vs < asymmetry, WACV round tagg
 transforms.
 """
 
-from aideadlines.merge import SOURCES, canonical_id, is_blocked, merge_one, merge_source, tag_wacv_round
+from aideadlines.merge import (
+    SOURCES,
+    canonical_id,
+    is_blocked,
+    load_conference_files,
+    merge_one,
+    merge_source,
+    tag_wacv_round,
+)
 
 
 def _conf(dataSrc=None, title="t", tags=("ML",), deadline="2025-01-01"):
@@ -118,6 +126,17 @@ class TestBlocklistAndAliases:
         merge_source(conferences, items, "ccf-deadlines", [])
         assert list(conferences) == ["cec2026"]
         assert conferences["cec2026"]["id"] == "cec2026"
+
+
+def test_load_conference_files_skips_empty_blocked_and_folds_aliases(tmp_path):
+    (tmp_path / "empty.yaml").write_text("")
+    (tmp_path / "cvc.yaml").write_text("cvc2027: {id: cvc2027, timeline: []}\n")
+    (tmp_path / "cec.yaml").write_text("cec2026: {id: cec2026, title: canonical, timeline: []}\n")
+    (tmp_path / "ieee cec.yaml").write_text("ieee cec2026: {id: ieee cec2026, title: alias, timeline: []}\n")
+    (tmp_path / "notes.txt").write_text("not: [yaml")
+    conferences = load_conference_files(tmp_path)
+    assert list(conferences) == ["cec2026"]
+    assert conferences["cec2026"]["title"] == "canonical"
 
 
 def test_core_lookup_falls_back_to_alias_spelling(monkeypatch):

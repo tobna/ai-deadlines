@@ -41,7 +41,7 @@ The `update.py` script requires a `.gittkn` file (git token, gitignored) for aut
 - `update_data.py` — orchestrates scraping + merging; `main()` entry point.
 - `data_to_json.py` — splits merged YAML into upcoming/archive JSON; `main()` entry point.
 - `validate.py` — schema validation (`validate_conferences`); `main()` exits non-zero on problems.
-- `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`), plus the id blocklist/aliases (see below).
+- `merge.py` — source-priority merge logic (`SOURCES`, `merge_one`, `merge_source`, `tag_wacv_round`), the id blocklist/aliases (see below), and `load_conference_files`, the one `conferences/*.yaml` loader used by the pipeline, the validator and the JSON export.
 - `utils.py` — date/timezone parsing (`_parse_timestr`, `parse_all_times`, `normalize_timezone_for_js`), merge helpers (`join_conferences`, `unite_tags`, `parse_stuff`).
 - `ranking.py` — CORE rating + Google Scholar h5-index lookups.
 - `parser/xai.py` — the XAI venues' own sites (xAI, AIES, EXPLAINS), see below.
@@ -87,7 +87,8 @@ Merging is centralized in `merge.py`. Lower priority is silently overwritten by 
 `BLOCKED_GROUPS` / `BLOCKED_DOMAINS` drop predatory or stray entries (SAI Conference venues such as
 CVC, single workshop ids like `cvpr_ws`) and `ID_ALIASES` folds a source's alternate spelling into
 the canonical group (`ieee cec` -> `cec`, `ruleml+rr` -> `rulemlrr`). Both are applied in
-`merge_source` (every list source) and in `load_conferences` (stale YAML), so a blocked or aliased
+`merge_source` (every list source) and in `load_conference_files` (stale YAML, so also in validation
+and the JSON export), so a blocked or aliased
 conference cannot come back through the daily run. To block a new venue add its domain or group id
 there; to merge duplicate groups add the alias — `ranking.py` searches CORE under the canonical id
 and every alias spelling, so the rating follows automatically on the next online refresh (never
