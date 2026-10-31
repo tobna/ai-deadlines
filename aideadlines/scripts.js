@@ -39,7 +39,6 @@ function setTheme(theme) {
   } else {
     document.documentElement.classList.remove('dark');
   }
-  localStorage.setItem('theme', theme);
 }
 
 function initTheme() {
@@ -55,8 +54,10 @@ function initTheme() {
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    setTheme(isDark ? 'light' : 'dark');
+    const theme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+    setTheme(theme);
+    // Only an explicit choice is saved; until then the page follows the system setting.
+    localStorage.setItem('theme', theme);
   });
 }
 
