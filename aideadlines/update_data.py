@@ -45,28 +45,29 @@ def scrape_official_websites(conferences, args):
         year = current_year + 2
         no_data_years = 0
         while no_data_years < 5 and (year >= current_year - 1 or args.historic):
-            logger.info(f"{conf_parser} {year}")
+            logger.info(f"{conf_parser.__name__} {year}")
             try:
                 yearly_data = conf_parser(year)
             except Exception as e:
                 logger.warning(f"Error while parsing conference: {e}")
-                year -= 1
+                yearly_data = {}
+            year -= 1
+            # Parsers return {} for a year without data; it must count here, before parse_all_times
+            # (which raises on {}), or --historic never reaches five empty years and loops forever.
+            if not yearly_data:
+                logger.info("no data")
+                no_data_years += 1
                 continue
-            logger.info("no data" if len(yearly_data) == 0 else "loaded data")
+            no_data_years = 0
             try:
                 yearly_data = parse_all_times(yearly_data)
             except Exception as e:
                 logger.warning(
-                    f"Error while parsing dates for conference {conf_parser} {year} (data={yearly_data}): {e}"
+                    f"Error while parsing dates for conference {conf_parser.__name__} {year + 1} "
+                    f"(data={yearly_data}): {e}"
                 )
-                year -= 1
                 continue
-            if len(yearly_data) == 0:
-                no_data_years += 1
-            else:
-                no_data_years = 0
-                merge_one(conferences, yearly_data, yearly_data["id"], "off-website")
-            year -= 1
+            merge_one(conferences, yearly_data, yearly_data["id"], "off-website")
 
 
 def _safe_fetch(label, fetch):
