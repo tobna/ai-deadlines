@@ -247,14 +247,13 @@ function updateSmallCountdown(targetDateStr, countdownElementId, label) {
 function formatDate(dateString, formattingOptions = {}) {
   if (!dateString) return 'N/A';
 
-  const date = new Date(
-    (dateString.includes('T') || dateString.endsWith('Z'))
-      ? dateString
-      : dateString + 'T00:00:00Z'
-  );
+  // A bare date ("2027-07-06") is a calendar day, not an instant: print it in UTC, or a
+  // UTC−12 (AoE) conference would show the day before.
+  const isDateOnly = !(dateString.includes('T') || dateString.endsWith('Z'));
+  const date = new Date(isDateOnly ? dateString + 'T00:00:00Z' : dateString);
 
   let effectiveOptions = {};
-  effectiveOptions.timeZone = formattingOptions.displayTimezoneIana || 'UTC';
+  effectiveOptions.timeZone = isDateOnly ? 'UTC' : (formattingOptions.displayTimezoneIana || 'UTC');
   // "Etc/GMT+12" is the IANA spelling of Anywhere-on-Earth (UTC−12); show it as AoE.
   const isAoE = effectiveOptions.timeZone === 'Etc/GMT+12';
 
