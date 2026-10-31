@@ -61,12 +61,12 @@ def estimate_future_conferences(conferences, end_in_years=2, max_approximations=
                     raise ValueError(f"weird key in timeline: {key}")
             data["timeline"].append(next_timeline)
 
-        if "title" in last_conf:
-            data["title"] = last_conf["title"]
-        if "rating" in last_conf:
-            data["rating"] = last_conf["rating"]
-        if "h5Index" in last_conf:
-            data["h5Index"] = last_conf["h5Index"]
+        # The acceptance rate is what attach_rate would pick (the latest year before), carried over
+        # because rates are only re-fetched every 30h but estimates are rebuilt on every run.
+        for key in ("title", "rating", "h5Index", "acceptanceRate", "acceptanceRateYear", "acceptedPapers",
+                    "submittedPapers"):  # fmt: skip
+            if key in last_conf:
+                data[key] = last_conf[key]
         if data["id"] not in conferences:
             future_conferences[data["id"]] = data
             logger.success("estimated %s" % data["id"])

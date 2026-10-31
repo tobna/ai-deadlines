@@ -28,9 +28,6 @@ def parse_args():
     )
     parser.add_argument("--write", default=True, action=argparse.BooleanOptionalAction, help="Write out results")
     parser.add_argument(
-        "--reestimate", default=False, action=argparse.BooleanOptionalAction, help="Force reestimate all conferences"
-    )
-    parser.add_argument(
         "--load-nino-data", default=False, action=argparse.BooleanOptionalAction, help="Load data from ninoduartes github"
     )
     return parser.parse_args()
@@ -41,7 +38,7 @@ def load_conferences():
     return {key: parse_all_times(conf) for key, conf in load_conference_files().items()}
 
 
-def scrape_official_websites(conferences, args, reestimate_groups):
+def scrape_official_websites(conferences, args):
     """Walk each official-website parser backwards through years, merging what it finds."""
     for conf_parser in PARSER + [parse_wacv] + XAI_PARSER:
         current_year = datetime.datetime.now().year
@@ -68,7 +65,7 @@ def scrape_official_websites(conferences, args, reestimate_groups):
                 no_data_years += 1
             else:
                 no_data_years = 0
-                merge_one(conferences, yearly_data, yearly_data["id"], "off-website", reestimate_groups)
+                merge_one(conferences, yearly_data, yearly_data["id"], "off-website")
             year -= 1
 
 
@@ -84,13 +81,13 @@ def _safe_fetch(label, fetch):
     return items
 
 
-def scrape_online(conferences, args, reestimate_groups):
+def scrape_online(conferences, args):
     """Fetch and merge every online source in ascending priority order."""
-    scrape_official_websites(conferences, args, reestimate_groups)
+    scrape_official_websites(conferences, args)
 
     logger.info("load hf data")
     hf_conferences = _safe_fetch("hf-repo", get_hf_list)
-    merge_source(conferences, [parse_all_times(c) for c in hf_conferences], "hf-repo", reestimate_groups)
+    merge_source(conferences, [parse_all_times(c) for c in hf_conferences], "hf-repo")
 
     if args.load_nino_data:
         logger.info("load nino duarte data")
@@ -99,14 +96,14 @@ def scrape_online(conferences, args, reestimate_groups):
             conf = parse_all_times(conf)
             conf["id"] = conf["id"].replace("nips", "neurips")
             nino_items.append(conf)
-        merge_source(conferences, nino_items, "ninoduarte-git", reestimate_groups, overwrite_equal=False)
+        merge_source(conferences, nino_items, "ninoduarte-git", overwrite_equal=False)
     else:
         logger.info("skipping ninoduarte-git (not that reliable)")
 
     logger.info("load ccf-deadlines")
     ccf_conferences = _safe_fetch("ccf-deadlines", get_ccf_list)
     logger.info(f"got {len(ccf_conferences)} ccf conferences")
-    merge_source(conferences, [parse_all_times(c) for c in ccf_conferences], "ccf-deadlines", reestimate_groups)
+    merge_source(conferences, [parse_all_times(c) for c in ccf_conferences], "ccf-deadlines")
 
 
 def normalize_nips(conferences):
@@ -144,9 +141,8 @@ def drop_empty_timelines(conferences):
     return conferences
 
 
-def write_groups(conferences, reestimate_groups, args):
+def write_groups(conferences, args):
     """Group by conference family, estimate future instances, attach ranks, and write YAML."""
-    reestimate_groups = set(reestimate_groups)
     add_conf_rank = make_conf_rank_function()
 
     conf_groups = {}
@@ -156,19 +152,15 @@ def write_groups(conferences, reestimate_groups, args):
     add_core_rank = make_core_rank_function(conf_groups.keys(), online=args.online)
     acceptance_stats = get_acceptance_stats(conf_groups.keys()) if args.online else {}
 
-    if not args.reestimate:
-        logger.info(f"Will reestimate futures for: {reestimate_groups}")
     for group, group_confs in conf_groups.items():
         logger.info(f"write out group {group}: {list(group_confs.keys())}")
-        if group in reestimate_groups or args.reestimate:
-            group_confs = {key: conf for key, conf in group_confs.items() if not conf["isApproximateDeadline"]}
+        # Estimates are rebuilt from the real instances on every run, so they follow any correction.
+        group_confs = {key: conf for key, conf in group_confs.items() if conf.get("dataSrc") != "estimate"}
         try:
             future_conferences = estimate_future_conferences(group_confs)
             future_conferences = {key: parse_all_times(conf) for key, conf in future_conferences.items()}
         except Exception as e:
             logger.error(f"ERROR estimating future conferences of group {group}: {e}")
-            if args.reestimate:
-                raise e
             future_conferences = {}
 
         group_confs = {**future_conferences, **group_confs}
@@ -188,12 +180,11 @@ def write_groups(conferences, reestimate_groups, args):
 def main():
     args = parse_args()
     conferences = load_conferences()
-    reestimate_groups = []
     if args.online:
-        scrape_online(conferences, args, reestimate_groups)
+        scrape_online(conferences, args)
     normalize_nips(conferences)
     drop_empty_timelines(conferences)
-    write_groups(conferences, reestimate_groups, args)
+    write_groups(conferences, args)
 
 
 if __name__ == "__main__":

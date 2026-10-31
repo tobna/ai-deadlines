@@ -63,7 +63,7 @@ The pipeline modules are **functions with `main()` guards** — importing them d
    - CCF deadlines (`parser/ccf_deadlines.py`): the whole `AI` category plus the single files listed in `load_conferences` (`CG/3dv`, `SC/satml`), and any file named like an existing `conferences/<id>.yaml`
 3. `normalize_nips()` — rename lingering `nips`/`NIPS` to `neurips`/`NeurIPS`.
 4. `drop_empty_timelines()` — drop unparseable deadlines and conferences with none left.
-5. `write_groups()` — group by conference family, estimate future instances (`parser/see_future.py`), attach CORE/h5 ranks (`ranking.py`) and acceptance rates (`parser/openaccept.py`), and write YAML back to `conferences/`.
+5. `write_groups()` — group by conference family, estimate future instances (`parser/see_future.py`; every `dataSrc: estimate` entry is dropped and rebuilt from the real instances on each run, so a corrected source year fixes its estimates too), attach CORE/h5 ranks (`ranking.py`) and acceptance rates (`parser/openaccept.py`), and write YAML back to `conferences/`.
 
 `data_to_json.py:main()` then splits YAML into:
 - `aideadlines/data/conferences.json` — upcoming deadlines

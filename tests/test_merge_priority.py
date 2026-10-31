@@ -30,44 +30,39 @@ class TestPriorityOrder:
 
 
 class TestMergeOne:
-    def test_new_conference_is_added_and_group_flagged(self):
-        conferences, groups = {}, []
-        merge_one(conferences, _conf(), "abc2025", "hf-repo", groups)
+    def test_new_conference_is_added(self):
+        conferences = {}
+        merge_one(conferences, _conf(), "abc2025", "hf-repo")
         assert conferences["abc2025"]["dataSrc"] == "hf-repo"
-        assert groups == ["abc"]  # "abc2025"[:-4]
 
-    def test_estimate_is_fully_replaced_and_reestimated(self):
-        conferences = {"x2025": _conf(dataSrc="estimate", title="old")}
-        groups = []
-        merge_one(conferences, _conf(title="new"), "x2025", "hf-repo", groups)
+    def test_estimate_is_fully_replaced(self):
+        conferences = {"x2025": _conf(dataSrc="estimate", title="old", tags=["CV"])}
+        merge_one(conferences, _conf(title="new"), "x2025", "hf-repo")
         assert conferences["x2025"]["title"] == "new"
         assert conferences["x2025"]["dataSrc"] == "hf-repo"
-        assert groups == ["x"]
+        assert conferences["x2025"]["tags"] == ["ML"]  # replaced, not united
 
     def test_higher_priority_overwrites_lower_via_master_merge(self):
         conferences = {"x2025": _conf(dataSrc="hf-repo", title="old", tags=["ML"])}
-        groups = []
-        merge_one(conferences, _conf(title="new", tags=["CV"]), "x2025", "manual", groups)
+        merge_one(conferences, _conf(title="new", tags=["CV"]), "x2025", "manual")
         assert conferences["x2025"]["title"] == "new"
         assert conferences["x2025"]["dataSrc"] == "manual"
         assert conferences["x2025"]["tags"] == ["CV", "ML"]  # union
-        assert groups == []  # not new, not estimate -> no reestimate
 
     def test_lower_priority_does_not_overwrite_higher(self):
         conferences = {"x2025": _conf(dataSrc="manual", title="keep")}
-        groups = []
-        merge_one(conferences, _conf(title="ignored"), "x2025", "hf-repo", groups)
+        merge_one(conferences, _conf(title="ignored"), "x2025", "hf-repo")
         assert conferences["x2025"]["title"] == "keep"
         assert conferences["x2025"]["dataSrc"] == "manual"
 
     def test_overwrite_equal_true_replaces_same_priority(self):
         conferences = {"x2025": _conf(dataSrc="hf-repo", title="old")}
-        merge_one(conferences, _conf(title="new"), "x2025", "hf-repo", [], overwrite_equal=True)
+        merge_one(conferences, _conf(title="new"), "x2025", "hf-repo", overwrite_equal=True)
         assert conferences["x2025"]["title"] == "new"
 
     def test_overwrite_equal_false_keeps_same_priority(self):
         conferences = {"x2025": _conf(dataSrc="ninoduarte-git", title="keep")}
-        merge_one(conferences, _conf(title="ignored"), "x2025", "ninoduarte-git", [], overwrite_equal=False)
+        merge_one(conferences, _conf(title="ignored"), "x2025", "ninoduarte-git", overwrite_equal=False)
         assert conferences["x2025"]["title"] == "keep"
 
 
@@ -94,12 +89,11 @@ class TestTagWacvRound:
 
 
 def test_merge_source_merges_each_item_by_its_id():
-    conferences, groups = {}, []
+    conferences = {}
     merge_source(
         conferences,
         [{"id": "neurips2025", "tags": ["ML"], "timeline": [{"deadline": "2025-01-01"}]}],
         "ninoduarte-git",
-        groups,
         overwrite_equal=False,
     )
     assert "neurips2025" in conferences
@@ -123,7 +117,7 @@ class TestBlocklistAndAliases:
             {"id": "cvc2027", "website": "https://saiconference.com/CVC", "tags": [], "timeline": []},
             {"id": "ieee cec2026", "tags": [], "timeline": [{"deadline": "2026-02-01"}]},
         ]
-        merge_source(conferences, items, "ccf-deadlines", [])
+        merge_source(conferences, items, "ccf-deadlines")
         assert list(conferences) == ["cec2026"]
         assert conferences["cec2026"]["id"] == "cec2026"
 

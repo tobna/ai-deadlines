@@ -78,11 +78,10 @@ def tag_wacv_round(conf, conf_id):
         conf["timeline"][0]["note"] = f"Round {rnd}"
 
 
-def merge_one(conferences, new_conf, conf_id, src_name, reestimate_groups, overwrite_equal=True):
+def merge_one(conferences, new_conf, conf_id, src_name, overwrite_equal=True):
     """Merge a single conference record into ``conferences`` by source priority.
 
-    Mutates ``conferences`` and appends affected group prefixes to ``reestimate_groups``,
-    matching the original inline merge behavior.
+    Mutates ``conferences``. An estimate is replaced outright by the first real record.
 
     ``overwrite_equal`` selects ``<=`` (a same-priority source overwrites) vs ``<`` (it does
     not) — the historical asymmetry where ninoduarte-git used ``<`` and the others ``<=``.
@@ -91,7 +90,6 @@ def merge_one(conferences, new_conf, conf_id, src_name, reestimate_groups, overw
         conferences[conf_id] = new_conf
         conferences[conf_id]["dataSrc"] = src_name
         logger.success(f"NEW CONFERENCE: {conferences[conf_id]}")
-        reestimate_groups.append(conf_id[:-4])
         return
 
     existing_priority = SOURCES.index(conferences[conf_id]["dataSrc"])
@@ -101,7 +99,6 @@ def merge_one(conferences, new_conf, conf_id, src_name, reestimate_groups, overw
     if new_takes_precedence:
         if conferences[conf_id]["dataSrc"] == "estimate":
             logger.success(f"FIRST DATA FOR CONFERENCE: {conferences[conf_id]}")
-            reestimate_groups.append(conf_id[:-4])
             conferences[conf_id] = new_conf
         else:
             conferences[conf_id] = join_conferences(slave=conferences[conf_id], master=new_conf)
@@ -110,7 +107,7 @@ def merge_one(conferences, new_conf, conf_id, src_name, reestimate_groups, overw
         conferences[conf_id] = join_conferences(slave=new_conf, master=conferences[conf_id])
 
 
-def merge_source(conferences, items, src_name, reestimate_groups, overwrite_equal=True):
+def merge_source(conferences, items, src_name, overwrite_equal=True):
     """Merge every record in ``items`` from one source into ``conferences`` by its ``id``.
 
     Blocked conferences are dropped and alias ids canonicalized; WACV round tagging is applied
@@ -122,4 +119,4 @@ def merge_source(conferences, items, src_name, reestimate_groups, overwrite_equa
             continue
         item["id"] = canonical_id(item["id"])
         tag_wacv_round(item, item["id"])
-        merge_one(conferences, item, item["id"], src_name, reestimate_groups, overwrite_equal=overwrite_equal)
+        merge_one(conferences, item, item["id"], src_name, overwrite_equal=overwrite_equal)

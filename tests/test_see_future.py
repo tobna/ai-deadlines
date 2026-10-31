@@ -24,6 +24,14 @@ def test_estimated_metadata_propagates(real_conf_pair, clone):
     assert est["title"] == "ABC Conference"
 
 
+def test_estimate_carries_the_latest_acceptance_rate(real_conf_pair, clone):
+    confs = clone(real_conf_pair)
+    rate = {"acceptanceRate": 25.0, "acceptanceRateYear": 2024, "acceptedPapers": 25, "submittedPapers": 100}
+    confs["abc2024"].update(rate)
+    est = estimate_future_conferences(confs, end_in_years=2, max_approximations=2)["abc2025"]
+    assert {key: est[key] for key in rate} == rate
+
+
 def test_max_approximations_caps_count(real_conf_pair, clone):
     fut = estimate_future_conferences(clone(real_conf_pair), end_in_years=10, max_approximations=1)
     assert list(fut.keys()) == ["abc2025"]
