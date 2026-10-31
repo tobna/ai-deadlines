@@ -52,13 +52,14 @@ siggraph2027:
   tags: *id001
   timeline:
   - deadline: '2027-01-22T22:00:00Z'
+    note: 'From SIGGRAPH 2026: Technical Papers deadline'
   title: Conference on Computer Graphics and Interactive Techniques
 siggraph2028:
   acceptanceRate: 22.57
   acceptanceRateYear: 2025
   acceptedPapers: 174
-  conferenceEndDate: '2028-07-23'
-  conferenceStartDate: '2028-07-18'
+  conferenceEndDate: '2028-07-24'
+  conferenceStartDate: '2028-07-19'
   dataSrc: estimate
   id: siggraph2028
   isApproximateDeadline: true
@@ -68,4 +69,5 @@ siggraph2028:
   tags: *id001
   timeline:
   - deadline: '2028-01-22T22:00:00Z'
+    note: 'From SIGGRAPH 2026: Technical Papers deadline'
   title: Conference on Computer Graphics and Interactive Techniques

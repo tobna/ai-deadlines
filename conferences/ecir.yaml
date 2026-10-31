@@ -38,8 +38,8 @@ ecir2023:
   acceptanceRate: 25.45
   acceptanceRateYear: 2023
   acceptedPapers: 57
-  conferenceEndDate: '2023-04-06'
-  conferenceStartDate: '2023-04-02'
+  conferenceEndDate: '2023-04-05'
+  conferenceStartDate: '2023-03-31'
   dataSrc: ccf-deadlines
   id: ecir2023
   isApproximateDeadline: false

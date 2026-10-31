@@ -101,6 +101,9 @@ ijcnn2027:
   title: International Joint Conference on Neural Networks
   website: https://ijcnn.org/2027
 ijcnn2028:
+  acceptanceRate: 40.0
+  acceptanceRateYear: 2025
+  acceptedPapers: 2320
   conferenceEndDate: '2028-06-19'
   conferenceStartDate: '2028-06-14'
   dataSrc: estimate
@@ -108,6 +111,7 @@ ijcnn2028:
   isApproximateDeadline: true
   rating: B
   shortname: IJCNN 2028
+  submittedPapers: 5800
   tags: *id001
   timeline:
   - deadline: '2028-02-01T11:59:59Z'

@@ -324,8 +324,8 @@ neurips2027:
   acceptanceRate: 25.73
   acceptanceRateYear: 2026
   acceptedPapers: 7900
-  conferenceEndDate: '2027-12-07'
-  conferenceStartDate: '2027-12-02'
+  conferenceEndDate: '2027-12-13'
+  conferenceStartDate: '2027-12-08'
   dataSrc: estimate
   h5Index: 371
   id: neurips2027
@@ -335,14 +335,15 @@ neurips2027:
   submittedPapers: 30709
   tags: *id001
   timeline:
-  - deadline: '2027-05-15T23:59:59Z'
+  - abstractDeadline: '2027-05-05T11:59:59Z'
+    deadline: '2027-05-07T11:59:59Z'
   title: Neural Information Processing Systems
 neurips2028:
   acceptanceRate: 25.73
   acceptanceRateYear: 2026
   acceptedPapers: 7900
-  conferenceEndDate: '2028-12-06'
-  conferenceStartDate: '2028-12-01'
+  conferenceEndDate: '2028-12-13'
+  conferenceStartDate: '2028-12-08'
   dataSrc: estimate
   h5Index: 371
   id: neurips2028
@@ -352,5 +353,6 @@ neurips2028:
   submittedPapers: 30709
   tags: *id001
   timeline:
-  - deadline: '2028-05-14T23:59:59Z'
+  - abstractDeadline: '2028-05-05T11:59:59Z'
+    deadline: '2028-05-07T11:59:59Z'
   title: Neural Information Processing Systems

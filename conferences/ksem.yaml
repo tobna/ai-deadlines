@@ -90,10 +90,7 @@ ksem2027:
   shortname: KSEM 2027
   tags: *id001
   timeline:
-  - deadline: '2027-03-01T11:59:00Z'
-    note: 'From KSEM 2026: Regular papers; cutoff clock and timezone unpublished.
-      23:59:00 uses the repository default where the source gives no clear cutoff
-      clock. AoE uses the repository default because the source gives no timezone.'
+  - deadline: '2027-03-01T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management
 ksem2028:
   conferenceEndDate: '2028-07-22'
@@ -105,8 +102,5 @@ ksem2028:
   shortname: KSEM 2028
   tags: *id001
   timeline:
-  - deadline: '2028-03-01T11:59:00Z'
-    note: 'From KSEM 2026: Regular papers; cutoff clock and timezone unpublished.
-      23:59:00 uses the repository default where the source gives no clear cutoff
-      clock. AoE uses the repository default because the source gives no timezone.'
+  - deadline: '2028-03-01T11:59:59Z'
   title: International Conference on Knowledge Science, Engineering and Management

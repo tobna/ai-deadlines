@@ -55,16 +55,18 @@ colm2027:
   timeline:
   - abstractDeadline: '2027-03-27T11:59:59Z'
     deadline: '2027-04-01T11:59:59Z'
+    note: 'From COLM 2026: Paper Submission'
   title: Conference on Language Modeling
 colm2028:
-  conferenceEndDate: '2028-10-10'
-  conferenceStartDate: '2028-10-05'
+  conferenceEndDate: '2028-10-11'
+  conferenceStartDate: '2028-10-06'
   dataSrc: estimate
   id: colm2028
   isApproximateDeadline: true
   shortname: COLM 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-03-26T11:59:59Z'
-    deadline: '2028-03-31T11:59:59Z'
+  - abstractDeadline: '2028-03-27T11:59:59Z'
+    deadline: '2028-04-01T11:59:59Z'
+    note: 'From COLM 2026: Paper Submission'
   title: Conference on Language Modeling

@@ -26,8 +26,8 @@ robosoft2027:
   timezone: America/Los_Angeles
   website: https://www.robosoft27.org
 robosoft2028:
-  conferenceEndDate: '2028-04-09'
-  conferenceStartDate: '2028-04-04'
+  conferenceEndDate: '2028-04-10'
+  conferenceStartDate: '2028-04-05'
   dataSrc: estimate
   id: robosoft2028
   isApproximateDeadline: true

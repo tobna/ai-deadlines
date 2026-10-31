@@ -78,7 +78,7 @@ icmla2027:
   shortname: ICMLA 2027
   tags: *id001
   timeline:
-  - deadline: '2027-06-01T11:59:00Z'
+  - deadline: '2027-06-01T11:59:59Z'
     note: 'From ICMLA 2026: Main Conference Papers DDL.'
   title: International Conference on Machine Learning and Applications
 icmla2028:
@@ -91,6 +91,6 @@ icmla2028:
   shortname: ICMLA 2028
   tags: *id001
   timeline:
-  - deadline: '2028-06-01T11:59:00Z'
+  - deadline: '2028-06-01T11:59:59Z'
     note: 'From ICMLA 2026: Main Conference Papers DDL.'
   title: International Conference on Machine Learning and Applications

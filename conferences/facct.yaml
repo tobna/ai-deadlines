@@ -51,8 +51,8 @@ facct2027:
     note: 'From FAccT 2025: Paper Submission'
   title: ACM Conference on Fairness, Accountability, and Transparency
 facct2028:
-  conferenceEndDate: '2028-07-01'
-  conferenceStartDate: '2028-06-26'
+  conferenceEndDate: '2028-07-02'
+  conferenceStartDate: '2028-06-27'
   dataSrc: estimate
   h5Index: 103
   id: facct2028

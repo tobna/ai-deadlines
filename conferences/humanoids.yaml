@@ -36,12 +36,12 @@ humanoids2027:
   timeline:
   - deadline: '2027-07-31T23:59:59Z'
 humanoids2028:
-  conferenceEndDate: '2028-12-10'
-  conferenceStartDate: '2028-12-05'
+  conferenceEndDate: '2028-12-11'
+  conferenceStartDate: '2028-12-06'
   dataSrc: estimate
   id: humanoids2028
   isApproximateDeadline: true
   shortname: Humanoids 2028
   tags: *id001
   timeline:
-  - deadline: '2028-07-30T23:59:59Z'
+  - deadline: '2028-07-31T23:59:59Z'

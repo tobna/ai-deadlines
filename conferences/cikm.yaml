@@ -144,15 +144,16 @@ cikm2027:
   submittedPapers: 1627
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-05-18T23:59:59Z'
-    deadline: '2027-05-25T23:59:59Z'
-  title: ACM International Conference on Information and Knowledge Management
+  - abstractDeadline: '2027-05-17T11:59:00Z'
+    deadline: '2027-05-24T11:59:00Z'
+    note: 'From CIKM 2026: Full paper submission deadline'
+  title: Conference on Information and Knowledge Management
 cikm2028:
   acceptanceRate: 27.23
   acceptanceRateYear: 2025
   acceptedPapers: 443
-  conferenceEndDate: '2028-11-11'
-  conferenceStartDate: '2028-11-06'
+  conferenceEndDate: '2028-11-12'
+  conferenceStartDate: '2028-11-07'
   dataSrc: estimate
   id: cikm2028
   isApproximateDeadline: true
@@ -161,6 +162,7 @@ cikm2028:
   submittedPapers: 1627
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-05-17T23:59:59Z'
-    deadline: '2028-05-24T23:59:59Z'
-  title: ACM International Conference on Information and Knowledge Management
+  - abstractDeadline: '2028-05-17T11:59:00Z'
+    deadline: '2028-05-24T11:59:00Z'
+    note: 'From CIKM 2026: Full paper submission deadline'
+  title: Conference on Information and Knowledge Management

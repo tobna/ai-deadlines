@@ -68,8 +68,8 @@ acmmm2027:
   acceptanceRate: 23.45
   acceptanceRateYear: 2025
   acceptedPapers: 1250
-  conferenceEndDate: '2027-11-01'
-  conferenceStartDate: '2027-10-27'
+  conferenceEndDate: '2027-11-15'
+  conferenceStartDate: '2027-11-10'
   dataSrc: estimate
   h5Index: 101
   id: acmmm2027
@@ -79,15 +79,15 @@ acmmm2027:
   submittedPapers: 5330
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-04-05T11:59:59Z'
-    deadline: '2027-04-12T11:59:59Z'
+  - abstractDeadline: '2027-03-26T11:59:59Z'
+    deadline: '2027-04-02T11:59:59Z'
   title: ACM Multimedia
 acmmm2028:
   acceptanceRate: 23.45
   acceptanceRateYear: 2025
   acceptedPapers: 1250
-  conferenceEndDate: '2028-11-14'
-  conferenceStartDate: '2028-11-09'
+  conferenceEndDate: '2028-11-15'
+  conferenceStartDate: '2028-11-10'
   dataSrc: estimate
   h5Index: 101
   id: acmmm2028
@@ -97,6 +97,6 @@ acmmm2028:
   submittedPapers: 5330
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-03-24T12:00:00Z'
-    deadline: '2028-03-31T12:00:00Z'
+  - abstractDeadline: '2028-03-26T11:59:59Z'
+    deadline: '2028-04-02T11:59:59Z'
   title: ACM Multimedia

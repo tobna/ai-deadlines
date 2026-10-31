@@ -107,7 +107,7 @@ evomusart2028:
   shortname: EvoMUSART 2028
   tags: *id001
   timeline:
-  - deadline: '2027-11-02T11:59:00Z'
+  - deadline: '2027-11-17T11:59:59Z'
     note: 'From EvoMUSART 2027: Full papers'
   title: International Conference on Artificial Intelligence in Music, Sound, Art
     and Design

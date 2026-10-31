@@ -96,8 +96,11 @@ ijcnlp2027:
   tags: *id001
   timeline:
   - deadline: '2027-05-26T11:59:59Z'
-    note: 'From IJCNLP 2026: ARR Submission; commitment deadline: 2026-08-07; second-round
-      commitment: 2026-08-25; AACL-IJCNLP 2026 (the 5th AACL & 15th IJCNLP)'
+    note: 'From IJCNLP 2026: ARR initial submission'
+  - deadline: '2027-08-08T11:59:59Z'
+    note: 'From IJCNLP 2026: Reviewed-paper commitment, round 1'
+  - deadline: '2027-08-26T11:59:59Z'
+    note: 'From IJCNLP 2026: Reviewed-paper commitment, round 2'
   title: International Joint Conference on Natural Language Processing
 ijcnlp2028:
   conferenceEndDate: '2028-11-11'
@@ -111,6 +114,9 @@ ijcnlp2028:
   tags: *id001
   timeline:
   - deadline: '2028-05-26T11:59:59Z'
-    note: 'From IJCNLP 2026: ARR Submission; commitment deadline: 2026-08-07; second-round
-      commitment: 2026-08-25; AACL-IJCNLP 2026 (the 5th AACL & 15th IJCNLP)'
+    note: 'From IJCNLP 2026: ARR initial submission'
+  - deadline: '2028-08-08T11:59:59Z'
+    note: 'From IJCNLP 2026: Reviewed-paper commitment, round 1'
+  - deadline: '2028-08-26T11:59:59Z'
+    note: 'From IJCNLP 2026: Reviewed-paper commitment, round 2'
   title: International Joint Conference on Natural Language Processing

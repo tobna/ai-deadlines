@@ -22,8 +22,8 @@ sigir2022:
   acceptanceRate: 20.3
   acceptanceRateYear: 2022
   acceptedPapers: 161
-  conferenceEndDate: '2022-07-15'
-  conferenceStartDate: '2022-07-11'
+  conferenceEndDate: '2022-07-14'
+  conferenceStartDate: '2022-07-07'
   dataSrc: ccf-deadlines
   id: sigir2022
   isApproximateDeadline: false

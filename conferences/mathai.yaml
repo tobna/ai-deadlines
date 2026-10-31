@@ -38,20 +38,20 @@ mathai2027:
   shortname: MathAI 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-02-01T23:59:59Z'
-    deadline: '2027-02-19T23:59:59Z'
+  - abstractDeadline: '2027-02-17T23:59:59Z'
+    deadline: '2027-03-01T23:59:59Z'
     note: 'From MathAI 2026: Full paper submission deadline'
   title: The International Conference dedicated to mathematics in artificial intelligence
 mathai2028:
-  conferenceEndDate: '2028-04-03'
-  conferenceStartDate: '2028-03-29'
+  conferenceEndDate: '2028-04-04'
+  conferenceStartDate: '2028-03-30'
   dataSrc: estimate
   id: mathai2028
   isApproximateDeadline: true
   shortname: MathAI 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-02-01T23:59:59Z'
-    deadline: '2028-02-19T23:59:59Z'
+  - abstractDeadline: '2028-02-17T23:59:59Z'
+    deadline: '2028-03-01T23:59:59Z'
     note: 'From MathAI 2026: Full paper submission deadline'
   title: The International Conference dedicated to mathematics in artificial intelligence

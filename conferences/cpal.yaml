@@ -65,6 +65,6 @@ cpal2028:
   shortname: CPAL 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-11-24T11:59:59Z'
-    deadline: '2027-12-06T11:59:59Z'
+  - abstractDeadline: '2027-11-14T11:59:59Z'
+    deadline: '2027-11-26T11:59:59Z'
   title: The Conference on Parsimony and Learning

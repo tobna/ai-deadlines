@@ -79,7 +79,7 @@ probml2027:
   shortname: ProbML 2027
   tags: *id001
   timeline:
-  - deadline: '2027-03-21T11:59:00Z'
+  - deadline: '2027-03-21T11:59:59Z'
   title: Symposium on Probabilistic Machine Learning
 probml2028:
   conferenceEndDate: '2028-07-10'
@@ -90,5 +90,5 @@ probml2028:
   shortname: ProbML 2028
   tags: *id001
   timeline:
-  - deadline: '2028-03-21T11:59:00Z'
+  - deadline: '2028-03-21T11:59:59Z'
   title: Symposium on Probabilistic Machine Learning

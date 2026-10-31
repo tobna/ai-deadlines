@@ -91,6 +91,6 @@ rss2028:
   shortname: RSS 2028
   tags: *id001
   timeline:
-  - deadline: '2027-12-05T11:59:00Z'
+  - deadline: '2027-12-05T11:59:59Z'
     note: 'From RSS 2027: Stage 1: initial 6-page extended abstract submission'
   title: Robotics Science and Systems

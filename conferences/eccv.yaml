@@ -61,8 +61,8 @@ eccv2028:
   acceptanceRate: 27.53
   acceptanceRateYear: 2026
   acceptedPapers: 2883
-  conferenceEndDate: '2028-09-12'
-  conferenceStartDate: '2028-09-07'
+  conferenceEndDate: '2028-09-15'
+  conferenceStartDate: '2028-09-10'
   dataSrc: estimate
   h5Index: 262
   id: eccv2028
@@ -72,5 +72,6 @@ eccv2028:
   submittedPapers: 10473
   tags: *id001
   timeline:
-  - deadline: '2028-03-05T11:00:00Z'
+  - abstractDeadline: '2028-02-26T22:00:00Z'
+    deadline: '2028-03-05T22:00:00Z'
   title: European Conference on Computer Vision

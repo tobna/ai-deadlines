@@ -62,15 +62,19 @@ kdd2027:
   submittedPapers: 2955
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-02-01T23:59:59Z'
-    deadline: '2027-02-08T23:59:59Z'
+  - abstractDeadline: '2026-07-25T11:59:59Z'
+    deadline: '2026-08-01T11:59:59Z'
+    note: 'From KDD 2026: Paper submission (First Cycle)'
+  - abstractDeadline: '2027-02-02T11:59:59Z'
+    deadline: '2027-02-09T11:59:59Z'
+    note: 'From KDD 2026: Paper submission (Second Cycle)'
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining
 kdd2028:
   acceptanceRate: 18.68
   acceptanceRateYear: 2025
   acceptedPapers: 552
-  conferenceEndDate: '2028-08-13'
-  conferenceStartDate: '2028-08-08'
+  conferenceEndDate: '2028-08-14'
+  conferenceStartDate: '2028-08-09'
   dataSrc: estimate
   h5Index: 124
   id: kdd2028
@@ -80,6 +84,10 @@ kdd2028:
   submittedPapers: 2955
   tags: *id001
   timeline:
+  - abstractDeadline: '2027-07-25T11:59:59Z'
+    deadline: '2027-08-01T11:59:59Z'
+    note: 'From KDD 2026: Paper submission (First Cycle)'
   - abstractDeadline: '2028-02-02T11:59:59Z'
     deadline: '2028-02-09T11:59:59Z'
+    note: 'From KDD 2026: Paper submission (Second Cycle)'
   title: ACM SIGKDD Conference on Knowledge Discovery and Data Mining

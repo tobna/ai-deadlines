@@ -125,8 +125,8 @@ icra2028:
   acceptanceRate: 38.67
   acceptanceRateYear: 2025
   acceptedPapers: 1606
-  conferenceEndDate: '2028-05-28'
-  conferenceStartDate: '2028-05-23'
+  conferenceEndDate: '2028-05-29'
+  conferenceStartDate: '2028-05-24'
   dataSrc: estimate
   h5Index: 122
   id: icra2028
@@ -136,4 +136,6 @@ icra2028:
   submittedPapers: 4153
   tags: *id001
   timeline:
-  - deadline: '2028-09-14T23:59:59Z'
+  - deadline: '2027-09-16T07:59:59Z'
+    note: 'From ICRA 2027: Paper Submission'
+  title: IEEE International Conference on Robotics and Automation

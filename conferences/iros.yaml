@@ -124,7 +124,7 @@ iros2028:
   shortname: IROS 2028
   tags: *id001
   timeline:
-  - deadline: '2028-03-02T11:59:00Z'
+  - deadline: '2028-03-02T11:59:59Z'
     note: 'From IROS 2027: Paper submission deadline: March 1, 2027; exact cutoff
       time and timezone not specified on the official IEEE RAS event page'
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems

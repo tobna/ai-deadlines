@@ -150,6 +150,9 @@ wacv2027:
   title: Winter Conference on Applications of Computer Vision
   website: https://wacv.thecvf.com/Conferences/2027/
 wacv2028:
+  acceptanceRate: 41.41
+  acceptanceRateYear: 2024
+  acceptedPapers: 846
   conferenceEndDate: '2028-01-11'
   conferenceStartDate: '2028-01-06'
   dataSrc: estimate
@@ -158,6 +161,7 @@ wacv2028:
   isApproximateDeadline: true
   rating: A
   shortname: WACV 2028
+  submittedPapers: 2043
   tags: *id001
   timeline:
   - abstractDeadline: '2027-06-20T11:59:59Z'

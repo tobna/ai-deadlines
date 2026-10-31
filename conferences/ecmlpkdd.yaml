@@ -49,16 +49,16 @@ ecmlpkdd2027:
   title: European Conference on Machine Learning and Principles and Practice of Knowledge
     Discovery in Databases
 ecmlpkdd2028:
-  conferenceEndDate: '2028-09-11'
-  conferenceStartDate: '2028-09-06'
+  conferenceEndDate: '2028-09-12'
+  conferenceStartDate: '2028-09-07'
   dataSrc: estimate
   id: ecmlpkdd2028
   isApproximateDeadline: true
   shortname: ECMLPKDD 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-03-05T11:59:59Z'
-    deadline: '2028-03-12T11:59:59Z'
+  - abstractDeadline: '2028-03-06T11:59:59Z'
+    deadline: '2028-03-13T11:59:59Z'
     note: 'From ECMLPKDD 2026: Paper submission (Research Track)'
   title: European Conference on Machine Learning and Principles and Practice of Knowledge
     Discovery in Databases

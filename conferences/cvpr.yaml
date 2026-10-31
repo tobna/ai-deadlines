@@ -24,8 +24,8 @@ cvpr2022:
   acceptanceRate: 25.29
   acceptanceRateYear: 2022
   acceptedPapers: 2064
-  conferenceEndDate: '2022-06-24'
-  conferenceStartDate: '2022-06-19'
+  conferenceEndDate: '2022-06-28'
+  conferenceStartDate: '2022-06-21'
   dataSrc: ccf-deadlines
   h5Index: 450
   id: cvpr2022
@@ -142,8 +142,8 @@ cvpr2028:
   acceptanceRate: 25.3
   acceptanceRateYear: 2026
   acceptedPapers: 4071
-  conferenceEndDate: '2028-06-10'
-  conferenceStartDate: '2028-06-05'
+  conferenceEndDate: '2028-06-27'
+  conferenceStartDate: '2028-06-22'
   dataSrc: estimate
   h5Index: 450
   id: cvpr2028
@@ -153,6 +153,6 @@ cvpr2028:
   submittedPapers: 16092
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-11-08T11:59:59Z'
-    deadline: '2027-11-14T11:59:59Z'
+  - abstractDeadline: '2027-11-11T11:59:59Z'
+    deadline: '2027-11-17T11:59:59Z'
   title: Computer Vision and Pattern Recognition Conference

@@ -71,8 +71,8 @@ dai2026:
   title: International Conference on Distributed Artificial Intelligence
   website: https://www.adai.ai/dai/2026/index.html
 dai2027:
-  conferenceEndDate: '2027-12-04'
-  conferenceStartDate: '2027-11-29'
+  conferenceEndDate: '2027-12-05'
+  conferenceStartDate: '2027-11-30'
   dataSrc: estimate
   id: dai2027
   isApproximateDeadline: true
@@ -80,13 +80,10 @@ dai2027:
   tags: *id001
   timeline:
   - deadline: '2027-08-04T11:59:59Z'
-    note: 'From DAI 2026: Research / Industry Track'
-  - deadline: '2027-08-11T11:59:59Z'
-    note: 'From DAI 2026: AI Paper Track'
   title: International Conference on Distributed Artificial Intelligence
 dai2028:
-  conferenceEndDate: '2028-12-04'
-  conferenceStartDate: '2028-11-29'
+  conferenceEndDate: '2028-12-05'
+  conferenceStartDate: '2028-11-30'
   dataSrc: estimate
   id: dai2028
   isApproximateDeadline: true
@@ -94,7 +91,4 @@ dai2028:
   tags: *id001
   timeline:
   - deadline: '2028-08-04T11:59:59Z'
-    note: 'From DAI 2026: Research / Industry Track'
-  - deadline: '2028-08-11T11:59:59Z'
-    note: 'From DAI 2026: AI Paper Track'
   title: International Conference on Distributed Artificial Intelligence

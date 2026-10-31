@@ -74,7 +74,7 @@ ictai2027:
   shortname: ICTAI 2027
   tags: *id001
   timeline:
-  - deadline: '2027-07-22T11:59:00Z'
+  - deadline: '2027-07-22T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce
 ictai2028:
   conferenceEndDate: '2028-11-07'
@@ -86,5 +86,5 @@ ictai2028:
   shortname: ICTAI 2028
   tags: *id001
   timeline:
-  - deadline: '2028-07-22T11:59:00Z'
+  - deadline: '2028-07-22T11:59:59Z'
   title: International Conference on Tools with Artificial Intellignce

@@ -2,6 +2,8 @@ colt2021:
   acceptanceRate: 35.14
   acceptanceRateYear: 2021
   acceptedPapers: 136
+  conferenceEndDate: '2021-08-19'
+  conferenceStartDate: '2021-08-04'
   dataSrc: ccf-deadlines
   id: colt2021
   isApproximateDeadline: false

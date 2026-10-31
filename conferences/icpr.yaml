@@ -49,6 +49,8 @@ icpr2026:
   title: International Conference on Pattern Recognition
   website: https://icpr2026orgteam.github.io/ICPR2026website/index.html
 icpr2027:
+  conferenceEndDate: '2027-10-15'
+  conferenceStartDate: '2027-10-04'
   dataSrc: ccf-deadlines
   h5Index: 68
   id: icpr2027
@@ -63,16 +65,3 @@ icpr2027:
       23 (provisional, cutoff unspecified)
   title: International Conference on Pattern Recognition
   website: https://www.icpr2027.com/
-icpr2028:
-  conferenceEndDate: '2028-08-22'
-  conferenceStartDate: '2028-08-17'
-  dataSrc: estimate
-  h5Index: 68
-  id: icpr2028
-  isApproximateDeadline: true
-  rating: B
-  shortname: ICPR 2028
-  tags: *id001
-  timeline:
-  - deadline: '2027-12-20T12:00:00Z'
-  title: International Conference on Pattern Recognition

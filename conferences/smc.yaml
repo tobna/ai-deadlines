@@ -63,11 +63,11 @@ smc2027:
   shortname: SMC 2027
   tags: *id001
   timeline:
-  - deadline: '2027-03-22T23:59:59Z'
+  - deadline: '2027-05-04T11:59:59Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
 smc2028:
-  conferenceEndDate: '2028-10-08'
-  conferenceStartDate: '2028-10-03'
+  conferenceEndDate: '2028-10-09'
+  conferenceStartDate: '2028-10-04'
   dataSrc: estimate
   id: smc2028
   isApproximateDeadline: true
@@ -75,5 +75,5 @@ smc2028:
   shortname: SMC 2028
   tags: *id001
   timeline:
-  - deadline: '2028-03-21T23:59:59Z'
+  - deadline: '2028-05-04T11:59:59Z'
   title: IEEE International Conference on Systems, Man, and Cybernetics
