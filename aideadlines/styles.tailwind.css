@@ -790,6 +790,28 @@ input:checked + .slider::before { transform: translateX(18px); }
   border-radius: 14px;
 }
 .empty-state svg { width: 52px; height: 52px; color: var(--faint); margin-bottom: 1rem; }
+/* Sits in the grid until scripts.js renders the cards: what LLMs and no-JS readers see. */
+.agent-note {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 62ch;
+  padding: 1.1rem 1.4rem;
+  border: 1px dashed var(--line-2);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.65;
+  text-align: center;
+}
+.agent-note strong { color: var(--text); font-weight: 700; }
+.agent-note a {
+  font-family: var(--font-mono);
+  font-size: .86em;
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+  white-space: nowrap;
+}
+.agent-note a:hover { color: var(--accent); }
 .empty-state h3 { font-weight: 700; font-size: 1.15rem; margin-bottom: .35rem; }
 .empty-state p { font-family: var(--font-mono); font-size: .8rem; color: var(--muted); }
 

@@ -145,13 +145,28 @@
       <p class="loading-text">Loading conferences…</p>
     </div>
 
-    <main id="conferenceGrid"></main>
+    <!-- scripts.js replaces this note with the cards, so only readers without JavaScript
+         (LLMs, agents, fetchers that strip <head> and comments) ever get to read it. -->
+    <main id="conferenceGrid">
+      <p class="agent-note">
+        <strong>LLMs and agents:</strong> this page builds its list with JavaScript, so the HTML holds no deadlines.
+        Read <a href="/llms.txt">/llms.txt</a> first for what every field means, then fetch all upcoming deadlines
+        as one markdown table from <a href="/data/deadlines.md">/data/deadlines.md</a>
+        (all fields: <a href="/data/conferences.json">/data/conferences.json</a>).
+      </p>
+    </main>
 
     <footer class="site-footer">
       <div class="row">
         <span>&copy; <span id="currentYear"></span> ai·deadlines — open source &amp; community-maintained.</span>
         <a href="https://github.com/tobna/ai-deadlines" target="_blank" rel="noopener noreferrer">Contribute on GitHub →</a>
       </div>
+      <p class="row">
+        <span>For LLMs and agents:</span>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/data/deadlines.md">deadlines.md</a>
+        <a href="/data/conferences.json">conferences.json</a>
+      </p>
       <p class="disclaimer">
         Deadlines and timers may be inaccurate. Always confirm the submission deadline on the
         official conference website before you submit.
