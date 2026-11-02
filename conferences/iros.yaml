@@ -99,7 +99,7 @@ iros2026:
   website: https://2026.ieee-iros.org/
 iros2027:
   conferenceEndDate: '2027-10-01'
-  conferenceStartDate: '2027-09-26'
+  conferenceStartDate: '2027-09-27'
   dataSrc: ccf-deadlines
   h5Index: 86
   id: iros2027
@@ -114,8 +114,8 @@ iros2027:
   title: IEEE/RSJ International Conference on Intelligent Robots and Systems
   website: https://2027.ieee-iros.org/
 iros2028:
-  conferenceEndDate: '2028-10-01'
-  conferenceStartDate: '2028-09-26'
+  conferenceEndDate: '2028-10-02'
+  conferenceStartDate: '2028-09-27'
   dataSrc: estimate
   h5Index: 86
   id: iros2028

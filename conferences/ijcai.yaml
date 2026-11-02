@@ -136,8 +136,8 @@ ijcai2027:
   submittedPapers: 5233
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-01-05T11:59:00Z'
-    deadline: '2027-01-12T11:59:00Z'
+  - abstractDeadline: '2027-01-05T11:59:59Z'
+    deadline: '2027-01-12T11:59:59Z'
     note: 'Separate satellite event: August 15-17, 2027, Hengqin, China'
   title: International Joint Conference on Artificial Intelligence
   website: https://2027.ijcai.org/
@@ -156,8 +156,8 @@ ijcai2028:
   submittedPapers: 5233
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-01-05T11:59:00Z'
-    deadline: '2028-01-12T11:59:00Z'
+  - abstractDeadline: '2028-01-05T11:59:59Z'
+    deadline: '2028-01-12T11:59:59Z'
     note: 'From IJCAI 2027: Separate satellite event: August 15-17, 2027, Hengqin,
       China'
   title: International Joint Conference on Artificial Intelligence
