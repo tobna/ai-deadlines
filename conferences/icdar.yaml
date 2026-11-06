@@ -95,8 +95,8 @@ icdar2027:
   timeline:
   - deadline: '2026-11-16T11:59:59Z'
     note: Journal track; initial decision Jan 15, revised submission Apr 1
-  - abstractDeadline: '2027-02-24T11:59:59Z'
-    deadline: '2027-03-03T11:59:59Z'
+  - abstractDeadline: '2027-02-27T11:59:59Z'
+    deadline: '2027-03-06T11:59:59Z'
     note: Conference track
   title: International Conference on Document Analysis and Recognition
   website: https://icdar2027.org/
@@ -113,7 +113,7 @@ icdar2028:
   - deadline: '2027-11-16T11:59:59Z'
     note: 'From ICDAR 2027: Journal track; initial decision Jan 15, revised submission
       Apr 1'
-  - abstractDeadline: '2028-02-24T11:59:59Z'
-    deadline: '2028-03-03T11:59:59Z'
+  - abstractDeadline: '2028-02-27T11:59:59Z'
+    deadline: '2028-03-06T11:59:59Z'
     note: 'From ICDAR 2027: Conference track'
   title: International Conference on Document Analysis and Recognition

@@ -128,7 +128,7 @@ icdm2027:
   submittedPapers: 785
   tags: *id001
   timeline:
-  - deadline: '2027-06-07T11:59:00Z'
+  - deadline: '2027-06-07T11:59:59Z'
     note: Full papers; dates are tentative and subject to change
   title: IEEE International Conference on Data Mining
   website: https://icdm2027-website.onrender.com/
@@ -147,6 +147,6 @@ icdm2028:
   submittedPapers: 785
   tags: *id001
   timeline:
-  - deadline: '2028-06-07T11:59:00Z'
+  - deadline: '2028-06-07T11:59:59Z'
     note: 'From ICDM 2027: Full papers; dates are tentative and subject to change'
   title: IEEE International Conference on Data Mining
