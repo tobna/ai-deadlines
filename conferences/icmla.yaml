@@ -69,21 +69,22 @@ icmla2026:
   title: International Conference on Machine Learning and Applications
   website: https://www.icmla-conference.org/icmla26/
 icmla2027:
-  conferenceEndDate: '2027-10-10'
-  conferenceStartDate: '2027-10-05'
-  dataSrc: estimate
+  conferenceEndDate: '2027-12-16'
+  conferenceStartDate: '2027-12-14'
+  dataSrc: ccf-deadlines
   id: icmla2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: C
   shortname: ICMLA 2027
   tags: *id001
   timeline:
-  - deadline: '2027-06-01T11:59:59Z'
-    note: 'From ICMLA 2026: Main Conference Papers DDL.'
+  - deadline: '2027-05-16T11:59:59Z'
+    note: Main Conference Papers DDL.
   title: International Conference on Machine Learning and Applications
+  website: https://www.icmla-conference.org/icmla27/
 icmla2028:
-  conferenceEndDate: '2028-10-10'
-  conferenceStartDate: '2028-10-05'
+  conferenceEndDate: '2028-12-19'
+  conferenceStartDate: '2028-12-14'
   dataSrc: estimate
   id: icmla2028
   isApproximateDeadline: true
@@ -91,6 +92,6 @@ icmla2028:
   shortname: ICMLA 2028
   tags: *id001
   timeline:
-  - deadline: '2028-06-01T11:59:59Z'
-    note: 'From ICMLA 2026: Main Conference Papers DDL.'
+  - deadline: '2028-05-16T11:59:59Z'
+    note: 'From ICMLA 2027: Main Conference Papers DDL.'
   title: International Conference on Machine Learning and Applications
