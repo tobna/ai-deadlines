@@ -81,8 +81,8 @@ fg2026:
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2026.ieee-biometrics.org/
 fg2027:
-  conferenceEndDate: '2027-04-30'
-  conferenceStartDate: '2027-04-26'
+  conferenceEndDate: '2027-04-29'
+  conferenceStartDate: '2027-04-27'
   dataSrc: ccf-deadlines
   id: fg2027
   isApproximateDeadline: false
@@ -90,13 +90,13 @@ fg2027:
   shortname: FG 2027
   tags: *id001
   timeline:
-  - abstractDeadline: '2026-10-10T11:59:59Z'
-    deadline: '2026-10-17T11:59:59Z'
+  - abstractDeadline: '2026-10-24T11:59:59Z'
+    deadline: '2026-10-31T11:59:59Z'
   title: International Conference on Automatic Face and Gesture Recognition
   website: https://fg2027.ieee-biometrics.org/
 fg2028:
-  conferenceEndDate: '2028-05-01'
-  conferenceStartDate: '2028-04-26'
+  conferenceEndDate: '2028-05-02'
+  conferenceStartDate: '2028-04-27'
   dataSrc: estimate
   id: fg2028
   isApproximateDeadline: true
@@ -104,6 +104,6 @@ fg2028:
   shortname: FG 2028
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-10-10T11:59:59Z'
-    deadline: '2027-10-17T11:59:59Z'
+  - abstractDeadline: '2027-10-24T11:59:59Z'
+    deadline: '2027-10-31T11:59:59Z'
   title: International Conference on Automatic Face and Gesture Recognition
