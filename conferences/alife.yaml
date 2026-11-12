@@ -1,0 +1,34 @@
+alife2025:
+  conferenceEndDate: '2025-10-10'
+  conferenceStartDate: '2025-10-06'
+  dataSrc: manual
+  id: alife2025
+  isApproximateDeadline: false
+  location: Kyoto, Japan
+  noFutureEstimates: true
+  shortname: ALIFE 2025
+  tags: &id001
+  - CA
+  - ML
+  timeline:
+  - deadline: '2025-05-11T23:59:59Z'
+    note: Full papers & summaries (extended deadline)
+  timezone: AoE
+  title: Conference on Artificial Life
+  website: https://2025.alife.org/
+alife2026:
+  conferenceEndDate: '2026-08-21'
+  conferenceStartDate: '2026-08-17'
+  dataSrc: manual
+  id: alife2026
+  isApproximateDeadline: false
+  location: Waterloo, Canada
+  noFutureEstimates: true
+  shortname: ALIFE 2026
+  tags: *id001
+  timeline:
+  - deadline: '2026-04-12T23:59:59Z'
+    note: Full papers & summaries (extended deadline)
+  timezone: AoE
+  title: Conference on Artificial Life
+  website: https://2026.alife.org/
