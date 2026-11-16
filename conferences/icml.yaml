@@ -190,38 +190,31 @@ icml2026:
   title: International Conference on Machine Learning
   website: https://icml.cc/Conferences/2026/
 icml2027:
-  acceptanceRate: 26.56
-  acceptanceRateYear: 2026
-  acceptedPapers: 6352
-  conferenceEndDate: '2027-07-11'
-  conferenceStartDate: '2027-07-06'
-  dataSrc: estimate
+  conferenceEndDate: '2027-08-04'
+  conferenceStartDate: '2027-08-02'
+  dataSrc: ccf-deadlines
   h5Index: 272
   id: icml2027
-  isApproximateDeadline: true
+  isApproximateDeadline: false
   rating: A*
   shortname: ICML 2027
-  submittedPapers: 23918
   tags: *id001
   timeline:
-  - abstractDeadline: '2027-01-24T11:59:59Z'
-    deadline: '2027-01-29T11:59:59Z'
+  - abstractDeadline: '2027-01-15T11:59:59Z'
+    deadline: '2027-01-23T11:59:59Z'
   title: International Conference on Machine Learning
+  website: https://icml.cc/Conferences/2027
 icml2028:
-  acceptanceRate: 26.56
-  acceptanceRateYear: 2026
-  acceptedPapers: 6352
-  conferenceEndDate: '2028-07-11'
-  conferenceStartDate: '2028-07-06'
+  conferenceEndDate: '2028-08-07'
+  conferenceStartDate: '2028-08-02'
   dataSrc: estimate
   h5Index: 272
   id: icml2028
   isApproximateDeadline: true
   rating: A*
   shortname: ICML 2028
-  submittedPapers: 23918
   tags: *id001
   timeline:
-  - abstractDeadline: '2028-01-24T11:59:59Z'
-    deadline: '2028-01-29T11:59:59Z'
+  - abstractDeadline: '2028-01-15T11:59:59Z'
+    deadline: '2028-01-23T11:59:59Z'
   title: International Conference on Machine Learning
