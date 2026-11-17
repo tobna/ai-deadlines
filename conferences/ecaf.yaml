@@ -1,0 +1,17 @@
+ecaf2027:
+  conferenceEndDate: '2027-08-27'
+  conferenceStartDate: '2027-08-25'
+  dataSrc: off-website
+  id: ecaf2027
+  isApproximateDeadline: false
+  location: Faculty of Mathematics and Informatics, Vilnius University, Vilnius, Lithuania
+  shortname: ECAF 2027
+  tags:
+  - ML
+  - XAI
+  timeline:
+  - deadline: '2027-03-26T11:59:59Z'
+    note: 'Full papers, extended abstracts, posters, and interactive sessions. Acceptance notifications 5 May 2027.'
+  timezone: AoE
+  title: European Conference on Algorithmic Fairness
+  website: https://2027.ecafconference.org/
