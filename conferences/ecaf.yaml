@@ -1,0 +1,14 @@
+ecaf2027:
+  conferenceEndDate: '2027-08-27'
+  conferenceStartDate: '2027-08-25'
+  dataSrc: ccf-deadlines
+  id: ecaf2027
+  isApproximateDeadline: false
+  shortname: ECAF 2027
+  tags: []
+  timeline:
+  - deadline: '2027-03-26T11:59:59Z'
+    note: Regular full research papers. The 5 May 2027 notification publishes a date
+      only; its clock time 23:59:59 and timezone AoE are repository defaults.
+  title: European Conference on Algorithmic Fairness
+  website: https://2027.ecafconference.org/
