@@ -90,6 +90,7 @@ kr2027:
   dataSrc: ccf-deadlines
   id: kr2027
   isApproximateDeadline: false
+  location: Buenos Aires, Argentina
   rating: A*
   shortname: KR 2027
   tags: *id001

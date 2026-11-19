@@ -95,6 +95,7 @@ esann2027:
   dataSrc: ccf-deadlines
   id: esann2027
   isApproximateDeadline: false
+  location: Bruges, Belgium
   rating: B
   shortname: ESANN 2027
   tags: *id001

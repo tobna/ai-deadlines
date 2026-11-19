@@ -85,6 +85,7 @@ ijcb2027:
   dataSrc: ccf-deadlines
   id: ijcb2027
   isApproximateDeadline: false
+  location: "Foz do Igua\xE7u, Brazil"
   rating: B
   shortname: IJCB 2027
   tags: *id001

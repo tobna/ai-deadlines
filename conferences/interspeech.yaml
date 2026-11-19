@@ -106,6 +106,7 @@ interspeech2027:
   dataSrc: ccf-deadlines
   id: interspeech2027
   isApproximateDeadline: false
+  location: "S\xE3o Paulo, Brazil"
   rating: A
   shortname: InterSpeech 2027
   tags: *id001

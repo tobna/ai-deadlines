@@ -62,6 +62,7 @@ alt2027:
   dataSrc: ccf-deadlines
   id: alt2027
   isApproximateDeadline: false
+  location: Leiden, Netherlands
   rating: B
   shortname: ALT 2027
   tags: *id001

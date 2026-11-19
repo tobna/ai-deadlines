@@ -89,6 +89,7 @@ icdar2027:
   dataSrc: ccf-deadlines
   id: icdar2027
   isApproximateDeadline: false
+  location: Kuala Lumpur, Malaysia
   rating: A
   shortname: ICDAR 2027
   tags: *id001

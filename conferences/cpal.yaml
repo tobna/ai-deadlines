@@ -49,6 +49,7 @@ cpal2027:
   dataSrc: ccf-deadlines
   id: cpal2027
   isApproximateDeadline: false
+  location: Tokyo, Japan
   shortname: CPAL 2027
   tags: *id001
   timeline:

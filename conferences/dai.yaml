@@ -64,6 +64,7 @@ dai2026:
   dataSrc: ccf-deadlines
   id: dai2026
   isApproximateDeadline: false
+  location: Hong Kong, China
   shortname: DAI 2026
   tags: *id001
   timeline:

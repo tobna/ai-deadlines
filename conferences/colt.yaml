@@ -116,6 +116,7 @@ colt2027:
   dataSrc: ccf-deadlines
   id: colt2027
   isApproximateDeadline: false
+  location: Tokyo, Japan
   rating: A*
   shortname: COLT 2027
   submittedPapers: 657

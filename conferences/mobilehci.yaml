@@ -87,6 +87,7 @@ mobilehci2027:
   dataSrc: ccf-deadlines
   id: mobilehci2027
   isApproximateDeadline: false
+  location: Limassol, Cyprus
   rating: B
   shortname: MobileHCI 2027
   tags: *id001

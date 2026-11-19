@@ -82,6 +82,7 @@ evoapplications2027:
   dataSrc: ccf-deadlines
   id: evoapplications2027
   isApproximateDeadline: false
+  location: Mainz, Germany
   rating: B
   shortname: EvoApplications 2027
   tags: *id001

@@ -75,6 +75,7 @@ rss2027:
   dataSrc: ccf-deadlines
   id: rss2027
   isApproximateDeadline: false
+  location: Athens, Greece
   shortname: RSS 2027
   tags: *id001
   timeline:

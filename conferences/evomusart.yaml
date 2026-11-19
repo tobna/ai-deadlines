@@ -88,6 +88,7 @@ evomusart2027:
   dataSrc: ccf-deadlines
   id: evomusart2027
   isApproximateDeadline: false
+  location: Mainz, Germany
   rating: C
   shortname: EvoMUSART 2027
   tags: *id001

@@ -91,6 +91,7 @@ acml2026:
   dataSrc: ccf-deadlines
   id: acml2026
   isApproximateDeadline: false
+  location: Melbourne, Australia
   rating: C
   shortname: ACML 2026
   tags: *id001

@@ -116,6 +116,7 @@ icassp2027:
   dataSrc: ccf-deadlines
   id: icassp2027
   isApproximateDeadline: false
+  location: Toronto, Canada
   rating: B
   shortname: ICASSP 2027
   submittedPapers: 6947

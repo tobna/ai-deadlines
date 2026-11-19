@@ -106,6 +106,7 @@ ecai2027:
   dataSrc: ccf-deadlines
   id: ecai2027
   isApproximateDeadline: false
+  location: Athens, Greece
   rating: A
   shortname: ECAI 2027
   submittedPapers: 5233

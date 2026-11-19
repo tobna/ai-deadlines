@@ -47,6 +47,7 @@ bis2027:
   dataSrc: ccf-deadlines
   id: bis2027
   isApproximateDeadline: false
+  location: "Pozna\u0144, Poland"
   shortname: BIS 2027
   tags: *id001
   timeline:

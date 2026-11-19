@@ -18,6 +18,7 @@ log2026:
   dataSrc: ccf-deadlines
   id: log2026
   isApproximateDeadline: false
+  location: Boston, USA
   shortname: LOG 2026
   tags: *id001
   timeline:

@@ -104,6 +104,7 @@ iros2027:
   h5Index: 86
   id: iros2027
   isApproximateDeadline: false
+  location: Florence, Italy
   rating: A
   shortname: IROS 2027
   tags: *id001

@@ -89,6 +89,7 @@ icaps2027:
   dataSrc: ccf-deadlines
   id: icaps2027
   isApproximateDeadline: false
+  location: Columbia, USA
   rating: A*
   shortname: ICAPS 2027
   tags: *id001

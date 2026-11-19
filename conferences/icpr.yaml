@@ -55,6 +55,7 @@ icpr2027:
   h5Index: 68
   id: icpr2027
   isApproximateDeadline: false
+  location: Virtual
   rating: B
   shortname: ICPR 2027
   tags: *id001

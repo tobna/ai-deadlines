@@ -88,6 +88,7 @@ gecco2027:
   dataSrc: ccf-deadlines
   id: gecco2027
   isApproximateDeadline: false
+  location: "Krak\xF3w, Poland"
   rating: A
   shortname: GECCO 2027
   tags: *id001

@@ -57,6 +57,7 @@ iconip2026:
   dataSrc: ccf-deadlines
   id: iconip2026
   isApproximateDeadline: false
+  location: Melbourne, Australia
   rating: B
   shortname: ICONIP 2026
   tags: *id001
