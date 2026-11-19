@@ -116,8 +116,8 @@ sigir2027:
   acceptanceRate: 18.41
   acceptanceRateYear: 2026
   acceptedPapers: 234
-  conferenceEndDate: '2027-07-24'
-  conferenceStartDate: '2027-07-18'
+  conferenceEndDate: '2027-07-22'
+  conferenceStartDate: '2027-07-20'
   dataSrc: ccf-deadlines
   id: sigir2027
   isApproximateDeadline: false
@@ -135,8 +135,8 @@ sigir2028:
   acceptanceRate: 18.41
   acceptanceRateYear: 2026
   acceptedPapers: 234
-  conferenceEndDate: '2028-07-23'
-  conferenceStartDate: '2028-07-18'
+  conferenceEndDate: '2028-07-25'
+  conferenceStartDate: '2028-07-20'
   dataSrc: estimate
   id: sigir2028
   isApproximateDeadline: true
