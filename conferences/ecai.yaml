@@ -102,7 +102,7 @@ ecai2027:
   acceptanceRateYear: 2026
   acceptedPapers: 713
   conferenceEndDate: '2027-10-07'
-  conferenceStartDate: '2027-10-02'
+  conferenceStartDate: '2027-10-04'
   dataSrc: ccf-deadlines
   id: ecai2027
   isApproximateDeadline: false
@@ -119,8 +119,8 @@ ecai2028:
   acceptanceRate: 13.63
   acceptanceRateYear: 2026
   acceptedPapers: 713
-  conferenceEndDate: '2028-10-07'
-  conferenceStartDate: '2028-10-02'
+  conferenceEndDate: '2028-10-09'
+  conferenceStartDate: '2028-10-04'
   dataSrc: estimate
   id: ecai2028
   isApproximateDeadline: true
