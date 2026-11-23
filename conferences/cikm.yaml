@@ -111,9 +111,9 @@ cikm2025:
   title: Conference on Information and Knowledge Management
   website: https://cikm2025.org/
 cikm2026:
-  acceptanceRate: 27.23
-  acceptanceRateYear: 2025
-  acceptedPapers: 443
+  acceptanceRate: 26.5
+  acceptanceRateYear: 2026
+  acceptedPapers: 596
   conferenceEndDate: '2026-11-11'
   conferenceStartDate: '2026-11-07'
   dataSrc: hf-repo
@@ -122,7 +122,7 @@ cikm2026:
   location: Rome, Italy
   rating: A
   shortname: CIKM 2026
-  submittedPapers: 1627
+  submittedPapers: 2249
   tags: *id001
   timeline:
   - abstractDeadline: '2026-05-17T11:59:00Z'
@@ -131,9 +131,9 @@ cikm2026:
   title: Conference on Information and Knowledge Management
   website: https://cikm2026.diag.uniroma1.it/
 cikm2027:
-  acceptanceRate: 27.23
-  acceptanceRateYear: 2025
-  acceptedPapers: 443
+  acceptanceRate: 26.5
+  acceptanceRateYear: 2026
+  acceptedPapers: 596
   conferenceEndDate: '2027-11-12'
   conferenceStartDate: '2027-11-07'
   dataSrc: estimate
@@ -141,7 +141,7 @@ cikm2027:
   isApproximateDeadline: true
   rating: A
   shortname: CIKM 2027
-  submittedPapers: 1627
+  submittedPapers: 2249
   tags: *id001
   timeline:
   - abstractDeadline: '2027-05-17T11:59:00Z'
@@ -149,9 +149,9 @@ cikm2027:
     note: 'From CIKM 2026: Full paper submission deadline'
   title: Conference on Information and Knowledge Management
 cikm2028:
-  acceptanceRate: 27.23
-  acceptanceRateYear: 2025
-  acceptedPapers: 443
+  acceptanceRate: 26.5
+  acceptanceRateYear: 2026
+  acceptedPapers: 596
   conferenceEndDate: '2028-11-12'
   conferenceStartDate: '2028-11-07'
   dataSrc: estimate
@@ -159,7 +159,7 @@ cikm2028:
   isApproximateDeadline: true
   rating: A
   shortname: CIKM 2028
-  submittedPapers: 1627
+  submittedPapers: 2249
   tags: *id001
   timeline:
   - abstractDeadline: '2028-05-17T11:59:00Z'

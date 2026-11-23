@@ -44,9 +44,9 @@ acmmm2025:
   title: ACM Multimedia
   website: https://acmmm2025.org/
 acmmm2026:
-  acceptanceRate: 23.45
-  acceptanceRateYear: 2025
-  acceptedPapers: 1250
+  acceptanceRate: 23.98
+  acceptanceRateYear: 2026
+  acceptedPapers: 1703
   conferenceEndDate: '2026-11-14'
   conferenceStartDate: '2026-11-10'
   dataSrc: off-website
@@ -56,7 +56,7 @@ acmmm2026:
   location: Rio de Janeiro, Brazil
   rating: A*
   shortname: ACMMM 2026
-  submittedPapers: 5330
+  submittedPapers: 7103
   tags: *id001
   timeline:
   - abstractDeadline: '2026-03-26T11:59:59Z'
@@ -65,9 +65,9 @@ acmmm2026:
   title: ACM Multimedia
   website: https://2026.acmmm.org/
 acmmm2027:
-  acceptanceRate: 23.45
-  acceptanceRateYear: 2025
-  acceptedPapers: 1250
+  acceptanceRate: 23.98
+  acceptanceRateYear: 2026
+  acceptedPapers: 1703
   conferenceEndDate: '2027-11-15'
   conferenceStartDate: '2027-11-10'
   dataSrc: estimate
@@ -76,16 +76,16 @@ acmmm2027:
   isApproximateDeadline: true
   rating: A*
   shortname: ACMMM 2027
-  submittedPapers: 5330
+  submittedPapers: 7103
   tags: *id001
   timeline:
   - abstractDeadline: '2027-03-26T11:59:59Z'
     deadline: '2027-04-02T11:59:59Z'
   title: ACM Multimedia
 acmmm2028:
-  acceptanceRate: 23.45
-  acceptanceRateYear: 2025
-  acceptedPapers: 1250
+  acceptanceRate: 23.98
+  acceptanceRateYear: 2026
+  acceptedPapers: 1703
   conferenceEndDate: '2028-11-15'
   conferenceStartDate: '2028-11-10'
   dataSrc: estimate
@@ -94,7 +94,7 @@ acmmm2028:
   isApproximateDeadline: true
   rating: A*
   shortname: ACMMM 2028
-  submittedPapers: 5330
+  submittedPapers: 7103
   tags: *id001
   timeline:
   - abstractDeadline: '2028-03-26T11:59:59Z'
