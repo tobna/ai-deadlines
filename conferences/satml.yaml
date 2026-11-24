@@ -51,6 +51,8 @@ satml2026:
   title: IEEE Conference on Secure and Trustworthy Machine Learning
   website: https://www.satml.org
 satml2027:
+  conferenceEndDate: '2027-05-06'
+  conferenceStartDate: '2027-05-04'
   dataSrc: ccf-deadlines
   id: satml2027
   isApproximateDeadline: false
@@ -62,13 +64,14 @@ satml2027:
   title: IEEE Conference on Secure and Trustworthy Machine Learning
   website: https://satml.org/
 satml2028:
-  conferenceEndDate: '2028-03-28'
-  conferenceStartDate: '2028-03-23'
+  conferenceEndDate: '2028-05-09'
+  conferenceStartDate: '2028-05-04'
   dataSrc: estimate
   id: satml2028
   isApproximateDeadline: true
   shortname: SATML 2028
   tags: *id001
   timeline:
-  - deadline: '2027-09-25T11:59:59Z'
+  - abstractDeadline: '2027-09-23T11:59:59Z'
+    deadline: '2027-09-30T11:59:59Z'
   title: IEEE Conference on Secure and Trustworthy Machine Learning
